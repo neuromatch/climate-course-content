@@ -8,6 +8,7 @@ env:
   NB_KERNEL: python
   NMA_REPO: course-content
   NMA_MAIN_BRANCH: main
+  ORG: neuromatch
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
@@ -45,7 +46,7 @@ jobs:
       - name: Install CI tools
         run: |
           BRANCH="climate"
-          wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
+          wget https://github.com/neuromatch/nmaci/archive/refs/heads/$BRANCH.tar.gz
           tar -xzf $BRANCH.tar.gz
           pip install -r nmaci-$BRANCH/requirements.txt
           mv nmaci-$BRANCH/scripts/ ci/
@@ -85,6 +86,7 @@ jobs:
 
       - name: Build student book
         run: |
+          python ci/generate_book.py student
           ln -s ../tutorials book/tutorials
           ln -s ../projects book/projects
           ln -s ../prereqs book/prereqs
@@ -99,16 +101,16 @@ jobs:
       #     python ci/parse_html_for_errors.py student
 
       # NOTE: we may be able to push striaght from here. ie skip the last flow
-      # - name: Commit book
-      #   run: |
-      #     git config --local user.email "action@github.com"
-      #     git config --local user.name "GitHub Action"
-      #     ghp-import -n -c "comptools.climatematch.io" -m "Update course book" book/_build/html
-      #     git checkout -f gh-pages
-      #
-      # - name: Publish to gh-pages
-      #   uses: ad-m/github-push-action@v0.6.0
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: gh-pages
-      #     force: true
+      - name: Commit book
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          ghp-import -n -c "comptools.climatematch.io" -m "Update course book" book/_build/html
+          git checkout -f gh-pages
+      
+      - name: Publish to gh-pages
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
