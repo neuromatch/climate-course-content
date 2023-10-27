@@ -32,8 +32,8 @@ jobs:
         uses: ./.github/actions/check-notebooks
         with:
           run_all: 'true'
-          exec_flag: '--check-only'
-          # exec_flag: '--execute'
+          # exec_flag: '--check-only'
+          exec_flag: '--execute'
           # exercice-continue-on-error: 'true'
 
       - name: Add PR comment
