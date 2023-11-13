@@ -47,7 +47,7 @@ runs:
       run: |
         if ${{ inputs.run_all == 'true' }}; then
           nbs="tutorials/*/*Tutorial*.ipynb";
-          nbs="tutorials/W2D3_*/*Tutorial*.ipynb";
+          nbs="tutorials/W2D4_*/*Tutorial*.ipynb";
         else
           nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`;
         fi
