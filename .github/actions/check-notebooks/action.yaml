@@ -62,6 +62,15 @@ runs:
         rm -f $HOME/.matplotlib/fontList.cache
       shell: bash -l {0}
 
+    - name: Install eigen/SDFC
+      run: |
+        sudo apt-get install -y libeigen3-dev
+        pip install pybind11
+        git clone https://github.com/yrobink/SDFC-python.git
+        cd SDFC-python
+        python setup.py install
+        cd ..
+
     - name: Process notebooks
       id: process_notebooks
       if: ${{ env.NBS != '' }}

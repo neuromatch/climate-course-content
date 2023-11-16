@@ -47,11 +47,8 @@ runs:
     - name: Update environment
       if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == 'true'}}
       run: |
-        sudo apt-get install libeigen3-dev -y
         mamba env update -n climatematch -f environment.yml
         pip install -r ci/requirements.txt
         # pip install -r requirements.txt
-        pip install jupyter-book==0.10.2 ghp-import jupyter-client==6.1.12 cftime gitpython
-        pip install pybind11
-        pip install SDFC@git+https://github.com/yrobink/SDFC-python
+        pip install jupyter-book==0.10.2 ghp-import jupyter-client==6.1.12 cftime
       shell: bash -l {0}
