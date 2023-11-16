@@ -51,5 +51,5 @@ runs:
         pip install -r ci/requirements.txt
         # pip install -r requirements.txt
         pip install jupyter-book==0.10.2 ghp-import jupyter-client==6.1.12 cftime gitpython
-        pip install https://github.com/yrobink/SDFC-python/archive/master.zip
+        pip install SDFC@git+https://github.com/yrobink/SDFC-python
       shell: bash -l {0}
