@@ -70,6 +70,7 @@ runs:
         cd SDFC-python
         python setup.py install
         cd ..
+      shell: bash -l {0}
 
     - name: Process notebooks
       id: process_notebooks
