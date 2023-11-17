@@ -79,7 +79,9 @@ jobs:
       - name: Cache Jupyter Build Artifacts
         uses: actions/cache@v2
         with:
-          path: ./book/_build/
+          path: |
+            ./book/_build/html/
+            ./.jupyter_cache
           key: ${{ runner.os }}-jupyter-${{ hashFiles('**/*.ipynb') }}
           restore-keys: |
             ${{ runner.os }}-jupyter-
