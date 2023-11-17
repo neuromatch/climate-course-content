@@ -73,7 +73,7 @@ runs:
         pip install pybind11
         git clone https://github.com/yrobink/SDFC-python.git
         cd SDFC-python
-        python setup.py install
+        python setup.py build_ext --inplace
         cd ..
       shell: bash -l {0}
 
