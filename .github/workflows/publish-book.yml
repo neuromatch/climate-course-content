@@ -46,7 +46,7 @@ jobs:
       - name: Install CI tools
         run: |
           BRANCH="climate"
-          wget https://github.com/neuromatch/nmaci/archive/refs/heads/$BRANCH.tar.gz
+          wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
           tar -xzf $BRANCH.tar.gz
           pip install -r nmaci-$BRANCH/requirements.txt
           mv nmaci-$BRANCH/scripts/ ci/
