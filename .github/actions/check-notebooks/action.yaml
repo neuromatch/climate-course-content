@@ -17,7 +17,6 @@ inputs:
 
 runs:
   using: composite
-  runs-on: ubuntu-latest
   steps:
     - name: Checkout
       uses: actions/checkout@v3
@@ -67,6 +66,12 @@ runs:
       run: |
         sudo apt-get install -y libeigen3-dev
         sudo apt-get install -y g++-9
+        echo "CC=gcc-9" >> $GITHUB_ENV
+        echo "CXX=g++-9" >> $GITHUB_ENV
+        # Verify versions
+        gcc-9 --version
+        g++-9 --version
+        # This may already be installed
         pip install pybind11
         git clone https://github.com/yrobink/SDFC-python.git
         cd SDFC-python
