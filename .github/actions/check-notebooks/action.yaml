@@ -75,7 +75,8 @@ runs:
         echo "/usr/bin/g++-9" >> $GITHUB_PATH
         git clone https://github.com/yrobink/SDFC-python.git
         cd SDFC-python
-        python setup.py build_ext --inplace
+        python setup.py install
+        pip show SDFC
         cd ..
       shell: bash -l {0}
 
