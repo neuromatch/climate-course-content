@@ -3,48 +3,48 @@
   name: Climate System Overview
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MFnOD0I4M_OmlkG6ENQao3
   tutorials: 9
-# - day: W1D2
-#   category: Climate Data
-#   name: State of the Climate Ocean and Atmosphere Reanalysis
-#   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MtuSiOkabOmG-KdhOM_Xi_
-#   tutorials: 6
-# - day: W1D3
-#   category: Climate Data
-#   name: Remote Sensing Land Ocean and Atmosphere
-#   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18NwBOdx0d59O34HmG8yrGp7
-#   tutorials: 8
-# - day: W1D4
-#   category: Climate Data
-#   name: Paleoclimate
-#   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18M30SfesAh0AHGKIIYbjQhl
-#   tutorials: 9
-# - day: W1D5
-#   category: Climate Future
-#   name: Climate Modeling
-#   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18OQtfBlfe_Py6AubwL8FAs1
-#   tutorials: 7
-# - day: W2D1
-#   category: Climate Future
-#   name: Future Climate - IPCC I Physical Basis
-#   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MwKJBshzMRNZSwYEIIJaVc
-#   tutorials: 6
-# - day: Projects
-#   category: Fundamentals
-#   name: Good Research Practices
-#   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MoOWPdzGj8t0Yxm-IC1nvN
-#   tutorials: 8
-# - day: W2D3
-#   category: Climate Future
-#   name: Future Climate - IPCC II & III Socio-Economic Basis
-#   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18Mrt88BY4gRsMXPURDEwGjS
-#   tutorials: 4
-# - day: W2D4
-#   category: Climate Response
-#   name: Climate Response - Extremes & Variability
-#   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18NxPWEE9T5KxomLaslXXD2E
-#   tutorials: 8
-# - day: W2D5
-#   category: Climate Response
-#   name: Climate Response - Adaptation Impact
-#   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18PTzOU6g-giQCy3OVYqZL8r
-#   tutorials: 4
+- day: W1D2
+  category: Climate Data
+  name: State of the Climate Ocean and Atmosphere Reanalysis
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MtuSiOkabOmG-KdhOM_Xi_
+  tutorials: 6
+- day: W1D3
+  category: Climate Data
+  name: Remote Sensing Land Ocean and Atmosphere
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18NwBOdx0d59O34HmG8yrGp7
+  tutorials: 8
+- day: W1D4
+  category: Climate Data
+  name: Paleoclimate
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18M30SfesAh0AHGKIIYbjQhl
+  tutorials: 9
+- day: W1D5
+  category: Climate Future
+  name: Climate Modeling
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18OQtfBlfe_Py6AubwL8FAs1
+  tutorials: 7
+- day: W2D1
+  category: Climate Future
+  name: Future Climate - IPCC I Physical Basis
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MwKJBshzMRNZSwYEIIJaVc
+  tutorials: 6
+- day: Projects
+  category: Fundamentals
+  name: Good Research Practices
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MoOWPdzGj8t0Yxm-IC1nvN
+  tutorials: 8
+- day: W2D3
+  category: Climate Future
+  name: Future Climate - IPCC II & III Socio-Economic Basis
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18Mrt88BY4gRsMXPURDEwGjS
+  tutorials: 4
+- day: W2D4
+  category: Climate Response
+  name: Climate Response - Extremes & Variability
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18NxPWEE9T5KxomLaslXXD2E
+  tutorials: 8
+- day: W2D5
+  category: Climate Response
+  name: Climate Response - Adaptation Impact
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18PTzOU6g-giQCy3OVYqZL8r
+  tutorials: 4
