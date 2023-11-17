@@ -1,0 +1,5 @@
+
+"""
+1. This location's strong seasonality suggests that it experiences significant seasonal changes in incoming solar radiation received at the surface over the course of a year.
+2. Seasonal variations in sea surface temperature (SST) would differ at different latitudes. At the equator, the seasonal variations in SST tend to be relatively small. This is because the equatorial region experiences a relatively constant amount of solar radiation throughout the year, resulting in a relatively stable SST. At the poles, however, the seasonal variations in SST are more pronounced. At 50ºS, the seasonal cycle would be opposite that shown here because the northern and southern hemispheres experience their seasons at different times of year (that is northern hemisphere summer is southern hemisphere winter).
+""";

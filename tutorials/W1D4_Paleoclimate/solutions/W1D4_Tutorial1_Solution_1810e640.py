@@ -1,0 +1,5 @@
+
+"""
+1. The most abundant temperature proxy is tree ring and the least one is hybrid (tree/borehole) or bivalve. Tree rings form the basis for more than half of these records, and this can be attributed to their annual resolution, exact dating, and broad geographical distribution, most notably in the Northern Hemisphere's mid-latitudes.
+2. The spatial distribution of proxy archives reveals an overwhelming distribution of records situated on land within the Northern Hemisphere. The least amount of records seem to come from Antarctica, as well as central South America and Africa. These areas are often remote and hard to get to, whether an ice-sheet, a rainforest, or a desert. This makes it difficult to reach these locations, and their cliamte biome may not be suitable for many proxy types.
+"""

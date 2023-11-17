@@ -47,6 +47,7 @@ runs:
       run: |
         if ${{ inputs.run_all == 'true' }}; then
           nbs="tutorials/*/*Tutorial*.ipynb";
+          # nbs="tutorials/W2D4_*/*Tutorial*.ipynb";
         else
           nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`;
         fi
@@ -59,6 +60,24 @@ runs:
         sudo sh -c "echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections"
         sudo apt-get install msttcorefonts -qq
         rm -f $HOME/.matplotlib/fontList.cache
+      shell: bash -l {0}
+
+    - name: Install C++ compiler in conda environment
+      run: conda install -c conda-forge gxx_linux-64
+      shell: bash -l {0}
+
+    - name: Install eigen/SDFC
+      run: |
+        sudo apt-get install -y libeigen3-dev
+        echo "CC=gcc-9" >> $GITHUB_ENV
+        echo "CXX=g++-9" >> $GITHUB_ENV
+        echo "/usr/bin/gcc-9" >> $GITHUB_PATH
+        echo "/usr/bin/g++-9" >> $GITHUB_PATH
+        git clone https://github.com/yrobink/SDFC-python.git
+        cd SDFC-python
+        python setup.py install
+        pip show SDFC
+        cd ..
       shell: bash -l {0}
 
     - name: Process notebooks

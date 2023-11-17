@@ -13,6 +13,7 @@ env:
   NB_KERNEL: python
   NMA_REPO: course-content
   NMA_MAIN_BRANCH: main
+  ORG: neuromatch
 
 jobs:
 
@@ -31,9 +32,9 @@ jobs:
         uses: ./.github/actions/check-notebooks
         with:
           run_all: 'true'
-          exec_flag: '--check-only'
-          # exec_flag: '--execute'
-          # exercice-continue-on-error: 'true'
+          # exec_flag: '--check-only'
+          exec_flag: '--execute'
+          exercice-continue-on-error: 'true'
 
       - name: Add PR comment
         if: ${{ env.NBS != '' }}

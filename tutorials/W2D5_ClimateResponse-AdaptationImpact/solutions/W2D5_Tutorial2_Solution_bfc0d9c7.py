@@ -1,0 +1,3 @@
+"""
+1. Possible discussion: The model cannot predict values above 50 cases per week. This is likely due to an imbalance of data. Referencing the data exploration figures from the first section, we see that most of the data falls at or below 50 cases per week. This type of model does not excel at predicting extreme cases, and this is reflected on the plot above. Additionally, note the negative values (up to -10 cases per week) predicted by our model. It is of course not possible to have negative case numbers, however you can see that the linear regression equation does not prevent negative numbers. Later on in the bonus section you will look at a model more suitable for our dataset type that also guarantees non-negative results.
+""";

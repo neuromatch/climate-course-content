@@ -31,7 +31,6 @@
 
 ## W1D2 - Stateofthe Climate Oceanand Atmosphere Reanalysis
 
-[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18MtuSiOkabOmG-KdhOM_Xi_)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Intro | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/W1D2_Intro.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/W1D2_Intro.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/NeuromatchAcademy/course-content/blob/main/tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/W1D2_Intro.ipynb?flush_cache=true) |
@@ -51,7 +50,6 @@
 
 ## W1D3 - Remote Sensing Land Oceanand Atmosphere
 
-[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18NwBOdx0d59O34HmG8yrGp7)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Intro | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/W1D3_Intro.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/W1D3_Intro.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/NeuromatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/W1D3_Intro.ipynb?flush_cache=true) |
@@ -73,7 +71,6 @@
 
 ## W1D4 - Paleoclimate
 
-[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18M30SfesAh0AHGKIIYbjQhl)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Intro | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/main/tutorials/W1D4_Paleoclimate/W1D4_Intro.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D4_Paleoclimate/W1D4_Intro.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/NeuromatchAcademy/course-content/blob/main/tutorials/W1D4_Paleoclimate/W1D4_Intro.ipynb?flush_cache=true) |
@@ -96,7 +93,6 @@
 
 ## W1D5 - Climate Modeling
 
-[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18OQtfBlfe_Py6AubwL8FAs1)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Intro | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/main/tutorials/W1D5_ClimateModeling/W1D5_Intro.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W1D5_ClimateModeling/W1D5_Intro.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/NeuromatchAcademy/course-content/blob/main/tutorials/W1D5_ClimateModeling/W1D5_Intro.ipynb?flush_cache=true) |
@@ -117,7 +113,6 @@
 
 ## W2D1 - Future Climate- I P C C I Physical Basis
 
-[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18MwKJBshzMRNZSwYEIIJaVc)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Intro | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/W2D1_Intro.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/W2D1_Intro.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/W2D1_Intro.ipynb?flush_cache=true) |
@@ -140,13 +135,13 @@
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Intro | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D2_ProjectsDay/W2D2_Intro.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D2_ProjectsDay/W2D2_Intro.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D2_ProjectsDay/W2D2_Intro.ipynb?flush_cache=true) |
+| Tutorial 1 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D2_ProjectsDay/student/W2D2_Tutorial1.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D2_ProjectsDay/student/W2D2_Tutorial1.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D2_ProjectsDay/student/W2D2_Tutorial1.ipynb?flush_cache=true) |
 
 
 
 
 ## W2D3 - Future Climate- I P C C I I& I I I Socio- Economic Basis
 
-[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18Mrt88BY4gRsMXPURDEwGjS)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Intro | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/W2D3_Intro.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/W2D3_Intro.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D3_FutureClimate-IPCCII&IIISocio-EconomicBasis/W2D3_Intro.ipynb?flush_cache=true) |
@@ -164,7 +159,6 @@
 
 ## W2D4 - Climate Response- Extremes& Variability
 
-[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18NxPWEE9T5KxomLaslXXD2E)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Intro | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D4_ClimateResponse-Extremes&Variability/W2D4_Intro.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D4_ClimateResponse-Extremes&Variability/W2D4_Intro.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D4_ClimateResponse-Extremes&Variability/W2D4_Intro.ipynb?flush_cache=true) |
@@ -186,7 +180,6 @@
 
 ## W2D5 - Climate Response- Adaptation Impact
 
-[YouTube Playlist](https://youtube.com/playlist?list=PLkBQOLLbi18PTzOU6g-giQCy3OVYqZL8r)
 |   | Run | Run | View |
 | - | --- | --- | ---- |
 | Intro | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/W2D5_Intro.ipynb) | [![Open In kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/NeuromatchAcademy/course-content/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/W2D5_Intro.ipynb) | [![View the notebook](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/NeuromatchAcademy/course-content/blob/main/tutorials/W2D5_ClimateResponse-AdaptationImpact/W2D5_Intro.ipynb?flush_cache=true) |

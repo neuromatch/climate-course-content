@@ -50,5 +50,5 @@ runs:
         mamba env update -n climatematch -f environment.yml
         pip install -r ci/requirements.txt
         # pip install -r requirements.txt
-        pip install jupyter-book==0.10.2 ghp-import
+        pip install jupyter-book==0.10.2 ghp-import jupyter-client==6.1.12 cftime
       shell: bash -l {0}
