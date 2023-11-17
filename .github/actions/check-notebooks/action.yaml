@@ -64,6 +64,7 @@ runs:
 
     - name: Install C++ compiler in conda environment
       run: conda install -c conda-forge gxx_linux-64
+      shell: bash -1 {0}
 
     - name: Install eigen/SDFC
       run: |
