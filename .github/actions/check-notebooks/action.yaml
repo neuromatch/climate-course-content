@@ -65,12 +65,10 @@ runs:
     - name: Install eigen/SDFC
       run: |
         sudo apt-get install -y libeigen3-dev
-        sudo apt-get install -y g++-9
         echo "CC=gcc-9" >> $GITHUB_ENV
         echo "CXX=g++-9" >> $GITHUB_ENV
-        # Verify versions
-        gcc-9 --version
-        g++-9 --version
+        echo "/usr/bin/gcc-9" >> $GITHUB_PATH
+        echo "/usr/bin/g++-9" >> $GITHUB_PATH
         # This may already be installed
         pip install pybind11
         git clone https://github.com/yrobink/SDFC-python.git
