@@ -309,6 +309,7 @@ jobs:
         with:
           name: prereqs
           path: _prereqs
+      - name: copy build
         run: rsync --remove-source-files _prereqs/ book/
 
       - name: Retrieve Tutorials
@@ -316,6 +317,7 @@ jobs:
         with:
           name: tutorials
           path: _tutorials
+      - name: copy build
         run: rsync --remove-source-files _tutorials/ book/
 
       - name: Retrieve Projects
@@ -323,6 +325,7 @@ jobs:
         with:
           name: projects
           path: _projects
+      - name: copy build
         run: rsync --remove-source-files _projects/ book/
 
       # NOTE: we may be able to push striaght from here. ie skip the last flow
