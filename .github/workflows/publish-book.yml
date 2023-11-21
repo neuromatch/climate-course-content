@@ -168,7 +168,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install jupyter-book==0.10.2 ghp-import pyleoclim
+          pip install jupyter-book==0.10.2 ghp-import pyleoclim importlib-metadata==4.13.0
 
       # - name: Copy tutorials from precourse repo
       #   if: "!contains(env.COMMIT_MESSAGE, 'skip precourse')"
