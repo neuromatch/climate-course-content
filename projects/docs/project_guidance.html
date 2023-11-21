@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,15 +40,15 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -199,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -350,7 +350,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Data
  </span>
@@ -570,7 +570,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Future
  </span>
@@ -770,7 +770,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Response
  </span>
@@ -901,7 +901,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -984,8 +984,55 @@ const thebe_selector_output = ".output, .cell_output"
    Continuing your project after the course
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="past_projects_overview.html">
+   Past projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Professional Development
  </span>
@@ -1461,21 +1508,21 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="daily-guide-for-projects">
-<h1>Daily guide for projects<a class="headerlink" href="#daily-guide-for-projects" title="Permalink to this headline">#</a></h1>
+<h1>Daily guide for projects<a class="headerlink" href="#daily-guide-for-projects" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>The project component of Climatematch Academy is designed to guide you through the entire research process, providing a comprehensive journey from project ideation to outcome presentation, all within a condensed time frame of just two weeks. Within a dedicated three-hour time slot each day, you will collaborate with a group of 4-6 fellow students from your pod to collectively develop a single research project.</p>
 <p>On Day 1, you will learn about good research practices by working on a ‘mock’ project through the lens of equity. You will then spend eight days applying those skills to a scientific question and a geographical region that interests you and your teammates. To familiarize yourselves with the datasets at hand, you will examine the spatial and temporal distribution of one climate variable on global and local scales, as well as its social and economic impact. After performing a brief literature review, you will develop a sense of interesting open questions in the field and will devise a specific testable hypothesis accordingly. On Day 4, your group will submit a project proposal that you will swap with other groups to practice giving and receiving feedback through a peer review process. For the rest of the course, you will focus on acquiring evidence for or against your hypothesis. Throughout this time, you will be supported by your pod’s Teaching Assistant and a dedicated Project Teaching Assistant. Finally, on the last two days of the course, you will prepare a short presentation showcasing the story of your project and meet with other groups in your megapod to discuss your findings with them.</p>
 </div>
 <div class="section" id="submission-links">
-<h2>Submission Links<a class="headerlink" href="#submission-links" title="Permalink to this headline">#</a></h2>
+<h2>Submission Links<a class="headerlink" href="#submission-links" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Day 4: Proposal Submission <strong><a class="reference external" href="https://airtable.com/shrQ5CLEla3dDkKbk">here</a></strong></p></li>
 <li><p>Day 9: Project Submission <strong><a class="reference external" href="https://airtable.com/shr7EAY3x39x8swZu">here</a></strong></p></li>
 </ul>
 </div>
 <div class="section" id="project-materials">
-<h2>Project materials<a class="headerlink" href="#project-materials" title="Permalink to this headline">#</a></h2>
+<h2>Project materials<a class="headerlink" href="#project-materials" title="Permalink to this headline">¶</a></h2>
 <p>You have been assigned one of seven research projects based on the preferences listed in your application. Each project comes with an introductory video, a template, and a data loading jupyter notebook.</p>
 <p>Student groups will define their own research question. Project templates are maps of research ideas developed by the Climatematch Academy team. They are composed of <strong><em>GREEN</em></strong>, <strong><em>YELLOW</em></strong>, and <strong><em>RED</em></strong> questions in accordance with their difficulty. Each difficulty level is further divided into questions relating to a physical climate phenomenon (borderless) and those relating to socio-economic issues (dashed border).</p>
 <p>The templates should be used in several ways:</p>
@@ -1488,30 +1535,30 @@ title="Print to PDF"
 </ul>
 </div>
 <div class="section" id="project-teaching-assistants">
-<h2>Project Teaching Assistants<a class="headerlink" href="#project-teaching-assistants" title="Permalink to this headline">#</a></h2>
+<h2>Project Teaching Assistants<a class="headerlink" href="#project-teaching-assistants" title="Permalink to this headline">¶</a></h2>
 <p>Project Teaching Assistants are your friendly project experts to consult with on all issues related to your project topics and datasets. They can help with brainstorming project ideas, literature searches, and coding. You will meet with them on a regular basis.</p>
 <p>They will visit your group on Day 1 to make introductions and will subsequently meet with you, on average, for 45-60 minutes every day or 1.5-2 hours every other day. As projects progress, Project Teaching Assistants might need to prioritize junior groups, but they can also be summoned to senior groups for meetings when needed. Since they can arrive unannounced at any time (busy schedules!), please stop what you were doing to have the meeting, and then resume your work when the Project Teaching Assistant leaves. Please also post questions on discord in the project-specific channels. All project Teaching Assistants have time set aside specifically to answer discord questions and to provide additional meetings when necessary.</p>
 </div>
 <div class="section" id="project-time">
-<h2>Project Time<a class="headerlink" href="#project-time" title="Permalink to this headline">#</a></h2>
+<h2>Project Time<a class="headerlink" href="#project-time" title="Permalink to this headline">¶</a></h2>
 <p>You will have 2.5-3 hours each day to work on projects. The goal during the <strong>first week</strong> is to learn about the research process and develop a project idea. To simplify logistics, we have already broken you into project groups. Among other reasons, you were (climate)matched with your pod and research group, because you share an interest in similar climate phenomena. We understand that specific interests and motivations will vary even within project groups and becoming part of the Climatematch community is as much about finding your role in the team as it is about pursuing a specific personal research interest. During the <strong>second week</strong>, which includes the Project Day (W2D2), you will implement the analyses, interpret your findings, and present them to your megapod peers on the last day of Climatematch Academy.</p>
 <p>Embedded in the project time will also be a set of <strong>professional development activities</strong>: a series of Impact Talks, meetings with mentors, and career panels.</p>
 <div class="section" id="pod-introductions-w1d1">
-<h3>POD INTRODUCTIONS W1D1<a class="headerlink" href="#pod-introductions-w1d1" title="Permalink to this headline">#</a></h3>
+<h3>POD INTRODUCTIONS W1D1<a class="headerlink" href="#pod-introductions-w1d1" title="Permalink to this headline">¶</a></h3>
 <p><em>Monday, 17th July (PM) for everyone</em></p>
 <p>On W1D1, you will meet your pod 30 minutes before the regular start of the tutorial time for introductory activities. Your pod’s Teaching Assistant will also tell you the project group you have been assigned to and its project topic. In some pods, the two groups will work on the same topic while others might be assigned two different topics depending on student interests. If you wish to work in the other group, discuss it with your Teaching Assistant.</p>
 <p>During the pod introduction on W1D1, your Teaching Assistant will also inform you about your project group’s schedule for watching and discussing the Impact Talks. One group will do this activity during the first 30 minutes of a project block, while the other will dedicate to it the last 30 minutes of a project block. The discussions following the Impact Talks will be facilitated by you - the students. Each discussion should have one student leading from the front and one student leading from behind, with every student in your project group taking on one of these leadership roles at least once. Your Teaching Assistant will help you appoint yourselves to these roles during the pod introductions. You can read more about the associated responsibilities <a class="reference external" href="https://comptools.climatematch.io/projects/professional_development/impact_talks.html#guidance-for-discussions">here</a>.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="session-1">
-<h3>SESSION 1<a class="headerlink" href="#session-1" title="Permalink to this headline">#</a></h3>
+<h3>SESSION 1<a class="headerlink" href="#session-1" title="Permalink to this headline">¶</a></h3>
 <p><em>Monday, 17th July (PM) for groups in timezone slots 2 and 5</em></p>
 <p><em>Tuesday, 18th July (AM) for groups in timezone slots 1, 3, and 4</em></p>
 <p>Work through the <a class="reference external" href="https://comptools.climatematch.io/tutorials/W2D2_GoodResearchPractices/student/W2D2_Tutorial1.html">tutorial on good research practices</a> in your project groups. Your Project Teaching Assistant will come by at some point during this period to introduce themselves and facilitate your progression through the tutorial for 30-45 minutes.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="session-2">
-<h3>SESSION 2<a class="headerlink" href="#session-2" title="Permalink to this headline">#</a></h3>
+<h3>SESSION 2<a class="headerlink" href="#session-2" title="Permalink to this headline">¶</a></h3>
 <p><em>Tuesday, 18th July (PM) for groups in timezone slots 2 and 5</em></p>
 <p><em>Wednesday, 19th July (AM) for groups in timezone slots 1, 3, and 4</em></p>
 <blockquote>
@@ -1527,7 +1574,7 @@ title="Print to PDF"
 </div>
 <hr class="docutils" />
 <div class="section" id="session-3">
-<h3>SESSION 3<a class="headerlink" href="#session-3" title="Permalink to this headline">#</a></h3>
+<h3>SESSION 3<a class="headerlink" href="#session-3" title="Permalink to this headline">¶</a></h3>
 <p><em>Wednesday, 19th July (PM) for groups in timezone slots 2 and 5</em></p>
 <p><em>Thursday, 20th July (AM) for groups in timezone slots 1, 3, and 4</em></p>
 <blockquote>
@@ -1547,7 +1594,7 @@ title="Print to PDF"
 </div>
 <hr class="docutils" />
 <div class="section" id="session-4">
-<h3>SESSION 4<a class="headerlink" href="#session-4" title="Permalink to this headline">#</a></h3>
+<h3>SESSION 4<a class="headerlink" href="#session-4" title="Permalink to this headline">¶</a></h3>
 <p><em>Thursday, 20th July (PM) for groups in timezone slots 2 and 5</em></p>
 <p><em>Friday, 21st July (AM) for groups in timezone slots 1, 3, and 4</em></p>
 <p>By the end of this project session, you should submit your project proposal via <strong><a class="reference external" href="https://airtable.com/shrQ5CLEla3dDkKbk">Airtable link</a></strong>.</p>
@@ -1565,7 +1612,7 @@ title="Print to PDF"
 </div>
 <hr class="docutils" />
 <div class="section" id="session-5">
-<h3>SESSION 5<a class="headerlink" href="#session-5" title="Permalink to this headline">#</a></h3>
+<h3>SESSION 5<a class="headerlink" href="#session-5" title="Permalink to this headline">¶</a></h3>
 <p><em>Friday, 21st July (PM) for groups in timezone slots 2 and 5</em></p>
 <p><em>Monday, 24th July (AM) for groups in timezone slots 1, 3, and 4</em></p>
 <p>You should now have a sense of the data, and you have probably refined your hypothesis a little.  Writing a proposal will have helped you get a rough idea of what tools you might use to tackle your research question, and what the answer could look like. You will use the remaining project time to implement the analyses you have planned and make progress towards an answer. Your group might not be able to complete their research plan, but don’t get discouraged: answering a research question usually takes months if not years of work and you should consider making meaningful progress towards that goal a great success!</p>
@@ -1578,7 +1625,7 @@ title="Print to PDF"
 </div>
 <hr class="docutils" />
 <div class="section" id="session-6">
-<h3>SESSION 6<a class="headerlink" href="#session-6" title="Permalink to this headline">#</a></h3>
+<h3>SESSION 6<a class="headerlink" href="#session-6" title="Permalink to this headline">¶</a></h3>
 <p><em>Monday, 24th July (PM) for groups in timezone slots 2 and 5</em></p>
 <p><em>Tuesday, 25th July (AM) for groups in timezone slots 1, 3, and 4</em></p>
 <blockquote>
@@ -1592,7 +1639,7 @@ title="Print to PDF"
 </div>
 <hr class="docutils" />
 <div class="section" id="project-day-w2d2">
-<h3>PROJECT DAY (W2D2)<a class="headerlink" href="#project-day-w2d2" title="Permalink to this headline">#</a></h3>
+<h3>PROJECT DAY (W2D2)<a class="headerlink" href="#project-day-w2d2" title="Permalink to this headline">¶</a></h3>
 <p><em>Tuesday, 25th July (AM) for groups in timezone slots 2 and 5</em></p>
 <p><em>Tuesday, 25th July (PM) for groups in timezone slots 1, 3, and 4</em></p>
 <p>Watch the keynote talk <em>“Futures from the Frontiers of Climate Science”</em> by Dr Paul Behrens.</p>
@@ -1606,7 +1653,7 @@ title="Print to PDF"
 </div>
 <hr class="docutils" />
 <div class="section" id="session-7">
-<h3>SESSION 7<a class="headerlink" href="#session-7" title="Permalink to this headline">#</a></h3>
+<h3>SESSION 7<a class="headerlink" href="#session-7" title="Permalink to this headline">¶</a></h3>
 <p><em>Tuesday, 25th July (PM) for groups in timezone slots 2 and 5</em></p>
 <p><em>Wednesday, 26th July (AM) for groups in timezone slots 1, 3, and 4</em></p>
 <p>Continue working on your project! Make sure to reconvene with your teammates every 1-1.5 hours to discuss your progress. If you are struggling with something, ask others for help right away! Use your Project Teaching Assistant and your pod’s Teaching Assistant as a resource when your group gets stuck.</p>
@@ -1614,7 +1661,7 @@ title="Print to PDF"
 </div>
 <hr class="docutils" />
 <div class="section" id="session-8">
-<h3>SESSION 8<a class="headerlink" href="#session-8" title="Permalink to this headline">#</a></h3>
+<h3>SESSION 8<a class="headerlink" href="#session-8" title="Permalink to this headline">¶</a></h3>
 <p><em>Wednesday, 26th July (PM) for groups in timezone slots 2 and 5</em></p>
 <p><em>Thursday, 27th July (AM) for groups in timezone slots 1, 3, and 4</em></p>
 <blockquote>
@@ -1625,7 +1672,7 @@ title="Print to PDF"
 </div>
 <hr class="docutils" />
 <div class="section" id="session-9">
-<h3>SESSION 9<a class="headerlink" href="#session-9" title="Permalink to this headline">#</a></h3>
+<h3>SESSION 9<a class="headerlink" href="#session-9" title="Permalink to this headline">¶</a></h3>
 <p><em>Thursday, 27th July (PM) for groups in timezone slots 2 and 5</em></p>
 <p><em>Friday, 28th July (AM) for groups in timezone slots 1, 3, and 4</em></p>
 <p>Tie up loose ends and prepare a short slideshow about your project!</p>
@@ -1634,7 +1681,7 @@ title="Print to PDF"
 <p>Use <a class="reference external" href="https://docs.google.com/presentation/d/13sSzoXhTq7R5YKznbPXH2Fo7IboMDaFKEhWQOOchT14/edit?usp=sharing">this presentation template</a>. Make a copy for your team to edit!</p>
 <p>You can add your group name and project title to the bottom panel of non-title slides through <strong>Slide</strong> -&gt; <strong>Edit theme</strong>.</p>
 <div class="section" id="content">
-<h4><strong>Content</strong><a class="headerlink" href="#content" title="Permalink to this headline">#</a></h4>
+<h4><strong>Content</strong><a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h4>
 <p>The 1 minute - 1 slide rule might seem like an impossible limit. However, it is one of the most useful formats you can learn, often referred to as a “one minute elevator pitch”. If you can become an expert at giving short pitches about your work, it will help you get the interest of a lot of people, for example when presenting posters at scientific conferences or when advocating for policy changes with your local government. Or when you accidentally find yourself in an elevator with a potential investor: this could be your chance to secure a million dollars in research funds!</p>
 <p>The key to a good presentation is to practice it by yourself many times. It is no different from other performing arts (acting, playing a musical instrument etc), where rehearsals are crucial to a good performance.</p>
 <p>If something in your presentation does not sound good or does not make sense, you WILL get annoyed by it when you say it the tenth time, and that will make you want to change it. (Secret: this how professors prepare all of their presentations and it is why they always sound like they know what they are talking about)</p>
@@ -1645,11 +1692,11 @@ title="Print to PDF"
 </div>
 <hr class="docutils" />
 <div class="section" id="w2d5-final-presentations">
-<h3>W2D5: FINAL PRESENTATIONS<a class="headerlink" href="#w2d5-final-presentations" title="Permalink to this headline">#</a></h3>
+<h3>W2D5: FINAL PRESENTATIONS<a class="headerlink" href="#w2d5-final-presentations" title="Permalink to this headline">¶</a></h3>
 <p><em>Friday, 28th July (PM) for everyone!</em></p>
 <p>This is the day you present your project to other groups in your megapod. You can invite your Project Teaching Assistant too, but they might not make it if they are busy. Groups will take turns to share their screens. You can use figures and other graphics to highlight specific aspects of your research, but your presentation is meant to be told as a story, and everyone from your group should take their turn in telling a part of that story. Tell us about the different hypotheses you have had at different points and how you refined them using some of the tools you learned during the course.</p>
 <div class="section" id="schedule">
-<h4><strong>Schedule</strong><a class="headerlink" href="#schedule" title="Permalink to this headline">#</a></h4>
+<h4><strong>Schedule</strong><a class="headerlink" href="#schedule" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p><strong>10 minutes of meet &amp; greet</strong>. Do a round of introductions (one Teaching Assistant calls out names from the zoom list). Everyone says their name, pod name, position, institution or other area of work, and subject of study, as well as one interesting fact about themselves. “Hi, I’m Jonny from the wiggly caterpillars and I am a PhD student at University of Notre Dame in Paris. I study the relationship between moisture and storms, and in my free time I like to go on long bike rides”.</p></li>
 <li><p><strong>30-40 minutes of presentations</strong>, including questions. Each group should speak for approximately 5 minutes (depending on group size), and then take questions for 1-2 minutes. The Lead Teaching Assistant of your megapod will determine the order of presentations.</p></li>
@@ -1666,7 +1713,7 @@ title="Print to PDF"
 </ul>
 </div>
 <div class="section" id="logistics">
-<h4><strong>Logistics</strong><a class="headerlink" href="#logistics" title="Permalink to this headline">#</a></h4>
+<h4><strong>Logistics</strong><a class="headerlink" href="#logistics" title="Permalink to this headline">¶</a></h4>
 <p>Presentations will take place 1.5 hours after the end of your W2D5 tutorials. <strong>For groups in timezone slots 1, 3, 4, this will fall outside of their regular course hours.</strong></p>
 <p>You will present to other groups (3-5 groups per room). An email will be sent with the zoom room of one of the pods and all groups will meet there for one hour. There is a hard cutoff at the one hour mark, and it will be the Teaching Assistants’ responsibility to ensure everyone gets a turn to present.</p>
 <p>One minute per person and one slide per person only! This is primarily to ensure that everyone in your megapod gets to present before the hard cutoff at the one hour mark.</p>
@@ -1674,7 +1721,7 @@ title="Print to PDF"
 <p>When you are done presenting, leave the last slide up (with conclusions), and open the floor for questions.</p>
 </div>
 <div class="section" id="questions">
-<h4><strong>Questions</strong><a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h4>
+<h4><strong>Questions</strong><a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h4>
 <p>If your presentation was short enough, there is time for questions from the audience. These are a great way to get feedback on your project!</p>
 <p>Before you ask a question, consider whether others might be interested in that topic too. This usually means asking big picture questions, as opposed to detailed, technical questions, but there are exceptions.</p>
 <p>If you are answering the question, try to be short and concise. Your audience will notice if you start rambling, and it can seem as if you are avoiding the question. Answering concisely is another very useful skill in “real life”. It also means that you can take more questions given our time constraints.</p>

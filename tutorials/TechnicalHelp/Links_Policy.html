@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,15 +40,15 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -199,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -350,7 +350,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Data
  </span>
@@ -570,7 +570,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Future
  </span>
@@ -770,7 +770,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Response
  </span>
@@ -901,7 +901,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -984,8 +984,55 @@ const thebe_selector_output = ".output, .cell_output"
    Continuing your project after the course
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/docs/past_projects_overview.html">
+   Past projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Professional Development
  </span>
@@ -1331,9 +1378,9 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="quick-links-and-policies">
-<h1>Quick links and policies<a class="headerlink" href="#quick-links-and-policies" title="Permalink to this headline">#</a></h1>
+<h1>Quick links and policies<a class="headerlink" href="#quick-links-and-policies" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="quick-links">
-<h2>Quick links<a class="headerlink" href="#quick-links" title="Permalink to this headline">#</a></h2>
+<h2>Quick links<a class="headerlink" href="#quick-links" title="Permalink to this headline">¶</a></h2>
 <p>Course materials: <a class="reference external" href="https://comptools.climatematch.io/">https://comptools.climatematch.io/</a></p>
 <p>Portal: <a class="reference external" href="https://portal.neuromatchacademy.org/">https://portal.neuromatchacademy.org/</a></p>
 <p>Website: <a class="reference external" href="https://academy.climatematch.io/">https://academy.climatematch.io/</a></p>
@@ -1344,24 +1391,24 @@ title="Print to PDF"
 <p>Attendance Exemption Form: <a class="reference external" href="https://airtable.com/shr7CB9qLcIVejpUd">https://airtable.com/shr7CB9qLcIVejpUd</a></p>
 </div>
 <div class="section" id="policies">
-<h2>Policies<a class="headerlink" href="#policies" title="Permalink to this headline">#</a></h2>
+<h2>Policies<a class="headerlink" href="#policies" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="coursework-attendance-policy">
-<h3>Coursework attendance policy<a class="headerlink" href="#coursework-attendance-policy" title="Permalink to this headline">#</a></h3>
+<h3>Coursework attendance policy<a class="headerlink" href="#coursework-attendance-policy" title="Permalink to this headline">¶</a></h3>
 <p>Students who participate in this course will gain a certificate of completion for the coursework. Students are allowed to miss two days if necessary and if they communicate that with their teaching assistant.  If there are exceptional circumstances that force a student to miss class for reasons completely beyond their control, such as severe illness, electricity blackouts, etc, they can request to get the certificate despite missing more than two days by filling out the attendance exemption form (<a class="reference external" href="https://airtable.com/shr7CB9qLcIVejpUd">https://airtable.com/shr7CB9qLcIVejpUd</a>) <strong>at least two days prior to the end of course</strong>. Please note these requests may not be granted.</p>
 </div>
 <div class="section" id="projects-attendance-policy">
-<h3>Projects attendance policy<a class="headerlink" href="#projects-attendance-policy" title="Permalink to this headline">#</a></h3>
+<h3>Projects attendance policy<a class="headerlink" href="#projects-attendance-policy" title="Permalink to this headline">¶</a></h3>
 <p>Projects are an integral part of the Neuromatch Academy experience. Students who participate in projects and miss no more than two days of projects work will gain a certificate of completion for the projects.</p>
 <p>If there are exceptional circumstances that make it difficult to attend the projects portion of the course, students can request to drop out of projects by filling out the project exemption form (). If their request is granted, the student can continue to attend the coursework sections and gain a coursework certificate if eligible (see above), but not participate in the projects work.</p>
 <p>If the student participates in projects but misses more than two days due to exceptional circumstances, they can request to get the projects certificate anyway by filling out the attendance exemption form (<a class="reference external" href="https://airtable.com/shr7CB9qLcIVejpUd">https://airtable.com/shr7CB9qLcIVejpUd</a>) <strong>at least two days prior to the end of course</strong>. Please note these requests may not be granted.</p>
 </div>
 </div>
 <div class="section" id="academy-accessibility-statement">
-<h2>Academy Accessibility Statement<a class="headerlink" href="#academy-accessibility-statement" title="Permalink to this headline">#</a></h2>
+<h2>Academy Accessibility Statement<a class="headerlink" href="#academy-accessibility-statement" title="Permalink to this headline">¶</a></h2>
 <p>Climatematch Academy believes and respects that each student brings diverse life and learning experiences to the educational environment and that there is no one-size-fits-all approach to education. As such, our team at Climatematch Academy is firmly committed to supporting DEIJSA+ (Diversity, Equity, Inclusion, Justice, Sense of Belonging, Accessibility, +) values, inclusion, and equity-based practices. One of our main goals has been to create an accessible and inclusive educational system with infrastructure and practices in place to support students’ needs. We want every student to feel valued and in charge of their experience, knowing we have built-in support systems for them.</p>
 <p>Accordingly, we adhere to the following resources, guidelines, and policies to support access and accessibility:</p>
 <div class="section" id="attendance">
-<h3>Attendance<a class="headerlink" href="#attendance" title="Permalink to this headline">#</a></h3>
+<h3>Attendance<a class="headerlink" href="#attendance" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Attendance flexibility to miss class for acceptable reasons, such as medical appointments, illness, electricity blackouts, bad internet connection, and personal well-being, among others.</p></li>
 <li><p>Drop out of projects if there are exceptional circumstances that make it difficult to attend the project’s portion of the course.</p></li>
@@ -1369,7 +1416,7 @@ title="Print to PDF"
 </ul>
 </div>
 <div class="section" id="curriculum">
-<h3>Curriculum<a class="headerlink" href="#curriculum" title="Permalink to this headline">#</a></h3>
+<h3>Curriculum<a class="headerlink" href="#curriculum" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Open Access. All course materials are freely available to use, share, and view under a CC-BY license with a public repository available on GitHub.</p></li>
 <li><p>Use of “FAIR” research software in the sense of four foundational principles: being Findable, Accessible, Interoperable, and Reusable.</p></li>
@@ -1379,7 +1426,7 @@ title="Print to PDF"
 </ul>
 </div>
 <div class="section" id="logistical">
-<h3>Logistical<a class="headerlink" href="#logistical" title="Permalink to this headline">#</a></h3>
+<h3>Logistical<a class="headerlink" href="#logistical" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Flexibility in background prerequisites for admission.</p></li>
 <li><p>Flexibility in due dates.</p></li>
@@ -1389,13 +1436,13 @@ title="Print to PDF"
 </ul>
 </div>
 <div class="section" id="visual">
-<h3>Visual<a class="headerlink" href="#visual" title="Permalink to this headline">#</a></h3>
+<h3>Visual<a class="headerlink" href="#visual" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Colorblind-friendly palettes in the vast majority of our materials.</p></li>
 </ul>
 </div>
 <div class="section" id="technical">
-<h3>Technical<a class="headerlink" href="#technical" title="Permalink to this headline">#</a></h3>
+<h3>Technical<a class="headerlink" href="#technical" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Set up a JupyterHub online where all datasets and code are ready to use, providing a solution that offers major compute resources independently of personal computer capacities.</p></li>
 <li><p>Set up the tutorials on Google Colab and Kaggle for low-bandwidth Internet connections.</p></li>

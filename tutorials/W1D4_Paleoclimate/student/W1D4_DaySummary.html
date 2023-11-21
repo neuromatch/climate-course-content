@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
     <script src="../../../_static/doctools.js"></script>
@@ -40,15 +40,15 @@
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -199,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -350,7 +350,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Data
  </span>
@@ -570,7 +570,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Future
  </span>
@@ -770,7 +770,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Response
  </span>
@@ -901,7 +901,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -984,8 +984,55 @@ const thebe_selector_output = ".output, .cell_output"
    Continuing your project after the course
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../projects/docs/past_projects_overview.html">
+   Past projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../projects/past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Professional Development
  </span>
@@ -1225,7 +1272,7 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="day-summary">
-<h1>Day Summary<a class="headerlink" href="#day-summary" title="Permalink to this headline">#</a></h1>
+<h1>Day Summary<a class="headerlink" href="#day-summary" title="Permalink to this headline">¶</a></h1>
 <p>In the tutorials today, you explored multiple paleoclimate reconstructions based on various proxies. You further applied computational tools for assessing past changes in Earth’s climate and interpreting climate forcings. Finally, you compared paleoclimate proxies and paleoclimate data from model simulations of past climate to further understand global climate variability on different timescales. Using these paleoclimate proxies and tools to better understand past climate on Earth can help to assess future changes in the climate system.</p>
 </div>
 

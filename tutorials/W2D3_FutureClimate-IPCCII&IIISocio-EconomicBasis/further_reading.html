@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,17 +40,17 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -201,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -352,7 +352,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Data
  </span>
@@ -572,7 +572,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Future
  </span>
@@ -772,7 +772,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Response
  </span>
@@ -903,7 +903,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -986,8 +986,55 @@ const thebe_selector_output = ".output, .cell_output"
    Continuing your project after the course
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/docs/past_projects_overview.html">
+   Past projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Professional Development
  </span>
@@ -1345,9 +1392,9 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="tutorial-2-further-reading">
-<h1><strong>Tutorial 2 Further Reading</strong><a class="headerlink" href="#tutorial-2-further-reading" title="Permalink to this headline">#</a></h1>
+<h1><strong>Tutorial 2 Further Reading</strong><a class="headerlink" href="#tutorial-2-further-reading" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="iam-model-summary">
-<h2><strong>IAM Model Summary</strong><a class="headerlink" href="#iam-model-summary" title="Permalink to this headline">#</a></h2>
+<h2><strong>IAM Model Summary</strong><a class="headerlink" href="#iam-model-summary" title="Permalink to this headline">¶</a></h2>
 <p>The economy model in most IAMs is a capital accumulation model.</p>
 <ul class="simple">
 <li><p>Capital combines with a laboring population and technology to generate productivity (<span class="math notranslate nohighlight">\(Y\)</span>) that is hindered by climate damage.</p></li>
@@ -1377,7 +1424,7 @@ title="Print to PDF"
 </ul>
 </div>
 <div class="section" id="exogeneous-control-variables">
-<h2><strong>Exogeneous Control Variables</strong><a class="headerlink" href="#exogeneous-control-variables" title="Permalink to this headline">#</a></h2>
+<h2><strong>Exogeneous Control Variables</strong><a class="headerlink" href="#exogeneous-control-variables" title="Permalink to this headline">¶</a></h2>
 <p>There are two exogeneous variables in the model:</p>
 <ul class="simple">
 <li><p>mitigation (emissions reduction) rate <span class="math notranslate nohighlight">\(\mu_t\)</span>, and</p></li>
@@ -1387,7 +1434,7 @@ title="Print to PDF"
 <p>The savings rate <span class="math notranslate nohighlight">\(S_t\)</span> extracts a portion of the total production to invest, thereby boosting capital. The rest of the production is then allocated for consumption.</p>
 </div>
 <div class="section" id="economy-model-summary">
-<h2><strong>Economy Model Summary</strong><a class="headerlink" href="#economy-model-summary" title="Permalink to this headline">#</a></h2>
+<h2><strong>Economy Model Summary</strong><a class="headerlink" href="#economy-model-summary" title="Permalink to this headline">¶</a></h2>
 <p>The essence of the economy model in DICE is a capital accumulation model. Existing capital depreciates at rate <span class="math notranslate nohighlight">\(\delta\)</span> and new capital arises through investment,
 $<span class="math notranslate nohighlight">\(K_{t+1}=(1-\delta)K_t+I_t\)</span><span class="math notranslate nohighlight">\(
 where the invested capital \)</span>I=SQ<span class="math notranslate nohighlight">\( is determined by a chosen fraction \)</span>S<span class="math notranslate nohighlight">\( of the production \)</span>Q<span class="math notranslate nohighlight">\( that is &quot;saved&quot; rather than consumed. Production is given as the productivity \)</span>Y<span class="math notranslate nohighlight">\( reduced by damages and mitigation cost, \)</span><span class="math notranslate nohighlight">\(Q=(1-\Omega)(1-\Lambda)Y.\)</span><span class="math notranslate nohighlight">\( Productivity, \)</span><span class="math notranslate nohighlight">\(Y=A K^\gamma L^{1-\gamma},\)</span><span class="math notranslate nohighlight">\(
@@ -1408,12 +1455,12 @@ is determined by the technology conversion \)</span>A<span class="math notransla
 </ul>
 </div>
 <div class="section" id="optimal-planning">
-<h2><strong>Optimal Planning</strong><a class="headerlink" href="#optimal-planning" title="Permalink to this headline">#</a></h2>
+<h2><strong>Optimal Planning</strong><a class="headerlink" href="#optimal-planning" title="Permalink to this headline">¶</a></h2>
 <p>The unconstrained problem aims to maximize <span class="math notranslate nohighlight">\(V\)</span> within the bounds of <span class="math notranslate nohighlight">\(\mu_t\)</span> and <span class="math notranslate nohighlight">\(S_t\)</span> time courses (while considering constraints on <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(S\)</span>). Why is there a “sweet spot”? Increasing savings boosts investment and productivity, but higher production leads to emissions, resulting in increased temperature and damages that reduce production. Mitigation costs counterbalance this effect, creating a trade-off. As a result, there typically exists a meaningful joint time series of <span class="math notranslate nohighlight">\(\mu_t\)</span> and <span class="math notranslate nohighlight">\(S_t\)</span> that maximizes <span class="math notranslate nohighlight">\(V\)</span>. Due to the discount factor <span class="math notranslate nohighlight">\(\gamma\)</span>, <span class="math notranslate nohighlight">\(V\)</span> depends on the future consumption sequence (non-invested production) within a few multiples of the horizon, approximately <span class="math notranslate nohighlight">\(1/(1-\gamma)\)</span> time steps into the future.</p>
 <p>Constrained formulations introduce an additional constraint to limit industrial emissions below a certain threshold.</p>
 </div>
 <div class="section" id="social-cost-of-carbon">
-<h2><strong>Social Cost of Carbon</strong><a class="headerlink" href="#social-cost-of-carbon" title="Permalink to this headline">#</a></h2>
+<h2><strong>Social Cost of Carbon</strong><a class="headerlink" href="#social-cost-of-carbon" title="Permalink to this headline">¶</a></h2>
 <p>A definition for the social cost of carbon (SCC) is</p>
 <ul class="simple">
 <li><p><em>the decrease in aggregate consumption in that year that would change the current…value of social welfare by the same amount as a one unit increase in carbon emissions in that year.</em> (<a class="reference external" href="https://www.worldscientific.com/doi/abs/10.1142/S2010007813500012">Newbold, Griffiths, Moore, Wolverton, &amp; Kopits, 2013</a>).</p></li>
@@ -1426,9 +1473,9 @@ This is usually expressed by multiplying by a proportionality factor of \)</span
 </div>
 </div>
 <div class="section" id="tutorial-4-further-reading">
-<h1><strong>Tutorial 4 Further Reading</strong><a class="headerlink" href="#tutorial-4-further-reading" title="Permalink to this headline">#</a></h1>
+<h1><strong>Tutorial 4 Further Reading</strong><a class="headerlink" href="#tutorial-4-further-reading" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="vectorization-methods-for-creating-word-clouds">
-<h2><strong>Vectorization Methods for Creating Word Clouds</strong><a class="headerlink" href="#vectorization-methods-for-creating-word-clouds" title="Permalink to this headline">#</a></h2>
+<h2><strong>Vectorization Methods for Creating Word Clouds</strong><a class="headerlink" href="#vectorization-methods-for-creating-word-clouds" title="Permalink to this headline">¶</a></h2>
 <p>Let’s write down what they compute by denoting the index, <span class="math notranslate nohighlight">\(d\)</span>, over the <span class="math notranslate nohighlight">\(D\)</span> documents and the index, <span class="math notranslate nohighlight">\(w\)</span>, over the <span class="math notranslate nohighlight">\(W\)</span> words in the vocabulary (the list of all the words found in all the tweets, which we’ll call documents):</p>
 <ul class="simple">
 <li><p>term frequency, <span class="math notranslate nohighlight">\(\mathrm{tf}(w,d)\)</span>. The frequency of a word <span class="math notranslate nohighlight">\(w\)</span> in a document <span class="math notranslate nohighlight">\(d\)</span> is $<span class="math notranslate nohighlight">\(\mathrm{tf}(w,d):=\frac{n(w,d)}{n(d)},\)</span><span class="math notranslate nohighlight">\( where \)</span>n(w,d)<span class="math notranslate nohighlight">\( is the number of times term \)</span>w<span class="math notranslate nohighlight">\( is in document \)</span>d<span class="math notranslate nohighlight">\( and \)</span>n(d)=\sum_{w=1}^W n(w,d)<span class="math notranslate nohighlight">\( is the total number of words in document \)</span>d<span class="math notranslate nohighlight">\(. The term frequency over all the documents is then, \)</span><span class="math notranslate nohighlight">\(\mathrm{tf}(w):=\frac{\sum_{d=1}^D n(d)\mathrm{tf}(w,d)}{N},\)</span><span class="math notranslate nohighlight">\( where the denominator \)</span>N=\sum_{d=1}^D n(d)$ is just the total word count across all documents.</p></li>

@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,15 +40,15 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -199,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -350,7 +350,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Data
  </span>
@@ -570,7 +570,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Future
  </span>
@@ -770,7 +770,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Response
  </span>
@@ -901,7 +901,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -984,8 +984,55 @@ const thebe_selector_output = ".output, .cell_output"
    Continuing your project after the course
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/docs/past_projects_overview.html">
+   Past projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Professional Development
  </span>
@@ -1317,12 +1364,12 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="general-schedule">
-<h1>General Schedule<a class="headerlink" href="#general-schedule" title="Permalink to this headline">#</a></h1>
+<h1>General Schedule<a class="headerlink" href="#general-schedule" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="course-will-run-july-17-28-2023">
-<h2>2023 course will run July 17-28, 2023<a class="headerlink" href="#course-will-run-july-17-28-2023" title="Permalink to this headline">#</a></h2>
+<h2>2023 course will run July 17-28, 2023<a class="headerlink" href="#course-will-run-july-17-28-2023" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="course-overview">
-<h2>Course Overview<a class="headerlink" href="#course-overview" title="Permalink to this headline">#</a></h2>
+<h2>Course Overview<a class="headerlink" href="#course-overview" title="Permalink to this headline">¶</a></h2>
 <p>The course will begin with Opening Ceremonies on Sunday, July 9th</p>
 <ul class="simple">
 <li><p>7:00 am UTC</p></li>
@@ -1331,7 +1378,7 @@ title="Print to PDF"
 <p>Tutorials, Projects and Professional Development activities will take place between July 17th and July 28th, 2023.</p>
 </div>
 <div class="section" id="course-schedule-for-timezones-2-5">
-<h2>Course Schedule for Timezones 2 &amp; 5<a class="headerlink" href="#course-schedule-for-timezones-2-5" title="Permalink to this headline">#</a></h2>
+<h2>Course Schedule for Timezones 2 &amp; 5<a class="headerlink" href="#course-schedule-for-timezones-2-5" title="Permalink to this headline">¶</a></h2>
 <table cellspacing="0" cellpadding="0">
   <tr>
    <td colspan="6" bgcolor="#B0C7DC" align="center" ><strong><font color="black" size="5" > Course Schedule - Timezones 2 & 5 </font></strong>
@@ -1515,7 +1562,7 @@ title="Print to PDF"
 </table>
 </div>
 <div class="section" id="course-schedule-for-timezones-1-3-4">
-<h2>Course Schedule for Timezones 1, 3 &amp; 4<a class="headerlink" href="#course-schedule-for-timezones-1-3-4" title="Permalink to this headline">#</a></h2>
+<h2>Course Schedule for Timezones 1, 3 &amp; 4<a class="headerlink" href="#course-schedule-for-timezones-1-3-4" title="Permalink to this headline">¶</a></h2>
 <table cellspacing="0" cellpadding="0">
   <tr>
    <td colspan="6"  bgcolor="#B0C7DC" align="center" ><strong><font color="black" size="5" > Course Schedule - Timezones 1, 3 & 4</font> </strong>
@@ -1714,10 +1761,10 @@ title="Print to PDF"
 </table>
 </div>
 <div class="section" id="daily-schedule">
-<h2>Daily Schedule<a class="headerlink" href="#daily-schedule" title="Permalink to this headline">#</a></h2>
+<h2>Daily Schedule<a class="headerlink" href="#daily-schedule" title="Permalink to this headline">¶</a></h2>
 <p>These schedules refer to the time spent working on the course curriculum (5 hours each day).</p>
 <div class="section" id="curriculum-schedule">
-<h3>Curriculum Schedule<a class="headerlink" href="#curriculum-schedule" title="Permalink to this headline">#</a></h3>
+<h3>Curriculum Schedule<a class="headerlink" href="#curriculum-schedule" title="Permalink to this headline">¶</a></h3>
 <p>All days (except W1D1 and W2D2) will follow this schedule for course time:</p>
 <table>
   <tr>
@@ -1774,12 +1821,12 @@ title="Print to PDF"
 <p>W2D2: Following a keynote lecture in its usual slot, 0:00-3:30 will be spent working on the group project. At 3:30-4:30, there will be a live career panel as part of the Professional Development program. You can find more information about this day in the <a class="reference external" href="https://climatematchacademy.github.io/projects/docs/project_guidance.html#project-day-w2d2">Daily Guide for Projects</a>.</p>
 </div>
 <div class="section" id="project-schedule">
-<h3>Project Schedule<a class="headerlink" href="#project-schedule" title="Permalink to this headline">#</a></h3>
+<h3>Project Schedule<a class="headerlink" href="#project-schedule" title="Permalink to this headline">¶</a></h3>
 <p>In addition to curriculum time, each day will have 3 hours of project time. Check the <a class="reference external" href="https://climatematchacademy.github.io/widgets/tz.html">time slot widget</a> to see when project time is scheduled for your slot.</p>
 <p>On W2D2 you will additionally be working on your group projects during the time usually allocated for tutorials.</p>
 </div>
 <div class="section" id="professional-development-schedule">
-<h3>Professional Development Schedule<a class="headerlink" href="#professional-development-schedule" title="Permalink to this headline">#</a></h3>
+<h3>Professional Development Schedule<a class="headerlink" href="#professional-development-schedule" title="Permalink to this headline">¶</a></h3>
 <p>A series of professional development events (viewing and discussing four Impact Talks, a career panel, and two meetings with mentors) will take place during the 3-hour project time. Check the <a class="reference external" href="https://climatematchacademy.github.io/widgets/tz.html">time slot widget</a> to see when project time is scheduled for your slot.</p>
 <ul class="simple">
 <li><p>Impact talks and discussions will take place during the first or last 30 minutes of Project Sessions 2, 3, 6 and 8.</p></li>
@@ -1788,7 +1835,7 @@ title="Print to PDF"
 </ul>
 </div>
 <div class="section" id="w2d5-final-day-of-the-course">
-<h3>W2D5: Final Day of the Course<a class="headerlink" href="#w2d5-final-day-of-the-course" title="Permalink to this headline">#</a></h3>
+<h3>W2D5: Final Day of the Course<a class="headerlink" href="#w2d5-final-day-of-the-course" title="Permalink to this headline">¶</a></h3>
 <table>
   <tr>
    <td><strong>Time (Hour)</strong>

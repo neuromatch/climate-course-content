@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,15 +40,15 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -199,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -350,7 +350,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Data
  </span>
@@ -570,7 +570,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Future
  </span>
@@ -770,7 +770,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Response
  </span>
@@ -901,7 +901,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -984,8 +984,55 @@ const thebe_selector_output = ".output, .cell_output"
    Continuing your project after the course
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/docs/past_projects_overview.html">
+   Past projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Professional Development
  </span>
@@ -1275,16 +1322,16 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="using-jupyterhub">
-<h1><strong>Using JupyterHub</strong><a class="headerlink" href="#using-jupyterhub" title="Permalink to this headline">#</a></h1>
+<h1><strong>Using JupyterHub</strong><a class="headerlink" href="#using-jupyterhub" title="Permalink to this headline">¶</a></h1>
 <p>The JupyterHub is a cloud-based platform that provides a seamless coding environment able to interact with climate datasets and pre-installed python packages to be used in the course.</p>
 <p>Unlike Google Colab and Kaggle, in the JupyterHub there is no need to <em>!pip install</em> any packages or download data from osf. These should all be available already in the JupyterHub environment. We hope this experience will provide flexibility as you explore projects and practice the new skills you acquire over the next two weeks.</p>
 <p>Note that if you live in a region with difficult access to the JupyterHub, the Climatematch Academy team has also subsetted datasets that can be loaded in Google Colab and Kaggle environments.</p>
 <p>To read more about what a JupyterHub is: <a class="reference external" href="https://jupyterhub.readthedocs.io/en/stable/">https://jupyterhub.readthedocs.io/en/stable/</a></p>
 <p>To read more about our collaborators at 2i2c that are providing this experience <a class="reference external" href="https://2i2c.org/">https://2i2c.org/</a></p>
 <div class="section" id="id1">
-<h2><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<h2><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="steps">
-<h3><strong>STEPS:</strong><a class="headerlink" href="#steps" title="Permalink to this headline">#</a></h3>
+<h3><strong>STEPS:</strong><a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
 <ol>
 <li><p>You should have already opened a Github account and provided the Climatematch Academy team your username. This step is necessary for you to be added to the course Github Team which enables access to the JupyterHub.</p></li>
 <li><p>Click the Rocketship button found on top of every page containing a tutorial.</p>
@@ -1303,9 +1350,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="id2">
-<h2><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<h2><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="using-jupyterhub-to-collaborate-on-projects">
-<h3><strong>USING JUPYTERHUB TO COLLABORATE ON PROJECTS</strong><a class="headerlink" href="#using-jupyterhub-to-collaborate-on-projects" title="Permalink to this headline">#</a></h3>
+<h3><strong>USING JUPYTERHUB TO COLLABORATE ON PROJECTS</strong><a class="headerlink" href="#using-jupyterhub-to-collaborate-on-projects" title="Permalink to this headline">¶</a></h3>
 <p>To help you share code, data, and plots, we have created a <code class="docutils literal notranslate"><span class="pre">shared-public</span></code> folder on JupyterHub. Each project group has a dedicated subfolder named after the group. <strong>Work ONLY in your project group’s folder!!!!</strong></p>
 <a class="reference internal image-reference" href="../../_images/jHub4.png"><img alt="JupyterHub interactive coding environment" src="../../_images/jHub4.png" style="width: 40%;" /></a>
 <p>Inside your group’s folder, you will find a <code class="docutils literal notranslate"><span class="pre">dev.ipynb</span></code> notebook that you can use to develop code collaboratively.</p>

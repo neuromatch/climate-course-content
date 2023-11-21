@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,15 +40,15 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -199,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -350,7 +350,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Data
  </span>
@@ -570,7 +570,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Future
  </span>
@@ -770,7 +770,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Response
  </span>
@@ -901,7 +901,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -984,8 +984,55 @@ const thebe_selector_output = ".output, .cell_output"
    Continuing your project after the course
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../docs/past_projects_overview.html">
+   Past projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Professional Development
  </span>
@@ -1355,7 +1402,7 @@ title="Print to PDF"
                 
   <p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.ipynb" target="_parent"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a></p>
 <div class="section" id="the-impact-of-enso-on-precipitation-and-temperature">
-<h1><strong>The Impact of ENSO on Precipitation and Temperature</strong><a class="headerlink" href="#the-impact-of-enso-on-precipitation-and-temperature" title="Permalink to this headline">#</a></h1>
+<h1><strong>The Impact of ENSO on Precipitation and Temperature</strong><a class="headerlink" href="#the-impact-of-enso-on-precipitation-and-temperature" title="Permalink to this headline">¶</a></h1>
 <p><strong>Content creators:</strong> Olawale Ikuyajolu &amp; Patrick Orenstein</p>
 <p><strong>Content reviewers:</strong> Marguerite Brown, Yuxin Zhou</p>
 <p><strong>Content editors:</strong> Zane Mitrevica, Natalie Steinemann, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
@@ -1366,14 +1413,14 @@ title="Print to PDF"
 <p>You may also reference W1D5, W2D1, and W2D4 tutorials on CMIP6 and read more about the different CMIP6 scenarios <a class="reference external" href="https://www.dkrz.de/en/communication/climate-simulations/cmip6-en/the-ssp-scenarios">here</a>. Please see the Resources section at the bottom of this notebook for more information.</p>
 </div>
 <div class="section" id="project-template">
-<h1>Project Template<a class="headerlink" href="#project-template" title="Permalink to this headline">#</a></h1>
+<h1>Project Template<a class="headerlink" href="#project-template" title="Permalink to this headline">¶</a></h1>
 <p><img alt="Project Template" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/template-images/ENSO_template_map.svg" /></p>
 <p><em>Note: The dashed boxes are socio-economic questions.</em></p>
 </div>
 <div class="section" id="data-exploration-notebook">
-<h1>Data Exploration Notebook<a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">#</a></h1>
+<h1>Data Exploration Notebook<a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="project-setup">
-<h2>Project Setup<a class="headerlink" href="#project-setup" title="Permalink to this headline">#</a></h2>
+<h2>Project Setup<a class="headerlink" href="#project-setup" title="Permalink to this headline">¶</a></h2>
 <div class="cell tag_colab docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># google colab installs</span>
@@ -1409,6 +1456,20 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">pooch</span>
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">tempfile</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2316</span><span class="o">/</span><span class="mf">2998986080.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="ne">----&gt; </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">intake</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;intake&#39;
 </pre></div>
 </div>
 </div>
@@ -1452,6 +1513,20 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2316</span><span class="o">/</span><span class="mf">469109112.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;matplotlib&#39;</span><span class="p">,</span> <span class="s1">&#39;inline&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="s2">&quot;https://storage.googleapis.com/cmip6/pangeo-cmip6.json&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="p">)</span>  <span class="c1"># open an intake catalog containing the Pangeo CMIP cloud data</span>
+
+<span class="ne">NameError</span>: name &#39;intake&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1473,7 +1548,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="dataset-1-load-cmip6-model-of-your-choice">
-<h2>Dataset 1: Load CMIP6 Model of Your Choice<a class="headerlink" href="#dataset-1-load-cmip6-model-of-your-choice" title="Permalink to this headline">#</a></h2>
+<h2>Dataset 1: Load CMIP6 Model of Your Choice<a class="headerlink" href="#dataset-1-load-cmip6-model-of-your-choice" title="Permalink to this headline">¶</a></h2>
 <p>Following W2D1 (Week 2 Day 1) tutorial notebooks:</p>
 <ul class="simple">
 <li><p>We use the <em>CESM2</em> model (<em>source_id</em>) and ensemble member <em>r4i1p1f1</em> (<em>member_id</em>) in this template, but you are free to select any model and ensemble member. Make sure the <em>member_id</em> selected is available for your model. You can learn more about the <em>member_id</em> and other CMIP6 facets through the links at the end of the <a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/CMIP/CMIP_resource_bank.md">CMIP Resource Bank</a></p></li>
@@ -1500,207 +1575,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;source_id/experiment_id&#39;
-</pre></div>
-</div>
-<div class="output text_html">
-<style>
-    /* Turns off some styling */
-    progress {
-        /* gets rid of default border in Firefox and Opera. */
-        border: none;
-        /* Needs to be in here for Safari polyfill so background images work as expected. */
-        background-size: auto;
-    }
-    progress:not([value]), progress:not([value])::-webkit-progress-bar {
-        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
-    }
-    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-        background: #F44336;
-    }
-</style>
-</div><div class="output text_html">
-<div>
-  <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:01&lt;00:00]
-</div>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;source_id/experiment_id&#39;
-</pre></div>
-</div>
-<div class="output text_html">
-<style>
-    /* Turns off some styling */
-    progress {
-        /* gets rid of default border in Firefox and Opera. */
-        border: none;
-        /* Needs to be in here for Safari polyfill so background images work as expected. */
-        background-size: auto;
-    }
-    progress:not([value]), progress:not([value])::-webkit-progress-bar {
-        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
-    }
-    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-        background: #F44336;
-    }
-</style>
-</div><div class="output text_html">
-<div>
-  <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:01&lt;00:00]
-</div>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;source_id/experiment_id&#39;
-</pre></div>
-</div>
-<div class="output text_html">
-<style>
-    /* Turns off some styling */
-    progress {
-        /* gets rid of default border in Firefox and Opera. */
-        border: none;
-        /* Needs to be in here for Safari polyfill so background images work as expected. */
-        background-size: auto;
-    }
-    progress:not([value]), progress:not([value])::-webkit-progress-bar {
-        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
-    }
-    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-        background: #F44336;
-    }
-</style>
-</div><div class="output text_html">
-<div>
-  <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:02&lt;00:00]
-</div>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KeysView(DataTree(&#39;None&#39;, parent=None)
-└── DataTree(&#39;CESM2&#39;)
-    ├── DataTree(&#39;ssp245&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
-    │                            x: 288, nbnd: 2)
-    │       Coordinates:
-    │         * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
-    │         * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
-    │         * time            (time) object 2015-01-15 12:00:00 ... 2100-12-15 12:00:00
-    │           lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-    │           time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-    │         * nbnd            (nbnd) int64 0 1
-    │           lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
-    │           lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │       Data variables:
-    │           tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1732
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tas
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp245
-    ├── DataTree(&#39;historical&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 192,
-    │                            x: 288, nbnd: 2)
-    │       Coordinates:
-    │         * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
-    │         * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
-    │         * time            (time) object 1850-01-15 12:00:00 ... 2014-12-15 12:00:00
-    │           lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-    │           time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
-    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-    │         * nbnd            (nbnd) int64 0 1
-    │           lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
-    │           lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │       Data variables:
-    │           tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 600, 192, 288), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      CMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             674885.0
-    │           branch_time_in_parent:            182500.0
-    │           case_id:                          18
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tas
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
-    │           intake_esm_attrs:version:         20190308
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/historical
-    ├── DataTree(&#39;ssp126&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
-    │                            x: 288, nbnd: 2)
-    │       Coordinates:
-    │         * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
-    │         * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
-    │         * time            (time) object 2015-01-15 12:00:00 ... 2100-12-15 12:00:00
-    │           lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-    │           time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │           lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-    │         * nbnd            (nbnd) int64 0 1
-    │           lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
-    │           lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │       Data variables:
-    │           tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1729
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tas
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp126
-    └── DataTree(&#39;ssp585&#39;)
-            Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
-                                 x: 288, nbnd: 2)
-            Coordinates:
-              * y               (y) float64 -90.0 -89.06 -88.12 -87.17 ... 88.12 89.06 90.0
-              * x               (x) float64 0.0 1.25 2.5 3.75 ... 355.0 356.2 357.5 358.8
-              * time            (time) object 2015-01-15 12:00:00 ... 2100-12-15 12:00:00
-                lat_bounds      (y, nbnd, x) float64 dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-                time_bounds     (time, nbnd) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-                lon_bounds      (x, nbnd, y) float64 dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-              * nbnd            (nbnd) int64 0 1
-                lon             (x, y) float64 360.0 360.0 360.0 360.0 ... 358.8 358.8 358.8
-                lat             (x, y) float64 -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
-              * member_id       (member_id) object &#39;r4i1p1f1&#39;
-              * dcpp_init_year  (dcpp_init_year) float64 nan
-            Data variables:
-                tas             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
-            Attributes: (12/61)
-                Conventions:                      CF-1.7 CMIP-6.2
-                activity_id:                      ScenarioMIP
-                branch_method:                    standard
-                branch_time_in_child:             735110.0
-                branch_time_in_parent:            735110.0
-                case_id:                          1735
-                ...                               ...
-                intake_esm_attrs:variable_id:     tas
-                intake_esm_attrs:grid_label:      gn
-                intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-                intake_esm_attrs:version:         20200528
-                intake_esm_attrs:_data_format_:   zarr
-                intake_esm_dataset_key:           CESM2/ssp585)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2316</span><span class="o">/</span><span class="mf">3901925980.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">source_ids</span> <span class="o">=</span> <span class="s2">&quot;CESM2&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">dm_tas</span> <span class="o">=</span> <span class="n">load_cmip6</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">source_ids</span><span class="p">,</span> <span class="s2">&quot;tas&quot;</span><span class="p">,</span> <span class="s2">&quot;r4i1p1f1&quot;</span><span class="p">,</span> <span class="s2">&quot;Amon&quot;</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="p">)</span>  <span class="c1"># tas is atmoerhpere temprature</span>
+
+<span class="ne">NameError</span>: name &#39;load_cmip6&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1728,204 +1612,23 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;source_id/experiment_id&#39;
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
-<div class="output text_html">
-<style>
-    /* Turns off some styling */
-    progress {
-        /* gets rid of default border in Firefox and Opera. */
-        border: none;
-        /* Needs to be in here for Safari polyfill so background images work as expected. */
-        background-size: auto;
-    }
-    progress:not([value]), progress:not([value])::-webkit-progress-bar {
-        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
-    }
-    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-        background: #F44336;
-    }
-</style>
-</div><div class="output text_html">
-<div>
-  <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:02&lt;00:00]
-</div>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
-	&#39;source_id/experiment_id&#39;
-</pre></div>
-</div>
-<div class="output text_html">
-<style>
-    /* Turns off some styling */
-    progress {
-        /* gets rid of default border in Firefox and Opera. */
-        border: none;
-        /* Needs to be in here for Safari polyfill so background images work as expected. */
-        background-size: auto;
-    }
-    progress:not([value]), progress:not([value])::-webkit-progress-bar {
-        background: repeating-linear-gradient(45deg, #7e7e7e, #7e7e7e 10px, #5c5c5c 10px, #5c5c5c 20px);
-    }
-    .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-        background: #F44336;
-    }
-</style>
-</div><div class="output text_html">
-<div>
-  <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-  100.00% [4/4 00:00&lt;00:00]
-</div>
-</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KeysView(DataTree(&#39;None&#39;, parent=None)
-└── DataTree(&#39;CESM2&#39;)
-    ├── DataTree(&#39;ssp585&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
-    │                            x: 320, vertex: 4, bnds: 2)
-    │       Coordinates: (12/13)
-    │           lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │           lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │         * time            (time) object 2015-01-15 13:00:00 ... 2100-12-15 12:00:00
-    │           lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           time_bounds     (time, bnds) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │           ...              ...
-    │         * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
-    │           lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │           lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │           areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-    │       Dimensions without coordinates: vertex, bnds
-    │       Data variables:
-    │           tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1735
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tos
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp585
-    ├── DataTree(&#39;historical&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 384,
-    │                            x: 320, vertex: 4, bnds: 2)
-    │       Coordinates: (12/13)
-    │           lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │           lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │         * time            (time) object 1850-01-15 12:59:59.999997 ... 2014-12-15 1...
-    │           lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           time_bounds     (time, bnds) object dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
-    │           ...              ...
-    │         * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
-    │           lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │           lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │           areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-    │       Dimensions without coordinates: vertex, bnds
-    │       Data variables:
-    │           tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 403, 384, 320), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      CMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             674885.0
-    │           branch_time_in_parent:            182500.0
-    │           case_id:                          18
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tos
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
-    │           intake_esm_attrs:version:         20190308
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/historical
-    ├── DataTree(&#39;ssp245&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
-    │                            x: 320, vertex: 4, bnds: 2)
-    │       Coordinates: (12/13)
-    │           lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │           lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │         * time            (time) object 2015-01-15 13:00:00 ... 2100-12-15 12:00:00
-    │           lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           time_bounds     (time, bnds) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │           ...              ...
-    │         * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
-    │           lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │           lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │         * member_id       (member_id) object &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 nan
-    │           areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-    │       Dimensions without coordinates: vertex, bnds
-    │       Data variables:
-    │           tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1732
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tos
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp245
-    └── DataTree(&#39;ssp126&#39;)
-            Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
-                                 x: 320, vertex: 4, bnds: 2)
-            Coordinates: (12/13)
-                lat             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-                lon             (y, x) float64 dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-              * time            (time) object 2015-01-15 13:00:00 ... 2100-12-15 12:00:00
-                lon_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-                lat_verticies   (y, x, vertex) float32 dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-                time_bounds     (time, bnds) object dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-                ...              ...
-              * x               (x) int64 0 1 2 3 4 5 6 7 ... 313 314 315 316 317 318 319
-                lon_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-                lat_bounds      (bnds, y, x) float32 dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-              * member_id       (member_id) object &#39;r4i1p1f1&#39;
-              * dcpp_init_year  (dcpp_init_year) float64 nan
-                areacello       (member_id, dcpp_init_year, y, x) float32 dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-            Dimensions without coordinates: vertex, bnds
-            Data variables:
-                tos             (member_id, dcpp_init_year, time, y, x) float32 dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
-            Attributes: (12/61)
-                Conventions:                      CF-1.7 CMIP-6.2
-                activity_id:                      ScenarioMIP
-                branch_method:                    standard
-                branch_time_in_child:             735110.0
-                branch_time_in_parent:            735110.0
-                case_id:                          1729
-                ...                               ...
-                intake_esm_attrs:variable_id:     tos
-                intake_esm_attrs:grid_label:      gn
-                intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-                intake_esm_attrs:version:         20200528
-                intake_esm_attrs:_data_format_:   zarr
-                intake_esm_dataset_key:           CESM2/ssp126)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2316</span><span class="o">/</span><span class="mf">2341371581.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># load cell areas for computing ocean surface temparuters means</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">dt_ocean_area</span> <span class="o">=</span> <span class="n">load_cmip6</span><span class="p">(</span><span class="n">source_ids</span><span class="p">,</span> <span class="s2">&quot;areacello&quot;</span><span class="p">,</span> <span class="s2">&quot;r4i1p1f1&quot;</span><span class="p">,</span> <span class="s2">&quot;Ofx&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">dt_atmos_area</span> <span class="o">=</span> <span class="n">load_cmip6</span><span class="p">(</span><span class="n">source_ids</span><span class="p">,</span> <span class="s2">&quot;areacella&quot;</span><span class="p">,</span> <span class="s2">&quot;r4i1p1f1&quot;</span><span class="p">,</span> <span class="s2">&quot;fx&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="ne">NameError</span>: name &#39;load_cmip6&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="dataset-2-load-observations">
-<h2>Dataset 2: Load Observations<a class="headerlink" href="#dataset-2-load-observations" title="Permalink to this headline">#</a></h2>
+<h2>Dataset 2: Load Observations<a class="headerlink" href="#dataset-2-load-observations" title="Permalink to this headline">¶</a></h2>
 <p>We use the NOAA Extended Reconstructed Sea Surface Temperature (ERSST) v5 product, a widely used and trusted gridded compilation of historical data going back to 1854. Since the data is provided via an OPeNDAP server, we can load it directly without downloading anything.</p>
 <p>For precipitation, we are using CPC Merged Analysis of Precipitation (CMAP). We can download this dataset from the NOAA PSL, Boulder, Colorado, USA website at <a class="reference external" href="https://psl.noaa.gov">https://psl.noaa.gov</a></p>
 <p>For air temperature, we are using anomalies from NASA GISS Surface Temperature Analysis which we can also download from NOAA PSL, Boulder, Colorado, USA website at <a class="reference external" href="https://psl.noaa.gov">https://psl.noaa.gov</a></p>
@@ -1950,11 +1653,16 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://downloads.psl.noaa.gov/Datasets/gistemp/combined/1200km/air.2x2.1200.mon.anom.comb.nc&#39; to file &#39;/tmp/air.2x2.1200.mon.anom.comb.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 553b6585bcd6cf02f1aca00ccc4fef352252d9e1229333702cd427a94960a21a
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2316</span><span class="o">/</span><span class="mf">696168262.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">url_SST</span> <span class="o">=</span> <span class="s1">&#39;https://downloads.psl.noaa.gov/Datasets/noaa.ersst.v5/sst.mnmean.nc&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">do_sst</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_SST</span><span class="p">,</span><span class="n">filename_SST</span><span class="p">),</span> <span class="n">drop_variables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time_bnds&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Precipitation rate (notice the units in the plot below)</span>
+
+<span class="ne">NameError</span>: name &#39;xr&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1986,10 +1694,18 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;July 2000&#39;)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2316</span><span class="o">/</span><span class="mf">3717264200.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># select just a single model and experiment</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">hist_precip</span> <span class="o">=</span> <span class="n">dm_pr</span><span class="p">[</span><span class="s2">&quot;CESM2&quot;</span><span class="p">][</span><span class="s2">&quot;historical&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">pr</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax_july2000</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
+
+<span class="ne">NameError</span>: name &#39;dm_pr&#39; is not defined
 </pre></div>
 </div>
-<img alt="../../_images/ENSO_impact_on_precipitation_and_temperature_15_1.png" src="../../_images/ENSO_impact_on_precipitation_and_temperature_15_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -2019,15 +1735,23 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.geocollection.GeoQuadMesh at 0x7f35923dde40&gt;
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2316</span><span class="o">/</span><span class="mf">2904336394.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">hist_sst</span> <span class="o">=</span> <span class="n">dm_sst</span><span class="p">[</span><span class="s2">&quot;CESM2&quot;</span><span class="p">][</span><span class="s2">&quot;historical&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">tos</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+
+<span class="ne">NameError</span>: name &#39;dm_sst&#39; is not defined
 </pre></div>
 </div>
-<img alt="../../_images/ENSO_impact_on_precipitation_and_temperature_16_1.png" src="../../_images/ENSO_impact_on_precipitation_and_temperature_16_1.png" />
 </div>
 </div>
 </div>
 <div class="section" id="dataset-3-oceanic-nino-index">
-<h2>Dataset 3: Oceanic Nino Index<a class="headerlink" href="#dataset-3-oceanic-nino-index" title="Permalink to this headline">#</a></h2>
+<h2>Dataset 3: Oceanic Nino Index<a class="headerlink" href="#dataset-3-oceanic-nino-index" title="Permalink to this headline">¶</a></h2>
 <p>There are several indices used to identify ENSO in the tropical Pacific Ocean. These indices are based on SST anomalies averaged across a given region and are used to define El Niño and La Niña events. Two indices that you will explore in this project are the Nino 3.4 Index and the Oceanic Niño Index (ONI). Both of these indices are averaged over the same region in the tropical Pacific (5N-5S, 170W-120W), but use different running means and criteria for identifying El Niño and La Niña events (i.e. for ONI, SST anomalies must exceed +/- 0.5C for at least five consecutive months to be defined as an ENSO event, whereas for Nino 3.4, SST anomalies must exceed +/- 0.4C for at least six consecutive months). You can find additional information about these indices <a class="reference external" href="https://climatedataguide.ucar.edu/climate-data/nino-sst-indices-nino-12-3-34-4-oni-and-tni">here</a>. For now, we will download the ONI data that we used in W1D3.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2040,20 +1764,15 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://osf.io/8rwxb/download/&#39; to file &#39;/tmp/t6_oceanic-nino-index.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 583ae1ce6f9a990d2535f5c7ef816edd3252990208438c2d84a88025b7a21419
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KeysView(&lt;xarray.Dataset&gt;
-Dimensions:  (time: 499)
-Coordinates:
-  * time     (time) datetime64[ns] 1981-09-01 1981-10-01 ... 2023-03-01
-    month    (time) int32 ...
-Data variables:
-    sst      (time) float32 ...)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2316</span><span class="o">/</span><span class="mf">2539806577.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">filename_nino</span><span class="o">=</span><span class="s1">&#39;t6_oceanic-nino-index.nc&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">url_nino</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/8rwxb/download/&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">oni</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_nino</span><span class="p">,</span><span class="n">filename_nino</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">oni</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+
+<span class="ne">NameError</span>: name &#39;xr&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -2061,7 +1780,7 @@ Data variables:
 </div>
 </div>
 <div class="section" id="further-reading">
-<h1>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h1>
+<h1>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>“El Niño &amp; La Niña (El Niño-Southern Oscillation)”, NOAA/Climate.gov (<a class="reference external" href="https://www.climate.gov/enso">https://www.climate.gov/enso</a>)</p></li>
 <li><p>“El Niño and La Niña”, OCHA (<a class="reference external" href="https://www.unocha.org/themes/el-ni%C3%B1o/el-ni%C3%B1o-and-la-ni%C3%B1a">https://www.unocha.org/themes/el-niño/el-niño-and-la-niña</a>)</p></li>
@@ -2071,7 +1790,7 @@ Data variables:
 </ul>
 </div>
 <div class="section" id="resources">
-<h1><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this headline">#</a></h1>
+<h1><strong>Resources</strong><a class="headerlink" href="#resources" title="Permalink to this headline">¶</a></h1>
 <p>This tutorial uses data from the simulations conducted as part of the <a class="reference external" href="https://wcrp-cmip.org/">CMIP6</a> multi-model ensemble.</p>
 <p>For examples on how to access and analyze data, please visit the <a class="reference external" href="https://gallery.pangeo.io/repos/pangeo-gallery/cmip6/index.html">Pangeo Cloud CMIP6 Gallery</a></p>
 <p>For more information on what CMIP is and how to access the data, please see this <a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/CMIP/CMIP_resource_bank.md">page</a>.</p>

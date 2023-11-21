@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,15 +40,15 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -199,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -350,7 +350,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Data
  </span>
@@ -570,7 +570,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Future
  </span>
@@ -770,7 +770,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Response
  </span>
@@ -901,7 +901,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -984,8 +984,55 @@ const thebe_selector_output = ".output, .cell_output"
    Continuing your project after the course
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/docs/past_projects_overview.html">
+   Past projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Professional Development
  </span>
@@ -1273,10 +1320,10 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="using-kaggle">
-<h1>Using Kaggle<a class="headerlink" href="#using-kaggle" title="Permalink to this headline">#</a></h1>
+<h1>Using Kaggle<a class="headerlink" href="#using-kaggle" title="Permalink to this headline">¶</a></h1>
 <p>If you are in China or another region with difficult access to JupyterHub and Google Colab, you can use Kaggle as a substitute for launching an interactive coding environment where you can write and run code. <strong>Please note that we recommend JupyterHub if you can access it.</strong></p>
 <div class="section" id="first-use">
-<h2>First use<a class="headerlink" href="#first-use" title="Permalink to this headline">#</a></h2>
+<h2>First use<a class="headerlink" href="#first-use" title="Permalink to this headline">¶</a></h2>
 <p><strong>1.</strong> First, <a class="reference external" href="https://www.kaggle.com/account/login">sign in</a> to your Kaggle account. If you don’t have a Kaggle account, create one by registering <a class="reference external" href="https://www.kaggle.com/account/login?phase=startRegisterTab&amp;returnUrl=%2F">here</a>.</p>
 <p><img alt="Step 1" src="../../_images/kaggle_step1.png" /></p>
 <p><strong>2.</strong> Get your account phone-verified. This is necessary for accessing GPU/internet on kernels, as well as for collaborative work. To do this:</p>
@@ -1294,7 +1341,7 @@ title="Print to PDF"
 <p><img alt="Step 4" src="../../_images/kaggle_step4.png" /></p>
 </div>
 <div class="section" id="accessing-course-notebooks">
-<h2>Accessing course notebooks<a class="headerlink" href="#accessing-course-notebooks" title="Permalink to this headline">#</a></h2>
+<h2>Accessing course notebooks<a class="headerlink" href="#accessing-course-notebooks" title="Permalink to this headline">¶</a></h2>
 <p>Click the kaggle button found on top of every page containing a jupyter notebook, such as <a class="reference external" href="https://comptools.climatematch.io/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">tutorial pages</a>.</p>
 <p><img alt="Step 5" src="../../_images/kaggle_step5.png" /></p>
 <blockquote>
@@ -1302,20 +1349,20 @@ title="Print to PDF"
 </div></blockquote>
 </div>
 <div class="section" id="enabling-internet-access-on-kernels">
-<h2>Enabling internet access on kernels<a class="headerlink" href="#enabling-internet-access-on-kernels" title="Permalink to this headline">#</a></h2>
+<h2>Enabling internet access on kernels<a class="headerlink" href="#enabling-internet-access-on-kernels" title="Permalink to this headline">¶</a></h2>
 <p>To enable this, click on <code class="docutils literal notranslate"><span class="pre">Notebook</span> <span class="pre">options</span></code> in the right side bar of the kaggle notebook editor. Scroll down and toggle <code class="docutils literal notranslate"><span class="pre">Internet</span> <span class="pre">on</span></code>.
 This will let you fetch data from an external online source or install a custom python package. If after the installation you experience any error when trying to import an installed module, make sure to restart the kernel after installing the module and then it should work.</p>
 <p><img alt="Step 3.2" src="../../_images/kaggle_step6.png" /></p>
 </div>
 <div class="section" id="enabling-gpu-access-on-kernels">
-<h2>Enabling GPU access on kernels<a class="headerlink" href="#enabling-gpu-access-on-kernels" title="Permalink to this headline">#</a></h2>
+<h2>Enabling GPU access on kernels<a class="headerlink" href="#enabling-gpu-access-on-kernels" title="Permalink to this headline">¶</a></h2>
 <p>Click on <code class="docutils literal notranslate"><span class="pre">Notebook</span> <span class="pre">options</span></code> in the right side bar of the kaggle notebook editor as above. Change <code class="docutils literal notranslate"><span class="pre">Accelerator</span></code> from <strong>None</strong> to <strong>GPU</strong>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> A GPU is <strong>NOT</strong> required in the <em>Computational Tools for Climate Science</em> course! However, some advanced groups might design projects that benefit from GPU use.</p>
 </div></blockquote>
 </div>
 <div class="section" id="collaborating-in-kaggle">
-<h2>Collaborating in kaggle<a class="headerlink" href="#collaborating-in-kaggle" title="Permalink to this headline">#</a></h2>
+<h2>Collaborating in kaggle<a class="headerlink" href="#collaborating-in-kaggle" title="Permalink to this headline">¶</a></h2>
 <p>To share a notebook with your project teammates, add them as <strong>collaborators</strong> by clicking <code class="docutils literal notranslate"><span class="pre">Share</span></code> in the top right corner of the notebook editor when you have the notebook of interest open. Keep the notebook as <em>Private</em> and search your teammates by their kaggle username. You can give them access to <code class="docutils literal notranslate"><span class="pre">view</span></code> or <code class="docutils literal notranslate"><span class="pre">edit</span></code> your work. This is also where you can <strong>enable comments</strong> for your notebook.</p>
 <p><img alt="Step 7" src="../../_images/kaggle_step7.png" /></p>
 <blockquote>

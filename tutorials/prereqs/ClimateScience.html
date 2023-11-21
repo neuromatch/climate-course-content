@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,15 +40,15 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -199,7 +199,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -350,7 +350,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Data
  </span>
@@ -570,7 +570,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Future
  </span>
@@ -770,7 +770,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Response
  </span>
@@ -901,7 +901,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -984,8 +984,55 @@ const thebe_selector_output = ".output, .cell_output"
    Continuing your project after the course
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../projects/docs/past_projects_overview.html">
+   Past projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../projects/past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Professional Development
  </span>
@@ -1341,10 +1388,10 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="prerequisites-and-preparatory-materials-for-computational-tools-for-climate-science">
-<h1>Prerequisites and preparatory materials for Computational Tools for Climate Science<a class="headerlink" href="#prerequisites-and-preparatory-materials-for-computational-tools-for-climate-science" title="Permalink to this headline">#</a></h1>
+<h1>Prerequisites and preparatory materials for Computational Tools for Climate Science<a class="headerlink" href="#prerequisites-and-preparatory-materials-for-computational-tools-for-climate-science" title="Permalink to this headline">¶</a></h1>
 <p>Welcome to the <a class="reference external" href="https://academy.climatematch.io/about/mission">Climatematch Academy</a>! We’re really excited to bring this course to such a wide and varied audience. We want to make sure every student is able to follow and enjoy the academy. This means you need to know the basics of programming in Python, math and science core concepts. Below 👇 we provide more details for each.</p>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">#</a></h2>
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="#Programming">Programming</a></p></li>
 <li><p><a class="reference external" href="#algebra">Algebra</a></p></li>
@@ -1357,7 +1404,7 @@ title="Print to PDF"
 </ul>
 </div>
 <div class="section" id="programming">
-<h2>Programming<a class="headerlink" href="#programming" title="Permalink to this headline">#</a></h2>
+<h2>Programming<a class="headerlink" href="#programming" title="Permalink to this headline">¶</a></h2>
 <p>We expect students to be familiar with the following topics in Python: variables, lists, dictionaries, the numpy, matplotlib, cartopy, datetime, pandas and data formats. Students who are not familiar with some of the topics mentioned before, are required to take the <strong>Python pre-course</strong>, which offers asynchronous support for a selection of tutorials from Project Pythia.</p>
 <p>What is Project Pythia? Check out the fantastic <a class="reference external" href="https://bit.ly/42P799Y">~5min video</a> that Julia Kent prepared for you as an intro to this fabulous material.</p>
 <p>Now, let’s sumarize what are the lessons you need to review:</p>
@@ -1391,14 +1438,14 @@ If you’re coming from a Matlab background, you can quickly get up to speed wit
 </div></blockquote>
 </div>
 <div class="section" id="math">
-<h2>Math<a class="headerlink" href="#math" title="Permalink to this headline">#</a></h2>
+<h2>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
 <p>Climatematch Academy relies on linear algebra, probability, basic statistics, and calculus (derivatives, integrals, and ordinary differential equations -ODEs).</p>
 <div class="section" id="algebra">
-<h3>Algebra<a class="headerlink" href="#algebra" title="Permalink to this headline">#</a></h3>
+<h3>Algebra<a class="headerlink" href="#algebra" title="Permalink to this headline">¶</a></h3>
 <p>If you need a refresher on basic, pre-calculus algebra check the videos in this <a class="reference external" href="https://bit.ly/3Pnq5cP">Algebra course</a> from Khan Academy. You will particularly need to know your way around <a class="reference external" href="https://bit.ly/43H5mox">functions</a> (unit 8 of the course) and their representations, including graphics, because they are the way to express relationships between variables and they are the basic elements you work with in Calculus.</p>
 </div>
 <div class="section" id="linear-algebra">
-<h3>Linear algebra<a class="headerlink" href="#linear-algebra" title="Permalink to this headline">#</a></h3>
+<h3>Linear algebra<a class="headerlink" href="#linear-algebra" title="Permalink to this headline">¶</a></h3>
 <p>You will need a good grasp of the basics of linear algebra to follow along, as linear algebra is crucial for almost anything quantitative involving more than one number at a time. It will also help you visualize and understand the way data are organized and manipulated, particularly in computational environments. You need to have a basic understanding of vectors and matrices, and how to perform operations with them. We recommend watching the videos in these units about <a class="reference external" href="https://bit.ly/3NcM2IK">vectors</a> and <a class="reference external" href="https://bit.ly/3CDXurX">matrices</a> from Khan Academy. That should be enough to prepare you for CMA.</p>
 <blockquote>
 <div><p>Extra material.</p>
@@ -1406,11 +1453,11 @@ If you’re coming from a Matlab background, you can quickly get up to speed wit
 </div></blockquote>
 </div>
 <div class="section" id="statistics">
-<h3>Statistics<a class="headerlink" href="#statistics" title="Permalink to this headline">#</a></h3>
+<h3>Statistics<a class="headerlink" href="#statistics" title="Permalink to this headline">¶</a></h3>
 <p>Understanding statistics is also important; you should be comfortable with mean/median/mode, standard deviations, variances, the normal distribution, and linear regression. We recommend the <a class="reference external" href="https://bit.ly/3CGx6h2">Statistics and probability course</a> (videos in units 3, 4 and 5) from Khan Academy.</p>
 </div>
 <div class="section" id="calculus">
-<h3>Calculus<a class="headerlink" href="#calculus" title="Permalink to this headline">#</a></h3>
+<h3>Calculus<a class="headerlink" href="#calculus" title="Permalink to this headline">¶</a></h3>
 <p>Finally, basic calculus is crucial; you should know what integrals and derivatives are, and understand what a differential equation means. If you need to refresh your memory on differential and integral calculus, we recommend the <a class="reference external" href="https://bit.ly/3Nk4sXV">Calculus course</a> from Khan Academy (videos in units 2, 5, 6, and 7). Remember that you don’t need to learn all the details and be able to solve complicated problems, just make sure you understand the concepts. We also recommend <a class="reference external" href="https://phet.colorado.edu/en/simulations/filter?subjects=math&amp;levels=university&amp;type=html,prototype">these simulations</a> from PHET to help illustrate some mathematical concepts.</p>
 <blockquote>
 <div><p>Extra material:</p>
@@ -1419,9 +1466,9 @@ If you’re coming from a Matlab background, you can quickly get up to speed wit
 </div>
 </div>
 <div class="section" id="science">
-<h2>Science<a class="headerlink" href="#science" title="Permalink to this headline">#</a></h2>
+<h2>Science<a class="headerlink" href="#science" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="physics">
-<h3>Physics<a class="headerlink" href="#physics" title="Permalink to this headline">#</a></h3>
+<h3>Physics<a class="headerlink" href="#physics" title="Permalink to this headline">¶</a></h3>
 <p>Climate processes are governed by the laws of physics which is why you will need a general understanding of basic physics concepts such as: Newton’s laws of motion, forms of energy, conservation of energy, circular motion (Earth’s rotation and Coriolis force), waves, electromagnetic spectrum, optics, heat, and thermodynamics, etc.</p>
 <p>Recommended references include the videos from the <a class="reference external" href="https://www.khanacademy.org/science/ap-college-physics-1">College Physics 1</a> course from Khan Academy for kinematics, Newton’s laws, dynamics, energy, and mechanical waves), the videos from the <a class="reference external" href="https://www.khanacademy.org/science/ap-physics-2">College Physics 2</a> course from Khan Academy for Heat and Thermodynamics (unit 2), electromagnetic waves (unit 6), and optics (unit 7), and <a class="reference external" href="https://stratus.ssec.wisc.edu/courses/gg101/coriolis/coriolis.html">Dave Van Domelen</a>’s, <a class="reference external" href="https://www.britannica.com/science/Coriolis-force">Encyclopedia Britannica</a> or <a class="reference external" href="https://en.wikipedia.org/wiki/Coriolis_force">Wikipedia</a> entries on Coriolis force.</p>
 <p>Remember that you don’t need to learn all the details and be able to solve complicated problems, just make sure you understand the concepts. We also recommend <a class="reference external" href="https://phet.colorado.edu/en/simulations/filter?subjects=motion,sound-and-waves,work-energy-and-power,heat-and-thermodynamics,light-and-radiation&amp;levels=university&amp;type=html,prototype">these simulations</a> from PHET to help illustrate some concepts.</p>
@@ -1431,7 +1478,7 @@ If you’re coming from a Matlab background, you can quickly get up to speed wit
 </div></blockquote>
 </div>
 <div class="section" id="chemistry">
-<h3>Chemistry<a class="headerlink" href="#chemistry" title="Permalink to this headline">#</a></h3>
+<h3>Chemistry<a class="headerlink" href="#chemistry" title="Permalink to this headline">¶</a></h3>
 <p>It would be helpful to have general chemistry knowledge regarding atoms, isotopes, molecules, ions, compounds, bonds, etc. We recommend the <a class="reference external" href="https://www.khanacademy.org/science/ap-chemistry-beta">College Chemistry course</a> (videos in units 1, 2, and 3) from Khan Academy. There is no need to learn all the details and be able to solve complicated problems, just make sure you understand general concepts. We also recommend <a class="reference external" href="https://phet.colorado.edu/en/simulations/filter?subjects=general&amp;levels=university&amp;type=html,prototype">these simulations</a> from PHET to help illustrate some concepts.</p>
 <blockquote>
 <div><p>Extra material:</p>
@@ -1439,7 +1486,7 @@ If you’re coming from a Matlab background, you can quickly get up to speed wit
 </div></blockquote>
 </div>
 <div class="section" id="climate-science">
-<h3>Climate Science<a class="headerlink" href="#climate-science" title="Permalink to this headline">#</a></h3>
+<h3>Climate Science<a class="headerlink" href="#climate-science" title="Permalink to this headline">¶</a></h3>
 <p>If you’re coming from outside climate science, it’ll be great to familiarize yourself with fundamental concepts. Watch this <a class="reference external" href="https://bit.ly/3NEDdsJ">video</a>, to build some context for CMA. As a good accompanying resource for CMA and if you’d like to learn more about climate science, we highly recommend Andreas Schmitner’s <a class="reference external" href="https://open.umn.edu/opentextbooks/textbooks/860">Introduction to Climate Science</a> book.</p>
 <p>We’re excited to have you here! Looking forward to meeting you soon,</p>
 <p>The Climatematch Academy Team.</p>

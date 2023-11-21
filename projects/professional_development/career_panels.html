@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,15 +40,15 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -198,7 +198,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -349,7 +349,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Data
  </span>
@@ -569,7 +569,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Future
  </span>
@@ -769,7 +769,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Response
  </span>
@@ -900,7 +900,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -983,8 +983,55 @@ const thebe_selector_output = ".output, .cell_output"
    Continuing your project after the course
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../docs/past_projects_overview.html">
+   Past projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Professional Development
  </span>
@@ -1266,7 +1313,7 @@ title="Print to PDF"
               <div>
                 
   <div class="section" id="career-panels">
-<h1>Career Panels<a class="headerlink" href="#career-panels" title="Permalink to this headline">#</a></h1>
+<h1>Career Panels<a class="headerlink" href="#career-panels" title="Permalink to this headline">¶</a></h1>
 <p>As part of the professional development activities, career panels are planned to <strong>bring a variety of professionals across different sectors and career stages together</strong> to share their unique career experiences in climate-related fields that can inspire students’ career exploration beyond the program of Climatematch Academy.</p>
 <p>Career panels will be a series of <strong>live moderated panel discussions</strong> including live Q&amp;A with participating students. These live panel discussions will take place on Tuesday, July 25th (W2D2). The career panels will usually be in the last hour of the time usually reserved for tutorials. The three scheduled time slots for the career panels include:</p>
 <ul class="simple">
@@ -1276,23 +1323,23 @@ title="Print to PDF"
 </ul>
 <p>Although each career panel has a targeted student groups based on time zone, you are always invited to join any career panel events that lie outside of your course schedule and work for your personal schedule. Career panel events are great opportunities for students to have direct interactions with professionals in climate-related fields and peer CMA participants and volunteers. You are encouraged to use these opportunities to expand your professional networks!</p>
 <div class="section" id="confirmed-panelists">
-<h2>Confirmed Panelists<a class="headerlink" href="#confirmed-panelists" title="Permalink to this headline">#</a></h2>
+<h2>Confirmed Panelists<a class="headerlink" href="#confirmed-panelists" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="panel-at-08-00-09-00-utc">
-<h3>Panel at 08:00-09:00 UTC<a class="headerlink" href="#panel-at-08-00-09-00-utc" title="Permalink to this headline">#</a></h3>
+<h3>Panel at 08:00-09:00 UTC<a class="headerlink" href="#panel-at-08-00-09-00-utc" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.linkedin.com/in/shipra-jain-9aa1382a/?originalSubdomain=sg">Dr. Shipra Jain</a>, Former Executive Committee member, <a class="reference external" href="https://www.yess-community.org/">Young Earth System Scientists Community</a></p></li>
 <li><p><a class="reference external" href="https://www.linkedin.com/in/mpho-sadiki-086662174/?originalSubdomain=za">Mpho Sadiki</a>, Earth Observation Data Scientist, <a class="reference external" href="https://www.digitalearthafrica.org/about-us/governance/technical-advisory-committee/mpho-sadiki">Digital Earth Africa</a></p></li>
 </ul>
 </div>
 <div class="section" id="id1">
-<h3>Panel at 08:00-09:00 UTC<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3>Panel at 08:00-09:00 UTC<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.earthdata.nasa.gov/learn/data-chats/environmental_justice_luna_cruz">Dr. Yaítza Luna-Cruz</a>, Program Executive, Chief Science Data Office, NASA Science Mission Directory (<a class="reference external" href="https://science.nasa.gov/open-science/transform-to-open-science">NASA TOPS</a>)</p></li>
 <li><p><a class="reference external" href="https://www.linkedin.com/in/stevenr/?originalSubdomain=fr">Steven Ramage</a>, CEO of <a class="reference external" href="https://www.reseauconsulting.com/about">Réseau</a> &amp; Senior Business Advisor for United Nations</p></li>
 </ul>
 </div>
 <div class="section" id="panel-at-20-30-21-30-utc">
-<h3>Panel at 20:30-21:30 UTC<a class="headerlink" href="#panel-at-20-30-21-30-utc" title="Permalink to this headline">#</a></h3>
+<h3>Panel at 20:30-21:30 UTC<a class="headerlink" href="#panel-at-20-30-21-30-utc" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.linkedin.com/in/sheila-m-saia-phd-69427292/">Dr. Sheila Saia</a>, Associate Director for <a class="reference external" href="https://climate.ncsu.edu/">North Carolina State Climate Office</a></p></li>
 <li><p><a class="reference external" href="https://scholar.google.com/citations?user=dBxY5CQAAAAJ&amp;hl=en">Dr. Faten Attig-Bahar</a>, University of Carthage, <a class="reference external" href="https://wefnexus.org/members/attig-bahar-faten/">Future Earth Water/Energy/Food Nexus</a></p></li>

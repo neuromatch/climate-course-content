@@ -2,1422 +2,1330 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tutorial 2: Exploring Satellite Climate Data Records &#8212; Climatematch Academy: Computational Tools for Climate Science</title>
-    
-  <!-- Loaded before other Sphinx assets -->
-  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-
-    
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
-    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
-  <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-
-    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-    <script src="../../../_static/jquery.js"></script>
-    <script src="../../../_static/underscore.js"></script>
-    <script src="../../../_static/doctools.js"></script>
-    <script src="../../../_static/togglebutton.js"></script>
-    <script src="../../../_static/clipboard.min.js"></script>
-    <script src="../../../_static/copybutton.js"></script>
-    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tutorial 2: Exploring Satellite Climate Data Records — Climatematch Academy: Computational Tools for Climate Science</title>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet"/>
+<link href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/styles/sphinx-book-theme.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/togglebutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/copybutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/mystnb.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/sphinx-thebe.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/custom.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf" rel="preload"/>
+<script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+<script src="../../../_static/jquery.js"></script>
+<script src="../../../_static/underscore.js"></script>
+<script src="../../../_static/doctools.js"></script>
+<script src="../../../_static/togglebutton.js"></script>
+<script src="../../../_static/clipboard.min.js"></script>
+<script src="../../../_static/copybutton.js"></script>
+<script src="../../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+<script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
-    <link rel="shortcut icon" href="../../../_static/cma-logo-square-4xp.png"/>
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Tutorial 3: Visualizing Satellite CDR - Global Vegetation Mapping" href="W1D3_Tutorial3.html" />
-    <link rel="prev" title="Tutorial 1: Introduction to Remote Sensing" href="W1D3_Tutorial1.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
-  </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<script async="async" src="../../../_static/sphinx-thebe.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
+<link href="../../../genindex.html" rel="index" title="Index"/>
+<link href="../../../search.html" rel="search" title="Search"/>
+<link href="W1D3_Tutorial3.html" rel="next" title="Tutorial 3: Visualizing Satellite CDR - Global Vegetation Mapping"/>
+<link href="W1D3_Tutorial1.html" rel="prev" title="Tutorial 1: Introduction to Remote Sensing"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="None" name="docsearch:language"/>
+<!-- Google Analytics -->
+</link></link></link></link></link></link></head>
+<body data-offset="60" data-spy="scroll" data-target="#bd-toc-nav">
 <!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<input aria-label="Toggle navigation sidebar" class="sidebar-toggle" id="__navigation" name="__navigation" type="checkbox"/>
 <label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
+<div class="visually-hidden">Toggle navigation sidebar</div>
 </label>
 <!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<input aria-label="Toggle in-page Table of Contents" class="sidebar-toggle" id="__page-toc" name="__page-toc" type="checkbox"/>
 <label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+<div class="visually-hidden">Toggle in-page Table of Contents</div>
 </label>
 <!-- Headers at the top -->
 <div class="announcement header-item noprint"></div>
 <div class="header header-item noprint"></div>
-
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
+<div class="container-fluid" id="banner"></div>
+<div class="container-xl">
+<div class="row">
 <!-- Sidebar -->
 <div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../../index.html">
-      
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
-        
-      
-      
-      <img src="../../../_static/cma-logo-square-4xp.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Tools for Climate Science</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
-        
-        <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="../../intro.html">
+<div class="bd-sidebar__content">
+<div class="bd-sidebar__top"><div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+<!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<img alt="logo" class="logo" src="../../../_static/cma-logo-square-4xp.png"/>
+<h1 class="site-logo" id="site-title">Climatematch Academy: Computational Tools for Climate Science</h1>
+</a>
+</div><form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="icon fas fa-search"></i>
+<input aria-label="Search this book..." autocomplete="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." type="search"/>
+</form><nav aria-label="Main" class="bd-links" id="bd-docs-nav">
+<div class="bd-toc-item active">
+<ul class="nav bd-sidenav bd-sidenav__home-link">
+<li class="toctree-l1">
+<a class="reference internal" href="../../intro.html">
                     Introduction
                 </a>
-            </li>
-        </ul>
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../Schedule/schedule_intro.html">
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../Schedule/schedule_intro.html">
    Schedule
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Schedule/daily_schedules.html">
+<input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox">
+<label for="toctree-checkbox-1">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Schedule/daily_schedules.html">
      General Schedule
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Schedule/shared_calendars.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Schedule/shared_calendars.html">
      Shared calendars
     </a>
-   </li>
-  </ul>
- </li>
+</li>
+</ul>
+</input></li>
 </ul>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../TechnicalHelp/tech_intro.html">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../TechnicalHelp/tech_intro.html">
    Technical Help
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../TechnicalHelp/Jupyterbook.html">
+<input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox">
+<label for="toctree-checkbox-2">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2 has-children">
+<a class="reference internal" href="../../TechnicalHelp/Jupyterbook.html">
      Using jupyterbook
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../TechnicalHelp/Tutorial_jupyterhub.html">
-       <strong>
+<input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox">
+<label for="toctree-checkbox-3">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l3">
+<a class="reference internal" href="../../TechnicalHelp/Tutorial_jupyterhub.html">
+<strong>
         Using JupyterHub
        </strong>
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../TechnicalHelp/Tutorial_colab.html">
+</a>
+</li>
+<li class="toctree-l3">
+<a class="reference internal" href="../../TechnicalHelp/Tutorial_colab.html">
        Using Google Colab
       </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../TechnicalHelp/Tutorial_kaggle.html">
+</li>
+<li class="toctree-l3">
+<a class="reference internal" href="../../TechnicalHelp/Tutorial_kaggle.html">
        Using Kaggle
       </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../TechnicalHelp/Discord.html">
+</li>
+</ul>
+</input></li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../TechnicalHelp/Discord.html">
      Using discord
     </a>
-   </li>
-  </ul>
- </li>
+</li>
+</ul>
+</input></li>
 </ul>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../TechnicalHelp/Links_Policy.html">
+<li class="toctree-l1">
+<a class="reference internal" href="../../TechnicalHelp/Links_Policy.html">
    Quick links and policies
   </a>
- </li>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../prereqs/ClimateScience.html">
+<li class="toctree-l1">
+<a class="reference internal" href="../../prereqs/ClimateScience.html">
    Prerequisites and preparatory materials for Computational Tools for Climate Science
   </a>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
+<p class="caption">
+<span class="caption-text">
   Fundamentals
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">
    Climate System Overview (W1D1)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Intro.html">
+<input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+<label for="toctree-checkbox-4">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Intro.html">
      Intro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">
      Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">
      Tutorial 2: Selection, Interpolation and Slicing
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.html">
      Tutorial 3: Opening and Plotting netCDF Data
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.html">
      Tutorial 4: Arithmetic and Aggregation Methods
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">
      Tutorial 5: Xarray Data Analysis and Climatology
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">
      Tutorial 6: Compute and Plot Temperature Anomalies
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">
      Tutorial 7: Other Computational Tools in Xarray
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">
      Tutorial 8: Masking with One Condition
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">
      Tutorial 9: Masking with Multiple Conditions
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Outro.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Outro.html">
      Outro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/further_reading.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/further_reading.html">
      Suggested Further Reading
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_DaySummary.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_DaySummary.html">
      Day Summary
     </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../Projects_GoodResearchPractices/chapter_title.html">
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/chapter_title.html">
    Good Research Practices (Projects)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Intro.html">
+<input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+<label for="toctree-checkbox-5">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Intro.html">
      Intro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial1.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial1.html">
      Tutorial 1: Finding a Phenomenon and Asking a Question About It
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial2.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial2.html">
      Tutorial 2: Doing a Literature Review
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial3.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial3.html">
      Tutorial 3: Identifying the Basic Ingredients
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial4.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial4.html">
      Tutorial 4: Formulating a Hypothesis
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial5.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial5.html">
      Tutorial 5: Drafting the Analysis
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial6.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial6.html">
      Tutorial 6: Implementing the Analysis
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial7.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial7.html">
      Tutorial 7: Interpreting the Results
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial8.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial8.html">
      Tutorial 8: Communicating Your Conclusions
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Outro.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Outro.html">
      Outro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_DaySummary.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_DaySummary.html">
      Day Summary
     </a>
-   </li>
-  </ul>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
   Climate Data
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
    State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Intro.html">
+<input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+<label for="toctree-checkbox-6">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Intro.html">
      Intro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
      Tutorial 1: Calculating ENSO with Xarray
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
-     <strong>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
+<strong>
       Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
      </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
      Tutorial 3: Atmospheric  Circulation
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
      Tutorial 4: Oceanic Wind-driven Circulation
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
      Tutorial 5: Thermohaline Circulation
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
      Tutorial 6: Ocean Heat Content
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Outro.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Outro.html">
      Outro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">
      Suggested Further Reading
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_DaySummary.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_DaySummary.html">
      Day Summary
     </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../chapter_title.html">
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children">
+<a class="reference internal" href="../chapter_title.html">
    Remote Sensing Land Ocean and Atmosphere (W1D3)
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="W1D3_Intro.html">
+<input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+<label for="toctree-checkbox-7">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul class="current">
+<li class="toctree-l2">
+<a class="reference internal" href="W1D3_Intro.html">
      Intro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="W1D3_Tutorial1.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D3_Tutorial1.html">
      Tutorial 1: Introduction to Remote Sensing
     </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+</li>
+<li class="toctree-l2 current active">
+<a class="current reference internal" href="#">
      Tutorial 2: Exploring Satellite Climate Data Records
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="W1D3_Tutorial3.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D3_Tutorial3.html">
      Tutorial 3: Visualizing Satellite CDR - Global Vegetation Mapping
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="W1D3_Tutorial4.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D3_Tutorial4.html">
      Tutorial 4: Understanding Climatology Through Precipitation Data
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="W1D3_Tutorial5.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D3_Tutorial5.html">
      Tutorial 5: Calculating Anomalies Using Precipitation Data
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="W1D3_Tutorial6.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D3_Tutorial6.html">
      Tutorial 6: Large Scale Climate Variability - ENSO
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="W1D3_Tutorial7.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D3_Tutorial7.html">
      Tutorial 7: Impact of Climate Variability - Precipitation
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="W1D3_Tutorial8.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D3_Tutorial8.html">
      Tutorial 8: Comparing Satellite Products With In Situ Data
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="W1D3_Outro.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D3_Outro.html">
      Outro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../further_reading.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../further_reading.html">
      Suggested Further Reading
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="W1D3_DaySummary.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="W1D3_DaySummary.html">
      Day Summary
     </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../W1D4_Paleoclimate/chapter_title.html">
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D4_Paleoclimate/chapter_title.html">
    Paleoclimate (W1D4)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Intro.html">
+<input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+<label for="toctree-checkbox-8">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Intro.html">
      Intro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial1.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial1.html">
      Tutorial 1: Paleoclimate Proxies
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial2.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial2.html">
      Tutorial 2: Reconstructing Past Changes in Ocean Climate
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial3.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial3.html">
      Tutorial 3: Reconstructing Past Changes in Terrestrial Climate
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial4.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial4.html">
      Tutorial 4: Reconstructing Past Changes in Atmospheric Climate
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial5.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial5.html">
      Tutorial 5: Paleoclimate Data Analysis Tools
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial6.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial6.html">
      Tutorial 6: Spectral Analysis of Paleoclimate Data
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial7.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial7.html">
      Tutorial 7: Assessing Climate Forcings
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial8.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial8.html">
      Tutorial 8: Paleoclimate Models
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial9.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial9.html">
      Tutorial 9: Paleoclimate Reanalysis Products
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Outro.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Outro.html">
      Outro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/further_reading.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/further_reading.html">
      Suggested Further Reading
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_DaySummary.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_DaySummary.html">
      Day Summary
     </a>
-   </li>
-  </ul>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
   Climate Future
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../W1D5_ClimateModeling/chapter_title.html">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W1D5_ClimateModeling/chapter_title.html">
    Climate Modeling (W1D5)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Intro.html">
+<input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+<label for="toctree-checkbox-9">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Intro.html">
      Intro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
      Tutorial 1 : A Simple Greenhouse Model
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
      Tutorial 2 : Energy Balance
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
-     <strong>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
+<strong>
       Tutorial 3 : A Zero-Dimensional Energy Balance Model
      </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
      Tutorial 4: Climate Feedbacks
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
      Tutorial 5: Vertical Structure of the Atmosphere
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial6.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial6.html">
      Tutorial 6: Radiative-Convective Equilibrium
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial7.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial7.html">
      Tutorial 7: Introduction to Earth System Models
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Outro.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Outro.html">
      Outro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/further_reading.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/further_reading.html">
      Suggested Further Reading
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_DaySummary.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_DaySummary.html">
      Day Summary
     </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
    Future Climate - IPCC I Physical Basis (W2D1)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Intro.html">
+<input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+<label for="toctree-checkbox-10">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Intro.html">
      Intro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
      Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
      Tutorial 2: Time Series, Global Averages, and Scenario Comparison
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
      Tutorial 3: Multi-model Ensembles
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
      Tutorial 4: Quantifying Uncertainty in Projections
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
-     <strong>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
+<strong>
       Tutorial 5: Internal Climate Variability
      </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
-     <strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
+<strong>
       Tutorial 6: Synthesising &amp; Interpreting Diverse Data Sources
      </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Outro.html">
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Outro.html">
      Outro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/further_reading.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/further_reading.html">
      Suggested Further Reading
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_DaySummary.html">
-     <strong>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_DaySummary.html">
+<strong>
       Day Summary
      </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
+</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
    Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Intro.html">
+<input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+<label for="toctree-checkbox-11">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Intro.html">
      Intro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
      Tutorial 1: The Socio-economic Origins of the Climate Emergency
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
      Tutorial 2: Transition Goals and Integrated Assessment Models**
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial3.html">
-     <strong>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial3.html">
+<strong>
       Tutorial 3: IAMs and SSPs
      </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
      Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Outro.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Outro.html">
      Outro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/further_reading.html">
-     <strong>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/further_reading.html">
+<strong>
       Tutorial 2 Further Reading
      </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_DaySummary.html">
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_DaySummary.html">
      Day Summary
     </a>
-   </li>
-  </ul>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
   Climate Response
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">
    Climate Response - Extremes &amp; Variability (W2D4)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Intro.html">
+<input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+<label for="toctree-checkbox-12">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Intro.html">
      Intro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial1.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial1.html">
      Tutorial 1: Distributions
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html">
      Tutorial 2: What is an Extreme Event? Empirical Return Levels
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial3.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial3.html">
      Tutorial 3: Extreme Value Analysis - the GEV Distribution
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial4.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial4.html">
      Tutorial 4: Return Levels Using Normal and GEV Distributions
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html">
      Tutorial 5: Non-stationarity in Historical Records
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial6.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial6.html">
      Tutorial 6: Scenario-dependence of Future Changes in Extremes
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html">
      Tutorial 7: Non-Stationarity in the EVT-framework
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html">
      Tutorial 8: Thresholds
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Outro.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Outro.html">
      Outro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/further_reading.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/further_reading.html">
      Suggested Further Reading
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_DaySummary.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_DaySummary.html">
      Day Summary
     </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
    Climate Response - Adaptation Impact (W2D5)
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Intro.html">
+<input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+<label for="toctree-checkbox-13">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Intro.html">
      Intro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">
      Tutorial 1: Linear and Logistic Regression
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
      Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
      Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
      Tutorial 4:  Exploring Other Applications
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Outro.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Outro.html">
      Outro
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/further_reading.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/further_reading.html">
      Suggested Further Reading
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_DaySummary.html">
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_DaySummary.html">
      Day Summary
     </a>
-   </li>
-  </ul>
- </li>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
   Project Booklet
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../projects/README.html">
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/README.html">
    Introduction
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../projects/keynote.html">
+</li>
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/keynote.html">
    Project Day keynote (W2D2)
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../projects/docs/project_guidance.html">
+</li>
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/docs/project_guidance.html">
    Daily guide for projects
   </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../../projects/docs/datasets_overview.html">
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../../projects/docs/datasets_overview.html">
    Project materials
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
-     <strong>
+<input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+<label for="toctree-checkbox-14">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Sea_level_rise.html">
+<strong>
       Sea Level Rise
      </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
-     <strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification.html">
+<strong>
       Ocean Acidification
      </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
-     <strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/ENSO_impact_on_precipitation_and_temperature.html">
+<strong>
       The Impact of ENSO on Precipitation and Temperature
      </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../projects/project-notebooks/Regional_precipitation_variability.html">
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Regional_precipitation_variability.html">
      Regional Precipitation Variability and Extreme Events
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
-     <strong>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Heatwaves.html">
+<strong>
       Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
      </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
-     <strong>
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Wildfires_and_burnt_areas.html">
+<strong>
       Monitoring and Mapping Wildfires Using Satellite Data
      </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../../projects/project-notebooks/Surface_albedo_and_land_cover.html">
+</a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/project-notebooks/Surface_albedo_and_land_cover.html">
      Changes in Land Cover: Albedo and Carbon Sequestration
     </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+</li>
+</ul>
+</li>
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
    Continuing your project after the course
   </a>
- </li>
+</li>
+<li class="toctree-l1 has-children">
+<a class="reference internal" href="../../../projects/docs/past_projects_overview.html">
+   Past projects
+  </a>
+<input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+<label for="toctree-checkbox-15">
+<i class="fas fa-chevron-down">
+</i>
+</label>
+<ul>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+</li>
+<li class="toctree-l2">
+<a class="reference internal" href="../../../projects/past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+</li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
+</li>
+</ul>
+<p class="caption">
+<span class="caption-text">
   Professional Development
  </span>
 </p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../projects/professional_development/README.html">
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/professional_development/README.html">
    Introduction
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../projects/professional_development/impact_talks.html">
+</li>
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/professional_development/impact_talks.html">
    Impact Talks
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../projects/professional_development/mentors.html">
+</li>
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/professional_development/mentors.html">
    Mentor Meetings
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../projects/professional_development/career_features.html">
+</li>
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/professional_development/career_features.html">
    Career Features
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../../projects/professional_development/career_panels.html">
+</li>
+<li class="toctree-l1">
+<a class="reference internal" href="../../../projects/professional_development/career_panels.html">
    Career Panels
   </a>
- </li>
+</li>
 </ul>
-
-    </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
-    </div>
-    <div id="rtd-footer-container"></div>
 </div>
-
-
-          
-
-
-          
+</nav></div>
+<div class="bd-sidebar__bottom">
+<!-- To handle the deprecated key -->
+<div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+</div>
+</div>
+<div id="rtd-footer-container"></div>
+</div>
 <!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
 <!-- Main content -->
 <div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
-
-
-
+<div class="header-article row sticky-top noprint">
 <div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
+<div class="header-article__left">
+<label class="headerbtn" data-placement="right" data-toggle="tooltip" for="__navigation" title="Toggle navigation">
 <span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
+<i class="fas fa-bars"></i>
+</span>
 </label>
-
-        
-    </div>
-    <div class="header-article__right">
+</div>
+<div class="header-article__right">
 <div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&urlpath=lab/tree/course-content/book/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.ipynb&branch=main"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on JupyterHub"
->
-  
-
+<button aria-label="Launch interactive content" class="headerbtn menu-dropdown__trigger">
+<i class="fas fa-rocket"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&amp;urlpath=lab/tree/course-content/book/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.ipynb&amp;branch=main" title="Launch on JupyterHub">
 <span class="headerbtn__icon-container">
-  
-    <img src="../../../_static/images/logo_jupyterhub.svg">
-  </span>
+<img src="../../../_static/images/logo_jupyterhub.svg"/>
+</span>
 <span class="headerbtn__text-container">JupyterHub</span>
 </a>
-
-      </li>
-      
-    </ul>
-  </div>
+</li>
+</ul>
 </div>
-
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
->
-  
-
+</div>
+<button class="headerbtn" data-placement="bottom" data-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
 <span class="headerbtn__icon-container">
-  <i class="fas fa-expand"></i>
-  </span>
-
+<i class="fas fa-expand"></i>
+</span>
 </button>
-
 <div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/ClimatematchAcademy/course-content"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
-
+<button aria-label="Source repositories" class="headerbtn menu-dropdown__trigger">
+<i class="fab fa-github"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://github.com/ClimatematchAcademy/course-content" title="Source repository">
 <span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
+<i class="fab fa-github"></i>
+</span>
 <span class="headerbtn__text-container">repository</span>
 </a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
+</li>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html&amp;body=Your%20issue%20content%20here." title="Open an issue">
 <span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
+<i class="fas fa-lightbulb"></i>
+</span>
 <span class="headerbtn__text-container">open issue</span>
 </a>
-
-      </li>
-      
-    </ul>
-  </div>
+</li>
+</ul>
 </div>
-
+</div>
 <div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../../_sources/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
+<button aria-label="Download this page" class="headerbtn menu-dropdown__trigger">
+<i class="fas fa-download"></i>
+</button>
+<div class="menu-dropdown__content">
+<ul>
+<li>
+<a class="headerbtn" data-placement="left" data-toggle="tooltip" href="../../../_sources/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.ipynb" title="Download source file">
 <span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
+<i class="fas fa-file"></i>
+</span>
 <span class="headerbtn__text-container">.ipynb</span>
 </a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
+</li>
+<li>
+<button class="headerbtn" data-placement="left" data-toggle="tooltip" onclick="printPdf(this)" title="Print to PDF">
 <span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
+<i class="fas fa-file-pdf"></i>
+</span>
 <span class="headerbtn__text-container">.pdf</span>
 </button>
-
-      </li>
-      
-    </ul>
-  </div>
+</li>
+</ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
+</div>
+<label class="headerbtn headerbtn-page-toc" for="__page-toc">
 <span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+<i class="fas fa-list"></i>
+</span>
 </label>
-
-    </div>
 </div>
-
+</div>
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
+<div class="tocsection onthispage pt-5 pb-3">
+<i class="fas fa-list"></i> Contents
     </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+<nav aria-label="Page" id="bd-toc-nav">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
    Tutorial 2: Exploring Satellite Climate Data Records
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutorial-objectives">
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
    Tutorial Objectives
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#video-1-satellite-climate-data-records">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-satellite-climate-data-records">
      Video 1: Satellite Climate Data Records
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Video 1: Satellite Climate Data Records
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#section-1-satellite-climate-data-records">
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-satellite-climate-data-records">
    Section 1: Satellite Climate Data Records
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-1-1-satellite-missions-for-environmental-monitoring">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-satellite-missions-for-environmental-monitoring">
      Section 1.1: Satellite Missions for Environmental Monitoring
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-1-2-inter-satellite-calibration">
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-2-inter-satellite-calibration">
      Section 1.2: Inter-satellite Calibration
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#questions-1-2-climate-connection">
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2-climate-connection">
        Questions 1.2: Climate Connection
       </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#section-2-finding-satellite-climate-data-records">
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-finding-satellite-climate-data-records">
    Section 2: Finding Satellite Climate Data Records
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-2-1-noaa-climate-data-records">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-1-noaa-climate-data-records">
      Section 2.1: NOAA Climate Data Records
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-2-2-esa-climate-change-initiative">
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-2-esa-climate-change-initiative">
      Section 2.2: ESA Climate Change Initiative
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-2-3-nasa-earth-system-data-records">
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-3-nasa-earth-system-data-records">
      Section 2.3: NASA Earth System Data Records
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#questions-2-3-climate-connection">
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-3-climate-connection">
        Questions 2.3: Climate Connection
       </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
    Summary
   </a>
- </li>
+</li>
 </ul>
-
-    </nav>
+</nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Tutorial 2: Exploring Satellite Climate Data Records</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+</div>
+<div class="article row">
+<div class="col pl-md-3 pl-lg-5 content-container">
+<!-- Table of contents that is only displayed when printing the page -->
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Tutorial 2: Exploring Satellite Climate Data Records</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
    Tutorial 2: Exploring Satellite Climate Data Records
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutorial-objectives">
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
    Tutorial Objectives
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#video-1-satellite-climate-data-records">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-satellite-climate-data-records">
      Video 1: Satellite Climate Data Records
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       Video 1: Satellite Climate Data Records
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#section-1-satellite-climate-data-records">
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-satellite-climate-data-records">
    Section 1: Satellite Climate Data Records
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-1-1-satellite-missions-for-environmental-monitoring">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-1-satellite-missions-for-environmental-monitoring">
      Section 1.1: Satellite Missions for Environmental Monitoring
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-1-2-inter-satellite-calibration">
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-2-inter-satellite-calibration">
      Section 1.2: Inter-satellite Calibration
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#questions-1-2-climate-connection">
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-1-2-climate-connection">
        Questions 1.2: Climate Connection
       </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#section-2-finding-satellite-climate-data-records">
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-finding-satellite-climate-data-records">
    Section 2: Finding Satellite Climate Data Records
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-2-1-noaa-climate-data-records">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-1-noaa-climate-data-records">
      Section 2.1: NOAA Climate Data Records
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-2-2-esa-climate-change-initiative">
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-2-esa-climate-change-initiative">
      Section 2.2: ESA Climate Change Initiative
     </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#section-2-3-nasa-earth-system-data-records">
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-3-nasa-earth-system-data-records">
      Section 2.3: NASA Earth System Data Records
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#questions-2-3-climate-connection">
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#questions-2-3-climate-connection">
        Questions 2.3: Climate Connection
       </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#summary">
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
    Summary
   </a>
- </li>
+</li>
 </ul>
-
-                        </nav>
-                    </div>
-                </div>
-            </div>
-            <main id="main-content" role="main">
-                
-              <div>
-                
-  <p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a></p>
+</nav>
+</div>
+</div>
+</div>
+<main id="main-content" role="main">
+<div>
+<p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
 <div class="section" id="tutorial-2-exploring-satellite-climate-data-records">
-<h1>Tutorial 2: Exploring Satellite Climate Data Records<a class="headerlink" href="#tutorial-2-exploring-satellite-climate-data-records" title="Permalink to this headline">#</a></h1>
+<h1>Tutorial 2: Exploring Satellite Climate Data Records<a class="headerlink" href="#tutorial-2-exploring-satellite-climate-data-records" title="Permalink to this headline">¶</a></h1>
 <p><strong>Week 1, Day 3, Remote Sensing</strong></p>
 <p><strong>Content creators:</strong> Douglas Rao</p>
 <p><strong>Content reviewers:</strong> Katrina Dobson, Younkap Nina Duplex, Maria Gonzalez, Will Gregory, Nahid Hasan, Sherry Mi, Beatriz Cosenza Muralles, Jenna Pearson, Agustina Pesce, Chi Zhang, Ohad Zivan</p>
@@ -1426,7 +1334,7 @@ title="Print to PDF"
 <p><strong>Our 2023 Sponsors:</strong> NASA TOPS and Google DeepMind</p>
 </div>
 <div class="section" id="tutorial-objectives">
-<h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">#</a></h1>
+<h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this headline">¶</a></h1>
 <p>In this tutorial, you will enhance your understanding of several key concepts and tools crucial in the field of satellite remote sensing for climate applications. Specifically, by the end of this session, you should be able to:</p>
 <ul class="simple">
 <li><p>Grasp the principle of inter-satellite calibration, a critical step in creating reliable climate data records.</p></li>
@@ -1434,48 +1342,45 @@ title="Print to PDF"
 <li><p>Navigate and utilize these datasets in your own climate-related studies or projects.</p></li>
 </ul>
 <div class="section" id="video-1-satellite-climate-data-records">
-<h2>Video 1: Satellite Climate Data Records<a class="headerlink" href="#video-1-satellite-climate-data-records" title="Permalink to this headline">#</a></h2>
-<div class="section" id="id1">
-<h3>Video 1: Satellite Climate Data Records<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h2>Video 1: Satellite Climate Data Records<a class="headerlink" href="#video-1-satellite-climate-data-records" title="Permalink to this headline">¶</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "b15beef16fe64c1981c342ee495c5a59"}
+{"version_major": 2, "version_minor": 0, "model_id": "df7af3a3aa934008b40fca72d3eb00f1"}
 </script></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "05ac340e013d44e7b4c7ca3d14d4a412"}
+{"version_major": 2, "version_minor": 0, "model_id": "9011f2202b99422fa5b98c230bbbd11c"}
 </script></div>
-</div>
 </div>
 </div>
 </div>
 <div class="section" id="section-1-satellite-climate-data-records">
-<h1>Section 1: Satellite Climate Data Records<a class="headerlink" href="#section-1-satellite-climate-data-records" title="Permalink to this headline">#</a></h1>
+<h1>Section 1: Satellite Climate Data Records<a class="headerlink" href="#section-1-satellite-climate-data-records" title="Permalink to this headline">¶</a></h1>
 <p>You have already seen some examples of how satellite remote sensing data can be used for climate research and applications. But are all satellite data “created equal” for these purposes? There are a lot of considerations that need to be taken into account when using satellite data to monitor the long-term change of different components of the Earth system. In this section you will explore some of these considerations. Many of these are outlines in the definition of a climate data record given below.</p>
 <p><strong>Satellite Climate Data Records</strong></p>
 <p>In 2004, a committee convened by the US National Research Council defined a <a class="reference external" href="https://www.ncei.noaa.gov/products/climate-data-records"><em><strong>Climate Data Record (CDR)</strong></em></a> is “a time series of measurements of sufficient length, consistency and continuity to determine climate variability and change.” Although there are no specific number to determine the “sufficient length”, the typical climate length is considered to be at least 30 years. To achieve a stable, consistent, and reliable satellite CDR, we need to carefully calibrate the raw satellite data.</p>
 <div class="section" id="section-1-1-satellite-missions-for-environmental-monitoring">
-<h2>Section 1.1: Satellite Missions for Environmental Monitoring<a class="headerlink" href="#section-1-1-satellite-missions-for-environmental-monitoring" title="Permalink to this headline">#</a></h2>
+<h2>Section 1.1: Satellite Missions for Environmental Monitoring<a class="headerlink" href="#section-1-1-satellite-missions-for-environmental-monitoring" title="Permalink to this headline">¶</a></h2>
 <p>When it comes to monitoring environmental and climate changes in a region using weather stations, we have confidence in the data quality due to regular inspections and maintenance of these stations and instruments. In North America and Europe, for instance, there are numerous weather stations that have been operating for over a century, providing reliable long-term data.</p>
 <p>In contrast, a single satellite mission has a <strong>designed operational lifespan of 5-8 years</strong>, and over time, the sensors on these satellites can deteriorate. While some satellites like Terra and Aqua have exceeded their designed lifespan and continue to operate successfully for more than 20 years, <strong>relying on a single satellite for climate monitoring and applications is exceedingly challenging</strong>, if not impossible.</p>
 <p>Thankfully, we have a range of satellite platforms at our disposal that operate continuously and carry similar remote sensors, making it feasible to utilize multiple satellites together for climate-related purposes. Since the 1970s, dozens of satellites, including both polar-orbiting and geostationary satellites, have been designed for weather and environmental monitoring. While not originally intended for climate studies, researchers have developed methods to merge data from various satellite platforms, enabling the creation of robust long-term time series of satellite data. Moreover, future satellite missions are being carefully designed to extend these data records further.</p>
 <p>The image below illustrates a timeline showcasing a selection of polar-orbiting satellite missions whose data are commonly employed to generate satellite Climate Data Records (CDRs).</p>
-<p><img alt="satellite timeline" src="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/asset/img/t2_satellite_timeline.png?raw=true" /></p>
+<p><img alt="satellite timeline" src="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/asset/img/t2_satellite_timeline.png?raw=true"/></p>
 <p>Credit: Douglas Rao</p>
 <p>The above figure shows the variety of satellite lifespans - some satellites only operated 3-5 years while there are a handful of satellite missions that operated for more than 15 years. Most importantly, we usually have at least two satellite missions operating during the same time period.</p>
 <p>The overlap among satellite missions is critical for generating satellite CDRs, as we can compare the data during the overlapping time period and account for the systematic differences between satellite missions.</p>
 <p>Meanwhile, there is significant technological advancement in remote sensors aboard different satellite missions. These different generations of remote sensors are identified by the solid grey lines in the figure. As indicated in the figure above, we have seen three major upgrades in sensor technologies. <strong>NOTE: these sensor changes also need to be accounted for when creating satellite CDRs.</strong></p>
 </div>
 <div class="section" id="section-1-2-inter-satellite-calibration">
-<h2>Section 1.2: Inter-satellite Calibration<a class="headerlink" href="#section-1-2-inter-satellite-calibration" title="Permalink to this headline">#</a></h2>
+<h2>Section 1.2: Inter-satellite Calibration<a class="headerlink" href="#section-1-2-inter-satellite-calibration" title="Permalink to this headline">¶</a></h2>
 <p>As noted in the previous section, the change in satellite missions and remote sensors make it hard to use remotely sensed data “as it is” for climate applications. These changes often cause systematic differences in raw satellite data (see image below).</p>
 <p>This figure is exagerating the possible systematic differences between raw data collected by different satellite missions. Nonetheless, <strong>these systematic differences can often cause large uncertainty for climate science when not addressed properly.</strong></p>
-<p><img alt="t2_calibration" src="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/asset/img/t2_calibration_pt1.png?raw=true" /></p>
+<p><img alt="t2_calibration" src="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/asset/img/t2_calibration_pt1.png?raw=true"/></p>
 <p>To address the differences that are caused by sensor and satellite changes, we often perform an <strong>inter-satellite calibration</strong> - which adjusts the raw data collected by different satellites to a pre-defined reference to remove or minimize the systematic difference between data. This pre-defined reference is usually determined using data during there perioud of time when the satellites overlap (see image below). But we can also use other high quality reference data like surface observations, theoretical bases, or other ancillary data. Click <a class="reference external" href="https://www.eumetsat.int/inter-calibration">here</a> for more information on <strong>inter-satellite calibration</strong>.</p>
-<p><img alt="t2_calibration_pt2" src="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/asset/img/t2_calibration_pt2.png?raw=true" /></p>
+<p><img alt="t2_calibration_pt2" src="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/asset/img/t2_calibration_pt2.png?raw=true"/></p>
 <p>A <strong>well-calibrated multi-satellite date record</strong> is often assessed by examining the differences between satellite data during the overlapping time period. Once we are confident that the differences are minimal or within an accepted range, the long term time series based on multiple satellites can be used for climate applications.</p>
 <p>The inter-satellite calibration step is the key to ensure that climate signals can be accurately reflected in the satellite data and not affected by the noise caused by change in satellite platforms and sensors. Therefore, when you are choosing satellite data for climate applications, you should be asking yourself a few questions:</p>
 <ul class="simple">
@@ -1484,9 +1389,9 @@ title="Print to PDF"
 <li><p>Can you find out how the inter-satellite calibration is done and what is the level of difference between satellites/sensors?</p></li>
 </ul>
 <p>These questions will help you determine if the remotely sensed data is appropriate for climate applications that you are interested in.</p>
-<p><img alt="t2_calibration_pt3" src="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/asset/img/t2_calibration_pt3.png?raw=true" /></p>
+<p><img alt="t2_calibration_pt3" src="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/asset/img/t2_calibration_pt3.png?raw=true"/></p>
 <div class="section" id="questions-1-2-climate-connection">
-<h3>Questions 1.2: Climate Connection<a class="headerlink" href="#questions-1-2-climate-connection" title="Permalink to this headline">#</a></h3>
+<h3>Questions 1.2: Climate Connection<a class="headerlink" href="#questions-1-2-climate-connection" title="Permalink to this headline">¶</a></h3>
 <p>Assuming that you are interested in using remote sensing data to understand how the rainfall amount and frequency have changed for the region that you are in since 1990. There are three different satellite data that you can choose from:</p>
 <ul class="simple">
 <li><p><em>Option A</em>: Data from the most recent satellite missions designed to monitor global precipitation. The satellite has the most accurate sensor and the satellite was launched in 2014.</p></li>
@@ -1494,14 +1399,15 @@ title="Print to PDF"
 <li><p><em>Option C</em>: Data from the three different satellite missions described in <em>Option B</em> that has been calibrated using long term surface measurements of rainfall in your region.</p></li>
 </ul>
 <p>Can you choose the best data for your application? Why would you make this choice? Do you need more information to make the decision?</p>
+<p><a class="reference external" href="https://github.com/NeuromatchAcademy/course-content/tree/main/tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/solutions/W1D3_Tutorial2_Solution_1c4dc0c2.py"><em>Click for solution</em></a></p>
 </div>
 </div>
 </div>
 <div class="section" id="section-2-finding-satellite-climate-data-records">
-<h1>Section 2: Finding Satellite Climate Data Records<a class="headerlink" href="#section-2-finding-satellite-climate-data-records" title="Permalink to this headline">#</a></h1>
+<h1>Section 2: Finding Satellite Climate Data Records<a class="headerlink" href="#section-2-finding-satellite-climate-data-records" title="Permalink to this headline">¶</a></h1>
 <p>Finding the right satellite Climate Data Records (CDRs) for your desired application can be a challenge. In this section, we will explore satellite data from three major remote sensing data providers: the <strong>National Atmospheric and Oceanic Administration (NOAA), the National Aeronautics and Space Administration (NASA), and the European Space Agency (ESA)</strong>. While we won’t cover the code to analyze the data in this tutorial, you will learn how to do that in the upcoming tutorials.</p>
 <div class="section" id="section-2-1-noaa-climate-data-records">
-<h2>Section 2.1: NOAA Climate Data Records<a class="headerlink" href="#section-2-1-noaa-climate-data-records" title="Permalink to this headline">#</a></h2>
+<h2>Section 2.1: NOAA Climate Data Records<a class="headerlink" href="#section-2-1-noaa-climate-data-records" title="Permalink to this headline">¶</a></h2>
 <p>The <strong>National Atmospheric and Oceanic Administration (NOAA)</strong> implemented the recommendation from the US National Research Council to develop satellite-based climate data records in the 2000s, and they have maintained a suite of operational CDRs that can be used to study different aspects of the changing climate system since then.</p>
 <p>All NOAA CDR data are available freely to the public via <a class="reference external" href="https://www.ncei.noaa.gov/products/climate-data-records">NOAA National Centers for Environmental Information</a>. Recently, the <a class="reference external" href="https://www.noaa.gov/information-technology/open-data-dissemination">NOAA Open Data Dissemination Program</a> also made all NOAA CDRs available on three major commercial cloud service providers (i.e., Amazon Web Service, Google Cloud, and Microsoft Azure). The NOAA Climate Data Records (CDRs) are available to anyone interested in accessing the data and are typically free of charge.</p>
 <p>NOAA CDRs have two different categories with different purposes:</p>
@@ -1544,7 +1450,7 @@ title="Print to PDF"
 <tr class="row-even"><td class="text-align:left"><p>Snow Cover Extent (Northern Hemisphere)</p></td>
 <td class="text-align:center"><p>Terrestrial</p></td>
 <td class="text-align:center"><p>1966</p></td>
-<td class="text-align:center"><p>Weekly (prior 1999-06) <br><br> Daily (post 1999-06)</p></td>
+<td class="text-align:center"><p>Weekly (prior 1999-06) <br/><br/> Daily (post 1999-06)</p></td>
 <td class="text-align:center"><p>~190 km</p></td>
 <td class="text-align:left"><p>Hydrology; Water resources; Snow-climate feedback</p></td>
 </tr>
@@ -1566,7 +1472,7 @@ title="Print to PDF"
 <td class="text-align:center"><p>Atmospheric</p></td>
 <td class="text-align:center"><p>1982</p></td>
 <td class="text-align:center"><p>Daily</p></td>
-<td class="text-align:center"><p>0.25° <br><br> (60°S–60°N)</p></td>
+<td class="text-align:center"><p>0.25° <br/><br/> (60°S–60°N)</p></td>
 <td class="text-align:left"><p>Hydrology; Water resources; Extreme events</p></td>
 </tr>
 <tr class="row-even"><td class="text-align:left"><p>Sea Surface Temperature - Optimum Interpolation</p></td>
@@ -1587,7 +1493,7 @@ title="Print to PDF"
 </table>
 </div>
 <div class="section" id="section-2-2-esa-climate-change-initiative">
-<h2>Section 2.2: ESA Climate Change Initiative<a class="headerlink" href="#section-2-2-esa-climate-change-initiative" title="Permalink to this headline">#</a></h2>
+<h2>Section 2.2: ESA Climate Change Initiative<a class="headerlink" href="#section-2-2-esa-climate-change-initiative" title="Permalink to this headline">¶</a></h2>
 <p>The <strong>European Space Agency (ESA)</strong> initiated a similar effort to develop consistent satellite-based long-term records to support the mission of climate monitoring for societal benefits in late 2010s. <strong><a class="reference external" href="https://climate.esa.int/en/esa-climate/esa-cci/">ESA Climate Change Initiative (CCI)</a></strong> has established more than 26 projects to develop satellite-based CDRs and directly engage with downstream users.</p>
 <p>Through CCI, there is very strong emphasis on applications to support the monitoring of <a class="reference external" href="https://public.wmo.int/en/programmes/global-climate-observing-system/essential-climate-variables"><strong>essential climate variables</strong> (ECVs) defined by Global Climate Observing System (GCOS)</a>. An ECV is defined as “a physical, chemical or biological variable or a group of linked variables that critically contributes to the characterization of Earth’ s climate.”</p>
 <p>The table below lists a selection of ESA CCI datasets and their example application areas.</p>
@@ -1620,7 +1526,7 @@ title="Print to PDF"
 <td class="text-align:center"><p>Terrestrial</p></td>
 <td class="text-align:center"><p>1981-2020</p></td>
 <td class="text-align:center"><p>Monthly</p></td>
-<td class="text-align:center"><p>0.05° (pixel dataset) <br><br> 0.25° (grid dataset)</p></td>
+<td class="text-align:center"><p>0.05° (pixel dataset) <br/><br/> 0.25° (grid dataset)</p></td>
 <td class="text-align:left"><p>Ecosystem disturbance; Extreme events; Social impact</p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:left"><p>Land Cover</p></td>
@@ -1649,7 +1555,7 @@ title="Print to PDF"
 <p>To further assist users in accessing and analyzing the CCI data, ESA has also developed the <a class="reference external" href="https://climate.esa.int/en/explore/analyse-climate-data/"><strong>CCI Analysis Toolbox (Cate)</strong></a>. It is described as a “cloud-enabled computing environment geared for scientists who need to analyze, process, and visualize ESA’s climate data and other spatiotemporal data.”</p>
 </div>
 <div class="section" id="section-2-3-nasa-earth-system-data-records">
-<h2>Section 2.3: NASA Earth System Data Records<a class="headerlink" href="#section-2-3-nasa-earth-system-data-records" title="Permalink to this headline">#</a></h2>
+<h2>Section 2.3: NASA Earth System Data Records<a class="headerlink" href="#section-2-3-nasa-earth-system-data-records" title="Permalink to this headline">¶</a></h2>
 <p>Similar to other two satellite data providers, the <strong>National Aeronautics and Space Administration (NASA)</strong> also produces and distributes long-term satellite-based data records that may be suitable for different climate applications. NASA <a class="reference external" href="https://www.earthdata.nasa.gov/esds/competitive-programs/measures?page=0">Earth System Data Records (ESDRs)</a> are defined as “as a unified and coherent set of observations of a given parameter of the Earth system, which is optimized to meet specific requirements in addressing science questions.”</p>
 <p>While NASA’s ESDR does not specifically target climate, these records are often created to monitor and study various components of the climate system. For instance, surface temperature, global forest coverage change, atmospheric compositions, and ice sheet velocity are all areas of focus.</p>
 <p>The table below showcases a selection of NASA ESDRs datasets that nicely complement the satellite Climate Data Records (CDRs) offered by NOAA and ESA.</p>
@@ -1696,30 +1602,30 @@ title="Print to PDF"
 </table>
 <p>If you’ve visited the linked NASA ESDR page above, you may have noticed that it appears less structured compared to the NOAA CDR program and the ESA CCI open data portal. This is partly because NASA operates different data centers for distinct application areas (e.g., atmosphere, snow/ice, land, etc.). However, you can always visit <a class="reference external" href="https://search.earthdata.nasa.gov/search"><strong>NASA’s Earth Data Search</strong></a> – a comprehensive portal for accessing datasets provided by NASA’s Earth science data system. To access the data, you’ll be required to create a user account. Rest assured, registration for the NASA Earthdata system is free and open to anyone.</p>
 <div class="section" id="questions-2-3-climate-connection">
-<h3>Questions 2.3: Climate Connection<a class="headerlink" href="#questions-2-3-climate-connection" title="Permalink to this headline">#</a></h3>
+<h3>Questions 2.3: Climate Connection<a class="headerlink" href="#questions-2-3-climate-connection" title="Permalink to this headline">¶</a></h3>
 <p>Now that you have been introduced to three major sources of remote sensing data for climate applications, it’s time to identify the dataset that best suits your requirements. In this exercise, you can choose one or more data providers (NASA, NOAA, ESA) and explore their satellite data to determine which one aligns best with your application needs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Step 1: Describe your application interest. Be as specific as you can, this</span>
 <span class="c1">### will help you narrow down your search for the data</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="c1">### Step 2: Identify an ideal spatial and temporal resolution for your application</span>
 <span class="c1">### (e.g., daiyl/weekly/monthly, 500 m/5 km/25 km/...?)</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 <span class="c1">### Step 3: Explore the data from one of the data providers to see if there is</span>
 <span class="c1">### any data that can fit your application need and explain why</span>
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 
-<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">"""</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\n\n&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>'\n\n'
 </pre></div>
 </div>
 </div>
@@ -1728,7 +1634,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="summary">
-<h1>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h1>
+<h1>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h1>
 <p>In this tutorial, we learned about</p>
 <ul class="simple">
 <li><p>how <strong>Inter-satellite calibration</strong> is a critical step to produce a consistent remote sensing dataset for climate applications and allows us to use data from different satellites and sensors over different but overlappign time-periods.</p></li>
@@ -1736,14 +1642,10 @@ title="Print to PDF"
 </ul>
 <p>In the upcoming tutorial, we will be transitioning towards exploring how to utilize computational tools to access publicly available remote sensing data for climate applications.</p>
 </div>
-
-
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"cdca5a559f7444d6b791815c1bac9398": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "962bb0f070dd4358b14a62aeb80ab055": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_cdca5a559f7444d6b791815c1bac9398", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=YApfQIKo7uY\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7f0c069d1510>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/YApfQIKo7uY?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "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"}}], "tabbable": null, "tooltip": null}}, "e42bcf00a8f948f99b0aa6e2a006d3c5": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "5326e9bdb2484265b5a221ad953b8c89": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_e42bcf00a8f948f99b0aa6e2a006d3c5", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV1Pk4y1N75r\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7f0c0608ffd0>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV1Pk4y1N75r&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}], "tabbable": null, "tooltip": null}}, "a6f8832e19914358bfa6a739a350f23b": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b15beef16fe64c1981c342ee495c5a59": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TabModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_962bb0f070dd4358b14a62aeb80ab055", "IPY_MODEL_5326e9bdb2484265b5a221ad953b8c89"], "layout": "IPY_MODEL_a6f8832e19914358bfa6a739a350f23b", "selected_index": 0, "tabbable": null, "titles": ["Youtube", "Bilibili"], "tooltip": null}}, "157b0051426d47c19975b73eb83d9e7d": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "05ac340e013d44e7b4c7ca3d14d4a412": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_157b0051426d47c19975b73eb83d9e7d", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "If you want to download the slides: https://osf.io/download/7vsqd/\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.IFrame at 0x7f0c069d31f0>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://mfr.ca-1.osf.io/render?url=https://osf.io/7vsqd/?direct%26mode=render%26action=download%26mode=render\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}], "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}
+{"state": {"981299449cd8466db6865a5044221572": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "0f2e751cee6e4f3dac07f7cb70021335": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_981299449cd8466db6865a5044221572", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=YApfQIKo7uY\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7f92a4df9790>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/YApfQIKo7uY?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "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\n"}}]}}, "00b233463741439c81ea8ecc0674c257": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "c5a9d094f7654dafabbb503e508603c4": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_00b233463741439c81ea8ecc0674c257", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV1Pk4y1N75r\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7f92a4df9450>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV1Pk4y1N75r&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}, "b783c9a4697f4ad49e4fbb78e804aec7": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "df7af3a3aa934008b40fca72d3eb00f1": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TabModel", "_titles": {"0": "Youtube", "1": "Bilibili"}, "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_0f2e751cee6e4f3dac07f7cb70021335", "IPY_MODEL_c5a9d094f7654dafabbb503e508603c4"], "layout": "IPY_MODEL_b783c9a4697f4ad49e4fbb78e804aec7", "selected_index": 0}}, "5e9f45b1403948e6bc4f3c9564f3833f": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9011f2202b99422fa5b98c230bbbd11c": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_5e9f45b1403948e6bc4f3c9564f3833f", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "If you want to download the slides: https://osf.io/download/7vsqd/\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.IFrame at 0x7f92a4ca7850>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://mfr.ca-1.osf.io/render?url=https://osf.io/7vsqd/?direct%26mode=render%26action=download%26mode=render\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}}, "version_major": 2, "version_minor": 0}
 </script>
-
-
-    <script type="text/x-thebe-config">
+<script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
@@ -1761,60 +1663,49 @@ title="Print to PDF"
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3'</script>
-
-              </div>
-              
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="W1D3_Tutorial1.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Tutorial 1: Introduction to Remote Sensing</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="W1D3_Tutorial3.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tutorial 3: Visualizing Satellite CDR - Global Vegetation Mapping</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<script>kernelName = 'python3'</script>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+</main>
+<footer class="footer-article noprint">
+<!-- Previous / next buttons -->
+<div class="prev-next-area">
+<a class="left-prev" href="W1D3_Tutorial1.html" id="prev-link" title="previous page">
+<i class="fas fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">Tutorial 1: Introduction to Remote Sensing</p>
+</div>
+</a>
+<a class="right-next" href="W1D3_Tutorial3.html" id="next-link" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Tutorial 3: Visualizing Satellite CDR - Global Vegetation Mapping</p>
+</div>
+<i class="fas fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+</div>
+<div class="footer-content row">
+<footer class="col footer"><p>
   
-    By Climatematch<br/>
-  
-    <div class="extra_footer">
-      <div>
-<a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
-<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"></a>
+    By Climatematch<br>
+<div class="extra_footer">
+<div>
+<a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a>
+<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"/></a>
 The contents of this repository are shared under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 Software elements are additionally licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD (3-Clause) License</a>.
 </div>
-
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
-
-
-      </div>
-    </div>
-  
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-
-
-  </body>
+</br></p>
+</footer>
+</div>
+</div>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+</body>
 </html>

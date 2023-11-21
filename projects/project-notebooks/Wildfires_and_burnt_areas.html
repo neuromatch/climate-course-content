@@ -19,8 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,7 +32,7 @@
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -40,17 +40,17 @@
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@^1.0.1/dist/embed-amd.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -201,7 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Fundamentals
  </span>
@@ -352,7 +352,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Data
  </span>
@@ -572,7 +572,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Future
  </span>
@@ -772,7 +772,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Climate Response
  </span>
@@ -903,7 +903,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Project Booklet
  </span>
@@ -986,8 +986,55 @@ const thebe_selector_output = ".output, .cell_output"
    Continuing your project after the course
   </a>
  </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../docs/past_projects_overview.html">
+   Past projects
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+  <label for="toctree-checkbox-15">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/sea_level_rise.html">
+     Sea Level Rise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/ocean_acidification.html">
+     Ocean Acidification
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/ENSO.html">
+     The Impact of ENSO on Precipitation and Temperature
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/precipitation.html">
+     Regional Precipitation Variability and Extreme events
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/heatwaves.html">
+     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/wildfires.html">
+     Monitoring and Mapping Wildfires Using Satellite Data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../past-projects/albedo.html">
+     Changes in Land Cover: Albedo and Carbon Sequestration
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   Professional Development
  </span>
@@ -1407,7 +1454,7 @@ title="Print to PDF"
                 
   <p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/projects/project-notebooks/Wildfires_and_burnt_areas.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/project-notebooks/Wildfires_and_burnt_areas.ipynb" target="_parent"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a></p>
 <div class="section" id="monitoring-and-mapping-wildfires-using-satellite-data">
-<h1><strong>Monitoring and Mapping Wildfires Using Satellite Data</strong><a class="headerlink" href="#monitoring-and-mapping-wildfires-using-satellite-data" title="Permalink to this headline">#</a></h1>
+<h1><strong>Monitoring and Mapping Wildfires Using Satellite Data</strong><a class="headerlink" href="#monitoring-and-mapping-wildfires-using-satellite-data" title="Permalink to this headline">¶</a></h1>
 <p><strong>Content creators:</strong> Brittany Engle, Diana Cadillo</p>
 <p><strong>Content reviewers:</strong> Yuhan Douglas Rao, Abigail Bodner, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
 <p><strong>Content editors:</strong> Zane Mitrevica, Natalie Steinemann, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
@@ -1475,7 +1522,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "60ee08806c434428a094ff9d0ab57626"}
+{"version_major": 2, "version_minor": 0, "model_id": "481888f64f734cd1b96557442cbcf6c5"}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -1491,14 +1538,14 @@ title="Print to PDF"
 <p><strong>In this project</strong>, you will be working with wildfire remote sensing data from Sentinel 2 to extract Burn Perimeters using multiple Burn Indices and other relevant information related to wildfires. By integrating this data with information from other global databases, you will have the opportunity to explore the connections between wildfires and their impact on both the ecosystem and society.</p>
 </div>
 <div class="section" id="project-template">
-<h1>Project Template<a class="headerlink" href="#project-template" title="Permalink to this headline">#</a></h1>
+<h1>Project Template<a class="headerlink" href="#project-template" title="Permalink to this headline">¶</a></h1>
 <p><img alt="Project Template" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/template-images/wildfires_template_map.svg" /></p>
 <p><em>Note: The dashed boxes are socio-economic questions.</em></p>
 </div>
 <div class="section" id="data-exploration-notebook">
-<h1>Data Exploration Notebook<a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">#</a></h1>
+<h1>Data Exploration Notebook<a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="project-setup">
-<h2>Project Setup<a class="headerlink" href="#project-setup" title="Permalink to this headline">#</a></h2>
+<h2>Project Setup<a class="headerlink" href="#project-setup" title="Permalink to this headline">¶</a></h2>
 <div class="cell tag_colab docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># installs</span>
@@ -1523,21 +1570,23 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_133842/2929139239.py:6: DeprecationWarning: Shapely 2.0 is installed, but because PyGEOS is also installed, GeoPandas still uses PyGEOS by default. However, starting with version 0.14, the default will switch to Shapely. To force to use Shapely 2.0 now, you can either uninstall PyGEOS or set the environment variable USE_PYGEOS=0. You can do this before starting the Python process, or in your code before importing geopandas:
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">2929139239.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">os</span>
 
-import os
-os.environ[&#39;USE_PYGEOS&#39;] = &#39;0&#39;
-import geopandas
-
-In the next release, GeoPandas will switch to using Shapely by default, even if PyGEOS is installed. If you only have PyGEOS installed to get speed-ups, this switch should be smooth. However, if you are using PyGEOS directly (calling PyGEOS functions on geometries from GeoPandas), this will then stop working and you are encouraged to migrate from PyGEOS to Shapely 2.0 (https://shapely.readthedocs.io/en/latest/migration_pygeos.html).
-  import geopandas as gpd
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="satellite-data">
-<h2>Satellite Data<a class="headerlink" href="#satellite-data" title="Permalink to this headline">#</a></h2>
+<h2>Satellite Data<a class="headerlink" href="#satellite-data" title="Permalink to this headline">¶</a></h2>
 <p><strong>Global Wildfire Information System (GWIS)</strong> is a global, joint initiative created by the GEO and the Copernicus Work Programs. The goal of this program is to bring together sources at a regional and international level to provide a global, comprehensive understanding of fire regimes and their effects.</p>
 <p>The Globfire dataset uses the MODIS burned area product (MCD64A1) to determine the amount of burnt area per event (<a class="reference external" href="https://www.nature.com/articles/s41597-019-0312-2">Artés et al., 2019</a>). The MCD64A1 product that Globfire is built on top of combines imagery from the Terra and Aqua satellites with thermal anomalies to provide burnt area information (<a class="reference external" href="https://modis-land.gsfc.nasa.gov/burn.html">Website</a>, <a class="reference external" href="https://modis-land.gsfc.nasa.gov/burn.html">MODIS C6 BA User Guide</a> &amp; <a class="reference external" href="http://modis-fire.umd.edu/files/MODIS_C6_BA_User_Guide_1.2.pdf">User Guide</a>).</p>
 <p><strong>Sentinel 2</strong>
@@ -1550,7 +1599,7 @@ Launched by the European Space Agency in June of 2015 (S2-A) and March of 2017 (
 <p><a name="dataset1-1"></a></p>
 </div>
 <div class="section" id="global-wildfire-information-systems-climate-action-large-wildfire-dataset">
-<h2>Global Wildfire Information Systems: Climate Action Large Wildfire Dataset<a class="headerlink" href="#global-wildfire-information-systems-climate-action-large-wildfire-dataset" title="Permalink to this headline">#</a></h2>
+<h2>Global Wildfire Information Systems: Climate Action Large Wildfire Dataset<a class="headerlink" href="#global-wildfire-information-systems-climate-action-large-wildfire-dataset" title="Permalink to this headline">¶</a></h2>
 <p>The Climate Action Large Wildfire Dataset is a filtered version of the Globfire dataset (created by GWIS, which you can access <a class="reference external" href="https://gwis.jrc.ec.europa.eu/apps/country.profile/downloads">here</a>).</p>
 <p>The resolution of this dataset is 500m. It has been pre-filtered to include only fires that are Class F or greater. Per the National Wildfire Coordinating Group, a Class F fire is defined as a fire that is 1,000 acres or greater, but less than 5,000 acres (note that a 2000m square region is roughly 1000 acres). For this dataset, all fires greater than 1,000 acres are included. Additional columns indicating area (acres), landcover number and landcover description, and country in which they are located within, were added. The landcover number and description were added using the Copernicus Global Land Cover Layers: CGLS-LC100 Collection 3 <a class="reference external" href="https://zenodo.org/record/3938963#.ZEeQEnZBwuU">User Guide</a>.</p>
 <p>Table Information:
@@ -1574,75 +1623,13 @@ ID: Globfire fire ID (unique to each fire)</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">CPLE_OpenFailedError</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
-<span class="nn">File fiona/ogrext.pyx:136,</span> in <span class="ni">fiona.ogrext.gdal_open_vector</span><span class="nt">()</span>
-
-<span class="nn">File fiona/_err.pyx:291,</span> in <span class="ni">fiona._err.exc_wrap_pointer</span><span class="nt">()</span>
-
-<span class="ne">CPLE_OpenFailedError</span>: /home/wesley/shared/Data/Projects/Wildfires/ClimateAction_countries.shp: No such file or directory
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">DriverError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">671592387.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># code to retrieve and load the data</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">url_climateaction</span> <span class="o">=</span> <span class="s2">&quot;~/shared/Data/Projects/Wildfires/ClimateAction_countries.shp&quot;</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">Dataset</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">url_climateaction</span><span class="p">)</span>  <span class="c1"># need to update to OSF and pooch.retrieve</span>
 
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/geopandas/io/file.py:281,</span> in <span class="ni">_read_file</span><span class="nt">(filename, bbox, mask, rows, engine, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="n">path_or_bytes</span> <span class="o">=</span> <span class="n">filename</span>
-<span class="ne">--&gt; </span><span class="mi">281</span>     <span class="k">return</span> <span class="n">_read_file_fiona</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">282</span>         <span class="n">path_or_bytes</span><span class="p">,</span> <span class="n">from_bytes</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="n">bbox</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="n">rows</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">283</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">285</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">286</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;unknown engine &#39;</span><span class="si">{</span><span class="n">engine</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/geopandas/io/file.py:322,</span> in <span class="ni">_read_file_fiona</span><span class="nt">(path_or_bytes, from_bytes, bbox, mask, rows, where, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">319</span>     <span class="n">reader</span> <span class="o">=</span> <span class="n">fiona</span><span class="o">.</span><span class="n">open</span>
-<span class="g g-Whitespace">    </span><span class="mi">321</span> <span class="k">with</span> <span class="n">fiona_env</span><span class="p">():</span>
-<span class="ne">--&gt; </span><span class="mi">322</span>     <span class="k">with</span> <span class="n">reader</span><span class="p">(</span><span class="n">path_or_bytes</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">features</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">323</span>         <span class="n">crs</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">crs_wkt</span>
-<span class="g g-Whitespace">    </span><span class="mi">324</span>         <span class="c1"># attempt to get EPSG code</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/fiona/env.py:457,</span> in <span class="ni">ensure_env_with_credentials.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">454</span>     <span class="n">session</span> <span class="o">=</span> <span class="n">DummySession</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">456</span> <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">457</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/fiona/__init__.py:292,</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, schema, crs, encoding, layer, vfs, enabled_drivers, crs_wkt, allow_unsupported_drivers, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">289</span>     <span class="n">path</span> <span class="o">=</span> <span class="n">parse_path</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">291</span> <span class="k">if</span> <span class="n">mode</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">292</span>     <span class="n">colxn</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">293</span>         <span class="n">path</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span>         <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">296</span>         <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">297</span>         <span class="n">layer</span><span class="o">=</span><span class="n">layer</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">298</span>         <span class="n">enabled_drivers</span><span class="o">=</span><span class="n">enabled_drivers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">299</span>         <span class="n">allow_unsupported_drivers</span><span class="o">=</span><span class="n">allow_unsupported_drivers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">300</span>         <span class="o">**</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">301</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">302</span> <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">303</span>     <span class="n">colxn</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">304</span>         <span class="n">path</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span>         <span class="n">mode</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span>         <span class="o">**</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">315</span>     <span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/climatematch/lib/python3.10/site-packages/fiona/collection.py:243,</span> in <span class="ni">Collection.__init__</span><span class="nt">(self, path, mode, driver, schema, crs, encoding, layer, vsi, archive, enabled_drivers, crs_wkt, ignore_fields, ignore_geometry, include_fields, wkt_version, allow_unsupported_drivers, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">243</span>     <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">245</span>     <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">WritingSession</span><span class="p">()</span>
-
-<span class="nn">File fiona/ogrext.pyx:588,</span> in <span class="ni">fiona.ogrext.Session.start</span><span class="nt">()</span>
-
-<span class="nn">File fiona/ogrext.pyx:143,</span> in <span class="ni">fiona.ogrext.gdal_open_vector</span><span class="nt">()</span>
-
-<span class="ne">DriverError</span>: /home/wesley/shared/Data/Projects/Wildfires/ClimateAction_countries.shp: No such file or directory
+<span class="ne">NameError</span>: name &#39;gpd&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1658,7 +1645,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">1275122454.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># code to print the shape, array names, etc of the dataset</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 
@@ -1677,7 +1664,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">2403992371.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># plot the dataset</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">Dataset</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 
@@ -1690,7 +1677,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 <p><a name="dataset1-2"></a></p>
 </div>
 <div class="section" id="sentinel-2">
-<h2>Sentinel-2<a class="headerlink" href="#sentinel-2" title="Permalink to this headline">#</a></h2>
+<h2>Sentinel-2<a class="headerlink" href="#sentinel-2" title="Permalink to this headline">¶</a></h2>
 <p>Each of the two satellites contain a Multi-Spectral Instrument (MSI) that houses 13 spectral bands, at various resolutions. The MSI uses a push-broom acquisition technique and measures in the Visible and Near Infrared (NIR) and the Short Wave Infrared (SWIR) domains. There are:</p>
 <ul class="simple">
 <li><p>Four bands with 10m resolution: B2-Blue (490 nm), B3- Green (560 nm), B4- Red (665 nm) and Band 8- Near Infrared (NIR) (842 nm).</p></li>
@@ -1764,23 +1751,15 @@ ID: Globfire fire ID (unique to each fire)</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">continet</span> <span class="o">=</span> <span class="s2">&quot;Asia&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># import pre images</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># pre_fire_paths = glob.glob(rootFolder + continet + id +&quot;/pre_fire_*.npy&quot;)</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">331988424.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">pre_fire_paths</span> <span class="o">=</span> <span class="p">[</span>
 <span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">fileName</span>
 <span class="nn">---&gt; 12     for fileName</span> in <span class="ni">os.listdir(os.path.join</span><span class="nt">(rootFolder, continet))</span>
 <span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="k">if</span> <span class="p">(</span><span class="n">fileName</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.npy&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">fileName</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;pre_fire_&quot;</span><span class="p">))</span>
 <span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">pre_fires_numpy</span> <span class="o">=</span> <span class="p">[</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">numpy</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">rootFolder</span><span class="p">,</span> <span class="n">continet</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pre_fire_paths</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="c1"># import post images</span>
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/home/jovyan/shared/Data/Projects/Wildfires/Asia&#39;
+<span class="ne">NameError</span>: name &#39;os&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1795,7 +1774,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">2514270116.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># print list of pre_fires</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pre_fire_paths</span><span class="p">))</span>
 
@@ -1814,7 +1793,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">433775378.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># print list of post_fire</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">post_fire_paths</span><span class="p">))</span>
 
@@ -1834,7 +1813,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">4048322867.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># print list of SCL</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">scl_fire_paths</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">scl_fires_post_paths</span><span class="p">))</span>
@@ -1856,7 +1835,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">3735071277.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># view pre-fire satellite image that was taken right before the fire start date</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">showImage</span><span class="p">(</span>
 <span class="ne">----&gt; </span><span class="mi">3</span>     <span class="n">numpy</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">pre_fires_numpy</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span> <span class="p">:,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span> <span class="o">/</span> <span class="mi">10000</span> <span class="o">*</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -1879,7 +1858,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">753664168.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># view post-fire satellite image that was taken right before the fire start date</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">showImage</span><span class="p">(</span>
 <span class="ne">----&gt; </span><span class="mi">3</span>     <span class="n">numpy</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">post_fires_numpy</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="p">:,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span> <span class="o">/</span> <span class="mi">10000</span> <span class="o">*</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -1891,7 +1870,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 </div>
 </div>
 <div class="section" id="sentinel-2-vegetation-health-burnt-areas">
-<h3>Sentinel-2: Vegetation Health &amp; Burnt Areas<a class="headerlink" href="#sentinel-2-vegetation-health-burnt-areas" title="Permalink to this headline">#</a></h3>
+<h3>Sentinel-2: Vegetation Health &amp; Burnt Areas<a class="headerlink" href="#sentinel-2-vegetation-health-burnt-areas" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://drive.google.com/drive/folders/1u7UMz8gIkTPWUv6p5OhlE4jXaZAh-oP4?usp=sharing">Sentinel-2 Imagery - Vegetation Health &amp; Burnt Areas</a></p>
 <p>Continents included:</p>
 <ul class="simple">
@@ -1946,7 +1925,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">142332803.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># create Pre-fire and post-fire SCL masks</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">scl_fires_numpy</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">pre_SCL_Mask</span> <span class="o">=</span> <span class="n">computeSCLMask</span><span class="p">(</span><span class="n">scl_fires_numpy</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
@@ -2005,9 +1984,9 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">40</span>
-<span class="g g-Whitespace">     </span><span class="mi">36</span>     <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">37</span>     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">4199093564.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span> 
+<span class="g g-Whitespace">     </span><span class="mi">39</span> 
 <span class="ne">---&gt; </span><span class="mi">40</span> <span class="n">showSCL</span><span class="p">(</span><span class="n">scl_fires_numpy</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
 
 <span class="ne">NameError</span>: name &#39;scl_fires_numpy&#39; is not defined
@@ -2017,7 +1996,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 <div class="section" id="dataset-specific-functions-ndvi">
-<h3>Dataset-specific Functions: NDVI<a class="headerlink" href="#dataset-specific-functions-ndvi" title="Permalink to this headline">#</a></h3>
+<h3>Dataset-specific Functions: NDVI<a class="headerlink" href="#dataset-specific-functions-ndvi" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this code computes the NDVI for an image</span>
@@ -2052,7 +2031,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">22328893.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># TA Code</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">computeNDVI_value</span> <span class="o">=</span> <span class="n">computeNDVI</span><span class="p">(</span><span class="n">pre_fires_numpy</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">pre_SCL_Mask</span><span class="p">)</span>
 
@@ -2071,7 +2050,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">20</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">2708897336.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># plot NDVI without remap</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">showImage</span><span class="p">(</span><span class="n">computeNDVI_value</span><span class="p">)</span>
 
@@ -2130,7 +2109,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">486258407.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># TA Code</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">NDVI_remap</span> <span class="o">=</span> <span class="n">remapNDVI</span><span class="p">(</span><span class="n">computeNDVI_value</span><span class="p">)</span>
 
@@ -2170,9 +2149,9 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">23</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">1730373852.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> 
+<span class="g g-Whitespace">     </span><span class="mi">22</span> 
 <span class="ne">---&gt; </span><span class="mi">23</span> <span class="n">showNDVI</span><span class="p">(</span><span class="n">NDVI_remap</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;NDVI_remap&#39; is not defined
@@ -2182,7 +2161,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 <div class="section" id="dataset-specific-functions-vci">
-<h3>Dataset-specific Functions: VCI<a class="headerlink" href="#dataset-specific-functions-vci" title="Permalink to this headline">#</a></h3>
+<h3>Dataset-specific Functions: VCI<a class="headerlink" href="#dataset-specific-functions-vci" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># compute the SCL mask for all the SCLs and apply it to the pre_fire_NDVIs</span>
@@ -2194,7 +2173,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">24</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">4233437105.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># compute the SCL mask for all the SCLs and apply it to the pre_fire_NDVIs</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">pre_fires_scl</span> <span class="o">=</span> <span class="p">[</span><span class="n">computeSCLMask</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">scl_fires_numpy</span><span class="p">]</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">pre_fires_NDVI</span> <span class="o">=</span> <span class="p">[</span><span class="n">computeNDVI</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">pre_fires_numpy</span><span class="p">,</span> <span class="n">pre_fires_scl</span><span class="p">)]</span>
@@ -2236,7 +2215,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 <div class="section" id="vci-drought-threshold">
-<h3>VCI Drought Threshold<a class="headerlink" href="#vci-drought-threshold" title="Permalink to this headline">#</a></h3>
+<h3>VCI Drought Threshold<a class="headerlink" href="#vci-drought-threshold" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>image and more information: <a class="reference external" href="https://www.researchgate.net/publication/330521783_Spatial_and_Temporal_Variation_of_Drought_Based_on_Satellite_Derived_Vegetation_Condition_Index_in_Nepal_from_1982-2015">Spatial and Temporal Variation of Drought Based onSatellite Derived Vegetation Condition Index in Nepal from 1982–2015</a></p></li>
 </ul>
@@ -2252,7 +2231,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">26</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">3305149335.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># compute the VCI for the last pre-fire to view the drought over the time period</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">last_pre_fire_NDVI</span> <span class="o">=</span> <span class="n">pre_fires_NDVI</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">last_pre_fire_vci</span> <span class="o">=</span> <span class="n">computeVCI</span><span class="p">(</span><span class="n">last_pre_fire_NDVI</span><span class="p">,</span> <span class="n">pre_fires_NDVI</span><span class="p">)</span>
@@ -2272,7 +2251,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">27</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">150688225.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># view the non-thresholded VCI</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">showImage</span><span class="p">(</span><span class="n">last_pre_fire_vci</span><span class="p">)</span>
 
@@ -2320,7 +2299,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">30</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">1089924956.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># view the mapped VCI values</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">showVCI</span><span class="p">(</span><span class="n">last_pre_fire_vci</span><span class="p">)</span>
 
@@ -2331,7 +2310,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 <div class="section" id="dataset-specific-functions-nbr-and-dnbr-code">
-<h3>Dataset-specific Functions: NBR and dNBR Code<a class="headerlink" href="#dataset-specific-functions-nbr-and-dnbr-code" title="Permalink to this headline">#</a></h3>
+<h3>Dataset-specific Functions: NBR and dNBR Code<a class="headerlink" href="#dataset-specific-functions-nbr-and-dnbr-code" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this code creates the NBR for each image then uses the NBR to create the dNBR. It can easily be updated for other burnt area indices</span>
@@ -2370,7 +2349,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">32</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">2508327511.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># TA Code</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># run computeFireMasks</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">dnbr</span> <span class="o">=</span> <span class="n">computeFireMasks</span><span class="p">(</span><span class="n">pre_fires_numpy</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">post_fires_numpy</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -2422,7 +2401,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">34</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">746002433.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># TA Code</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">dnbr_remapped</span> <span class="o">=</span> <span class="n">remapDNBR</span><span class="p">(</span><span class="n">dnbr</span><span class="p">)</span>
 
@@ -2433,7 +2412,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 <div class="section" id="dnbr-threshold">
-<h3>dNBR Threshold<a class="headerlink" href="#dnbr-threshold" title="Permalink to this headline">#</a></h3>
+<h3>dNBR Threshold<a class="headerlink" href="#dnbr-threshold" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>image and more information: <a class="reference external" href="https://un-spider.org/advisory-support/recommended-practices/recommended-practice-burn-severity/in-detail/normalized-burn-ratio">Normalized Burn Ratio (NBR) UN-SPIDER Knowledge Portal</a></p></li>
 </ul>
@@ -2466,14 +2445,9 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">35</span><span class="p">],</span> <span class="n">line</span> <span class="mi">20</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">cmap</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>         <span class="p">[</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>             <span class="s2">&quot;blue&quot;</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">remapDNBR</span><span class="p">(</span><span class="n">dnbr</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2451</span><span class="o">/</span><span class="mf">1586171847.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> 
+<span class="g g-Whitespace">     </span><span class="mi">19</span> 
 <span class="ne">---&gt; </span><span class="mi">20</span> <span class="n">showDNBR</span><span class="p">(</span><span class="n">dnbr_remapped</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;dnbr_remapped&#39; is not defined
@@ -2485,7 +2459,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 <div class="section" id="further-reading">
-<h1>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h1>
+<h1>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.fs.usda.gov/research/treesearch/38936">Forest ecosystems, disturbance, and climate change in Washington State, USA | US Forest Service Research and Development Fire Ecology and Monitoring at Yosemite</a></p></li>
 <li><p><a class="reference external" href="https://www.nps.gov/yose/learn/nature/fireecology.htm">Fire Ecology and Monitoring at Yosemite</a></p></li>
@@ -2514,7 +2488,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 
 
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"a5879ccbad2e4d2fbefd394b46c1e4fb": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d348bc9de6a74d17952d08f9dc97b9fa": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_a5879ccbad2e4d2fbefd394b46c1e4fb", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=2CDVn6O_q34\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7f22117346d0>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/2CDVn6O_q34?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "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APl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wOPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/9k="}}], "tabbable": null, "tooltip": null}}, "a01096f3dd7f47239d494a9eba650701": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9751601a80214200b3e1a34b6e98a22c": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_a01096f3dd7f47239d494a9eba650701", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV1GP411k7XA\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7f2210df7fa0>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV1GP411k7XA&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}], "tabbable": null, "tooltip": null}}, "cb02fcb12ae04f709e95bd2754e6c090": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "60ee08806c434428a094ff9d0ab57626": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TabModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_d348bc9de6a74d17952d08f9dc97b9fa", "IPY_MODEL_9751601a80214200b3e1a34b6e98a22c"], "layout": "IPY_MODEL_cb02fcb12ae04f709e95bd2754e6c090", "selected_index": 0, "tabbable": null, "titles": ["Youtube", "Bilibili"], "tooltip": null}}}, "version_major": 2, "version_minor": 0}
+{"state": {"1a2762bcfaa649fca6ddec812a99e358": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "505e082756eb4b29bbed8a80d36669e1": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_1a2762bcfaa649fca6ddec812a99e358", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=2CDVn6O_q34\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7f1a143e5390>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/2CDVn6O_q34?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "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APl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wOPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/9k=\n"}}]}}, "cc912b73d3874e33a2ee92ac09aa5cb9": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "ab2171ecc6a24d848c64ed63672ecb36": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_cc912b73d3874e33a2ee92ac09aa5cb9", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV1GP411k7XA\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7f1a1b1126d0>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV1GP411k7XA&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}, "0f563c87a6e341fa97ffb3324f89b703": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "481888f64f734cd1b96557442cbcf6c5": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TabModel", "_titles": {"0": "Youtube", "1": "Bilibili"}, "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_505e082756eb4b29bbed8a80d36669e1", "IPY_MODEL_ab2171ecc6a24d848c64ed63672ecb36"], "layout": "IPY_MODEL_0f563c87a6e341fa97ffb3324f89b703", "selected_index": 0}}}, "version_major": 2, "version_minor": 0}
 </script>
 
 
