@@ -160,6 +160,10 @@ jobs:
           sudo apt install libgeos++-dev libgeos3.10.2 libgeos-c1v5 libgeos-dev libgeos-doc
           sudo apt-get install proj-bin libproj-dev proj-data
 
+      - name: Install HDF5(dep for netCDF)
+        run: |
+          sudo apt-get install libhdf5-serial-dev netcdf-bin libnetcdf-dev
+
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
