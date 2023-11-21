@@ -164,6 +164,7 @@ jobs:
         run: |
           sudo apt-get install libhdf5-serial-dev netcdf-bin libnetcdf-dev
 
+      # NOTE: installed pyleoclim after reqs because it could not find numpy when building
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
