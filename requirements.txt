@@ -7,14 +7,14 @@ torch
 ipywidgets
 decorator==5.0.9
 xarray
+shapely==1.8.5
 cartopy
 # pythia_datasets
-# cartopy
 # pooch
 # pyleoclim
 # climlab
-# intake
-# seaborn
+intake
+seaborn
 # netCDF4
 # h5netcdf
 # nc-time-axis
