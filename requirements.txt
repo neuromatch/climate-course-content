@@ -11,7 +11,7 @@ shapely==1.8.5
 cartopy
 pythia_datasets
 pooch
-pyleoclim
+# pyleoclim
 climlab
 intake
 seaborn
