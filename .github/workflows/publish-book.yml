@@ -107,7 +107,7 @@ jobs:
   #     #     ln -s ../prereqs book/prereqs
   #     #     jupyter-book build book
   #     #     python ci/parse_html_for_errors.py student
-  build-books:
+  build-books-and-deploy:
     runs-on: ubuntu-latest
     steps:
 
@@ -197,11 +197,11 @@ jobs:
       #     ln -s ../prereqs book/prereqs
       #     jupyter-book build book
       #     python ci/parse_html_for_errors.py student
-      - name: Store Build
-        uses: actions/upload-artifact@master
-        with:
-          name: books
-          path: book
+      # - name: Store Build
+      #   uses: actions/upload-artifact@master
+      #   with:
+      #     name: books
+      #     path: book
 
 
   # build-projects:
@@ -301,10 +301,10 @@ jobs:
   #         name: projects
   #         path: book
 
-  deploy-book:
-    runs-on: ubuntu-latest
-    needs: [build-books]
-    steps:
+  # deploy-book:
+    # runs-on: ubuntu-latest
+    # needs: [build-books]
+    # steps:
       # - name: Retrieve Prereqs
       #   uses: actions/download-artifact@master
       #   with:
@@ -321,13 +321,13 @@ jobs:
       # - name: copy build
       #   run: rsync --remove-source-files _tutorials/ book/
 
-      - name: Retrieve Projects
-        uses: actions/download-artifact@master
-        with:
-          name: books
-          path: _books
-      - name: copy build
-        run: rsync --remove-source-files _books/ book/
+      # - name: Retrieve Books
+      #   uses: actions/download-artifact@master
+      #   with:
+      #     name: books
+      #     path: _books
+      # - name: sync build
+      #   run: rsync --remove-source-files _books/ book/
 
       # NOTE: we may be able to push striaght from here. ie skip the last flow
       - name: Commit book
