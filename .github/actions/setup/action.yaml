@@ -35,7 +35,7 @@ runs:
     - name: Download NMACI
       run: |
         BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
-        wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
+        wget https://github.com/neuromatch/nmaci/archive/refs/heads/$BRANCH.tar.gz
         tar -xzf $BRANCH.tar.gz
         mv nmaci-$BRANCH/scripts/ ci/
         mv nmaci-$BRANCH/requirements.txt ci/requirements.txt
