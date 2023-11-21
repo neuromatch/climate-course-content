@@ -1464,13 +1464,13 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "d14edc491fc74ca8896edf0c543e688e"}
+{"version_major": 2, "version_minor": 0, "model_id": "03ef6649e25e4bac9dc5960051505b81"}
 </script></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "033d0ac740124ebdbf7a35e104116610"}
+{"version_major": 2, "version_minor": 0, "model_id": "16cfa17620ab4bebba92ef6779733de4"}
 </script></div>
 </div>
 </div>
@@ -1528,13 +1528,13 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6047</span><span class="o">/</span><span class="mf">2472927823.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_6144</span><span class="o">/</span><span class="mf">2472927823.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">with</span> <span class="n">SupressOutputs</span><span class="p">():</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">pages2k_data</span> <span class="o">=</span> <span class="n">lipd2df</span><span class="p">(</span>
 <span class="ne">----&gt; </span><span class="mi">6</span>         <span class="n">lipd_dirpath</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">"."</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">fname</span><span class="si">}</span><span class="s2">.unzip"</span><span class="p">,</span> <span class="s2">"LiPD_Files"</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="p">)</span>
 
-<span class="nn">/tmp/ipykernel_6047/1405487243.py</span> in <span class="ni">lipd2df</span><span class="nt">(lipd_dirpath, pkl_filepath, col_str)</span>
+<span class="nn">/tmp/ipykernel_6144/1405487243.py</span> in <span class="ni">lipd2df</span><span class="nt">(lipd_dirpath, pkl_filepath, col_str)</span>
 <span class="g g-Whitespace">     </span><span class="mi">66</span>     <span class="n">lipd_dirpath</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">lipd_dirpath</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">67</span>     <span class="c1"># Load LiPD files</span>
 <span class="ne">---&gt; </span><span class="mi">68</span>     <span class="n">lipds</span> <span class="o">=</span> <span class="n">lipd</span><span class="o">.</span><span class="n">readLipd</span><span class="p">(</span><span class="n">lipd_dirpath</span><span class="p">)</span>
@@ -1556,32 +1556,172 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="g g-Whitespace">   </span><span class="mi">1016</span>             <span class="k">if</span> <span class="n">settings</span><span class="p">[</span><span class="s2">"verbose"</span><span class="p">]:</span>
 
 <span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/lipd/lipd_io.py</span> in <span class="ni">lipd_read</span><span class="nt">(path)</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>         <span class="n">D</span> <span class="o">=</span> <span class="n">rm_empty_fields</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span>         <span class="n">D</span> <span class="o">=</span> <span class="n">put_tsids</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">52</span>         <span class="n">_csvs</span> <span class="o">=</span> <span class="n">read_csvs</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span>         <span class="n">D</span> <span class="o">=</span> <span class="n">merge_csv_metadata</span><span class="p">(</span><span class="n">D</span><span class="p">,</span> <span class="n">_csvs</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span>         <span class="c1"># Why ? Because we need to align the csv filenames with the table filenames. We don't need the csv output here.</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span>         <span class="n">_dir_data</span> <span class="o">=</span> <span class="n">find_files</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span>         <span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="n">_dir_data</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">44</span>         <span class="n">D</span> <span class="o">=</span> <span class="n">read_jsonld</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span>         <span class="n">D</span> <span class="o">=</span> <span class="n">rm_empty_fields</span><span class="p">(</span><span class="n">D</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span>         <span class="n">D</span> <span class="o">=</span> <span class="n">check_dsn</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">D</span><span class="p">)</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/lipd/csvs.py</span> in <span class="ni">read_csvs</span><span class="nt">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">201</span>     <span class="n">_l</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="g g-Whitespace">    </span><span class="mi">202</span>     <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">list_files</span><span class="p">(</span><span class="s2">".csv"</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">203</span>         <span class="n">_l</span><span class="p">[</span><span class="n">filename</span><span class="p">]</span> <span class="o">=</span> <span class="n">read_csv_from_file</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span> 
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="k">return</span> <span class="n">_l</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/lipd/jsons.py</span> in <span class="ni">read_jsonld</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span>                         <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span>                                 <span class="c1"># Load and decode</span>
+<span class="ne">---&gt; </span><span class="mi">32</span>                                 <span class="n">_d</span> <span class="o">=</span> <span class="n">demjson3</span><span class="o">.</span><span class="n">decode_file</span><span class="p">(</span><span class="n">_filename</span><span class="p">,</span> <span class="n">decode_float</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span>                                 <span class="n">logger_jsons</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Read JSONLD successful: </span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">_filename</span><span class="p">))</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span>                         <span class="k">except</span> <span class="ne">FileNotFoundError</span> <span class="k">as</span> <span class="n">fnf</span><span class="p">:</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/lipd/csvs.py</span> in <span class="ni">read_csv_from_file</span><span class="nt">(filename, encoding)</span>
-<span class="g g-Whitespace">    </span><span class="mi">230</span>                 <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">row</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">231</span>                     <span class="c1"># Append the cell to the correct column list</span>
-<span class="ne">--&gt; </span><span class="mi">232</span>                     <span class="n">d</span> <span class="o">=</span> <span class="n">cast_values_csvs</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">233</span> 
-<span class="g g-Whitespace">    </span><span class="mi">234</span>         <span class="c1"># Make a list of lists out of the dictionary instead</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decode_file</span><span class="nt">(filename, encoding, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6152</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">6153</span>         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">"Expected a file name"</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">6154</span>     <span class="k">return</span> <span class="n">decode</span><span class="p">(</span><span class="n">jsondata</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6155</span> 
+<span class="g g-Whitespace">   </span><span class="mi">6156</span> 
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/lipd/misc.py</span> in <span class="ni">cast_values_csvs</span><span class="nt">(d, idx, x)</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> 
-<span class="g g-Whitespace">     </span><span class="mi">21</span> 
-<span class="ne">---&gt; </span><span class="mi">22</span> <span class="k">def</span> <span class="nf">cast_values_csvs</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">idx</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="s2">"""</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span><span class="s2">     Attempt to cast string to float. If error, keep as a string.</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decode</span><span class="nt">(txt, encoding, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6072</span>         <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">6073</span>         <span class="n">return_errors</span><span class="o">=</span><span class="p">(</span><span class="n">return_errors</span> <span class="ow">or</span> <span class="n">write_errors</span><span class="p">),</span>
+<span class="ne">-&gt; </span><span class="mi">6074</span>         <span class="n">return_stats</span><span class="o">=</span><span class="p">(</span><span class="n">return_stats</span> <span class="ow">or</span> <span class="n">write_stats</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">6075</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">6076</span> 
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decode</span><span class="nt">(self, txt, encoding, return_errors, return_stats)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5225</span>         <span class="k">if</span> <span class="ow">not</span> <span class="n">state</span><span class="o">.</span><span class="n">has_errors</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5226</span>             <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">5227</span>                 <span class="bp">self</span><span class="o">.</span><span class="n">_do_decode</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>  <span class="c1"># DECODE!</span>
+<span class="g g-Whitespace">   </span><span class="mi">5228</span>             <span class="k">except</span> <span class="n">JSONException</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5229</span>                 <span class="n">state</span><span class="o">.</span><span class="n">push_exception</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">_do_decode</span><span class="nt">(self, state)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5328</span> 
+<span class="g g-Whitespace">   </span><span class="mi">5329</span>             <span class="k">with</span> <span class="n">dec_ctx</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">5330</span>                 <span class="n">state</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">at_document_start</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5331</span> 
+<span class="g g-Whitespace">   </span><span class="mi">5332</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">state</span><span class="o">.</span><span class="n">should_stop</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decodeobj</span><span class="nt">(self, state, identifier_as_string, at_document_start)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5177</span>             <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5178</span>                 <span class="n">state</span><span class="o">.</span><span class="n">update_depth_stats</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">5179</span>                 <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode_composite</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5180</span>             <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5181</span>                 <span class="n">state</span><span class="o">.</span><span class="n">cur_depth</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decode_composite</span><span class="nt">(self, state)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5068</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">skipws</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5069</span> 
+<span class="ne">-&gt; </span><span class="mi">5070</span>                     <span class="n">rval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5071</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">skipws</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5072</span>                     <span class="k">if</span> <span class="ow">not</span> <span class="n">skip_item</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decodeobj</span><span class="nt">(self, state, identifier_as_string, at_document_start)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5177</span>             <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5178</span>                 <span class="n">state</span><span class="o">.</span><span class="n">update_depth_stats</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">5179</span>                 <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode_composite</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5180</span>             <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5181</span>                 <span class="n">state</span><span class="o">.</span><span class="n">cur_depth</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decode_composite</span><span class="nt">(self, state)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5007</span>                     <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">identifier_as_string</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5008</span>                 <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">5009</span>                     <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">identifier_as_string</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5010</span> 
+<span class="g g-Whitespace">   </span><span class="mi">5011</span>                 <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="n">syntax_error</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decodeobj</span><span class="nt">(self, state, identifier_as_string, at_document_start)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5177</span>             <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5178</span>                 <span class="n">state</span><span class="o">.</span><span class="n">update_depth_stats</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">5179</span>                 <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode_composite</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5180</span>             <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5181</span>                 <span class="n">state</span><span class="o">.</span><span class="n">cur_depth</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decode_composite</span><span class="nt">(self, state)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5068</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">skipws</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5069</span> 
+<span class="ne">-&gt; </span><span class="mi">5070</span>                     <span class="n">rval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5071</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">skipws</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5072</span>                     <span class="k">if</span> <span class="ow">not</span> <span class="n">skip_item</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decodeobj</span><span class="nt">(self, state, identifier_as_string, at_document_start)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5177</span>             <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5178</span>                 <span class="n">state</span><span class="o">.</span><span class="n">update_depth_stats</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">5179</span>                 <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode_composite</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5180</span>             <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5181</span>                 <span class="n">state</span><span class="o">.</span><span class="n">cur_depth</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decode_composite</span><span class="nt">(self, state)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5007</span>                     <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">identifier_as_string</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5008</span>                 <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">5009</span>                     <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">identifier_as_string</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5010</span> 
+<span class="g g-Whitespace">   </span><span class="mi">5011</span>                 <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="n">syntax_error</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decodeobj</span><span class="nt">(self, state, identifier_as_string, at_document_start)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5177</span>             <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5178</span>                 <span class="n">state</span><span class="o">.</span><span class="n">update_depth_stats</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">5179</span>                 <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode_composite</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5180</span>             <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5181</span>                 <span class="n">state</span><span class="o">.</span><span class="n">cur_depth</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decode_composite</span><span class="nt">(self, state)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5068</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">skipws</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5069</span> 
+<span class="ne">-&gt; </span><span class="mi">5070</span>                     <span class="n">rval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5071</span>                     <span class="bp">self</span><span class="o">.</span><span class="n">skipws</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5072</span>                     <span class="k">if</span> <span class="ow">not</span> <span class="n">skip_item</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decodeobj</span><span class="nt">(self, state, identifier_as_string, at_document_start)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5177</span>             <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5178</span>                 <span class="n">state</span><span class="o">.</span><span class="n">update_depth_stats</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">5179</span>                 <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode_composite</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5180</span>             <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5181</span>                 <span class="n">state</span><span class="o">.</span><span class="n">cur_depth</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decode_composite</span><span class="nt">(self, state)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5007</span>                     <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">identifier_as_string</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5008</span>                 <span class="k">else</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">5009</span>                     <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">identifier_as_string</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5010</span> 
+<span class="g g-Whitespace">   </span><span class="mi">5011</span>                 <span class="k">if</span> <span class="n">val</span> <span class="ow">is</span> <span class="n">syntax_error</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decodeobj</span><span class="nt">(self, state, identifier_as_string, at_document_start)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5177</span>             <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5178</span>                 <span class="n">state</span><span class="o">.</span><span class="n">update_depth_stats</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">5179</span>                 <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode_composite</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5180</span>             <span class="k">finally</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5181</span>                 <span class="n">state</span><span class="o">.</span><span class="n">cur_depth</span> <span class="o">-=</span> <span class="mi">1</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decode_composite</span><span class="nt">(self, state)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5005</span> 
+<span class="g g-Whitespace">   </span><span class="mi">5006</span>                 <span class="k">if</span> <span class="n">isdict</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">5007</span>                     <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">identifier_as_string</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5008</span>                 <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5009</span>                     <span class="n">val</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decodeobj</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">identifier_as_string</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decodeobj</span><span class="nt">(self, state, identifier_as_string, at_document_start)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5187</span>                 <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5188</span>             <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_string_quotes</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">5189</span>                 <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode_string</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">5190</span>             <span class="k">elif</span> <span class="n">c</span><span class="o">.</span><span class="n">isdigit</span><span class="p">()</span> <span class="ow">or</span> <span class="n">c</span> <span class="ow">in</span> <span class="s2">".+-"</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">5191</span>                 <span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">decode_number</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">decode_string</span><span class="nt">(self, state)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4557</span>                 <span class="c1"># all at once rather than one a time, for speed.</span>
+<span class="g g-Whitespace">   </span><span class="mi">4558</span>                 <span class="n">chunk</span> <span class="o">=</span> <span class="n">buf</span><span class="o">.</span><span class="n">popwhile</span><span class="p">(</span>
+<span class="ne">-&gt; </span><span class="mi">4559</span>                     <span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">helpers</span><span class="o">.</span><span class="n">unsafe_string_chars</span> <span class="ow">and</span> <span class="n">c</span> <span class="o">!=</span> <span class="n">quote</span>
+<span class="g g-Whitespace">   </span><span class="mi">4560</span>                 <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4561</span>                 <span class="k">if</span> <span class="ow">not</span> <span class="n">chunk</span><span class="p">:</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">popwhile</span><span class="nt">(self, testfn, maxchars)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1908</span>         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="g g-Whitespace">   </span><span class="mi">1909</span>         <span class="k">while</span> <span class="n">maxchars</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">maxchars</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1910</span>             <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">popif</span><span class="p">(</span><span class="n">testfn</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1911</span>             <span class="k">if</span> <span class="ow">not</span> <span class="n">c</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1912</span>                 <span class="k">break</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/demjson3.py</span> in <span class="ni">popif</span><span class="nt">(self, testfn)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1855</span>         <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">peek</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1856</span>         <span class="k">if</span> <span class="n">c</span> <span class="ow">and</span> <span class="n">testfn</span><span class="p">(</span><span class="n">c</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1857</span>             <span class="bp">self</span><span class="o">.</span><span class="n">__pos</span><span class="o">.</span><span class="n">advance</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1858</span>             <span class="k">return</span> <span class="n">c</span>
+<span class="g g-Whitespace">   </span><span class="mi">1859</span>         <span class="k">return</span> <span class="s2">""</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>

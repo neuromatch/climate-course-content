@@ -1510,7 +1510,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "15b806dda03041f19392aae8595283c9"}
+{"version_major": 2, "version_minor": 0, "model_id": "fd66149b15094313b74dcd42a1e62499"}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -1626,39 +1626,446 @@ Jiang, L.-Q., Dunne, J., Carter, B. R., Tjiputra, J. F., Terhaar, J., Sharp, J. 
 Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_4876</span><span class="o">/</span><span class="mf">1381282286.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">filename_SurfacepH</span><span class="o">=</span><span class="s1">&#39;pHT_median_historical.nc&#39;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">url_SurfacepH</span><span class="o">=</span><span class="s1">&#39;https://www.ncei.noaa.gov/data/oceans/ncei/ocads/data/0259391/nc/median/pHT_median_historical.nc&#39;</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">ds_pH</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_SurfacepH</span><span class="p">,</span><span class="n">filename_SurfacepH</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">ds_pH</span>
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/api.py</span> in <span class="ni">open_dataset</span><span class="nt">(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, backend_kwargs, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">477</span> 
-<span class="g g-Whitespace">    </span><span class="mi">478</span>     <span class="k">if</span> <span class="n">engine</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">479</span>         <span class="n">engine</span> <span class="o">=</span> <span class="n">plugins</span><span class="o">.</span><span class="n">guess_engine</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> 
-<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="n">backend</span> <span class="o">=</span> <span class="n">plugins</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/plugins.py</span> in <span class="ni">guess_engine</span><span class="nt">(store_spec)</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span> 
-<span class="g g-Whitespace">    </span><span class="mi">109</span> <span class="k">def</span> <span class="nf">guess_engine</span><span class="p">(</span><span class="n">store_spec</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">110</span>     <span class="n">engines</span> <span class="o">=</span> <span class="n">list_engines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span> 
-<span class="g g-Whitespace">    </span><span class="mi">112</span>     <span class="k">for</span> <span class="n">engine</span><span class="p">,</span> <span class="n">backend</span> <span class="ow">in</span> <span class="n">engines</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/plugins.py</span> in <span class="ni">list_engines</span><span class="nt">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">103</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span> <span class="k">def</span> <span class="nf">list_engines</span><span class="p">():</span>
-<span class="ne">--&gt; </span><span class="mi">105</span>     <span class="n">entrypoints</span> <span class="o">=</span> <span class="n">entry_points</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;xarray.backends&quot;</span><span class="p">,</span> <span class="p">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">106</span>     <span class="k">return</span> <span class="n">build_engines</span><span class="p">(</span><span class="n">entrypoints</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">107</span> 
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
 
-<span class="ne">AttributeError</span>: &#39;EntryPoints&#39; object has no attribute &#39;get&#39;
-</pre></div>
-</div>
-</div>
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:    (time: 18, lat: 180, lon: 360)
+Coordinates:
+  * time       (time) float64 1.75e+03 1.85e+03 1.86e+03 ... 2e+03 2.01e+03
+Dimensions without coordinates: lat, lon
+Data variables:
+    pHT        (time, lat, lon) float64 ...
+    longitude  (lat, lon) float64 20.5 21.5 22.5 23.5 ... 377.5 378.5 379.5
+    latitude   (lat, lon) float64 -89.5 -89.5 -89.5 -89.5 ... 89.5 89.5 89.5
+Attributes:
+    title:               Global surface ocean pH on total hydrogen ion scale ...
+    comment:             This gridded data product contains pH on total hydro...
+    reference:           Jiang, L-Q., J. Dunne, B. R. Carter, J. Tjiputra,\n ...
+    Fair_use_statement:  This data product is made freely available\n   to th...
+    created_by:          Li-Qing Jiang
+    institution:         (a) Cooperative Institute for Satellite Earth System...
+    contact:             &lt;Liqing.Jiang@noaa.gov&gt;
+    creation_date:       August 14, 2022</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-0e5a63b2-ccf5-4353-bed5-1c2cdf2dfb3a' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-0e5a63b2-ccf5-4353-bed5-1c2cdf2dfb3a' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 18</li><li><span>lat</span>: 180</li><li><span>lon</span>: 360</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-4a3cf8fe-2a48-4cfd-b942-ccd448c07697' class='xr-section-summary-in' type='checkbox'  checked><label for='section-4a3cf8fe-2a48-4cfd-b942-ccd448c07697' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>1.75e+03 1.85e+03 ... 2.01e+03</div><input id='attrs-b336bb44-d7f1-43b9-a686-8f7a2d26e6c2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b336bb44-d7f1-43b9-a686-8f7a2d26e6c2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-946b92bb-cabf-4780-a57d-2251bedb6f29' class='xr-var-data-in' type='checkbox'><label for='data-946b92bb-cabf-4780-a57d-2251bedb6f29' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long name :</span></dt><dd>The decade of 1750, and all decades from 1850 to 2010, i.e., 1750, 1850, 1860, 1870, 1880, 1890, 1900, 1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010</dd><dt><span>CF_name :</span></dt><dd>time</dd><dt><span>unit :</span></dt><dd>year</dd></dl></div><div class='xr-var-data'><pre>array([1750., 1850., 1860., 1870., 1880., 1890., 1900., 1910., 1920., 1930.,
+       1940., 1950., 1960., 1970., 1980., 1990., 2000., 2010.])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-ff916cc7-8bd1-4b3d-a2ac-3663f851040d' class='xr-section-summary-in' type='checkbox'  checked><label for='section-ff916cc7-8bd1-4b3d-a2ac-3663f851040d' class='xr-section-summary' >Data variables: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>pHT</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6b782bfe-ad6e-4407-ae76-788cace83bc5' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6b782bfe-ad6e-4407-ae76-788cace83bc5' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-c471261a-750c-44b0-9035-e0b371f296d0' class='xr-var-data-in' type='checkbox'><label for='data-c471261a-750c-44b0-9035-e0b371f296d0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long name :</span></dt><dd>pH on total hydrogen ion scale</dd><dt><span>CF_name :</span></dt><dd>sea_water_ph_reported_on_total_scale</dd><dt><span>units :</span></dt><dd>N/A</dd></dl></div><div class='xr-var-data'><pre>[1166400 values with dtype=float64]</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>longitude</span></div><div class='xr-var-dims'>(lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-45f573c1-0372-4a2d-a84e-616595a2af69' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-45f573c1-0372-4a2d-a84e-616595a2af69' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e457e284-ba72-4d88-bfab-45612d1d7457' class='xr-var-data-in' type='checkbox'><label for='data-e457e284-ba72-4d88-bfab-45612d1d7457' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long name :</span></dt><dd>Longitude on the 1 x 1 degree global grid (20.5 to 379.5 degrees).</dd><dt><span>CF_name :</span></dt><dd>grid_longitude</dd><dt><span>units :</span></dt><dd>decimal degrees</dd></dl></div><div class='xr-var-data'><pre>array([[ 20.5,  21.5,  22.5, ..., 377.5, 378.5, 379.5],
+       [ 20.5,  21.5,  22.5, ..., 377.5, 378.5, 379.5],
+       [ 20.5,  21.5,  22.5, ..., 377.5, 378.5, 379.5],
+       ...,
+       [ 20.5,  21.5,  22.5, ..., 377.5, 378.5, 379.5],
+       [ 20.5,  21.5,  22.5, ..., 377.5, 378.5, 379.5],
+       [ 20.5,  21.5,  22.5, ..., 377.5, 378.5, 379.5]])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span>latitude</span></div><div class='xr-var-dims'>(lat, lon)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-f18863f8-f146-4d68-bedb-4e4ee6fb858e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f18863f8-f146-4d68-bedb-4e4ee6fb858e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-d566eb30-8262-4007-8c8f-3cd91c580279' class='xr-var-data-in' type='checkbox'><label for='data-d566eb30-8262-4007-8c8f-3cd91c580279' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long name :</span></dt><dd>Latitude on the 1 x 1 degree grid (-89.5 to 89.5 degrees) at this depth level.</dd><dt><span>CF_name :</span></dt><dd>grid_latitude</dd><dt><span>units :</span></dt><dd>decimal degrees</dd></dl></div><div class='xr-var-data'><pre>array([[-89.5, -89.5, -89.5, ..., -89.5, -89.5, -89.5],
+       [-88.5, -88.5, -88.5, ..., -88.5, -88.5, -88.5],
+       [-87.5, -87.5, -87.5, ..., -87.5, -87.5, -87.5],
+       ...,
+       [ 87.5,  87.5,  87.5, ...,  87.5,  87.5,  87.5],
+       [ 88.5,  88.5,  88.5, ...,  88.5,  88.5,  88.5],
+       [ 89.5,  89.5,  89.5, ...,  89.5,  89.5,  89.5]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-6332e256-0a1e-49e2-9c65-8d76b6504630' class='xr-section-summary-in' type='checkbox'  checked><label for='section-6332e256-0a1e-49e2-9c65-8d76b6504630' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>title :</span></dt><dd>Global surface ocean pH on total hydrogen ion scale (unit: N/A) on a 1 x 1 grid
+   in 1750, and all decades from 1850 to 2010.</dd><dt><span>comment :</span></dt><dd>This gridded data product contains pH on total hydrogen ion scale
+   [median of 14 Earth System Models from the sixth phase of the Coupled Model
+   Intercomparison Project (CMIP6)] on a global [20.5:1:379.5] degree longitude
+   x [-89.5:1:89.75] degree latitude grid in the global surface ocean in 1750 and
+   all decades from 1850 to 2010, i.e., 1750, 1850, 1860, 1870, 1880, 1890, 1900,
+   1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010.
+
+   At each grid point, temperature, salinity, DIC, and TA were estimated based on
+   their temporal changes out of fourteen Earth System Models of the
+   sixth phase of the Coupled Model Intercomparison Project (CMIP6):
+   (1) ACCESS-ESM1-5, Ziehn et al., 2020, https://doi.org/10.1071/es19035,
+   (2) CanESM5, Swart et al., 2019, https://doi.org/10.5194/gmd-12-4823-2019,
+   (3) CESM2, Danabasoglu et al., 2020, https://doi.org/10.1029/2019ms001916,
+   (4) CMCC-ESM2, Lovato et al., 2022, https://doi.org/10.1029/2021ms002814,
+   (5) CNRM-ESM-2, Séférian et al., 2019, https://doi.org/10.1029/2019ms001791,
+   (6) EC-Earth3-CC, Döscher et al., 2021, https://doi.org/10.5194/gmd-2020-446,
+   (7) GFDL-CM4, Held et al., 2019, https://doi.org/10.1029/2019MS001829,
+   (8) GFDL-ESM4, Dunne et al., 2020, https://doi.org/10.1029/2019MS002015,
+   (9) IPSL-CM6A-LR, Boucher et al., 2020, https://doi.org/10.1029/2019ms002010,
+   (10) MIROC-ES2L, Hajima et al., 2020, https://doi.org/10.5194/gmd-13-2197-2020,
+   (11) MPI-ESM1-2-LR, Mauritsen et al., 2019, https://doi.org/10.1029/2018ms001400,
+   (12) MRI-ESM2-0, Yukimoto et al., 2019, https://doi.org/10.2151/jmsj.2019-051,
+   (13) NorESM2-LM, Seland et al., 2020, https://doi.org/10.5194/gmd-13-6165-2020,
+   (14) UKESM1-0-LL), Sellar et al., 2019, https://doi.org/10.1029/2019ms001739,
+
+   with bias corrections based on three latest observational data products:
+   (1) the Surface Ocean CO2 Atlas (SOCAT, version 2021, Bakker et al., 2016,
+   https://doi.org/10.5194/essd-8-383-2016),
+   (2) the Global Ocean Data Analysis Product Version 2 (GLODAPv2, version 2021, Lauvset et al., 2021,
+   https://doi.org/10.5194/essd-13-5565-2021), and
+   (3) the Coastal Ocean Data Analysis Product in North America (CODAP-NA, version 2021, Jiang et al., 2021,
+   https://doi.org/10.5194/essd-13-2777-2021).
+
+   Once temperature, salinity, DIC, and TA at that decade were calculated,
+   they were then used to calculate the rest of the OA indicators. The CO2 system
+   calculation was conducted using CO2System.jl (Humphreys et al., 2022) with the
+   dissociation constants and parameter as recommended by Jiang et al. (2022),
+   i.e., dissociation constants for carbonic acid of Lueker et al. (2000),
+   potassium bisulfate (KHSO4–) of Dickson (1990), hydrofluoric acid (HF) of
+   Perez and Fraga (1987), and the total borate concentration equations of
+   Lee et al. (2010). The values reported in this NetCDF are the median values
+   among all 14 ESMs at each of the grid point</dd><dt><span>reference :</span></dt><dd>Jiang, L-Q., J. Dunne, B. R. Carter, J. Tjiputra,
+   J. Terhaar, J. D. Sharp, A. Olsen, R. A. Feely, R. Wanninkhof, P. Hogan,
+   S. Alin, T. Ilyina, N. Lange, S. K. Lauvset, T. Lovato, Julien Palmieri,
+   Y. Santana-Falcón, J. Schwinger, R. Séférian, G Strand, N. Swart, T. Tanhua,
+   H. Tsujino, M. Watanabe, A. Yamamoto, T. Ziehn. (2022). Global surface ocean
+   acidification indicators: past, present, and future. Global Biogeochemical
+   Cycles, under review.</dd><dt><span>Fair_use_statement :</span></dt><dd>This data product is made freely available
+   to the public and the scientific community. If it is used in scientific
+   publications, please cite the paper on GBC, so that readers can access all of the
+   detailed information about this data product. If these data are essential to
+   the work, or if an important result or conclusion depends on these data,
+   co-authorship may be appropriate. This should be discussed at an early stage
+   in the work.</dd><dt><span>created_by :</span></dt><dd>Li-Qing Jiang</dd><dt><span>institution :</span></dt><dd>(a) Cooperative Institute for Satellite Earth System Studies, Earth System
+   Science Interdisciplinary Center, University of Maryland, College Park, Maryland
+   20740, United States, and
+   (b) National Centers for Environmental Information, National Oceanic and
+   Atmospheric Administration, Silver Spring, Maryland 20910, United States</dd><dt><span>contact :</span></dt><dd>&lt;Liqing.Jiang@noaa.gov&gt;</dd><dt><span>creation_date :</span></dt><dd>August 14, 2022</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>For those feeling adventurouts, there are also files of future projected changes under various scenarios (SSP1-1.9, SSP1-2.6, SSP2-4.5, SSP3-7.0, and SSP5-8.5, recall W2D1 tutorials):</p>
 <ul class="simple">
@@ -1869,39 +2276,379 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_4876</span><span class="o">/</span><span class="mf">980338003.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">url_sst</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/6pgc2/download/&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="n">ds_SST</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_sst</span><span class="p">,</span><span class="n">filename_sst</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">ds_SST</span>
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/api.py</span> in <span class="ni">open_dataset</span><span class="nt">(filename_or_obj, engine, chunks, cache, decode_cf, mask_and_scale, decode_times, decode_timedelta, use_cftime, concat_characters, decode_coords, drop_variables, backend_kwargs, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">477</span> 
-<span class="g g-Whitespace">    </span><span class="mi">478</span>     <span class="k">if</span> <span class="n">engine</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">479</span>         <span class="n">engine</span> <span class="o">=</span> <span class="n">plugins</span><span class="o">.</span><span class="n">guess_engine</span><span class="p">(</span><span class="n">filename_or_obj</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">480</span> 
-<span class="g g-Whitespace">    </span><span class="mi">481</span>     <span class="n">backend</span> <span class="o">=</span> <span class="n">plugins</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/plugins.py</span> in <span class="ni">guess_engine</span><span class="nt">(store_spec)</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span> 
-<span class="g g-Whitespace">    </span><span class="mi">109</span> <span class="k">def</span> <span class="nf">guess_engine</span><span class="p">(</span><span class="n">store_spec</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">110</span>     <span class="n">engines</span> <span class="o">=</span> <span class="n">list_engines</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span> 
-<span class="g g-Whitespace">    </span><span class="mi">112</span>     <span class="k">for</span> <span class="n">engine</span><span class="p">,</span> <span class="n">backend</span> <span class="ow">in</span> <span class="n">engines</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/backends/plugins.py</span> in <span class="ni">list_engines</span><span class="nt">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">103</span> <span class="nd">@functools</span><span class="o">.</span><span class="n">lru_cache</span><span class="p">(</span><span class="n">maxsize</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">104</span> <span class="k">def</span> <span class="nf">list_engines</span><span class="p">():</span>
-<span class="ne">--&gt; </span><span class="mi">105</span>     <span class="n">entrypoints</span> <span class="o">=</span> <span class="n">entry_points</span><span class="p">()</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;xarray.backends&quot;</span><span class="p">,</span> <span class="p">())</span>
-<span class="g g-Whitespace">    </span><span class="mi">106</span>     <span class="k">return</span> <span class="n">build_engines</span><span class="p">(</span><span class="n">entrypoints</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">107</span> 
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
 
-<span class="ne">AttributeError</span>: &#39;EntryPoints&#39; object has no attribute &#39;get&#39;
-</pre></div>
-</div>
-</div>
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:  (time: 499, lat: 720, lon: 1440)
+Coordinates:
+  * time     (time) datetime64[ns] 1981-09-01 1981-10-01 ... 2023-03-01
+  * lat      (lat) float32 -89.88 -89.62 -89.38 -89.12 ... 89.38 89.62 89.88
+  * lon      (lon) float32 0.125 0.375 0.625 0.875 ... 359.1 359.4 359.6 359.9
+Data variables:
+    sst      (time, lat, lon) float32 ...
+Attributes:
+    Conventions:    CF-1.5
+    title:          NOAA/NCEI 1/4 Degree Daily Optimum Interpolation Sea Surf...
+    institution:    NOAA/National Centers for Environmental Information
+    source:         NOAA/NCEI https://www.ncei.noaa.gov/data/sea-surface-temp...
+    References:     https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2....
+    dataset_title:  NOAA Daily Optimum Interpolation Sea Surface Temperature
+    version:        Version 2.1
+    comment:        Reynolds, et al.(2007) Daily High-Resolution-Blended Anal...</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-3e08daa7-3b46-40f7-834c-6ecf5273e053' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-3e08daa7-3b46-40f7-834c-6ecf5273e053' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>time</span>: 499</li><li><span class='xr-has-index'>lat</span>: 720</li><li><span class='xr-has-index'>lon</span>: 1440</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-c154423f-dad6-492b-9049-5a031b09d34b' class='xr-section-summary-in' type='checkbox'  checked><label for='section-c154423f-dad6-492b-9049-5a031b09d34b' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1981-09-01 ... 2023-03-01</div><input id='attrs-619fc99c-51b8-4303-9779-e4ae792ae805' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-619fc99c-51b8-4303-9779-e4ae792ae805' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-706b0240-5f79-477f-b836-2c2ead0dbbbc' class='xr-var-data-in' type='checkbox'><label for='data-706b0240-5f79-477f-b836-2c2ead0dbbbc' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Time</dd><dt><span>delta_t :</span></dt><dd>0000-01-00 00:00:00</dd><dt><span>avg_period :</span></dt><dd>0000-01-00 00:00:00</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>actual_range :</span></dt><dd>[66352. 81508.]</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1981-09-01T00:00:00.000000000&#x27;, &#x27;1981-10-01T00:00:00.000000000&#x27;,
+       &#x27;1981-11-01T00:00:00.000000000&#x27;, ..., &#x27;2023-01-01T00:00:00.000000000&#x27;,
+       &#x27;2023-02-01T00:00:00.000000000&#x27;, &#x27;2023-03-01T00:00:00.000000000&#x27;],
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lat</span></div><div class='xr-var-dims'>(lat)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-89.88 -89.62 ... 89.62 89.88</div><input id='attrs-059749d0-139e-42be-84d0-5aa5e8ed3ff2' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-059749d0-139e-42be-84d0-5aa5e8ed3ff2' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-25eb7ddb-6163-4e4a-9b8f-f16a46a1d5b9' class='xr-var-data-in' type='checkbox'><label for='data-25eb7ddb-6163-4e4a-9b8f-f16a46a1d5b9' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>actual_range :</span></dt><dd>[-89.875  89.875]</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-89.875, -89.625, -89.375, ...,  89.375,  89.625,  89.875],
+      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>lon</span></div><div class='xr-var-dims'>(lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>0.125 0.375 0.625 ... 359.6 359.9</div><input id='attrs-ac652834-0775-4a49-ac75-e5b9eb88db59' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ac652834-0775-4a49-ac75-e5b9eb88db59' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-da132086-d4b8-48f4-927b-e99260a8ac86' class='xr-var-data-in' type='checkbox'><label for='data-da132086-d4b8-48f4-927b-e99260a8ac86' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>actual_range :</span></dt><dd>[1.25000e-01 3.59875e+02]</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([1.25000e-01, 3.75000e-01, 6.25000e-01, ..., 3.59375e+02, 3.59625e+02,
+       3.59875e+02], dtype=float32)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-eeca42fe-29ba-45c7-a632-982aab44747c' class='xr-section-summary-in' type='checkbox'  checked><label for='section-eeca42fe-29ba-45c7-a632-982aab44747c' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>sst</span></div><div class='xr-var-dims'>(time, lat, lon)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>...</div><input id='attrs-6b4fcb00-82dd-4f16-94e9-3d8a9bdf88e4' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-6b4fcb00-82dd-4f16-94e9-3d8a9bdf88e4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-9f8b3ef4-0787-4544-ad11-6a0212cbb778' class='xr-var-data-in' type='checkbox'><label for='data-9f8b3ef4-0787-4544-ad11-6a0212cbb778' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>Monthly Mean of Sea Surface Temperature</dd><dt><span>units :</span></dt><dd>degC</dd><dt><span>valid_range :</span></dt><dd>[-3. 45.]</dd><dt><span>precision :</span></dt><dd>2.0</dd><dt><span>dataset :</span></dt><dd>NOAA High-resolution Blended Analysis</dd><dt><span>var_desc :</span></dt><dd>Sea Surface Temperature</dd><dt><span>level_desc :</span></dt><dd>Surface</dd><dt><span>statistic :</span></dt><dd>Monthly Mean</dd><dt><span>parent_stat :</span></dt><dd>Individual Observations</dd><dt><span>actual_range :</span></dt><dd>[-1.8  32.14]</dd><dt><span>standard_name :</span></dt><dd>sea_surface_temperature</dd></dl></div><div class='xr-var-data'><pre>[517363200 values with dtype=float32]</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-807dc5b5-95c3-402f-9151-9eaebe2ee0d6' class='xr-section-summary-in' type='checkbox'  checked><label for='section-807dc5b5-95c3-402f-9151-9eaebe2ee0d6' class='xr-section-summary' >Attributes: <span>(8)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.5</dd><dt><span>title :</span></dt><dd>NOAA/NCEI 1/4 Degree Daily Optimum Interpolation Sea Surface Temperature (OISST) Analysis, Version 2.1</dd><dt><span>institution :</span></dt><dd>NOAA/National Centers for Environmental Information</dd><dt><span>source :</span></dt><dd>NOAA/NCEI https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/</dd><dt><span>References :</span></dt><dd>https://www.psl.noaa.gov/data/gridded/data.noaa.oisst.v2.highres.html</dd><dt><span>dataset_title :</span></dt><dd>NOAA Daily Optimum Interpolation Sea Surface Temperature</dd><dt><span>version :</span></dt><dd>Version 2.1</dd><dt><span>comment :</span></dt><dd>Reynolds, et al.(2007) Daily High-Resolution-Blended Analyses for Sea Surface Temperature (available at https://doi.org/10.1175/2007JCLI1824.1). Banzon, et al.(2016) A long-term record of blended satellite and in situ sea-surface temperature for climate monitoring, modeling and environmental studies (available at https://doi.org/10.5194/essd-8-165-2016). Huang, B., C. Liu, V. Banzon, E. Freeman, G. Graham, B. Hankins, T. Smith, and H.-M. Zhang, 2021: Improvements of the Daily Optimum Interpolation Sea Surface Temperature (DOISST) Version 2.1 (available at https://doi.org/10.1175/JCLI-D-20-0166.1). Anomaly is based on 1971-2000 OI.v2 SST. Satellite data: multi-satellite sensor (AVHRR+VIIRS) data. Ice data: NCEP Ice and GSFC Ice. Data less than 15 days old may be subject to revision.</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </div>
 <div class="section" id="cams-global-ghg-reanalysis-egg4-monthly">
@@ -1927,14 +2674,14 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_4876</span><span class="o">/</span><span class="mf">612600264.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_4860</span><span class="o">/</span><span class="mf">612600264.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">filename_CO2_CAMS</span><span class="o">=</span> <span class="s1">&#39;SSTyCO2_CAMS_Copernicus_data.nc&#39;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">url_CO2_CAMS</span><span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">ds_CO2_CAMS</span> <span class="o">=</span><span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_CO2_CAMS</span><span class="p">,</span><span class="n">filename_CO2_CAMS</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ds_CO2_CAMS</span>
 
-<span class="nn">/tmp/ipykernel_4876/2576717862.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
+<span class="nn">/tmp/ipykernel_4860/2576717862.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">else</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">10</span>         <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">filelocation</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span><span class="n">filename</span><span class="p">),</span><span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">)</span>
@@ -1985,7 +2732,7 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 
 
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"595e752c3663483988cf9a8da60423d9": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b8fe64707f3c40d585db7afb51f95070": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_595e752c3663483988cf9a8da60423d9", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=NAgrB8HxMMk\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7f5ab4b71790>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/NAgrB8HxMMk?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABALDBcXFRcWFRcXFRcVFR0VFRUVFyUXGRUdLicxMC0nLSs1PVBCNThLOSstRGFFS1NWW11bMkFlbWRYbFBZXVcBERISGBYYJRcYJVc2LTZXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV//AABEIAWgB4AMBIgACEQEDEQH/xAAbAAEAAgMBAQAAAAAAAAAAAAAAAQIDBAUGB//EAEIQAAIBAwAGBwcBBgQFBQAAAAABAgMEERIhMVOS0gUTF0FRUpMGFBYiYXGRgRUyM0JyoSNiotFDVLHBwkRjgrLh/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABoRAQEBAQEBAQAAAAAAAAAAAAABEQIxIRL/2gAMAwEAAhEDEQA/APn4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOyvZq4f89Hil/sH7M3Hno8Uv9gOMDsP2buF/NS4pf7D4br+elxS/2A44O3D2XuJbJ0f1lLlMnwjc7yhxS5QOADv/AAjc7yhxS5Sr9k7lfz0OKXKBwgd34UufPR4pcpV+y9xs06PFLlA4gO6vZS4f/EocUuUv8IXO8ocUuUDz4PQfB91vKHFLlHwfdbyhxS5QPPg9B8H3W8t+KXKPhC53lDilygefB3/hC53lDilyh+yNz56HFLlA4AO8/ZK5w3p0NSz+9LlMPw5X89Lil/sBxwehtfY66qpuNS3WPNKa/wDEz/Al5vLbjnygeXB6j4DvN5bcc+UiXsLeJZdW2S/rnygeYB6H4Out5b8U+Uj4Put5b8cuUDz4PQfB91vLfjlylfhO40tHrKGf6p8oHBB6Kn7GXUnoqpbp/Wc+Uy/At5vLbjnygeYB6f4FvN5bcc+UfAt5vLbjnygeYB6b4Hu97bcc+UovYu6eyrbccuUDzgPSfBV1vrX1JcpD9i7nfWnqy5QPOA9E/Y6439p6suUq/ZGv/wAxaerLlA8+DvP2Urf8xaerLlKS9mai/wDUWnHPlA4gOy/Z2ov/AFFrxz5TFLoOaeOut/vpTx/9Qa5YOp+xJb+3/M+U2rb2SuKsdOFW3a+spr/xA4IPSfBV3vLfjnyj4Ju95b8c+UDzYPSfBN3vLfjnyj4Ku95b8c+UDzYPSfBV3vLfjnykfBl1vLfjnygecB6P4Lu95b8c+UfBl1vLfjnygecB6P4Lut5b8c+UfBl1vLfjnygecB6L4Mut5b8c+UfBl1vLfjnyg150Hovg263lvxz5SPg263lvxT5Qa88D0Pwddby34p8o+DrreW/FPlBr0kEZHAxU5GdSAwyRCRapPWVjrYGahE2EsGCCwZshElZEgDE0zFKDbyjZkYW8bAKyTjgy0qncymM7SNAg2kyTDTl3MyaT8CizZjTaZkUSXDUBTSGSerQ0AMcnqf2Zz0zouG37HNRlXZ6Efyz+51DldB7J/c6hUqTnXlxlva4xexd5u156MG+/Go5lRaseO0DX695ctJKPdkyUqWHpOTbaLqnFLGNX1MdaroqX2+XBQq0HKalpNJd3iZdBZz3+JSnNJJOWvBfTXigMdGLjJpttvWn4HTo1dJa9q1M5saqb1a/r3GehVUZbduoDebON7Q3M4Qg4Sccy14eDrORwfaaXyQ/qA4076o9tWfEzE7ufdUlxM3OirOnVUnNZaeo68OiKHk/uVHmncy88uJlHWl5pfk9b+yrdf8NflmCr0bRSfyLV9SDyzq/VkaR3qNpB7IRes2XZQWPlj+hR5nX4DQfh/Y9dChTS/dj+CJKC/lj+APJ9VLyv8E9VPyv8Hoq1eK2KP4MdG4TeGl+Aa4OtbU19z0vs5NulJdyZyOmcaUceB1PZr+HP7gdxElck5IoBkgCShbJAAgEgQACoEEkAQQWZUCAAByYppEwra8MomzDUk02ZabTkitLaayqm3byTRRsRLJFFqL5CJDngrLJgbfeBerVzs2FExokILjLEZKaTQ0iC0ZazYU0ajlhpm3CWQMqBAbCJIKuY0iisnt+zOWv+77zpvv8AscqP/d/y/UzVdroPZM6pyOg3+/8AZHWyWIwXr+Vf1HMlWUZ6Mnt2fQ6V3+5nweTl3MYtptbNeQLKUtPH8viWlKMk1qfiaFbpKMdTf0Zyp9IxpuXVtvO1srWO1WjFLb+WalS5pJP5tfdhnBq3c5vXJlNNLaGXfh0lCEcLX4mOr0utWM6nk8/Ou2Y3UA9jD2hhJa8xZq9MX0K1KKjLLUsnmFVMka7A9B0JUxpo7tGqeNtbvQeV+p3LG9jLvKO5KZrXM8Qb/QKa8TT6Sq/uRT262ELLCqYeF8jLOeP3Y9+t+Bzqc8VNuo6TnHQmovDxnAFalbRWv9H4nPqXbfebVSprSevUsHOulibWMfYA6rZelPWYIonWEU6Rnma+x2/Zr+HL7nnrjaeh9mf4c/uGnaJIJIBBJAAgAASQAJIACBAABlSzKlAgkgDjFJx1F1rLaJhpio0crWXoJp48C1KPzGxGnh5KLosVyWyVAxVId5OHtLT2AY0WUO8qmWjUCqMgs2mRgjRjJNKWHgjAa7wNvTwjG6ulsZgy/Es0NZbCRDKRkUnUGmMqOUv+7/6nRpM52dv3Zmq6vQkvmmv8q/6nYbOJ0LL/ABJf0o7LNRmqVnqa8Tz1/dqEZRb1r+50elb1UYOTePD6ni7u7lVk5S/RFGKvXcm3k15SbKyeslBU6TIdRsyQpOWxGzDo94y0TVxoovGi33HQp2WNqNiNLHcT9NTlyOol4FXBo7MqZgqUB+i8udFmWnXcHlPAqU8GCTNaxY71p0wnhT2+Js1Kym8/Q8qpHV6NvUvllr1amyo3NNaRnua2JRkmtaw0jQcm5PWbFK3VTa8eARsyqaSTzrS1kVoaTUu+STMErSpB/K8p+BPXuGrGv6lFo0voWdL6FPep/Qxu6m+8ZUa17HEkd72Z/hz+5566k3JZZ6H2Z/hz+5GnbABAIAyBBJAAAAAAQESRkACACAABGQORFayzZedNrYVhSbeZbPAmNM1KOEXZCJQRRxLopJl47DHXWKiWpFXriXktRWGzA5opFETWsu1gobEkaWsLaQwq4IismTq0F1VREolnB9xKi+8jLHKLKM22jE6eRV1Wkc97X933nThDRZzHtf3ZkdDoZ/4r+sfHJ2pvUcPod/43/wATc6ZvFRt5z78Yj9zcZryntH0h1tZxT+SnqX1ZxXUFSeW29reWY8lVeJsUoZMVKJ07Kh3sza1zGxaW6XcdaFvHCNSlE36T1HOV1xhnQWDBKng32YKkRSNKSMM0bU4mCaIrQrxNCqtZ16kDSuLfvRuVz6jnMmEmnlCcWip0c3TtLhZ+ZZ1YN1V8bNX6nChPBtQqfU1GXWV3LxMNW4y8mp1i8Sjl9Tc+MtnrmNNmspF1L6jTCq8s9L7Mfwp/1HmJPJ6f2Z/hT/qObTtgEEUIyGQBORkgASQAAAICJGSAABAAEEsgDVIZLKSqIKsSiukgiA1lmRIxL94yo49+tRJjUcN/UyEMc3BWRhZlkzBKWs7IEya+5OrvGigJpvWbBipU9eTMAJAYAEZKuQQ0llHHk/ml/Uzpyetfc5T2y/qf8uTNab/RL/x1/S+80fa+4x1dNPxk0bXRskq0W/B92Dge0VfTuH4JJGufErkyZCIZko03KSSFI3bCjpa3sOvTjhYNahFQilswVq3mNUVk5+u0+OpSWTfoxS2nmF0pNbEjLDpWT1PUX8n6elk1kroJ517Dl0LnSxrM1Sq0mRU1pI1ZyRp3F3hmjUu5ss5S9OnJrxMc0czTk+9mSFaS2vUXGf0m5p95oyR0nJSRo1o4ZYzWEz04t7DAdf2fqU+u0KqTjJYWe5mmGoqUvAsqEvA9xCzo90I/gyK0pbuHCgPDK3l4FlbT8Ge591p+SHCi3UQ8keFFHiI2k3/K/wAHpegKThTknq+Y6apx8q/BZJLYQSGAwioDDAEAAAQSgAIYAEAgCQQAJBAA1ZSRryXgZ2kSoomqool0GVchQW0yIwpl1I5da1GTJDZXJWcjMiqzZjkiyTJ0DtERGOTJCGBBaiclRkRYomTkCwbI0iHIaYNlGw5EQy9oFJLWvuc2UcSl92dbCyvucirP5pfdmasRCeJrXjCb/seevajlNyfezoV62O/bk5dw9hqJWA6HRsNrOcdbo5fITprlkqNt4Nq2owX72P1MM1jWa0rvH1MtuldUqONiz4o5dSkk/lZSpfTntwkRTbbXfkqa6PR/gdK6j8v6Gnb0XFo3a7+Uxv1t564fzMtbUYt5ns8CXSzN52GObmm8LC7jbLpVNFLVFJfY06yj3Go7mp5mQqre0Yms0CtxHUTBl6y+VlZc9syUJtSTW1PJiZej+8jTL3PRN71kI6W3B1Yniejbvq3juz+D11pXU4p5yEbYIyAJIJyQAIJyVAMAgARkkhgAQSBAACABAAAAAQAOSukYeEvwT+0YeEuE5nXx+pPvEfqZadF9IQ8JcJHv0PCXCc/3hD3mJB0Vew8Jfgn36Pll+Dne9Ij3tDB0ffV5WPfkv5Wc/wB8iHeR8GMV0P2gvJIn39eSX5Ob75HwZKvI+DA6Hvy8kvyPf15H+Tn++R8GVd4vBgdH3/8A9t8Rb397r/Ucz3z/ACj33/KxiOp7891/qI99e7/1HM9//wArI9/fkCur76+6l/rHv8t0uP8A/DlftB+Qh9IPyIZR053tX+WnBfeeTlXdbQWt65ZzgrPpCXlRy69dzk2/0+gkCpUy9pguHrLaRSr4m0YkdjozXD9TnU6WVnwOh0Xta+pnrxvn10naqSNG4scPUmdmizahTUjnK6WPLxs2/wCX+x0LW1cNbR2vd/oYLhKOot6SRrRjrL1tmCYLWZbyGML6GWnGlHWVnRbWoz1lrLUdaNI5VS2n5Sqt5eB3tArKkh+k/LRpW6Ude0w3Kwn9jfm8HPvZfKyxOo5RaG1GShBOM5Pu2GNP5v1Ojk2FNp5PQ9DX/c390ebbwzZtKuhNSWxvWEfQKc00mu8yZOZ0bX+XD2dzOhkIvkjJACjAIAAhkZAsyrBDAnJGQQBOQQAJyMkEBEgqAJBAA84rCp5GT+z6vkZ6gkVXlv2fV8jH7Oq+RnqQB5b9m1fIyy6LreT+56gAeY/ZNbyf3RZdDVvKvyj0pINea/YlbwX5Rb9h1vBfk9ISB5tdBVvp+Sy6AqeMT0aQA8+vZ+ffOK/QsvZ599RfhneCA4a9nfGovwyy9nY7z+x3CGgOG/Z6C/4jMdToGCWesZ1rlz/lWTk3t1NLRl8j+veBoXdhTpxb086jzlZYbOhfXTerOfqcycshVclp7EYzNDDWsDc6OqwUJxmtb/dJsHibRoZw9RsWs/nTM1rl6KjI3KdbByaVYyut9Tlju6Ne/wALUc+NxpSbk9SNOtWy8F6tL/C1bVrNI243kU/sRd9IqTy33HAy0+8OTNYzroe9p7TLRms6jjpG1bzwxYSuypiUzT08FJ3BjGtZa0zl3s9RmqV8mjczybkc+qpCeE14kQ/eRRMmL1o25s1b95k06hFRrJVAeq6LumlFS2PYzvwnk8bZyloRxLOHs8D0NrePUp6n/wBQjq5JMcJposBbJGSAABAAEAhgSMkAATkrkASyAQESMkACSAQBsgjJAVbIIAEjJBIEkoqSBYEZJAnJOSpIEklQBYkqiQKyPPe0E0ms7EvyeiZwfaShmlpLuA8lVw9hrSRszjhZ8TWkFY2TpagyoEpmSlPDRiJTBHWVRkOszFRqaSRk0Tm7Sr0NctZ1IyWDhSm09Q96qLU20XDXYnZwnnC1nLubWVN61q7mUjeTzqkxUuaklhvJcNiiLJmGTa7yvWBnW662owuZg0mWTJhqzka1Z6zPJ4NWUss1GagtBZaXiypKDMZqsNGWM5BEtqEtpVvrdtXJa46/odu1uFOGvatT+hwLStovXsNyzudGcvCQZensauvDecbDfTOT0dHLz9DpoDICMgCSAMgCAAIAIAAgZAnIIDAkEAIAEMDOCAFTknJUkCwKk5AnIyVJyBbJKZVEgWySVyMgWyCpOQLZGSoAls5nTPzUtHxaR0Tn9JxzBpbc5A8l0hRcPl7l3nMkdzpK5jKDilrOHIKqGgRkCGEgMgZqdRRN2Ezl5NihW7mZsaldGnBZyZJqL2pMw0J5M0jO5XRX3OlNZj8sjXnZzWxp/qRUm0zH7xLxNHxSdtJa2YtAyyqN7WVKzcUwWQZWUsERStLuMBaUslTTCSUyAgNhbEVbGflMYGaD1o3FHGH3M0InobO2UqCeMgdPoitFrCedR1kzy9t/h1oKOrLxJd2D00AlXJyQAJBAADJAAAjIAMgAACAESCAAyAQBsEMjIbCpRJVE5AkEZGQJBAyBZMnJUnIFgQmALAgAWyMkAAYa9JTWGZSk2B5LpqylTedsW9TOFM9f7QwcqSa2J6zylVBWuyGXxko0BGQwQBBentKGezWZYJSM1Ko0zo0ppo5c44bRelVcTNjcrp1KUZLX+TRqWrWzWi3vIdwJrfxruLRBlnVyYJSKzUSZhmy02Y2Vi1UAFRJMVrIMtJd4CZQvUeooBeD1norC5XUNeXWebRvW1ObXyPW+7xCO50fb9Z/iy2zlox+h6GK1L6HI6NrQUaUdjhFqS+p1oyzsAsSQAJIBGQBGQAAyQ2RkCQAAIYZARJJUASCCMgZ8jJQZCr5GSmScgWyCuRkC2SSmScgXRJTSJyBdMFMjSAyZGSmkNIC+RkppDIFslWQ2Q2Bq9IUVKlNeK1fc8Xc0JQbUlho91Wi5LVtTyal1YqqszjHK+mtgeGaKM9NcdAvRck0voeeuYaMnHw1FVgZDLENEFTZs9Uka6RsUdTJVnrYuo95rG5JZRptGY1U5GSAUMkMkqwMcijMjRjkVlAAKgbLvG6SpaMcRedL+ZmsAMj2FSe4JAWSO30JbqetSaa1HGi9WDsdCS0fmXm0Wgj0lKyprW45l3yNuMUthjiy6YFyCMkZAkFdIaQFiBkjIBhENkZAuQQmMgSQMgIEAAAABcFSchUgjJGQLAqTkCQABJOSuScgTknJQnIFgRkZAkFcktgMmKVdJqK1tvuNevc51R2eJawp/Pl9xnfuN/l0lDBj0csySeoQ2HRhqXUcpr6Hhr+2lCpLS8cnv60dZwvaCyylNLYsMDybiUNia1NGHRMqqZIyKNGSljvIrYo1O5lK0e8mSwtRGcmWmIEtEFQIYIYFWUkjIQ0VGFoF2iuCogE4JAnuMtGOSiNqzhrAxzos6PRFSMWlPYnk2PcnOOYrYjRjTcX4Cj2NOakk4tNfQvk8zaXc6b+V6u9HftLqNVZWpraiaWNjIAKiGEAAAAEYILEAQCQAADCAIAEggAWBCYCpBAAnIyVAF8jJXJOQLZIyRkgC2SSuRkCxOSuScgSal5X/lX6merU0Yt/g5ell5feY6rfMZKaN+11M0YmxQn8yM8+tdeOjpEpmJMSkd3FM2UmlJYaymRJkxA890p0SlJyjses4te2cWe4r0tKP2ODd2uc/lfRmL8bn15+rSkllxa+pFvHLOnUm1CVOa7tTOXHMWQ8bcqLwYoxNyhJOKLwoKUtRG3PqQMTOpVtjQq0sAsYSGSQVlBDJIZUUYigZIoIrokOJsU6eTKqP0KNSmtZ1KEFqaNV08G9Ywb+X8Admz1U/yaFaKfcdFLRp4+hoSjqMdtctKDSZs0K7pyUl+v1NScWmXSYasepo1lOKku9F8nJ6IrbYP7o6mTUcqnIK5GSi2SMkACcklCUwLAgASQMkZAnIKkgAQAJyMkZIyBbIbKpjIE5JyVyMgWJK5GQLDJXIyBbIyVyMgWyTkpkw3FbRj9XqRKsYbytpPC2IwRZTS1k5+pytdZGVTL0qvzR+5rSn9Skamta+8sK78WUcssqp6slactZ3cWYlFMloAXOde0sPPczomOtTUo4JZqy48/WpJ7Ucu9tsfMtned+pTw2n3GvVopprVrOeuma4trUSfzbNmTsUoxS1HHu6bhmLxo5yhQv8AQWG019xZqS47MzUr0U0TTuVNLWtaylkzrBltxatJpmJnauKMZLuONWxF4yvyblZqjKSYlMhY8UVhaETLGJRSXivybFvFN5yvyBmpUu42Fby8DZs6GToStcrbg0y4c6TOj7vowhOOpx2/U21Yx1MzSiksd2CjBVqp08rvRpSkRVnoNwzqbyjDKovE5dOsYqz1l4y1GCpNeK/JMJLxRBt2tbQqRf11noU8nlNJeKO/0dXU6a161qZrljqNwEZGTTKQRkZAnIIyMgWBGSMgSCMkZAkkrkZAkEZIyB7jqYeSPCh1MPJHhRkAVj6mHkjwodTDyR4UZABj6mHkjwodTDyR4UZABj6mHkjwodTDyR4UZABj6mHkjwodTDyR4UZABj6mHkjwodRDyR4UZABj6mHkjwoh29PyQ4UZQBi92p7uHAh7vT3cOFGUAYvdqe7hwIe7U93DgRlAGPqYeSPCh1MPJHhRkAGPqYeSPCh1MPLHhRkAGPqYeWPCieqh5Y8KLgDG6EPJDhRHu9Pdw4UZQBhdrS3dPgRHulHdU+BGcAYfdKW6p8CHu1Ld0+BGYAYfdqW7hwIj3SluqfAjOAMHudHdU+CI9zo7qnwIzgDB7pS3VPgRPutLdU+BGYAYlb093DhRPUQ8kOFGQAY+oh5IcKHUQ8kOFGQAYnbU++nDgRHutLd0+BGYAYfdaW6p8CHutLd0+BGYAYfdaW7p8CJVvTWynBfaKMoAx9RDyR4UOoh5I8KMgAx9RDyR4UOoh5I8KMgAx9RDyR4UOoh5I8KMgAx9RDyR4UOoh5I8KMgAx9RDyR4UOoh5I8KMgAx9RDyR4UOoh5I8KMgAx9RDyQ4UOoh5IcKMgAA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA+oA+X9o99urT06nOO0e+3Vp6dTnA8eAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//2Q==\n"}}]}}, "48846cdda07045099206abc73c7b44b4": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "145a7bd6e6ee4eb9bfcfc6fd25dfbc11": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_48846cdda07045099206abc73c7b44b4", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV1fM4y1x7g8\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7f5aba2ab810>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV1fM4y1x7g8&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}, "df735393d22c4f85bdabd529802069df": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "15b806dda03041f19392aae8595283c9": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TabModel", "_titles": {"0": "Youtube", "1": "Bilibili"}, "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_b8fe64707f3c40d585db7afb51f95070", "IPY_MODEL_145a7bd6e6ee4eb9bfcfc6fd25dfbc11"], "layout": "IPY_MODEL_df735393d22c4f85bdabd529802069df", "selected_index": 0}}}, "version_major": 2, "version_minor": 0}
+{"state": {"1cb12608c2044b329133800991bd36c1": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3ec2a34fd36c42889b8c6a54f491cf88": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_1cb12608c2044b329133800991bd36c1", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=NAgrB8HxMMk\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7fad3c2993d0>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/NAgrB8HxMMk?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "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\n"}}]}}, "e87534676d9c4013b96e3a00082b1c90": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "8777df30aeb5416b8446ffad48ee7a04": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_e87534676d9c4013b96e3a00082b1c90", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV1fM4y1x7g8\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7fad42a79910>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV1fM4y1x7g8&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}, "d5647be5031146139bed90f9fa5da230": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "fd66149b15094313b74dcd42a1e62499": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TabModel", "_titles": {"0": "Youtube", "1": "Bilibili"}, "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_3ec2a34fd36c42889b8c6a54f491cf88", "IPY_MODEL_8777df30aeb5416b8446ffad48ee7a04"], "layout": "IPY_MODEL_d5647be5031146139bed90f9fa5da230", "selected_index": 0}}}, "version_major": 2, "version_minor": 0}
 </script>
 
 
