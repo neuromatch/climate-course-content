@@ -282,7 +282,7 @@ jobs:
         run: |
           # TODO: get this working with a general CI
           python ci/generate_book_climate.py student
-          # ln -s ../tutorials book/tutorials
+          ln -s ../tutorials/intro.rst book/tutorials/intro.rst
           ln -s ../projects book/projects
           # ln -s ../prereqs book/prereqs
           jupyter-book build book
