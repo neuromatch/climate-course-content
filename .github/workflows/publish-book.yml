@@ -154,6 +154,11 @@ jobs:
       #   run: |
       #     pip install numpy
 
+      - name: Install GEOS (dep for cartopy)
+        run: |
+        sudo apt update
+        sudo apt install libgeos++-dev libgeos3.10.2 libgeos-c1v5 libgeos-dev libgeos-doc
+
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
