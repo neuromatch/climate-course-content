@@ -12,101 +12,101 @@ env:
 
 # This job installs dependencies, build the book, and pushes it to `gh-pages`
 jobs:
-  build-prereqs:
-    runs-on: ubuntu-latest
-    steps:
+  # build-prereqs:
+  #   runs-on: ubuntu-latest
+  #   steps:
 
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-          fetch-depth: 0
-          ref: ${{ github.head_ref }}
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+  #       with:
+  #         persist-credentials: false
+  #         fetch-depth: 0
+  #         ref: ${{ github.head_ref }}
 
-      - name: Get commit message
-        run: |
-          readonly local msg=$(git log -1 --pretty=format:"%s")
-          echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
+  #     - name: Get commit message
+  #       run: |
+  #         readonly local msg=$(git log -1 --pretty=format:"%s")
+  #         echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.7
+  #     - name: Set up Python
+  #       uses: actions/setup-python@v2
+  #       with:
+  #         python-version: 3.7
           
-      # - name: Install dependencies
-      #   run: |
-      #     sudo apt-get install -y libgeos-dev libproj-dev
-      #
-      # - name: Set up virtual environment
-      #   run: |
-      #     python -m venv env
-      #     source ./env/bin/activate
+  #     # - name: Install dependencies
+  #     #   run: |
+  #     #     sudo apt-get install -y libgeos-dev libproj-dev
+  #     #
+  #     # - name: Set up virtual environment
+  #     #   run: |
+  #     #     python -m venv env
+  #     #     source ./env/bin/activate
           
-        # BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
-      - name: Install CI tools
-        run: |
-          BRANCH="climate"
-          wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
-          tar -xzf $BRANCH.tar.gz
-          pip install -r nmaci-$BRANCH/requirements.txt
-          mv nmaci-$BRANCH/scripts/ ci/
-          rm -r nmaci-$BRANCH
-          rm -r $BRANCH.tar.gz
-          echo ci/ >> .gitignore
+  #       # BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
+  #     - name: Install CI tools
+  #       run: |
+  #         BRANCH="climate"
+  #         wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
+  #         tar -xzf $BRANCH.tar.gz
+  #         pip install -r nmaci-$BRANCH/requirements.txt
+  #         mv nmaci-$BRANCH/scripts/ ci/
+  #         rm -r nmaci-$BRANCH
+  #         rm -r $BRANCH.tar.gz
+  #         echo ci/ >> .gitignore
 
-      # - name: Install numpy
-      #   run: |
-      #     pip install numpy
+  #     # - name: Install numpy
+  #     #   run: |
+  #     #     pip install numpy
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install jupyter-book==0.10.2 ghp-import
+  #     - name: Install dependencies
+  #       run: |
+  #         pip install -r requirements.txt
+  #         pip install jupyter-book==0.10.2 ghp-import
 
-      # - name: Copy tutorials from precourse repo
-      #   if: "!contains(env.COMMIT_MESSAGE, 'skip precourse')"
-      #   run: |
-      #     BRANCH=`python -c 'import os, re; m = re.search(r"precourse:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
-      #     wget https://github.com/NeuromatchAcademy/precourse/archive/refs/heads/$BRANCH.tar.gz
-      #     tar -xzf $BRANCH.tar.gz
-      #     mv precourse-$BRANCH/tutorials/W0D* tutorials/
-      #     cat precourse-main/tutorials/materials.yml tutorials/materials.yml > out.yml
-      #     mv out.yml tutorials/materials.yml
-      #     mv precourse-$BRANCH/prereqs .
-      #     rm -r precourse-$BRANCH
-      #     rm -r $BRANCH.tar.gz
+  #     # - name: Copy tutorials from precourse repo
+  #     #   if: "!contains(env.COMMIT_MESSAGE, 'skip precourse')"
+  #     #   run: |
+  #     #     BRANCH=`python -c 'import os, re; m = re.search(r"precourse:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
+  #     #     wget https://github.com/NeuromatchAcademy/precourse/archive/refs/heads/$BRANCH.tar.gz
+  #     #     tar -xzf $BRANCH.tar.gz
+  #     #     mv precourse-$BRANCH/tutorials/W0D* tutorials/
+  #     #     cat precourse-main/tutorials/materials.yml tutorials/materials.yml > out.yml
+  #     #     mv out.yml tutorials/materials.yml
+  #     #     mv precourse-$BRANCH/prereqs .
+  #     #     rm -r precourse-$BRANCH
+  #     #     rm -r $BRANCH.tar.gz
       
-      - name: Cache Jupyter Build Artifacts
-        uses: actions/cache@v2
-        with:
-          path: |
-            ./book/_build/html/
-            ./.jupyter_cache
-          key: ${{ runner.os }}-jupyter-${{ hashFiles('**/*.ipynb') }}
-          restore-keys: |
-            ${{ runner.os }}-jupyter-
+  #     - name: Cache Jupyter Build Artifacts
+  #       uses: actions/cache@v2
+  #       with:
+  #         path: |
+  #           ./book/_build/html/
+  #           ./.jupyter_cache
+  #         key: ${{ runner.os }}-jupyter-${{ hashFiles('**/*.ipynb') }}
+  #         restore-keys: |
+  #           ${{ runner.os }}-jupyter-
 
-      - name: Build student book
-        run: |
-          # TODO: get this working with a general CI
-          python ci/generate_book_climate.py student
-          # ln -s ../tutorials book/tutorials
-          # ln -s ../projects book/projects
-          ln -s ../prereqs book/prereqs
-          jupyter-book build book
-          python ci/parse_html_for_errors.py student
+  #     - name: Build student book
+  #       run: |
+  #         # TODO: get this working with a general CI
+  #         python ci/generate_book_climate.py student
+  #         # ln -s ../tutorials book/tutorials
+  #         # ln -s ../projects book/projects
+  #         ln -s ../prereqs book/prereqs
+  #         jupyter-book build book
+  #         python ci/parse_html_for_errors.py student
 
-      - name: Store Build
-        uses: actions/upload-artifact@master
-        with:
-          name: prereqs
-          path: book
-      #     python ci/generate_book_climate.py student
-      #     ln -s ../tutorials book/tutorials
-      #     ln -s ../projects book/projects
-      #     ln -s ../prereqs book/prereqs
-      #     jupyter-book build book
-      #     python ci/parse_html_for_errors.py student
+  #     - name: Store Build
+  #       uses: actions/upload-artifact@master
+  #       with:
+  #         name: prereqs
+  #         path: book
+  #     #     python ci/generate_book_climate.py student
+  #     #     ln -s ../tutorials book/tutorials
+  #     #     ln -s ../projects book/projects
+  #     #     ln -s ../prereqs book/prereqs
+  #     #     jupyter-book build book
+  #     #     python ci/parse_html_for_errors.py student
   build-tutorials:
     runs-on: ubuntu-latest
     steps:
@@ -304,13 +304,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build-prereqs, build-tutorials, build-projects]
     steps:
-      - name: Retrieve Prereqs
-        uses: actions/download-artifact@master
-        with:
-          name: prereqs
-          path: _prereqs
-      - name: copy build
-        run: rsync --remove-source-files _prereqs/ book/
+      # - name: Retrieve Prereqs
+      #   uses: actions/download-artifact@master
+      #   with:
+      #     name: prereqs
+      #     path: _prereqs
+      # - name: copy build
+      #   run: rsync --remove-source-files _prereqs/ book/
 
       - name: Retrieve Tutorials
         uses: actions/download-artifact@master
