@@ -158,7 +158,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install libgeos++-dev libgeos3.10.2 libgeos-c1v5 libgeos-dev libgeos-doc
-          sudo apt-get install proj-bin
+          sudo apt-get install proj-bin libproj-dev proj-data
 
       - name: Install dependencies
         run: |
