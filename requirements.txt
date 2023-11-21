@@ -9,17 +9,17 @@ decorator==5.0.9
 xarray
 shapely==1.8.5
 cartopy
-# pythia_datasets
-# pooch
-# pyleoclim
-# climlab
+pythia_datasets
+pooch
+pyleoclim
+climlab
 intake
 seaborn
-# netCDF4
-# h5netcdf
-# nc-time-axis
-# geoviews
-# boto3
-# cmocean
-# jinja2==2.11.3
-# markupsafe==1.1.1
+netCDF4
+h5netcdf
+nc-time-axis
+geoviews
+boto3
+cmocean
+jinja2==2.11.3
+markupsafe==1.1.1
