@@ -6,6 +6,8 @@ scikit-learn
 torch
 ipywidgets
 decorator==5.0.9
+xarray
+cartopy
 # pythia_datasets
 # cartopy
 # pooch
