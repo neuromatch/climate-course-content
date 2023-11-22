@@ -28,12 +28,12 @@ Traceback (most recent call last):
     await self._async_handle_timeout(timeout, cell)
   File "/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/nbclient/client.py", line 802, in _async_handle_timeout
     "Cell execution timed out", timeout, cell
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 60 seconds.
+nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 360 seconds.
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-['# code to retrieve and load the data', '', 'years=range(1981,2024) # the years you want. we want 1981 till 2023', "file_paths=['https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.'+str(year)+'.days_p25.nc' for year in years] # the format of the files", "filenames=['chirps-v2.0.'+str(year)+'.days_p25.nc' for year in years] # the format of the files"]
+['# we can use the data from W1D3 tutorial 3', '# to access the NDVI data from AWS S3 bucket, we first need to connect to s3 bucket', '', 'fs = s3fs.S3FileSystem(anon=True)', "client = boto3.client('s3', config=botocore.client.Config(signature_version=botocore.UNSIGNED)) # initialize aws s3 bucket client"]
 ...
-['', '#### open data as xarray', 'chirps_data = xr.open_mfdataset(', '    downloaded_files, combine="by_coords"', ')  # open the files as one dataset']
+["                        date_sel.strftime('%Y')+'/AVHRR-Land_v005_AVH13C1_*_c*.nc') # the files we want for a whole year", "files_for_pooch=[pooch_load('http://s3.amazonaws.com/'+file,file) for file in file_location]", '', 'ds = xr.open_mfdataset(files_for_pooch, combine="by_coords")  # open the file', 'ds']
 -------------------
 

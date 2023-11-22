@@ -1480,7 +1480,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "3c6bb72c30e54eb297145b2031851318"}
+{"version_major": 2, "version_minor": 0, "model_id": "90b5357452e947caba70348e44b85d79"}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -1519,20 +1519,6 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">boto3</span>
 <span class="kn">import</span> <span class="nn">botocore</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5036</span><span class="o">/</span><span class="mf">2434578959.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">tempfile</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="kn">import</span> <span class="nn">s3fs</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">boto3</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">import</span> <span class="nn">botocore</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;s3fs&#39;
 </pre></div>
 </div>
 </div>
@@ -1734,23 +1720,1825 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.1989.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.1989.days_p25.nc&#39;.
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a81c7a0916bf81e4047cda8d6320cc5c94720f758f232c50b80502a840702ab8
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.1990.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.1990.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 10a95daa84df0e1934c462c3687cff0accff907557f92c6c1e7ee0d2077ed0d4
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.1991.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.1991.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f549808c69601cf288b4f0f42b8ac5337c348f06d1fb55aa86b67e9bbd3837f9
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.1992.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.1992.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: ae26310b18369c1015e6b70db6dfb7ad1c138f846bd7c322e0b6794a26423f56
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.1993.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.1993.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 292ff168ef7f4420d36606f7ed84aa5380dd979a90351762926ef4c569e90f56
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.1994.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.1994.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f856963801db2a62fa5c35537810f1649f19d32c84f1c4f2bb3fd3dcc82ba7ec
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.1995.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.1995.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 54c7a408d49112465479a06a3d1e5b37cb10b526c2cf20215f2b75579c8c2a0e
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.1996.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.1996.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: b0a4604e5a213671e6d591ad959c2156685ee026b54fbc8ad87860e35f3db4df
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.1997.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.1997.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a04019a26e20988e35d8d14e88f1083aabb8104434c556c21e3d29e1c30ae731
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.1998.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.1998.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 15f3e33707c14b3ef26b525cb116766b847f2295c60aa41c6ae73df10e748e98
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.1999.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.1999.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: dbb0a6a0ee1ff5e3ba5439101bedc24dad0951810a03a6f5cdc96e4b08c06716
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2000.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2000.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 57014c9ff72c8997b5b141793c06ffd1a8d8f5c6d1308789ac8e12c3860e5790
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2001.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2001.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 8550c96c7f8c29cbc6a1be3be56d7f769125d15b9ac7bc6c4f0fc4a76034f0fa
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2002.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2002.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 8027aaf7e005d74073d2c744d9c8a0343ffade272c1d1f8c420972bcbade2231
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2003.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2003.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 5b5a538e187ca651bc1fcc25eb445d31a05067b5a109bd8bb4651db11346cf6f
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2004.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2004.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 5e671526f27567e9218d275f7a47b6c0d7e0acf718edfee64c5843f5ee497e93
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2005.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2005.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 2185afd5c3d110da52a9a81eb97f25b37f30db5c0478e536a84c957351e44b53
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2006.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2006.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 3f78d5e733ea38bef25e47af9b3a907a96e27b8334cc04e4898837239e6539e6
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2007.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2007.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: c4594aeaafd7b9e7065577563799bca461582723e6b32df332206b43cb853138
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2008.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2008.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6fe5dc8facd7750b6c08ecd0cadaaf19570acccd6a15f20efcbdd960230b5551
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2009.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2009.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e6ccdc38aa146793f2c92858412122ef14a7a34332940bec03bd520cc77dc235
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2010.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2010.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f6b6bd962626c038959a743b5f6e6c22b0bd6647b89b4a08b0f2305ac77f7277
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2011.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2011.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 45f437d8f1c7237b7043ebf4fec800461252af02e7cbcc87a844ddf0d1a911d2
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2012.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2012.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 27792b3d028ca5e745a8fe45c4f133a4183469512d2e55ead950d54a5a5a890b
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2013.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2013.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d531a704ed1a40be2d509b1d984913194015f84721edc555f2de8c000bcab638
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2014.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2014.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: c3225de85da99422bc5fde9dbd1bdabff206fc2902d811944169348c8352d521
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2015.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2015.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 0c770adf07884a25610ea00d66d5e221529159746d3d76d9affea69c77666233
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2016.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2016.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 8ff4f6284c1d37b50e8b1e47dbd9f6e108a9ee3b17a6752bb18cc0b7384526d3
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2017.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2017.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 9692ca1fee495b8091084b1e5d29ea618483e67886a281f82b4a03555861d6b8
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2018.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2018.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 05b0850b8b8c16a2d5d33ddc6ba89d503084dc7374845214289be1b411a30d3f
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2019.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2019.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 311723f2f8d2af3307da198ebafece0c081200f336444a4261516539348fed38
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2020.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2020.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 2ab3b142141c5cfc708bc666dc89900005b7452b66324515fca1baa8dff00402
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2021.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2021.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1b2db33508896ed1932b9db7e6dad6136e90687d3fe630f08066dbd279e0dabb
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2022.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2022.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 5f9b88f0623083759ba351a263bf23afd7fb26b13e23d051d5bb22a55aa0bcb9
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2023.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2023.days_p25.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: fa12c6ab38c5eebd8b6c4a206c7de9b04a4921d271b8c08b790b0aca1375cb5b
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now visualize the content of the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># code to print the shape, array names, etc of the dataset</span>
+<span class="n">chirps_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewBox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewBox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
+Dimensions:    (latitude: 400, longitude: 1440, time: 15644)
+Coordinates:
+  * latitude   (latitude) float32 -49.88 -49.62 -49.38 ... 49.38 49.62 49.88
+  * longitude  (longitude) float32 -179.9 -179.6 -179.4 ... 179.4 179.6 179.9
+  * time       (time) datetime64[ns] 1981-01-01 1981-01-02 ... 2023-10-31
+Data variables:
+    precip     (time, latitude, longitude) float32 dask.array&lt;chunksize=(365, 400, 1440), meta=np.ndarray&gt;
+Attributes: (12/15)
+    Conventions:       CF-1.6
+    title:             CHIRPS Version 2.0
+    history:           created by Climate Hazards Group
+    version:           Version 2.0
+    date_created:      2015-10-07
+    creator_name:      Pete Peterson
+    ...                ...
+    reference:         Funk, C.C., Peterson, P.J., Landsfeld, M.F., Pedreros,...
+    comments:           time variable denotes the first day of the given day.
+    acknowledgements:  The Climate Hazards Group InfraRed Precipitation with ...
+    ftp_url:           ftp://chg-ftpout.geog.ucsb.edu/pub/org/chg/products/CH...
+    website:           http://chg.geog.ucsb.edu/data/chirps/index.html
+    faq:               http://chg-wiki.geog.ucsb.edu/wiki/CHIRPS_FAQ</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-1a4a8e54-bf44-46f5-af4e-c95a18e05979' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-1a4a8e54-bf44-46f5-af4e-c95a18e05979' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 400</li><li><span class='xr-has-index'>longitude</span>: 1440</li><li><span class='xr-has-index'>time</span>: 15644</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-a247ad10-07d9-4c61-ba1f-0d124565ac89' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a247ad10-07d9-4c61-ba1f-0d124565ac89' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-49.88 -49.62 ... 49.62 49.88</div><input id='attrs-e000e75c-e6e8-4379-b2f1-77a0e36996a7' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e000e75c-e6e8-4379-b2f1-77a0e36996a7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-02c2e710-34d3-4425-a300-8dab1e85e94d' class='xr-var-data-in' type='checkbox'><label for='data-02c2e710-34d3-4425-a300-8dab1e85e94d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-49.875, -49.625, -49.375, ...,  49.375,  49.625,  49.875],
+      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-179.9 -179.6 ... 179.6 179.9</div><input id='attrs-54648a9b-0c23-4e83-b097-265428bfd1bf' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-54648a9b-0c23-4e83-b097-265428bfd1bf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-02cac9db-5bfd-492f-9e29-5f2e4cc1de16' class='xr-var-data-in' type='checkbox'><label for='data-02cac9db-5bfd-492f-9e29-5f2e4cc1de16' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([-179.875, -179.625, -179.375, ...,  179.375,  179.625,  179.875],
+      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1981-01-01 ... 2023-10-31</div><input id='attrs-cb10edbc-be42-4f5e-8d09-f606016e0229' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-cb10edbc-be42-4f5e-8d09-f606016e0229' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b90e7421-ec31-47ed-802b-935a7a927630' class='xr-var-data-in' type='checkbox'><label for='data-b90e7421-ec31-47ed-802b-935a7a927630' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>axis :</span></dt><dd>T</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1981-01-01T00:00:00.000000000&#x27;, &#x27;1981-01-02T00:00:00.000000000&#x27;,
+       &#x27;1981-01-03T00:00:00.000000000&#x27;, ..., &#x27;2023-10-29T00:00:00.000000000&#x27;,
+       &#x27;2023-10-30T00:00:00.000000000&#x27;, &#x27;2023-10-31T00:00:00.000000000&#x27;],
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-d9c0ff80-6059-4ddc-a86a-ce26646de796' class='xr-section-summary-in' type='checkbox'  checked><label for='section-d9c0ff80-6059-4ddc-a86a-ce26646de796' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>precip</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(365, 400, 1440), meta=np.ndarray&gt;</div><input id='attrs-d2feb181-afa5-4ad0-83be-019328820e73' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-d2feb181-afa5-4ad0-83be-019328820e73' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cf184d55-b398-4890-b328-e949c34223e6' class='xr-var-data-in' type='checkbox'><label for='data-cf184d55-b398-4890-b328-e949c34223e6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>standard_name :</span></dt><dd>convective precipitation rate</dd><dt><span>long_name :</span></dt><dd>Climate Hazards group InfraRed Precipitation with Stations</dd><dt><span>time_step :</span></dt><dd>day</dd><dt><span>geostatial_lat_min :</span></dt><dd>-50.0</dd><dt><span>geostatial_lat_max :</span></dt><dd>50.0</dd><dt><span>geostatial_lon_min :</span></dt><dd>-180.0</dd><dt><span>geostatial_lon_max :</span></dt><dd>180.0</dd></dl></div><div class='xr-var-data'><table>
+    <tr>
+        <td>
+            <table>
+                <thead>
+                    <tr>
+                        <td> </td>
+                        <th> Array </th>
+                        <th> Chunk </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <th> Bytes </th>
+                        <td> 33.57 GiB </td>
+                        <td> 804.20 MiB </td>
+                    </tr>
+
+                    <tr>
+                        <th> Shape </th>
+                        <td> (15644, 400, 1440) </td>
+                        <td> (366, 400, 1440) </td>
+                    </tr>
+                    <tr>
+                        <th> Count </th>
+                        <td> 129 Tasks </td>
+                        <td> 43 Chunks </td>
+                    </tr>
+                    <tr>
+                    <th> Type </th>
+                    <td> float32 </td>
+                    <td> numpy.ndarray </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td>
+        <svg width="168" height="151" style="stroke:rgb(0,0,0);stroke-width:1" >
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="80" y2="70" style="stroke-width:2" />
+  <line x1="10" y1="30" x2="80" y2="101" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="10" y2="30" style="stroke-width:2" />
+  <line x1="13" y1="3" x2="13" y2="33" />
+  <line x1="16" y1="6" x2="16" y2="37" />
+  <line x1="19" y1="9" x2="19" y2="40" />
+  <line x1="24" y1="14" x2="24" y2="45" />
+  <line x1="28" y1="18" x2="28" y2="48" />
+  <line x1="31" y1="21" x2="31" y2="51" />
+  <line x1="34" y1="24" x2="34" y2="55" />
+  <line x1="39" y1="29" x2="39" y2="60" />
+  <line x1="42" y1="32" x2="42" y2="63" />
+  <line x1="46" y1="36" x2="46" y2="66" />
+  <line x1="49" y1="39" x2="49" y2="69" />
+  <line x1="54" y1="44" x2="54" y2="74" />
+  <line x1="57" y1="47" x2="57" y2="78" />
+  <line x1="61" y1="51" x2="61" y2="81" />
+  <line x1="64" y1="54" x2="64" y2="84" />
+  <line x1="69" y1="59" x2="69" y2="89" />
+  <line x1="72" y1="62" x2="72" y2="93" />
+  <line x1="75" y1="65" x2="75" y2="96" />
+  <line x1="80" y1="70" x2="80" y2="101" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,101.03136577865435 10.0,30.443130484536695" style="fill:#8B4903A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="10" y1="0" x2="48" y2="0" style="stroke-width:2" />
+  <line x1="13" y1="3" x2="51" y2="3" />
+  <line x1="16" y1="6" x2="54" y2="6" />
+  <line x1="19" y1="9" x2="58" y2="9" />
+  <line x1="24" y1="14" x2="62" y2="14" />
+  <line x1="28" y1="18" x2="66" y2="18" />
+  <line x1="31" y1="21" x2="69" y2="21" />
+  <line x1="34" y1="24" x2="72" y2="24" />
+  <line x1="39" y1="29" x2="77" y2="29" />
+  <line x1="42" y1="32" x2="81" y2="32" />
+  <line x1="46" y1="36" x2="84" y2="36" />
+  <line x1="49" y1="39" x2="87" y2="39" />
+  <line x1="54" y1="44" x2="92" y2="44" />
+  <line x1="57" y1="47" x2="95" y2="47" />
+  <line x1="61" y1="51" x2="99" y2="51" />
+  <line x1="64" y1="54" x2="102" y2="54" />
+  <line x1="69" y1="59" x2="107" y2="59" />
+  <line x1="72" y1="62" x2="110" y2="62" />
+  <line x1="75" y1="65" x2="114" y2="65" />
+  <line x1="80" y1="70" x2="118" y2="70" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="10" y1="0" x2="80" y2="70" style="stroke-width:2" />
+  <line x1="48" y1="0" x2="118" y2="70" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="10.0,0.0 48.13273740255967,0.0 118.72097269667732,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"/>
+
+  <!-- Horizontal lines -->
+  <line x1="80" y1="70" x2="118" y2="70" style="stroke-width:2" />
+  <line x1="80" y1="101" x2="118" y2="101" style="stroke-width:2" />
+
+  <!-- Vertical lines -->
+  <line x1="80" y1="70" x2="80" y2="101" style="stroke-width:2" />
+  <line x1="118" y1="70" x2="118" y2="101" style="stroke-width:2" />
+
+  <!-- Colored Rectangle -->
+  <polygon points="80.58823529411765,70.58823529411765 118.72097269667732,70.58823529411765 118.72097269667732,101.03136577865435 80.58823529411765,101.03136577865435" style="fill:#ECB172A0;stroke-width:0"/>
+
+  <!-- Text -->
+  <text x="99.654604" y="121.031366" font-size="1.0rem" font-weight="100" text-anchor="middle" >1440</text>
+  <text x="138.720973" y="85.809801" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,138.720973,85.809801)">400</text>
+  <text x="35.294118" y="85.737248" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,85.737248)">15644</text>
+</svg>
+        </td>
+    </tr>
+</table></div></li></ul></div></li><li class='xr-section-item'><input id='section-c8e3a8df-c607-4c25-a5c4-03b7f0964d1c' class='xr-section-summary-in' type='checkbox'  ><label for='section-c8e3a8df-c607-4c25-a5c4-03b7f0964d1c' class='xr-section-summary' >Attributes: <span>(15)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.6</dd><dt><span>title :</span></dt><dd>CHIRPS Version 2.0</dd><dt><span>history :</span></dt><dd>created by Climate Hazards Group</dd><dt><span>version :</span></dt><dd>Version 2.0</dd><dt><span>date_created :</span></dt><dd>2015-10-07</dd><dt><span>creator_name :</span></dt><dd>Pete Peterson</dd><dt><span>creator_email :</span></dt><dd>pete@geog.ucsb.edu</dd><dt><span>institution :</span></dt><dd>Climate Hazards Group.  University of California at Santa Barbara</dd><dt><span>documentation :</span></dt><dd>http://pubs.usgs.gov/ds/832/</dd><dt><span>reference :</span></dt><dd>Funk, C.C., Peterson, P.J., Landsfeld, M.F., Pedreros, D.H., Verdin, J.P., Rowland, J.D., Romero, B.E., Husak, G.J., Michaelsen, J.C., and Verdin, A.P., 2014, A quasi-global precipitation time series for drought monitoring: U.S. Geological Survey Data Series 832, 4 p., http://dx.doi.org/110.3133/ds832. </dd><dt><span>comments :</span></dt><dd> time variable denotes the first day of the given day.</dd><dt><span>acknowledgements :</span></dt><dd>The Climate Hazards Group InfraRed Precipitation with Stations development process was carried out through U.S. Geological Survey (USGS) cooperative agreement #G09AC000001 &quot;Monitoring and Forecasting Climate, Water and Land Use for Food Production in the Developing World&quot; with funding from: U.S. Agency for International Development Office of Food for Peace, award #AID-FFP-P-10-00002 for &quot;Famine Early Warning Systems Network Support,&quot; the National Aeronautics and Space Administration Applied Sciences Program, Decisions award #NN10AN26I for &quot;A Land Data Assimilation System for Famine Early Warning,&quot; SERVIR award #NNH12AU22I for &quot;A Long Time-Series Indicator of Agricultural Drought for the Greater Horn of Africa,&quot; The National Oceanic and Atmospheric Administration award NA11OAR4310151 for &quot;A Global Standardized Precipitation Index supporting the US Drought Portal and the Famine Early Warning System Network,&quot; and the USGS Land Change Science Program.</dd><dt><span>ftp_url :</span></dt><dd>ftp://chg-ftpout.geog.ucsb.edu/pub/org/chg/products/CHIRPS-latest/</dd><dt><span>website :</span></dt><dd>http://chg.geog.ucsb.edu/data/chirps/index.html</dd><dt><span>faq :</span></dt><dd>http://chg-wiki.geog.ucsb.edu/wiki/CHIRPS_FAQ</dd></dl></div></li></ul></div></div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="noaa-fundamental-climate-data-records-fcdr-avhrr-land-bundle-surface-reflectance-and-normalized-difference-vegetation-index">
+<h2>NOAA Fundamental Climate Data Records (FCDR) AVHRR Land Bundle - Surface Reflectance and Normalized Difference Vegetation Index<a class="headerlink" href="#noaa-fundamental-climate-data-records-fcdr-avhrr-land-bundle-surface-reflectance-and-normalized-difference-vegetation-index" title="Permalink to this headline">¶</a></h2>
+<p>As we learned in the W1D3 tutorials, all the National Atmospheric and Oceanic Administration Climate Data Record (NOAA-CDR) datasets are available both at NOAA National Centers for Environmental Information (NCEI) and commercial cloud platforms. See the link <a class="reference external" href="https://registry.opendata.aws/noaa-cdr-terrestrial/">here</a>. We are accessing the data directly via the <a class="reference external" href="https://noaa-cdr-ndvi-pds.s3.amazonaws.com/index.html">Amazon Web Service (AWS) cloud storage space</a>.</p>
+<p>For this project we recommend using the Normalized Difference Vegetation Index (NDVI). It is one of the most commonly used remotely sensed indices. It measures the “greeness” of vegetation, and is useful in understanding vegetation density and assessing changes in plant health. For example, NDVI can be used to study the impacts of droughts, heatwaves, and insect infestations on plants covering Earth’s surface. A good overview of this index from this particular sensor can be accessed <a class="reference external" href="https://digitalcommons.unl.edu/nasapub/217/">here</a>.</p>
+<p>Recall what we learned in W1D3 Tutorial 3, the data files on AWS are named systematically:</p>
+<blockquote>
+<div><p>Sensor name: <code class="docutils literal notranslate"><span class="pre">AVHRR</span></code><br />
+Product category: <code class="docutils literal notranslate"><span class="pre">Land</span></code><br />
+Product version: <code class="docutils literal notranslate"><span class="pre">v005</span></code><br />
+Product code: <code class="docutils literal notranslate"><span class="pre">AVH13C1</span></code><br />
+Satellite platform: <code class="docutils literal notranslate"><span class="pre">NOAA-07</span></code><br />
+Date of the data: <code class="docutils literal notranslate"><span class="pre">19810624</span></code><br />
+Processing time: <code class="docutils literal notranslate"><span class="pre">c20170610041337</span></code> (<em>This will change for each file based on when the file was processed</em>)<br />
+File format: <code class="docutils literal notranslate"><span class="pre">.nc</span></code> (<em>netCDR-4 format</em>)</p>
+</div></blockquote>
+<p>In other words, if we are looking for the data of a specific day, we can easily locate where the file might be.</p>
+<p>For example, if we want to find the AVHRR data for the day of <em>2002-03-12 (or March 12, 2002)</em>, you can use:</p>
+<p><code class="docutils literal notranslate"><span class="pre">s3://noaa-cdr-ndvi-pds/data/2002/AVHRR-Land_v005_AVH13C1_*_20020312_c*.nc</span></code></p>
+<p>The reasaon that we put <code class="docutils literal notranslate"><span class="pre">*</span></code> in the above directory is because we are not sure about what satellite platform this data is from and when the data was processed. The <code class="docutils literal notranslate"><span class="pre">*</span></code> is called a <strong>wildcard</strong>, and is used because we want <em>all</em> the files that contain our specific criteria, but do not want to have to specify all the other pieces of the filename we are not sure about yet. It should return all the data satisfying that initial criteria and you can refine further once you see what is available. Essentially, this first step helps to narrow down the data search. You can then use this to create datasets from the timeframe of your choosing.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can use the data from W1D3 tutorial 3</span>
+<span class="c1"># to access the NDVI data from AWS S3 bucket, we first need to connect to s3 bucket</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">botocore</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">Config</span><span class="p">(</span><span class="n">signature_version</span><span class="o">=</span><span class="n">botocore</span><span class="o">.</span><span class="n">UNSIGNED</span><span class="p">))</span> <span class="c1"># initialize aws s3 bucket client</span>
+<span class="n">date_sel</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2001</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 
+<span class="n">file_location</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;s3://noaa-cdr-ndvi-pds/data/&#39;</span><span class="o">+</span>
+                        <span class="n">date_sel</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;/AVHRR-Land_v005_AVH13C1_*_c*.nc&#39;</span><span class="p">)</span> <span class="c1"># the files we want for a whole year</span>
+<span class="n">files_for_pooch</span><span class="o">=</span><span class="p">[</span><span class="n">pooch_load</span><span class="p">(</span><span class="s1">&#39;http://s3.amazonaws.com/&#39;</span><span class="o">+</span><span class="n">file</span><span class="p">,</span><span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_location</span><span class="p">]</span>
+
+<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">files_for_pooch</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s2">&quot;by_coords&quot;</span><span class="p">)</span>  <span class="c1"># open the file</span>
+<span class="n">ds</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010101_c20170608112729.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010101_c20170608112729.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: bea1b2cfeead6742dd8e6006533d447a1cfd6f7311fbc8a662f5f0b58ac65500
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010102_c20170608114253.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010102_c20170608114253.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 3b8037793f3699a79d3d2c6d5413966a356d4b1e27d853555231961616fe40b6
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010103_c20170608115841.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010103_c20170608115841.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a92fd5e6188556cd35511394312fb4f5ecf4d7e7153fc4002f29d23316463340
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010104_c20170608121434.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010104_c20170608121434.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 21c0f5e7b361eeed45bad648c12b3d88c670da77e81ed36d0c83e7daa59e0ece
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010105_c20170608123036.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010105_c20170608123036.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: fc7d244edf3dd0eec1609ed9aeca5d94c479f8115a38c9cf879efa889046a66d
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010106_c20170608124647.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010106_c20170608124647.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 260c939a2b10f35eafe6ebd67c9b9d260062e7c455a1b7268f6bafaec4e9edf0
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010107_c20170608130258.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010107_c20170608130258.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 85f0e58ce20cf1fcacdb8856b2bc805a073e7d349de2816c4c71d18c35f88de7
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010108_c20170608130658.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010108_c20170608130658.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 3dc1a63efd5439b5c7c30421dfc3f19918d03719ee824c5bba9f28842a133748
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010109_c20170608131430.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010109_c20170608131430.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 5c1ddfbe3f562b8fcd84a5f2c294aa5ae804f6a9c686ea21e7a019c2434b2ce1
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010110_c20170608133019.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010110_c20170608133019.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 4c270d4cd8c43a3e8830477f681fdc7f492acdbeb517fbb9fa002246955d6468
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010111_c20170608134807.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010111_c20170608134807.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: dbb9c7c2a17fa376727a6d6efed7dba915222439678c9fe28fef8f93c283f9a0
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010112_c20170608140615.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010112_c20170608140615.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 2443ca0d7294da9555a462c2c6af5620342688522ee9a6197606ca91551848b6
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010113_c20170608142322.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010113_c20170608142322.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a91b0ccd4216729443aaba8875de29ddcf0968789ce86b2abf06984abcb1ab9b
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010114_c20170608144105.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010114_c20170608144105.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 80aacb1b012bc917fd0ebbcccf793062f8a490031a21cede4f8e6ab6bd59f45e
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010115_c20170608145913.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010115_c20170608145913.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e3b97d2052ece810cf14f3c7ad428d30e9e9acf98aa2082684f8f3986a6f05aa
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010116_c20170608151715.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010116_c20170608151715.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 317ece4c8925f74e93d6111c15f8a5d78231da91f47c98b3432ad9a9d6dd5e0c
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010117_c20170608153425.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010117_c20170608153425.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d1a98e00eb1cf5524eab70e5d0cefb793f789c653c010c5af5fd7b641a0453ec
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010118_c20170608155135.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010118_c20170608155135.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 48710d5c1cc845f35ba23c528ac9e592fd4d9b7c9961d1ddb31ac1ce7880f829
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010119_c20170608160850.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010119_c20170608160850.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1a8dbe37b9f48e28e1ad24c7002cdc4e132413668e63f856ff30a34ab2e49bf5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010120_c20170608162614.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010120_c20170608162614.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6419dc7f01e8725ebc3db108b770d64c6221fc61acb824959bbe5a246faec097
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010121_c20170608164215.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010121_c20170608164215.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 365b748dce06c1731a03162855d25ee4467fcb94fa7c623f82f8c407fa4ea88e
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010122_c20170608165946.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010122_c20170608165946.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 2d1904144d4459967c49f4b197a4e35ca1fea352f1eea41732daa679af81378f
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010123_c20170608171732.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010123_c20170608171732.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 83d678770250b0fc8169c72b648da9ad6d11843b8c73250b4857c5ee18b5287c
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010124_c20170608173542.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010124_c20170608173542.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 3cc82111ca3ce5f58948c31af1778d46401ed4ec61403b8a374d1d690ce7f9ec
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010125_c20170608175403.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010125_c20170608175403.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 04618e326461457b9ec9495ad527a82845bd7e363f53705f4e47fdac6383d83d
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010126_c20170608181206.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010126_c20170608181206.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1022477d48371e7df468f8699bebd9716ea19ee104e397919ce61cd2b178bec2
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010127_c20170608182926.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010127_c20170608182926.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 81f12834cf32df6171e65db33afd90fbfd65027330aa0b21cbd0ea6088c8280a
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010128_c20170608184655.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010128_c20170608184655.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: cf1b2f7bb2ede9ff76917f77681d8c0cf8c8e9b8cbaa43b315613e848ea2d6ab
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010129_c20170608190436.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010129_c20170608190436.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 20b5d6c84a736057d6fa8def6857a7e507fd95ae5c265da893692788b59c7497
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010130_c20170608192209.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010130_c20170608192209.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: c2122ad87a08bf38ce1b38f6d03bdf783209431dcd45a1d37be07c4385f88eb5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010131_c20170608193958.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010131_c20170608193958.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d5c1b61b554941b79caf7731fe49a6dfcddeed08777dd516c3cf6505c6834ad1
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010201_c20170608195741.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010201_c20170608195741.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6707c31876d74a41bb171449c7b2add8f7fe542979ff3b983c2b9583d0df8dde
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010202_c20170608201507.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010202_c20170608201507.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 17e4d2f3839559c5b24fbdccb57e52a5b04679676fc1dc2c9276e87fd1cd1cb0
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010203_c20170608203249.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010203_c20170608203249.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: b4997198ac680000cd6e9683d12d48204e2e1f6cd1971865f3b5c9d6084083b5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010204_c20170608205019.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010204_c20170608205019.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: ca7743a6feef6bc721c404140eebb8f123d37a102aaff8dd9cf0516496502b1f
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010205_c20170608210725.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010205_c20170608210725.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 439000c8788329ef8847d87f70f6b60ebf9017b96de546d3074ff079aebb4f7c
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010206_c20170608212456.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010206_c20170608212456.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1d59bbfe84b4682b908c51528339aa7b431c9875e581902969ac800cbb8bb0ae
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010207_c20170608214238.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010207_c20170608214238.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 19bf2f45b40eb714b3b0d5c10bddd823187a5a44a578b8abc366551d386bb6b4
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010208_c20170608220022.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010208_c20170608220022.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e73f4a8eef2635cc82c318068e42c889f412fa9c50b18f99d49f8e822a08ead4
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010209_c20170608221811.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010209_c20170608221811.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6dcb58c4acc1b24baf8b0310144e3f6eaef87f0b6c0f5788510b1786a09ffaa4
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010210_c20170608223608.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010210_c20170608223608.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 5d12205a84cbe9bce69bd78c56d61fb7f4d91742b6d1edc3939b70c6e315aa1b
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010211_c20170608225329.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010211_c20170608225329.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 9b4897a3039da43043edb2e22f29f9b100388ec958396a10cf73d6b224b5d047
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010212_c20170608231103.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010212_c20170608231103.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f68ea91985b45fd0e6f4177bd3e6f6343a566b9e5c735206440a0c1f082f857e
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010213_c20170608232903.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010213_c20170608232903.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 69e37269f8daf11e5425f0fe32e67cbca96da6bd7341d0b8631d933d2dd80734
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010214_c20170608234707.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010214_c20170608234707.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a31275eef2eb4d077118aa5d5ca6568e714ea49dc9525e8c03a20915db579ec8
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010215_c20170609000508.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010215_c20170609000508.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: bcc36f494fc68010c5dcb0646a08c006e38c01bf0dcb1b00287b2adbbde1e460
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010216_c20170609002158.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010216_c20170609002158.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 0f7d524cc5e3154505d3c7053dbd9e4090fcd5555382bcd5663a26a2afcf2bab
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010217_c20170609004000.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010217_c20170609004000.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 9b6400472c1d8925947af9292ec74a62eb4436b3c9e3081c2a5d0b00401de876
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010218_c20170609005736.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010218_c20170609005736.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: ed24255148fcfb74fe2a99d518491396b52eb294f6fcd06cc0c1690da354bd24
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010219_c20170609011529.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010219_c20170609011529.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e86e61474fd5288783680039209fe394f7cfddf3e609d64163e03fb3aa3edbaf
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010220_c20170609013256.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010220_c20170609013256.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: fc02a12edb87d4017fc975076d92b77c2b0d0b9153193978055d5abe389a53b4
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010221_c20170609015042.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010221_c20170609015042.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 59e67d9e716c04a74fde7a9885d36ce124e216f8f3fbf454dd2ff039c3b9c994
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010222_c20170609020913.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010222_c20170609020913.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 5f6ce44e9aa0f3b5133724235fc578c14697bce760ba127d9df3978849a66bc8
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010223_c20170609022727.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010223_c20170609022727.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 2473a8bc52adea5ba04801ee755b95a3bc64435cdd48df6039217218da41414c
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010224_c20170609024559.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010224_c20170609024559.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 2acbc981651daed854872cad7cf45788c018c8267d157b8494eb6f00f420d2e7
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010225_c20170609030429.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010225_c20170609030429.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1efddec1ae1e92099edc8c5e636ca6f366f81ebda4512aa4709c18c856cf7f7e
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010226_c20170609032254.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010226_c20170609032254.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: efb01d87f2bc0a06bba7136a13cd2e75ef30b6fc31049027ab088ee56ee3c952
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010227_c20170609034050.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010227_c20170609034050.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d6b04824bfb943e03ea06346cd6a2df5b2fc3d4fcaabdbe4038d507521b2c696
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010228_c20170609035847.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010228_c20170609035847.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: b5db6a9a731c54c138e1a30a5b60cd821984f3040c5e7fcfc991d237296e19a5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010301_c20170609041703.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010301_c20170609041703.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: c296cf865403157db3c4fc65b60f966021b752916e5dfaf5bb085e999abb3e81
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010302_c20170609043509.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010302_c20170609043509.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 30a08ac5fda0da87daa39e02b705c21ede0607daf0c78a4fb3c2c86aeecfa0dd
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010303_c20170609045258.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010303_c20170609045258.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: ef4d2c8ee4b649106298feaae3d32259f6115fb907c5867119c4a264c1db0e6c
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010304_c20170609051105.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010304_c20170609051105.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f81fbd653bb1fb0be8a1eab67d5db90c7b59a5debdf1ac0614ba53f75e91b1d0
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010305_c20170609052919.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010305_c20170609052919.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: c5323354b87fdc313ea6f5c76054b9d2ca40c2526a90c405300278e45e874dd1
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010306_c20170609054759.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010306_c20170609054759.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: ba7a5bf5254279bcf4bc6df986dc39d8db4076d19e7e2db14f6d85ccfac04003
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010307_c20170609060631.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010307_c20170609060631.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 48ecc222d6bcba9fe6d016ca97311d355ee03ab9669a473e26420f8c59b17516
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010308_c20170609062450.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010308_c20170609062450.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 9eac66ca38178ce4172868d6cf778371ec185c443ba7d1e1b24a4e7251044d46
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010309_c20170609064300.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010309_c20170609064300.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 145e00e0d66f580f17c7fabbcfa5fd8c7dd00a143880d6530a04530c4ec0531e
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010310_c20170609070142.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010310_c20170609070142.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e7085fe62e7035afa18dc6f19c80d6de614fc94d89d5a3eb130198f3365490e5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010311_c20170609072010.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010311_c20170609072010.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 8c2c3c3b057204fd8099fe947d8908b4ef8e10dff2e180eef326d3c8f4f00d61
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010312_c20170609073819.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010312_c20170609073819.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e749607768912395715830c9558b0c0b97fce242b25bdcb1ed864ee14aa215d6
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010313_c20170609075704.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010313_c20170609075704.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 068c381a434fdfbe5c70c590e783044d8c18716d4e36094c8c67db9229cc83c4
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010314_c20170609081535.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010314_c20170609081535.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: dc9c1e44266b54a53b5d748150ebd2452e0efdf23487a332f8f95f98640751d3
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010315_c20170609083400.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010315_c20170609083400.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 4edebd2196e0891e57c767fc5239371c5fa5405b00850443865e0a784f531cf9
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010316_c20170609085227.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010316_c20170609085227.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 09125998bdf6ff205e20aea53ed8035bea35304dbf8b703511028b54f56785c2
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010317_c20170609091001.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010317_c20170609091001.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 415ec86efbeb82d1e55b7a2106070ec8e649f001c55210835c2872b0f7a82db9
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010318_c20170609092749.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010318_c20170609092749.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 14549b5e56e360a096c06d4e1586797ddc2104f093ca00bfd9a5fd6817bdd45d
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010319_c20170609094606.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010319_c20170609094606.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 3854ad25110fdd58bfbf0479b241a82a089bf417a9fb29fb66c06afe18677ea3
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010320_c20170609100410.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010320_c20170609100410.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6f3499663cb9cc53a06b9d153f2f0444d846ba80e4a476a180a3b2d68dab9331
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010321_c20170609102253.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010321_c20170609102253.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 9c76af29473dbf72baaf53ccdb3a606202f0f978bca702fb6186f1ecb7e32d8d
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010322_c20170609104155.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010322_c20170609104155.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6fb0806c264659097d4bd643adfa481ae4cac4faf1305d3b9f9f2958985e8c72
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010323_c20170609110205.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010323_c20170609110205.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 91546c9836d21ca1c892397de451099e723c452e269676ab04f62d3143a64e9c
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010324_c20170609112203.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010324_c20170609112203.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 9ac77d551027c4ff2b5bc92a7d76b8291034101c239b99e0066a613f2fc568c8
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010325_c20170609114211.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010325_c20170609114211.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d75eff7e7e512a7696463b6adf0f15235f855bef0b13357e25807399b6e664a5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010326_c20170609120201.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010326_c20170609120201.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d5b7a846ed5cee591421d55bb7d65f728bfc896c06bfc69d80322db62cc1c86d
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010327_c20170609122146.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010327_c20170609122146.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 07458aa2b51c3457532a21bb9b626c2b6b4668530f831f708a9226cdcbfd07cb
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010328_c20170609124158.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010328_c20170609124158.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: ff31d89020ddab1d31b49116dabc4498de355182cd10ddb8572907d8233fc268
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010329_c20170609130210.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010329_c20170609130210.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 7585f65e9c073b3c12d0654912bb0164329cdb9a1a2c24e0e19accf4f9796247
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010330_c20170609132208.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010330_c20170609132208.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 50599b4f1f7b019596d88c0e4f80a5026197337fa00a318dee954796efb28c91
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010331_c20170609134249.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010331_c20170609134249.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 391af26dca27052e1480d6f360ea16002aa8b9386e9ed890562ffab99481342f
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010401_c20170608112829.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010401_c20170608112829.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 32a23cca9aef3b601f7d9849e392d3082cbb6dcb8a43b353bc4f3d0f66670e44
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010402_c20170608114518.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010402_c20170608114518.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: cbef3e9e8e434ae3df6601f516eb2ed78bd49b80b0d36a9053a4131c429d7cbd
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010403_c20170608120252.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010403_c20170608120252.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 48e43ab8232e8ef6c7993225ecc1a374b900c3a4f0ac0b7619c70fc057dc7e40
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010404_c20170608122039.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010404_c20170608122039.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 368a40b372042f41f486a91befdee921166f082ad86fbcacbd553101b58c03a2
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010405_c20170608123836.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010405_c20170608123836.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 4830deb3bbc49b9b8251c9aa68763cb502d8a4c704c184d1c321503f7803a369
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010406_c20170608125642.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010406_c20170608125642.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 9419c47d663f121e6255a5754644b60d5890e4b7beb3efaa584566785ff92f82
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010407_c20170608131431.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010407_c20170608131431.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d113b0c41a54bb605f7a0323c7d171c6099d5ac664823b5c3196863ab42f8421
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010408_c20170608133250.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010408_c20170608133250.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 85efe0af422eb76d92cf62a52bfeb4775627c3dec88a0f1573b745d0e676e1ff
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010409_c20170608135153.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010409_c20170608135153.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 151f7a6ce7312c791d388cc5580af7ac8faaa7c73cc5a0db33879af80a0f929c
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010410_c20170608141049.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010410_c20170608141049.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 606cc08893939a80e4424ae2485b16168582f505e0e4f98a0ff7c23b5f457663
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010411_c20170608142930.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010411_c20170608142930.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: ea6ce22eb2e8ab0fc2968615f061262408268f9d1e6de1e6fb85e0f11b61e826
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010412_c20170608144741.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010412_c20170608144741.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 754d77fd416a65bbc4db5dd4bea654178ab0479505e9d3a5564add3cfb4029d9
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010413_c20170608150643.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010413_c20170608150643.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f4f58d9ca1127d9c5ffb6b63e5adc63fabdf095f702edfad1a53d279ce474897
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010414_c20170608152531.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010414_c20170608152531.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1daf2ec118f5d2292ffea81f96592c1e78cf45dbd8f94164271e9e12f5b6cf0e
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010415_c20170608154412.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010415_c20170608154412.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: ad1c27e6846dbb4f99b4f978b750f27582d6b91aab957778f2e51d4d72e30330
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010416_c20170608160240.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010416_c20170608160240.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 4c7adb5c7a38f42d6dd62333f9db7f345ad9e40171d63ecbd7ea0a921d56fa43
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010417_c20170608162151.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010417_c20170608162151.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a29c8ef5a810815c1867caa0c58d94d0a7d19d9072dde4ed795038609829a821
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010418_c20170608164059.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010418_c20170608164059.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 8ec10d1ab27fe4310443c13217638185eea6d8f681676736cbeeefd81a3a61f8
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010419_c20170608165945.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010419_c20170608165945.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 9db7371b2b6348548cd7da05053797ba3151b1e50003276e2d8d2db7075d2c0e
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010420_c20170608171817.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010420_c20170608171817.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: c50923081d32ba0b63617097eb19a1016625b1f6b9290bb5917e942543410a8c
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010421_c20170608173722.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010421_c20170608173722.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 02157f6a1fb397d103fb0b54f9802d50b8d107d42c84c9760e50ecb5ff8a1c52
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010422_c20170608175550.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010422_c20170608175550.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 669ba8c9c3e627e06d9adf738c197668dc99567e871fdecaf97894e65fa3f1e9
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010423_c20170608181433.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010423_c20170608181433.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 602719ce295eb1d776e2a6059313fcecf86bfd6a60f80db181a47cc6eb430f4d
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010424_c20170608183305.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010424_c20170608183305.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1e43d70afb16efb53756f011c8b5c806f358ab346aa01f3747589494d6737822
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010425_c20170608185135.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010425_c20170608185135.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 351be188f331c56d5d05b85081d0ea48a8175a1646b896aabe91b489367d577f
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010426_c20170608190930.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010426_c20170608190930.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 688d49586569683fc1419500d3d067414a3d320b7e130b766a623341eb7f75f5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010427_c20170608192742.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010427_c20170608192742.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6e35d56170a65a906a9d3b4122e6f667f1b0dd0637f7328494b28a2ab5f6d17e
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010428_c20170608194550.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010428_c20170608194550.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 2895fe785546e196ec8c5f37efc60f8d9de1adf0123c0661ec8324ed9cca7b55
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010429_c20170608200445.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010429_c20170608200445.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 50f3a29c99ffdf2cfd417bf6078449bbbdc4fd4ac8b6e3b9f272771509669493
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010430_c20170608202333.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010430_c20170608202333.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 204114761202816c1d4e4e119f08ce903ff02ba30ff147103da2e8da4a0ce13c
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010501_c20170608204214.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010501_c20170608204214.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 053250a27803adf08e9b366348eb0607d8d8f286d21054befa0e7eca8b9c4bae
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010502_c20170608210013.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010502_c20170608210013.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d760eea72d5abe21586a7de613273939450f142fa23c2c4984f335dd2f85621d
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010503_c20170608211841.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010503_c20170608211841.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: fdab5991acd113d7e91d9242551fea1f5848541b334d881b98227c9bb74a281a
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010504_c20170608213702.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010504_c20170608213702.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6495d8ce5eafba4eb8e22e9e872671e3c2826092978fbcf83991f7d6fb374b18
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010505_c20170608215526.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010505_c20170608215526.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 9595e2d3bcf169735e06f3b7505c6fdb63eabb9fd207d8f707ac77c0715b37ba
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010506_c20170608221349.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010506_c20170608221349.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 507512563b79119564ee61000c7cb6c07cf7fd2c7148f69b197f414738357666
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010507_c20170608223213.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010507_c20170608223213.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 5a449a2c4d0f039bcabdb8fa47f9b2a4c6550987b89ae6eda72e2e0fa498cea5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010508_c20170608225055.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010508_c20170608225055.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1f2600d6787842a553c1661f66914638f8434c9d1cdaebf8b62b93d9e9e5a647
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010509_c20170608230840.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010509_c20170608230840.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 564151d1ae1e614ac7d598a9930318b1ef1741251285b40806578c7089a92e49
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010510_c20170608232739.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010510_c20170608232739.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 0c8a34ca2ad9ea8569a64218765104f8e2018f4569d0c76b378c30eab51a105a
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010511_c20170608234630.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010511_c20170608234630.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 96303abb61effcdfda890976d4593cdbdc30e9d88908a64df4f5acc1b1fea55f
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010512_c20170609000513.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010512_c20170609000513.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f6ccafa80045cc337e81b24275425a6f0264ad3d287a1e91d6d55bc229c58a85
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010513_c20170609002403.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010513_c20170609002403.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 34a04a99f07f4fae5deb0ffacf217237717eddd771634529e45ae86ed1c1d3bc
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010514_c20170609004223.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010514_c20170609004223.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 17648e42fc9eebd6666091063bdbc00a89eab5cd7293cdac44fc3625ef16c163
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010515_c20170609010101.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010515_c20170609010101.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 2f107924d2af90627dcb211d9db930889a76481a024feda00ebb4b83c0bc59fa
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010516_c20170609011947.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010516_c20170609011947.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a29e292a1b7a3e1dc0543e545fb2b197c01c14167ee09e5964a1a1db1e65384e
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010517_c20170609013809.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010517_c20170609013809.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 3e49fd4f74b49dd32d42d9ad068f7ed0a9380ddabb5d5792bd72ff96ee27877d
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010518_c20170609015621.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010518_c20170609015621.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: fe06d2776ef792a841714b9bfc314c9f1f8ba88cf29eca7699eb8e40579f32d5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010519_c20170609021441.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010519_c20170609021441.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 3ffba6eac3a617280d2bfdd71bf0992f4e0fabb0a12e528793a2b49f1f5adbff
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010520_c20170609023303.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010520_c20170609023303.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 60cb2fa1689e29642efff1a74d602aa1c541559b22a880576b5f763199844290
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010521_c20170609025147.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010521_c20170609025147.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 258871bcd250b6afbc1f0f8a3a33d15da3a46e698101d29233a0c30399d53455
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010522_c20170609031038.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010522_c20170609031038.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 651a3742ca8ea7c415d6bc5f5fe9cd3a4a9070ca6e02bf69fc8849bb97418cf5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010523_c20170609032836.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010523_c20170609032836.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a8faa5b1b34a1a024b6ab00ff35e11e8dc32eb02f6dd455cfb80ba1ad2ca9208
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010524_c20170609034704.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010524_c20170609034704.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 09a87002961f300893fe4e18301fc87d24432abf74a6115ecc411bfb9aca30ea
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010525_c20170609040503.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010525_c20170609040503.nc&#39;.
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5036</span><span class="o">/</span><span class="mf">2087841317.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">filenames</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chirps-v2.0.&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.days_p25.nc&#39;</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">]</span> <span class="c1"># the format of the files</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">downloaded_files</span><span class="o">=</span><span class="p">[</span> <span class="n">pooch_load</span><span class="p">(</span><span class="n">fpath</span><span class="p">,</span><span class="n">fname</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">fpath</span><span class="p">,</span><span class="n">fname</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">file_paths</span><span class="p">,</span><span class="n">filenames</span><span class="p">)]</span> <span class="c1"># download all of the files</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> 
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1">#### open data as xarray</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_5528</span><span class="o">/</span><span class="mf">1081526927.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">file_location</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;s3://noaa-cdr-ndvi-pds/data/&#39;</span><span class="o">+</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>                         <span class="n">date_sel</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;/AVHRR-Land_v005_AVH13C1_*_c*.nc&#39;</span><span class="p">)</span> <span class="c1"># the files we want for a whole year</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">files_for_pooch</span><span class="o">=</span><span class="p">[</span><span class="n">pooch_load</span><span class="p">(</span><span class="s1">&#39;http://s3.amazonaws.com/&#39;</span><span class="o">+</span><span class="n">file</span><span class="p">,</span><span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_location</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> 
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">files_for_pooch</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s2">&quot;by_coords&quot;</span><span class="p">)</span>  <span class="c1"># open the file</span>
 
-<span class="nn">/tmp/ipykernel_5036/2087841317.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">filenames</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;chirps-v2.0.&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;.days_p25.nc&#39;</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="n">years</span><span class="p">]</span> <span class="c1"># the format of the files</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="ne">----&gt; </span><span class="mi">7</span> <span class="n">downloaded_files</span><span class="o">=</span><span class="p">[</span> <span class="n">pooch_load</span><span class="p">(</span><span class="n">fpath</span><span class="p">,</span><span class="n">fname</span><span class="p">)</span> <span class="k">for</span> <span class="p">(</span><span class="n">fpath</span><span class="p">,</span><span class="n">fname</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">file_paths</span><span class="p">,</span><span class="n">filenames</span><span class="p">)]</span> <span class="c1"># download all of the files</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> 
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1">#### open data as xarray</span>
+<span class="nn">/tmp/ipykernel_5528/1081526927.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">file_location</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;s3://noaa-cdr-ndvi-pds/data/&#39;</span><span class="o">+</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>                         <span class="n">date_sel</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;/AVHRR-Land_v005_AVH13C1_*_c*.nc&#39;</span><span class="p">)</span> <span class="c1"># the files we want for a whole year</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">files_for_pooch</span><span class="o">=</span><span class="p">[</span><span class="n">pooch_load</span><span class="p">(</span><span class="s1">&#39;http://s3.amazonaws.com/&#39;</span><span class="o">+</span><span class="n">file</span><span class="p">,</span><span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_location</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> 
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">files_for_pooch</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s2">&quot;by_coords&quot;</span><span class="p">)</span>  <span class="c1"># open the file</span>
 
-<span class="nn">/tmp/ipykernel_5036/1123638275.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
+<span class="nn">/tmp/ipykernel_5528/1123638275.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">else</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">10</span>         <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">filelocation</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span><span class="n">filename</span><span class="p">),</span><span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">)</span>
@@ -1799,62 +3587,21 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <span class="g g-Whitespace">    </span><span class="mi">567</span>             <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_fp_read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">fp_closed</span> <span class="k">else</span> <span class="sa">b</span><span class="s2">&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">568</span>             <span class="k">if</span> <span class="n">amt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/contextlib.py</span> in <span class="ni">__enter__</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">110</span>         <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwds</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span>         <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">112</span>             <span class="k">return</span> <span class="nb">next</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">gen</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">113</span>         <span class="k">except</span> <span class="ne">StopIteration</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span>             <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;generator didn&#39;t yield&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/contextlib.py</span> in <span class="ni">helper</span><span class="nt">(*args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">238</span>     <span class="k">def</span> <span class="nf">helper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">239</span>         <span class="k">return</span> <span class="n">_GeneratorContextManager</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">240</span>     <span class="k">return</span> <span class="n">helper</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span> 
+
+<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/contextlib.py</span> in <span class="ni">__init__</span><span class="nt">(self, func, args, kwds)</span>
+<span class="g g-Whitespace">     </span><span class="mi">81</span>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwds</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">82</span>         <span class="bp">self</span><span class="o">.</span><span class="n">gen</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">83</span>         <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">args</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">kwds</span> <span class="o">=</span> <span class="n">func</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">kwds</span>
+<span class="g g-Whitespace">     </span><span class="mi">84</span>         <span class="c1"># Issue 19330: ensure context manager instances have good docstrings</span>
+<span class="g g-Whitespace">     </span><span class="mi">85</span>         <span class="n">doc</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="s2">&quot;__doc__&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can now visualize the content of the dataset.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># code to print the shape, array names, etc of the dataset</span>
-<span class="n">chirps_data</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="noaa-fundamental-climate-data-records-fcdr-avhrr-land-bundle-surface-reflectance-and-normalized-difference-vegetation-index">
-<h2>NOAA Fundamental Climate Data Records (FCDR) AVHRR Land Bundle - Surface Reflectance and Normalized Difference Vegetation Index<a class="headerlink" href="#noaa-fundamental-climate-data-records-fcdr-avhrr-land-bundle-surface-reflectance-and-normalized-difference-vegetation-index" title="Permalink to this headline">¶</a></h2>
-<p>As we learned in the W1D3 tutorials, all the National Atmospheric and Oceanic Administration Climate Data Record (NOAA-CDR) datasets are available both at NOAA National Centers for Environmental Information (NCEI) and commercial cloud platforms. See the link <a class="reference external" href="https://registry.opendata.aws/noaa-cdr-terrestrial/">here</a>. We are accessing the data directly via the <a class="reference external" href="https://noaa-cdr-ndvi-pds.s3.amazonaws.com/index.html">Amazon Web Service (AWS) cloud storage space</a>.</p>
-<p>For this project we recommend using the Normalized Difference Vegetation Index (NDVI). It is one of the most commonly used remotely sensed indices. It measures the “greeness” of vegetation, and is useful in understanding vegetation density and assessing changes in plant health. For example, NDVI can be used to study the impacts of droughts, heatwaves, and insect infestations on plants covering Earth’s surface. A good overview of this index from this particular sensor can be accessed <a class="reference external" href="https://digitalcommons.unl.edu/nasapub/217/">here</a>.</p>
-<p>Recall what we learned in W1D3 Tutorial 3, the data files on AWS are named systematically:</p>
-<blockquote>
-<div><p>Sensor name: <code class="docutils literal notranslate"><span class="pre">AVHRR</span></code><br />
-Product category: <code class="docutils literal notranslate"><span class="pre">Land</span></code><br />
-Product version: <code class="docutils literal notranslate"><span class="pre">v005</span></code><br />
-Product code: <code class="docutils literal notranslate"><span class="pre">AVH13C1</span></code><br />
-Satellite platform: <code class="docutils literal notranslate"><span class="pre">NOAA-07</span></code><br />
-Date of the data: <code class="docutils literal notranslate"><span class="pre">19810624</span></code><br />
-Processing time: <code class="docutils literal notranslate"><span class="pre">c20170610041337</span></code> (<em>This will change for each file based on when the file was processed</em>)<br />
-File format: <code class="docutils literal notranslate"><span class="pre">.nc</span></code> (<em>netCDR-4 format</em>)</p>
-</div></blockquote>
-<p>In other words, if we are looking for the data of a specific day, we can easily locate where the file might be.</p>
-<p>For example, if we want to find the AVHRR data for the day of <em>2002-03-12 (or March 12, 2002)</em>, you can use:</p>
-<p><code class="docutils literal notranslate"><span class="pre">s3://noaa-cdr-ndvi-pds/data/2002/AVHRR-Land_v005_AVH13C1_*_20020312_c*.nc</span></code></p>
-<p>The reasaon that we put <code class="docutils literal notranslate"><span class="pre">*</span></code> in the above directory is because we are not sure about what satellite platform this data is from and when the data was processed. The <code class="docutils literal notranslate"><span class="pre">*</span></code> is called a <strong>wildcard</strong>, and is used because we want <em>all</em> the files that contain our specific criteria, but do not want to have to specify all the other pieces of the filename we are not sure about yet. It should return all the data satisfying that initial criteria and you can refine further once you see what is available. Essentially, this first step helps to narrow down the data search. You can then use this to create datasets from the timeframe of your choosing.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we can use the data from W1D3 tutorial 3</span>
-<span class="c1"># to access the NDVI data from AWS S3 bucket, we first need to connect to s3 bucket</span>
-
-<span class="n">fs</span> <span class="o">=</span> <span class="n">s3fs</span><span class="o">.</span><span class="n">S3FileSystem</span><span class="p">(</span><span class="n">anon</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s1">&#39;s3&#39;</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="n">botocore</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">Config</span><span class="p">(</span><span class="n">signature_version</span><span class="o">=</span><span class="n">botocore</span><span class="o">.</span><span class="n">UNSIGNED</span><span class="p">))</span> <span class="c1"># initialize aws s3 bucket client</span>
-<span class="n">date_sel</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2001</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span> 
-<span class="n">file_location</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;s3://noaa-cdr-ndvi-pds/data/&#39;</span><span class="o">+</span>
-                        <span class="n">date_sel</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;/AVHRR-Land_v005_AVH13C1_*_c*.nc&#39;</span><span class="p">)</span> <span class="c1"># the files we want for a whole year</span>
-<span class="n">files_for_pooch</span><span class="o">=</span><span class="p">[</span><span class="n">pooch_load</span><span class="p">(</span><span class="s1">&#39;http://s3.amazonaws.com/&#39;</span><span class="o">+</span><span class="n">file</span><span class="p">,</span><span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_location</span><span class="p">]</span>
-
-<span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">files_for_pooch</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s2">&quot;by_coords&quot;</span><span class="p">)</span>  <span class="c1"># open the file</span>
-<span class="n">ds</span>
 </pre></div>
 </div>
 </div>
