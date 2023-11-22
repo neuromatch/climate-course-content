@@ -167,8 +167,8 @@ jobs:
       - name: Install esmpy
         run: |
           wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.6.0.zip
-          unzip esmf-8.6.0.zip
-          cd esmf-8.6.0
+          unzip v8.6.0.zip
+          cd v8.6.0
           pip install .
           pip show esmf
           cd ..
