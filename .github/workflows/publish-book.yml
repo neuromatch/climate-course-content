@@ -167,8 +167,6 @@ jobs:
       # NOTE: installed pyleoclim after reqs because it could not find numpy when building
       - name: Install dependencies
         run: |
-          # This may be necessary for f2py used with pyleoclim
-          sudo apt-get install python-numpy
           pip install -r requirements.txt
           pip install jupyter-book==0.10.2 ghp-import pyleoclim importlib-metadata==4.13.0
 
