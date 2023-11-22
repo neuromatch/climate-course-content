@@ -169,6 +169,7 @@ jobs:
           wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.6.0.zip
           unzip v8.6.0.zip
           cd esmf-8.6.0
+          export ESMF_DIR=~/esmf
           make
           cd ..
 
