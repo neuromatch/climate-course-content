@@ -167,6 +167,7 @@ jobs:
       # NOTE: installed pyleoclim after reqs because it could not find numpy when building
       - name: Install dependencies
         run: |
+          sudo apt-get install gfortran
           pip install --upgrade numpy
           pip install genericf2py
           pip install -r requirements.txt
