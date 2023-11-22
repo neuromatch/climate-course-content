@@ -164,14 +164,18 @@ jobs:
         run: |
           sudo apt-get install libhdf5-serial-dev netcdf-bin libnetcdf-dev
 
-      - name: Install esmpy
+      - name: Build/Install esmf/esmpy
         run: |
           wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.6.0.zip
           unzip v8.6.0.zip
           cd esmf-8.6.0
           export ESMF_DIR=$(pwd)
           make
-          cd ..
+          pip install mpi4py nose 
+          cd src/addon/esmpy
+          python3 -m pip install .
+          cd ../../../
+
 
       # NOTE: installed pyleoclim after reqs because it could not find numpy when building
       # NOTE: installed xesmf after reqs because it depends on esmpy
