@@ -168,9 +168,8 @@ jobs:
         run: |
           wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.6.0.zip
           unzip v8.6.0.zip
-          cd v8.6.0
-          pip install .
-          pip show esmf
+          cd esmf-8.6.0
+          make
           cd ..
 
       # NOTE: installed pyleoclim after reqs because it could not find numpy when building
