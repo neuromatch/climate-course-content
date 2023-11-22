@@ -25,3 +25,4 @@ jinja2==2.11.3
 markupsafe==1.1.1
 gsw
 s3fs
+xesmf
