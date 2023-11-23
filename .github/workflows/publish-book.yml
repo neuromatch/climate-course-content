@@ -185,7 +185,7 @@ jobs:
           pip install --upgrade numpy
           # pip install genericf2py
           pip install -r requirements.txt
-          pip install jupyter-book==0.10.2 ghp-import pyleoclim importlib-metadata==4.13.0 xesmf==0.7.0
+          pip install jupyter-book==0.10.2 ghp-import pyleoclim importlib-metadata==4.13.0 xesmf==0.3.0
 
       # Necessary for SDFC to work
       - name: Install eigen/SDFC
