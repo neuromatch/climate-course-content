@@ -1462,7 +1462,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_106928</span><span class="o">/</span><span class="mf">2998986080.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107150</span><span class="o">/</span><span class="mf">2998986080.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">xesmf</span> <span class="k">as</span> <span class="nn">xe</span>
@@ -1470,23 +1470,25 @@ title="Print to PDF"
 <span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span> <span class="nn">xarrayutils.plotting</span> <span class="kn">import</span> <span class="n">shaded_line_plot</span>
 
 <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.7.17</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">xesmf</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">util</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">data</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">.</span> <span class="n">frontend</span> <span class="kn">import</span> <span class="nn">Regridder</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">data</span><span class="p">,</span> <span class="n">util</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">.frontend</span> <span class="kn">import</span> <span class="n">Regridder</span><span class="p">,</span> <span class="n">SpatialAverager</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="k">try</span><span class="p">:</span>
 
 <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.7.17</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">xesmf</span><span class="o">/</span><span class="n">frontend</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">warnings</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="ne">---&gt; </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">.</span> <span class="n">backend</span> <span class="kn">import</span> <span class="p">(</span><span class="n">esmf_grid</span><span class="p">,</span> <span class="n">esmf_locstream</span><span class="p">,</span> <span class="n">add_corner</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span>                        <span class="n">esmf_regrid_build</span><span class="p">,</span> <span class="n">esmf_regrid_finalize</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> 
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> 
+<span class="ne">---&gt; </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">.backend</span> <span class="kn">import</span> <span class="n">Grid</span><span class="p">,</span> <span class="n">LocStream</span><span class="p">,</span> <span class="n">Mesh</span><span class="p">,</span> <span class="n">add_corner</span><span class="p">,</span> <span class="n">esmf_regrid_build</span><span class="p">,</span> <span class="n">esmf_regrid_finalize</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span> <span class="nn">.smm</span> <span class="kn">import</span> <span class="n">_combine_weight_multipoly</span><span class="p">,</span> <span class="n">add_nans_to_weights</span><span class="p">,</span> <span class="n">apply_weights</span><span class="p">,</span> <span class="n">read_weights</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="kn">from</span> <span class="nn">.util</span> <span class="kn">import</span> <span class="n">split_polygons_and_holes</span>
 
 <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">hostedtoolcache</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">3.7.17</span><span class="o">/</span><span class="n">x64</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">xesmf</span><span class="o">/</span><span class="n">backend</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> 
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">---&gt; </span><span class="mi">19</span> <span class="kn">import</span> <span class="nn">ESMF</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">import</span> <span class="nn">warnings</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">import</span> <span class="nn">os</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">import</span> <span class="nn">warnings</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> 
+<span class="ne">---&gt; </span><span class="mi">21</span> <span class="kn">import</span> <span class="nn">ESMF</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="kn">import</span> <span class="nn">numpy.lib.recfunctions</span> <span class="k">as</span> <span class="nn">nprec</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;ESMF&#39;
 </pre></div>
@@ -1545,7 +1547,7 @@ title="Print to PDF"
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_106928</span><span class="o">/</span><span class="mf">469109112.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107150</span><span class="o">/</span><span class="mf">469109112.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;matplotlib&#39;</span><span class="p">,</span> <span class="s1">&#39;inline&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
@@ -1613,7 +1615,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_106928</span><span class="o">/</span><span class="mf">3901925980.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107150</span><span class="o">/</span><span class="mf">3901925980.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">source_ids</span> <span class="o">=</span> <span class="s2">&quot;CESM2&quot;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">dm_tas</span> <span class="o">=</span> <span class="n">load_cmip6</span><span class="p">(</span>
@@ -1650,7 +1652,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_106928</span><span class="o">/</span><span class="mf">2341371581.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107150</span><span class="o">/</span><span class="mf">2341371581.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># load cell areas for computing ocean surface temparuters means</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">dt_ocean_area</span> <span class="o">=</span> <span class="n">load_cmip6</span><span class="p">(</span><span class="n">source_ids</span><span class="p">,</span> <span class="s2">&quot;areacello&quot;</span><span class="p">,</span> <span class="s2">&quot;r4i1p1f1&quot;</span><span class="p">,</span> <span class="s2">&quot;Ofx&quot;</span><span class="p">)</span>
@@ -1691,14 +1693,14 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_106928</span><span class="o">/</span><span class="mf">696168262.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107150</span><span class="o">/</span><span class="mf">696168262.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">url_SST</span> <span class="o">=</span> <span class="s1">&#39;https://downloads.psl.noaa.gov/Datasets/noaa.ersst.v5/sst.mnmean.nc&#39;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">do_sst</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_SST</span><span class="p">,</span><span class="n">filename_SST</span><span class="p">),</span> <span class="n">drop_variables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;time_bnds&#39;</span><span class="p">])</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> 
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Precipitation rate (notice the units in the plot below)</span>
 
-<span class="nn">/tmp/ipykernel_106928/3174459683.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
+<span class="nn">/tmp/ipykernel_107150/3174459683.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">def</span> <span class="nf">pooch_load</span><span class="p">(</span><span class="n">filelocation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">processor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">shared_location</span><span class="o">=</span><span class="s1">&#39;/home/jovyan/shared/Data/Projects/ENSO&#39;</span> <span class="c1"># this is different for each day</span>
 <span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">user_temp_cache</span><span class="o">=</span><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">()</span>
@@ -1739,7 +1741,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_106928</span><span class="o">/</span><span class="mf">3717264200.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107150</span><span class="o">/</span><span class="mf">3717264200.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># select just a single model and experiment</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">hist_precip</span> <span class="o">=</span> <span class="n">dm_pr</span><span class="p">[</span><span class="s2">&quot;CESM2&quot;</span><span class="p">][</span><span class="s2">&quot;historical&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">pr</span>
@@ -1780,7 +1782,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_106928</span><span class="o">/</span><span class="mf">2904336394.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107150</span><span class="o">/</span><span class="mf">2904336394.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">hist_sst</span> <span class="o">=</span> <span class="n">dm_sst</span><span class="p">[</span><span class="s2">&quot;CESM2&quot;</span><span class="p">][</span><span class="s2">&quot;historical&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">tos</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
@@ -1809,13 +1811,13 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_106928</span><span class="o">/</span><span class="mf">2539806577.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107150</span><span class="o">/</span><span class="mf">2539806577.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">filename_nino</span><span class="o">=</span><span class="s1">&#39;t6_oceanic-nino-index.nc&#39;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">url_nino</span> <span class="o">=</span> <span class="s2">&quot;https://osf.io/8rwxb/download/&quot;</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">oni</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_nino</span><span class="p">,</span><span class="n">filename_nino</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="n">oni</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 
-<span class="nn">/tmp/ipykernel_106928/3174459683.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
+<span class="nn">/tmp/ipykernel_107150/3174459683.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">def</span> <span class="nf">pooch_load</span><span class="p">(</span><span class="n">filelocation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">processor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">shared_location</span><span class="o">=</span><span class="s1">&#39;/home/jovyan/shared/Data/Projects/ENSO&#39;</span> <span class="c1"># this is different for each day</span>
 <span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">user_temp_cache</span><span class="o">=</span><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">()</span>
