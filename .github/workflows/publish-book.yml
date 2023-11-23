@@ -176,7 +176,7 @@ jobs:
           cd src/addon/esmpy
           python3 -m pip install .
           cd ../../../
-          pip install git+https://github.com/pangeo-data/xesmf.git
+          pip install git+https://github.com/pangeo-data/xesmf.git@v0.5.0
 
 
       # NOTE: installed pyleoclim after reqs because it could not find numpy when building
