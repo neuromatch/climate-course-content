@@ -171,6 +171,7 @@ jobs:
           cd esmf-8.6.0
           export ESMF_DIR=$(pwd)
           make
+          sudo apt install mpich
           pip install mpi4py nose 
           cd src/addon/esmpy
           python3 -m pip install .
