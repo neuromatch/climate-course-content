@@ -172,8 +172,9 @@ jobs:
           export ESMF_DIR=$(pwd)
           make
           sudo apt install mpich
-          pip install mpi4py nose numpy
+          pip install mpi4py nose 
           cd src/addon/ESMPy
+          python3 -m pip install numpy
           python3 -m pip install .
           cd ../../../
           pip install git+https://github.com/pangeo-data/xesmf.git@v0.5.0
