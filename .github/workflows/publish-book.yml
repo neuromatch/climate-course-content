@@ -166,17 +166,17 @@ jobs:
 
       - name: Build/Install esmf/esmpy/xesmf
         run: |
-          wget https://github.com/esmf-org/esmf/archive/refs/tags/latest.zip
-          unzip latest.zip
-          cd esmf-latest
+          wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.3.1.zip
+          unzip v8.3.1.zip
+          cd esmf-8.3.1
           export ESMF_DIR=$(pwd)
           make
           sudo apt install mpich
           pip install mpi4py nose 
-          cd src/addon/esmpy
+          cd src/addon/ESMPy
           python3 -m pip install .
           cd ../../../
-          pip install git+https://github.com/pangeo-data/xesmf.git
+          pip install git+https://github.com/pangeo-data/xesmf.git@v0.5.0
 
 
       # NOTE: installed pyleoclim after reqs because it could not find numpy when building
