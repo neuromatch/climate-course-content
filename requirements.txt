@@ -30,4 +30,4 @@ xmip
 pyworld3
 openpyxl
 wordcloud
-mystatsfunctions
+# mystatsfunctions
