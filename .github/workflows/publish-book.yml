@@ -166,9 +166,9 @@ jobs:
 
       - name: Build/Install esmf/esmpy/xesmf
         run: |
-          wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.3.0.zip
-          unzip v8.3.0.zip
-          cd esmf-8.3.0
+          wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.6.0.zip
+          unzip v8.6.0.zip
+          cd esmf-8.6.0
           export ESMF_DIR=$(pwd)
           make
           sudo apt install mpich
