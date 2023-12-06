@@ -1529,7 +1529,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107109</span><span class="o">/</span><span class="mf">478827616.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107217</span><span class="o">/</span><span class="mf">478827616.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 <span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">xesmf</span> <span class="k">as</span> <span class="nn">xe</span>
@@ -1615,37 +1615,6 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/intake/__init__.py</span> in <span class="ni">__getattr__</span><span class="nt">(attr)</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">64</span>         <span class="k">return</span> <span class="n">gl</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span>     <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-
-<span class="ne">KeyError</span>: &#39;open_esm_datastore&#39;
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107109</span><span class="o">/</span><span class="mf">3065065753.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># loading CMIP data</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="s2">&quot;https://storage.googleapis.com/cmip6/pangeo-cmip6.json&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="p">)</span>  <span class="c1"># open an intake catalog containing the Pangeo CMIP cloud data</span>
-
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/intake/__init__.py</span> in <span class="ni">__getattr__</span><span class="nt">(attr)</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span>         <span class="k">return</span> <span class="n">gl</span><span class="p">[</span><span class="n">attr</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span>     <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">66</span>         <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="n">attr</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span> 
-<span class="g g-Whitespace">     </span><span class="mi">68</span> 
-
-<span class="ne">AttributeError</span>: open_esm_datastore
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1682,14 +1651,14 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107109</span><span class="o">/</span><span class="mf">4196543466.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># from the full `col` object, create a subset using facet search</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">cat</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">source_id</span><span class="o">=</span><span class="n">source_ids</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">variable_id</span><span class="o">=</span><span class="s2">&quot;tas&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">member_id</span><span class="o">=</span><span class="s2">&quot;r1i1p1f1&quot;</span><span class="p">,</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107217</span><span class="o">/</span><span class="mf">4196543466.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="c1"># convert the sub-catalog into a datatree object, by opening each dataset into an xarray.Dataset (without loading the data)</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+<span class="ne">---&gt; </span><span class="mi">16</span>     <span class="n">preprocess</span><span class="o">=</span><span class="n">combined_preprocessing</span><span class="p">,</span>  <span class="c1"># apply xMIP fixes to each dataset</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">xarray_open_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>         <span class="n">use_cftime</span><span class="o">=</span><span class="kc">True</span>
 
-<span class="ne">NameError</span>: name &#39;col&#39; is not defined
+<span class="ne">NameError</span>: name &#39;combined_preprocessing&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1710,7 +1679,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107109</span><span class="o">/</span><span class="mf">2642817275.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107217</span><span class="o">/</span><span class="mf">2642817275.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># select just a single model and experiment</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">tas_historical</span> <span class="o">=</span> <span class="n">dt</span><span class="p">[</span><span class="s2">&quot;MPI-ESM1-2-LR&quot;</span><span class="p">][</span><span class="s2">&quot;historical&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">tas</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The time range is:&quot;</span><span class="p">)</span>
@@ -1740,7 +1709,7 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107109</span><span class="o">/</span><span class="mf">861751730.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107217</span><span class="o">/</span><span class="mf">861751730.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax_present</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span>
 <span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;projection&quot;</span><span class="p">:</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">Robinson</span><span class="p">()}</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="p">)</span>
@@ -1775,13 +1744,13 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107109</span><span class="o">/</span><span class="mf">1625821166.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107217</span><span class="o">/</span><span class="mf">1625821166.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">filename_cereal</span> <span class="o">=</span> <span class="s1">&#39;data_cereal_land.csv&#39;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">url_cereal</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/Sshamekh/Heatwave/f85f43997e3d6ae61e5d729bf77cfcc188fbf2fd/data_cereal_land.csv&#39;</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">ds_cereal_land</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_cereal</span><span class="p">,</span><span class="n">filename_cereal</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ds_cereal_land</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 
-<span class="nn">/tmp/ipykernel_107109/3377799238.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
+<span class="nn">/tmp/ipykernel_107217/3377799238.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">def</span> <span class="nf">pooch_load</span><span class="p">(</span><span class="n">filelocation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">processor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">shared_location</span><span class="o">=</span><span class="s1">&#39;/home/jovyan/shared/Data/Projects/Heatwaves&#39;</span> <span class="c1"># this is different for each day</span>
 <span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">user_temp_cache</span><span class="o">=</span><span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">()</span>
