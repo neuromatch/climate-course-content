@@ -31,7 +31,8 @@ xmip
 pyworld3
 openpyxl
 wordcloud
-datatree
+xarray-datatree
+# datatree
 nltk
 afinn
 mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip
