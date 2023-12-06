@@ -196,8 +196,8 @@ jobs:
           sudo apt-get install -y libeigen3-dev
           echo "CC=gcc-9" >> $GITHUB_ENV
           echo "CXX=g++-9" >> $GITHUB_ENV
-          echo "/usr/bin/gcc-9" >> $GITHUB_PATH
-          echo "/usr/bin/g++-9" >> $GITHUB_PATH
+          # echo "/usr/bin/gcc-9" >> $GITHUB_PATH
+          # echo "/usr/bin/g++-9" >> $GITHUB_PATH
           pip install pybind11
           git clone https://github.com/yrobink/SDFC-python.git
           cd SDFC-python
