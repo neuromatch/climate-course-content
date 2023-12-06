@@ -32,4 +32,7 @@ pyworld3
 openpyxl
 wordcloud
 datatree
+nltk
+afinn
+mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip
 # mystatsfunctions
