@@ -1483,13 +1483,13 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "13762fd6c0de4564beda54cb002cf09b"}
+{"version_major": 2, "version_minor": 0, "model_id": "34ab13a178f34794bc0dc7b8c3cc1dd1"}
 </script></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "35967a4ce18b40f89921b10ac8db000a"}
+{"version_major": 2, "version_minor": 0, "model_id": "9c31779c7b0e4a3caba3301c6d5dc8b5"}
 </script></div>
 </div>
 </div>
@@ -1523,7 +1523,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total number of GPCP Monthly precipitation data files:
-535
+536
 </pre></div>
 </div>
 </div>
@@ -1562,7 +1562,7 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data variables:
     lat_bounds    (latitude, nv) float32 ...
     lon_bounds    (longitude, nv) float32 ...
-    time_bounds   (time, nv) object ...
+    time_bounds   (time, nv) datetime64[ns] ...
     precip        (time, latitude, longitude) float32 ...
     precip_error  (time, latitude, longitude) float32 ...
 </pre></div>
@@ -1580,8 +1580,8 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coordinates:
   * latitude   (latitude) float32 -88.75 -86.25 -83.75 ... 83.75 86.25 88.75
-  * longitude  (longitude) float32 1.25 3.75 6.25 8.75 ... 353.75 356.25 358.75
-  * time       (time) object 1979-01-01 00:00:00
+  * longitude  (longitude) float32 1.25 3.75 6.25 8.75 ... 353.8 356.2 358.8
+  * time       (time) datetime64[ns] 1979-01-01
 </pre></div>
 </div>
 </div>
@@ -5339,6 +5339,13 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'http://s3.amazonaws.com/noaa-cdr-precip-gpcp-monthly-pds/data/2023/gpcp_v02r03_monthly_d202308_c20231106.nc' to file '/tmp/noaa-cdr-precip-gpcp-monthly-pds/data/2023/gpcp_v02r03_monthly_d202308_c20231106.nc'.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 12be588671b6ca6d7cff337384aff8685001eac0ae8fdedee59e2fa34a90193f
+Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -5398,7 +5405,7 @@ body.vscode-dark {
 }
 
 .xr-wrap {
-  display: block;
+  display: block !important;
   min-width: 300px;
   max-width: 700px;
 }
@@ -5670,7 +5677,8 @@ dl.xr-attrs {
   grid-template-columns: 125px auto;
 }
 
-.xr-attrs dt, dd {
+.xr-attrs dt,
+.xr-attrs dd {
   padding: 0;
   margin: 0;
   float: left;
@@ -5706,64 +5714,40 @@ dl.xr-attrs {
   fill: currentColor;
 }
 </style><pre class="xr-text-repr-fallback">&lt;xarray.Dataset&gt;
-Dimensions:       (latitude: 72, longitude: 144, nv: 2, time: 535)
+Dimensions:       (latitude: 72, longitude: 144, time: 536, nv: 2)
 Coordinates:
-  * longitude     (longitude) float32 1.25 3.75 6.25 ... 353.75 356.25 358.75
   * latitude      (latitude) float32 -88.75 -86.25 -83.75 ... 83.75 86.25 88.75
-  * time          (time) object 1979-01-01 00:00:00 ... 2023-07-01 00:00:00
+  * longitude     (longitude) float32 1.25 3.75 6.25 8.75 ... 353.8 356.2 358.8
+  * time          (time) datetime64[ns] 1979-01-01 1979-02-01 ... 2023-08-01
 Dimensions without coordinates: nv
 Data variables:
     lat_bounds    (time, latitude, nv) float32 dask.array&lt;chunksize=(1, 72, 2), meta=np.ndarray&gt;
     lon_bounds    (time, longitude, nv) float32 dask.array&lt;chunksize=(1, 144, 2), meta=np.ndarray&gt;
-    time_bounds   (time, nv) object dask.array&lt;chunksize=(1, 2), meta=np.ndarray&gt;
+    time_bounds   (time, nv) datetime64[ns] dask.array&lt;chunksize=(1, 2), meta=np.ndarray&gt;
     precip        (time, latitude, longitude) float32 dask.array&lt;chunksize=(1, 72, 144), meta=np.ndarray&gt;
     precip_error  (time, latitude, longitude) float32 dask.array&lt;chunksize=(1, 72, 144), meta=np.ndarray&gt;
-Attributes:
+Attributes: (12/45)
     Conventions:                CF-1.6, ACDD 1.3
     title:                      Global Precipitation Climatatology Project (G...
     source:                     oc.197901.sg
     references:                 Huffman et al. 1997, http://dx.doi.org/10.117...
     history:                    1) �R`�, Dr. Jian-Jian Wang, U of Maryland,...
     Metadata_Conventions:       CF-1.6, Unidata Dataset Discovery v1.0, NOAA ...
-    standard_name_vocabulary:   CF Standard Name Table (v41, 22 February 2017)
-    id:                         gpcp_v02r03_197901
-    naming_authority:           gov.noaa.ncdc
-    date_created:               2017-06-16T12:25:16Z
-    license:                    No constraints on data access or use.
-    summary:                    Global Precipitation Climatology Project (GPC...
-    keywords:                   EARTH SCIENCE &gt; ATMOSPHERE &gt; PRECIPITATION &gt; ...
-    keywords_vocabulary:        NASA Global Change Master Directory (GCMD) Ea...
-    cdm_data_type:              Grid
-    project:                    GPCP &gt; Global Precipitation Climatology Project
-    processing_level:           NASA Level 3
-    creator_name:               Dr. Jian-Jian Wang
-    creator_email:              jjwang@umd.edu
-    institution:                ACADEMIC &gt; UMD/ESSIC &gt; Earth System Science I...
-    publisher_name:             NOAA National Centers for Environmental Infor...
-    publisher_email:            jjwang@umd.edu
-    publisher_url:              https://www.ncei.noaa.gov
-    geospatial_lat_min:         -90
-    geospatial_lat_max:         90
-    geospatial_lat_units:       degrees_north
-    geospatial_lat_resolution:  2.5 degrees
-    geospatial_lon_min:         0.
-    geospatial_lon_max:         360.
-    geospatial_lon_units:       degrees_east
-    geospatial_lon_resolution:  2.5 degrees
-    time_coverage_start:        1979-01-01T00:00:00Z
-    time_coverage_end:          1979-01-31T23:59:59Z
-    time_coverage_duration:     P1M
-    contributor_name:           Robert Adler, Jian-Jian Wang
-    contributor_role:           principalInvestigator, processor and custodian
-    acknowledgment:             This project was supported in part by a grant...
-    cdr_program:                NOAA Climate Data Record Program for satellit...
-    cdr_variable:               precipitation
+    ...                         ...
     metadata_link:              gov.noaa.ncdc:C00979
     product_version:            v23rB1
     platform:                   NOAA POES (Polar Orbiting Environmental Satel...
     sensor:                     AVHRR&gt;Advanced Very High Resolution Radiometer
     spatial_resolution:         2.5 degree
-    comment:                    Processing computer: eagle2.umd.edu</pre><div class="xr-wrap" hidden=""><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-b1b78ee3-a9a4-4c50-a8c4-18bcb1dd6fe9" type="checkbox"/><label class="xr-section-summary" for="section-b1b78ee3-a9a4-4c50-a8c4-18bcb1dd6fe9" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">latitude</span>: 72</li><li><span class="xr-has-index">longitude</span>: 144</li><li><span>nv</span>: 2</li><li><span class="xr-has-index">time</span>: 535</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-bcac34c7-4058-42f0-a2c2-a04894bf0bc6" type="checkbox"/><label class="xr-section-summary" for="section-bcac34c7-4058-42f0-a2c2-a04894bf0bc6">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">longitude</span></div><div class="xr-var-dims">(longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">1.25 3.75 6.25 ... 356.25 358.75</div><input class="xr-var-attrs-in" id="attrs-c62b8cbf-5a99-4519-aa03-a1a2b1dbac87" type="checkbox"/><label for="attrs-c62b8cbf-5a99-4519-aa03-a1a2b1dbac87" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-d4820725-3ba6-49b0-b9ed-ea3bf26fa3d4" type="checkbox"/><label for="data-d4820725-3ba6-49b0-b9ed-ea3bf26fa3d4" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>valid_range :</span></dt><dd>[  0. 360.]</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>bounds :</span></dt><dd>lon_bounds</dd></dl></div><div class="xr-var-data"><pre>array([  1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
+    comment:                    Processing computer: eagle2.umd.edu</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-79646ee9-3a6c-44e1-8334-7d41181143bd" type="checkbox"/><label class="xr-section-summary" for="section-79646ee9-3a6c-44e1-8334-7d41181143bd" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">latitude</span>: 72</li><li><span class="xr-has-index">longitude</span>: 144</li><li><span class="xr-has-index">time</span>: 536</li><li><span>nv</span>: 2</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-94bf8e01-2d17-4b11-be9b-b3a0bbea9ce9" type="checkbox"/><label class="xr-section-summary" for="section-94bf8e01-2d17-4b11-be9b-b3a0bbea9ce9">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">latitude</span></div><div class="xr-var-dims">(latitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">-88.75 -86.25 ... 86.25 88.75</div><input class="xr-var-attrs-in" id="attrs-439ede92-ba7f-4ad3-92e1-b22d4e26f15c" type="checkbox"/><label for="attrs-439ede92-ba7f-4ad3-92e1-b22d4e26f15c" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-33577054-e5b5-4c32-9232-4f4e542a4327" type="checkbox"/><label for="data-33577054-e5b5-4c32-9232-4f4e542a4327" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>valid_range :</span></dt><dd>[-90.  90.]</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>bounds :</span></dt><dd>lat_bounds</dd></dl></div><div class="xr-var-data"><pre>array([-88.75, -86.25, -83.75, -81.25, -78.75, -76.25, -73.75, -71.25, -68.75,
+       -66.25, -63.75, -61.25, -58.75, -56.25, -53.75, -51.25, -48.75, -46.25,
+       -43.75, -41.25, -38.75, -36.25, -33.75, -31.25, -28.75, -26.25, -23.75,
+       -21.25, -18.75, -16.25, -13.75, -11.25,  -8.75,  -6.25,  -3.75,  -1.25,
+         1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
+        23.75,  26.25,  28.75,  31.25,  33.75,  36.25,  38.75,  41.25,  43.75,
+        46.25,  48.75,  51.25,  53.75,  56.25,  58.75,  61.25,  63.75,  66.25,
+        68.75,  71.25,  73.75,  76.25,  78.75,  81.25,  83.75,  86.25,  88.75],
+      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">longitude</span></div><div class="xr-var-dims">(longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">1.25 3.75 6.25 ... 356.2 358.8</div><input class="xr-var-attrs-in" id="attrs-1e735990-ec02-470b-8b93-e870cb947a76" type="checkbox"/><label for="attrs-1e735990-ec02-470b-8b93-e870cb947a76" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-dda6b0ae-a502-481a-aa03-5fcd56d6b88f" type="checkbox"/><label for="data-dda6b0ae-a502-481a-aa03-5fcd56d6b88f" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>valid_range :</span></dt><dd>[  0. 360.]</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>bounds :</span></dt><dd>lon_bounds</dd></dl></div><div class="xr-var-data"><pre>array([  1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
         23.75,  26.25,  28.75,  31.25,  33.75,  36.25,  38.75,  41.25,  43.75,
         46.25,  48.75,  51.25,  53.75,  56.25,  58.75,  61.25,  63.75,  66.25,
         68.75,  71.25,  73.75,  76.25,  78.75,  81.25,  83.75,  86.25,  88.75,
@@ -5779,22 +5763,10 @@ Attributes:
        293.75, 296.25, 298.75, 301.25, 303.75, 306.25, 308.75, 311.25, 313.75,
        316.25, 318.75, 321.25, 323.75, 326.25, 328.75, 331.25, 333.75, 336.25,
        338.75, 341.25, 343.75, 346.25, 348.75, 351.25, 353.75, 356.25, 358.75],
-      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">latitude</span></div><div class="xr-var-dims">(latitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">-88.75 -86.25 ... 86.25 88.75</div><input class="xr-var-attrs-in" id="attrs-e70df572-f64b-4e16-a7a7-96c662f214e6" type="checkbox"/><label for="attrs-e70df572-f64b-4e16-a7a7-96c662f214e6" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-52e9122f-526c-4576-8100-fa25f2cc09f4" type="checkbox"/><label for="data-52e9122f-526c-4576-8100-fa25f2cc09f4" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>valid_range :</span></dt><dd>[-90.  90.]</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>bounds :</span></dt><dd>lat_bounds</dd></dl></div><div class="xr-var-data"><pre>array([-88.75, -86.25, -83.75, -81.25, -78.75, -76.25, -73.75, -71.25, -68.75,
-       -66.25, -63.75, -61.25, -58.75, -56.25, -53.75, -51.25, -48.75, -46.25,
-       -43.75, -41.25, -38.75, -36.25, -33.75, -31.25, -28.75, -26.25, -23.75,
-       -21.25, -18.75, -16.25, -13.75, -11.25,  -8.75,  -6.25,  -3.75,  -1.25,
-         1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
-        23.75,  26.25,  28.75,  31.25,  33.75,  36.25,  38.75,  41.25,  43.75,
-        46.25,  48.75,  51.25,  53.75,  56.25,  58.75,  61.25,  63.75,  66.25,
-        68.75,  71.25,  73.75,  76.25,  78.75,  81.25,  83.75,  86.25,  88.75],
-      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">object</div><div class="xr-var-preview xr-preview">1979-01-01 00:00:00 ... 2023-07-...</div><input class="xr-var-attrs-in" id="attrs-06920af1-0b96-4de9-b823-b95c1d97a49d" type="checkbox"/><label for="attrs-06920af1-0b96-4de9-b823-b95c1d97a49d" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-bc7973af-d801-40f4-9bce-1aa602487e67" type="checkbox"/><label for="data-bc7973af-d801-40f4-9bce-1aa602487e67" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>time</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>bounds :</span></dt><dd>time_bounds</dd></dl></div><div class="xr-var-data"><pre>array([cftime.DatetimeGregorian(1979, 1, 1, 0, 0, 0, 0, has_year_zero=False),
-       cftime.DatetimeGregorian(1979, 2, 1, 0, 0, 0, 0, has_year_zero=False),
-       cftime.DatetimeGregorian(1979, 3, 1, 0, 0, 0, 0, has_year_zero=False),
-       ...,
-       cftime.DatetimeGregorian(2023, 5, 1, 0, 0, 0, 0, has_year_zero=False),
-       cftime.DatetimeGregorian(2023, 6, 1, 0, 0, 0, 0, has_year_zero=False),
-       cftime.DatetimeGregorian(2023, 7, 1, 0, 0, 0, 0, has_year_zero=False)],
-      dtype=object)</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-3782ec7a-e526-4904-9e2c-afde1a318e75" type="checkbox"/><label class="xr-section-summary" for="section-3782ec7a-e526-4904-9e2c-afde1a318e75">Data variables: <span>(5)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>lat_bounds</span></div><div class="xr-var-dims">(time, latitude, nv)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">dask.array&lt;chunksize=(1, 72, 2), meta=np.ndarray&gt;</div><input class="xr-var-attrs-in" id="attrs-1dfb205b-b1d4-4f50-9e93-9cd8558d0ffa" type="checkbox"/><label for="attrs-1dfb205b-b1d4-4f50-9e93-9cd8558d0ffa" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-7e28bab0-9f97-4ece-ab93-7dace6c8f9ce" type="checkbox"/><label for="data-7e28bab0-9f97-4ece-ab93-7dace6c8f9ce" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>comment :</span></dt><dd>latitude values at the north and south bounds of each pixel.</dd></dl></div><div class="xr-var-data"><table>
+      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">1979-01-01 ... 2023-08-01</div><input class="xr-var-attrs-in" id="attrs-da351ba7-4ea3-4c52-a268-10beb81b4aab" type="checkbox"/><label for="attrs-da351ba7-4ea3-4c52-a268-10beb81b4aab" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-78b732da-46ef-4f73-9151-9996db1b3fbc" type="checkbox"/><label for="data-78b732da-46ef-4f73-9151-9996db1b3fbc" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>time</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>bounds :</span></dt><dd>time_bounds</dd></dl></div><div class="xr-var-data"><pre>array(['1979-01-01T00:00:00.000000000', '1979-02-01T00:00:00.000000000',
+       '1979-03-01T00:00:00.000000000', ..., '2023-06-01T00:00:00.000000000',
+       '2023-07-01T00:00:00.000000000', '2023-08-01T00:00:00.000000000'],
+      dtype='datetime64[ns]')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-e00e686d-a745-4044-ae7e-f90138b6f7a8" type="checkbox"/><label class="xr-section-summary" for="section-e00e686d-a745-4044-ae7e-f90138b6f7a8">Data variables: <span>(5)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>lat_bounds</span></div><div class="xr-var-dims">(time, latitude, nv)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">dask.array&lt;chunksize=(1, 72, 2), meta=np.ndarray&gt;</div><input class="xr-var-attrs-in" id="attrs-c55d7dda-15e2-4bb1-afbd-1c601711f54c" type="checkbox"/><label for="attrs-c55d7dda-15e2-4bb1-afbd-1c601711f54c" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-5c26b672-f57a-4b34-94af-8c600b85af7d" type="checkbox"/><label for="data-5c26b672-f57a-4b34-94af-8c600b85af7d" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>comment :</span></dt><dd>latitude values at the north and south bounds of each pixel.</dd></dl></div><div class="xr-var-data"><table>
 <tr>
 <td>
 <table>
@@ -5808,18 +5780,18 @@ Attributes:
 <tbody>
 <tr>
 <th> Bytes </th>
-<td> 300.94 kiB </td>
+<td> 301.50 kiB </td>
 <td> 576 B </td>
 </tr>
 <tr>
 <th> Shape </th>
-<td> (535, 72, 2) </td>
+<td> (536, 72, 2) </td>
 <td> (1, 72, 2) </td>
 </tr>
 <tr>
 <th> Count </th>
-<td> 2140 Tasks </td>
-<td> 535 Chunks </td>
+<td> 2144 Tasks </td>
+<td> 536 Chunks </td>
 </tr>
 <tr>
 <th> Type </th>
@@ -5856,7 +5828,7 @@ Attributes:
 <line x1="76" x2="76" y1="66" y2="106"></line>
 <line style="stroke-width:2" x1="80" x2="80" y1="70" y2="110"></line>
 <!-- Colored Rectangle -->
-<polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,110.75931107721394 10.0,40.17107578309629" style="fill:#8B4903A0;stroke-width:0"></polygon>
+<polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,110.74989815469387 10.0,40.161662860576214" style="fill:#8B4903A0;stroke-width:0"></polygon>
 <!-- Horizontal lines -->
 <line style="stroke-width:2" x1="10" x2="35" y1="0" y2="0"></line>
 <line x1="13" x2="39" y1="3" y2="3"></line>
@@ -5890,15 +5862,15 @@ Attributes:
 <line style="stroke-width:2" x1="80" x2="80" y1="70" y2="110"></line>
 <line style="stroke-width:2" x1="106" x2="106" y1="70" y2="110"></line>
 <!-- Colored Rectangle -->
-<polygon points="80.58823529411765,70.58823529411765 106.00085180870013,70.58823529411765 106.00085180870013,110.75931107721394 80.58823529411765,110.75931107721394" style="fill:#ECB172A0;stroke-width:0"></polygon>
+<polygon points="80.58823529411765,70.58823529411765 106.00085180870013,70.58823529411765 106.00085180870013,110.74989815469387 80.58823529411765,110.74989815469387" style="fill:#ECB172A0;stroke-width:0"></polygon>
 <!-- Text -->
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="93.294544" y="130.759311">2</text>
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,126.000852,90.673773)" x="126.000852" y="90.673773">72</text>
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,95.465193)" x="35.294118" y="95.465193">535</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="93.294544" y="130.749898">2</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,126.000852,90.669067)" x="126.000852" y="90.669067">72</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,95.455781)" x="35.294118" y="95.455781">536</text>
 </svg>
 </td>
 </tr>
-</table></div></li><li class="xr-var-item"><div class="xr-var-name"><span>lon_bounds</span></div><div class="xr-var-dims">(time, longitude, nv)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">dask.array&lt;chunksize=(1, 144, 2), meta=np.ndarray&gt;</div><input class="xr-var-attrs-in" id="attrs-54085067-1ec8-4250-acf0-b90323e6c70e" type="checkbox"/><label for="attrs-54085067-1ec8-4250-acf0-b90323e6c70e" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-63b670e5-02e4-4d3a-a456-6b8665a1c7da" type="checkbox"/><label for="data-63b670e5-02e4-4d3a-a456-6b8665a1c7da" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>comment :</span></dt><dd>longitude values at the west and east bounds of each pixel.</dd></dl></div><div class="xr-var-data"><table>
+</table></div></li><li class="xr-var-item"><div class="xr-var-name"><span>lon_bounds</span></div><div class="xr-var-dims">(time, longitude, nv)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">dask.array&lt;chunksize=(1, 144, 2), meta=np.ndarray&gt;</div><input class="xr-var-attrs-in" id="attrs-b1194a9c-8ba6-4ff6-a8e4-33bc6271b2b3" type="checkbox"/><label for="attrs-b1194a9c-8ba6-4ff6-a8e4-33bc6271b2b3" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-96381e13-0284-4035-8b2b-436d0c69fb8d" type="checkbox"/><label for="data-96381e13-0284-4035-8b2b-436d0c69fb8d" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>comment :</span></dt><dd>longitude values at the west and east bounds of each pixel.</dd></dl></div><div class="xr-var-data"><table>
 <tr>
 <td>
 <table>
@@ -5912,18 +5884,18 @@ Attributes:
 <tbody>
 <tr>
 <th> Bytes </th>
-<td> 601.88 kiB </td>
+<td> 603.00 kiB </td>
 <td> 1.12 kiB </td>
 </tr>
 <tr>
 <th> Shape </th>
-<td> (535, 144, 2) </td>
+<td> (536, 144, 2) </td>
 <td> (1, 144, 2) </td>
 </tr>
 <tr>
 <th> Count </th>
-<td> 2140 Tasks </td>
-<td> 535 Chunks </td>
+<td> 2144 Tasks </td>
+<td> 536 Chunks </td>
 </tr>
 <tr>
 <th> Type </th>
@@ -5960,7 +5932,7 @@ Attributes:
 <line x1="76" x2="76" y1="66" y2="109"></line>
 <line style="stroke-width:2" x1="80" x2="80" y1="70" y2="113"></line>
 <!-- Colored Rectangle -->
-<polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,113.75730936481824 10.0,43.16907407070058" style="fill:#8B4903A0;stroke-width:0"></polygon>
+<polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,113.75061971982532 10.0,43.16238442570768" style="fill:#8B4903A0;stroke-width:0"></polygon>
 <!-- Horizontal lines -->
 <line style="stroke-width:2" x1="10" x2="35" y1="0" y2="0"></line>
 <line x1="13" x2="39" y1="3" y2="3"></line>
@@ -5994,15 +5966,15 @@ Attributes:
 <line style="stroke-width:2" x1="80" x2="80" y1="70" y2="113"></line>
 <line style="stroke-width:2" x1="106" x2="106" y1="70" y2="113"></line>
 <!-- Colored Rectangle -->
-<polygon points="80.58823529411765,70.58823529411765 106.00085180870013,70.58823529411765 106.00085180870013,113.75730936481824 80.58823529411765,113.75730936481824" style="fill:#ECB172A0;stroke-width:0"></polygon>
+<polygon points="80.58823529411765,70.58823529411765 106.00085180870013,70.58823529411765 106.00085180870013,113.75061971982532 80.58823529411765,113.75061971982532" style="fill:#ECB172A0;stroke-width:0"></polygon>
 <!-- Text -->
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="93.294544" y="133.757309">2</text>
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,126.000852,92.172772)" x="126.000852" y="92.172772">144</text>
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,98.463192)" x="35.294118" y="98.463192">535</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="93.294544" y="133.750620">2</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,126.000852,92.169428)" x="126.000852" y="92.169428">144</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,98.456502)" x="35.294118" y="98.456502">536</text>
 </svg>
 </td>
 </tr>
-</table></div></li><li class="xr-var-item"><div class="xr-var-name"><span>time_bounds</span></div><div class="xr-var-dims">(time, nv)</div><div class="xr-var-dtype">object</div><div class="xr-var-preview xr-preview">dask.array&lt;chunksize=(1, 2), meta=np.ndarray&gt;</div><input class="xr-var-attrs-in" id="attrs-0f3517d3-453a-4de2-b1a8-1b80f9076011" type="checkbox"/><label for="attrs-0f3517d3-453a-4de2-b1a8-1b80f9076011" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-d44e0e82-10e6-43e2-b912-ddf8a738ba76" type="checkbox"/><label for="data-d44e0e82-10e6-43e2-b912-ddf8a738ba76" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>comment :</span></dt><dd>time bounds for each time value</dd></dl></div><div class="xr-var-data"><table>
+</table></div></li><li class="xr-var-item"><div class="xr-var-name"><span>time_bounds</span></div><div class="xr-var-dims">(time, nv)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">dask.array&lt;chunksize=(1, 2), meta=np.ndarray&gt;</div><input class="xr-var-attrs-in" id="attrs-ac3e66e1-7e2f-4018-9f7a-dc29306d9b6f" type="checkbox"/><label for="attrs-ac3e66e1-7e2f-4018-9f7a-dc29306d9b6f" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-7bf10502-c03e-4776-b238-b7029427a0d1" type="checkbox"/><label for="data-7bf10502-c03e-4776-b238-b7029427a0d1" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>comment :</span></dt><dd>time bounds for each time value</dd></dl></div><div class="xr-var-data"><table>
 <tr>
 <td>
 <table>
@@ -6016,22 +5988,22 @@ Attributes:
 <tbody>
 <tr>
 <th> Bytes </th>
-<td> 8.36 kiB </td>
+<td> 8.38 kiB </td>
 <td> 16 B </td>
 </tr>
 <tr>
 <th> Shape </th>
-<td> (535, 2) </td>
+<td> (536, 2) </td>
 <td> (1, 2) </td>
 </tr>
 <tr>
 <th> Count </th>
-<td> 1605 Tasks </td>
-<td> 535 Chunks </td>
+<td> 1608 Tasks </td>
+<td> 536 Chunks </td>
 </tr>
 <tr>
 <th> Type </th>
-<td> object </td>
+<td> datetime64[ns] </td>
 <td> numpy.ndarray </td>
 </tr>
 </tbody>
@@ -6053,7 +6025,7 @@ Attributes:
 <line x1="0" x2="25" y1="63" y2="63"></line>
 <line x1="0" x2="25" y1="69" y2="69"></line>
 <line x1="0" x2="25" y1="75" y2="75"></line>
-<line x1="0" x2="25" y1="82" y2="82"></line>
+<line x1="0" x2="25" y1="81" y2="81"></line>
 <line x1="0" x2="25" y1="88" y2="88"></line>
 <line x1="0" x2="25" y1="94" y2="94"></line>
 <line x1="0" x2="25" y1="100" y2="100"></line>
@@ -6067,11 +6039,11 @@ Attributes:
 <polygon points="0.0,0.0 25.412616514582485,0.0 25.412616514582485,120.0 0.0,120.0" style="fill:#8B4903A0;stroke-width:0"></polygon>
 <!-- Text -->
 <text font-size="1.0rem" font-weight="100" text-anchor="middle" x="12.706308" y="140.000000">2</text>
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,45.412617,60.000000)" x="45.412617" y="60.000000">535</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,45.412617,60.000000)" x="45.412617" y="60.000000">536</text>
 </svg>
 </td>
 </tr>
-</table></div></li><li class="xr-var-item"><div class="xr-var-name"><span>precip</span></div><div class="xr-var-dims">(time, latitude, longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">dask.array&lt;chunksize=(1, 72, 144), meta=np.ndarray&gt;</div><input class="xr-var-attrs-in" id="attrs-f7e1bc23-d585-434c-ba4e-247ab97d7901" type="checkbox"/><label for="attrs-f7e1bc23-d585-434c-ba4e-247ab97d7901" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-cda3891e-caf5-4f6e-978c-39d8157cf5fc" type="checkbox"/><label for="data-cda3891e-caf5-4f6e-978c-39d8157cf5fc" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>NOAA Climate Data Record (CDR) of GPCP Monthly Satellite-Gauge Combined Precipitation</dd><dt><span>standard_name :</span></dt><dd>precipitation amount</dd><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>valid_range :</span></dt><dd>[  0. 100.]</dd><dt><span>cell_methods :</span></dt><dd>area: mean time: mean</dd></dl></div><div class="xr-var-data"><table>
+</table></div></li><li class="xr-var-item"><div class="xr-var-name"><span>precip</span></div><div class="xr-var-dims">(time, latitude, longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">dask.array&lt;chunksize=(1, 72, 144), meta=np.ndarray&gt;</div><input class="xr-var-attrs-in" id="attrs-ca1817a4-fc5c-4002-af14-f0c30bd9cf69" type="checkbox"/><label for="attrs-ca1817a4-fc5c-4002-af14-f0c30bd9cf69" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-ecdd883c-90d4-4c23-bcef-c246eb3ca831" type="checkbox"/><label for="data-ecdd883c-90d4-4c23-bcef-c246eb3ca831" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>NOAA Climate Data Record (CDR) of GPCP Monthly Satellite-Gauge Combined Precipitation</dd><dt><span>standard_name :</span></dt><dd>precipitation amount</dd><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>valid_range :</span></dt><dd>[  0. 100.]</dd><dt><span>cell_methods :</span></dt><dd>area: mean time: mean</dd></dl></div><div class="xr-var-data"><table>
 <tr>
 <td>
 <table>
@@ -6085,18 +6057,18 @@ Attributes:
 <tbody>
 <tr>
 <th> Bytes </th>
-<td> 21.16 MiB </td>
+<td> 21.20 MiB </td>
 <td> 40.50 kiB </td>
 </tr>
 <tr>
 <th> Shape </th>
-<td> (535, 72, 144) </td>
+<td> (536, 72, 144) </td>
 <td> (1, 72, 144) </td>
 </tr>
 <tr>
 <th> Count </th>
-<td> 1605 Tasks </td>
-<td> 535 Chunks </td>
+<td> 1608 Tasks </td>
+<td> 536 Chunks </td>
 </tr>
 <tr>
 <th> Type </th>
@@ -6133,7 +6105,7 @@ Attributes:
 <line x1="76" x2="76" y1="66" y2="106"></line>
 <line style="stroke-width:2" x1="80" x2="80" y1="70" y2="110"></line>
 <!-- Colored Rectangle -->
-<polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,110.75931107721394 10.0,40.17107578309629" style="fill:#8B4903A0;stroke-width:0"></polygon>
+<polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,110.74989815469387 10.0,40.161662860576214" style="fill:#8B4903A0;stroke-width:0"></polygon>
 <!-- Horizontal lines -->
 <line style="stroke-width:2" x1="10" x2="53" y1="0" y2="0"></line>
 <line x1="13" x2="56" y1="3" y2="3"></line>
@@ -6159,7 +6131,7 @@ Attributes:
 <line style="stroke-width:2" x1="10" x2="80" y1="0" y2="70"></line>
 <line style="stroke-width:2" x1="53" x2="123" y1="0" y2="70"></line>
 <!-- Colored Rectangle -->
-<polygon points="10.0,0.0 53.16907407070058,0.0 123.75730936481824,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"></polygon>
+<polygon points="10.0,0.0 53.16238442570768,0.0 123.75061971982532,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"></polygon>
 <!-- Horizontal lines -->
 <line style="stroke-width:2" x1="80" x2="123" y1="70" y2="70"></line>
 <line style="stroke-width:2" x1="80" x2="123" y1="110" y2="110"></line>
@@ -6167,15 +6139,15 @@ Attributes:
 <line style="stroke-width:2" x1="80" x2="80" y1="70" y2="110"></line>
 <line style="stroke-width:2" x1="123" x2="123" y1="70" y2="110"></line>
 <!-- Colored Rectangle -->
-<polygon points="80.58823529411765,70.58823529411765 123.75730936481824,70.58823529411765 123.75730936481824,110.75931107721394 80.58823529411765,110.75931107721394" style="fill:#ECB172A0;stroke-width:0"></polygon>
+<polygon points="80.58823529411765,70.58823529411765 123.75061971982532,70.58823529411765 123.75061971982532,110.74989815469387 80.58823529411765,110.74989815469387" style="fill:#ECB172A0;stroke-width:0"></polygon>
 <!-- Text -->
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="102.172772" y="130.759311">144</text>
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,143.757309,90.673773)" x="143.757309" y="90.673773">72</text>
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,95.465193)" x="35.294118" y="95.465193">535</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="102.169428" y="130.749898">144</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,143.750620,90.669067)" x="143.750620" y="90.669067">72</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,95.455781)" x="35.294118" y="95.455781">536</text>
 </svg>
 </td>
 </tr>
-</table></div></li><li class="xr-var-item"><div class="xr-var-name"><span>precip_error</span></div><div class="xr-var-dims">(time, latitude, longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">dask.array&lt;chunksize=(1, 72, 144), meta=np.ndarray&gt;</div><input class="xr-var-attrs-in" id="attrs-77445d98-0008-439d-83ec-987d713ccb61" type="checkbox"/><label for="attrs-77445d98-0008-439d-83ec-987d713ccb61" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-bd9bbf51-0b94-4ccc-89b6-c2493f3a4252" type="checkbox"/><label for="data-bd9bbf51-0b94-4ccc-89b6-c2493f3a4252" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>NOAA CDR of GPCP Satellite-Gauge Combined Precipitation Error</dd><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>valid_range :</span></dt><dd>[  0. 100.]</dd></dl></div><div class="xr-var-data"><table>
+</table></div></li><li class="xr-var-item"><div class="xr-var-name"><span>precip_error</span></div><div class="xr-var-dims">(time, latitude, longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">dask.array&lt;chunksize=(1, 72, 144), meta=np.ndarray&gt;</div><input class="xr-var-attrs-in" id="attrs-31ef40e8-724e-406e-8045-94164f85d583" type="checkbox"/><label for="attrs-31ef40e8-724e-406e-8045-94164f85d583" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-29f35f49-aca3-4e35-9e28-2bebd11fb941" type="checkbox"/><label for="data-29f35f49-aca3-4e35-9e28-2bebd11fb941" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>NOAA CDR of GPCP Satellite-Gauge Combined Precipitation Error</dd><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>valid_range :</span></dt><dd>[  0. 100.]</dd></dl></div><div class="xr-var-data"><table>
 <tr>
 <td>
 <table>
@@ -6189,18 +6161,18 @@ Attributes:
 <tbody>
 <tr>
 <th> Bytes </th>
-<td> 21.16 MiB </td>
+<td> 21.20 MiB </td>
 <td> 40.50 kiB </td>
 </tr>
 <tr>
 <th> Shape </th>
-<td> (535, 72, 144) </td>
+<td> (536, 72, 144) </td>
 <td> (1, 72, 144) </td>
 </tr>
 <tr>
 <th> Count </th>
-<td> 1605 Tasks </td>
-<td> 535 Chunks </td>
+<td> 1608 Tasks </td>
+<td> 536 Chunks </td>
 </tr>
 <tr>
 <th> Type </th>
@@ -6237,7 +6209,7 @@ Attributes:
 <line x1="76" x2="76" y1="66" y2="106"></line>
 <line style="stroke-width:2" x1="80" x2="80" y1="70" y2="110"></line>
 <!-- Colored Rectangle -->
-<polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,110.75931107721394 10.0,40.17107578309629" style="fill:#8B4903A0;stroke-width:0"></polygon>
+<polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,110.74989815469387 10.0,40.161662860576214" style="fill:#8B4903A0;stroke-width:0"></polygon>
 <!-- Horizontal lines -->
 <line style="stroke-width:2" x1="10" x2="53" y1="0" y2="0"></line>
 <line x1="13" x2="56" y1="3" y2="3"></line>
@@ -6263,7 +6235,7 @@ Attributes:
 <line style="stroke-width:2" x1="10" x2="80" y1="0" y2="70"></line>
 <line style="stroke-width:2" x1="53" x2="123" y1="0" y2="70"></line>
 <!-- Colored Rectangle -->
-<polygon points="10.0,0.0 53.16907407070058,0.0 123.75730936481824,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"></polygon>
+<polygon points="10.0,0.0 53.16238442570768,0.0 123.75061971982532,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"></polygon>
 <!-- Horizontal lines -->
 <line style="stroke-width:2" x1="80" x2="123" y1="70" y2="70"></line>
 <line style="stroke-width:2" x1="80" x2="123" y1="110" y2="110"></line>
@@ -6271,15 +6243,15 @@ Attributes:
 <line style="stroke-width:2" x1="80" x2="80" y1="70" y2="110"></line>
 <line style="stroke-width:2" x1="123" x2="123" y1="70" y2="110"></line>
 <!-- Colored Rectangle -->
-<polygon points="80.58823529411765,70.58823529411765 123.75730936481824,70.58823529411765 123.75730936481824,110.75931107721394 80.58823529411765,110.75931107721394" style="fill:#ECB172A0;stroke-width:0"></polygon>
+<polygon points="80.58823529411765,70.58823529411765 123.75061971982532,70.58823529411765 123.75061971982532,110.74989815469387 80.58823529411765,110.74989815469387" style="fill:#ECB172A0;stroke-width:0"></polygon>
 <!-- Text -->
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="102.172772" y="130.759311">144</text>
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,143.757309,90.673773)" x="143.757309" y="90.673773">72</text>
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,95.465193)" x="35.294118" y="95.465193">535</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="102.169428" y="130.749898">144</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,143.750620,90.669067)" x="143.750620" y="90.669067">72</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,95.455781)" x="35.294118" y="95.455781">536</text>
 </svg>
 </td>
 </tr>
-</table></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-9229b91c-27d7-4afb-8021-17b6688a0c89" type="checkbox"/><label class="xr-section-summary" for="section-9229b91c-27d7-4afb-8021-17b6688a0c89">Attributes: <span>(45)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>Conventions :</span></dt><dd>CF-1.6, ACDD 1.3</dd><dt><span>title :</span></dt><dd>Global Precipitation Climatatology Project (GPCP) Climate Data Record (CDR), Monthly V2.3</dd><dt><span>source :</span></dt><dd>oc.197901.sg</dd><dt><span>references :</span></dt><dd>Huffman et al. 1997, http://dx.doi.org/10.1175/1520-0477(1997)078&lt;0005:TGPCPG&gt;2.0.CO;2; Adler et al. 2003, http://dx.doi.org/10.1175/1525-7541(2003)004&lt;1147:TVGPCP&gt;2.0.CO;2; Huffman et al. 2009, http://dx.doi.org/10.1029/2009GL040000; Adler et al. 2016, Global Precipitation Climatology Project (GPCP) Monthly Analysis: Climate Algorithm Theoretical Basis Document (C-ATBD)</dd><dt><span>history :</span></dt><dd>1) �R`�, Dr. Jian-Jian Wang, U of Maryland, Created beta (B1) file</dd><dt><span>Metadata_Conventions :</span></dt><dd>CF-1.6, Unidata Dataset Discovery v1.0, NOAA CDR v1.0, GDS v2.0</dd><dt><span>standard_name_vocabulary :</span></dt><dd>CF Standard Name Table (v41, 22 February 2017)</dd><dt><span>id :</span></dt><dd>gpcp_v02r03_197901</dd><dt><span>naming_authority :</span></dt><dd>gov.noaa.ncdc</dd><dt><span>date_created :</span></dt><dd>2017-06-16T12:25:16Z</dd><dt><span>license :</span></dt><dd>No constraints on data access or use.</dd><dt><span>summary :</span></dt><dd>Global Precipitation Climatology Project (GPCP) Monthly Version 2.3 gridded, merged satellite/gauge precipitation Climate data Record (CDR) with errors from 1979 to present.</dd><dt><span>keywords :</span></dt><dd>EARTH SCIENCE &gt; ATMOSPHERE &gt; PRECIPITATION &gt; PRECIPITATION AMOUNT</dd><dt><span>keywords_vocabulary :</span></dt><dd>NASA Global Change Master Directory (GCMD) Earth Science Keywords, Version 7.0</dd><dt><span>cdm_data_type :</span></dt><dd>Grid</dd><dt><span>project :</span></dt><dd>GPCP &gt; Global Precipitation Climatology Project</dd><dt><span>processing_level :</span></dt><dd>NASA Level 3</dd><dt><span>creator_name :</span></dt><dd>Dr. Jian-Jian Wang</dd><dt><span>creator_email :</span></dt><dd>jjwang@umd.edu</dd><dt><span>institution :</span></dt><dd>ACADEMIC &gt; UMD/ESSIC &gt; Earth System Science Interdisciplinary Center, University of Maryland</dd><dt><span>publisher_name :</span></dt><dd>NOAA National Centers for Environmental Information (NCEI)</dd><dt><span>publisher_email :</span></dt><dd>jjwang@umd.edu</dd><dt><span>publisher_url :</span></dt><dd>https://www.ncei.noaa.gov</dd><dt><span>geospatial_lat_min :</span></dt><dd>-90</dd><dt><span>geospatial_lat_max :</span></dt><dd>90</dd><dt><span>geospatial_lat_units :</span></dt><dd>degrees_north</dd><dt><span>geospatial_lat_resolution :</span></dt><dd>2.5 degrees</dd><dt><span>geospatial_lon_min :</span></dt><dd>0.</dd><dt><span>geospatial_lon_max :</span></dt><dd>360.</dd><dt><span>geospatial_lon_units :</span></dt><dd>degrees_east</dd><dt><span>geospatial_lon_resolution :</span></dt><dd>2.5 degrees</dd><dt><span>time_coverage_start :</span></dt><dd>1979-01-01T00:00:00Z</dd><dt><span>time_coverage_end :</span></dt><dd>1979-01-31T23:59:59Z</dd><dt><span>time_coverage_duration :</span></dt><dd>P1M</dd><dt><span>contributor_name :</span></dt><dd>Robert Adler, Jian-Jian Wang</dd><dt><span>contributor_role :</span></dt><dd>principalInvestigator, processor and custodian</dd><dt><span>acknowledgment :</span></dt><dd>This project was supported in part by a grant from the NOAA Climate Data Record (CDR) Program for satellites.</dd><dt><span>cdr_program :</span></dt><dd>NOAA Climate Data Record Program for satellites, FY 2011.</dd><dt><span>cdr_variable :</span></dt><dd>precipitation</dd><dt><span>metadata_link :</span></dt><dd>gov.noaa.ncdc:C00979</dd><dt><span>product_version :</span></dt><dd>v23rB1</dd><dt><span>platform :</span></dt><dd>NOAA POES (Polar Orbiting Environmental Satellites)</dd><dt><span>sensor :</span></dt><dd>AVHRR&gt;Advanced Very High Resolution Radiometer</dd><dt><span>spatial_resolution :</span></dt><dd>2.5 degree</dd><dt><span>comment :</span></dt><dd>Processing computer: eagle2.umd.edu</dd></dl></div></li></ul></div></div></div></div>
+</table></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" id="section-b60ef9c3-848d-4573-99bc-a25bb199d521" type="checkbox"/><label class="xr-section-summary" for="section-b60ef9c3-848d-4573-99bc-a25bb199d521">Attributes: <span>(45)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>Conventions :</span></dt><dd>CF-1.6, ACDD 1.3</dd><dt><span>title :</span></dt><dd>Global Precipitation Climatatology Project (GPCP) Climate Data Record (CDR), Monthly V2.3</dd><dt><span>source :</span></dt><dd>oc.197901.sg</dd><dt><span>references :</span></dt><dd>Huffman et al. 1997, http://dx.doi.org/10.1175/1520-0477(1997)078&lt;0005:TGPCPG&gt;2.0.CO;2; Adler et al. 2003, http://dx.doi.org/10.1175/1525-7541(2003)004&lt;1147:TVGPCP&gt;2.0.CO;2; Huffman et al. 2009, http://dx.doi.org/10.1029/2009GL040000; Adler et al. 2016, Global Precipitation Climatology Project (GPCP) Monthly Analysis: Climate Algorithm Theoretical Basis Document (C-ATBD)</dd><dt><span>history :</span></dt><dd>1) �R`�, Dr. Jian-Jian Wang, U of Maryland, Created beta (B1) file</dd><dt><span>Metadata_Conventions :</span></dt><dd>CF-1.6, Unidata Dataset Discovery v1.0, NOAA CDR v1.0, GDS v2.0</dd><dt><span>standard_name_vocabulary :</span></dt><dd>CF Standard Name Table (v41, 22 February 2017)</dd><dt><span>id :</span></dt><dd>gpcp_v02r03_197901</dd><dt><span>naming_authority :</span></dt><dd>gov.noaa.ncdc</dd><dt><span>date_created :</span></dt><dd>2017-06-16T12:25:16Z</dd><dt><span>license :</span></dt><dd>No constraints on data access or use.</dd><dt><span>summary :</span></dt><dd>Global Precipitation Climatology Project (GPCP) Monthly Version 2.3 gridded, merged satellite/gauge precipitation Climate data Record (CDR) with errors from 1979 to present.</dd><dt><span>keywords :</span></dt><dd>EARTH SCIENCE &gt; ATMOSPHERE &gt; PRECIPITATION &gt; PRECIPITATION AMOUNT</dd><dt><span>keywords_vocabulary :</span></dt><dd>NASA Global Change Master Directory (GCMD) Earth Science Keywords, Version 7.0</dd><dt><span>cdm_data_type :</span></dt><dd>Grid</dd><dt><span>project :</span></dt><dd>GPCP &gt; Global Precipitation Climatology Project</dd><dt><span>processing_level :</span></dt><dd>NASA Level 3</dd><dt><span>creator_name :</span></dt><dd>Dr. Jian-Jian Wang</dd><dt><span>creator_email :</span></dt><dd>jjwang@umd.edu</dd><dt><span>institution :</span></dt><dd>ACADEMIC &gt; UMD/ESSIC &gt; Earth System Science Interdisciplinary Center, University of Maryland</dd><dt><span>publisher_name :</span></dt><dd>NOAA National Centers for Environmental Information (NCEI)</dd><dt><span>publisher_email :</span></dt><dd>jjwang@umd.edu</dd><dt><span>publisher_url :</span></dt><dd>https://www.ncei.noaa.gov</dd><dt><span>geospatial_lat_min :</span></dt><dd>-90</dd><dt><span>geospatial_lat_max :</span></dt><dd>90</dd><dt><span>geospatial_lat_units :</span></dt><dd>degrees_north</dd><dt><span>geospatial_lat_resolution :</span></dt><dd>2.5 degrees</dd><dt><span>geospatial_lon_min :</span></dt><dd>0.</dd><dt><span>geospatial_lon_max :</span></dt><dd>360.</dd><dt><span>geospatial_lon_units :</span></dt><dd>degrees_east</dd><dt><span>geospatial_lon_resolution :</span></dt><dd>2.5 degrees</dd><dt><span>time_coverage_start :</span></dt><dd>1979-01-01T00:00:00Z</dd><dt><span>time_coverage_end :</span></dt><dd>1979-01-31T23:59:59Z</dd><dt><span>time_coverage_duration :</span></dt><dd>P1M</dd><dt><span>contributor_name :</span></dt><dd>Robert Adler, Jian-Jian Wang</dd><dt><span>contributor_role :</span></dt><dd>principalInvestigator, processor and custodian</dd><dt><span>acknowledgment :</span></dt><dd>This project was supported in part by a grant from the NOAA Climate Data Record (CDR) Program for satellites.</dd><dt><span>cdr_program :</span></dt><dd>NOAA Climate Data Record Program for satellites, FY 2011.</dd><dt><span>cdr_variable :</span></dt><dd>precipitation</dd><dt><span>metadata_link :</span></dt><dd>gov.noaa.ncdc:C00979</dd><dt><span>product_version :</span></dt><dd>v23rB1</dd><dt><span>platform :</span></dt><dd>NOAA POES (Polar Orbiting Environmental Satellites)</dd><dt><span>sensor :</span></dt><dd>AVHRR&gt;Advanced Very High Resolution Radiometer</dd><dt><span>spatial_resolution :</span></dt><dd>2.5 degree</dd><dt><span>comment :</span></dt><dd>Processing computer: eagle2.umd.edu</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>In the above code, we used <code class="docutils literal notranslate"><span class="pre">combine='nested',</span> <span class="pre">concat_dim='time'</span></code> to combine all monthly precipitation data into one data array along the dimension of <code class="docutils literal notranslate"><span class="pre">time</span></code>. This command is very useful when reading in multiple data files of the same structure but covering different parts of the full data record.</p>
 <p>Since we are interested in the precipitation data globally at this moment, let’s extract the entire data array of precipitation from the entire dataset.</p>
@@ -6335,7 +6307,7 @@ body.vscode-dark {
 }
 
 .xr-wrap {
-  display: block;
+  display: block !important;
   min-width: 300px;
   max-width: 700px;
 }
@@ -6607,7 +6579,8 @@ dl.xr-attrs {
   grid-template-columns: 125px auto;
 }
 
-.xr-attrs dt, dd {
+.xr-attrs dt,
+.xr-attrs dd {
   padding: 0;
   margin: 0;
   float: left;
@@ -6642,18 +6615,18 @@ dl.xr-attrs {
   stroke: currentColor;
   fill: currentColor;
 }
-</style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray 'precip' (time: 535, latitude: 72, longitude: 144)&gt;
-dask.array&lt;concatenate, shape=(535, 72, 144), dtype=float32, chunksize=(1, 72, 144), chunktype=numpy.ndarray&gt;
+</style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray 'precip' (time: 536, latitude: 72, longitude: 144)&gt;
+dask.array&lt;concatenate, shape=(536, 72, 144), dtype=float32, chunksize=(1, 72, 144), chunktype=numpy.ndarray&gt;
 Coordinates:
-  * longitude  (longitude) float32 1.25 3.75 6.25 8.75 ... 353.75 356.25 358.75
   * latitude   (latitude) float32 -88.75 -86.25 -83.75 ... 83.75 86.25 88.75
-  * time       (time) object 1979-01-01 00:00:00 ... 2023-07-01 00:00:00
+  * longitude  (longitude) float32 1.25 3.75 6.25 8.75 ... 353.8 356.2 358.8
+  * time       (time) datetime64[ns] 1979-01-01 1979-02-01 ... 2023-08-01
 Attributes:
     long_name:      NOAA Climate Data Record (CDR) of GPCP Monthly Satellite-...
     standard_name:  precipitation amount
     units:          mm/day
     valid_range:    [  0. 100.]
-    cell_methods:   area: mean time: mean</pre><div class="xr-wrap" hidden=""><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-array-name">'precip'</div><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 535</li><li><span class="xr-has-index">latitude</span>: 72</li><li><span class="xr-has-index">longitude</span>: 144</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input checked="" class="xr-array-in" id="section-5ebc206e-3225-4af3-8e7d-5409c22ddd73" type="checkbox"/><label for="section-5ebc206e-3225-4af3-8e7d-5409c22ddd73" title="Show/hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>dask.array&lt;chunksize=(1, 72, 144), meta=np.ndarray&gt;</span></div><div class="xr-array-data"><table>
+    cell_methods:   area: mean time: mean</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-array-name">'precip'</div><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 536</li><li><span class="xr-has-index">latitude</span>: 72</li><li><span class="xr-has-index">longitude</span>: 144</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input checked="" class="xr-array-in" id="section-46ee84b6-0ac1-4701-bf55-18ddbf49f38f" type="checkbox"/><label for="section-46ee84b6-0ac1-4701-bf55-18ddbf49f38f" title="Show/hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>dask.array&lt;chunksize=(1, 72, 144), meta=np.ndarray&gt;</span></div><div class="xr-array-data"><table>
 <tr>
 <td>
 <table>
@@ -6667,18 +6640,18 @@ Attributes:
 <tbody>
 <tr>
 <th> Bytes </th>
-<td> 21.16 MiB </td>
+<td> 21.20 MiB </td>
 <td> 40.50 kiB </td>
 </tr>
 <tr>
 <th> Shape </th>
-<td> (535, 72, 144) </td>
+<td> (536, 72, 144) </td>
 <td> (1, 72, 144) </td>
 </tr>
 <tr>
 <th> Count </th>
-<td> 1605 Tasks </td>
-<td> 535 Chunks </td>
+<td> 1608 Tasks </td>
+<td> 536 Chunks </td>
 </tr>
 <tr>
 <th> Type </th>
@@ -6715,7 +6688,7 @@ Attributes:
 <line x1="76" x2="76" y1="66" y2="106"></line>
 <line style="stroke-width:2" x1="80" x2="80" y1="70" y2="110"></line>
 <!-- Colored Rectangle -->
-<polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,110.75931107721394 10.0,40.17107578309629" style="fill:#8B4903A0;stroke-width:0"></polygon>
+<polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,110.74989815469387 10.0,40.161662860576214" style="fill:#8B4903A0;stroke-width:0"></polygon>
 <!-- Horizontal lines -->
 <line style="stroke-width:2" x1="10" x2="53" y1="0" y2="0"></line>
 <line x1="13" x2="56" y1="3" y2="3"></line>
@@ -6741,7 +6714,7 @@ Attributes:
 <line style="stroke-width:2" x1="10" x2="80" y1="0" y2="70"></line>
 <line style="stroke-width:2" x1="53" x2="123" y1="0" y2="70"></line>
 <!-- Colored Rectangle -->
-<polygon points="10.0,0.0 53.16907407070058,0.0 123.75730936481824,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"></polygon>
+<polygon points="10.0,0.0 53.16238442570768,0.0 123.75061971982532,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"></polygon>
 <!-- Horizontal lines -->
 <line style="stroke-width:2" x1="80" x2="123" y1="70" y2="70"></line>
 <line style="stroke-width:2" x1="80" x2="123" y1="110" y2="110"></line>
@@ -6749,15 +6722,23 @@ Attributes:
 <line style="stroke-width:2" x1="80" x2="80" y1="70" y2="110"></line>
 <line style="stroke-width:2" x1="123" x2="123" y1="70" y2="110"></line>
 <!-- Colored Rectangle -->
-<polygon points="80.58823529411765,70.58823529411765 123.75730936481824,70.58823529411765 123.75730936481824,110.75931107721394 80.58823529411765,110.75931107721394" style="fill:#ECB172A0;stroke-width:0"></polygon>
+<polygon points="80.58823529411765,70.58823529411765 123.75061971982532,70.58823529411765 123.75061971982532,110.74989815469387 80.58823529411765,110.74989815469387" style="fill:#ECB172A0;stroke-width:0"></polygon>
 <!-- Text -->
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="102.172772" y="130.759311">144</text>
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,143.757309,90.673773)" x="143.757309" y="90.673773">72</text>
-<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,95.465193)" x="35.294118" y="95.465193">535</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="102.169428" y="130.749898">144</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,143.750620,90.669067)" x="143.750620" y="90.669067">72</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,95.455781)" x="35.294118" y="95.455781">536</text>
 </svg>
 </td>
 </tr>
-</table></div></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-4cd4432d-7e87-44eb-b86c-dce5bd8ce639" type="checkbox"/><label class="xr-section-summary" for="section-4cd4432d-7e87-44eb-b86c-dce5bd8ce639">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">longitude</span></div><div class="xr-var-dims">(longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">1.25 3.75 6.25 ... 356.25 358.75</div><input class="xr-var-attrs-in" id="attrs-ee322f85-0136-4a66-bfed-db57b2fb9b9f" type="checkbox"/><label for="attrs-ee322f85-0136-4a66-bfed-db57b2fb9b9f" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-bbe71c8d-d1ed-4f23-9cc5-f72a33c3e022" type="checkbox"/><label for="data-bbe71c8d-d1ed-4f23-9cc5-f72a33c3e022" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>valid_range :</span></dt><dd>[  0. 360.]</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>bounds :</span></dt><dd>lon_bounds</dd></dl></div><div class="xr-var-data"><pre>array([  1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
+</table></div></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-ba861554-cec5-4eeb-af60-08579c615537" type="checkbox"/><label class="xr-section-summary" for="section-ba861554-cec5-4eeb-af60-08579c615537">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">latitude</span></div><div class="xr-var-dims">(latitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">-88.75 -86.25 ... 86.25 88.75</div><input class="xr-var-attrs-in" id="attrs-d8f86235-7ad1-406f-955e-6b7cc42c4bfe" type="checkbox"/><label for="attrs-d8f86235-7ad1-406f-955e-6b7cc42c4bfe" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-da4c5369-57ff-4cfd-b213-234ba869a075" type="checkbox"/><label for="data-da4c5369-57ff-4cfd-b213-234ba869a075" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>valid_range :</span></dt><dd>[-90.  90.]</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>bounds :</span></dt><dd>lat_bounds</dd></dl></div><div class="xr-var-data"><pre>array([-88.75, -86.25, -83.75, -81.25, -78.75, -76.25, -73.75, -71.25, -68.75,
+       -66.25, -63.75, -61.25, -58.75, -56.25, -53.75, -51.25, -48.75, -46.25,
+       -43.75, -41.25, -38.75, -36.25, -33.75, -31.25, -28.75, -26.25, -23.75,
+       -21.25, -18.75, -16.25, -13.75, -11.25,  -8.75,  -6.25,  -3.75,  -1.25,
+         1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
+        23.75,  26.25,  28.75,  31.25,  33.75,  36.25,  38.75,  41.25,  43.75,
+        46.25,  48.75,  51.25,  53.75,  56.25,  58.75,  61.25,  63.75,  66.25,
+        68.75,  71.25,  73.75,  76.25,  78.75,  81.25,  83.75,  86.25,  88.75],
+      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">longitude</span></div><div class="xr-var-dims">(longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">1.25 3.75 6.25 ... 356.2 358.8</div><input class="xr-var-attrs-in" id="attrs-1d211452-8637-482f-ab28-b6e694a5567c" type="checkbox"/><label for="attrs-1d211452-8637-482f-ab28-b6e694a5567c" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-687dc360-94b1-4be0-bd12-26c65d9c674d" type="checkbox"/><label for="data-687dc360-94b1-4be0-bd12-26c65d9c674d" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>valid_range :</span></dt><dd>[  0. 360.]</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>bounds :</span></dt><dd>lon_bounds</dd></dl></div><div class="xr-var-data"><pre>array([  1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
         23.75,  26.25,  28.75,  31.25,  33.75,  36.25,  38.75,  41.25,  43.75,
         46.25,  48.75,  51.25,  53.75,  56.25,  58.75,  61.25,  63.75,  66.25,
         68.75,  71.25,  73.75,  76.25,  78.75,  81.25,  83.75,  86.25,  88.75,
@@ -6773,22 +6754,10 @@ Attributes:
        293.75, 296.25, 298.75, 301.25, 303.75, 306.25, 308.75, 311.25, 313.75,
        316.25, 318.75, 321.25, 323.75, 326.25, 328.75, 331.25, 333.75, 336.25,
        338.75, 341.25, 343.75, 346.25, 348.75, 351.25, 353.75, 356.25, 358.75],
-      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">latitude</span></div><div class="xr-var-dims">(latitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">-88.75 -86.25 ... 86.25 88.75</div><input class="xr-var-attrs-in" id="attrs-6f6acf02-7cfc-4dc8-b6da-acecb2c52052" type="checkbox"/><label for="attrs-6f6acf02-7cfc-4dc8-b6da-acecb2c52052" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-5b6dd5d3-9f35-4222-bfa3-3ca0974a3e25" type="checkbox"/><label for="data-5b6dd5d3-9f35-4222-bfa3-3ca0974a3e25" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>valid_range :</span></dt><dd>[-90.  90.]</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>bounds :</span></dt><dd>lat_bounds</dd></dl></div><div class="xr-var-data"><pre>array([-88.75, -86.25, -83.75, -81.25, -78.75, -76.25, -73.75, -71.25, -68.75,
-       -66.25, -63.75, -61.25, -58.75, -56.25, -53.75, -51.25, -48.75, -46.25,
-       -43.75, -41.25, -38.75, -36.25, -33.75, -31.25, -28.75, -26.25, -23.75,
-       -21.25, -18.75, -16.25, -13.75, -11.25,  -8.75,  -6.25,  -3.75,  -1.25,
-         1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
-        23.75,  26.25,  28.75,  31.25,  33.75,  36.25,  38.75,  41.25,  43.75,
-        46.25,  48.75,  51.25,  53.75,  56.25,  58.75,  61.25,  63.75,  66.25,
-        68.75,  71.25,  73.75,  76.25,  78.75,  81.25,  83.75,  86.25,  88.75],
-      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">object</div><div class="xr-var-preview xr-preview">1979-01-01 00:00:00 ... 2023-07-...</div><input class="xr-var-attrs-in" id="attrs-64fe5d3d-3c29-4e0b-870e-827c4c4c010e" type="checkbox"/><label for="attrs-64fe5d3d-3c29-4e0b-870e-827c4c4c010e" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-c68c5c47-1c29-4dc3-be8f-5b0e9d5c5ccb" type="checkbox"/><label for="data-c68c5c47-1c29-4dc3-be8f-5b0e9d5c5ccb" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>time</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>bounds :</span></dt><dd>time_bounds</dd></dl></div><div class="xr-var-data"><pre>array([cftime.DatetimeGregorian(1979, 1, 1, 0, 0, 0, 0, has_year_zero=False),
-       cftime.DatetimeGregorian(1979, 2, 1, 0, 0, 0, 0, has_year_zero=False),
-       cftime.DatetimeGregorian(1979, 3, 1, 0, 0, 0, 0, has_year_zero=False),
-       ...,
-       cftime.DatetimeGregorian(2023, 5, 1, 0, 0, 0, 0, has_year_zero=False),
-       cftime.DatetimeGregorian(2023, 6, 1, 0, 0, 0, 0, has_year_zero=False),
-       cftime.DatetimeGregorian(2023, 7, 1, 0, 0, 0, 0, has_year_zero=False)],
-      dtype=object)</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-4a236ccc-1062-4f43-9330-af91df173514" type="checkbox"/><label class="xr-section-summary" for="section-4a236ccc-1062-4f43-9330-af91df173514">Attributes: <span>(5)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>NOAA Climate Data Record (CDR) of GPCP Monthly Satellite-Gauge Combined Precipitation</dd><dt><span>standard_name :</span></dt><dd>precipitation amount</dd><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>valid_range :</span></dt><dd>[  0. 100.]</dd><dt><span>cell_methods :</span></dt><dd>area: mean time: mean</dd></dl></div></li></ul></div></div></div></div>
+      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">1979-01-01 ... 2023-08-01</div><input class="xr-var-attrs-in" id="attrs-4b5bd59f-20f6-42dc-b054-0d4b60ac3f67" type="checkbox"/><label for="attrs-4b5bd59f-20f6-42dc-b054-0d4b60ac3f67" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-a8293285-5296-413e-a40b-21581e692ba0" type="checkbox"/><label for="data-a8293285-5296-413e-a40b-21581e692ba0" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>time</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>bounds :</span></dt><dd>time_bounds</dd></dl></div><div class="xr-var-data"><pre>array(['1979-01-01T00:00:00.000000000', '1979-02-01T00:00:00.000000000',
+       '1979-03-01T00:00:00.000000000', ..., '2023-06-01T00:00:00.000000000',
+       '2023-07-01T00:00:00.000000000', '2023-08-01T00:00:00.000000000'],
+      dtype='datetime64[ns]')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-fa370fc7-6ad3-41a0-82e0-5de1abfe82d5" type="checkbox"/><label class="xr-section-summary" for="section-fa370fc7-6ad3-41a0-82e0-5de1abfe82d5">Attributes: <span>(5)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>NOAA Climate Data Record (CDR) of GPCP Monthly Satellite-Gauge Combined Precipitation</dd><dt><span>standard_name :</span></dt><dd>precipitation amount</dd><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>valid_range :</span></dt><dd>[  0. 100.]</dd><dt><span>cell_methods :</span></dt><dd>area: mean time: mean</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>As you can see, the data array has the dimensions of <code class="docutils literal notranslate"><span class="pre">time</span></code> <code class="docutils literal notranslate"><span class="pre">longitude</span></code> <code class="docutils literal notranslate"><span class="pre">latitude</span></code>. Before delving into further analysis, let’s visualize the precipitation data to gain a better understanding of its patterns and characteristics.</p>
 </div>
@@ -6806,7 +6775,7 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x7f0a4a58cbd0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.QuadMesh at 0x7fa0fc22cdd0&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/W1D3_Tutorial4_30_1.png" src="../../../_images/W1D3_Tutorial4_30_1.png"/>
@@ -6843,7 +6812,7 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.geocollection.GeoQuadMesh at 0x7f0a49dfb7d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.geocollection.GeoQuadMesh at 0x7fa0b6de1690&gt;
 </pre></div>
 </div>
 <img alt="../../../_images/W1D3_Tutorial4_32_1.png" src="../../../_images/W1D3_Tutorial4_32_1.png"/>
@@ -6935,73 +6904,500 @@ Attributes:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_108190</span><span class="o">/</span><span class="mf">743241771.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># first, let's extract the data for the time period that we want (1981-2010)</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">precip_30yr</span> <span class="o">=</span> <span class="n">ds</span><span class="o">.</span><span class="n">precip</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s2">"1981-01-01"</span><span class="p">,</span> <span class="s2">"2010-12-30"</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">precip_30yr</span>
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/core/dataarray.py</span> in <span class="ni">sel</span><span class="nt">(self, indexers, method, tolerance, drop, **indexers_kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1152</span>             <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1153</span>             <span class="n">tolerance</span><span class="o">=</span><span class="n">tolerance</span><span class="p">,</span>
-<span class="ne">-&gt; </span><span class="mi">1154</span>             <span class="o">**</span><span class="n">indexers_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1155</span>         <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1156</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_from_temp_dataset</span><span class="p">(</span><span class="n">ds</span><span class="p">)</span>
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/core/dataset.py</span> in <span class="ni">sel</span><span class="nt">(self, indexers, method, tolerance, drop, **indexers_kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2100</span>         <span class="n">indexers</span> <span class="o">=</span> <span class="n">either_dict_or_kwargs</span><span class="p">(</span><span class="n">indexers</span><span class="p">,</span> <span class="n">indexers_kwargs</span><span class="p">,</span> <span class="s2">"sel"</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2101</span>         <span class="n">pos_indexers</span><span class="p">,</span> <span class="n">new_indexes</span> <span class="o">=</span> <span class="n">remap_label_indexers</span><span class="p">(</span>
-<span class="ne">-&gt; </span><span class="mi">2102</span>             <span class="bp">self</span><span class="p">,</span> <span class="n">indexers</span><span class="o">=</span><span class="n">indexers</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="n">tolerance</span>
-<span class="g g-Whitespace">   </span><span class="mi">2103</span>         <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2104</span>         <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">isel</span><span class="p">(</span><span class="n">indexers</span><span class="o">=</span><span class="n">pos_indexers</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="n">drop</span><span class="p">)</span>
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/core/coordinates.py</span> in <span class="ni">remap_label_indexers</span><span class="nt">(obj, indexers, method, tolerance, **indexers_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">395</span> 
-<span class="g g-Whitespace">    </span><span class="mi">396</span>     <span class="n">pos_indexers</span><span class="p">,</span> <span class="n">new_indexes</span> <span class="o">=</span> <span class="n">indexing</span><span class="o">.</span><span class="n">remap_label_indexers</span><span class="p">(</span>
-<span class="ne">--&gt; </span><span class="mi">397</span>         <span class="n">obj</span><span class="p">,</span> <span class="n">v_indexers</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">tolerance</span><span class="o">=</span><span class="n">tolerance</span>
-<span class="g g-Whitespace">    </span><span class="mi">398</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">399</span>     <span class="c1"># attach indexer's coordinate to pos_indexers</span>
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/core/indexing.py</span> in <span class="ni">remap_label_indexers</span><span class="nt">(data_obj, indexers, method, tolerance)</span>
-<span class="g g-Whitespace">    </span><span class="mi">268</span>             <span class="n">coords_dtype</span> <span class="o">=</span> <span class="n">data_obj</span><span class="o">.</span><span class="n">coords</span><span class="p">[</span><span class="n">dim</span><span class="p">]</span><span class="o">.</span><span class="n">dtype</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span>             <span class="n">label</span> <span class="o">=</span> <span class="n">maybe_cast_to_coords_dtype</span><span class="p">(</span><span class="n">label</span><span class="p">,</span> <span class="n">coords_dtype</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">270</span>             <span class="n">idxr</span><span class="p">,</span> <span class="n">new_idx</span> <span class="o">=</span> <span class="n">convert_label_indexer</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">label</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">tolerance</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span>             <span class="n">pos_indexers</span><span class="p">[</span><span class="n">dim</span><span class="p">]</span> <span class="o">=</span> <span class="n">idxr</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span>             <span class="k">if</span> <span class="n">new_idx</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/xarray/core/indexing.py</span> in <span class="ni">convert_label_indexer</span><span class="nt">(index, label, index_name, method, tolerance)</span>
-<span class="g g-Whitespace">    </span><span class="mi">122</span>             <span class="n">_sanitize_slice_element</span><span class="p">(</span><span class="n">label</span><span class="o">.</span><span class="n">start</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">123</span>             <span class="n">_sanitize_slice_element</span><span class="p">(</span><span class="n">label</span><span class="o">.</span><span class="n">stop</span><span class="p">),</span>
-<span class="ne">--&gt; </span><span class="mi">124</span>             <span class="n">_sanitize_slice_element</span><span class="p">(</span><span class="n">label</span><span class="o">.</span><span class="n">step</span><span class="p">),</span>
-<span class="g g-Whitespace">    </span><span class="mi">125</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">126</span>         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">indexer</span><span class="p">,</span> <span class="nb">slice</span><span class="p">):</span>
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">slice_indexer</span><span class="nt">(self, start, end, step, kind)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5683</span>         <span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5684</span>         <span class="s2">"""</span>
-<span class="ne">-&gt; </span><span class="mi">5685</span><span class="s2">         start_slice, end_slice = self.slice_locs(start, end, step=step)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5686</span><span class="s2"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">5687</span><span class="s2">         # return a slice</span>
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">slice_locs</span><span class="nt">(self, start, end, step, kind)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5885</span><span class="s2">         start_slice = None</span>
-<span class="g g-Whitespace">   </span><span class="mi">5886</span><span class="s2">         if start is not None:</span>
-<span class="ne">-&gt; </span><span class="mi">5887</span><span class="s2">             start_slice = self.get_slice_bound(start, "left")</span>
-<span class="g g-Whitespace">   </span><span class="mi">5888</span><span class="s2">         if start_slice is None:</span>
-<span class="g g-Whitespace">   </span><span class="mi">5889</span><span class="s2">             start_slice = 0</span>
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
 
-<span class="nn">/opt/hostedtoolcache/Python/3.7.17/x64/lib/python3.7/site-packages/pandas/core/indexes/base.py</span> in <span class="ni">get_slice_bound</span><span class="nt">(self, label, side, kind)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5795</span><span class="s2">         # For datetime indices label may be a string that has to be converted</span>
-<span class="g g-Whitespace">   </span><span class="mi">5796</span><span class="s2">         # to datetime boundary according to its resolution.</span>
-<span class="ne">-&gt; </span><span class="mi">5797</span><span class="s2">         label = self._maybe_cast_slice_bound(label, side)</span>
-<span class="g g-Whitespace">   </span><span class="mi">5798</span><span class="s2"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">5799</span><span class="s2">         # we need to look up the label</span>
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
 
-<span class="ne">TypeError</span>: _maybe_cast_slice_bound() missing 1 required positional argument: 'kind'
-</pre></div>
-</div>
-</div>
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray 'precip' (time: 360, latitude: 72, longitude: 144)&gt;
+dask.array&lt;getitem, shape=(360, 72, 144), dtype=float32, chunksize=(1, 72, 144), chunktype=numpy.ndarray&gt;
+Coordinates:
+  * latitude   (latitude) float32 -88.75 -86.25 -83.75 ... 83.75 86.25 88.75
+  * longitude  (longitude) float32 1.25 3.75 6.25 8.75 ... 353.8 356.2 358.8
+  * time       (time) datetime64[ns] 1981-01-01 1981-02-01 ... 2010-12-01
+Attributes:
+    long_name:      NOAA Climate Data Record (CDR) of GPCP Monthly Satellite-...
+    standard_name:  precipitation amount
+    units:          mm/day
+    valid_range:    [  0. 100.]
+    cell_methods:   area: mean time: mean</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-array-name">'precip'</div><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 360</li><li><span class="xr-has-index">latitude</span>: 72</li><li><span class="xr-has-index">longitude</span>: 144</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input checked="" class="xr-array-in" id="section-55802a1b-11be-469e-8f59-071cc92a4567" type="checkbox"/><label for="section-55802a1b-11be-469e-8f59-071cc92a4567" title="Show/hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>dask.array&lt;chunksize=(1, 72, 144), meta=np.ndarray&gt;</span></div><div class="xr-array-data"><table>
+<tr>
+<td>
+<table>
+<thead>
+<tr>
+<td> </td>
+<th> Array </th>
+<th> Chunk </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th> Bytes </th>
+<td> 14.24 MiB </td>
+<td> 40.50 kiB </td>
+</tr>
+<tr>
+<th> Shape </th>
+<td> (360, 72, 144) </td>
+<td> (1, 72, 144) </td>
+</tr>
+<tr>
+<th> Count </th>
+<td> 1968 Tasks </td>
+<td> 360 Chunks </td>
+</tr>
+<tr>
+<th> Type </th>
+<td> float32 </td>
+<td> numpy.ndarray </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<svg height="162" style="stroke:rgb(0,0,0);stroke-width:1" width="178">
+<!-- Horizontal lines -->
+<line style="stroke-width:2" x1="10" x2="80" y1="0" y2="70"></line>
+<line style="stroke-width:2" x1="10" x2="80" y1="42" y2="112"></line>
+<!-- Vertical lines -->
+<line style="stroke-width:2" x1="10" x2="10" y1="0" y2="42"></line>
+<line x1="13" x2="13" y1="3" y2="45"></line>
+<line x1="17" x2="17" y1="7" y2="49"></line>
+<line x1="20" x2="20" y1="10" y2="52"></line>
+<line x1="24" x2="24" y1="14" y2="56"></line>
+<line x1="28" x2="28" y1="18" y2="60"></line>
+<line x1="32" x2="32" y1="22" y2="64"></line>
+<line x1="35" x2="35" y1="25" y2="67"></line>
+<line x1="39" x2="39" y1="29" y2="71"></line>
+<line x1="43" x2="43" y1="33" y2="75"></line>
+<line x1="47" x2="47" y1="37" y2="79"></line>
+<line x1="50" x2="50" y1="40" y2="82"></line>
+<line x1="54" x2="54" y1="44" y2="86"></line>
+<line x1="58" x2="58" y1="48" y2="90"></line>
+<line x1="61" x2="61" y1="51" y2="93"></line>
+<line x1="65" x2="65" y1="55" y2="97"></line>
+<line x1="69" x2="69" y1="59" y2="101"></line>
+<line x1="73" x2="73" y1="63" y2="105"></line>
+<line x1="76" x2="76" y1="66" y2="108"></line>
+<line style="stroke-width:2" x1="80" x2="80" y1="70" y2="112"></line>
+<!-- Colored Rectangle -->
+<polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,112.59812559112764 10.0,42.00989029700999" style="fill:#8B4903A0;stroke-width:0"></polygon>
+<!-- Horizontal lines -->
+<line style="stroke-width:2" x1="10" x2="58" y1="0" y2="0"></line>
+<line x1="13" x2="61" y1="3" y2="3"></line>
+<line x1="17" x2="65" y1="7" y2="7"></line>
+<line x1="20" x2="68" y1="10" y2="10"></line>
+<line x1="24" x2="72" y1="14" y2="14"></line>
+<line x1="28" x2="76" y1="18" y2="18"></line>
+<line x1="32" x2="80" y1="22" y2="22"></line>
+<line x1="35" x2="83" y1="25" y2="25"></line>
+<line x1="39" x2="87" y1="29" y2="29"></line>
+<line x1="43" x2="91" y1="33" y2="33"></line>
+<line x1="47" x2="95" y1="37" y2="37"></line>
+<line x1="50" x2="98" y1="40" y2="40"></line>
+<line x1="54" x2="102" y1="44" y2="44"></line>
+<line x1="58" x2="106" y1="48" y2="48"></line>
+<line x1="61" x2="109" y1="51" y2="51"></line>
+<line x1="65" x2="113" y1="55" y2="55"></line>
+<line x1="69" x2="117" y1="59" y2="59"></line>
+<line x1="73" x2="121" y1="63" y2="63"></line>
+<line x1="76" x2="124" y1="66" y2="66"></line>
+<line style="stroke-width:2" x1="80" x2="128" y1="70" y2="70"></line>
+<!-- Vertical lines -->
+<line style="stroke-width:2" x1="10" x2="80" y1="0" y2="70"></line>
+<line style="stroke-width:2" x1="58" x2="128" y1="0" y2="70"></line>
+<!-- Colored Rectangle -->
+<polygon points="10.0,0.0 58.0,0.0 128.58823529411765,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"></polygon>
+<!-- Horizontal lines -->
+<line style="stroke-width:2" x1="80" x2="128" y1="70" y2="70"></line>
+<line style="stroke-width:2" x1="80" x2="128" y1="112" y2="112"></line>
+<!-- Vertical lines -->
+<line style="stroke-width:2" x1="80" x2="80" y1="70" y2="112"></line>
+<line style="stroke-width:2" x1="128" x2="128" y1="70" y2="112"></line>
+<!-- Colored Rectangle -->
+<polygon points="80.58823529411765,70.58823529411765 128.58823529411765,70.58823529411765 128.58823529411765,112.59812559112764 80.58823529411765,112.59812559112764" style="fill:#ECB172A0;stroke-width:0"></polygon>
+<!-- Text -->
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="104.588235" y="132.598126">144</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,148.588235,91.593180)" x="148.588235" y="91.593180">72</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,97.304008)" x="35.294118" y="97.304008">360</text>
+</svg>
+</td>
+</tr>
+</table></div></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-23674581-e407-4a45-abeb-f36a96584694" type="checkbox"/><label class="xr-section-summary" for="section-23674581-e407-4a45-abeb-f36a96584694">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">latitude</span></div><div class="xr-var-dims">(latitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">-88.75 -86.25 ... 86.25 88.75</div><input class="xr-var-attrs-in" id="attrs-0ead0b32-64a7-46d8-a75e-3f70db73aae7" type="checkbox"/><label for="attrs-0ead0b32-64a7-46d8-a75e-3f70db73aae7" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-91bfd85c-a23c-4be3-b028-d7eed8c0aa1d" type="checkbox"/><label for="data-91bfd85c-a23c-4be3-b028-d7eed8c0aa1d" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>valid_range :</span></dt><dd>[-90.  90.]</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>bounds :</span></dt><dd>lat_bounds</dd></dl></div><div class="xr-var-data"><pre>array([-88.75, -86.25, -83.75, -81.25, -78.75, -76.25, -73.75, -71.25, -68.75,
+       -66.25, -63.75, -61.25, -58.75, -56.25, -53.75, -51.25, -48.75, -46.25,
+       -43.75, -41.25, -38.75, -36.25, -33.75, -31.25, -28.75, -26.25, -23.75,
+       -21.25, -18.75, -16.25, -13.75, -11.25,  -8.75,  -6.25,  -3.75,  -1.25,
+         1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
+        23.75,  26.25,  28.75,  31.25,  33.75,  36.25,  38.75,  41.25,  43.75,
+        46.25,  48.75,  51.25,  53.75,  56.25,  58.75,  61.25,  63.75,  66.25,
+        68.75,  71.25,  73.75,  76.25,  78.75,  81.25,  83.75,  86.25,  88.75],
+      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">longitude</span></div><div class="xr-var-dims">(longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">1.25 3.75 6.25 ... 356.2 358.8</div><input class="xr-var-attrs-in" id="attrs-0174eea2-9698-4440-a4ad-b9ffd1cba91b" type="checkbox"/><label for="attrs-0174eea2-9698-4440-a4ad-b9ffd1cba91b" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-fb44bd11-7cb9-46b0-b550-06c4c6571175" type="checkbox"/><label for="data-fb44bd11-7cb9-46b0-b550-06c4c6571175" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>valid_range :</span></dt><dd>[  0. 360.]</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>bounds :</span></dt><dd>lon_bounds</dd></dl></div><div class="xr-var-data"><pre>array([  1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
+        23.75,  26.25,  28.75,  31.25,  33.75,  36.25,  38.75,  41.25,  43.75,
+        46.25,  48.75,  51.25,  53.75,  56.25,  58.75,  61.25,  63.75,  66.25,
+        68.75,  71.25,  73.75,  76.25,  78.75,  81.25,  83.75,  86.25,  88.75,
+        91.25,  93.75,  96.25,  98.75, 101.25, 103.75, 106.25, 108.75, 111.25,
+       113.75, 116.25, 118.75, 121.25, 123.75, 126.25, 128.75, 131.25, 133.75,
+       136.25, 138.75, 141.25, 143.75, 146.25, 148.75, 151.25, 153.75, 156.25,
+       158.75, 161.25, 163.75, 166.25, 168.75, 171.25, 173.75, 176.25, 178.75,
+       181.25, 183.75, 186.25, 188.75, 191.25, 193.75, 196.25, 198.75, 201.25,
+       203.75, 206.25, 208.75, 211.25, 213.75, 216.25, 218.75, 221.25, 223.75,
+       226.25, 228.75, 231.25, 233.75, 236.25, 238.75, 241.25, 243.75, 246.25,
+       248.75, 251.25, 253.75, 256.25, 258.75, 261.25, 263.75, 266.25, 268.75,
+       271.25, 273.75, 276.25, 278.75, 281.25, 283.75, 286.25, 288.75, 291.25,
+       293.75, 296.25, 298.75, 301.25, 303.75, 306.25, 308.75, 311.25, 313.75,
+       316.25, 318.75, 321.25, 323.75, 326.25, 328.75, 331.25, 333.75, 336.25,
+       338.75, 341.25, 343.75, 346.25, 348.75, 351.25, 353.75, 356.25, 358.75],
+      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">1981-01-01 ... 2010-12-01</div><input class="xr-var-attrs-in" id="attrs-9f8780bb-818b-4f16-b61d-ae26112cdb02" type="checkbox"/><label for="attrs-9f8780bb-818b-4f16-b61d-ae26112cdb02" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-04c13db1-1104-43cc-85ec-cd5d3079e996" type="checkbox"/><label for="data-04c13db1-1104-43cc-85ec-cd5d3079e996" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>time</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>bounds :</span></dt><dd>time_bounds</dd></dl></div><div class="xr-var-data"><pre>array(['1981-01-01T00:00:00.000000000', '1981-02-01T00:00:00.000000000',
+       '1981-03-01T00:00:00.000000000', ..., '2010-10-01T00:00:00.000000000',
+       '2010-11-01T00:00:00.000000000', '2010-12-01T00:00:00.000000000'],
+      dtype='datetime64[ns]')</pre></div></li></ul></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-9215607b-42c0-416c-8047-3c5b8ccf5d12" type="checkbox"/><label class="xr-section-summary" for="section-9215607b-42c0-416c-8047-3c5b8ccf5d12">Attributes: <span>(5)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>NOAA Climate Data Record (CDR) of GPCP Monthly Satellite-Gauge Combined Precipitation</dd><dt><span>standard_name :</span></dt><dd>precipitation amount</dd><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>valid_range :</span></dt><dd>[  0. 100.]</dd><dt><span>cell_methods :</span></dt><dd>area: mean time: mean</dd></dl></div></li></ul></div></div></div></div>
 </div>
 <p>Now we can use Xarray’s <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> functionality to calculate the monthly climatology.</p>
 <p>Recall that <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> splits the data based on a specific criterion (in this case, the month of the year) and then applies a process (in our case, calculating the mean value across 30 years for that specific month) to each group before recombining the data together.</p>
@@ -7013,7 +7409,478 @@ Attributes:
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
 
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray 'precip' (month: 12, latitude: 72, longitude: 144)&gt;
+dask.array&lt;stack, shape=(12, 72, 144), dtype=float32, chunksize=(1, 72, 144), chunktype=numpy.ndarray&gt;
+Coordinates:
+  * latitude   (latitude) float32 -88.75 -86.25 -83.75 ... 83.75 86.25 88.75
+  * longitude  (longitude) float32 1.25 3.75 6.25 8.75 ... 353.8 356.2 358.8
+  * month      (month) int64 1 2 3 4 5 6 7 8 9 10 11 12</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-array-name">'precip'</div><ul class="xr-dim-list"><li><span class="xr-has-index">month</span>: 12</li><li><span class="xr-has-index">latitude</span>: 72</li><li><span class="xr-has-index">longitude</span>: 144</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input checked="" class="xr-array-in" id="section-c6b53b22-577b-42b6-a4e0-6e855b644cde" type="checkbox"/><label for="section-c6b53b22-577b-42b6-a4e0-6e855b644cde" title="Show/hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>dask.array&lt;chunksize=(1, 72, 144), meta=np.ndarray&gt;</span></div><div class="xr-array-data"><table>
+<tr>
+<td>
+<table>
+<thead>
+<tr>
+<td> </td>
+<th> Array </th>
+<th> Chunk </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th> Bytes </th>
+<td> 486.00 kiB </td>
+<td> 40.50 kiB </td>
+</tr>
+<tr>
+<th> Shape </th>
+<td> (12, 72, 144) </td>
+<td> (1, 72, 144) </td>
+</tr>
+<tr>
+<th> Count </th>
+<td> 2832 Tasks </td>
+<td> 12 Chunks </td>
+</tr>
+<tr>
+<th> Type </th>
+<td> float32 </td>
+<td> numpy.ndarray </td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<svg height="132" style="stroke:rgb(0,0,0);stroke-width:1" width="202">
+<!-- Horizontal lines -->
+<line style="stroke-width:2" x1="10" x2="32" y1="0" y2="22"></line>
+<line style="stroke-width:2" x1="10" x2="32" y1="60" y2="82"></line>
+<!-- Vertical lines -->
+<line style="stroke-width:2" x1="10" x2="10" y1="0" y2="60"></line>
+<line x1="11" x2="11" y1="1" y2="61"></line>
+<line x1="13" x2="13" y1="3" y2="63"></line>
+<line x1="15" x2="15" y1="5" y2="65"></line>
+<line x1="17" x2="17" y1="7" y2="67"></line>
+<line x1="19" x2="19" y1="9" y2="69"></line>
+<line x1="21" x2="21" y1="11" y2="71"></line>
+<line x1="22" x2="22" y1="12" y2="72"></line>
+<line x1="24" x2="24" y1="14" y2="74"></line>
+<line x1="26" x2="26" y1="16" y2="76"></line>
+<line x1="28" x2="28" y1="18" y2="78"></line>
+<line x1="30" x2="30" y1="20" y2="80"></line>
+<line style="stroke-width:2" x1="32" x2="32" y1="22" y2="82"></line>
+<!-- Colored Rectangle -->
+<polygon points="10.0,0.0 32.096227385798215,22.096227385798212 32.096227385798215,82.09622738579822 10.0,60.0" style="fill:#ECB172A0;stroke-width:0"></polygon>
+<!-- Horizontal lines -->
+<line style="stroke-width:2" x1="10" x2="130" y1="0" y2="0"></line>
+<line x1="11" x2="131" y1="1" y2="1"></line>
+<line x1="13" x2="133" y1="3" y2="3"></line>
+<line x1="15" x2="135" y1="5" y2="5"></line>
+<line x1="17" x2="137" y1="7" y2="7"></line>
+<line x1="19" x2="139" y1="9" y2="9"></line>
+<line x1="21" x2="141" y1="11" y2="11"></line>
+<line x1="22" x2="142" y1="12" y2="12"></line>
+<line x1="24" x2="144" y1="14" y2="14"></line>
+<line x1="26" x2="146" y1="16" y2="16"></line>
+<line x1="28" x2="148" y1="18" y2="18"></line>
+<line x1="30" x2="150" y1="20" y2="20"></line>
+<line style="stroke-width:2" x1="32" x2="152" y1="22" y2="22"></line>
+<!-- Vertical lines -->
+<line style="stroke-width:2" x1="10" x2="32" y1="0" y2="22"></line>
+<line style="stroke-width:2" x1="130" x2="152" y1="0" y2="22"></line>
+<!-- Colored Rectangle -->
+<polygon points="10.0,0.0 130.0,0.0 152.09622738579822,22.096227385798212 32.096227385798215,22.096227385798212" style="fill:#ECB172A0;stroke-width:0"></polygon>
+<!-- Horizontal lines -->
+<line style="stroke-width:2" x1="32" x2="152" y1="22" y2="22"></line>
+<line style="stroke-width:2" x1="32" x2="152" y1="82" y2="82"></line>
+<!-- Vertical lines -->
+<line style="stroke-width:2" x1="32" x2="32" y1="22" y2="82"></line>
+<line style="stroke-width:2" x1="152" x2="152" y1="22" y2="82"></line>
+<!-- Colored Rectangle -->
+<polygon points="32.096227385798215,22.096227385798212 152.09622738579822,22.096227385798212 152.09622738579822,82.09622738579822 32.096227385798215,82.09622738579822" style="fill:#ECB172A0;stroke-width:0"></polygon>
+<!-- Text -->
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" x="92.096227" y="102.096227">144</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(0,172.096227,52.096227)" x="172.096227" y="52.096227">72</text>
+<text font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,11.048114,91.048114)" x="11.048114" y="91.048114">12</text>
+</svg>
+</td>
+</tr>
+</table></div></div></li><li class="xr-section-item"><input checked="" class="xr-section-summary-in" id="section-6e5667f0-c6bd-402e-ba15-2d929743a387" type="checkbox"/><label class="xr-section-summary" for="section-6e5667f0-c6bd-402e-ba15-2d929743a387">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">latitude</span></div><div class="xr-var-dims">(latitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">-88.75 -86.25 ... 86.25 88.75</div><input class="xr-var-attrs-in" id="attrs-09126cdb-aa58-4d78-b613-38d75a479394" type="checkbox"/><label for="attrs-09126cdb-aa58-4d78-b613-38d75a479394" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-4807c50d-1f55-4613-9c54-013975815f1d" type="checkbox"/><label for="data-4807c50d-1f55-4613-9c54-013975815f1d" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>valid_range :</span></dt><dd>[-90.  90.]</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>bounds :</span></dt><dd>lat_bounds</dd></dl></div><div class="xr-var-data"><pre>array([-88.75, -86.25, -83.75, -81.25, -78.75, -76.25, -73.75, -71.25, -68.75,
+       -66.25, -63.75, -61.25, -58.75, -56.25, -53.75, -51.25, -48.75, -46.25,
+       -43.75, -41.25, -38.75, -36.25, -33.75, -31.25, -28.75, -26.25, -23.75,
+       -21.25, -18.75, -16.25, -13.75, -11.25,  -8.75,  -6.25,  -3.75,  -1.25,
+         1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
+        23.75,  26.25,  28.75,  31.25,  33.75,  36.25,  38.75,  41.25,  43.75,
+        46.25,  48.75,  51.25,  53.75,  56.25,  58.75,  61.25,  63.75,  66.25,
+        68.75,  71.25,  73.75,  76.25,  78.75,  81.25,  83.75,  86.25,  88.75],
+      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">longitude</span></div><div class="xr-var-dims">(longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">1.25 3.75 6.25 ... 356.2 358.8</div><input class="xr-var-attrs-in" id="attrs-bfdf5e06-0ae6-4753-9806-1fb5d2a8fed5" type="checkbox"/><label for="attrs-bfdf5e06-0ae6-4753-9806-1fb5d2a8fed5" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-2cd34182-dc45-443d-9f81-cc0d5536216a" type="checkbox"/><label for="data-2cd34182-dc45-443d-9f81-cc0d5536216a" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>valid_range :</span></dt><dd>[  0. 360.]</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>bounds :</span></dt><dd>lon_bounds</dd></dl></div><div class="xr-var-data"><pre>array([  1.25,   3.75,   6.25,   8.75,  11.25,  13.75,  16.25,  18.75,  21.25,
+        23.75,  26.25,  28.75,  31.25,  33.75,  36.25,  38.75,  41.25,  43.75,
+        46.25,  48.75,  51.25,  53.75,  56.25,  58.75,  61.25,  63.75,  66.25,
+        68.75,  71.25,  73.75,  76.25,  78.75,  81.25,  83.75,  86.25,  88.75,
+        91.25,  93.75,  96.25,  98.75, 101.25, 103.75, 106.25, 108.75, 111.25,
+       113.75, 116.25, 118.75, 121.25, 123.75, 126.25, 128.75, 131.25, 133.75,
+       136.25, 138.75, 141.25, 143.75, 146.25, 148.75, 151.25, 153.75, 156.25,
+       158.75, 161.25, 163.75, 166.25, 168.75, 171.25, 173.75, 176.25, 178.75,
+       181.25, 183.75, 186.25, 188.75, 191.25, 193.75, 196.25, 198.75, 201.25,
+       203.75, 206.25, 208.75, 211.25, 213.75, 216.25, 218.75, 221.25, 223.75,
+       226.25, 228.75, 231.25, 233.75, 236.25, 238.75, 241.25, 243.75, 246.25,
+       248.75, 251.25, 253.75, 256.25, 258.75, 261.25, 263.75, 266.25, 268.75,
+       271.25, 273.75, 276.25, 278.75, 281.25, 283.75, 286.25, 288.75, 291.25,
+       293.75, 296.25, 298.75, 301.25, 303.75, 306.25, 308.75, 311.25, 313.75,
+       316.25, 318.75, 321.25, 323.75, 326.25, 328.75, 331.25, 333.75, 336.25,
+       338.75, 341.25, 343.75, 346.25, 348.75, 351.25, 353.75, 356.25, 358.75],
+      dtype=float32)</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">month</span></div><div class="xr-var-dims">(month)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">1 2 3 4 5 6 7 8 9 10 11 12</div><input class="xr-var-attrs-in" disabled="" id="attrs-62e8e6f5-340a-41a4-8379-a588da3c4111" type="checkbox"/><label for="attrs-62e8e6f5-340a-41a4-8379-a588da3c4111" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use xlink:href="#icon-file-text2"></use></svg></label><input class="xr-var-data-in" id="data-f17ae341-233e-441a-9aa3-b33a11d4ac6b" type="checkbox"/><label for="data-f17ae341-233e-441a-9aa3-b33a11d4ac6b" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use xlink:href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])</pre></div></li></ul></div></li><li class="xr-section-item"><input class="xr-section-summary-in" disabled="" id="section-37d830ac-f7a4-4182-af92-95bae41fd7d7" type="checkbox"/><label class="xr-section-summary" for="section-37d830ac-f7a4-4182-af92-95bae41fd7d7" title="Expand/collapse section">Attributes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"></dl></div></li></ul></div></div></div></div>
 </div>
 <p>With the resulting climatology data array, we can make a set of maps to visualize the monthly climatology from four different seasons.</p>
 <div class="cell docutils container">
@@ -7044,7 +7911,9 @@ Attributes:
 </pre></div>
 </div>
 </div>
-
+<div class="cell_output docutils container">
+<img alt="../../../_images/W1D3_Tutorial4_50_0.png" src="../../../_images/W1D3_Tutorial4_50_0.png"/>
+</div>
 </div>
 <p>In the seasonal collection of the climatology map, we can observe a clear pattern of precipitation across the globe. The tropics exhibit a higher amount of precipitation compared to other regions. Additionally, the map illustrates the seasonal patterns of precipitation changes across different regions of the globe, including areas influenced by monsoons.</p>
 <div class="section" id="questions-2-2-climate-connection">
@@ -7066,7 +7935,12 @@ Attributes:
 </pre></div>
 </div>
 </div>
-
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, '')
+</pre></div>
+</div>
+<img alt="../../../_images/W1D3_Tutorial4_55_1.png" src="../../../_images/W1D3_Tutorial4_55_1.png"/>
+</div>
 </div>
 <p>The monthly climatology time series for the point of interest demonstrates a noticeable seasonal pattern, with dry and rainy months observed in the region. Precipitation is typically more abundant between December and May, while August experiences the driest conditions throughout the year.</p>
 </div>
@@ -7128,7 +8002,7 @@ Attributes:
 <p>Data from this tutorial can be accessed <a class="reference external" href="https://noaa-cdr-precip-gpcp-monthly-pds.s3.amazonaws.com/index.html#data/">here</a>.</p>
 </div>
 <script type="application/vnd.jupyter.widget-state+json">
-{"state": {"b3bcb916f36d43f894ca46c5bf308f07": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "e80ab027dd8341d0911defe2a46ef3c4": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_b3bcb916f36d43f894ca46c5bf308f07", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=lIOVdzlnT60\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7f0a500e4f50>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/lIOVdzlnT60?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAUDBAoLCAoKCgoKCgoICAgKCgoKDQoKCgoKCggICgoKCgoKChANCggOCgoKDRUNDhERExMTCA0WGBYSGBASExIBBQUFCAcIDwkJDxIQEBASEhISFRUVEhISEhUSEhISEhISEhUVFRISFRUVFRISEhUVEhUVFRIVEhISEhIVFRISFf/AABEIAWgB4AMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABgIDBAUHAQj/xABOEAABAwIDBAUJBQYEBQIFBQABAAIDBBEFEiEGEzFBIlFhcZIHFBcyU4GR0/AjQlKhsQgVYsHR0iSC4fEWM3KjskNkc6KztcI0NlR0g//EABoBAQADAQEBAAAAAAAAAAAAAAABAgMEBQb/xAA4EQEAAgECBAIHBgQHAQAAAAAAAQIDBBESITFBUXEFExQiYZGhUmKBsdHwMjPB4QYVI0JygpKi/9oADAMBAAIRAxEAPwD4yREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERARS/0fVXtKfxSfKT0fVXtKfxSfKQRBFL/R9Ve0p/FJ8pPR9Ve0p/FJ8pBEEUv9H1V7Sn8Unyk9H1V7Sn8UnykEQRS/0fVXtKfxSfKT0fVXtKfxSfKQRBFL/R9Ve0p/FJ8pPR9Ve0p/FJ8pBEEUv9H1V7Sn8Unyk9H1V7Sn8UnykEQRS/0fVXtKfxSfKT0fVXtKfxSfKQRBFL/R9Ve0p/FJ8pPR9Ve0p/FJ8pBEEUv9H1V7Sn8Unyk9H1V7Sn8UnykEQRS/0fVXtKfxSfKT0fVXtKfxSfKQRBFL/R9Ve0p/FJ8pPR9Ve0p/FJ8pBEEUv9H1V7Sn8Unyk9H1V7Sn8UnykEQRS/0fVXtKfxSfKT0fVXtKfxSfKQRBFL/R9Ve0p/FJ8pPR9Ve0p/FJ8pBEEUv9H1V7Sn8Unyk9H1V7Sn8UnykEQRS/0fVXtKfxSfKT0fVXtKfxSfKQRBFL/R9Ve0p/FJ8pPR9Ve0p/FJ8pBEEUv9H1V7Sn8Unyk9H1V7Sn8UnykEQRS/0fVXtKfxSfKT0fVXtKfxSfKQRBFL/R9Ve0p/FJ8pPR9Ve0p/FJ8pBEEUv9H1V7Sn8Unyk9H1V7Sn8UnykEQRS/0fVXtKfxSfKT0fVXtKfxSfKQRBFL/R9Ve0p/FJ8pPR9Ve0p/FJ8pBEEUv9H1V7Sn8Unyk9H1V7Sn8UnykEQRS/0fVXtKfxSfKT0fVXtKfxSfKQRBFL/R9Ve0p/FJ8pPR9Ve0p/FJ8pBEEUv9H1V7Sn8Unyk9H1V7Sn8UnykEQRS/0fVXtKfxSfKT0fVXtKfxSfKQRBFL/R9Ve0p/FJ8pPR9Ve0p/FJ8pBEEUv9H1V7Sn8Unyk9H1V7Sn8UnykHTkREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBEBRAREQEREBERAREQEREBERAREQEREBEWzosCmeCbBnGwkIY424kNcQco5k2CmI3GsRTjCdjGOzHOXWFmOla6KJ7rva5zZA7K5jXN0s4k2Jta15Hs/h0MWbNDTPYGh4fETduodlLpXvuSLG72RixGutlaMcyOSXS67FXYg2YllM6NrWuO9fFHFIQB0Tq2RzW5QQbi0YLuQC1NFTQulOeV9U5rnb1j20TXZQbWbc2yNHEsJ5a8zf1MnJzNF1DFNn6CUkN3Mbi0uAiLopGgZCc0V3g6E6WB42BtZQ3aDAGwgujkz2c4OjNi5oBADg5vRe03vwBA5KtsVoGhREWYIiICIiAiIgIiIO5/s2bA4ZiNFXTYhTGd1NUMawiWpiys3Ae4WgmYHG/XqtlslQ7EYjVR0dPSVcM9SHCF0ktc0FwY59muNU9gfla4jOLG1tSQDtP2OwDhmJhxs01TMxHEN82Fz8FleSLYXZxtV53hFZNiVVQRukihnmYwNc6N7GPLW0sbrHMW5yHNaXA2uAg4P5WtkP3Vi01EHmWNojkgkdYPdDI27d4GgDeNcHMJAAOS9hew1uE7KYhURb2noK2eLW0kNPPJG62hyvYwteQeTSSp1hTpcc20iZiUQi3lVLHPS3uIY6GCZ5pXO4vBdAWPcLZjI8jKCAO8eUaj2ndWMGDSUNNQwRxBrJN2XTOAu4Pa+nfu4AMrA2MsNmk31GUPjiqgfG9zJGOjfGcr2SNLHsI4h7HAFruwhbOTZfEGyxwuoK5s0weYonU1Q2WQMy5zHG6MOe1uZtyAQMwva67j+2Ng7PNsOrnsYyrfvKefJqHjc70NLrXe2N7ZA0nlMey0w/aX2+qcKbQ+ZtibU1nnY84kY2R0cEPmpfHGHaAySSxE3uLQ8L2ID5YxXAaunlZDUUtTBLKQI45YpY3y3cGjdNc0GS7iB0b6m3FXMZ2arqVjX1VFV0zHkBr54JomEkEhuaRgGewPR46cF9S7Vbbys2Ro8adDTyYg2KmdA97LshqKn/AA8s0Yvdv2T5OiDbUA3C1Wx+1FRjOxeNSYhu5JKePEomuawMzbnD4aqGQtHRErJXgggD/ltPG5QfL1NA+R7Y42PkkkOVkcbXPe934WsaCXO04AcltcW2UxCni3tRQVsEVgTJNTzxxtvoMz3xhrCepxBXc/2dKSGg2cxLHTE2WpYys3d+IhpoQ4Qh1iWCSfNmI4gMvfKE8iHljxCvxhlBiG4mhr46lrQyIM3b44JJsvrHNAY45Glr8xuW9LiCHF/JxsjNidfFTRiZsb5GtnqY4XzspmuZK5jpcpDWBxjc0Z3NuQbXtZb3yseTKow2skighraqlhpo5n1nm8phb0XOlLpY2GNjGBtzd2g4lT7ZOSTCNuZ8Loi2OjxCrpt5GWtd9l5nLVRxxk6xtjfUSMFtcrWq7+0t5RcRp8RqsMiljFHUYexkjDGxzi2pikZKBIRmF2k9yDgmG0E08gip4ZZ5SCRHAx80hAtchkbS4gXGtuay8c2craUA1VHVUwebNdPDLExxsTla97A1zrAmwN9F9P8Aki2bqaXZJkuFMpzieJxMnM1Roz7SToZiGuJENOeiz1c9yR0nX32xWz+MVFBXUO0bqWqjqGNbDLFkzkPEgkD2xwRMa6Nwiex7RmBJN7taUHxcu7eTHyc4TDgX78xwvkik6UcDTKGMYZ9zFdsBD5ZpH2Nicga9txo4rg0LrtaetoPxC7n5JvKxh7MJ/c2NU5lpW5gyUMMzDGZTK1k0bftGvjk1ZJGHHot0aWZnBm1n/BFbTVG7EuHTQQSSNcN9HI4MF7RRvkfBUSk2Ai9c3NrakcCYCSAASSQABxJJAAAHMk2t2r6Sb5JNnMWp5H4HWuimjaDkEkkzGF18nnEFSPOI2OykA3bwOjrWWF+ybse0V2I1NTG01GFzCjjabO3M+aZtS4ct4MjWB44B0n4kHFqrY7E44TNJh1eyIAuMj6aoaxrRqXOJj6DLfedYLV4bQTTyCOnhlnkIJEcDHzSEAXJDI2lxAGpNtF9gbHwbWDFWy18lAcPldJvKaItJgYWPMe4kFM2R72vyAmR5BBdoDa0H2YweKl8pE8UDWsidBNM2Nos1jpqKKSQAcADIXuAGgDwBwQcHoNlcQmkkjioK2SSB2WZjKecuhdlDg2VoZeN5BBDXWJBWtraWSKR0U0ckUsZs+OVro5GGwNnseA5psQbEc13/AMq3ljrsPx6ekomU8dNSTxGZhjDn1UkkUU0zpH3u0nPkGWxswG5uAK/2vqSnZiWDTysu2UVDKotHSkp6eoonZNNSQ2ea3/Wg4jhWyWI1EW9p6CtniIuJIqeeSN1uOR7WEPPY26r2OLYMWpfOqOWpENZEJqHdkzSnMBudw8AvluWkROAzEBp0cvrHbuPG6htJUbOVtCKIQAmEtiLZrHobuQwyN3OSzcjXRFuU6m9m8KxfEMSm20w5+K04paoYhhTGwsa0MbCKtmQxva52+YX7w7zO7UubcZcrQ1vl8xGCqxaI0uGVNAXU0TDFPTmlnqXulkDJG0wF3DhGH+s4sI+4FDv+GK/ftp/MK0TyML2QGnqBM6MHKZGxGPMYgdC+1hzK7J+0h/8AvPC//gYP/wDdqxTL9pLyh1OF1FKyhbDHUVcD3TVL42ySbmGT7KJmbo5c8krjcHjpa5QfMONYNU0rxHVU09M9wJa2eOSEuAIBcwSNGdtyBcXCYNg9TVPLKWnnqXtALm08ckzmgkgFwjacrSQdTYaL6M8sFecR2EpcQqGM85D6OXMwZQJHT+bSFoJJaxzXOOW5HDqC88nD6mPYIvwNubETPLv922N8+88+tIcjwWumbR7vKCCcmUgE2uHGqDyYYm+kraqSDzSLDI95KK0TUz5G5JHnzdrobSkBg4loJkaASSbQtfTflEfWSbAl2N5mV4nhMYfljle8V1oRJFHZhkNMXEttoG5iA5tx8yICIiAiIgIiICIiAiIgLKw2hdK4gENa22d7tGtBNhfrJOgA1JWKum4fs41mH07HA55ZonzDS5dKWtY0C/FjSGjte61jqL0rxSNHszQxgMe1hIex8gkNt46Fr3ND2tJIjbJYZLXd0XC4JaqqfB5JmSPbNMY6SZzJY2nNK4sLLNEmgJYXGUg3J3xsGtYCttiBZBX4UH6NkYIJow60bI3NLhbWznOnkijyngWHhYqnE9uKajpsriBO58dRcMIzRgN3ZaGDLK9jnZL5hIG25MDh0xERyVmWJ5Pq1u7BgdUVLi0jzaoZMaKE5WjK57IHBrS0N+zzkizhcFtzt8W2h+0dE6FsdrBzKeWKeN9iA8FjpG9CxuC0NcMrfWOh51hu1QmmeJKQf4hxka6PNTEiR8jgGMeN2+K+ti62mrrNKxMblDgRGzdAExlrcscjnAaEtZIc17GwBPAgEBt1WLJ2SaixWKkqXPjIoxVOkuZDJnjqDd19++74Y5AHhrXw3HBpfcNdsto6PLI6J8zJA/JKyZrmiZ8bvtHMbI4OzllmOAGUG779KwHIJcaJY+nmuYpGtuOi4tLH5mFlxYZTm05Zjxub7Ta7H88cG6Nt1HuiGl1i1jn5G3e8uJs7LYuvp8dIlV0XavCmCJwZPM58WRsjJSM5ZITldG8OLZQMugOlxoeag5qXTMax0h4NDXODQRlBLcwIOoDuIzWzixAuRoDtk+WllikLnHKxrJC5+YHNfQNtm6LcvS4Wb1uzaf8AfUltD94lw6yQLcb8DfUccx9yZgjdNIS5vQfx1yPJZlkA6rO9exGmvPXrvKCSYoXgXI5NzDiD0i0m2pNh19SkWyuJmWNzXkGSEgE9bTfK4+Fw9y5slNucLtyiIsgREQEREBERB9BfsubSUNLhuJMqqykpnyzgxsqJ4YXPHm2W7GyPBcL6XHNcy8ge0rcPxyinkeI4ZL0tQ5xDWtinaG5nuOjI2TCGRzjoBEbqFIg7L5S9oKWh2xgxegnp62F5iqJRSzQzAPMT6WqivG8hkroemM1gXTdhtLtudjtnsfqhicOMU9LJNFEKlj9xndu2ZGufFNJHJDMIw1hLrtIibYaEn5sXhCCd+WjC8Cp5oYcFkdMY6fLVzNeJYJJGtaGOjeG2fO7pOeYzuhdoaAcwE8/a52ioqt+FeZ1dLV7luJ7zzaaKfd5zh2TPunuyZsj7XtfI63ArhKIO9bYbRUT9gKOkZWUr6uNlBnpWzQuqG5ZwXZoQ/OC0am40VvyK7Q0UGyGOU89XSw1FQ7FNzBLNFHNLnwimjZu4nvD35pAWDKDdzSBqFwlEHbv2e9uqBmH1mCYpIIaau327neckYbUQiKeF8nCA2bvGyO0u99yCGh0o2I2UwDAao4nNjcNUYopRTRtMJeBI3K5zY4JHvqJ92SwFga20rrjgR80oAg6BDt+2TaxmNTMcyI18cjmes+OmbE2mbo2+aVlOA4hvFzTbiuqeWvZjBsRM2LsxqmY/93lsUIlpyyWeJkhhbfMXtLnEMdGGl2mljovmtLIPoDybbUYViezf7hxapbRyQ5WwzSOZGxzGTb2ncySQbsSxm0ZjcQXNGl8xy63GfJvsxhtBVPq8SbiFTJHalZSOhZMx+paWQxvkBzGzXSTXYByBXEUAQAu6bA0Wy2I4LT0VTK3Dq+nLnPnkfHDLLM+we9k8rd1NA/K0CF3SYGgCxAe7haIPqXYjDsA2a85q3YuyqmmhEbY2PgfIWNdnyQ08Li5z3PDQXuOUZRqwZiYH5DPKnBTYviL677KmxypkqHP1eynndPPIGvAFzA5szmF9tN2wkAZiOLAIg7/T+R7ZeKfzuTGqWTD2uL2029pgXN1LYjUxzZ5GfdsxoebWzX1Ua8i+JYXS7WulgmFNhjGVjYJa58cPRdEAMz35AA5+bIHdPKWh13ZlySy9QTLy310U+0OITQSxzQyzxFksT2yRvApacEsewlrgCCNDxB6l0v8Aanx/Dq2qwYRV0M8Ebq5tVJQyQ1UkEckmG3dlY8gSFjZC0O4mM8bFcCRB9H4XsLg4qY67Btpm4fTB0Ms0AnaXHJkLmvMlTG+PM1urKhknrnTLZi1flY27oKzavBX080bqfDaul39YXBsBzVsMjyJXWaYI2MvvL5em6xsLrgdl6g7T5e8dpKjazDainqqaeCOHCg+eGWKWFhjxOqe8PlY4tYWsc1xuRYOBOhXn7WOO0lXX0T6SqpqpkdJK17qaWKdrHGYENcYnENdbWxXF0Qd62j2ioneT2no21lK6rYKTNStmhNS3LXh7rwB+8FmdI6aDVSfyOYTFDsqx3nBwKrrZrvxCZsDJKlrZ3yU+7NVo+ndTuDWgZfvkXzFzvl1wuCOsWX0BW+UfZ/GMPpYMajqqaoomgCSna9zMxY1j3RGIPO7eGtJZJH0SAATbMQzPKB5JK6vpn1cWP/vd9Kx5ZC8NyEhuZzYnQzuijmc0AW3YzHLdwGo+c2m4v1rvlL5ScCwbD6mDAY6qoqawa1FQHNY1wY5jHybwNJDA9zgxkYDiTdzb3XA2iwA6hZB6iIgIiICIiAiIgIiIM/Z2jbNVwROcGskmYHuOgDM13G//AEgrsM+MMlbkZ0GSCmyOdcHKHkXNnAiTotkzXFjGQRe9+R7L1AjqRKbWhjmeSbWFo3AHpEDi4cx2arBh273lQ6MMLYXWY3O5ozERvbJI8A5mOGeRoY0n17aHRbYp2RMbs7a7aanr5HsmeRvpAKex3e6bBUuqYAXlpDHOe6SPNY2Dycp4Cf8Ak22PiqabOTLJBvJITSyvkP2b3m2Vp1Y4E5mtsMjuA424TWYXYxsA/wCdmD2mxDCwtAuB94tlvc6tuGi4uvqfyb07aanjLbAOjaSLA2It0h3gerpe/EWXNrNRwbfF3aLT8czPgwavyS0rbPY05Qbhjx0GO10awizASXEtbpr22HK9ttgnROfkaQ0ujccmUNDmFpvkaG5SWXabcbDqXfsRxkakFxNhqb3+PX3m6i+JSbwG/wAfhZclNRbfd3X09ZjaYfIe08M0UhEjSHAkX16XWQb63GvvWrNY/qBBvmFvWBA4jmARf3lfR+2GycU4Ic24JPDQjrIPJyh9ZsHGANNQACeBPw5/1K7Y1XLm4baKd+TjM1RwN+kDo/nlc3QuPM2Fu63WrIrCD28L/CxPb/VdExXye2N2cOYtzuNRyHaP0WtqtiC1rb+sGFrrcHXtY8dDx+KvGorPdhOmvHZFvOulceq8G2YAjMAOTgRmFwe3jzC3/k9r71T2OJ6cJLb8LscNO+xcfconiVK6J5jeCHD8+0d62GwQc7EILfddI4n+HcvB93Ae9Wm28MdtnWURFmCIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgvUxfaVkds0sMjNerRx5jWzVg7OYNupGte37aoLBwcXB32mdxaNQ5xBYLHo5Sbg2atrgc7WVMT3+qyRpNgD+R0tdb6oifJIJHEgNLGudY2sC1lg11sg1acxAJawcNC68TyXpG7R0+FNNXGxgJb6xFtB0zY6GwBAFrdVgBZfQWCUhFOxpHBjfhbu9y0+wGxQ3bZ3tBfN9q+/wDGbtbewDWNaGtA4WapxHibaclohEz8rrC123sLA21t199l42py+uvtHR7mnx+qpM92nlo2lvTNgNBx5LUVkLB6p0/M/HgtLtxtxXRFzn4eDF91sTXEWJPMdP8AX3KNUPlAppdDngfe27l01vyPNbVwTWEeuiUjrWG9uv8AL+qwKikBaVS7E2uAIcDwvqPir1RiIIsAFKeTTVdL/totVW0rcp05FbTFMUib68jG95HV+a1LqyKUOEUjXOaBcDQ8dbAqeCdt9mc2rvs4T5VGjz/o+yZe3Lj+Vlk+TCk/xEktjZkLWg8szy0n32afiqfKLAfPpL/gGXsFrfyupdslhwgpGNtZzhnf1lzgOPc2w9y7q/ww8jL/ABz5tsiIjMREQEREBERAREQEREBERB6xpJAAJLiAANSSTYADmSVup9kMSa0udQVgA4ncTGw6zZmg7VkeTHD9/jFDFxHnTJHDrbADO4HsIjI96ltbtpXu2lcynqZt07FGU7YMxdC6NkzIH/ZG7Q1wa5xcACMxdcHVBy9F1/H9lqSbG8YqZy5lDhrIJp2w2a6WeSmY90bDyLnh5dwOZ4Fxe40WO4ThtRgk+JUVNLRuoaqOGSJ8r52yh5gFw6RxIeN806WtlcLG4IDnqLom1myFPFieFYfExwlnhojWOzPdmfLKGSuAc4iPK2OR1m2FnDsWZSbH0MmM4oxkUrqXCYHPZRwvkdPUyMjaHRte4ueQZmyDo63cwC3MOXkrY47glRSujbUx7p00LZo2l0bi6JxIa8iN7soJaRZ1j0Toui7RYFTijwyCKgZQz43WxtmglMlRVQxRziNroppzngY4PzOGUEiSxtZwOdtLhMOIbRV76lxZQ4NSRmYs0cWRRZ9238Izmcm2toiBYuBAcbRdTpcMwWpwvEa6GimpzQwvYxkk8r2GWRo83lJ3hOfOQDHct153ur+FbI0TMMo6n93VGKNqKfe1U9PUlj6V+UF0TKZj271zCXNIPAxm51AQclW6ptk8QfG2RlDVvjkY17Hshlc17HAOa5pDek0gggjjdapsW8lDIgRvZAyJriHEZ35Y2ucGgOdqAXBovxsOC+iNoMKmfidNFSYqKePDKan3tBBJJ5w9kLg9xdTMeGvD4nRMGcEdIcbgEPnWaJzXFrmua5pLXNcC1zXA2Ic0i4cDyKoXUzHRYjU4pjdWyUUFKYGMhYcktRJuoomB7mu6JP2egcNZ2jNZpvYxnB8KkwGXEaWkmhmkqIqaCF80soZLvW5ywl/2maIuPTvYt0tbUOZourVGz+D0NVSYdV089bWVPm7Z5mTPijgfUPDGNjjje3OATezrmxBuScogm3mCto8SqaVji9kEjQxzrZsr42SNDraFwDw0kAXLToOCDSIiICIiAiIgIiICIiAiIgIiICIiAiIgkvk86NRJOGsc+lh3kQkaJGCQyxxh7mOBD8oc4gEesWnkpfjtM6smiytdRVE8kTJtwWRRyOGa4eGtDsxH3gdM1iDcgxfyTTAYpEw2tOCzXUXY5k7bjqzQj4qf7C4NOayeeZz8kBJjzteGzO3jgHRE9EtAa8lwvqGBcGbJamXftt+r3tHjx5NJttHFFuc956ckow/Z2pDd3DieJxzW6DJnUk8Uh5Bj30gvbkNHfmubT7OY4MUqoq6qxGugp6KOpZHSuFAKh0800TN++mezJEzzea4Y4Zjk4C7T3fC6pjW5ZGhzHgZmnh1g6ahw5EEWso3tltBuqpkjCTBJA+kke7R0X2rJaZ0kosTCH76PM7W9Uy5sCVTBfir8TLimLco5Pn7aSnqgbjBsNeObjJFNK25I6T3tzl1tTqePOy08eFMncQKZ9O8EtBjf9naxs4MJdEeHB7DbuOvYsUwaKR9tyC9x16IJJvxN9SVXPhdNS0c0rzGwxxOe9xLQyFo4ySW4gXAsOJIAzEgLqi3ZWdP1tPT8HDoMclppp6U01VPJSmIudSRB8Qjlja+Nz2bwbqQh1iLkEsJGmgx2YzPWbwxufFHGTG982hzABzhuo365QRcuc21xx1t1DYzZaWakqKyVhibWzukZCejIIcscdOZgb/aCnZEMoIF83MlQvZWiEdXXU0o6TakTt5Zop42N3gPA/aRvB6j3hW2hjOO8bbzyn9whsNFh7pg2WskdK4ssBHK5rs3qketcHrDuYW+hwt0cZlpyypYy7vsC+OUBmtmtfLIyR4ItlzR8DxOimk2zbHEOyxyWN2mVoL2m9+i8dIK2zZ8U8cssbWsc5thFEcrJZnkRwtynQPfM9jb6XL9VPHPSGc4dnLMUlgr8RhlgJkhEY3wcCxwcM7srmHi2wbcjM3U6qVrbVGCso2COPRkdG2DSw3kgeRndpq7K6Vx/0C1KvW28eTjzU4Zjeec85ERFZiIiICIiAiIgIiICIiAiIglHkx2liw+v86lifKGwSMY1haCHvdH0iXG1sgeP863tPtzh1K90+H4WW1bw/LUVcz5t254OZzYy513G5BsWEhxF7aLnSIJlsdto2IV0VdE+rgxQh1RlcGTb0Oc4yNOgJJdci7bFrSOBBbUbYRPpIqGgpjS0cUwncJXb2WomBuDKb+oD925vlbwDQFDUQdZl8peHOxGLETh0xqmx5ZHGUFrPsnMG5ZfKXdK2dwHRvpc3GbsdA6LD5a91LVVkmN1Ur82GB4q6Vone5zXVEbw9jXyDVrABoQ4nQDjKzKDFaiEEQ1E8IcbuEMskQcbWuQxwubDn1IOkba7jDcWw2tHnUsjot/UUtZNvqmEFuVjXSlziH2fJYFzhmh0Nitdhe3dJFiGJvNLNJQ4y200TnjftLmvMhDs1srnyz6Bwyh7bEZbHn80rnOLnOc5zjdznEuc49bnHUntKoQTrGNsaP90yYfR0T6dktXHK8vk3hkYxzHfavvmMpdGzQWDQABwudhhe3mG0j31VDh00FZJBu8m+Jo2uytGfLfNJYtB1aLm/Aklc1RBstlK6OnraaeVjpGU08cpY2wc4xuD2gX09cN48gVJ8J27Ee0EmKOie6OV814gW7zdui3cTbno5mhsd/wDpKgyIJzsvtjSRU9dRVdLJNR11SahrYnhksbg9haCbgWG7iNwdCw6ODtLe1e2cM2H0dHSUzqRlFUunsXbwZxvN2cx6T3/aOLnO4k6ADQQpEHUanyi4c+pZiL8NkdiUbGWO+tS7xjcrZMt73aOALdLDW4DlzjF8QkqJ5Z5TmlnkdI8jQZnG9gOTBwA5AALFRAREQEREBERAREQEREBERAREQEREBERBk4VWuhnimZ60ErJAOvK4HKewgWPYV9IYVVCYsnhLX0z6G0FnHNCxuW7XM4NcXueSNbFvLVfMy6D5EsddFWmmcfs6uOVrQb2bIGPeLdQdYg9ZDVy6rFxV3js79BqPV24Z6T9J/fJ2DEKnLf65KPYnio1ZcEOBDuBBuLEHrB6j19SztqD9nnvo0OPvC5rX1jtTqbrzMM7c3tW+LzE6swjLA5zBoGRg52DkGxxS5mRt6msDQOpW8KFBuXuxqaVz96xzIdTE0NF2yiKxYw3LhmY1pNiCbaLCwuZrZt5Nd3EjS4Go6IF/XIN/cpHj8cdQwBtM14aDlc8DM0/wuIBGYAHQ+5ehSbT3Zb1js2jtt6DzUR0bxKx2hlLmG5HEANFmgHlrbrXP8ZweOoqDURT+b1EUZ3XAiS5u+NzSDeJ9tcwIFgQLgEYGN7JZXhzI5G52kF0ZsCQBbMWn1hrxWlpcAEDy7LIONzexvbW7hqb960rFo6TCl7xMbTCXYPWVT42kNgfprbPGPCTJrr+ILc0lNJcPlLczC4sYwFsbXEObns5znOlyOLcxdYBxytbmdeK4bXtY8bt4Ooa5o/pyUifX5rAHj8VhbNNeUomlZ5w0G2095WM/Cwk97if5D81H1mY3PnqJHDhmyjuaMt/fa/vWGu6kbVh4eW3FeZERFZmIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAs3Aqgx1UEgNjHUQuv/0yNP6LCWThdI+WeOKJrnySyNaxjAXOcSeQGuguewAnkiY6u+bQOvC8ctQew3sR+vwUQ8zbkGnAW/X+Sk+PS5HyRni7MWX4FwHC/IlRWOpzgDttovCjbs+nmd0fxnZGSrLWQ1DqYsJcHsAJJ5Bw5t0t7gsSq2TqIw1ss5nkBcHxiSSJ5G8BD2hxLLBlxYHUm9wRZT7D6aRmo4H4/Vlr8eMh/iHIOH9RourHfltKIpXrzQispGNc/KzEo2tYCGtML8xzO6NzI7qHE8CtBW1NU1n+HbLvHOaGtqsmW2RuclsbnOLi7MAAeAuSpbM52axY8docbXv3/wAl5FC0atZYuvd3Fx951W3FXwUvEbdZR/BaCQv3k+73ul90C1ttbgXJNu88luKuq3bC77x0Z3nn7hr7lU/o3PDrWhr6nO6/IaD+qrWnHf4Q5NRljHTaO7HREXe8YREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEVcELnuDWNc9x4NaC5x7gBdSTCth6uTV4bA21yZD0rdeQaj/MWo1xYMmWdqVmfJGFkUFFJK/JExz3Hk0cO88AO9dEw3ZCiiY6WUunbEC5z3HLHp+FjOJ7C48V5sNjDJGCRzBGa+WWOjp4WgZaeF2V8r7HK1mYHNIbAktGuinZ7Gn9B5LT/AKsxXy5z+n5tDhmxhMgbUSBhLS4tjs51g0OIzHTN0m8AfW7F3XyI7N00GGyVbI2iepkqohIbOdHCyV0TWNceBeGB7iNXF9vVa0DjG02NxQ19Nmqadz8+4fBG4vlGdu7e53RblbnZG7XUbu2uYFdS8km0TfN6qjc4Z45n1EfWY5SM4A62yAG3VK3tXPqpmKcndl9H4cWP/TjnExvPWdlrygUAkDrXuOBGhuOBB5ELkldWyU8l3C4zDUW1OutuR69Oa7HtLMCO0qC4xQNkBFtTxB4HvvwK8inJlL3ZrbeAssbkgkadhF+Otg0gk9vfbIm2sp3cLa8D1i/O+vFcs2j2UJcTE50bgfdy0I5cB8FGZcNxJugDX20zNNidRydoANb36/cuvHWnWJc973js69iOMs1Jay5Jyn3aW1GunZxWmxLHYW34acbadK56IFuzibcVz5tFiklhu2saCbZ3t4DhewN7395atvgmyby5slVKJchzCKMOEQPEZnO6Uljc6gDs5DS017ypx2npDNxSuLzYXAIB1468u7gsFSTGcMY2CGXS829HEj/lOLS0H1c4ZkeB95pebfZuWgmgI14tNrHvvoeo6HTsK7MVfciYcerwZP5nWPh281pERXcAiIgIiICIiAiIgIiICIiAiKR7NbMiWF9XVStpKCG5kqH2GaxsWxA8Tfo5rHU2AcdFz6rVY9NTjyTtHTxmZnpER1mZ7RDTFitltw1j+3xme0NBS075HhkbHSPdwYxpe49zWgkqVUnk9rCzeTmCkj5uqJA2w7m5gO5xC2ezNXiFeNxs7SNw+icS12KVUZkqKm1xnpoCC6QdRdcakXiIyqX0H7PLHuE+IsxDFZwc28rJJA0E8RHAx4LYr/ccXDlw0XJjr6Q1XvViuCs9OP38k/8AWJitfnb47NL302HlO+Sfu8q/PaZn6OavwbCm6P2gw8EaEMMcgB5i7ahXKfZqhmOWmxzDZnnhGXsjcf8AKJnu+AXWz5NsKhOV2EULHdUtJCX/ABljLisPEfJlgsrS1+GUbQ4EEwxNp3a9TqfI4HtBuuj/ACbWbbxqp3/4Y9vpWJ+rH/McHfDH/q2/5/0cqxnYavgGZ0BlYBfPAd63vygZ7dpbZRtdVf5KpaPp4HiVTQluopJ3GpoX63LTG8Ex5jxeRIRc2tdaDEMRjmqBR47StwrEZLiDEIdaGrIsLl5Nhc26L3XF2gujLg1c2XJrdFz1FIyU73xxMTHxtjmZ3jx4bTP3W+P2fUcsUzW32bbbT5W5fWPxQlFs9pcCno5zFO2x1LHjVkjfxMdzHWDqL6jgtYvQxZqZaRfHMWrMbxMdJYXpakzW0bTAiItFRERAREQEREBERAREQEREBERAREQEWwwLCJamQtije/IMz8lui3/MQMx4AX1U22Uw2CGdrmNkc+zg5s7QJGHX1eiA1wsdeetuIUxDv0fo7JqOccq+P6R3RnCNj6uYi7BCwi4fPeMEfwttmd8LdqlVDsTSQ6zyPncPuj7OP4NOYn/Ms/HtpKaFpNTOyMElrGffOUahrBdzrXGgBIvwUJxjykM4UtO+S4FpJBkae1gIc7ThZ7G8PjaKvdxejdLg5396fj+n6uh0hY1pZTxsgaB6wAYAD95xAuff8VGdqdoh5xHTmZsVLEDJVTuMYdMRo2FnEAudYakWAOpOh5pjO0dZPE9kkz2h9+jCXRCxIPWSNBY2IBzEEclHqCnDL2Fi7RxboT13I1N9b9atwt762K7VxxtHy+jp+2+3Rko8kUDXU5dke5rnxR24ZGSFmaZwNrujDWjrJJa2nAKiWSOLzcQxQiDdmaDeyTRRNsTEDM8CJx6wND0gb2UEqp3OjDL9Fos1v3RqToOWp96ow7FZqRwkhNgSM7RwPLVt9RY+9Twqe1e/vaZ2SrbelhjxF4eBuKmKMRuAAEJjAa2w4NjygizbWNjwusA7STwvjljflqac2vYdK3RuR97My4cOd3DgVRjO1VLVQMu0sna4XYWkMy63trY9XAetw4FaCusAPvRGwa7i6P8AhPWzqPLgomu8c2ebNHPgnlL6A2P24gxKHM3oTsH21OT0mO5uZzfCTwPLgbLMrrfXFfL4fNDM2ene6KVmoc029/UR1gixXQ9mfK7G4COvYYXiw3zAXRu5dJgu5ju6456cF5mbSTXnXnDg9bz5ujVkQcOkNQNDz93WOwrSVNDY6HTtH8xx+C2dFjEE8eaCWKZh4ljmv+IBuD+aszzjhr3cf1C4pjblLeLNYyl11ObXhwCyHM0sPr/RJZA1pc4gDrKjWObWQwAl8jWHUhmhlf1BsYObXrOmq0x4rX6McmSK9XnlOxNsdJTQ3GcVQkaOYsyRpPdZ5Hc5Rhu17o4GMfC18YLg6QE77pSZm2Dzu8oJI4C+c6jioniOKy1NSZpOJ0Yy9w1nVfvuSf0sFnugEkZbma0cLkj1gc1/ivbw4+GuzGmW3Ph7ppQubMC6O4ZcdI6NB/C++sbr6a3HaLXXs0TmmzgWnqP6jrHaolSysiIIndnaAM8fRJAFrG4LXttyeHBb/Ddsh0YqiKOWDQB7G5JYxwvlByuHY3IRyvwM2x+CuTS48nT3Z+n9mWi2E1FG+Pe00gmivY5TdzT1EWBB7HAHUcVr1nMbPOy4bYp2tH6T5CIihkIiICIiAiIgIi9aCTYAkk2AGpJPAAdZKCQ7FYEyd0k9S/dUVEwy1MpOUZWgu3Yd1kAk21AHWWqa+TTYubaisjq6thgwOjd/gKC2VkzGdAVNQwaOa6xa1nAgEDoB5mjm19DGX0WAGQRUsEBxXHZ7loEMRDt2XjgHSADjcDcEXtY9u8jflhwCeMYdS1BiqXXMcU0UlM2aNgysjpXPaGuIjaAIrh3r2bobeNoYjUTOvyc4jeMMeFek5NvG3XftXaPF16iZx7aanwnJPjP2fKPz3nwdRbPTUUQjgY2NoAaMoBe/KLCw6h22A4C2i1L9t2B1swv1GRgPhXEq/FMV2ixaqo8Iq20FBhpyVmJ7ptTvqk8KOmY5wDo2C+YhzT0SScrmbynY+uNBiQwPaSJgnqHH92YvGXxUuItJAETwHCOCtBIGWwBLgwi5jfPjqs2rtHrInl12/wB23jP73h2YKaSnu3i09t422/OH0NS4rBVM3crRICNWuADx/E236tNwoZthgnmjs4deneC5sjiAGgC5a93AWGt9LgHqK1T6eShq44w9zoZrmFx9ZjgfV6r3IBtoc4OmoUD292L2o2mkqI6iWDCMGo5JjT04cah9buictQ9kTm71jyC4CV8Yju0CNzgZD2+hvSl7+7bn/VzelfR1KRF6TvE9JavGfK/Tb10GGU8+LTtvc0wy0rDbTPVOaRlP42tc3+JR/abGMZrqV8NVgVDLTyC5p3VQ34NjZ0cwdljmHJ4sR+Sx6vAMXwKm3zJoMTw6nBdUQsgZRzwRD15owxzhJYXc5z3u4agAue3qOzOLxVNG2aFrJWvhbJHoG7xhGgIt0ZPukEaHjzX0Ucd54bTt8OX93zF72paIrEbT0nnO/wAO23y/FxHye7RFzv3BjDZYg4gYfNUWM9NIbthhdJlaJY3eqx4Aa43YNHNDMTGcOkp55IJRZ8TrHqI4tc3rY5pBHYV0/wAp+x0GJUAfF0XgF1NLwdDN+AuGoieRlcOWhGoaRDqmtdiWCQ18gtXYbKaDEQbZi5jgGyPsPXJcxxA0BnkH3V8znwT6O1UTX+VmttMdq5J6Wjwi/wDDb73DPeXu6XU+2Yprf+Zjjfzr/XbrHw3jtCKoiL1mYiIgIiICIiAiIgIiICIiAiIgLd7LbOSVTib7uJh6ch5n8EY+9J+Q58gbey+D+cTWc9scbNXuce+zWji5x7OA16l0B1Q2KIRMDWsibZtgAONzfX1ib8b8eamIet6N9HevnjvyrH1/szqXc00O5hbu2tPE6uc61sz3EdJ/HlwNhYLT4pjF7dZ5kDpDUcTrax5jnz0WnxzFrtOp5kcDe3vv1+8FRDFMbtxN9OXYf1159avEPprZKYq8NY2iFnaalpmFz3tfLO99nSSPz5Gm72hl3Egaiw0sLrXSYuA3KwMa3ubf8uenNa7aDEDI24OhAHvF+Ouuh/JadshWrx82o2t7reST3+v6qoWWpgBvz9/as2M6apLOMm6+Wj6/1VLgb8iPzVbHCyqIULNfV0rb3y+8WH1wVmKa3M2ta3EW7iti9v19cliys14fl/QIytG08mI7rHw4cvyWHWRNdxA16+F+9Z5isqXRcuPemzOY3R19K9js0b3McODmEtI97TcLPh2jxJoAFZPYfieXnlbV9yst9KO3jx4fyVl1E7kSe4j6uqTjiernnHMdGHV4rWyf8ypndz9d/u0DvyWPT0euZ978bnmeZPXqtgKY88w+u7T/AEXhpDyd9dvNTFYjojg583kULrWaPr3kK7HQSOOpIAt1D9CrbaZw1BP1/ur7Q8aX/l+isvEeLMp8KH3ndXEj3/XetjDQxCxLuHIae8dq1EObr+vesuOM2FyT+X6K0NazEdmypHOjfmikdG7mWm2YdT2+q9n8LgQtzSVm9Ni0NlsSWt0ZIALudGCbtIGpYb8yLi9o5HcD6+rrIbIRYglrmkFrhoQ4Hokdt1Fq7r2rXJXht0/Lyb9Fj0FSZGkkAEOsbcCbNddo5N14diyFzzGzxr14ZmPAREUKiIiAiIgKR+TSg32K0zSLtZIZXf8A+TS9v/zhg96jimvkcNq+V3NmH1Lm94fAP5leZ6ZyTj0WW1evBaI/GNnVoqxbPSJ+1DndVXy4jiWJgaQVuICSpkaTeSkpHOjoacHkCGhxt6xjYdN3Y3ttGMlMNFFGx0zi1zXW0pomkHPcerwFhwsOvLfD2Rr2UuCxSZc0kxeGMGrpZd46NgsNT0Wt4chpqQDIdk/Jxi8meZ80dJJUkOdePzmptya5nqxM4dEOuLAECwA9DDh4KxjpHKsRWPKOUPLz6ivFN7ztvM/jPf4pr5FvKpJgEH7uraR1ThofLJBVUMbPOY3yPL3NqYi9rZWkmweXBzQ1o6YsGRryh41NtDXyVlZHLBRxxvgw6jebPiicRmqJQLjzmQgF3EaNb0msa52ZP5OcYjBczEIpSB6s9MYWHvezO4LS17sSpNayhL4xxqKM75g6y6O+drRzc/KFacE1ni2VjW1vHDFo/KfrsmewPlKqGy0WF4xKHCGW1HiUhtvmXjywVL3HSZuUNEjjd2Zodc2fJP6XyzVlbWfunZaGhq54oJXz1uISOZSZRJ0m00Ub2zVIBcBvWXbqCA5pzrhbJ6SvgLQ5krCAS3g9vU6xs5p468DrxCVWztO4R5GugfB/ypadxilZoQbSDXXM7U3PSPWb8VNDjx5JyU5TPbt5vQt6QvbDXDbpX5uueTbyhR10tRQVbIYcRo5J4ZoI3tlp5xC90cr6Z9yJGAghzLuIGt3DUR/yGRmmnxDD/wD08OxeqihGpy08t3xNJOpNwXEnm8rnlVs7FHDGadxpZaI72CoabPie3pFznc29fUOAtoZ5+zzv6gVNfUWMmI10kxLRla5sUYjLg37o328bb+FezjyzeaxPWPyeNqaxFOX2q7ee/wCm6e4J/wDqKul+650j2DqIdy9xb4Fz7Z6kDNosVw/URY3hLato4NbPG50Li0cM7nOkkJ43aL8rTPB6jNipcOD5Jx3tDJLf+IKjGMuybY4Nl/8AUjxeN3a1tNM9o7swB9y4v8UYuLQZZ71pN486e9H1h0+ir8Ouxfemaz5T+5c2C18eIuc45InOY2TIXgtGoNiQ0m5aDzW6xhtqmcDg2omA7hK4BaCnp3MkMcczQ0u3pYWZnta52oa4m2UnTUXF0pbirE+Mbu6Y2nZcGJ3y2ytLqh0Vnk6hrsri2zfXuRYHrVz97Qe0bwvz1HZpqewKw3C3aDOMrasVDRlN+LyWk5teIsew9a9pMKLRCMwO5jnYdPW3pvca6WVkMp+IRDLd7emGuB1tZxsCSBZoJ0ubK3HikRdIC7LuT0i7Qchce8gdd1rjg7nxBgmBYIxHwfYOY4hxDQ8A3I1zA8NFlVWFOeZemAJXRvAym7XsDQNQ7VtgdNDqNdEGV+8YsodnFi4t53zAXLbWuHW5dqQ4jC4gNkaSWlw7gLnUjiBy4rGhwshzHEtzMlL3ZQ/pdAsAu+RxuL8VSzCXBsYEljF5zZwGt5g6xGuhbcd9kF6bFohG54dmDMujQbnN6ts1rg668NFdOIxXaDI0F4aRx4ONhfTo3PXZYAwZxbIHSAmWFsZNnk3a6+Yl7yTfq0WTDRyNkLxIy8oi3t2E3MYt0On0QR13sgqosTjectw15dIAw6k5CQdbWvYXtxsVnLWwYYWmI5h9lLNJw47zNpx0tf8AJbJECIiAqomFzg0C5cQAO0qlb/ZKADPO4A5RkYDexcR0ncOIGg7XdimG+mwTmyRSO/5d0npoI4adkbMpLGkueBq55HSOYi514A8rWWixbEgOB999O74forWL4uNRf8+Pbxt1flxUQxnFL8xxJAHUbcez8xdXh9fa9cVOGvKIhTjGLanU93EWt38VHJqgknXT+vH67FRNMXOPH6/ReRw69/u+CvEPIy5pvK1OXFunDircI7/0Wwkp7C/bxGix4m9/xParMJjmvQNHL38llNH19BWYowFlNsoXrCtlu5XFRYK6xg7/AH2UtYUP+rKyWq+8fX+yslJRMLLmaqkhXnKk/X11qFNlhzFQQson65r0tuiNmPlB0Nverbqbq4e6w/0V90f19clQGEag/wBPgpJWhFwuO4r3c/z61kskbbUAfmCr4hFrixH1y6lKOFrnQHkdddB71QyTKdb26+pbPdj/AEWNVw3B43tppx+v5psia7PHyDLftH56q3JKbcebD8HX/krEcp3T+tpb/MfBXap2VhdyETSO8N4fXWm6N222dl6Tm30cAR3g2I+upbpRLCKnK6M8iW3P/USCfzupaue3Vwaqu1t/GBERVcwiIgIiICmHkenDcVY13CeCeLvuwSW/7ah6y8FrzBUwzt1MErH2H3g1wLm/5m3b71xekdNOo02TFHW1LRHnMcvq302X1eWt57TEz5b82L5E8ELsWMMtnDBG1EbAf/5Bq3Rby3WLSdxaw8Qu6bW4+6kIii6IaG5nWDnOc4X+9pw1JPXysoC+NtFta6VpHm20NHv6Z/3TUM3b3tB7crpNeJq2C99FM/KJh+8a2dnqytaO6Rt7A97bt72ler6D1NdTgpl+1ETPwnvH4Tyn4w8bXYpxaq9J7bbeXPnHn1+TV0e3st9X5h/E1hHxjs5b6h2mppv+awNPtItbdrm+sP8A5lwbFqN0MhIu1pJykXBHW024EforlBjkrCLnMBz4OHc4cfevoLaeswwmnFHPm6xtZ5LqKs/xEP2cxJIqaQiOXNpcyNHQkdYWJIz20BChFXsVjUByxz0lU0c6hskEvva0EHvLys/AdsS0gtkLXac8ju4j1X9ymFNt8+1nZHf9bHX/AO2bfkvPy6CJlWs3pyrbl4Tz+Xf6oFQeTvEqx4ZXTQxU+YZ4KLO6SUD7r5Hi0bb21u7noNCOrVG6w+jEMQax+6axjG6Nhia2w7gBwvxPXYrSVu3shaQ0tb/8NhB+MhNu8KLS1b6l9r6OOZxvmJH4nOPrH/RXwaOKcyd7Tvad9unaITHydtz1G9OjWMkcOwaRt+IuVoYJBNtlTkjo4bhFXVPdya6d7oSD1HdyA9t+xTHD420lA58hEZlYXOLtBHCxpN3dQDLk9WfsXMtlqtww3FsYeC2THqjzWjabhwpIg+IOtxa7IJL9ZgafvL5//FOXfSzhr/FlmMcf952n5V3tPwh6XoinFq4yT0xRN58+0fvxReebO9zzxke55/zOLv5rUMhlziTKNZiSL9PduAjt1WDQ15APFi2iLSIiI2h1btXFE4RkbpxlygPcTo8lzQ52jwXaXcBpoMtxeyoip3D1mExiZx3YDQLGFgBDM1sgeHdG/F17aLbopQ0opX5WgtdlyyAN6L3McZpDe5kFnFpbZ9zbKdRfW+6iJc4kFx38VnX1MYiia/gdGkh1xzWzRBp5YSC1g03r5Y8t9REX58zRe4DWBwHVvAsqo85zHJ5vk+7m3ma1hxyi3HqWciDW/wCM/wDa/wDe/on+M/8Aa/8Ae/otkiDAh86zDN5vluM2Xe5rX1tcWvbrWeiICIiD1oJNhxJsO8qS1znQwti3udjR0Q1ga2+rjmvq7pE69o69NZgEbQ50skMs0cQIIitma5wOV5BOrWgE99usKnG6wF+Vj8wNyBazracb6g8PoK0PoPROHhpOWe/KP6tJjVUbniNLkm/Ve4/ENO9RKplzPNuu/X+alW2sm6jY23TlzcRawv6wI4h2qicLNLrSIW1Vve2VMmseF+9bClLXDT9de7h/Va2Rvx+tb9Sssmczh1/1UuXi2bucG3RtqLEG/H3aq3HSgDjfv4fny7VcpKjOW30zA92gv+q9zWPHn/VS05TzBH9afQV0N9yrYerqVYHvv1Kdl4hQxvO4N1UX9/by+ivdR1K2Sp2S9L/rj9FUG30V6qbKJRJ9dX0F4Ajl6FCHmn1/qg+P12BVD4fXcvCOf6IPB2ar0DReDUqsdykW3xAjX+itthc03Y48OH+yyLql47+8f6KUTC2MStpLFpa2ZunceNlkRxNe37Nwfztazh7r6+7rVLQCOIOnDn3rFnw4HVpIPEFpNwnM5+bWVrcjpB+KN510sW9Ln2tVWJP+wYNOnkB67AZtPy+K9qpXPeIprb3K50cpsN61oIcx38eW5F+q3UsepObdi98rcv5Nvf8AT3Km7mnvsyI2dFo/hH6X/UqZUcueNj/xsafiBf8ANROHV3uP/j/Vb3ZmbNBb2b3N9xs4f+Vvcs7MdVHuxPg2iIio4RERAREQEREEuw2mGKYYcNLxHXUT/OsKnJtaWO7t2XWNhe/XZrg4D7IKW+TLa5tZTyU1WzdVNOd1W0zhldFKDl3jW8onObcEXykWubXPKKadzHtexxY+Nwc1zdC1wNwQeu6mVRAzFXx1VLKygx6mZla/1YK9gAvHKADcFotaxLepzWjL49c1vRea2TaZwXnittz9XaettvsW6z9m289JnbbPp/bccRWdstOVfvx9mfj2jxjbvDc7abJFtzYPjfwf913UHEerJ1Hny7Oa4ls/IwnLr/C6wd7jwcO3RdG2Z8pW7l8xxWHzCrAs6Go0ppgSBmp5zdhY4ngSRc2BeQSpbVYNRzC7Xbku1yuAdHrzAOlu5wX2mm11MlYtWYmJ6THOJ/F8/Npx24bxw28JfPL6KQcY3+EkfECyvU1JUcGiRvvLB+ZC7dJsID6r4SOvM9v5NuFXBsRG3WSWFvdd592cjVdntFVuPycrwnZ97yDI4vseZcYx3k+sexdW2U2bbE0TTizRYtY4dKR3IlvJnU3nz0vfMmmoKKMzOc37P/1p3NZG09mawB6rC/aoHW7T1+MyOhwkGGlaS2oxaZro4Y2D120jTYvlAvr6wtrkuJB5mv8ASmLT45vktFax3n9/Iw0yai/BhjimflH4qtu8QlxfEP3PSOLY9H4pUs9Wlp2uvuA7gZ3kEEdehBG8yabbzGIpZY4KYBtFQRCCma31S1oa0vHYcrQOxgP3ir2JYhS0VGcMwu5icSaurOstZIRZ5LwNWHhcWFui3o6uiq+UwRk1mf2vNE1iImMVZ6xE9b2jtaY5RH+2u+/OZe/XHTS4vUUnimZ3vbxnwj4R9Z28BEReswEREBERAREQEREBERAREQb3Ba1jadzd41jg573NPrOblb6pHGwDrjj1c1D/ADkSVLQek179Trq3MDY/wajq4rczvHmrhuw4h98+bK5twLAgjgbE9uUqL7OPJrAdBmLQC6/JwuRfi62unVbqB0jo+mw3/wBHHX4QteUOe9aWtJyxtDQL3AHGw7OHuC10cl2cBoLH3dY6u1ebbTu8/mA4B5FrW0AtoOQ7O1WIj0dCe2+muqtDiy33yW82QZNLnrt9dasVJB/S3Hq/p+a8e/RWaEh8ozuDI2dORx0AY0i47ySAB1lTuytbfkz6dpij3nSGpcL8CA3S1+VzxWfK/pnq4jhwOoPwIWr2jxXeOaGn7Ngc1g5WPOx5WV6GUlkR6428/wAN234fwovFoidobKN/+h/2V0S+5YId+f8AVVtdqp3bbssyH815m/3+grLSrgQ3Vnv+u1eheBA5EhXl1TI6ypvp9f0Q3XA6319ar3NfT/ZW/wDZe2PZ9fyU9BcA+uf+y9cVRn5L26bpVEfkvB2EfX8lS49q9a5BUe0DqvpdeNFuF/iVdbA4i4t/ovJKd4Fyx1usajkhs0e07g0MeeLX528L5sjm/ncE/wDSsCgJs0nXoA69ZJP6WVramcvqmRDTI1t+J6Tjc3HKzbfRV6lP17gqbuObb3nZtKMXcO5ZuyElpJm39azwO5xB/wDIfBYNEdCfd+Sp2WktWAfiZK39Hf8A4qtkZ/5aZoiLN5oiIgIiICIiAvWkggg2IIII0II1BB5FeIglcO17ZoRTYpTR4jTjgZABPHpbMyTjnt94Frv4lTQbP0IBOFY5V4Xe1qasAnpo+xrZSGDvL3n8lFkXlT6JpS02097YZnn7sxwzPjNLRNflES6p1XHHDmrXJH3o5/8AqNp+e7oDcKx8AbnFcDqRb15M0bndpEEbm/BWqrCcYLf8Tj+FUQ5+bRsmcewb/IfDY6KB2HUvQFPs2v6e0/LHXf6zMf8AywjFooneMEfOdvy3+qTS4VgkMm9qpqzHalpOXzlzhTNNtQGGw3R/Cd63s0VraTa6oqWCLoQUzQAymgGSMNHAOt64HVo3TRoUeRTh9FYq3jLkm2W8dLXnfb/jXlWvnFYn4traq3DwUiKV8Kxtv5z1n8ZERF6bmEREBERAREQEREBERAREQEREFEsbrFwBs5hY48Wka9FwPfoR1qMYHUgVcZbGIwXhtru0uCL3JuDrx5FT3DYWyRGO43mYlgBAcDk4ceDhfTW+Rc/fDarkabnJI4HgcuV2p6r3/RaxHJ9BTeMOOYa7bE/42Uk8Xm3dYEadyx4Tp9e767ll7WHPMX5sxNte0AC9uR0C1LKlwFnC4HAjiO/kVLjyz78+bYOZcfz5LV490YMtzd0hJ7mizfjncs2nq7DiCCdRz/XitdtLM1wY1pOhufhytzSejHJMcM7MdlUHFvEgDiBw0HHsUjpydzCeF2vP/dfb67FqNn8OMhaAD0jYf17lu8TIbKWNPRisxpPU0ZT7rg/FRHJOGJ24pZEeqqB/JY8EunWeSyA7hxUuqJXmu1V+M8eax43c9P5q66X6/wBlZpC6XKy56olnVh0naiJtC+5683isNf1aqoFQpxL4Pcq2uWLf8l6XHrU7pizKJ+v5rxrli5zZe709l+5QtxssvXrXrDbL3fkr0cn0LoRO6/urm+qxMTndDFJIJHNLGOLdfvH1Rw5uI/NZjdVodv5rQxRg6ySFxH8LG21/zPHhSVctuGky0tNUummknfbM8AG3C+UN+NgtlE/Ra2hbZgHv9/1+q2MCq4se+zbUnqE9jj+SwsEdashd1yEeIFv6FX2v6DrDg3Tj+SwaM2mhP/uaf85WBGuXnV0ZERZPNEXMfSDVezp/DJ81PSDVezp/DJ81B05FzH0g1Xs6fwyfNT0g1Xs6fwyfNQdORcx9INV7On8MnzU9INV7On8MnzUHTkXMfSDVezp/DJ81PSDVezp/DJ81B05FzH0g1Xs6fwyfNT0g1Xs6fwyfNQdORcx9INV7On8MnzU9INV7On8MnzUHTkXMfSDVezp/DJ81PSDVezp/DJ81B05FzH0g1Xs6fwyfNT0g1Xs6fwyfNQdORcx9INV7On8MnzU9INV7On8MnzUHTkXMfSDVezp/DJ81PSDVezp/DJ81B05FzH0g1Xs6fwyfNT0g1Xs6fwyfNQdORcx9INV7On8MnzU9INV7On8MnzUHTkXMfSDVezp/DJ81PSDVezp/DJ81B05FzH0g1Xs6fwyfNT0g1Xs6fwyfNQdORcx9INV7On8MnzU9INV7On8MnzUEg2nxGemrmVEDy1zYYwRyNpJSL9uuis4Sd8XS7wl8hJdmOuY6kk26/jdRbFNq5ZtXxwXylt2tfci9wDeQ6A3I7ytfT4vIw3bYeL+5Xi0Q7MeoisRHOY8PiluKRuDsrgL87e7j2rEdBcfQ/VR04vLcm4JPG9zf81WMal6mnvzf3KeKETmrLPmic08OPV1KxW0r2y5HjKWtb0ToRmGcX7bO16lZix2QOa7LGcj2vsQ6xLTcAjPwuvcTx2SaYyubGHODQQ0ODeiLDi8m9u1RvDG1olK8CmyREgakWvzaLfkbqxFAXG7r8T+f8lG4celaLBsfLk7+5XRtLMODY/g7+9TxQ6Yz02iJ7JSNNB+n6q6CoidpZuqPXsd/cvf+JpvwxfB396njheNTRLw7T39i8fJookNqJvwxfB/96pO0034Y/g/+9OKD2miUXVQUT/4jl/DH8Hf3r3/iWb8Mfwd/enHCPaaJcD7lcBUOG0s34Y/g7+9VDaib8MXwf/enHB7RRLsy8JURO0834Yvg7+9eHaWb8Mfwd/enFB7TRLXFUkqKHaab8MXwd/evP+JJvwx/B396ccHtNEoLirsUmvNRB20Uv4Y/g7+9VR7STDg2P4O/vUcSPaap5A69teX9FFdsiTWN6mwsA8T76ctSsKHaudpJDYtb8Q/n/nWBiWLySybxwYDlDbNBtYFx5uOvSKjiRm1Fb02jxbOnd9e5Z0RPKx99lGm4g8cm/n/VXW4vIOTPgf7lPFDGuWISt0nQIOlzblqrUA+1h/8A7FP/APWYo67HZSALMsOx39y9jx6QOa4Njux7XDR1rtcCL9LhcKeKF7ZqzDs6LmPpBqvZ0/hk+anpBqvZ0/hk+asnIiCIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiIP/2Q==\n"}}]}}, "227592bef5474ea3ac8c931b8a703f06": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "98ca9eadb27b4b228c90c8650eb49c92": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_227592bef5474ea3ac8c931b8a703f06", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV19X4y1e7iJ\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7f0a52d88810>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV19X4y1e7iJ&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}, "6ad4d7f09b194083a59f321b16e9a63e": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "13762fd6c0de4564beda54cb002cf09b": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TabModel", "_titles": {"0": "Youtube", "1": "Bilibili"}, "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_e80ab027dd8341d0911defe2a46ef3c4", "IPY_MODEL_98ca9eadb27b4b228c90c8650eb49c92"], "layout": "IPY_MODEL_6ad4d7f09b194083a59f321b16e9a63e", "selected_index": 0}}, "7154f306724f471e81aa5c41b6fc86bc": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "35967a4ce18b40f89921b10ac8db000a": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_7154f306724f471e81aa5c41b6fc86bc", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "If you want to download the slides: https://osf.io/download/2ak68/\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.IFrame at 0x7f0a50122a50>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://mfr.ca-1.osf.io/render?url=https://osf.io/2ak68/?direct%26mode=render%26action=download%26mode=render\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}}, "version_major": 2, "version_minor": 0}
+{"state": {"db70ea641b464c9089ee74268fe942a4": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b19700590d7c46ae8cb12c65156f9ac0": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_db70ea641b464c9089ee74268fe942a4", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=lIOVdzlnT60\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7fa0bc88b750>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/lIOVdzlnT60?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "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\n"}}]}}, "85b58e1d047441e7a7697df6baed7918": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "dce66309e2484d28809b941963558488": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_85b58e1d047441e7a7697df6baed7918", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV19X4y1e7iJ\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7fa0c15072d0>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV19X4y1e7iJ&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}, "e2999b3740e24fd684dc7fa2cc2872eb": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "34ab13a178f34794bc0dc7b8c3cc1dd1": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TabModel", "_titles": {"0": "Youtube", "1": "Bilibili"}, "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_b19700590d7c46ae8cb12c65156f9ac0", "IPY_MODEL_dce66309e2484d28809b941963558488"], "layout": "IPY_MODEL_e2999b3740e24fd684dc7fa2cc2872eb", "selected_index": 0}}, "56143b2a7707452eb3946cc9f3d326c2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9c31779c7b0e4a3caba3301c6d5dc8b5": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_56143b2a7707452eb3946cc9f3d326c2", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "If you want to download the slides: https://osf.io/download/2ak68/\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.IFrame at 0x7fa0bc89fed0>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://mfr.ca-1.osf.io/render?url=https://osf.io/2ak68/?direct%26mode=render%26action=download%26mode=render\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}]}}}, "version_major": 2, "version_minor": 0}
 </script>
 <script type="text/x-thebe-config">
     {

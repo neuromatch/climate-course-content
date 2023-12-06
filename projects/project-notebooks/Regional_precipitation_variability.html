@@ -1480,7 +1480,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "0d33443acd8a4ac09bb87831133fa45d"}
+{"version_major": 2, "version_minor": 0, "model_id": "461d6c7cb7a0485b872121f90dbb69b3"}
 </script></div>
 </div>
 <div class="cell docutils container">
@@ -2016,7 +2016,7 @@ body.vscode-dark {
 }
 
 .xr-wrap {
-  display: block;
+  display: block !important;
   min-width: 300px;
   max-width: 700px;
 }
@@ -2288,7 +2288,8 @@ dl.xr-attrs {
   grid-template-columns: 125px auto;
 }
 
-.xr-attrs dt, dd {
+.xr-attrs dt,
+.xr-attrs dd {
   padding: 0;
   margin: 0;
   float: left;
@@ -2326,32 +2327,30 @@ dl.xr-attrs {
 </style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
 Dimensions:    (latitude: 400, longitude: 1440, time: 15644)
 Coordinates:
-  * longitude  (longitude) float32 -179.875 -179.625 ... 179.625 179.875
-  * latitude   (latitude) float32 -49.875 -49.625 -49.375 ... 49.625 49.875
+  * latitude   (latitude) float32 -49.88 -49.62 -49.38 ... 49.38 49.62 49.88
+  * longitude  (longitude) float32 -179.9 -179.6 -179.4 ... 179.4 179.6 179.9
   * time       (time) datetime64[ns] 1981-01-01 1981-01-02 ... 2023-10-31
 Data variables:
     precip     (time, latitude, longitude) float32 dask.array&lt;chunksize=(365, 400, 1440), meta=np.ndarray&gt;
-Attributes:
+Attributes: (12/15)
     Conventions:       CF-1.6
     title:             CHIRPS Version 2.0
     history:           created by Climate Hazards Group
     version:           Version 2.0
     date_created:      2015-10-07
     creator_name:      Pete Peterson
-    creator_email:     pete@geog.ucsb.edu
-    institution:       Climate Hazards Group.  University of California at Sa...
-    documentation:     http://pubs.usgs.gov/ds/832/
+    ...                ...
     reference:         Funk, C.C., Peterson, P.J., Landsfeld, M.F., Pedreros,...
     comments:           time variable denotes the first day of the given day.
     acknowledgements:  The Climate Hazards Group InfraRed Precipitation with ...
     ftp_url:           ftp://chg-ftpout.geog.ucsb.edu/pub/org/chg/products/CH...
     website:           http://chg.geog.ucsb.edu/data/chirps/index.html
-    faq:               http://chg-wiki.geog.ucsb.edu/wiki/CHIRPS_FAQ</pre><div class='xr-wrap' hidden><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-17bdef72-38a7-4a63-8484-19aeb7759416' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-17bdef72-38a7-4a63-8484-19aeb7759416' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 400</li><li><span class='xr-has-index'>longitude</span>: 1440</li><li><span class='xr-has-index'>time</span>: 15644</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-bcaf0a60-150c-46f2-865e-a59109cf7578' class='xr-section-summary-in' type='checkbox'  checked><label for='section-bcaf0a60-150c-46f2-865e-a59109cf7578' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-179.875 -179.625 ... 179.875</div><input id='attrs-39ec3dda-ff8f-43a6-a689-1ed094348843' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-39ec3dda-ff8f-43a6-a689-1ed094348843' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f94af471-5be9-4b47-8573-5ea7fff1d10b' class='xr-var-data-in' type='checkbox'><label for='data-f94af471-5be9-4b47-8573-5ea7fff1d10b' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([-179.875, -179.625, -179.375, ...,  179.375,  179.625,  179.875],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-49.875 -49.625 ... 49.625 49.875</div><input id='attrs-1fbd16f4-184f-444d-a2ea-5b2b6bdc4dd0' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-1fbd16f4-184f-444d-a2ea-5b2b6bdc4dd0' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-904e7683-a30a-4152-b26e-1b5e8a84c090' class='xr-var-data-in' type='checkbox'><label for='data-904e7683-a30a-4152-b26e-1b5e8a84c090' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-49.875, -49.625, -49.375, ...,  49.375,  49.625,  49.875],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1981-01-01 ... 2023-10-31</div><input id='attrs-a2b5062e-aecb-472a-b73a-6b2b27c1d364' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a2b5062e-aecb-472a-b73a-6b2b27c1d364' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-8f9840ce-f287-479b-abfd-3abd2cfd5207' class='xr-var-data-in' type='checkbox'><label for='data-8f9840ce-f287-479b-abfd-3abd2cfd5207' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>axis :</span></dt><dd>T</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1981-01-01T00:00:00.000000000&#x27;, &#x27;1981-01-02T00:00:00.000000000&#x27;,
+    faq:               http://chg-wiki.geog.ucsb.edu/wiki/CHIRPS_FAQ</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-18c00bba-6d4d-48bd-85cd-bc0e1205fd82' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-18c00bba-6d4d-48bd-85cd-bc0e1205fd82' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 400</li><li><span class='xr-has-index'>longitude</span>: 1440</li><li><span class='xr-has-index'>time</span>: 15644</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-3635b184-3755-4b71-b416-3919941672a9' class='xr-section-summary-in' type='checkbox'  checked><label for='section-3635b184-3755-4b71-b416-3919941672a9' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-49.88 -49.62 ... 49.62 49.88</div><input id='attrs-93e04727-6e95-484a-a860-ab7af7fbeddf' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-93e04727-6e95-484a-a860-ab7af7fbeddf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4676f664-f1a8-4f71-8530-e64ed2693e42' class='xr-var-data-in' type='checkbox'><label for='data-4676f664-f1a8-4f71-8530-e64ed2693e42' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-49.875, -49.625, -49.375, ...,  49.375,  49.625,  49.875],
+      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-179.9 -179.6 ... 179.6 179.9</div><input id='attrs-37ba14ba-6405-4b2c-b1a5-57718806d1ef' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-37ba14ba-6405-4b2c-b1a5-57718806d1ef' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ad83b3cd-c8cf-4b6c-a6c3-f0a6ca83b05c' class='xr-var-data-in' type='checkbox'><label for='data-ad83b3cd-c8cf-4b6c-a6c3-f0a6ca83b05c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([-179.875, -179.625, -179.375, ...,  179.375,  179.625,  179.875],
+      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1981-01-01 ... 2023-10-31</div><input id='attrs-7936aa06-c058-4625-a588-1b0a6d428b2a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7936aa06-c058-4625-a588-1b0a6d428b2a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-ca55e8cc-2752-4fbc-be77-8df235ad8d45' class='xr-var-data-in' type='checkbox'><label for='data-ca55e8cc-2752-4fbc-be77-8df235ad8d45' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>axis :</span></dt><dd>T</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1981-01-01T00:00:00.000000000&#x27;, &#x27;1981-01-02T00:00:00.000000000&#x27;,
        &#x27;1981-01-03T00:00:00.000000000&#x27;, ..., &#x27;2023-10-29T00:00:00.000000000&#x27;,
        &#x27;2023-10-30T00:00:00.000000000&#x27;, &#x27;2023-10-31T00:00:00.000000000&#x27;],
-      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-52ca43f0-dda1-4a18-b7b1-b7c1f8d61b0f' class='xr-section-summary-in' type='checkbox'  checked><label for='section-52ca43f0-dda1-4a18-b7b1-b7c1f8d61b0f' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>precip</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(365, 400, 1440), meta=np.ndarray&gt;</div><input id='attrs-ff45b5de-bb5e-499e-bb7a-4f3fe3ddf367' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-ff45b5de-bb5e-499e-bb7a-4f3fe3ddf367' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-56252328-5edc-4b41-b11a-98c330c47ffa' class='xr-var-data-in' type='checkbox'><label for='data-56252328-5edc-4b41-b11a-98c330c47ffa' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>standard_name :</span></dt><dd>convective precipitation rate</dd><dt><span>long_name :</span></dt><dd>Climate Hazards group InfraRed Precipitation with Stations</dd><dt><span>time_step :</span></dt><dd>day</dd><dt><span>geostatial_lat_min :</span></dt><dd>-50.0</dd><dt><span>geostatial_lat_max :</span></dt><dd>50.0</dd><dt><span>geostatial_lon_min :</span></dt><dd>-180.0</dd><dt><span>geostatial_lon_max :</span></dt><dd>180.0</dd></dl></div><div class='xr-var-data'><table>
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-83413c35-e9f8-483a-9d26-850670ce281d' class='xr-section-summary-in' type='checkbox'  checked><label for='section-83413c35-e9f8-483a-9d26-850670ce281d' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>precip</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(365, 400, 1440), meta=np.ndarray&gt;</div><input id='attrs-8f3f18a2-569a-468e-98ac-698b9fb5b7cf' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-8f3f18a2-569a-468e-98ac-698b9fb5b7cf' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-39071827-93ea-4385-9ee9-863669644e08' class='xr-var-data-in' type='checkbox'><label for='data-39071827-93ea-4385-9ee9-863669644e08' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>standard_name :</span></dt><dd>convective precipitation rate</dd><dt><span>long_name :</span></dt><dd>Climate Hazards group InfraRed Precipitation with Stations</dd><dt><span>time_step :</span></dt><dd>day</dd><dt><span>geostatial_lat_min :</span></dt><dd>-50.0</dd><dt><span>geostatial_lat_max :</span></dt><dd>50.0</dd><dt><span>geostatial_lon_min :</span></dt><dd>-180.0</dd><dt><span>geostatial_lon_max :</span></dt><dd>180.0</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table>
@@ -2467,7 +2466,7 @@ Attributes:
 </svg>
         </td>
     </tr>
-</table></div></li></ul></div></li><li class='xr-section-item'><input id='section-247557a3-af7a-457d-b131-9a31c4cfc8cd' class='xr-section-summary-in' type='checkbox'  ><label for='section-247557a3-af7a-457d-b131-9a31c4cfc8cd' class='xr-section-summary' >Attributes: <span>(15)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.6</dd><dt><span>title :</span></dt><dd>CHIRPS Version 2.0</dd><dt><span>history :</span></dt><dd>created by Climate Hazards Group</dd><dt><span>version :</span></dt><dd>Version 2.0</dd><dt><span>date_created :</span></dt><dd>2015-10-07</dd><dt><span>creator_name :</span></dt><dd>Pete Peterson</dd><dt><span>creator_email :</span></dt><dd>pete@geog.ucsb.edu</dd><dt><span>institution :</span></dt><dd>Climate Hazards Group.  University of California at Santa Barbara</dd><dt><span>documentation :</span></dt><dd>http://pubs.usgs.gov/ds/832/</dd><dt><span>reference :</span></dt><dd>Funk, C.C., Peterson, P.J., Landsfeld, M.F., Pedreros, D.H., Verdin, J.P., Rowland, J.D., Romero, B.E., Husak, G.J., Michaelsen, J.C., and Verdin, A.P., 2014, A quasi-global precipitation time series for drought monitoring: U.S. Geological Survey Data Series 832, 4 p., http://dx.doi.org/110.3133/ds832. </dd><dt><span>comments :</span></dt><dd> time variable denotes the first day of the given day.</dd><dt><span>acknowledgements :</span></dt><dd>The Climate Hazards Group InfraRed Precipitation with Stations development process was carried out through U.S. Geological Survey (USGS) cooperative agreement #G09AC000001 &quot;Monitoring and Forecasting Climate, Water and Land Use for Food Production in the Developing World&quot; with funding from: U.S. Agency for International Development Office of Food for Peace, award #AID-FFP-P-10-00002 for &quot;Famine Early Warning Systems Network Support,&quot; the National Aeronautics and Space Administration Applied Sciences Program, Decisions award #NN10AN26I for &quot;A Land Data Assimilation System for Famine Early Warning,&quot; SERVIR award #NNH12AU22I for &quot;A Long Time-Series Indicator of Agricultural Drought for the Greater Horn of Africa,&quot; The National Oceanic and Atmospheric Administration award NA11OAR4310151 for &quot;A Global Standardized Precipitation Index supporting the US Drought Portal and the Famine Early Warning System Network,&quot; and the USGS Land Change Science Program.</dd><dt><span>ftp_url :</span></dt><dd>ftp://chg-ftpout.geog.ucsb.edu/pub/org/chg/products/CHIRPS-latest/</dd><dt><span>website :</span></dt><dd>http://chg.geog.ucsb.edu/data/chirps/index.html</dd><dt><span>faq :</span></dt><dd>http://chg-wiki.geog.ucsb.edu/wiki/CHIRPS_FAQ</dd></dl></div></li></ul></div></div></div></div>
+</table></div></li></ul></div></li><li class='xr-section-item'><input id='section-5826dee2-6ecb-4243-a833-4a288b961579' class='xr-section-summary-in' type='checkbox'  ><label for='section-5826dee2-6ecb-4243-a833-4a288b961579' class='xr-section-summary' >Attributes: <span>(15)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.6</dd><dt><span>title :</span></dt><dd>CHIRPS Version 2.0</dd><dt><span>history :</span></dt><dd>created by Climate Hazards Group</dd><dt><span>version :</span></dt><dd>Version 2.0</dd><dt><span>date_created :</span></dt><dd>2015-10-07</dd><dt><span>creator_name :</span></dt><dd>Pete Peterson</dd><dt><span>creator_email :</span></dt><dd>pete@geog.ucsb.edu</dd><dt><span>institution :</span></dt><dd>Climate Hazards Group.  University of California at Santa Barbara</dd><dt><span>documentation :</span></dt><dd>http://pubs.usgs.gov/ds/832/</dd><dt><span>reference :</span></dt><dd>Funk, C.C., Peterson, P.J., Landsfeld, M.F., Pedreros, D.H., Verdin, J.P., Rowland, J.D., Romero, B.E., Husak, G.J., Michaelsen, J.C., and Verdin, A.P., 2014, A quasi-global precipitation time series for drought monitoring: U.S. Geological Survey Data Series 832, 4 p., http://dx.doi.org/110.3133/ds832. </dd><dt><span>comments :</span></dt><dd> time variable denotes the first day of the given day.</dd><dt><span>acknowledgements :</span></dt><dd>The Climate Hazards Group InfraRed Precipitation with Stations development process was carried out through U.S. Geological Survey (USGS) cooperative agreement #G09AC000001 &quot;Monitoring and Forecasting Climate, Water and Land Use for Food Production in the Developing World&quot; with funding from: U.S. Agency for International Development Office of Food for Peace, award #AID-FFP-P-10-00002 for &quot;Famine Early Warning Systems Network Support,&quot; the National Aeronautics and Space Administration Applied Sciences Program, Decisions award #NN10AN26I for &quot;A Land Data Assimilation System for Famine Early Warning,&quot; SERVIR award #NNH12AU22I for &quot;A Long Time-Series Indicator of Agricultural Drought for the Greater Horn of Africa,&quot; The National Oceanic and Atmospheric Administration award NA11OAR4310151 for &quot;A Global Standardized Precipitation Index supporting the US Drought Portal and the Famine Early Warning System Network,&quot; and the USGS Land Change Science Program.</dd><dt><span>ftp_url :</span></dt><dd>ftp://chg-ftpout.geog.ucsb.edu/pub/org/chg/products/CHIRPS-latest/</dd><dt><span>website :</span></dt><dd>http://chg.geog.ucsb.edu/data/chirps/index.html</dd><dt><span>faq :</span></dt><dd>http://chg-wiki.geog.ucsb.edu/wiki/CHIRPS_FAQ</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </div>
 </div>
@@ -3509,149 +3508,23 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010523_c20170609032836.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010523_c20170609032836.nc&#39;.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a8faa5b1b34a1a024b6ab00ff35e11e8dc32eb02f6dd455cfb80ba1ad2ca9208
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010524_c20170609034704.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010524_c20170609034704.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 09a87002961f300893fe4e18301fc87d24432abf74a6115ecc411bfb9aca30ea
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010525_c20170609040503.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010525_c20170609040503.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a83c14f00013a87135a8d2f60edbfa850de42fb46f06eafd893f5af0b5a516dc
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010526_c20170609042255.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010526_c20170609042255.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1d73f951c447a7b56aacbf57a4b41d2c2e9c2ca7686fcf204e378ece94dd2276
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010527_c20170609044127.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010527_c20170609044127.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 971235a50c8557a6b04308cd956288a81565b4e0f0b1fad8e713cdbf3d043dd8
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010528_c20170609045943.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010528_c20170609045943.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f1e4297dac86f25dcd1d76d653c7226ffe6c8f860b46a4cfd5c0b113aee9bd05
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010529_c20170609051828.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010529_c20170609051828.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d56a06f6e27a213377cdc67ad720c9d1e2cd11a4c176805538be778d4ec59b99
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010530_c20170609053702.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010530_c20170609053702.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: de88f64012c0331c4d63efa6600da893bcd2b88453e8a1b4fe0035fc1bd73434
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010531_c20170609055559.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010531_c20170609055559.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6fdd8ad267b3137736da26c47e19e6375b37abcf29de955bd8478ebb85a0014f
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010601_c20170609061453.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010601_c20170609061453.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6cd3b2cb125118d6796c1002fe826fe1aac2102e47f53612f999ba4a1e2c01ca
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010602_c20170609063258.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010602_c20170609063258.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 7e0a137dbd466e2a9da939d8a99d55b5e93e552753434b5880aa99598be173a4
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010603_c20170609065122.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010603_c20170609065122.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f236b9ea19b31eadfbf987f3e8a4b3150a83d52121223630912894afaa17f707
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010604_c20170609071012.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010604_c20170609071012.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: ed0e718ad1b3917e7b4a4d6c586c1b016ecedbe287b3c5d000733c95c3ba5aad
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010605_c20170609072843.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010605_c20170609072843.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 4ce2364bdfea7750e7b51fe7d7a67085e41239d06682da4b31eaea261a9d40cf
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010606_c20170609074730.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010606_c20170609074730.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 83f74d1ed7d12b681b32c4df352dc823ce145e3e24cdbcd2b2c3ff1297bb8229
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010607_c20170609080618.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010607_c20170609080618.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 8faa6fa22c4557d54c0ad3f5e896e235129e74d0767294d5f91faa351364d756
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010608_c20170609082500.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010608_c20170609082500.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 00c6f20edecd923e6f28bfcaa53dbedc1234349d0f5728d3ddda78f4e968e936
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010609_c20170609084415.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010609_c20170609084415.nc&#39;.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d6004cc918eb9fd6ba76bd948476dea7e50d75ac05dbad55f7bc0aed0c7fc91d
-Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010610_c20170609090308.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010610_c20170609090308.nc&#39;.
-</pre></div>
-</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107145</span><span class="o">/</span><span class="mf">1081526927.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_107164</span><span class="o">/</span><span class="mf">1081526927.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">file_location</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;s3://noaa-cdr-ndvi-pds/data/&#39;</span><span class="o">+</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>                         <span class="n">date_sel</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;/AVHRR-Land_v005_AVH13C1_*_c*.nc&#39;</span><span class="p">)</span> <span class="c1"># the files we want for a whole year</span>
 <span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">files_for_pooch</span><span class="o">=</span><span class="p">[</span><span class="n">pooch_load</span><span class="p">(</span><span class="s1">&#39;http://s3.amazonaws.com/&#39;</span><span class="o">+</span><span class="n">file</span><span class="p">,</span><span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_location</span><span class="p">]</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> 
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">files_for_pooch</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s2">&quot;by_coords&quot;</span><span class="p">)</span>  <span class="c1"># open the file</span>
 
-<span class="nn">/tmp/ipykernel_107145/1081526927.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="nn">/tmp/ipykernel_107164/1081526927.py</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">file_location</span> <span class="o">=</span> <span class="n">fs</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;s3://noaa-cdr-ndvi-pds/data/&#39;</span><span class="o">+</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>                         <span class="n">date_sel</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%Y&#39;</span><span class="p">)</span><span class="o">+</span><span class="s1">&#39;/AVHRR-Land_v005_AVH13C1_*_c*.nc&#39;</span><span class="p">)</span> <span class="c1"># the files we want for a whole year</span>
 <span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">files_for_pooch</span><span class="o">=</span><span class="p">[</span><span class="n">pooch_load</span><span class="p">(</span><span class="s1">&#39;http://s3.amazonaws.com/&#39;</span><span class="o">+</span><span class="n">file</span><span class="p">,</span><span class="n">file</span><span class="p">)</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">file_location</span><span class="p">]</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> 
 <span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_mfdataset</span><span class="p">(</span><span class="n">files_for_pooch</span><span class="p">,</span> <span class="n">combine</span><span class="o">=</span><span class="s2">&quot;by_coords&quot;</span><span class="p">)</span>  <span class="c1"># open the file</span>
 
-<span class="nn">/tmp/ipykernel_107145/1123638275.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
+<span class="nn">/tmp/ipykernel_107164/1123638275.py</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>         <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span><span class="n">filename</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="k">else</span><span class="p">:</span>
 <span class="ne">---&gt; </span><span class="mi">10</span>         <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">filelocation</span><span class="p">,</span><span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span><span class="n">filename</span><span class="p">),</span><span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">)</span>
