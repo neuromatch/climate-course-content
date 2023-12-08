@@ -11,7 +11,6 @@ shapely==1.8.5
 cartopy
 pythia_datasets
 pooch
-# pyleoclim
 climlab
 intake
 intake-esm
@@ -31,9 +30,8 @@ xmip
 pyworld3
 openpyxl
 wordcloud
-# xarray-datatree
+xarray-datatree
 # datatree # Should probably remove this, 12 year old repo, uses outdated imports for string.io
 nltk
 afinn
 mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip
-# mystatsfunctions
