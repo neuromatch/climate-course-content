@@ -110,9 +110,7 @@ jobs:
   #     #     jupyter-book build book
   #     #     python ci/parse_html_for_errors.py student
   build-books-and-deploy:
-    runs-on:
-      group: Default
-      labels: climate_runner
+    runs-on: climate_runner
     steps:
 
       - name: Checkout
