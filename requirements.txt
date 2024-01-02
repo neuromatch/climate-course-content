@@ -6,7 +6,7 @@ scikit-learn
 torch
 ipywidgets
 decorator==5.0.9
-xarray
+xarray==0.16.0
 shapely==1.8.5
 cartopy
 pythia_datasets
@@ -21,6 +21,9 @@ nc-time-axis
 geoviews
 boto3
 cmocean
+sphinx==3.5.4
+jinja2==3.0.3
+markupsafe
 # jinja2==2.11.3
 # markupsafe==1.1.1
 gsw
