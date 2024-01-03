@@ -135,23 +135,28 @@ jobs:
         uses: mamba-org/setup-micromamba@v1
         with:
           micromamba-version: '1.4.5-0'
+          generate-run-shell: true
           environment-file: environment.yml
           condarc: |
             channels:
               - conda-forge
               - nodefaults
-          init-shell: >-
-            bash
+          # init-shell: >-
+          #   bash
           cache-environment: true
           post-cleanup: 'all'
-      - name: Import numpy in micromamba environment (bash)
-        run: python -c "import numpy"
-        shell: bash -el {0}
-      # - name: Import numpy in micromamba environment (pwsh)
+      # - name: Import numpy in micromamba environment (bash)
       #   run: python -c "import numpy"
-      #   shell: pwsh
-      - name: Run custom command in micromamba environment
-        run: pytest --version
+      #   shell: bash -el {0}
+      # # - name: Import numpy in micromamba environment (pwsh)
+      # #   run: python -c "import numpy"
+      # #   shell: pwsh
+      # - name: Run custom command in micromamba environment
+      #   run: pytest --version
+      - run: |
+          pytest --version
+          # pytest
+        shell: micromamba-shell {0}
           
       # - name: Install dependencies
       #   run: |
