@@ -138,7 +138,6 @@ jobs:
           environment-file: environment.yml
           init-shell: >-
             bash
-            # powershell
           cache-environment: true
           post-cleanup: 'all'
       - name: Import numpy in micromamba environment (bash)
