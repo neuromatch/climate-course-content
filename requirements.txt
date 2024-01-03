@@ -11,7 +11,7 @@ shapely==1.8.5
 cartopy
 pythia_datasets
 pooch
-climlab
+climlab==0.8.2
 intake
 intake-esm
 seaborn
