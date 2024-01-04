@@ -4,14 +4,14 @@ Welcome to the [Climatematch Academy](https://academy.climatematch.io/about/miss
 
 ## Contents
 
-* [Programming](#Programming)
-* [Algebra](#algebra)
-* [Linear Algebra](#linear-algebra)
-* [Statistics](#statistics)
-* [Calculus](#calculus)
-* [Physics](#physics)
-* [Chemistry](#chemistry)
-* [Climate Science](#climate-science)
+* [Programming](##Programming)
+* [Algebra](##algebra)
+* [Linear Algebra](##linear-algebra)
+* [Statistics](##statistics)
+* [Calculus](##calculus)
+* [Physics](##physics)
+* [Chemistry](##chemistry)
+* [Climate Science](##climate-science)
 
 
 

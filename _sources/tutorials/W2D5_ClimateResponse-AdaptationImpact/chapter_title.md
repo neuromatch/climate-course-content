@@ -1,6 +1,6 @@
 # Climate Response - Adaptation Impact
 
- ````{div} full-height 
+ ````{div} full-width 
  <img src='../Art/W2D5_AdaptationImpact-Sloane_Garelick.svg' alt='art relevant to chapter contents' width='100%'> 
 ```` 
 

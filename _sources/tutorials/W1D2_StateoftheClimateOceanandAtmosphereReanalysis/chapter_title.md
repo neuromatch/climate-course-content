@@ -1,6 +1,6 @@
 # State of the Climate Ocean and Atmosphere Reanalysis
 
- ````{div} full-height 
+ ````{div} full-width 
  <img src='../Art/W1D2_OceanAtmosphereReanalysis-Sloane_Garelick.svg' alt='art relevant to chapter contents' width='100%'> 
 ```` 
 

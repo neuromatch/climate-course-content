@@ -1,6 +1,6 @@
 # Climate Response - Extremes & Variability
 
- ````{div} full-height 
+ ````{div} full-width 
  <img src='../Art/W2D4_ExtremesVulnerability-Sloane_Garelick.svg' alt='art relevant to chapter contents' width='100%'> 
 ```` 
 
