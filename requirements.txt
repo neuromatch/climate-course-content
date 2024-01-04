@@ -12,6 +12,8 @@ cartopy
 pythia_datasets
 pooch
 climlab==0.8.2
+cftime
+geopandas
 intake
 intake-esm
 seaborn
