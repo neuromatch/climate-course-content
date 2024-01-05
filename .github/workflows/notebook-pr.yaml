@@ -11,7 +11,7 @@ on:
 
 env:
   NB_KERNEL: python
-  NMA_REPO: climate-test-build
+  NMA_REPO: climate-course-content
   NMA_MAIN_BRANCH: main
   ORG: neuromatch
 
