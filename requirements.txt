@@ -3,7 +3,6 @@ numpy
 scipy
 matplotlib==3.5.1
 scikit-learn
-torch
 ipywidgets
 decorator==5.0.9
 xarray==0.20.2
