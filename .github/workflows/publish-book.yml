@@ -240,18 +240,18 @@ jobs:
           cd ..
         shell: bash -l {0}
 
-      - name: Copy tutorials from precourse repo
-        if: "!contains(env.COMMIT_MESSAGE, 'skip precourse')"
-        run: |
-          BRANCH=`python -c 'import os, re; m = re.search(r"precourse:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
-          wget https://github.com/NeuromatchAcademy/precourse/archive/refs/heads/$BRANCH.tar.gz
-          tar -xzf $BRANCH.tar.gz
-          mv precourse-$BRANCH/tutorials/W0D* tutorials/
-          cat precourse-main/tutorials/materials.yml tutorials/materials.yml > out.yml
-          mv out.yml tutorials/materials.yml
-          mv precourse-$BRANCH/prereqs .
-          rm -r precourse-$BRANCH
-          rm -r $BRANCH.tar.gz
+      # - name: Copy tutorials from precourse repo
+      #   if: "!contains(env.COMMIT_MESSAGE, 'skip precourse')"
+      #   run: |
+      #     BRANCH=`python -c 'import os, re; m = re.search(r"precourse:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
+      #     wget https://github.com/NeuromatchAcademy/precourse/archive/refs/heads/$BRANCH.tar.gz
+      #     tar -xzf $BRANCH.tar.gz
+      #     mv precourse-$BRANCH/tutorials/W0D* tutorials/
+      #     cat precourse-main/tutorials/materials.yml tutorials/materials.yml > out.yml
+      #     mv out.yml tutorials/materials.yml
+      #     mv precourse-$BRANCH/prereqs .
+      #     rm -r precourse-$BRANCH
+      #     rm -r $BRANCH.tar.gz
       
       - name: Cache Jupyter Build Artifacts
         uses: actions/cache@v2
