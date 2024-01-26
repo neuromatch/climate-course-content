@@ -1,110 +1,622 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Regional Precipitation Variability and Extreme Events &#8212; Climatematch Academy: Computational Tools for Climate Science</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
 
-    
-  <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'projects/project-notebooks/Regional_precipitation_variability';</script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land" href="Heatwaves.html" />
     <link rel="prev" title="The Impact of ENSO on Precipitation and Temperature" href="ENSO_impact_on_precipitation_and_temperature.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
 
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../../tutorials/intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
         
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/Schedule/schedule_intro.html">
+                        Schedule
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/TechnicalHelp/tech_intro.html">
+                        Technical Help
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/TechnicalHelp/Links_Policy.html">
+                        Quick links and policies
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D1_ClimateSystemOverview/chapter_title.html">
+                        Climate System Overview (W1D1)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/Projects_GoodResearchPractices/chapter_title.html">
+                        Good Research Practices (Projects)
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
+                        State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
+                        Remote Sensing Land Ocean and Atmosphere (W1D3)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D4_Paleoclimate/chapter_title.html">
+                        Paleoclimate (W1D4)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D5_ClimateModeling/chapter_title.html">
+                        Climate Modeling (W1D5)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
+                        Future Climate - IPCC I Physical Basis (W2D1)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
+                        Future Climate - IPCC II & III Socio-Economic Basis (W2D3)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">
+                        Climate Response - Extremes & Variability (W2D4)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
+                        Climate Response - Adaptation Impact (W2D5)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../README.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../keynote.html">
+                        Project Day keynote (W2D2)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../docs/project_guidance.html">
+                        Daily guide for projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../docs/datasets_overview.html">
+                        Project materials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../docs/continuing_your_project_after_the_course.html">
+                        Continuing your project after the course
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../docs/past_projects_overview.html">
+                        Past projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../professional_development/README.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../professional_development/impact_talks.html">
+                        Impact Talks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../professional_development/mentors.html">
+                        Mentor Meetings
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../professional_development/career_features.html">
+                        Career Features
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../professional_development/career_panels.html">
+                        Career Panels
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
       
       
-      <img src="../../_static/cma-logo-square-4xp.png" class="logo" alt="logo">
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
       
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
       
-      <h1 class="site-logo" id="site-title">Climatematch Academy: Computational Tools for Climate Science</h1>
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/Schedule/schedule_intro.html">
+                        Schedule
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/TechnicalHelp/tech_intro.html">
+                        Technical Help
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/TechnicalHelp/Links_Policy.html">
+                        Quick links and policies
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D1_ClimateSystemOverview/chapter_title.html">
+                        Climate System Overview (W1D1)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/Projects_GoodResearchPractices/chapter_title.html">
+                        Good Research Practices (Projects)
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
+                        State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
+                        Remote Sensing Land Ocean and Atmosphere (W1D3)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D4_Paleoclimate/chapter_title.html">
+                        Paleoclimate (W1D4)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W1D5_ClimateModeling/chapter_title.html">
+                        Climate Modeling (W1D5)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
+                        Future Climate - IPCC I Physical Basis (W2D1)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
+                        Future Climate - IPCC II & III Socio-Economic Basis (W2D3)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">
+                        Climate Response - Extremes & Variability (W2D4)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
+                        Climate Response - Adaptation Impact (W2D5)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../README.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../keynote.html">
+                        Project Day keynote (W2D2)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../docs/project_guidance.html">
+                        Daily guide for projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="../docs/datasets_overview.html">
+                        Project materials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../docs/continuing_your_project_after_the_course.html">
+                        Continuing your project after the course
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../docs/past_projects_overview.html">
+                        Past projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../professional_development/README.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../professional_development/impact_talks.html">
+                        Impact Talks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../professional_development/mentors.html">
+                        Mentor Meetings
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../professional_development/career_features.html">
+                        Career Features
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../professional_development/career_panels.html">
+                        Career Panels
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../../tutorials/intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -114,1505 +626,864 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/Schedule/schedule_intro.html">
-   Schedule
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Schedule/daily_schedules.html">
-     General Schedule
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Schedule/shared_calendars.html">
-     Shared calendars
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/Schedule/schedule_intro.html">Schedule</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Schedule/daily_schedules.html">General Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Schedule/shared_calendars.html">Shared calendars</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/TechnicalHelp/tech_intro.html">
-   Technical Help
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2 has-children">
-    <a class="reference internal" href="../../tutorials/TechnicalHelp/Jupyterbook.html">
-     Using jupyterbook
-    </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
-     <i class="fas fa-chevron-down">
-     </i>
-    </label>
-    <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../tutorials/TechnicalHelp/Tutorial_colab.html">
-       Using Google Colab
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="../../tutorials/TechnicalHelp/Tutorial_kaggle.html">
-       Using Kaggle
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/TechnicalHelp/Discord.html">
-     Using discord
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/TechnicalHelp/tech_intro.html">Technical Help</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/TechnicalHelp/Jupyterbook.html">Using jupyterbook</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/TechnicalHelp/Tutorial_colab.html">Using Google Colab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/TechnicalHelp/Tutorial_kaggle.html">Using Kaggle</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/TechnicalHelp/Discord.html">Using discord</a></li>
+</ul>
+</li>
 </ul>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../tutorials/TechnicalHelp/Links_Policy.html">
-   Quick links and policies
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/TechnicalHelp/Links_Policy.html">Quick links and policies</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Pre-reqs Refresher
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/chapter_title.html">
-   Neuro Video Series (W0D0)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial1.html">
-     Intro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial2.html">
-     Human Psychophysics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial3.html">
-     Behavioral Readout
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial4.html">
-     Live in Lab
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial5.html">
-     Brain Signals: Spiking Activity
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial6.html">
-     Brain Signals: LFP
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial7.html">
-     Brain Signals: EEG &amp; MEG
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial8.html">
-     Brain Signals: fMRI
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial9.html">
-     Brain Signals: Calcium Imaging
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial10.html">
-     Stimulus Representation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial11.html">
-     Neurotransmitters
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D0_NeuroVideoSeries/student/W0D0_Tutorial12.html">
-     Neurons to Consciousness
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W0D1_PythonWorkshop1/chapter_title.html">
-   Python Workshop 1 (W0D1)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D1_PythonWorkshop1/student/W0D1_Tutorial1.html">
-     Tutorial: LIF Neuron Part I
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W0D2_PythonWorkshop2/chapter_title.html">
-   Python Workshop 2 (W0D2)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D2_PythonWorkshop2/student/W0D2_Tutorial1.html">
-     Tutorial 1: LIF Neuron Part II
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W0D3_LinearAlgebra/chapter_title.html">
-   Linear Algebra (W0D3)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D3_LinearAlgebra/student/W0D3_Tutorial1.html">
-     Tutorial 1: Vectors
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D3_LinearAlgebra/student/W0D3_Tutorial2.html">
-     Tutorial 2: Matrices
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D3_LinearAlgebra/student/W0D3_Tutorial3.html">
-     Bonus Tutorial: Discrete Dynamical Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D3_LinearAlgebra/student/W0D3_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D3_LinearAlgebra/student/W0D3_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W0D4_Calculus/chapter_title.html">
-   Calculus (W0D4)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D4_Calculus/student/W0D4_Tutorial1.html">
-     Tutorial 1: Differentiation and Integration
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D4_Calculus/student/W0D4_Tutorial2.html">
-     Tutorial 2: Differential Equations
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D4_Calculus/student/W0D4_Tutorial3.html">
-     Tutorial 3: Numerical Methods
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D4_Calculus/student/W0D4_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W0D5_Statistics/chapter_title.html">
-   Statistics (W0D5)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
-  <label for="toctree-checkbox-9">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D5_Statistics/student/W0D5_Tutorial1.html">
-     Tutorial 1: Probability Distributions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D5_Statistics/student/W0D5_Tutorial2.html">
-     Tutorial 2: Statistical Inference
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D5_Statistics/student/W0D5_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W0D5_Statistics/student/W0D5_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/chapter_title.html">Climate System Overview (W1D1)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">Tutorial 2: Selection, Interpolation and Slicing</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.html">Tutorial 3: Opening and Plotting netCDF Data</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.html">Tutorial 4: Arithmetic and Aggregation Methods</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">Tutorial 5: Xarray Data Analysis and Climatology</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">Tutorial 6: Compute and Plot Temperature Anomalies</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">Tutorial 7: Other Computational Tools in Xarray</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">Tutorial 8: Masking with One Condition</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">Tutorial 9: Masking with Multiple Conditions</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_DaySummary.html">Day Summary</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Fundamentals
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/chapter_title.html">Good Research Practices (Projects)</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial1.html">Tutorial 1: Finding a Phenomenon and Asking a Question About It</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial2.html">Tutorial 2: Doing a Literature Review</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial3.html">Tutorial 3: Identifying the Basic Ingredients</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial4.html">Tutorial 4: Formulating a Hypothesis</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial5.html">Tutorial 5: Drafting the Analysis</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.html">Tutorial 6: Implementing the Analysis</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial7.html">Tutorial 7: Interpreting the Results</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial8.html">Tutorial 8: Communicating Your Conclusions</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/chapter_title.html">
-   Climate System Overview (W1D1)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
-  <label for="toctree-checkbox-10">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Intro.html">
-     Intro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">
-     Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">
-     Tutorial 2: Selection, Interpolation and Slicing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.html">
-     Tutorial 3: Opening and Plotting netCDF Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.html">
-     Tutorial 4: Arithmetic and Aggregation Methods
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">
-     Tutorial 5: Xarray Data Analysis and Climatology
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">
-     Tutorial 6: Compute and Plot Temperature Anomalies
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">
-     Tutorial 7: Other Computational Tools in Xarray
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">
-     Tutorial 8: Masking with One Condition
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">
-     Tutorial 9: Masking with Multiple Conditions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/further_reading.html">
-     Suggested Further Reading
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/chapter_title.html">
-   Good Research Practices (Projects)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
-  <label for="toctree-checkbox-11">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Intro.html">
-     Intro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial1.html">
-     Tutorial 1: Finding a Phenomenon and Asking a Question About It
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial2.html">
-     Tutorial 2: Doing a Literature Review
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial3.html">
-     Tutorial 3: Identifying the Basic Ingredients
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial4.html">
-     Tutorial 4: Formulating a Hypothesis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial5.html">
-     Tutorial 5: Drafting the Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.html">
-     Tutorial 6: Implementing the Analysis
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial7.html">
-     Tutorial 7: Interpreting the Results
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial8.html">
-     Tutorial 8: Communicating Your Conclusions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/Projects_GoodResearchPractices/student/Projects_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">State of the Climate Ocean and Atmosphere Reanalysis (W1D2)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">Tutorial 1: Calculating ENSO with Xarray</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html"><strong>Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis</strong></a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">Tutorial 3: Atmospheric  Circulation</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">Tutorial 4: Oceanic Wind-driven Circulation</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">Tutorial 5: Thermohaline Circulation</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">Tutorial 6: Ocean Heat Content</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_DaySummary.html">Day Summary</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Climate Data
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">Remote Sensing Land Ocean and Atmosphere (W1D3)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">Tutorial 1: Introduction to Remote Sensing</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">Tutorial 2: Exploring Satellite Climate Data Records</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">Tutorial 3: Visualizing Satellite CDR - Global Vegetation Mapping</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">Tutorial 4: Understanding Climatology Through Precipitation Data</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">Tutorial 5: Calculating Anomalies Using Precipitation Data</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">Tutorial 6: Large Scale Climate Variability - ENSO</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.html">Tutorial 7: Impact of Climate Variability - Precipitation</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.html">Tutorial 8: Comparing Satellite Products With In Situ Data</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/chapter_title.html">Paleoclimate (W1D4)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial1.html">Tutorial 1: Paleoclimate Proxies</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial2.html">Tutorial 2: Reconstructing Past Changes in Ocean Climate</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial3.html">Tutorial 3: Reconstructing Past Changes in Terrestrial Climate</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial4.html">Tutorial 4: Reconstructing Past Changes in Atmospheric Climate</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial5.html">Tutorial 5: Paleoclimate Data Analysis Tools</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial6.html">Tutorial 6: Spectral Analysis of Paleoclimate Data</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial7.html">Tutorial 7: Assessing Climate Forcings</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial8.html">Tutorial 8: Paleoclimate Models</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial9.html">Tutorial 9: Paleoclimate Reanalysis Products</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Future</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
-   State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
-  <label for="toctree-checkbox-12">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Intro.html">
-     Intro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">
-     Tutorial 1: Calculating ENSO with Xarray
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">
-     <strong>
-      Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis
-     </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">
-     Tutorial 3: Atmospheric  Circulation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">
-     Tutorial 4: Oceanic Wind-driven Circulation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">
-     Tutorial 5: Thermohaline Circulation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">
-     Tutorial 6: Ocean Heat Content
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">
-     Suggested Further Reading
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
-   Remote Sensing Land Ocean and Atmosphere (W1D3)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
-  <label for="toctree-checkbox-13">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Intro.html">
-     Intro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">
-     Tutorial 1: Introduction to Remote Sensing
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">
-     Tutorial 2: Exploring Satellite Climate Data Records
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">
-     Tutorial 3: Visualizing Satellite CDR - Global Vegetation Mapping
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">
-     Tutorial 4: Understanding Climatology Through Precipitation Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">
-     Tutorial 5: Calculating Anomalies Using Precipitation Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">
-     Tutorial 6: Large Scale Climate Variability - ENSO
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.html">
-     Tutorial 7: Impact of Climate Variability - Precipitation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.html">
-     Tutorial 8: Comparing Satellite Products With In Situ Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/further_reading.html">
-     Suggested Further Reading
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/chapter_title.html">
-   Paleoclimate (W1D4)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
-  <label for="toctree-checkbox-14">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Intro.html">
-     Intro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial1.html">
-     Tutorial 1: Paleoclimate Proxies
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial2.html">
-     Tutorial 2: Reconstructing Past Changes in Ocean Climate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial3.html">
-     Tutorial 3: Reconstructing Past Changes in Terrestrial Climate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial4.html">
-     Tutorial 4: Reconstructing Past Changes in Atmospheric Climate
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial5.html">
-     Tutorial 5: Paleoclimate Data Analysis Tools
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial6.html">
-     Tutorial 6: Spectral Analysis of Paleoclimate Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial7.html">
-     Tutorial 7: Assessing Climate Forcings
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial8.html">
-     Tutorial 8: Paleoclimate Models
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial9.html">
-     Tutorial 9: Paleoclimate Reanalysis Products
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/further_reading.html">
-     Suggested Further Reading
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/chapter_title.html">Climate Modeling (W1D5)</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.html">Tutorial 1 : A Simple Greenhouse Model</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial2.html">Tutorial 2 : Energy Balance</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.html"><strong>Tutorial 3 : A Zero-Dimensional Energy Balance Model</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial4.html">Tutorial 4: Climate Feedbacks</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial5.html">Tutorial 5: Vertical Structure of the Atmosphere</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial6.html">Tutorial 6: Radiative-Convective Equilibrium</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial7.html">Tutorial 7: Introduction to Earth System Models</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_DaySummary.html">Day Summary</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Climate Future
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">Future Climate - IPCC I Physical Basis (W2D1)</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">Tutorial 2: Time Series, Global Averages, and Scenario Comparison</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">Tutorial 3: Multi-model Ensembles</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">Tutorial 4: Quantifying Uncertainty in Projections</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html"><strong>Tutorial 5: Internal Climate Variability</strong></a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html"><strong>Tutorial 6: Synthesising &amp; Interpreting Diverse Data Sources</strong></a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_DaySummary.html"><strong>Day Summary</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">Tutorial 1: The Socio-economic Origins of the Climate Emergency</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">Tutorial 2: Transition Goals and Integrated Assessment Models**</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial3.html"><strong>Tutorial 3: IAMs and SSPs</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/further_reading.html"><strong>Tutorial 2 Further Reading</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Response</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/chapter_title.html">
-   Climate Modeling (W1D5)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
-  <label for="toctree-checkbox-15">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Intro.html">
-     Intro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.html">
-     Tutorial 1 : A Simple Greenhouse Model
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial2.html">
-     Tutorial 2 : Energy Balance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.html">
-     <strong>
-      Tutorial 3 : A Zero-Dimensional Energy Balance Model
-     </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial4.html">
-     Tutorial 4: Climate Feedbacks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial5.html">
-     Tutorial 5: Vertical Structure of the Atmosphere
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial6.html">
-     Tutorial 6: Radiative-Convective Equilibrium
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial7.html">
-     Tutorial 7: Introduction to Earth System Models
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/further_reading.html">
-     Suggested Further Reading
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
-   Future Climate - IPCC I Physical Basis (W2D1)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
-  <label for="toctree-checkbox-16">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Intro.html">
-     Intro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">
-     Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">
-     Tutorial 2: Time Series, Global Averages, and Scenario Comparison
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">
-     Tutorial 3: Multi-model Ensembles
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">
-     Tutorial 4: Quantifying Uncertainty in Projections
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html">
-     <strong>
-      Tutorial 5: Internal Climate Variability
-     </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html">
-     <strong>
-      Tutorial 6: Synthesising &amp; Interpreting Diverse Data Sources
-     </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/further_reading.html">
-     Suggested Further Reading
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_DaySummary.html">
-     <strong>
-      Day Summary
-     </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
-   Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
-  <label for="toctree-checkbox-17">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Intro.html">
-     Intro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">
-     Tutorial 1: The Socio-economic Origins of the Climate Emergency
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">
-     Tutorial 2: Transition Goals and Integrated Assessment Models**
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial3.html">
-     <strong>
-      Tutorial 3: IAMs and SSPs
-     </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">
-     Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/further_reading.html">
-     <strong>
-      Tutorial 2 Further Reading
-     </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">Climate Response - Extremes &amp; Variability (W2D4)</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial1.html">Tutorial 1: Distributions</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html">Tutorial 2: What is an Extreme Event? Empirical Return Levels</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial3.html">Tutorial 3: Extreme Value Analysis - the GEV Distribution</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial4.html">Tutorial 4: Return Levels Using Normal and GEV Distributions</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html">Tutorial 5: Non-stationarity in Historical Records</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial6.html">Tutorial 6: Scenario-dependence of Future Changes in Extremes</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html">Tutorial 7: Non-Stationarity in the EVT-framework</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html">Tutorial 8: Thresholds</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_DaySummary.html">Day Summary</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Climate Response
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">
-   Climate Response - Extremes &amp; Variability (W2D4)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
-  <label for="toctree-checkbox-18">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Intro.html">
-     Intro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial1.html">
-     Tutorial 1: Distributions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html">
-     Tutorial 2: What is an Extreme Event? Empirical Return Levels
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial3.html">
-     Tutorial 3: Extreme Value Analysis - the GEV Distribution
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial4.html">
-     Tutorial 4: Return Levels Using Normal and GEV Distributions
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html">
-     Tutorial 5: Non-stationarity in Historical Records
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial6.html">
-     Tutorial 6: Scenario-dependence of Future Changes in Extremes
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html">
-     Tutorial 7: Non-Stationarity in the EVT-framework
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html">
-     Tutorial 8: Thresholds
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/further_reading.html">
-     Suggested Further Reading
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
-   Climate Response - Adaptation Impact (W2D5)
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
-  <label for="toctree-checkbox-19">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Intro.html">
-     Intro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">
-     Tutorial 1: Linear and Logistic Regression
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">
-     Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">
-     Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">
-     Tutorial 4:  Exploring Other Applications
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Outro.html">
-     Outro
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/further_reading.html">
-     Suggested Further Reading
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_DaySummary.html">
-     Day Summary
-    </a>
-   </li>
-  </ul>
- </li>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">Climate Response - Adaptation Impact (W2D5)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">Tutorial 1: Linear and Logistic Regression</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">Tutorial 4:  Exploring Other Applications</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_DaySummary.html">Day Summary</a></li>
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Project Booklet
- </span>
-</p>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Booklet</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../README.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../keynote.html">
-   Project Day keynote (W2D2)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../docs/project_guidance.html">
-   Daily guide for projects
-  </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="../docs/datasets_overview.html">
-   Project materials
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
-  <label for="toctree-checkbox-20">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="Sea_level_rise.html">
-     <strong>
-      Sea Level Rise
-     </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Ocean_acidification.html">
-     <strong>
-      Ocean Acidification
-     </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="ENSO_impact_on_precipitation_and_temperature.html">
-     <strong>
-      The Impact of ENSO on Precipitation and Temperature
-     </strong>
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Regional Precipitation Variability and Extreme Events
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Heatwaves.html">
-     <strong>
-      Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
-     </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Wildfires_and_burnt_areas.html">
-     <strong>
-      Monitoring and Mapping Wildfires Using Satellite Data
-     </strong>
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Surface_albedo_and_land_cover.html">
-     Changes in Land Cover: Albedo and Carbon Sequestration
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../docs/continuing_your_project_after_the_course.html">
-   Continuing your project after the course
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../docs/past_projects_overview.html">
-   Past projects
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
-  <label for="toctree-checkbox-21">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../past-projects/sea_level_rise.html">
-     Sea Level Rise
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../past-projects/ocean_acidification.html">
-     Ocean Acidification
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../past-projects/ENSO.html">
-     The Impact of ENSO on Precipitation and Temperature
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../past-projects/precipitation.html">
-     Regional Precipitation Variability and Extreme events
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../past-projects/heatwaves.html">
-     Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../past-projects/wildfires.html">
-     Monitoring and Mapping Wildfires Using Satellite Data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../past-projects/albedo.html">
-     Changes in Land Cover: Albedo and Carbon Sequestration
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../keynote.html">Project Day keynote (W2D2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/project_guidance.html">Daily guide for projects</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../docs/datasets_overview.html">Project materials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Sea_level_rise.html"><strong>Sea Level Rise</strong></a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="Ocean_acidification.html"><strong>Ocean Acidification</strong></a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="ENSO_impact_on_precipitation_and_temperature.html"><strong>The Impact of ENSO on Precipitation and Temperature</strong></a></li>
+
+
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Regional Precipitation Variability and Extreme Events</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="Heatwaves.html"><strong>Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land</strong></a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="Wildfires_and_burnt_areas.html"><strong>Monitoring and Mapping Wildfires Using Satellite Data</strong></a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="Surface_albedo_and_land_cover.html">Changes in Land Cover: Albedo and Carbon Sequestration</a></li>
+
+
+
+
 </ul>
-<p class="caption">
- <span class="caption-text">
-  Professional Development
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../docs/continuing_your_project_after_the_course.html">Continuing your project after the course</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../docs/past_projects_overview.html">Past projects</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../past-projects/sea_level_rise.html">Sea Level Rise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../past-projects/ocean_acidification.html">Ocean Acidification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../past-projects/ENSO.html">The Impact of ENSO on Precipitation and Temperature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../past-projects/precipitation.html">Regional Precipitation Variability and Extreme events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../past-projects/heatwaves.html">Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../past-projects/wildfires.html">Monitoring and Mapping Wildfires Using Satellite Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../past-projects/albedo.html">Changes in Land Cover: Albedo and Carbon Sequestration</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Professional Development</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../professional_development/README.html">
-   Introduction
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../professional_development/impact_talks.html">
-   Impact Talks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../professional_development/mentors.html">
-   Mentor Meetings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../professional_development/career_features.html">
-   Career Features
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../professional_development/career_panels.html">
-   Career Panels
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../professional_development/README.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../professional_development/impact_talks.html">Impact Talks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../professional_development/mentors.html">Mentor Meetings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../professional_development/career_features.html">Career Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../professional_development/career_panels.html">Career Panels</a></li>
 </ul>
 
     </div>
-</nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
+</nav>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  </div>
+  
 
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
 
-          
+  
+  <div id="rtd-footer-container"></div>
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
+      </div>
+      <main id="main-content" class="bd-main">
         
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
 
 
 
 <div class="col py-1 d-flex header-article-main">
     <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&urlpath=lab/tree/course-content/book/projects/project-notebooks/Regional_precipitation_variability.ipynb&branch=main"
-   class="headerbtn"
+  <ul class="dropdown-menu">
+      <li><a href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&urlpath=lab/tree/course-content/book/projects/project-notebooks/Regional_precipitation_variability.ipynb&branch=main" target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Launch on JupyterHub"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../../_static/images/logo_jupyterhub.svg">
   </span>
-<span class="headerbtn__text-container">JupyterHub</span>
+<span class="btn__text-container">JupyterHub</span>
 </a>
-
-      </li>
+</a>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
 <button onclick="toggleFullScreen()"
-  class="headerbtn"
+  class="btn btn-sm"
   data-toggle="tooltip"
 data-placement="bottom"
 title="Fullscreen mode"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/ClimatematchAcademy/course-content"
-   class="headerbtn"
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/ClimatematchAcademy/course-content" target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Source repository"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-<span class="headerbtn__text-container">repository</span>
+<span class="btn__text-container">repository</span>
 </a>
-
-      </li>
+</a>
       
-      <li>
-        <a href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Fprojects/project-notebooks/Regional_precipitation_variability.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
+      <li><a href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Fprojects/project-notebooks/Regional_precipitation_variability.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Open an issue"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-lightbulb"></i>
   </span>
-<span class="headerbtn__text-container">open issue</span>
+<span class="btn__text-container">open issue</span>
 </a>
-
-      </li>
+</a>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../../_sources/projects/project-notebooks/Regional_precipitation_variability.ipynb"
-   class="headerbtn"
+  <ul class="dropdown-menu">
+      <li><a href="../../_sources/projects/project-notebooks/Regional_precipitation_variability.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
 title="Download source file"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
-
-      </li>
+</a>
       
       <li>
-        
 <button onclick="printPdf(this)"
-  class="headerbtn"
+  class="btn btn-sm dropdown-item"
   data-toggle="tooltip"
 data-placement="left"
 title="Print to PDF"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   <i class="fas fa-file-pdf"></i>
   </span>
-<span class="headerbtn__text-container">.pdf</span>
+<span class="btn__text-container">.pdf</span>
 </button>
-
-      </li>
+</a>
       
-    </ul>
-  </div>
+  </ul>
 </div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
-</label>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
     </div>
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Regional Precipitation Variability and Extreme Events
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#project-template">
-   Project Template
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-exploration-notebook">
-   Data Exploration Notebook
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#project-setup">
-     Project Setup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chirps-version-2-0-global-daily-0-25">
-     CHIRPS Version 2.0 Global Daily 0.25°
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#indices-for-extreme-events">
-       Indices for Extreme Events
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#noaa-fundamental-climate-data-records-fcdr-avhrr-land-bundle-surface-reflectance-and-normalized-difference-vegetation-index">
-     NOAA Fundamental Climate Data Records (FCDR) AVHRR Land Bundle - Surface Reflectance and Normalized Difference Vegetation Index
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#alternative-ndvi-source-modis-terra-vegetation-indices-mod13c2-version-6-1-l3-global-0-05-cmg">
-   Alternative NDVI source: MODIS/Terra Vegetation Indices (MOD13C2) Version 6.1 L3 Global 0.05° CMG
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#worldbank-data-cereal-production">
-     Worldbank Data: Cereal Production
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#further-reading">
-   Further Reading
-  </a>
- </li>
-</ul>
-
-    </nav>
-</div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Regional Precipitation Variability and Extreme Events</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Regional Precipitation Variability and Extreme Events
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#project-template">
-   Project Template
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-exploration-notebook">
-   Data Exploration Notebook
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#project-setup">
-     Project Setup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#chirps-version-2-0-global-daily-0-25">
-     CHIRPS Version 2.0 Global Daily 0.25°
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#indices-for-extreme-events">
-       Indices for Extreme Events
-      </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#noaa-fundamental-climate-data-records-fcdr-avhrr-land-bundle-surface-reflectance-and-normalized-difference-vegetation-index">
-     NOAA Fundamental Climate Data Records (FCDR) AVHRR Land Bundle - Surface Reflectance and Normalized Difference Vegetation Index
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#alternative-ndvi-source-modis-terra-vegetation-indices-mod13c2-version-6-1-l3-global-0-05-cmg">
-   Alternative NDVI source: MODIS/Terra Vegetation Indices (MOD13C2) Version 6.1 L3 Global 0.05° CMG
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#worldbank-data-cereal-production">
-     Worldbank Data: Cereal Production
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#further-reading">
-   Further Reading
-  </a>
- </li>
-</ul>
-
-                        </nav>
-                    </div>
-                </div>
             </div>
-            <main id="main-content" role="main">
-                
-              <div>
-                
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Regional Precipitation Variability and Extreme Events</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Regional Precipitation Variability and Extreme Events
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-template">
+   Project Template
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-exploration-notebook">
+   Data Exploration Notebook
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project-setup">
+     Project Setup
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chirps-version-2-0-global-daily-0-25">
+     CHIRPS Version 2.0 Global Daily 0.25°
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indices-for-extreme-events">
+       Indices for Extreme Events
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#noaa-fundamental-climate-data-records-fcdr-avhrr-land-bundle-surface-reflectance-and-normalized-difference-vegetation-index">
+     NOAA Fundamental Climate Data Records (FCDR) AVHRR Land Bundle - Surface Reflectance and Normalized Difference Vegetation Index
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alternative-ndvi-source-modis-terra-vegetation-indices-mod13c2-version-6-1-l3-global-0-05-cmg">
+   Alternative NDVI source: MODIS/Terra Vegetation Indices (MOD13C2) Version 6.1 L3 Global 0.05° CMG
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#worldbank-data-cereal-production">
+     Worldbank Data: Cereal Production
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   Further Reading
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
   <p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/projects/project-notebooks/Regional_precipitation_variability.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/project-notebooks/Regional_precipitation_variability.ipynb" target="_parent"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a></p>
-<div class="section" id="regional-precipitation-variability-and-extreme-events">
-<h1>Regional Precipitation Variability and Extreme Events<a class="headerlink" href="#regional-precipitation-variability-and-extreme-events" title="Permalink to this headline">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="regional-precipitation-variability-and-extreme-events">
+<h1>Regional Precipitation Variability and Extreme Events<a class="headerlink" href="#regional-precipitation-variability-and-extreme-events" title="Permalink to this heading">#</a></h1>
 <p><strong>Content creators:</strong> Laura Paccini, Raphael Rocha</p>
 <p><strong>Content reviewers:</strong> Marguerite Brown, Ohad Zivan, Jenna Pearson, Chi Zhang</p>
 <p><strong>Content editors:</strong> Zane Mitrevica, Natalie Steinemann, Douglas Rao, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
@@ -1679,9 +1550,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">
-{"version_major": 2, "version_minor": 0, "model_id": "81dc07a8a7354101a45ea2b57bea2802"}
-</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "79b55b4114f04aab959b19527cfd12e0"}</script></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1695,15 +1564,15 @@ title="Print to PDF"
 </div>
 <p><strong>In this project</strong>, you will explore rain gauge and satellite data from CHIRPS and NOAA Terrestrial Climate Data Records NDVI datasets to extract rain estimates and land surface reflectance, respectively. This data will enable identification of extreme events in your region of interest. Besides investigating the relationships between these variables, you are encouraged to study the impact of extreme events on changes in vegetation.</p>
 </div>
-<div class="section" id="project-template">
-<h1>Project Template<a class="headerlink" href="#project-template" title="Permalink to this headline">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="project-template">
+<h1>Project Template<a class="headerlink" href="#project-template" title="Permalink to this heading">#</a></h1>
 <p><img alt="Project Template" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/template-images/precipitation_template_map.svg" /></p>
 <p><em>Note: The dashed boxes are socio-economic questions.</em></p>
 </div>
-<div class="section" id="data-exploration-notebook">
-<h1>Data Exploration Notebook<a class="headerlink" href="#data-exploration-notebook" title="Permalink to this headline">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="data-exploration-notebook">
+<h1>Data Exploration Notebook<a class="headerlink" href="#data-exploration-notebook" title="Permalink to this heading">#</a></h1>
 <div class="section" id="project-setup">
-<h2>Project Setup<a class="headerlink" href="#project-setup" title="Permalink to this headline">¶</a></h2>
+<h2>Project Setup<a class="headerlink" href="#project-setup" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
@@ -1743,7 +1612,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="section" id="chirps-version-2-0-global-daily-0-25">
-<h2>CHIRPS Version 2.0 Global Daily 0.25°<a class="headerlink" href="#chirps-version-2-0-global-daily-0-25" title="Permalink to this headline">¶</a></h2>
+<h2>CHIRPS Version 2.0 Global Daily 0.25°<a class="headerlink" href="#chirps-version-2-0-global-daily-0-25" title="Permalink to this heading">#</a></h2>
 <p>The Climate Hazards Group InfraRed Precipitation with Station data (CHIRPS) is a high-resolution precipitation dataset developed by the Climate Hazards Group at the University of California, Santa Barbara. It combines satellite-derived precipitation estimates with ground-based station data to provide gridded precipitation data at a quasi-global scale between 50°S-50°N.</p>
 <p>Read more about CHIRPS here:</p>
 <ul class="simple">
@@ -1752,7 +1621,7 @@ title="Print to PDF"
 <li><p><a class="reference external" href="https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/">Data storage location</a></p></li>
 </ul>
 <div class="section" id="indices-for-extreme-events">
-<h3>Indices for Extreme Events<a class="headerlink" href="#indices-for-extreme-events" title="Permalink to this headline">¶</a></h3>
+<h3>Indices for Extreme Events<a class="headerlink" href="#indices-for-extreme-events" title="Permalink to this heading">#</a></h3>
 <p>The Expert Team on Climate Change Detection and Indices (<a class="reference external" href="http://etccdi.pacificclimate.org/list_27_indices.shtml">ETCCDI</a>) has defined various indices that focus on different aspects such as duration or intensity of extreme events. The following functions provide examples of how to compute indices for each category. You can modify these functions to suit your specific needs or create your own custom functions. Here are some tips you can use:</p>
 <ul class="simple">
 <li><p>Most of the indices require daily data, so in order to select a specific season you can just use xarray to subset the data. Example:</p></li>
@@ -2158,7 +2027,7 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;https://data.chc.ucsb.edu/products/CHIRPS-2.0/global_daily/netcdf/p25/chirps-v2.0.2023.days_p25.nc&#39; to file &#39;/tmp/chirps-v2.0.2023.days_p25.nc&#39;.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f0290ea3859a20c9b2349320b9430d67ef7cbe28316e9b962826d79620746fda
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 8430cc8afd1a69205ecf757a2d8d95f3e6fbc44544326b27b4d534a82ee9c14c
 Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
 </pre></div>
 </div>
@@ -2529,11 +2398,11 @@ dl.xr-attrs {
   fill: currentColor;
 }
 </style><pre class='xr-text-repr-fallback'>&lt;xarray.Dataset&gt;
-Dimensions:    (latitude: 400, longitude: 1440, time: 15674)
+Dimensions:    (latitude: 400, longitude: 1440, time: 15705)
 Coordinates:
   * latitude   (latitude) float32 -49.88 -49.62 -49.38 ... 49.38 49.62 49.88
   * longitude  (longitude) float32 -179.9 -179.6 -179.4 ... 179.4 179.6 179.9
-  * time       (time) datetime64[ns] 1981-01-01 1981-01-02 ... 2023-11-30
+  * time       (time) datetime64[ns] 1981-01-01 1981-01-02 ... 2023-12-31
 Data variables:
     precip     (time, latitude, longitude) float32 dask.array&lt;chunksize=(365, 400, 1440), meta=np.ndarray&gt;
 Attributes: (12/15)
@@ -2549,12 +2418,12 @@ Attributes: (12/15)
     acknowledgements:  The Climate Hazards Group InfraRed Precipitation with ...
     ftp_url:           ftp://chg-ftpout.geog.ucsb.edu/pub/org/chg/products/CH...
     website:           http://chg.geog.ucsb.edu/data/chirps/index.html
-    faq:               http://chg-wiki.geog.ucsb.edu/wiki/CHIRPS_FAQ</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-6f3ca0c8-5c57-403b-8f57-7957910890ee' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-6f3ca0c8-5c57-403b-8f57-7957910890ee' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 400</li><li><span class='xr-has-index'>longitude</span>: 1440</li><li><span class='xr-has-index'>time</span>: 15674</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-1efbced1-609d-42ca-b36e-9f3864b08203' class='xr-section-summary-in' type='checkbox'  checked><label for='section-1efbced1-609d-42ca-b36e-9f3864b08203' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-49.88 -49.62 ... 49.62 49.88</div><input id='attrs-33a3ce3e-2061-4f28-964c-797f609dd243' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-33a3ce3e-2061-4f28-964c-797f609dd243' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-40f282b1-92df-4eca-8e60-1b1a32add190' class='xr-var-data-in' type='checkbox'><label for='data-40f282b1-92df-4eca-8e60-1b1a32add190' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-49.875, -49.625, -49.375, ...,  49.375,  49.625,  49.875],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-179.9 -179.6 ... 179.6 179.9</div><input id='attrs-7b04e7ac-5e27-4e58-85d5-41174b6c6ac3' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-7b04e7ac-5e27-4e58-85d5-41174b6c6ac3' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-adb9f64f-78d9-4cb0-a802-fd052f73e346' class='xr-var-data-in' type='checkbox'><label for='data-adb9f64f-78d9-4cb0-a802-fd052f73e346' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([-179.875, -179.625, -179.375, ...,  179.375,  179.625,  179.875],
-      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1981-01-01 ... 2023-11-30</div><input id='attrs-475e0f14-08ef-4500-9259-37abb4774ce6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-475e0f14-08ef-4500-9259-37abb4774ce6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-b372245a-ff92-435c-959d-56362fc1dff0' class='xr-var-data-in' type='checkbox'><label for='data-b372245a-ff92-435c-959d-56362fc1dff0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>axis :</span></dt><dd>T</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1981-01-01T00:00:00.000000000&#x27;, &#x27;1981-01-02T00:00:00.000000000&#x27;,
-       &#x27;1981-01-03T00:00:00.000000000&#x27;, ..., &#x27;2023-11-28T00:00:00.000000000&#x27;,
-       &#x27;2023-11-29T00:00:00.000000000&#x27;, &#x27;2023-11-30T00:00:00.000000000&#x27;],
-      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-2cdfd9be-4915-49bc-b86e-8b62abc19bec' class='xr-section-summary-in' type='checkbox'  checked><label for='section-2cdfd9be-4915-49bc-b86e-8b62abc19bec' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>precip</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(365, 400, 1440), meta=np.ndarray&gt;</div><input id='attrs-4e035e87-8ede-4666-a845-f32c6b9e7360' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4e035e87-8ede-4666-a845-f32c6b9e7360' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e571c932-8f0a-4612-a12e-86bb1b32ca1a' class='xr-var-data-in' type='checkbox'><label for='data-e571c932-8f0a-4612-a12e-86bb1b32ca1a' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>standard_name :</span></dt><dd>convective precipitation rate</dd><dt><span>long_name :</span></dt><dd>Climate Hazards group InfraRed Precipitation with Stations</dd><dt><span>time_step :</span></dt><dd>day</dd><dt><span>geostatial_lat_min :</span></dt><dd>-50.0</dd><dt><span>geostatial_lat_max :</span></dt><dd>50.0</dd><dt><span>geostatial_lon_min :</span></dt><dd>-180.0</dd><dt><span>geostatial_lon_max :</span></dt><dd>180.0</dd></dl></div><div class='xr-var-data'><table>
+    faq:               http://chg-wiki.geog.ucsb.edu/wiki/CHIRPS_FAQ</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-482d1e05-ac6f-4038-8024-aafaa20e8fa4' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-482d1e05-ac6f-4038-8024-aafaa20e8fa4' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>latitude</span>: 400</li><li><span class='xr-has-index'>longitude</span>: 1440</li><li><span class='xr-has-index'>time</span>: 15705</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-60159e27-d91f-4488-8ae3-b1c59e043f0a' class='xr-section-summary-in' type='checkbox'  checked><label for='section-60159e27-d91f-4488-8ae3-b1c59e043f0a' class='xr-section-summary' >Coordinates: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>latitude</span></div><div class='xr-var-dims'>(latitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-49.88 -49.62 ... 49.62 49.88</div><input id='attrs-fffba2a3-2963-423a-86e4-35d1df908745' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-fffba2a3-2963-423a-86e4-35d1df908745' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-0e723809-78ec-467a-8aac-c9285e6cdece' class='xr-var-data-in' type='checkbox'><label for='data-0e723809-78ec-467a-8aac-c9285e6cdece' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>long_name :</span></dt><dd>latitude</dd><dt><span>axis :</span></dt><dd>Y</dd></dl></div><div class='xr-var-data'><pre>array([-49.875, -49.625, -49.375, ...,  49.375,  49.625,  49.875],
+      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>longitude</span></div><div class='xr-var-dims'>(longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>-179.9 -179.6 ... 179.6 179.9</div><input id='attrs-21033f63-269d-4b56-842e-cfb7fbd4274a' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-21033f63-269d-4b56-842e-cfb7fbd4274a' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-802ea738-f06c-412c-aa6c-a779e6af5d07' class='xr-var-data-in' type='checkbox'><label for='data-802ea738-f06c-412c-aa6c-a779e6af5d07' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>degrees_east</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>long_name :</span></dt><dd>longitude</dd><dt><span>axis :</span></dt><dd>X</dd></dl></div><div class='xr-var-data'><pre>array([-179.875, -179.625, -179.375, ...,  179.375,  179.625,  179.875],
+      dtype=float32)</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>time</span></div><div class='xr-var-dims'>(time)</div><div class='xr-var-dtype'>datetime64[ns]</div><div class='xr-var-preview xr-preview'>1981-01-01 ... 2023-12-31</div><input id='attrs-017c7442-e704-4010-85f8-7335a79448be' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-017c7442-e704-4010-85f8-7335a79448be' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-f6a419ac-29c9-4b10-82c9-4d0bb34c7f54' class='xr-var-data-in' type='checkbox'><label for='data-f6a419ac-29c9-4b10-82c9-4d0bb34c7f54' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>axis :</span></dt><dd>T</dd></dl></div><div class='xr-var-data'><pre>array([&#x27;1981-01-01T00:00:00.000000000&#x27;, &#x27;1981-01-02T00:00:00.000000000&#x27;,
+       &#x27;1981-01-03T00:00:00.000000000&#x27;, ..., &#x27;2023-12-29T00:00:00.000000000&#x27;,
+       &#x27;2023-12-30T00:00:00.000000000&#x27;, &#x27;2023-12-31T00:00:00.000000000&#x27;],
+      dtype=&#x27;datetime64[ns]&#x27;)</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-26c3f103-ab06-4a9d-8959-bdb48f316a94' class='xr-section-summary-in' type='checkbox'  checked><label for='section-26c3f103-ab06-4a9d-8959-bdb48f316a94' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>precip</span></div><div class='xr-var-dims'>(time, latitude, longitude)</div><div class='xr-var-dtype'>float32</div><div class='xr-var-preview xr-preview'>dask.array&lt;chunksize=(365, 400, 1440), meta=np.ndarray&gt;</div><input id='attrs-4a8c0e20-2edb-4b66-8c3d-691570fa1b62' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-4a8c0e20-2edb-4b66-8c3d-691570fa1b62' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-7ec6e645-2f3e-4180-a84b-1b0a824f9062' class='xr-var-data-in' type='checkbox'><label for='data-7ec6e645-2f3e-4180-a84b-1b0a824f9062' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>mm/day</dd><dt><span>standard_name :</span></dt><dd>convective precipitation rate</dd><dt><span>long_name :</span></dt><dd>Climate Hazards group InfraRed Precipitation with Stations</dd><dt><span>time_step :</span></dt><dd>day</dd><dt><span>geostatial_lat_min :</span></dt><dd>-50.0</dd><dt><span>geostatial_lat_max :</span></dt><dd>50.0</dd><dt><span>geostatial_lon_min :</span></dt><dd>-180.0</dd><dt><span>geostatial_lon_max :</span></dt><dd>180.0</dd></dl></div><div class='xr-var-data'><table>
     <tr>
         <td>
             <table style="border-collapse: collapse;">
@@ -2566,16 +2435,16 @@ Attributes: (12/15)
                     </tr>
                 </thead>
                 <tbody>
-
+                    
                     <tr>
                         <th> Bytes </th>
-                        <td> 33.63 GiB </td>
+                        <td> 33.70 GiB </td>
                         <td> 804.20 MiB </td>
                     </tr>
-
+                    
                     <tr>
                         <th> Shape </th>
-                        <td> (15674, 400, 1440) </td>
+                        <td> (15705, 400, 1440) </td>
                         <td> (366, 400, 1440) </td>
                     </tr>
                     <tr>
@@ -2599,13 +2468,13 @@ Attributes: (12/15)
   <!-- Vertical lines -->
   <line x1="10" y1="0" x2="10" y2="30" style="stroke-width:2" />
   <line x1="13" y1="3" x2="13" y2="33" />
-  <line x1="16" y1="6" x2="16" y2="37" />
+  <line x1="16" y1="6" x2="16" y2="36" />
   <line x1="19" y1="9" x2="19" y2="40" />
   <line x1="24" y1="14" x2="24" y2="45" />
   <line x1="28" y1="18" x2="28" y2="48" />
   <line x1="31" y1="21" x2="31" y2="51" />
   <line x1="34" y1="24" x2="34" y2="55" />
-  <line x1="39" y1="29" x2="39" y2="60" />
+  <line x1="39" y1="29" x2="39" y2="59" />
   <line x1="42" y1="32" x2="42" y2="63" />
   <line x1="46" y1="36" x2="46" y2="66" />
   <line x1="49" y1="39" x2="49" y2="69" />
@@ -2619,7 +2488,7 @@ Attributes: (12/15)
   <line x1="80" y1="70" x2="80" y2="101" style="stroke-width:2" />
 
   <!-- Colored Rectangle -->
-  <polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,101.02013290614198 10.0,30.431897612024333" style="fill:#8B4903A0;stroke-width:0"/>
+  <polygon points="10.0,0.0 80.58823529411765,70.58823529411765 80.58823529411765,101.00855143454892 10.0,30.420316140431268" style="fill:#8B4903A0;stroke-width:0"/>
 
   <!-- Horizontal lines -->
   <line x1="10" y1="0" x2="48" y2="0" style="stroke-width:2" />
@@ -2631,12 +2500,12 @@ Attributes: (12/15)
   <line x1="31" y1="21" x2="69" y2="21" />
   <line x1="34" y1="24" x2="72" y2="24" />
   <line x1="39" y1="29" x2="77" y2="29" />
-  <line x1="42" y1="32" x2="81" y2="32" />
+  <line x1="42" y1="32" x2="80" y2="32" />
   <line x1="46" y1="36" x2="84" y2="36" />
   <line x1="49" y1="39" x2="87" y2="39" />
   <line x1="54" y1="44" x2="92" y2="44" />
   <line x1="57" y1="47" x2="95" y2="47" />
-  <line x1="60" y1="50" x2="99" y2="50" />
+  <line x1="60" y1="50" x2="98" y2="50" />
   <line x1="64" y1="54" x2="102" y2="54" />
   <line x1="69" y1="59" x2="107" y2="59" />
   <line x1="72" y1="62" x2="110" y2="62" />
@@ -2648,7 +2517,7 @@ Attributes: (12/15)
   <line x1="48" y1="0" x2="118" y2="70" style="stroke-width:2" />
 
   <!-- Colored Rectangle -->
-  <polygon points="10.0,0.0 48.12189380817702,0.0 118.71012910229467,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"/>
+  <polygon points="10.0,0.0 48.11070541643663,0.0 118.69894071055428,70.58823529411765 80.58823529411765,70.58823529411765" style="fill:#8B4903A0;stroke-width:0"/>
 
   <!-- Horizontal lines -->
   <line x1="80" y1="70" x2="118" y2="70" style="stroke-width:2" />
@@ -2659,21 +2528,21 @@ Attributes: (12/15)
   <line x1="118" y1="70" x2="118" y2="101" style="stroke-width:2" />
 
   <!-- Colored Rectangle -->
-  <polygon points="80.58823529411765,70.58823529411765 118.71012910229467,70.58823529411765 118.71012910229467,101.02013290614198 80.58823529411765,101.02013290614198" style="fill:#ECB172A0;stroke-width:0"/>
+  <polygon points="80.58823529411765,70.58823529411765 118.69894071055428,70.58823529411765 118.69894071055428,101.00855143454892 80.58823529411765,101.00855143454892" style="fill:#ECB172A0;stroke-width:0"/>
 
   <!-- Text -->
-  <text x="99.649182" y="121.020133" font-size="1.0rem" font-weight="100" text-anchor="middle" >1440</text>
-  <text x="138.710129" y="85.804184" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,138.710129,85.804184)">400</text>
-  <text x="35.294118" y="85.726015" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,85.726015)">15674</text>
+  <text x="99.643588" y="121.008551" font-size="1.0rem" font-weight="100" text-anchor="middle" >1440</text>
+  <text x="138.698941" y="85.798393" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(-90,138.698941,85.798393)">400</text>
+  <text x="35.294118" y="85.714434" font-size="1.0rem" font-weight="100" text-anchor="middle" transform="rotate(45,35.294118,85.714434)">15705</text>
 </svg>
         </td>
     </tr>
-</table></div></li></ul></div></li><li class='xr-section-item'><input id='section-dcf39dc0-0caf-453d-a795-ece9a574419e' class='xr-section-summary-in' type='checkbox'  ><label for='section-dcf39dc0-0caf-453d-a795-ece9a574419e' class='xr-section-summary' >Attributes: <span>(15)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.6</dd><dt><span>title :</span></dt><dd>CHIRPS Version 2.0</dd><dt><span>history :</span></dt><dd>created by Climate Hazards Group</dd><dt><span>version :</span></dt><dd>Version 2.0</dd><dt><span>date_created :</span></dt><dd>2015-10-07</dd><dt><span>creator_name :</span></dt><dd>Pete Peterson</dd><dt><span>creator_email :</span></dt><dd>pete@geog.ucsb.edu</dd><dt><span>institution :</span></dt><dd>Climate Hazards Group.  University of California at Santa Barbara</dd><dt><span>documentation :</span></dt><dd>http://pubs.usgs.gov/ds/832/</dd><dt><span>reference :</span></dt><dd>Funk, C.C., Peterson, P.J., Landsfeld, M.F., Pedreros, D.H., Verdin, J.P., Rowland, J.D., Romero, B.E., Husak, G.J., Michaelsen, J.C., and Verdin, A.P., 2014, A quasi-global precipitation time series for drought monitoring: U.S. Geological Survey Data Series 832, 4 p., http://dx.doi.org/110.3133/ds832. </dd><dt><span>comments :</span></dt><dd> time variable denotes the first day of the given day.</dd><dt><span>acknowledgements :</span></dt><dd>The Climate Hazards Group InfraRed Precipitation with Stations development process was carried out through U.S. Geological Survey (USGS) cooperative agreement #G09AC000001 &quot;Monitoring and Forecasting Climate, Water and Land Use for Food Production in the Developing World&quot; with funding from: U.S. Agency for International Development Office of Food for Peace, award #AID-FFP-P-10-00002 for &quot;Famine Early Warning Systems Network Support,&quot; the National Aeronautics and Space Administration Applied Sciences Program, Decisions award #NN10AN26I for &quot;A Land Data Assimilation System for Famine Early Warning,&quot; SERVIR award #NNH12AU22I for &quot;A Long Time-Series Indicator of Agricultural Drought for the Greater Horn of Africa,&quot; The National Oceanic and Atmospheric Administration award NA11OAR4310151 for &quot;A Global Standardized Precipitation Index supporting the US Drought Portal and the Famine Early Warning System Network,&quot; and the USGS Land Change Science Program.</dd><dt><span>ftp_url :</span></dt><dd>ftp://chg-ftpout.geog.ucsb.edu/pub/org/chg/products/CHIRPS-latest/</dd><dt><span>website :</span></dt><dd>http://chg.geog.ucsb.edu/data/chirps/index.html</dd><dt><span>faq :</span></dt><dd>http://chg-wiki.geog.ucsb.edu/wiki/CHIRPS_FAQ</dd></dl></div></li></ul></div></div></div></div>
+</table></div></li></ul></div></li><li class='xr-section-item'><input id='section-ab568da0-f0ea-42ae-a6a5-38b38359ea10' class='xr-section-summary-in' type='checkbox'  ><label for='section-ab568da0-f0ea-42ae-a6a5-38b38359ea10' class='xr-section-summary' >Attributes: <span>(15)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'><dt><span>Conventions :</span></dt><dd>CF-1.6</dd><dt><span>title :</span></dt><dd>CHIRPS Version 2.0</dd><dt><span>history :</span></dt><dd>created by Climate Hazards Group</dd><dt><span>version :</span></dt><dd>Version 2.0</dd><dt><span>date_created :</span></dt><dd>2015-10-07</dd><dt><span>creator_name :</span></dt><dd>Pete Peterson</dd><dt><span>creator_email :</span></dt><dd>pete@geog.ucsb.edu</dd><dt><span>institution :</span></dt><dd>Climate Hazards Group.  University of California at Santa Barbara</dd><dt><span>documentation :</span></dt><dd>http://pubs.usgs.gov/ds/832/</dd><dt><span>reference :</span></dt><dd>Funk, C.C., Peterson, P.J., Landsfeld, M.F., Pedreros, D.H., Verdin, J.P., Rowland, J.D., Romero, B.E., Husak, G.J., Michaelsen, J.C., and Verdin, A.P., 2014, A quasi-global precipitation time series for drought monitoring: U.S. Geological Survey Data Series 832, 4 p., http://dx.doi.org/110.3133/ds832. </dd><dt><span>comments :</span></dt><dd> time variable denotes the first day of the given day.</dd><dt><span>acknowledgements :</span></dt><dd>The Climate Hazards Group InfraRed Precipitation with Stations development process was carried out through U.S. Geological Survey (USGS) cooperative agreement #G09AC000001 &quot;Monitoring and Forecasting Climate, Water and Land Use for Food Production in the Developing World&quot; with funding from: U.S. Agency for International Development Office of Food for Peace, award #AID-FFP-P-10-00002 for &quot;Famine Early Warning Systems Network Support,&quot; the National Aeronautics and Space Administration Applied Sciences Program, Decisions award #NN10AN26I for &quot;A Land Data Assimilation System for Famine Early Warning,&quot; SERVIR award #NNH12AU22I for &quot;A Long Time-Series Indicator of Agricultural Drought for the Greater Horn of Africa,&quot; The National Oceanic and Atmospheric Administration award NA11OAR4310151 for &quot;A Global Standardized Precipitation Index supporting the US Drought Portal and the Famine Early Warning System Network,&quot; and the USGS Land Change Science Program.</dd><dt><span>ftp_url :</span></dt><dd>ftp://chg-ftpout.geog.ucsb.edu/pub/org/chg/products/CHIRPS-latest/</dd><dt><span>website :</span></dt><dd>http://chg.geog.ucsb.edu/data/chirps/index.html</dd><dt><span>faq :</span></dt><dd>http://chg-wiki.geog.ucsb.edu/wiki/CHIRPS_FAQ</dd></dl></div></li></ul></div></div></div></div>
 </div>
 </div>
 </div>
 <div class="section" id="noaa-fundamental-climate-data-records-fcdr-avhrr-land-bundle-surface-reflectance-and-normalized-difference-vegetation-index">
-<h2>NOAA Fundamental Climate Data Records (FCDR) AVHRR Land Bundle - Surface Reflectance and Normalized Difference Vegetation Index<a class="headerlink" href="#noaa-fundamental-climate-data-records-fcdr-avhrr-land-bundle-surface-reflectance-and-normalized-difference-vegetation-index" title="Permalink to this headline">¶</a></h2>
+<h2>NOAA Fundamental Climate Data Records (FCDR) AVHRR Land Bundle - Surface Reflectance and Normalized Difference Vegetation Index<a class="headerlink" href="#noaa-fundamental-climate-data-records-fcdr-avhrr-land-bundle-surface-reflectance-and-normalized-difference-vegetation-index" title="Permalink to this heading">#</a></h2>
 <p>As we learned in the W1D3 tutorials, all the National Atmospheric and Oceanic Administration Climate Data Record (NOAA-CDR) datasets are available both at NOAA National Centers for Environmental Information (NCEI) and commercial cloud platforms. See the link <a class="reference external" href="https://registry.opendata.aws/noaa-cdr-terrestrial/">here</a>. We are accessing the data directly via the <a class="reference external" href="https://noaa-cdr-ndvi-pds.s3.amazonaws.com/index.html">Amazon Web Service (AWS) cloud storage space</a>.</p>
 <p>For this project we recommend using the Normalized Difference Vegetation Index (NDVI). It is one of the most commonly used remotely sensed indices. It measures the “greeness” of vegetation, and is useful in understanding vegetation density and assessing changes in plant health. For example, NDVI can be used to study the impacts of droughts, heatwaves, and insect infestations on plants covering Earth’s surface. A good overview of this index from this particular sensor can be accessed <a class="reference external" href="https://digitalcommons.unl.edu/nasapub/217/">here</a>.</p>
 <p>Recall what we learned in W1D3 Tutorial 3, the data files on AWS are named systematically:</p>
@@ -3594,6 +3463,195 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010507_c20170608223213.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010507_c20170608223213.nc&#39;.
 </pre></div>
 </div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 5a449a2c4d0f039bcabdb8fa47f9b2a4c6550987b89ae6eda72e2e0fa498cea5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010508_c20170608225055.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010508_c20170608225055.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1f2600d6787842a553c1661f66914638f8434c9d1cdaebf8b62b93d9e9e5a647
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010509_c20170608230840.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010509_c20170608230840.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 564151d1ae1e614ac7d598a9930318b1ef1741251285b40806578c7089a92e49
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010510_c20170608232739.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010510_c20170608232739.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 0c8a34ca2ad9ea8569a64218765104f8e2018f4569d0c76b378c30eab51a105a
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010511_c20170608234630.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010511_c20170608234630.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 96303abb61effcdfda890976d4593cdbdc30e9d88908a64df4f5acc1b1fea55f
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010512_c20170609000513.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010512_c20170609000513.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f6ccafa80045cc337e81b24275425a6f0264ad3d287a1e91d6d55bc229c58a85
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010513_c20170609002403.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010513_c20170609002403.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 34a04a99f07f4fae5deb0ffacf217237717eddd771634529e45ae86ed1c1d3bc
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010514_c20170609004223.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010514_c20170609004223.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 17648e42fc9eebd6666091063bdbc00a89eab5cd7293cdac44fc3625ef16c163
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010515_c20170609010101.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010515_c20170609010101.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 2f107924d2af90627dcb211d9db930889a76481a024feda00ebb4b83c0bc59fa
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010516_c20170609011947.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010516_c20170609011947.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a29e292a1b7a3e1dc0543e545fb2b197c01c14167ee09e5964a1a1db1e65384e
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010517_c20170609013809.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010517_c20170609013809.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 3e49fd4f74b49dd32d42d9ad068f7ed0a9380ddabb5d5792bd72ff96ee27877d
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010518_c20170609015621.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010518_c20170609015621.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: fe06d2776ef792a841714b9bfc314c9f1f8ba88cf29eca7699eb8e40579f32d5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010519_c20170609021441.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010519_c20170609021441.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 3ffba6eac3a617280d2bfdd71bf0992f4e0fabb0a12e528793a2b49f1f5adbff
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010520_c20170609023303.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010520_c20170609023303.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 60cb2fa1689e29642efff1a74d602aa1c541559b22a880576b5f763199844290
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010521_c20170609025147.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010521_c20170609025147.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 258871bcd250b6afbc1f0f8a3a33d15da3a46e698101d29233a0c30399d53455
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010522_c20170609031038.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010522_c20170609031038.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 651a3742ca8ea7c415d6bc5f5fe9cd3a4a9070ca6e02bf69fc8849bb97418cf5
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010523_c20170609032836.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010523_c20170609032836.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a8faa5b1b34a1a024b6ab00ff35e11e8dc32eb02f6dd455cfb80ba1ad2ca9208
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010524_c20170609034704.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010524_c20170609034704.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 09a87002961f300893fe4e18301fc87d24432abf74a6115ecc411bfb9aca30ea
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010525_c20170609040503.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010525_c20170609040503.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: a83c14f00013a87135a8d2f60edbfa850de42fb46f06eafd893f5af0b5a516dc
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010526_c20170609042255.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010526_c20170609042255.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 1d73f951c447a7b56aacbf57a4b41d2c2e9c2ca7686fcf204e378ece94dd2276
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010527_c20170609044127.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010527_c20170609044127.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 971235a50c8557a6b04308cd956288a81565b4e0f0b1fad8e713cdbf3d043dd8
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010528_c20170609045943.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010528_c20170609045943.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: f1e4297dac86f25dcd1d76d653c7226ffe6c8f860b46a4cfd5c0b113aee9bd05
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010529_c20170609051828.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010529_c20170609051828.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: d56a06f6e27a213377cdc67ad720c9d1e2cd11a4c176805538be778d4ec59b99
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010530_c20170609053702.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010530_c20170609053702.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: de88f64012c0331c4d63efa6600da893bcd2b88453e8a1b4fe0035fc1bd73434
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010531_c20170609055559.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010531_c20170609055559.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6fdd8ad267b3137736da26c47e19e6375b37abcf29de955bd8478ebb85a0014f
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010601_c20170609061453.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010601_c20170609061453.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 6cd3b2cb125118d6796c1002fe826fe1aac2102e47f53612f999ba4a1e2c01ca
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010602_c20170609063258.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010602_c20170609063258.nc&#39;.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: 7e0a137dbd466e2a9da939d8a99d55b5e93e552753434b5880aa99598be173a4
+Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; to ensure that the file hasn&#39;t changed if it is downloaded again in the future.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from &#39;http://s3.amazonaws.com/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010603_c20170609065122.nc&#39; to file &#39;/tmp/noaa-cdr-ndvi-pds/data/2001/AVHRR-Land_v005_AVH13C1_NOAA-16_20010603_c20170609065122.nc&#39;.
+</pre></div>
+</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
@@ -3708,8 +3766,8 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </div>
 </div>
 </div>
-<div class="section" id="alternative-ndvi-source-modis-terra-vegetation-indices-mod13c2-version-6-1-l3-global-0-05-cmg">
-<h1>Alternative NDVI source: MODIS/Terra Vegetation Indices (MOD13C2) Version 6.1 L3 Global 0.05° CMG<a class="headerlink" href="#alternative-ndvi-source-modis-terra-vegetation-indices-mod13c2-version-6-1-l3-global-0-05-cmg" title="Permalink to this headline">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="alternative-ndvi-source-modis-terra-vegetation-indices-mod13c2-version-6-1-l3-global-0-05-cmg">
+<h1>Alternative NDVI source: MODIS/Terra Vegetation Indices (MOD13C2) Version 6.1 L3 Global 0.05° CMG<a class="headerlink" href="#alternative-ndvi-source-modis-terra-vegetation-indices-mod13c2-version-6-1-l3-global-0-05-cmg" title="Permalink to this heading">#</a></h1>
 <p>Global MODIS (Moderate Resolution Imaging Spectroradiometer) vegetation indices are designed to provide consistent spatial and temporal comparisons of vegetation conditions. Blue, red, and near-infrared reflectances, centered at 469-nanometers, 645-nanometers, and 858-nanometers, respectively, are used to determine the MODIS vegetation indices.</p>
 <p>The MODIS Normalized Difference Vegetation Index (NDVI) complements NOAA’s Advanced Very High Resolution Radiometer (AVHRR) NDVI products providing continuity for time series applications over this rich historical archive.</p>
 <p><a class="reference external" href="https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/MOD13C2#overview">Global MOD13C2 data</a> are cloud-free spatial composites of the gridded 16-day 1-kilometer MOD13C2A2, and are provided as a level-3 product projected on a 0.05 degree (5600-meter) geographic Climate Modeling Grid (CMG).
@@ -3730,7 +3788,7 @@ These files have also been pre-processed to match the grid of the precipitation 
 </div>
 <p><a name="dataset2-1"></a></p>
 <div class="section" id="worldbank-data-cereal-production">
-<h2>Worldbank Data: Cereal Production<a class="headerlink" href="#worldbank-data-cereal-production" title="Permalink to this headline">¶</a></h2>
+<h2>Worldbank Data: Cereal Production<a class="headerlink" href="#worldbank-data-cereal-production" title="Permalink to this heading">#</a></h2>
 <p>Cereal production is a crucial component of global agriculture and food security. The <a class="reference external" href="https://databank.worldbank.org/metadataglossary/world-development-indicators/series/AG.PRD.CREL.MT">World Bank</a> collects and provides data on cereal production, which includes crops such as wheat, rice, maize, barley, oats, rye, sorghum, millet, and mixed grains. The data covers various indicators such as production quantity, area harvested, yield, and production value.</p>
 <p>The World Bank also collects data on land under cereals production, which refers to the area of land that is being used to grow cereal crops. This information can be valuable for assessing the productivity and efficiency of cereal production systems in different regions, as well as identifying potential areas for improvement. Overall, the World Bank’s data on cereal production and land under cereals production is an important resource for policymakers, researchers, and other stakeholders who are interested in understanding global trends in agriculture and food security.</p>
 <div class="cell docutils container">
@@ -3759,8 +3817,8 @@ These files have also been pre-processed to match the grid of the precipitation 
 <p>Happy exploring and analyzing precipitation variability and extreme events in your project!</p>
 </div>
 </div>
-<div class="section" id="further-reading">
-<h1>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h1>
+<div class="tex2jax_ignore mathjax_ignore section" id="further-reading">
+<h1>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Anyamba, A. and Tucker, C.J., 2012. Historical perspective of AVHRR NDVI and vegetation drought monitoring. Remote sensing of drought: innovative monitoring approaches, 23, pp.20.<a class="reference external" href="https://digitalcommons.unl.edu/nasapub/217/">https://digitalcommons.unl.edu/nasapub/217/</a></p></li>
 <li><p>Zhang, X., Alexander, L., Hegerl, G.C., Jones, P., Tank, A.K., Peterson, T.C., Trewin, B. and Zwiers, F.W., 2011. Indices for monitoring changes in extremes based on daily temperature and precipitation data. Wiley Interdisciplinary Reviews: Climate Change, 2(6), pp.851-870.</p></li>
@@ -3782,7 +3840,7 @@ These files have also been pre-processed to match the grid of the precipitation 
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./projects/project-notebooks"
         },
         predefinedOutput: true
@@ -3790,58 +3848,159 @@ These files have also been pre-processed to match the grid of the precipitation 
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
-              
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="ENSO_impact_on_precipitation_and_temperature.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><strong>The Impact of ENSO on Precipitation and Temperature</strong></p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="Heatwaves.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land</strong></p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+  <a class='left-prev' id="prev-link" href="ENSO_impact_on_precipitation_and_temperature.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title"><strong>The Impact of ENSO on Precipitation and Temperature</strong></p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="Heatwaves.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title"><strong>Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land</strong></p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
 </div>
             </footer>
+            
+          </div>
+          
+          
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Regional Precipitation Variability and Extreme Events
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-template">
+   Project Template
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-exploration-notebook">
+   Data Exploration Notebook
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project-setup">
+     Project Setup
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#chirps-version-2-0-global-daily-0-25">
+     CHIRPS Version 2.0 Global Daily 0.25°
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#indices-for-extreme-events">
+       Indices for Extreme Events
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#noaa-fundamental-climate-data-records-fcdr-avhrr-land-bundle-surface-reflectance-and-normalized-difference-vegetation-index">
+     NOAA Fundamental Climate Data Records (FCDR) AVHRR Land Bundle - Surface Reflectance and Normalized Difference Vegetation Index
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#alternative-ndvi-source-modis-terra-vegetation-indices-mod13c2-version-6-1-l3-global-0-05-cmg">
+   Alternative NDVI source: MODIS/Terra Vegetation Indices (MOD13C2) Version 6.1 L3 Global 0.05° CMG
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#worldbank-data-cereal-production">
+     Worldbank Data: Cereal Production
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   Further Reading
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
+          
+          
         </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
   
-    By Climatematch<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By Climatematch
+</p>
+
+  </div>
   
-    <div class="extra_footer">
-      <div>
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
 <a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
 <a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"></a>
 The contents of this repository are shared under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 Software elements are additionally licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD (3-Clause) License</a>.
 </div>
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
-
-
-      </div>
-    </div>
+  </div>
   
-  <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+</div>
+          </div>
+        </footer>
+        
 
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
 
   </body>
 </html>
