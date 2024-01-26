@@ -38,7 +38,7 @@ jobs:
 
       - name: Add PR comment
         if: ${{ env.NBS != '' }}
-        uses: machine-learning-apps/pr-comment@1.0.0
+        uses: machine-learning-apps/pr-comment@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
