@@ -222,7 +222,7 @@ jobs:
           # pip install jinja2==2.10 markupsafe==1.1.1
           pip install -r requirements.txt
           # pip install --upgrade jinja2
-          pip install jupyter-book==0.10.2 ghp-import pyleoclim importlib-metadata==4.13.0
+          pip install jupyter-book==0.14.0 ghp-import pyleoclim importlib-metadata==4.13.0
 
       # Necessary for SDFC to work
       - name: Install eigen/SDFC
@@ -240,18 +240,18 @@ jobs:
           cd ..
         shell: bash -l {0}
 
-      - name: Copy tutorials from precourse repo
-        if: "!contains(env.COMMIT_MESSAGE, 'skip precourse')"
-        run: |
-          BRANCH=`python -c 'import os, re; m = re.search(r"precourse:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
-          wget https://github.com/NeuromatchAcademy/precourse/archive/refs/heads/$BRANCH.tar.gz
-          tar -xzf $BRANCH.tar.gz
-          mv precourse-$BRANCH/tutorials/W0D* tutorials/
-          cat precourse-main/tutorials/materials.yml tutorials/materials.yml > out.yml
-          mv out.yml tutorials/materials.yml
-          mv precourse-$BRANCH/prereqs .
-          rm -r precourse-$BRANCH
-          rm -r $BRANCH.tar.gz
+      # - name: Copy tutorials from precourse repo
+      #   if: "!contains(env.COMMIT_MESSAGE, 'skip precourse')"
+      #   run: |
+      #     BRANCH=`python -c 'import os, re; m = re.search(r"precourse:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
+      #     wget https://github.com/NeuromatchAcademy/precourse/archive/refs/heads/$BRANCH.tar.gz
+      #     tar -xzf $BRANCH.tar.gz
+      #     mv precourse-$BRANCH/tutorials/W0D* tutorials/
+      #     cat precourse-main/tutorials/materials.yml tutorials/materials.yml > out.yml
+      #     mv out.yml tutorials/materials.yml
+      #     mv precourse-$BRANCH/prereqs .
+      #     rm -r precourse-$BRANCH
+      #     rm -r $BRANCH.tar.gz
       
       - name: Cache Jupyter Build Artifacts
         uses: actions/cache@v2
@@ -268,6 +268,7 @@ jobs:
           # TODO: get this working with a general CI
           # python ci/generate_book_climate.py student
           python ci/generate_book.py student
+          jupyter-book toc migrate /home/runner/work/climate-course-content/climate-course-content/book/_toc.yml -o /home/runner/work/climate-course-content/climate-course-content/book/_toc.yml
           ln -s ../tutorials book/tutorials
           ln -s ../projects book/projects
           # ln -s ../prereqs book/prereqs
