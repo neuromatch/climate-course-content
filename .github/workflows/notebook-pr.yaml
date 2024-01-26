@@ -40,13 +40,14 @@ jobs:
           exec_flag: '--execute'
           exercice-continue-on-error: 'true'
 
-      - name: Add PR comment
-        if: ${{ env.NBS != '' }}
-        uses: machine-learning-apps/pr-comment@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          path: comment.txt
+      # - name: Add PR comment
+      #   if: ${{ env.NBS != '' }}
+      #   uses: machine-learning-apps/pr-comment@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     path: comment.txt
+      
       - name: Update READMEs
         if: ${{ env.NBS != '' }}
         run: python ci/generate_tutorial_readmes.py
