@@ -8,6 +8,9 @@ scale = 7
 # set location parameter
 loc = 26
 
+# create precipitation array
+x_r80 = np.arange(80,step=0.5)
+
 # setup plots
 fig, ax = plt.subplots()
 
