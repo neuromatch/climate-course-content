@@ -37,4 +37,4 @@ jobs:
           platforms: linux/amd64
           push: true
           file: Dockerfile
-          tags: wesleyban/climatematch-notebook:${{ github.event.inputs.tag || 'latest' }}
+          tags: iamzoltan/climatematch-notebook:${{ github.event.inputs.tag || 'latest' }}
