@@ -1,7 +1,7 @@
 FROM pangeo/pangeo-notebook:latest
 
 COPY docker-environment.yml /tmp/environment.yml
-RUN mamba env update -f /tmp/environment.yml -n notebook
+# RUN mamba env update -f /tmp/environment.yml -n notebook
 
 # Install SDFC
 # To compile we need gcc so need to update apt and install (conda gcc does not work)
