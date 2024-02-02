@@ -12,7 +12,7 @@ WORKDIR /tmp
 # RUN /bin/sh -c apt update
 RUN apt update
 
-# RUN mamba env update -f environment.yml -n notebook
+RUN mamba env update -f environment.yml -n notebook
 # RUN mamba env update -f /tmp/environment.yml -n notebook
 # RUN mamba env update -f /tmp/environment.yml -n climatematch
 
