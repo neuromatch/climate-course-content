@@ -13,13 +13,17 @@ dependencies:
  - cfgrib
  - ciso
  - climlab
+ - cmocean
  - dask-ml
  - datashader
  - descartes
  - earthaccess
- - eigen
+ - ecco_v4_py
+#  - eigen # needed for SDFC
  - eofs
  - erddapy
+ - esmf
+ - esmpy
  - fastjmd95
  - flox
  - fsspec
@@ -30,6 +34,7 @@ dependencies:
  - geopandas
  - geopy
  - geoviews-core
+ - gh-scoped-creds
  - git
  - git-lfs
  - gsw
@@ -48,6 +53,7 @@ dependencies:
  - ipywidgets
  - jupyter-panel-proxy
  - jupyter-resource-usage
+ - jupyterlab-git
  - kerchunk
  - lxml
  - lz4
@@ -57,15 +63,20 @@ dependencies:
  - nbstripout
  - nc-time-axis
  - netcdf4
+ - nltk
  - numcodecs
  - numpy
  - odc-stac
+ - openpyxl
  - pandas
  - panel
  - parcels
  - param
+ - pip
+ - pooch
  - pop-tools
  - pyarrow
+#  - pybind11 # needed for SDFC
  - pycamhd
  - pydap
  - pygeos
@@ -89,19 +100,18 @@ dependencies:
  - sparse
  - snakeviz
  - stackstac
+ - texttable
  - tiledb-py
  - timezonefinder
+ - wordcloud
  - xarray
  - xarrayutils
  - xarray-datatree
  - xarray_leaflet
  - xarray-spatial
  - xbatcher
-# - xcape
  - xclim
- - esmf
  - xesmf
- - esmpy
  - xgcm
  - xhistogram
  - xmip
@@ -110,28 +120,10 @@ dependencies:
  - xrft
  - xskillscore
  - zarr
- - gh-scoped-creds
- - jupyterlab-git
- - pybind11 # needed for SDFC
- - texttable
- - openpyxl
- - pyworld3
- - wordcloud
- - nltk
- - ecco_v4_py
- - cmocean
- - ipykernel
- - boto3
- - pooch
- - eigen # needed for SDFC
- - pip
  - pip:
-   - pyleoclim
    - afinn
+   - pyleoclim
    - "mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip"
 #   - "SDFC @ https://github.com/yrobink/SDFC/archive/master.zip" # this is not working
    -  https://github.com/mptouzel/PyDICE/archive/master.zip # for W2D3 Tutorial 2
- # Note: Enable after https://github.com/conda-incubator/conda-lock/pull/295
- # Uncomment and remove separate requirements.txt file
- #- pip:
- #  - jupyterlab-s3-browser>=0.12
+
