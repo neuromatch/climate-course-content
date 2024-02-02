@@ -1,11 +1,5 @@
 FROM pangeo/pangeo-notebook:latest
-# FROM ubuntu:22.04
 
-# RUN python --version
-
-
-
-# COPY docker-environment.yml /tmp/environment.yml
 RUN /bin/sh -c mamba env
 RUN mamba install climlab ecco_v4_py esmf nltk openpyxl pip pooch pygeos pythia-datasets pyworld3 texttable wordcloud
 RUN pip install afinn
@@ -13,13 +7,7 @@ RUN pip install pyleoclim
 RUN pip install "mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip"
 RUN pip install https://github.com/mptouzel/PyDICE/archive/master.zip
 USER root
-WORKDIR /tmp
-# RUN /bin/sh -c apt update
 RUN apt update
-
-# RUN mamba env update -f environment.yml -n notebook -vvv
-# RUN mamba env update -f /tmp/environment.yml -n notebook
-# RUN mamba env update -f /tmp/environment.yml -n climatematch
 
 # Install SDFC
 # To compile we need gcc so need to update apt and install (conda gcc does not work)
