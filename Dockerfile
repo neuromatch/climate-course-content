@@ -9,9 +9,10 @@ COPY docker-environment.yml /tmp/environment.yml
 RUN /bin/sh -c mamba env
 USER root
 WORKDIR /tmp
-RUN /bin/sh -c apt update
+# RUN /bin/sh -c apt update
 
-RUN mamba env update -f /tmp/environment.yml -n notebook
+RUN mamba env update -f environment.yml -n notebook
+# RUN mamba env update -f /tmp/environment.yml -n notebook
 # RUN mamba env update -f /tmp/environment.yml -n climatematch
 
 # Install SDFC
