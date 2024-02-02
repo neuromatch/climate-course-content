@@ -19,5 +19,5 @@ dependencies:
    - afinn
    - pyleoclim
    - "mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip"
-   -  https://github.com/mptouzel/PyDICE/archive/master.zip # for W2D3 Tutorial 2
+   - https://github.com/mptouzel/PyDICE/archive/master.zip # for W2D3 Tutorial 2
 
