@@ -9,6 +9,7 @@ FROM pangeo/pangeo-notebook:latest
 RUN /bin/sh -c mamba env
 RUN mamba install climlab ecco_v4_py esmf nltk openpyxl pip pooch pygeos pythia-datasets pyworld3 texttable wordcloud
 RUN pip install afinn
+RUN pip install pyleoclim
 USER root
 WORKDIR /tmp
 # RUN /bin/sh -c apt update
