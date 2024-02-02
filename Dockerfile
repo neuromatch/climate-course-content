@@ -1,7 +1,12 @@
-FROM pangeo/pangeo-notebook:latest
+# FROM pangeo/pangeo-notebook:latest
+# FROM ubuntu:22.04
+ARG PANGEO_BASE_IMAGE_TAG=master
+FROM pangeo/base-image:${PANGEO_BASE_IMAGE_TAG}
 
-COPY docker-environment.yml /tmp/environment.yml
-# RUN mamba env update -f /tmp/environment.yml -n notebook
+RUN python --version
+COPY environment.yml /tmp/environment.yml
+RUN mamba env update -f /tmp/environment.yml -n notebook
+# RUN mamba env update -f /tmp/environment.yml -n climatematch
 
 # Install SDFC
 # To compile we need gcc so need to update apt and install (conda gcc does not work)
@@ -11,5 +16,5 @@ COPY docker-environment.yml /tmp/environment.yml
 # RUN apt update && apt install gcc g++ --yes && wget https://github.com/yrobink/SDFC-python/archive/refs/heads/main.tar.gz && tar -xzf main.tar.gz && rm -rf main.tar.gz && cd SDFC-python-main && PATH=/usr/bin:$PATH /srv/conda/envs/notebook/bin/python setup.py install eigen="/srv/conda/envs/notebook/include/eigen3"
 
 # Switch back to home and jovyan (defaults)
-WORKDIR /home/jovyan
-USER jovyan
+# WORKDIR /home/jovyan
+# USER jovyan
