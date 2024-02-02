@@ -8,6 +8,7 @@ FROM pangeo/pangeo-notebook:latest
 # COPY docker-environment.yml /tmp/environment.yml
 RUN /bin/sh -c mamba env
 RUN mamba install climlab ecco_v4_py esmf nltk openpyxl pip pooch pygeos pythia-datasets pyworld3 texttable wordcloud
+RUN pip install afinn
 USER root
 WORKDIR /tmp
 # RUN /bin/sh -c apt update
