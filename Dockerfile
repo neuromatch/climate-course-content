@@ -1,7 +1,7 @@
 # FROM pangeo/pangeo-notebook:latest
 FROM ubuntu:22.04
 
-RUN python --version
+RUN python3 --version
 COPY environment.yml /tmp/environment.yml
 # RUN mamba env update -f /tmp/environment.yml -n notebook
 RUN mamba env update -f /tmp/environment.yml -n climatematch
