@@ -1,12 +1,10 @@
 # FROM pangeo/pangeo-notebook:latest
-# FROM ubuntu:22.04
-ARG PANGEO_BASE_IMAGE_TAG=master
-FROM pangeo/base-image:${PANGEO_BASE_IMAGE_TAG}
+FROM ubuntu:22.04
 
 RUN python --version
 COPY environment.yml /tmp/environment.yml
-RUN mamba env update -f /tmp/environment.yml -n notebook
-# RUN mamba env update -f /tmp/environment.yml -n climatematch
+# RUN mamba env update -f /tmp/environment.yml -n notebook
+RUN mamba env update -f /tmp/environment.yml -n climatematch
 
 # Install SDFC
 # To compile we need gcc so need to update apt and install (conda gcc does not work)
