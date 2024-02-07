@@ -58,6 +58,7 @@ runs:
     - name: Install numpy
       run: |
         pip install numpy
+      shell: bash -l {0}
 
     - name: Install GEOS/Proj (dep for cartopy)
       run: |
