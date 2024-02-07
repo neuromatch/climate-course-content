@@ -27,6 +27,7 @@ runs:
       run: |
         python -m venv env
         source ./env/bin/activate
+      shell: bash -l {0}
 
     # - uses: actions/cache@v3
     #   with:
