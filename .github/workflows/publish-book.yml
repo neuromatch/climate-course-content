@@ -233,7 +233,7 @@ jobs:
           # echo "/usr/bin/gcc-9" >> $GITHUB_PATH
           # echo "/usr/bin/g++-9" >> $GITHUB_PATH
           pip install pybind11
-          git clone https://github.com/yrobink/SDFC-python.git
+          git clone https://github.com/neuromatch/SDFC-python.git
           cd SDFC-python
           python setup.py install
           pip show SDFC
