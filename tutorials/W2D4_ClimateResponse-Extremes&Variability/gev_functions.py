@@ -78,7 +78,8 @@ def fit_return_levels(data,years,N_boot=None,alpha=0.05):
         quant = alpha / 2, 1-alpha/2
         quantiles = np.quantile(levels,quant,axis=0)
 
-        print('Ranges with alpha=%.3f :' % alpha)
+        print('')
+        print('Ranges with alpha = %.3f :' % alpha)
         print('Location: [%.2f , %.2f]'  % tuple(np.quantile(locs,quant).tolist()))
         print('Scale: [%.2f , %.2f]'  % tuple(np.quantile(scales,quant).tolist()))
         print('Shape: [%.2f , %.2f]'  % tuple(np.quantile(shapes,quant).tolist()))
