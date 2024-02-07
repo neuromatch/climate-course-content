@@ -75,6 +75,7 @@ runs:
         echo "/usr/bin/g++-9" >> $GITHUB_PATH
         git clone https://github.com/yrobink/SDFC-python.git
         cd SDFC-python
+        pip install pybind11
         python setup.py install
         pip show SDFC
         cd ..
