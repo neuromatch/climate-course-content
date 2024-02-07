@@ -64,10 +64,13 @@ runs:
         sudo apt update
         sudo apt install libgeos++-dev libgeos3.10.2 libgeos-c1v5 libgeos-dev libgeos-doc
         sudo apt-get install proj-bin libproj-dev proj-data
+      shell: bash -l {0}
+      
 
     - name: Install HDF5 (dep for netCDF4)
       run: |
         sudo apt-get install libhdf5-serial-dev netcdf-bin libnetcdf-dev
+      shell: bash -l {0}
 
     - name: Build/Install esmf/esmpy/xesmf
       run: |
@@ -84,6 +87,7 @@ runs:
         python3 -m pip install .
         cd ../../../
         pip install git+https://github.com/pangeo-data/xesmf.git  
+      shell: bash -l {0}
 
     # Necessary for SDFC to work
     - name: Install eigen/SDFC
