@@ -10,21 +10,31 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Set up Python (conda)
-      uses: conda-incubator/setup-miniconda@v2
-      with:
-        miniforge-variant: Mambaforge
-        miniforge-version: latest
-        activate-environment: climatematch
-        use-mamba: true
+    # - name: Set up Python (conda)
+    #   uses: conda-incubator/setup-miniconda@v2
+    #   with:
+    #     miniforge-variant: Mambaforge
+    #     miniforge-version: latest
+    #     activate-environment: climatematch
+    #     use-mamba: true
 
-    - uses: actions/cache@v3
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        path: /usr/share/miniconda3/envs/climatematch
-        # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]'
-        # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
-        key: ${{ format('linux-64-conda-environment.yml-{0}', hashFiles('environment.yml') )}}
-      id: cache
+        python-version: 3.9
+
+    - name: Set up virtual environment
+      run: |
+        python -m venv env
+        source ./env/bin/activate
+
+    # - uses: actions/cache@v3
+    #   with:
+    #     path: /usr/share/miniconda3/envs/climatematch
+    #     # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]'
+    #     # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
+    #     key: ${{ format('linux-64-conda-environment.yml-{0}', hashFiles('environment.yml') )}}
+    #   id: cache
 
     - name: Get commit message
       run: |
@@ -47,8 +57,8 @@ runs:
     - name: Update environment
       if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == 'true'}}
       run: |
-        mamba env update -n climatematch -f environment.yml
+        # mamba env update -n climatematch -f environment.yml
         pip install -r ci/requirements.txt
-        # pip install -r requirements.txt
+        pip install -r requirements.txt
         pip install jupyter-book==0.10.2 ghp-import jupyter-client==6.1.12 cftime
       shell: bash -l {0}
