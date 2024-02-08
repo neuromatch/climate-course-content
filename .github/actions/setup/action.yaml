@@ -80,7 +80,8 @@ runs:
         cd esmf-8.6.0
         export ESMF_DIR=$(pwd)
         make
-        export ESMFMKFILE=$(pwd)/esmf.mk
+        find . -name 'esmf.mk'
+        export ESMFMKFILE=$(find . -name 'esmf.mk')
         echo $ESMFMKFILE
         sudo apt install mpich
         pip install mpi4py nose 
