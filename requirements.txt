@@ -1,6 +1,6 @@
 requests
 numpy
-scipy
+scipy<=1.11.4
 matplotlib==3.5.1
 scikit-learn
 ipywidgets
@@ -11,7 +11,8 @@ shapely==1.8.5
 cartopy
 pythia_datasets
 pooch
-climlab==0.8.2
+# climlab==0.8.2
+climlab
 cftime
 geopandas
 intake
@@ -37,8 +38,8 @@ openpyxl
 wordcloud
 xarray-datatree
 gcsfs
-dicelib
 # datatree # Should probably remove this, 12 year old repo, uses outdated imports for string.io
 nltk
 afinn
 mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip
+dicelib @ https://github.com/mptouzel/PyDICE/archive/master.zip
