@@ -37,6 +37,7 @@ openpyxl
 wordcloud
 xarray-datatree
 gcsfs
+dicelib
 # datatree # Should probably remove this, 12 year old repo, uses outdated imports for string.io
 nltk
 afinn
