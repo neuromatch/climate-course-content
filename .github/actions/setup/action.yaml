@@ -118,5 +118,14 @@ runs:
         pip install -r requirements.txt
         pip install requests aiohttp
         pip install jupyter-book==0.10.2 ghp-import jupyter-client==6.1.12 cftime pyleoclim importlib-metadata==4.13.0
-        pip install climlab==0.8.2
+        # pip install climlab==0.8.2
+      shell: bash -l {0}
+
+    - name: Build climlab from source
+      run: |
+        git clone https://github.com/climlab/climlab.git
+        cd climlab
+        pip install . --no-deps -vv
+        pip show climlab
+        cd ..
       shell: bash -l {0}
