@@ -10,21 +10,32 @@ inputs:
 runs:
   using: composite
   steps:
-    - name: Set up Python (conda)
-      uses: conda-incubator/setup-miniconda@v2
-      with:
-        miniforge-variant: Mambaforge
-        miniforge-version: latest
-        activate-environment: climatematch
-        use-mamba: true
+    # - name: Set up Python (conda)
+    #   uses: conda-incubator/setup-miniconda@v2
+    #   with:
+    #     miniforge-variant: Mambaforge
+    #     miniforge-version: latest
+    #     activate-environment: climatematch
+    #     use-mamba: true
 
-    - uses: actions/cache@v3
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
-        path: /usr/share/miniconda3/envs/climatematch
-        # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]'
-        # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
-        key: ${{ format('linux-64-conda-environment.yml-{0}', hashFiles('environment.yml') )}}
-      id: cache
+        python-version: 3.9
+
+    - name: Set up virtual environment
+      run: |
+        python -m venv env
+        source ./env/bin/activate
+      shell: bash -l {0}
+
+    # - uses: actions/cache@v3
+    #   with:
+    #     path: /usr/share/miniconda3/envs/climatematch
+    #     # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]'
+    #     # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
+    #     key: ${{ format('linux-64-conda-environment.yml-{0}', hashFiles('environment.yml') )}}
+    #   id: cache
 
     - name: Get commit message
       run: |
@@ -44,11 +55,82 @@ runs:
         echo ci/ >> .gitignore
       shell: bash -l {0}
 
+    - name: Install numpy
+      run: |
+        pip install numpy
+      shell: bash -l {0}
+
+    - name: Install GEOS/Proj (dep for cartopy)
+      run: |
+        sudo apt update
+        sudo apt install libgeos++-dev libgeos3.10.2 libgeos-c1v5 libgeos-dev libgeos-doc
+        sudo apt-get install proj-bin libproj-dev proj-data
+      shell: bash -l {0}
+      
+
+    - name: Install HDF5 (dep for netCDF4)
+      run: |
+        sudo apt-get install libhdf5-serial-dev netcdf-bin libnetcdf-dev
+      shell: bash -l {0}
+
+    - name: Build/Install esmf/esmpy/xesmf
+      run: |
+        wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.6.0.zip
+        unzip v8.6.0.zip
+        cd esmf-8.6.0
+        export ESMF_DIR=$(pwd)
+        make
+        # Append ENV VAR to GH ENV so that vars can persist between runs
+        ESMFMKFILE=$(find $(pwd) -name 'esmf.mk')
+        echo "ESMFMKFILE=$ESMFMKFILE" >> $GITHUB_ENV
+        echo $ESMFMKFILE
+        sudo apt install mpich
+        pip install mpi4py nose 
+        # cd src/addon/ESMPy
+        cd src/addon/esmpy
+        pip install -U numpy
+        python3 -m pip install .
+        cd ../../../
+        pip install git+https://github.com/pangeo-data/xesmf.git  
+      shell: bash -l {0}
+
+    # Necessary for SDFC to work
+    - name: Install eigen/SDFC
+      run: |
+        sudo apt-get install -y libeigen3-dev
+        echo "CC=gcc-9" >> $GITHUB_ENV
+        echo "CXX=g++-9" >> $GITHUB_ENV
+        # echo "/usr/bin/gcc-9" >> $GITHUB_PATH
+        # echo "/usr/bin/g++-9" >> $GITHUB_PATH
+        pip install pybind11
+        git clone https://github.com/neuromatch/SDFC-python.git
+        cd SDFC-python
+        python setup.py install
+        pip show SDFC
+        cd ..
+      shell: bash -l {0}
+
     - name: Update environment
       if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == 'true'}}
       run: |
-        mamba env update -n climatematch -f environment.yml
+        # mamba env update -n climatematch -f environment.yml
         pip install -r ci/requirements.txt
-        # pip install -r requirements.txt
-        pip install jupyter-book==0.10.2 ghp-import jupyter-client==6.1.12 cftime
+        pip install -r requirements.txt
+        pip install requests aiohttp
+        pip install jupyter-book==0.10.2 ghp-import jupyter-client==6.1.12 cftime pyleoclim importlib-metadata==4.13.0
+        # pip install climlab==0.8.2
+      shell: bash -l {0}
+
+    - name: Build climlab from source
+      run: |
+        git clone https://github.com/climlab/climlab.git
+        cd climlab
+        pip install . --no-deps -vv
+        pip show climlab
+        cd ..
+        git clone https://github.com/climlab/climlab-rrtmg.git
+        cd climlab-rrtmg
+        pip install . --no-deps -vv
+        pip show climlab-rrtmg
+        cd ..
       shell: bash -l {0}
