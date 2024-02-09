@@ -11,8 +11,8 @@ shapely==1.8.5
 cartopy
 pythia_datasets
 pooch
-# climlab==0.8.2
-climlab # try to run this with no cache
+climlab==0.8.2
+# climlab # try to run this with no cache
 climlab-rrtmg
 cftime
 geopandas
