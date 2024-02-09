@@ -80,7 +80,9 @@ runs:
         cd esmf-8.6.0
         export ESMF_DIR=$(pwd)
         make
-        export ESMFMKFILE=$(find /home/runner/work/climate-course-content/climate-course-content/esmf-8.6.0/ -name 'esmf.mk')
+        # Append ENV VAR to GH ENV so that vars can persist between runs
+        ESMFMKFILE=$(find $(pwd) -name 'esmf.mk')
+        echo "ESMFMKFILE=$ESMFMKFILE" >> $GITHUB_ENV
         echo $ESMFMKFILE
         sudo apt install mpich
         pip install mpi4py nose 
