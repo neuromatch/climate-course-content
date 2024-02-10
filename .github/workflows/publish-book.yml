@@ -240,6 +240,20 @@ jobs:
           cd ..
         shell: bash -l {0}
 
+      - name: Build climlab from source
+        run: |
+          git clone https://github.com/climlab/climlab.git
+          cd climlab
+          pip install . --no-deps -vv
+          pip show climlab
+          cd ..
+          git clone https://github.com/climlab/climlab-rrtmg.git
+          cd climlab-rrtmg
+          pip install . --no-deps -vv
+          pip show climlab-rrtmg
+          cd ..
+        shell: bash -l {0}
+
       # - name: Copy tutorials from precourse repo
       #   if: "!contains(env.COMMIT_MESSAGE, 'skip precourse')"
       #   run: |
