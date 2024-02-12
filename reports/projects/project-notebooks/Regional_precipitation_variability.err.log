@@ -3,7 +3,7 @@ Traceback (most recent call last):
     msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
   File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/jupyter_core/utils/__init__.py", line 198, in ensure_async
     result = await obj
-  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/jupyter_client/channels.py", line 230, in get_msg
+  File "/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/jupyter_client/asynchronous/channels.py", line 48, in get_msg
     raise Empty
 _queue.Empty
 
