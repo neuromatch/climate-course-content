@@ -24,7 +24,7 @@ What is Project Pythia? Check out the fantastic [~5min video](https://bit.ly/42P
 
 Below are the lessons you need to review. **To get started with a tutorial just click on the on the rocket icon at the top right of each tutorial notebook and then click the 'Binder' button that appears ro launch the tutorial (see image below and more instructoins [here](https://foundations.projectpythia.org/preamble/how-to-use.html#interacting-with-jupyter-notebooks-in-the-cloud-via-binder))!** If you’re from a Matlab background, you may find reviewing [this cheatsheet](https://cheatsheets.quantecon.org/) helpful before you get started.
 
-![Launch Binder](../images/binder.png)
+![Launch Binder](binder.png)
 
 ### Preamble and Foundational Skills (~3 hours)
 
