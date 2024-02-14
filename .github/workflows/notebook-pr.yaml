@@ -38,7 +38,7 @@ jobs:
           run_all: 'true'
           # exec_flag: '--check-only'
           exec_flag: '--execute'
-          exercice-continue-on-error: 'true'
+          exercice-continue-on-error: true
 
       # - name: Add PR comment
       #   if: ${{ env.NBS != '' }}
