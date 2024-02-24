@@ -88,7 +88,7 @@ runs:
         python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 
-    - name: verify exercices
+    - name: verify exercises
       # continue-on-error: ${{ inputs.exercise-continue-on-error }}
       continue-on-error: ${{ true }}
       if: ${{ env.NBS != '' }}
