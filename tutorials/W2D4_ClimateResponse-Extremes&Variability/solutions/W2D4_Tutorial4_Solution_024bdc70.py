@@ -2,7 +2,7 @@
 # setup plots
 fig, ax = plt.subplots()
 
-# get empirical return levels
+# get empirical return levels and plot them
 _ = empirical_return_level(precipitation).plot(ax=ax, marker=".", linestyle="None")
 
 # create vector of years

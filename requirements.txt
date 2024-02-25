@@ -1,7 +1,8 @@
 requests
 numpy
 scipy<=1.11.4
-matplotlib==3.5.1
+#matplotlib==3.5.1
+matplotlib
 scikit-learn
 ipywidgets
 decorator==5.0.9

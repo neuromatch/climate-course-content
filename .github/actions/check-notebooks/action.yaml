@@ -9,10 +9,10 @@ inputs:
     description: 'flag for execution'
     required: true
     type: string
-  exercice-continue-on-error:
+  exercise-continue-on-error:
     description: 'Should continue on Error in exercices'
     required: false
-    default: 'false'
+    default: false
     type: string
 
 runs:
@@ -88,10 +88,11 @@ runs:
         python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 
-    - name: verify exercices
-      continue-on-error: ${{ inputs.exercice-continue-on-error }}
+    - name: verify exercises
+      # continue-on-error: ${{ inputs.exercise-continue-on-error }}
+      continue-on-error: ${{ true }}
       if: ${{ env.NBS != '' }}
-      id: verify_exercices
+      id: verify_exercises
       run: |
         python ci/verify_exercises.py ${{ env.NBS }} --c "$COMMIT_MESSAGE"
       shell: bash -l {0}

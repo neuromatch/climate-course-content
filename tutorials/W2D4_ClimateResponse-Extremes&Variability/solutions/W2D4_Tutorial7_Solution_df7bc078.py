@@ -9,4 +9,4 @@ aics = pd.Series(
     ],
 )
 
-aics
+aics.sort_values()
