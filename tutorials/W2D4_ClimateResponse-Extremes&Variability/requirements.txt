@@ -1,2 +1,1 @@
-mystatsfunctions https://github.com/njleach/mystatsfunctions/archive/main.zip
-SDFC @ git+https://github.com/yrobink/SDFC.git#subdirectory=python
+
