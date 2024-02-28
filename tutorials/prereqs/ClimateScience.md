@@ -1,6 +1,6 @@
 # Prerequisites and preparatory materials for Computational Tools for Climate Science
 
-Welcome to [Climatematch Academy](https://academy.climatematch.io/about/mission)! We are very excited to bring *Computational Tools for Climate Sceince* to such a wide and varied audience. We want to make sure every student is able to follow and enjoy the materials presented during the course. In order to get the most out of the materials we offer, we expect our students to know the basics of programming in Python, as well core concepts in math and science. Below 👇 we provide more details for each.
+Welcome to [Climatematch Academy](https://neuromatch.io/climate-science)! We are very excited to bring *Computational Tools for Climate Sceince* to such a wide and varied audience. We want to make sure every student is able to follow and enjoy the materials presented during the course. In order to get the most out of the materials we offer, we expect our students to know the basics of programming in Python, as well core concepts in math and science. Below 👇 we provide more details for each.
 
 ## Contents
 
