@@ -6,7 +6,7 @@ Course materials: [https://comptools.climatematch.io/](https://comptools.climate
 
 Portal: [https://portal.neuromatchacademy.org/](https://portal.neuromatchacademy.org/)
 
-Website: [https://academy.climatematch.io/](https://academy.climatematch.io/)
+Website: [https://neuromatch.io/computational-tools-for-climate-science-course/](https://neuromatch.io/computational-tools-for-climate-science-course/)
 
 Crowdcast: 
 
