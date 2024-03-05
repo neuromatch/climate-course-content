@@ -1553,11 +1553,6 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matplotlib is building the font cache; this may take a moment.
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1723,37 +1718,6 @@ title="Print to PDF"
     </div>
     </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KeysView(DataTree(&#39;None&#39;, parent=None)
 └── DataTree(&#39;CESM2&#39;)
-    ├── DataTree(&#39;historical&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 192,
-    │                            x: 288, nbnd: 2)
-    │       Coordinates:
-    │         * y               (y) float64 2kB -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
-    │         * x               (x) float64 2kB 0.0 1.25 2.5 3.75 ... 356.2 357.5 358.8
-    │         * time            (time) object 16kB 1850-01-15 12:00:00 ... 2014-12-15 12:...
-    │           lat_bounds      (y, nbnd, x) float64 885kB dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-    │           lon_bounds      (x, nbnd, y) float64 885kB dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-    │           time_bounds     (time, nbnd) object 32kB dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
-    │         * nbnd            (nbnd) int64 16B 0 1
-    │           lon             (x, y) float64 442kB 360.0 360.0 360.0 ... 358.8 358.8 358.8
-    │           lat             (x, y) float64 442kB -90.0 -89.06 -88.12 ... 89.06 90.0
-    │         * member_id       (member_id) object 8B &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 8B nan
-    │       Data variables:
-    │           tas             (member_id, dcpp_init_year, time, y, x) float32 438MB dask.array&lt;chunksize=(1, 1, 600, 192, 288), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      CMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             674885.0
-    │           branch_time_in_parent:            182500.0
-    │           case_id:                          18
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tas
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
-    │           intake_esm_attrs:version:         20190308
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/historical
     ├── DataTree(&#39;ssp245&#39;)
     │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
     │                            x: 288, nbnd: 2)
@@ -1762,8 +1726,8 @@ title="Print to PDF"
     │         * x               (x) float64 2kB 0.0 1.25 2.5 3.75 ... 356.2 357.5 358.8
     │         * time            (time) object 8kB 2015-01-15 12:00:00 ... 2100-12-15 12:0...
     │           lat_bounds      (y, nbnd, x) float64 885kB dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-    │           lon_bounds      (x, nbnd, y) float64 885kB dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
     │           time_bounds     (time, nbnd) object 17kB dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
+    │           lon_bounds      (x, nbnd, y) float64 885kB dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
     │         * nbnd            (nbnd) int64 16B 0 1
     │           lon             (x, y) float64 442kB 360.0 360.0 360.0 ... 358.8 358.8 358.8
     │           lat             (x, y) float64 442kB -90.0 -89.06 -88.12 ... 89.06 90.0
@@ -1785,6 +1749,37 @@ title="Print to PDF"
     │           intake_esm_attrs:version:         20200528
     │           intake_esm_attrs:_data_format_:   zarr
     │           intake_esm_dataset_key:           CESM2/ssp245
+    ├── DataTree(&#39;ssp126&#39;)
+    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
+    │                            x: 288, nbnd: 2)
+    │       Coordinates:
+    │         * y               (y) float64 2kB -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
+    │         * x               (x) float64 2kB 0.0 1.25 2.5 3.75 ... 356.2 357.5 358.8
+    │         * time            (time) object 8kB 2015-01-15 12:00:00 ... 2100-12-15 12:0...
+    │           lat_bounds      (y, nbnd, x) float64 885kB dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
+    │           time_bounds     (time, nbnd) object 17kB dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
+    │           lon_bounds      (x, nbnd, y) float64 885kB dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
+    │         * nbnd            (nbnd) int64 16B 0 1
+    │           lon             (x, y) float64 442kB 360.0 360.0 360.0 ... 358.8 358.8 358.8
+    │           lat             (x, y) float64 442kB -90.0 -89.06 -88.12 ... 89.06 90.0
+    │         * member_id       (member_id) object 8B &#39;r4i1p1f1&#39;
+    │         * dcpp_init_year  (dcpp_init_year) float64 8B nan
+    │       Data variables:
+    │           tas             (member_id, dcpp_init_year, time, y, x) float32 228MB dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
+    │       Attributes: (12/61)
+    │           Conventions:                      CF-1.7 CMIP-6.2
+    │           activity_id:                      ScenarioMIP
+    │           branch_method:                    standard
+    │           branch_time_in_child:             735110.0
+    │           branch_time_in_parent:            735110.0
+    │           case_id:                          1729
+    │           ...                               ...
+    │           intake_esm_attrs:variable_id:     tas
+    │           intake_esm_attrs:grid_label:      gn
+    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
+    │           intake_esm_attrs:version:         20200528
+    │           intake_esm_attrs:_data_format_:   zarr
+    │           intake_esm_dataset_key:           CESM2/ssp126
     ├── DataTree(&#39;ssp585&#39;)
     │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
     │                            x: 288, nbnd: 2)
@@ -1793,8 +1788,8 @@ title="Print to PDF"
     │         * x               (x) float64 2kB 0.0 1.25 2.5 3.75 ... 356.2 357.5 358.8
     │         * time            (time) object 8kB 2015-01-15 12:00:00 ... 2100-12-15 12:0...
     │           lat_bounds      (y, nbnd, x) float64 885kB dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
-    │           lon_bounds      (x, nbnd, y) float64 885kB dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
     │           time_bounds     (time, nbnd) object 17kB dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
+    │           lon_bounds      (x, nbnd, y) float64 885kB dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
     │         * nbnd            (nbnd) int64 16B 0 1
     │           lon             (x, y) float64 442kB 360.0 360.0 360.0 ... 358.8 358.8 358.8
     │           lat             (x, y) float64 442kB -90.0 -89.06 -88.12 ... 89.06 90.0
@@ -1816,37 +1811,37 @@ title="Print to PDF"
     │           intake_esm_attrs:version:         20200528
     │           intake_esm_attrs:_data_format_:   zarr
     │           intake_esm_dataset_key:           CESM2/ssp585
-    └── DataTree(&#39;ssp126&#39;)
-            Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 192,
+    └── DataTree(&#39;historical&#39;)
+            Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 192,
                                  x: 288, nbnd: 2)
             Coordinates:
               * y               (y) float64 2kB -90.0 -89.06 -88.12 ... 88.12 89.06 90.0
               * x               (x) float64 2kB 0.0 1.25 2.5 3.75 ... 356.2 357.5 358.8
-              * time            (time) object 8kB 2015-01-15 12:00:00 ... 2100-12-15 12:0...
+              * time            (time) object 16kB 1850-01-15 12:00:00 ... 2014-12-15 12:...
                 lat_bounds      (y, nbnd, x) float64 885kB dask.array&lt;chunksize=(192, 2, 288), meta=np.ndarray&gt;
+                time_bounds     (time, nbnd) object 32kB dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
                 lon_bounds      (x, nbnd, y) float64 885kB dask.array&lt;chunksize=(288, 2, 192), meta=np.ndarray&gt;
-                time_bounds     (time, nbnd) object 17kB dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
               * nbnd            (nbnd) int64 16B 0 1
                 lon             (x, y) float64 442kB 360.0 360.0 360.0 ... 358.8 358.8 358.8
                 lat             (x, y) float64 442kB -90.0 -89.06 -88.12 ... 89.06 90.0
               * member_id       (member_id) object 8B &#39;r4i1p1f1&#39;
               * dcpp_init_year  (dcpp_init_year) float64 8B nan
             Data variables:
-                tas             (member_id, dcpp_init_year, time, y, x) float32 228MB dask.array&lt;chunksize=(1, 1, 408, 192, 288), meta=np.ndarray&gt;
+                tas             (member_id, dcpp_init_year, time, y, x) float32 438MB dask.array&lt;chunksize=(1, 1, 600, 192, 288), meta=np.ndarray&gt;
             Attributes: (12/61)
                 Conventions:                      CF-1.7 CMIP-6.2
-                activity_id:                      ScenarioMIP
+                activity_id:                      CMIP
                 branch_method:                    standard
-                branch_time_in_child:             735110.0
-                branch_time_in_parent:            735110.0
-                case_id:                          1729
+                branch_time_in_child:             674885.0
+                branch_time_in_parent:            182500.0
+                case_id:                          18
                 ...                               ...
                 intake_esm_attrs:variable_id:     tas
                 intake_esm_attrs:grid_label:      gn
-                intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-                intake_esm_attrs:version:         20200528
+                intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
+                intake_esm_attrs:version:         20190308
                 intake_esm_attrs:_data_format_:   zarr
-                intake_esm_dataset_key:           CESM2/ssp126)
+                intake_esm_dataset_key:           CESM2/historical)
 </pre></div>
 </div>
 </div>
@@ -1897,7 +1892,7 @@ title="Print to PDF"
 </div><div class="output text_html">
     <div>
       <progress value='4' class='' max='4' style='width:300px; height:20px; vertical-align: middle;'></progress>
-      100.00% [4/4 00:00&lt;00:00]
+      100.00% [4/4 00:01&lt;00:00]
     </div>
     </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
 	&#39;source_id/experiment_id&#39;
@@ -1926,74 +1921,6 @@ title="Print to PDF"
     </div>
     </div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KeysView(DataTree(&#39;None&#39;, parent=None)
 └── DataTree(&#39;CESM2&#39;)
-    ├── DataTree(&#39;ssp245&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
-    │                            x: 320, vertex: 4, bnds: 2)
-    │       Coordinates: (12/13)
-    │           lat             (y, x) float64 983kB dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │           lon             (y, x) float64 983kB dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │         * time            (time) object 8kB 2015-01-15 13:00:00 ... 2100-12-15 12:0...
-    │           lon_verticies   (y, x, vertex) float32 2MB dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           lat_verticies   (y, x, vertex) float32 2MB dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           time_bounds     (time, bnds) object 17kB dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
-    │           ...              ...
-    │         * x               (x) int64 3kB 0 1 2 3 4 5 6 ... 313 314 315 316 317 318 319
-    │           lon_bounds      (bnds, y, x) float32 983kB dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │           lat_bounds      (bnds, y, x) float32 983kB dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │         * member_id       (member_id) object 8B &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 8B nan
-    │           areacello       (member_id, dcpp_init_year, y, x) float32 492kB dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-    │       Dimensions without coordinates: vertex, bnds
-    │       Data variables:
-    │           tos             (member_id, dcpp_init_year, time, y, x) float32 507MB dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      ScenarioMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             735110.0
-    │           branch_time_in_parent:            735110.0
-    │           case_id:                          1732
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tos
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
-    │           intake_esm_attrs:version:         20200528
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/ssp245
-    ├── DataTree(&#39;historical&#39;)
-    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 384,
-    │                            x: 320, vertex: 4, bnds: 2)
-    │       Coordinates: (12/13)
-    │           lat             (y, x) float64 983kB dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │           lon             (y, x) float64 983kB dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
-    │         * time            (time) object 16kB 1850-01-15 12:59:59.999997 ... 2014-12...
-    │           lon_verticies   (y, x, vertex) float32 2MB dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           lat_verticies   (y, x, vertex) float32 2MB dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
-    │           time_bounds     (time, bnds) object 32kB dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
-    │           ...              ...
-    │         * x               (x) int64 3kB 0 1 2 3 4 5 6 ... 313 314 315 316 317 318 319
-    │           lon_bounds      (bnds, y, x) float32 983kB dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │           lat_bounds      (bnds, y, x) float32 983kB dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
-    │         * member_id       (member_id) object 8B &#39;r4i1p1f1&#39;
-    │         * dcpp_init_year  (dcpp_init_year) float64 8B nan
-    │           areacello       (member_id, dcpp_init_year, y, x) float32 492kB dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
-    │       Dimensions without coordinates: vertex, bnds
-    │       Data variables:
-    │           tos             (member_id, dcpp_init_year, time, y, x) float32 973MB dask.array&lt;chunksize=(1, 1, 403, 384, 320), meta=np.ndarray&gt;
-    │       Attributes: (12/61)
-    │           Conventions:                      CF-1.7 CMIP-6.2
-    │           activity_id:                      CMIP
-    │           branch_method:                    standard
-    │           branch_time_in_child:             674885.0
-    │           branch_time_in_parent:            182500.0
-    │           case_id:                          18
-    │           ...                               ...
-    │           intake_esm_attrs:variable_id:     tos
-    │           intake_esm_attrs:grid_label:      gn
-    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
-    │           intake_esm_attrs:version:         20190308
-    │           intake_esm_attrs:_data_format_:   zarr
-    │           intake_esm_dataset_key:           CESM2/historical
     ├── DataTree(&#39;ssp126&#39;)
     │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
     │                            x: 320, vertex: 4, bnds: 2)
@@ -2028,6 +1955,74 @@ title="Print to PDF"
     │           intake_esm_attrs:version:         20200528
     │           intake_esm_attrs:_data_format_:   zarr
     │           intake_esm_dataset_key:           CESM2/ssp126
+    ├── DataTree(&#39;historical&#39;)
+    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1980, y: 384,
+    │                            x: 320, vertex: 4, bnds: 2)
+    │       Coordinates: (12/13)
+    │           lat             (y, x) float64 983kB dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+    │           lon             (y, x) float64 983kB dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+    │         * time            (time) object 16kB 1850-01-15 12:59:59.999997 ... 2014-12...
+    │           lon_verticies   (y, x, vertex) float32 2MB dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
+    │           lat_verticies   (y, x, vertex) float32 2MB dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
+    │           time_bounds     (time, bnds) object 32kB dask.array&lt;chunksize=(1980, 2), meta=np.ndarray&gt;
+    │           ...              ...
+    │         * x               (x) int64 3kB 0 1 2 3 4 5 6 ... 313 314 315 316 317 318 319
+    │           lon_bounds      (bnds, y, x) float32 983kB dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
+    │           lat_bounds      (bnds, y, x) float32 983kB dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
+    │         * member_id       (member_id) object 8B &#39;r4i1p1f1&#39;
+    │         * dcpp_init_year  (dcpp_init_year) float64 8B nan
+    │           areacello       (member_id, dcpp_init_year, y, x) float32 492kB dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
+    │       Dimensions without coordinates: vertex, bnds
+    │       Data variables:
+    │           tos             (member_id, dcpp_init_year, time, y, x) float32 973MB dask.array&lt;chunksize=(1, 1, 403, 384, 320), meta=np.ndarray&gt;
+    │       Attributes: (12/61)
+    │           Conventions:                      CF-1.7 CMIP-6.2
+    │           activity_id:                      CMIP
+    │           branch_method:                    standard
+    │           branch_time_in_child:             674885.0
+    │           branch_time_in_parent:            182500.0
+    │           case_id:                          18
+    │           ...                               ...
+    │           intake_esm_attrs:variable_id:     tos
+    │           intake_esm_attrs:grid_label:      gn
+    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/CMIP/NCAR/CESM2/histor...
+    │           intake_esm_attrs:version:         20190308
+    │           intake_esm_attrs:_data_format_:   zarr
+    │           intake_esm_dataset_key:           CESM2/historical
+    ├── DataTree(&#39;ssp245&#39;)
+    │       Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
+    │                            x: 320, vertex: 4, bnds: 2)
+    │       Coordinates: (12/13)
+    │           lat             (y, x) float64 983kB dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+    │           lon             (y, x) float64 983kB dask.array&lt;chunksize=(384, 320), meta=np.ndarray&gt;
+    │         * time            (time) object 8kB 2015-01-15 13:00:00 ... 2100-12-15 12:0...
+    │           lon_verticies   (y, x, vertex) float32 2MB dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
+    │           lat_verticies   (y, x, vertex) float32 2MB dask.array&lt;chunksize=(384, 320, 4), meta=np.ndarray&gt;
+    │           time_bounds     (time, bnds) object 17kB dask.array&lt;chunksize=(1032, 2), meta=np.ndarray&gt;
+    │           ...              ...
+    │         * x               (x) int64 3kB 0 1 2 3 4 5 6 ... 313 314 315 316 317 318 319
+    │           lon_bounds      (bnds, y, x) float32 983kB dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
+    │           lat_bounds      (bnds, y, x) float32 983kB dask.array&lt;chunksize=(1, 384, 320), meta=np.ndarray&gt;
+    │         * member_id       (member_id) object 8B &#39;r4i1p1f1&#39;
+    │         * dcpp_init_year  (dcpp_init_year) float64 8B nan
+    │           areacello       (member_id, dcpp_init_year, y, x) float32 492kB dask.array&lt;chunksize=(1, 1, 384, 320), meta=np.ndarray&gt;
+    │       Dimensions without coordinates: vertex, bnds
+    │       Data variables:
+    │           tos             (member_id, dcpp_init_year, time, y, x) float32 507MB dask.array&lt;chunksize=(1, 1, 199, 384, 320), meta=np.ndarray&gt;
+    │       Attributes: (12/61)
+    │           Conventions:                      CF-1.7 CMIP-6.2
+    │           activity_id:                      ScenarioMIP
+    │           branch_method:                    standard
+    │           branch_time_in_child:             735110.0
+    │           branch_time_in_parent:            735110.0
+    │           case_id:                          1732
+    │           ...                               ...
+    │           intake_esm_attrs:variable_id:     tos
+    │           intake_esm_attrs:grid_label:      gn
+    │           intake_esm_attrs:zstore:          gs://cmip6/CMIP6/ScenarioMIP/NCAR/CESM2...
+    │           intake_esm_attrs:version:         20200528
+    │           intake_esm_attrs:_data_format_:   zarr
+    │           intake_esm_dataset_key:           CESM2/ssp245
     └── DataTree(&#39;ssp585&#39;)
             Dimensions:         (member_id: 1, dcpp_init_year: 1, time: 1032, y: 384,
                                  x: 320, vertex: 4, bnds: 2)
@@ -2180,7 +2175,7 @@ Use this value as the &#39;known_hash&#39; argument of &#39;pooch.retrieve&#39; 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.geocollection.GeoQuadMesh at 0x7fb8152949d0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;cartopy.mpl.geocollection.GeoQuadMesh at 0x7f2a72a25130&gt;
 </pre></div>
 </div>
 <img alt="../../_images/c85b27e93b33b6d12df4605b285ac49e412da57d83538cd7883c5327b2392574.png" src="../../_images/c85b27e93b33b6d12df4605b285ac49e412da57d83538cd7883c5327b2392574.png" />
