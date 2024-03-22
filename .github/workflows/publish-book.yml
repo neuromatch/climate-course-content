@@ -115,22 +115,27 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           persist-credentials: false
           fetch-depth: 0
           ref: ${{ github.head_ref }}
 
-      - name: Get commit message
-        run: |
-          readonly local msg=$(git log -1 --pretty=format:"%s")
-          echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Setup
+        uses: ./.github/actions/setup
         with:
-          python-version: 3.9
+          force_env_update: 'false'
+#
+      # - name: Get commit message
+      #   run: |
+      #     readonly local msg=$(git log -1 --pretty=format:"%s")
+      #     echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
 
+      # - name: Set up Python
+      #   uses: actions/setup-python@v2
+      #   with:
+      #     python-version: 3.9
+#
       # - name: Setup micromamba
       #   uses: mamba-org/setup-micromamba@v1
       #   with:
@@ -161,85 +166,99 @@ jobs:
       # - name: Install dependencies
       #   run: |
       #     sudo apt-get install -y libgeos-dev libproj-dev
-      
-      - name: Set up virtual environment
-        run: |
-          python -m venv env
-          source ./env/bin/activate
-          
+# 
+      # - name: Set up virtual environment
+      #   run: |
+      #     python -m venv env
+      #     source ./env/bin/activate
+#          
         # BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
         # TODO: Change the CI to be generic, keep existing courses for now
-      - name: Install CI tools
-        run: |
-          BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
-          wget https://github.com/neuromatch/nmaci/archive/refs/heads/$BRANCH.tar.gz
-          # BRANCH="climate"
-          # wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
-          tar -xzf $BRANCH.tar.gz
-          pip install -r nmaci-$BRANCH/requirements.txt
-          mv nmaci-$BRANCH/scripts/ ci/
-          rm -r nmaci-$BRANCH
-          rm -r $BRANCH.tar.gz
-          echo ci/ >> .gitignore
+      # - name: Install CI tools
+      #   run: |
+      #     BRANCH=`python -c 'import os, re; m = re.search(r"nmaci:([\w-]+)", os.environ["COMMIT_MESSAGE"]); print("main" if m is None else m.group(1))'`
+      #     wget https://github.com/neuromatch/nmaci/archive/refs/heads/$BRANCH.tar.gz
+      #     # BRANCH="climate"
+      #     # wget https://github.com/NeuromatchAcademy/nmaci/archive/refs/heads/$BRANCH.tar.gz
+      #     tar -xzf $BRANCH.tar.gz
+      #     pip install -r nmaci-$BRANCH/requirements.txt
+      #     mv nmaci-$BRANCH/scripts/ ci/
+      #     rm -r nmaci-$BRANCH
+      #     rm -r $BRANCH.tar.gz
+      #     echo ci/ >> .gitignore
+#
+      # - name: Install numpy
+      #   run: |
+      #     pip install numpy
 
-      - name: Install numpy
-        run: |
-          pip install numpy
+      # - name: Install GEOS/Proj (dep for cartopy)
+      #   run: |
+      #     sudo apt update
+      #     sudo apt install libgeos++-dev libgeos3.10.2 libgeos-c1v5 libgeos-dev libgeos-doc
+      #     sudo apt-get install proj-bin libproj-dev proj-data
 
-      - name: Install GEOS/Proj (dep for cartopy)
-        run: |
-          sudo apt update
-          sudo apt install libgeos++-dev libgeos3.10.2 libgeos-c1v5 libgeos-dev libgeos-doc
-          sudo apt-get install proj-bin libproj-dev proj-data
+      # - name: Install HDF5 (dep for netCDF4)
+      #   run: |
+      #     sudo apt-get install libhdf5-serial-dev netcdf-bin libnetcdf-dev
 
-      - name: Install HDF5 (dep for netCDF4)
-        run: |
-          sudo apt-get install libhdf5-serial-dev netcdf-bin libnetcdf-dev
-
-      - name: Build/Install esmf/esmpy/xesmf
-        run: |
-          wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.6.0.zip
-          unzip v8.6.0.zip
-          cd esmf-8.6.0
-          export ESMF_DIR=$(pwd)
-          make
-          sudo apt install mpich
-          pip install mpi4py nose 
-          # cd src/addon/ESMPy
-          cd src/addon/esmpy
-          pip install -U numpy
-          python3 -m pip install .
-          cd ../../../
-          pip install git+https://github.com/pangeo-data/xesmf.git
-
-
+      # - name: Build/Install esmf/esmpy/xesmf
+      #   run: |
+      #     wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.6.0.zip
+      #     unzip v8.6.0.zip
+      #     cd esmf-8.6.0
+      #     export ESMF_DIR=$(pwd)
+      #     make
+      #     sudo apt install mpich
+      #     pip install mpi4py nose 
+      #     # cd src/addon/ESMPy
+      #     cd src/addon/esmpy
+      #     pip install -U numpy
+      #     python3 -m pip install .
+      #     cd ../../../
+      #     pip install git+https://github.com/pangeo-data/xesmf.git
+#
+#
       # NOTE: installed pyleoclim after reqs because it could not find numpy when building
       # NOTE: installed xesmf after reqs because it depends on esmpy
-      - name: Install dependencies
-        run: |
-          pip install --upgrade numpy
-          # pip install genericf2py
-          # pip install jinja2==2.10 markupsafe==1.1.1
-          pip install -r requirements.txt
-          # pip install --upgrade jinja2
-          pip install jupyter-book==0.14.0 ghp-import pyleoclim importlib-metadata==4.13.0
+      # - name: Install dependencies
+      #   run: |
+      #     pip install --upgrade numpy
+      #     # pip install genericf2py
+      #     # pip install jinja2==2.10 markupsafe==1.1.1
+      #     pip install -r requirements.txt
+      #     # pip install --upgrade jinja2
+      #     pip install jupyter-book==0.14.0 ghp-import pyleoclim importlib-metadata==4.13.0
+#
+      # # Necessary for SDFC to work
+      # - name: Install eigen/SDFC
+      #   run: |
+      #     sudo apt-get install -y libeigen3-dev
+      #     echo "CC=gcc-9" >> $GITHUB_ENV
+      #     echo "CXX=g++-9" >> $GITHUB_ENV
+      #     # echo "/usr/bin/gcc-9" >> $GITHUB_PATH
+      #     # echo "/usr/bin/g++-9" >> $GITHUB_PATH
+      #     pip install pybind11
+      #     git clone https://github.com/neuromatch/SDFC-python.git
+      #     cd SDFC-python
+      #     python setup.py install
+      #     pip show SDFC
+      #     cd ..
+      #   shell: bash -l {0}
 
-      # Necessary for SDFC to work
-      - name: Install eigen/SDFC
-        run: |
-          sudo apt-get install -y libeigen3-dev
-          echo "CC=gcc-9" >> $GITHUB_ENV
-          echo "CXX=g++-9" >> $GITHUB_ENV
-          # echo "/usr/bin/gcc-9" >> $GITHUB_PATH
-          # echo "/usr/bin/g++-9" >> $GITHUB_PATH
-          pip install pybind11
-          git clone https://github.com/neuromatch/SDFC-python.git
-          cd SDFC-python
-          python setup.py install
-          pip show SDFC
-          cd ..
-        shell: bash -l {0}
-
+      # - name: Build climlab from source
+      #   run: |
+      #     git clone https://github.com/climlab/climlab.git
+      #     cd climlab
+      #     pip install . --no-deps -vv
+      #     pip show climlab
+      #     cd ..
+      #     git clone https://github.com/climlab/climlab-rrtmg.git
+      #     cd climlab-rrtmg
+      #     pip install . --no-deps -vv
+      #     pip show climlab-rrtmg
+      #     cd ..
+      #   shell: bash -l {0}
+#
       # - name: Copy tutorials from precourse repo
       #   if: "!contains(env.COMMIT_MESSAGE, 'skip precourse')"
       #   run: |
