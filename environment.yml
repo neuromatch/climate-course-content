@@ -11,14 +11,14 @@ dependencies:
  - bottleneck
  - cartopy
  - cfgrib
-#  - ciso  # no build for osx-arm64
+ - ciso  # no build for osx-arm64
  - climlab
  - cmocean
  - dask-ml
  - datashader
  - descartes
  - earthaccess
-#  - ecco_v4_py  # no build for osx-arm64
+ - ecco_v4_py  # no build for osx-arm64
 #  - eigen # needed for SDFC
  - eofs
  - erddapy
