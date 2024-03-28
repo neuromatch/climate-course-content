@@ -1,47 +1,48 @@
-afinn
-boto3
+requests
+numpy
+scipy<=1.11.4
+#matplotlib==3.5.1
+matplotlib
+scikit-learn
+ipywidgets
+decorator==5.0.9
+# xarray==0.20.2
+xarray
+shapely==1.8.5
 cartopy
-cdsapi
-cftime
+pythia_datasets
+pooch
 # climlab==0.8.2
 # climlab # try to run this with no cache
 # climlab-rrtmg
-cmocean
-decorator==5.0.9
-dicelib @ https://github.com/mptouzel/PyDICE/archive/master.zip
-gcsfs
+cftime
 geopandas
-geoviews#
-gsw
-h5netcdf
 intake
 intake-esm
-ipywidgets
-# jinja2==2.11.3
-jinja2==3.0.3
-# markupsafe==1.1.1
-markupsafe
-#matplotlib==3.5.1
-matplotlib
-metpy
-mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip
-nc-time-axis
-netCDF4
-nltk
-numpy
-openpyxl
-pooch
-pythia_datasets
-pyworld3
-requests
-s3fs
-scikit-learn
-scipy<=1.11.4
 seaborn
-shapely==1.8.5
+netCDF4
+h5netcdf
+nc-time-axis
+geoviews
+boto3
+cmocean
 sphinx==3.5.4
-wordcloud
-# xarray==0.20.2
-xarray
-xarray-datatree
+jinja2==3.0.3
+markupsafe
+# jinja2==2.11.3
+# markupsafe==1.1.1
+gsw
+s3fs
+metpy
 xmip
+pyworld3
+openpyxl
+wordcloud
+xarray-datatree
+gcsfs
+# datatree # Should probably remove this, 12 year old repo, uses outdated imports for string.io
+nltk
+afinn
+mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip
+dicelib @ https://github.com/mptouzel/PyDICE/archive/master.zip
+cdsapi
