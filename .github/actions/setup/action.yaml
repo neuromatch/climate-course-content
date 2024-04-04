@@ -15,11 +15,11 @@ runs:
       with:
         miniforge-variant: Mambaforge
         miniforge-version: latest
-          python-version: "3.9"
+        python-version: "3.9"
         activate-environment: climatematch
         use-mamba: true
     
-    - uses: actions/checkout@v2  # This step checks out the repository code
+    # - uses: actions/checkout@v2  # This step checks out the repository code
     
     # - name: Set up Python
     #   uses: actions/setup-python@v2
