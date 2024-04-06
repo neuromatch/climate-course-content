@@ -2,7 +2,8 @@
 # define the date of your interest YYYYMMDD (e.g., 20030701)
 # select a desired date and hours (midnight is zero)
 date_sel_exercise = datetime.datetime(
-    1983, 7, 24, 0
+#    1983, 7, 24, 0
+    2024, 1, 1
 )
 
 # locate the data in the AWS S3 bucket
@@ -10,7 +11,8 @@ date_sel_exercise = datetime.datetime(
 file_location_exercise = fs.glob(
     "s3://noaa-cdr-ndvi-pds/data/"
     + date_sel_exercise.strftime("%Y")
-    + "/AVHRR-Land_v005_AVH13C1_*"
+#    + "/AVHRR-Land_v005_AVH13C1_*"
+    + "/VIIRS-Land_v001-preliminary_NPP13C1_S-NPP_*"
     + date_sel_exercise.strftime("%Y%m%d")
     + "_c*.nc"
 )
