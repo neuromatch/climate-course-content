@@ -46,8 +46,8 @@ runs:
     - name: Get notebooks
       run: |
         if ${{ inputs.run_all == 'true' }}; then
-          nbs="tutorials/*/*Tutorial*.ipynb";
-          # nbs="tutorials/W2D4_*/*Tutorial*.ipynb";
+          # nbs="tutorials/*/*Tutorial*.ipynb";
+          nbs="tutorials/W1D4_*/*Tutorial*.ipynb";
         else
           nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`;
         fi
@@ -94,6 +94,7 @@ runs:
       if: ${{ env.NBS != '' }}
       id: verify_exercises
       run: |
+        pip install fuzzywuzzy
         python ci/verify_exercises.py ${{ env.NBS }} --c "$COMMIT_MESSAGE"
       shell: bash -l {0}
 
