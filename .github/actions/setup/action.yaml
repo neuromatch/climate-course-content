@@ -82,12 +82,13 @@ runs:
         unzip v8.4.2.zip
         cd esmf-8.4.2
         export ESMF_DIR=$(pwd)
+        echo "ESMF_DIR=$ESMF_DIR" >> $GITHUB_ENV
+        echo $ESMF_DIR
         make
         # Append ENV VAR to GH ENV so that vars can persist between runs
         ESMFMKFILE=$(find $(pwd) -name 'esmf.mk')
         echo "ESMFMKFILE=$ESMFMKFILE" >> $GITHUB_ENV
         echo $ESMFMKFILE
-        source $ESMFMKFILE
         grep ESMF_VERSION_STRING $ESMFMKFILE
         sudo apt install mpich
         pip install mpi4py nose 
