@@ -1,5 +1,4 @@
 
-
 def plot_historical_ssp126_combined(dt, ax):
     for model in dt.keys():
         datasets = []
