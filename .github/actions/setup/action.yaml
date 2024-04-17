@@ -78,9 +78,11 @@ runs:
 
     - name: Build/Install esmf/esmpy/xesmf
       run: |
-        wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.4.2.zip
-        unzip v8.4.2.zip
-        cd esmf-8.4.2
+        # wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.4.2.zip
+        # unzip v8.4.2.zip
+        # cd esmf-8.4.2
+        git clone https://github.com/esmf-org/esmf.git
+        cd esmf
         export ESMF_DIR=$(pwd)
         echo "ESMF_DIR=$ESMF_DIR" >> $GITHUB_ENV
         echo $ESMF_DIR
@@ -95,7 +97,7 @@ runs:
         # cd src/addon/ESMPy
         cd src/addon/esmpy
         pip install -U numpy
-        pip install setuptools-git-versioning
+        # pip install setuptools-git-versioning
         python3 -m pip install .
         pip list esmpy
         python3 -m pip install .
