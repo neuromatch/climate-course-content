@@ -95,26 +95,30 @@ runs:
         # cd src/addon/ESMPy
         cd src/addon/esmpy
         pip install -U numpy
+        pip install setuptools-git-versioning
         python3 -m pip install .
+        pip list esmpy
+        python3 -m pip install .
+        pip list esmpy
         cd ../../../
         pip install git+https://github.com/pangeo-data/xesmf.git  
       shell: bash -l {0}
 
     # Necessary for SDFC to work
-    - name: Install eigen/SDFC
-      run: |
-        sudo apt-get install -y libeigen3-dev
-        echo "CC=gcc-9" >> $GITHUB_ENV
-        echo "CXX=g++-9" >> $GITHUB_ENV
-        # echo "/usr/bin/gcc-9" >> $GITHUB_PATH
-        # echo "/usr/bin/g++-9" >> $GITHUB_PATH
-        pip install pybind11
-        git clone https://github.com/neuromatch/SDFC-python.git
-        cd SDFC-python
-        python setup.py install
-        pip show SDFC
-        cd ..
-      shell: bash -l {0}
+    # - name: Install eigen/SDFC
+    #   run: |
+    #     sudo apt-get install -y libeigen3-dev
+    #     echo "CC=gcc-9" >> $GITHUB_ENV
+    #     echo "CXX=g++-9" >> $GITHUB_ENV
+    #     # echo "/usr/bin/gcc-9" >> $GITHUB_PATH
+    #     # echo "/usr/bin/g++-9" >> $GITHUB_PATH
+    #     pip install pybind11
+    #     git clone https://github.com/neuromatch/SDFC-python.git
+    #     cd SDFC-python
+    #     python setup.py install
+    #     pip show SDFC
+    #     cd ..
+    #   shell: bash -l {0}
 
     - name: Update environment
       if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == 'true'}}
