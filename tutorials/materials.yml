@@ -22,12 +22,12 @@
   category: Climate Future
   name: Climate Modeling
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18OQtfBlfe_Py6AubwL8FAs1
-  tutorials: 7
+  tutorials: 8
 - day: W2D1
   category: Climate Future
   name: Future Climate - IPCC I Physical Basis
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MwKJBshzMRNZSwYEIIJaVc
-  tutorials: 6
+  tutorials: 4
 - day: Projects
   category: Fundamentals
   name: Good Research Practices
@@ -35,9 +35,9 @@
   tutorials: 8
 - day: W2D3
   category: Climate Future
-  name: Future Climate - IPCC II & III Socio-Economic Basis
-  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18Mrt88BY4gRsMXPURDEwGjS
-  tutorials: 4
+  name: The Socioeconomics of Climate Change
+  playlist: https://youtube.com/playlist?list=PLnpWOQFK76goJrAoOgA7CcrFiEf8gPsYa
+  tutorials: 6
 - day: W2D4
   category: Climate Response
   name: Climate Response - Extremes & Variability

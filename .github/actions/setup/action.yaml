@@ -11,14 +11,15 @@ runs:
   using: composite
   steps:
     # - name: Set up Python (conda)
-    #   uses: conda-incubator/setup-miniconda@v2
+    #   uses: conda-incubator/setup-miniconda@v3
     #   with:
     #     miniforge-variant: Mambaforge
     #     miniforge-version: latest
+    #     python-version: "3.9"
     #     activate-environment: climatematch
     #     use-mamba: true
     
-    - uses: actions/checkout@v2  # This step checks out the repository code
+    # - uses: actions/checkout@v2  # This step checks out the repository code
     
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -31,13 +32,13 @@ runs:
         source ./env/bin/activate
       shell: bash -l {0}
 
-    # - uses: actions/cache@v3
-    #   with:
-    #     path: /usr/share/miniconda3/envs/climatematch
-    #     # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]'
-    #     # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
-    #     key: ${{ format('linux-64-conda-environment.yml-{0}', hashFiles('environment.yml') )}}
-    #   id: cache
+    - uses: actions/cache@v3
+      with:
+        path: /usr/share/miniconda3/envs/climatematch
+        # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]'
+        # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
+        key: ${{ format('linux-64-conda-environment.yml-{0}', hashFiles('environment.yml') )}}
+      id: cache
 
     - name: Get commit message
       run: |
@@ -77,18 +78,16 @@ runs:
 
     - name: Build/Install esmf/esmpy/xesmf
       run: |
-        wget https://github.com/esmf-org/esmf/archive/refs/tags/v8.6.0.zip
-        unzip v8.6.0.zip
-        cd esmf-8.6.0
+        git clone https://github.com/esmf-org/esmf.git
+        cd esmf
         export ESMF_DIR=$(pwd)
+        echo "ESMF_DIR=$ESMF_DIR" >> $GITHUB_ENV
         make
         # Append ENV VAR to GH ENV so that vars can persist between runs
         ESMFMKFILE=$(find $(pwd) -name 'esmf.mk')
         echo "ESMFMKFILE=$ESMFMKFILE" >> $GITHUB_ENV
-        echo $ESMFMKFILE
         sudo apt install mpich
         pip install mpi4py nose 
-        # cd src/addon/ESMPy
         cd src/addon/esmpy
         pip install -U numpy
         python3 -m pip install .
@@ -97,20 +96,20 @@ runs:
       shell: bash -l {0}
 
     # Necessary for SDFC to work
-    - name: Install eigen/SDFC
-      run: |
-        sudo apt-get install -y libeigen3-dev
-        echo "CC=gcc-9" >> $GITHUB_ENV
-        echo "CXX=g++-9" >> $GITHUB_ENV
-        # echo "/usr/bin/gcc-9" >> $GITHUB_PATH
-        # echo "/usr/bin/g++-9" >> $GITHUB_PATH
-        pip install pybind11
-        git clone https://github.com/neuromatch/SDFC-python.git
-        cd SDFC-python
-        python setup.py install
-        pip show SDFC
-        cd ..
-      shell: bash -l {0}
+    # - name: Install eigen/SDFC
+    #   run: |
+    #     sudo apt-get install -y libeigen3-dev
+    #     echo "CC=gcc-9" >> $GITHUB_ENV
+    #     echo "CXX=g++-9" >> $GITHUB_ENV
+    #     # echo "/usr/bin/gcc-9" >> $GITHUB_PATH
+    #     # echo "/usr/bin/g++-9" >> $GITHUB_PATH
+    #     pip install pybind11
+    #     git clone https://github.com/neuromatch/SDFC-python.git
+    #     cd SDFC-python
+    #     python setup.py install
+    #     pip show SDFC
+    #     cd ..
+    #   shell: bash -l {0}
 
     - name: Update environment
       if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == 'true'}}
