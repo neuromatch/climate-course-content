@@ -9,5 +9,5 @@ tang_bin_1000 = ts_tang.bin(bin_size=1000)
 fig, ax = plt.subplots()  # assign a new plot axis
 _ = ts_tang.plot(ax=ax, label="Original", invert_yaxis=True)
 _ = tang_bin.plot(ax=ax, label="Binned Default")
-_ = tang_bin_500.plot(ax=ax, label="Binned 500yrs")
-_ = tang_bin_1000.plot(ax=ax, label="Binned 1000yrs")
+_ = tang_bin_500.plot(ax=ax, label="Binned 500 yrs")
+_ = tang_bin_1000.plot(ax=ax, label="Binned 1000 yrs")
