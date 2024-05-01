@@ -385,7 +385,7 @@ These schedules refer to the time spent working on the course curriculum (5 hour
 
 ### Curriculum Schedule
 
-All days (except W1D1 and W2D2) will follow this schedule for course time:
+All days (except W1D1 and W2D5) will follow this schedule for course time:
 
 
 <table>
@@ -445,14 +445,14 @@ All days (except W1D1 and W2D2) will follow this schedule for course time:
 
 W1D1: The synchronous coursework session starts at -0:30 with 30 minutes for pod introductions. Students should watch the keynote lecture beforehand.
 
-W2D2: Following a keynote lecture in its usual slot, 0:00-3:30 will be spent working on the group project. You can find more information about this day in the [Daily Guide for Projects](https://climatematchacademy.github.io/projects/docs/project_guidance.html#project-day-w2d2).
+W2D5: Following a keynote lecture in its usual slot, 0:00-3:30 will be spent working on the group project. You can find more information about this day in the [Daily Guide for Projects](https://climatematchacademy.github.io/projects/docs/project_guidance.html#project-day-w2d2).
 
 
 ### Project Schedule
 
 In addition to curriculum time, each day will have 3 hours of project time. Check the [time slot widget](https://climatematchacademy.github.io/widgets/tz.html) to see when project time is scheduled for your slot.
 
-On W2D2 you will additionally be working on your group projects during the time usually allocated for tutorials.
+On W2D5 you will additionally be working on your group projects during the time usually allocated for tutorials.
 
 
 ### Professional Development Schedule
