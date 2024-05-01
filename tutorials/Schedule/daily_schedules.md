@@ -123,31 +123,27 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
 <p style="color: white; font-weight: bold;">
 (5 hours)
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><strong><font color="black"> IPCC I: </font></strong>
-<p>
-<strong><font color="black"> Physical Basis </font></strong>
+   <td bgcolor="#B0C7DC"  align="center" ><strong><font color="black"> An Ensemble of Futures </font></strong>
    </td>
-   <td bgcolor="#E99668"  align="center" ><strong><font color="black"> Project Day </font></strong>
+   <td bgcolor="#E99668"  align="center" ><strong><font color="black">  </font> Socioeconomics of Climate Change</strong>
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><strong><font color="black"> IPCC II & III: </font></strong>
-<p>
-<strong><font color="black"> Socioeconomic Basis </font></strong>
+   <td bgcolor="#B0C7DC"  align="center" ><strong><font color="black"> Extremes & Variability </font></strong>
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><strong><font color="black"> Extremes & Vulnerability </font></strong>
+   <td bgcolor="#78BAB8"  align="center" ><strong><font color="black"> </font> AI & Climate Change</strong>
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><strong><font color="black"> Adaptation & Impact </font></strong>
+   <td bgcolor="#78BAB8"  align="center" ><strong><font color="black"> Project Day </font></strong>
    </td>
   </tr>
   <tr>
    <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D1.png" >
    </td>
-   <td bgcolor="#E99668"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D2.png" >
+   <td bgcolor="#E99668"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D3.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D3.png" >
-   </td>
-   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D4.png" >
+   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D4.png" >
    </td>
    <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D5.png" >
+   </td>
+   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D2.png" >
    </td>
   </tr>
   <tr>
@@ -165,15 +161,15 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
    </td>
    <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 8 </font></strong>
 <p>
-<font color="black"> Implementation & result interpretation </font>
+<font color="black"> Result interpretation </font>
    </td>
    <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 9 </font></strong>
 <p>
-<font color="black"align="center" valign="top" > Presentation preparation & project submission </font>
+<font color="black"align="center" valign="top" > Results implementation </font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentations </font>
+   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentation preparation & project submission </font>
 <p>
-<font color="black"> Closing ceremony </font>
+<font color="black">  </font>
    </td>
   </tr>
   <tr>
@@ -187,7 +183,7 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
    </td>
    <td bgcolor="#F9EEDA" >
    </td>
-   <td bgcolor="#F9EEDA" >
+   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentations & Closing ceremony </font>
    </td>
   </tr>
 </table>
@@ -315,9 +311,9 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
 <p>
 <font color="black"> Implementation & result interpretation</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 9</font> </strong>
-<p>
-<font color="black"> Presentation preparation & project submission</font>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 9 </font> </strong>
+     <p>
+<font color="black"> Project Day</font>
    </td>
   </tr>
   <tr>
@@ -339,31 +335,27 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
 <p>
 (5 hours)
    </td>
-   <td bgcolor="#B0C7DC" align="center" ><strong><font color="black"> IPCC I:</font> </strong>
-<p>
-<strong><font color="black"> Physical Basis</font> </strong>
+   <td bgcolor="#B0C7DC" align="center" ><strong><font color="black"> An Ensemble of Futures </font> </strong>
    </td>
-   <td bgcolor="#E99668" align="center" ><strong><font color="black"> Project Day</font> </strong>
+   <td bgcolor="#E99668" align="center" ><strong><font color="black"> Socioeconomics of Climate Change </font> </strong>
    </td>
-   <td bgcolor="#B0C7DC" align="center" ><strong><font color="black"> IPCC II & III:</font> </strong>
-<p>
-<strong><font color="black"> Socioeconomic Basis</font> </strong>
+   <td bgcolor="#B0C7DC" align="center" ><strong><font color="black"> Extremes & Variabilities</font> </strong>
    </td>
-   <td bgcolor="#78BAB8" align="center" ><strong><font color="black"> Extremes & Vulnerability</font> </strong>
+   <td bgcolor="#78BAB8" align="center" ><strong><font color="black"> </font> AI & Climate Change </strong>
    </td>
-   <td bgcolor="#78BAB8" align="center" ><strong><font color="black"> Adaptation & Impact</font> </strong>
+   <td bgcolor="#78BAB8" align="center" ><strong><font color="black"> </font> Presentation preparation & project submission </strong>
    </td>
   </tr>
   <tr>
    <td bgcolor="#B0C7DC" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D1.png" >
    </td>
-   <td bgcolor="#E99668" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D2.png" >
+   <td bgcolor="#E99668" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D3.png" >
    </td>
-   <td bgcolor="#B0C7DC" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D3.png" >
-   </td>
-   <td bgcolor="#78BAB8" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D4.png" >
+   <td bgcolor="#B0C7DC" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D4.png" >
    </td>
    <td bgcolor="#78BAB8" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D5.png" >
+   </td>
+   <td bgcolor="#78BAB8" align="center" ><img width="150px" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/tutorials/Schedule/images/icon_W2D2.png" >
    </td>
   </tr>
   <tr>
@@ -377,7 +369,7 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
    </td>
    <td bgcolor="#6C7D77" >
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentations
+   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentations &
 <p>
 <font color="black"> Closing ceremony
    </td>
