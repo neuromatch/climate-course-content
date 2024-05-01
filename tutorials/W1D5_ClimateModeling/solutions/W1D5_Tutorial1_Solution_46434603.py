@@ -58,8 +58,8 @@ _ = ax.plot(
 )
 
 
-ax.set_xlabel("Wavelength ($\mu m$)", fontsize=20, labelpad=30)
-ax.set_ylabel("$B_\lambda(\lambda,T)$ $(W/(m^3 steradian)$", fontsize=20)
+ax.set_xlabel("Wavelength ($\mu$m)", labelpad=30)
+ax.set_ylabel("$B_\lambda(\lambda,T)$ (W/(m$^3$ steradian)")
 
 ax.set_title("Spectral Radiance")
 

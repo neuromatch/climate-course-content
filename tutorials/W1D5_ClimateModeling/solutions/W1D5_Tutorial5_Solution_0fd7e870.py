@@ -8,7 +8,7 @@ _ = ax.plot(radmodel.absorber_vmr["O3"] * 1e6, radmodel.lev, label="Ozone (ppmv)
 # invert the axis so the largest value of pressure is lowest
 ax.invert_yaxis()
 # set y axis to a log scale
-ax.set_yscale("log")
+_ = ax.set_yscale("log")
 
 ax.set_ylabel("Pressure (hPa)")
 ax.set_xlabel("Specific humidity (g/kg)")

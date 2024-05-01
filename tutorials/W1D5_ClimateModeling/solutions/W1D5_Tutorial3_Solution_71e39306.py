@@ -5,7 +5,7 @@
 alpha = 0.2941  # unitless number between 0 and 1 (calculated previously from observations in tutorial 2)
 
 # define transmissivity (calculated previously from observations in tutorial 1)
-tau = 0.6127  # unitless number between 0 and 1
+tau = 0.6127    # unitless number between 0 and 1
 
 # effective radiative forcing for a doubling of CO2
 F = 3.93  # W/m^2
@@ -22,7 +22,7 @@ def ASR(alpha, Q):
     return (1 - alpha) * Q
 
 
-# define a function for outgoing longwave raditation (OLR)
+# define a function for outgoing longwave radiation (OLR)
 def OLR(tau, T):
     # define the Stefan-Boltzmann Constant, noting we are using 'e' for scientific notation
     sigma = 5.67e-8  # W m^-2 K^-4
@@ -30,7 +30,7 @@ def OLR(tau, T):
     return tau * sigma * T**4
 
 
-# create a function to find the new tempeature based on the previous using Euler's method.
+# create a function to find the new temperature based on the previous using Euler's method.
 def step_forward(T, alpha, tau, dt):
     # define the observed insolation based on observations from the IPCC AR6 Figure 7.2
     Q = 340  # W m^-2
@@ -42,7 +42,7 @@ def step_forward(T, alpha, tau, dt):
     return T_new, Ftoa
 
 
-# create a function to find the new tempeature based on the previous using Euler's method.
+# create a function to find the new temperature based on the previous using Euler's method.
 def step_forward_forced(T, alpha, tau, dt):
     # define the observed insolation based on observations from the IPCC AR6 Figure 7.2
     Q = 340  # W m^-2

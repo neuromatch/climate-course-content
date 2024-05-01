@@ -1,6 +1,0 @@
-
-"""
-1. The transition occurs around 240K. This is the lower temperature limit at which the ice-albedo feedback would kick in if Earth were warmed from below 240K.
-2. Initally, we have a cold equilibrium solution like the blue and orange lines of the figure in Section 2.1, so the model converges to the cold equilibrium temperature. However, as the insolation increases we reach a point where only a warm equilibrium state exists, like the green line. When this happens, the Earth cannot equilibrate in a cold state anymore so Earth's temperature continues rising until it reaches the warm equilibrium state.
-3. BONUS: All the systems on this plot start at 220K, where Earth is in a completely frozen state with an albedo of 0.7. Initially as the planet warms, the albedo stays at 0.7, however when the insolation becomes high enough that the planet warms to 240K (i.e. there is no cold equilibrium state) the ice-albedo feedback causes the albedo to begin decreasing, representing the effect of ice & snow melt. This drop in albedo accelerates the warming of the planet over time, as seen in the plot, until Earth reaches its warm equilibrium temperature.
-""";

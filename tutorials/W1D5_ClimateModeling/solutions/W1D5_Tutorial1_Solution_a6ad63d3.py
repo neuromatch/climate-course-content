@@ -17,4 +17,4 @@ tau = [str(t) for t in tau]
 fig, ax = plt.subplots()
 _ = ax.bar(tau, OLR, color="#67ada9")
 ax.set_xlabel("Transmissivity")
-ax.set_ylabel("Outgoing Longwave Radiation ($W m^{-2}$)")
+ax.set_ylabel("Outgoing Longwave Radiation (W m$^{-2}$)")
