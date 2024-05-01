@@ -6,10 +6,10 @@
 
 ## Course Overview
 
-The course will begin with Opening Ceremonies on Sunday, July 9th
+The course will begin with Opening Ceremonies on Sunday, July 7th
 
-* 7:00 am UTC
-* 3:00 pm UTC
+* 8:30 am UTC
+* 5:30 pm UTC
 
 
 ## Course Schedule for Timezones 2 & 5
