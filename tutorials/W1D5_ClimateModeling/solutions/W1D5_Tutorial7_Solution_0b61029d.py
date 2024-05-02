@@ -1,4 +1,0 @@
-
-"""
-1. Sensible heat fluxes depend on temperature differences between the Earth's surface and the surface air. The differences in the sensible heat flux seen here are largely caused by the different properties of the three main surface types: land, ocean, and ice. Land typically warms fast when exposed to insolation, the ocean has a much higher heat capacity so does not warm as much as land in response to insolation, and ice typically remains near zero degrees Celsius or colder. This means that land is often warmer than the surface air (strong positive sensible heat flux), the ocean and surface air often have a similar temperature (weak flux), and ice is often much cooler than surface air (strong negative flux)
-""";
