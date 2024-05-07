@@ -16,6 +16,6 @@ fig, ax = plt.subplots()
 _ = plot_historical_ssp126_combined(dt_gm, ax)
 
 ax.set_title("Global Mean SST from five CMIP6 models (annually smoothed)")
-ax.set_ylabel("Global Mean SST [$^\circ$C]")
-ax.set_xlabel("Year")
+ax.set_ylabel("Global Mean SST (°C)")
+ax.set_xlabel("Time (years)")
 ax.legend()
