@@ -4,6 +4,7 @@ scenario_data = [data_hist, data_ssp126, data_ssp245, data_ssp585]
 scenario_labels = ["Historical, 1850-2014", "SSP-126, 2071-2100", "SSP-245, 2071-2100", "SSP-585, 2071-2100"]
 colors = ["k", "C0", "C1", "C2"]
 
+# initialize list for fit output
 fit_all_scenarios = [0, 0, 0, 0]
 
 # setup plot
