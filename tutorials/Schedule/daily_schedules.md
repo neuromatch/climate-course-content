@@ -46,7 +46,7 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
    </td>
    <td bgcolor="#F5C690" align="center" ><strong><font color="black" > Paleoclimate </font></strong>
    </td>
-   <td bgcolor="#B0C7DC" align="center" ><strong><font color="black" > Climate Modeling </font></strong>
+   <td bgcolor="#B0C7DC" align="center" ><strong><font color="black" > Intro to Climate Modeling </font></strong>
    </td>
   </tr>
   <tr></tr>
@@ -257,7 +257,7 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
    </td>
    <td bgcolor="#F5C690" align="center" ><strong><font color="black"> Paleoclimate</font> </strong>
    </td>
-   <td bgcolor="#B0C7DC" align="center" ><strong><font color="black"> Climate Modeling</font> </strong>
+   <td bgcolor="#B0C7DC" align="center" ><strong><font color="black"> Intro to Climate Modeling</font> </strong>
    </td>
   </tr>
   <tr>
