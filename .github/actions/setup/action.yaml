@@ -22,9 +22,10 @@ runs:
     # - uses: actions/checkout@v2  # This step checks out the repository code
     
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: 3.9
+        cache: 'pip' # caching pip dependencies
 
     - name: Set up virtual environment
       run: |
@@ -32,13 +33,23 @@ runs:
         source ./env/bin/activate
       shell: bash -l {0}
 
-    - uses: actions/cache@v3
-      with:
-        path: /usr/share/miniconda3/envs/climatematch
-        # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]'
-        # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
-        key: ${{ format('linux-64-conda-environment.yml-{0}', hashFiles('environment.yml') )}}
+
+    - name: Cache ESMF
+      uses: actions/cache@v3
       id: cache
+      with:
+        path: /home/runner/work/climate-course-content/climate-course-content/esmf
+        key: ${{ runner.OS }}-esmf-cache-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.OS }}-esmf-cache-
+
+    # - uses: actions/cache@v3
+    #   with:
+    #     path: /usr/share/miniconda3/envs/climatematch
+    #     # This should create a key that looks like 'linux-64-conda-environment.yml-[HASH]'
+    #     # Logic inspired by https://dev.to/epassaro/caching-anaconda-environments-on-github-actions-2d08
+    #     key: ${{ format('linux-64-conda-environment.yml-{0}', hashFiles('environment.yml') )}}
+    #   id: cache
 
     - name: Get commit message
       run: |
@@ -77,6 +88,7 @@ runs:
       shell: bash -l {0}
 
     - name: Build/Install esmf/esmpy/xesmf
+      if: steps.cache.outputs.cache-hit != 'true'
       run: |
         git clone https://github.com/esmf-org/esmf.git
         cd esmf
