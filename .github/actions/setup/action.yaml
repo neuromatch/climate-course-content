@@ -25,7 +25,7 @@ runs:
       uses: actions/setup-python@v5
       with:
         python-version: 3.9
-        cache: 'pip' # caching pip dependencies
+        # cache: 'pip' # caching pip dependencies
 
     - name: Set up virtual environment
       run: |
@@ -127,6 +127,7 @@ runs:
       if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == 'true'}}
       run: |
         # mamba env update -n climatematch -f environment.yml
+        echo "testinstall"
         pip install -r ci/requirements.txt
         pip install -r requirements.txt
         pip install requests aiohttp
