@@ -129,7 +129,7 @@ runs:
         # mamba env update -n climatematch -f environment.yml
         pip install -r ci/requirements.txt
         pip install -r requirements.txt
-        pip install requests aiohttp
+        pip install requests aiohttp pillow
         pip install jupyter-book==0.14.0 ghp-import cftime pyleoclim importlib-metadata==4.13.0
         # pip install climlab==0.8.2
       shell: bash -l {0}
