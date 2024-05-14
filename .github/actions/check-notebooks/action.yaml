@@ -66,6 +66,7 @@ runs:
       id: process_notebooks
       if: ${{ env.NBS != '' }}
       run: |
+        pip install pillow
         python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 

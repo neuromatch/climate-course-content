@@ -25,13 +25,12 @@ runs:
       uses: actions/setup-python@v5
       with:
         python-version: 3.9
-        # cache: 'pip' # caching pip dependencies
+        cache: 'pip' # caching pip dependencies
 
     - name: Set up virtual environment
       run: |
         python -m venv env
         source ./env/bin/activate
-        pip install --upgrade pip
       shell: bash -l {0}
 
 
@@ -80,7 +79,6 @@ runs:
         sudo apt update
         sudo apt install libgeos++-dev libgeos3.10.2 libgeos-c1v5 libgeos-dev libgeos-doc
         sudo apt-get install proj-bin libproj-dev proj-data
-        sudo apt-get install python3-pil
       shell: bash -l {0}
       
 
@@ -131,7 +129,7 @@ runs:
         # mamba env update -n climatematch -f environment.yml
         pip install -r ci/requirements.txt
         pip install -r requirements.txt
-        pip install requests aiohttp pillow
+        pip install requests aiohttp
         pip install jupyter-book==0.14.0 ghp-import cftime pyleoclim importlib-metadata==4.13.0
         # pip install climlab==0.8.2
       shell: bash -l {0}
