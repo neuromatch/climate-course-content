@@ -34,7 +34,7 @@ runs:
     - name: Setup
       uses: ./.github/actions/setup
       with:
-        force_env_update: 'false'
+        force_env_update: 'true'
 
     # - name: Get changed files
     #   if: ${{ inputs.runall != 'true' }}
@@ -66,7 +66,6 @@ runs:
       id: process_notebooks
       if: ${{ env.NBS != '' }}
       run: |
-        pip install pillow
         python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 
