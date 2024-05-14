@@ -31,6 +31,7 @@ runs:
       run: |
         python -m venv env
         source ./env/bin/activate
+        pip install --upgrade pip
       shell: bash -l {0}
 
 
@@ -128,7 +129,6 @@ runs:
       if: ${{steps.cache.outputs.cache-hit != 'true' || inputs.force_env_update == 'true'}}
       run: |
         # mamba env update -n climatematch -f environment.yml
-        pip install --upgrade pip
         pip install -r ci/requirements.txt
         pip install -r requirements.txt
         pip install requests aiohttp pillow
