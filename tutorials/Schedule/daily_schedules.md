@@ -50,15 +50,15 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
    </td>
   </tr>
   <tr></tr>
-   <td bgcolor="#E99668"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W1D1.png">
+   <td bgcolor="#E99668"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D1.png">
    </td>
-   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W1D2_new.png" >
+   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D2_new.png" >
    </td>
-   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W1D3_new.png" />
+   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D3_new.png" />
    </td>
-   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W1D4.png" >
+   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D4.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W1D5.png" >
+   <td bgcolor="#B0C7DC"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D5.png" >
    </td>
   </tr>
   <tr>
@@ -135,15 +135,15 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
    </td>
   </tr>
   <tr>
-   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W2D1_new.png" >
+   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D1_new.png" >
    </td>
-   <td bgcolor="#E99668"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W2D2_new.png" >
+   <td bgcolor="#E99668"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2_new.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W2D3_new.png" >
+   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D3_new.png" >
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W2D4_new.png" >
+   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D4_new.png" >
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W2D2.png" >
+   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2.png" >
    </td>
   </tr>
   <tr>
@@ -261,15 +261,15 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
    </td>
   </tr>
   <tr>
-  <td bgcolor="#E99668"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W1D1.png">
+  <td bgcolor="#E99668"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D1.png">
    </td>
-   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W1D2_new.png" >
+   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D2_new.png" >
    </td>
-   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W1D3_new.png" />
+   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D3_new.png" />
    </td>
-   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W1D4.png" >
+   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D4.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W1D5.png" >
+   <td bgcolor="#B0C7DC"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D5.png" >
    </td>
   </tr>
   <tr>
@@ -347,15 +347,15 @@ The course will begin with Opening Ceremonies on Sunday, July 7th
    </td>
   </tr>
   <tr>
-  <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W2D1_new.png" >
+  <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D1_new.png" >
    </td>
-   <td bgcolor="#E99668"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W2D2_new.png" >
+   <td bgcolor="#E99668"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2_new.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W2D3_new.png" >
+   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D3_new.png" >
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W2D4_new.png" >
+   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D4_new.png" >
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/images/icon_W2D2.png" >
+   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2.png" >
    </td>
   </tr>
   <tr>
