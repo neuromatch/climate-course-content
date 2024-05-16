@@ -13,15 +13,16 @@ def train_random_forest_model(X_train, y_train, X_test, y_test, random_state):
         RandomForestRegressor: Trained Random Forest regressor model.
     """
 
-    # Train the model on the training data
+    # train the model on the training data
     rf_regressor = RandomForestRegressor(random_state=random_state)
-    rf_regressor.fit(X_train, y_train)
+
+    # fit the model
+    _ = rf_regressor.fit(X_train, y_train)
+
     print('Performance on training data :', rf_regressor.score(X_train, y_train))
     print('Performance on test data     :', rf_regressor.score(X_test, y_test))
 
-    #The difference between performance on training and test data is less for the random forest model
-
     return rf_regressor
 
-# uncomment this to call the function:
+# test the function
 rf_model = train_random_forest_model(X_train, y_train, X_test, y_test, random_state=42)
