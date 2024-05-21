@@ -1,4 +1,0 @@
-"""
-1. Positive Feedback Loop - Larger populations could produce greater investment, particularly if a significant portion of the population is engaged in productive labor. This, in turn, would boost industrial capital, resulting in more food which can sustain a larger population.
-2. Negative Feedback Loop - Pollution and Agricultural Output: High levels of pollution can degrade the quality of land and water resources needed for agriculture, leading to reduced food production. This reduced agricultural output might spur efforts to limit industrial pollution, creating a negative feedback loop.
-""";

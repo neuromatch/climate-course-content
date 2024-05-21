@@ -1,3 +1,0 @@
-"""
-1. Possible observations: In the top figure there are some years with anomously high weeks of case numbers such as 1994, 1998, and 2006. In the second figure it appears weeks with the high case numbers are consistent across years, with higher numbers appears for week of year greater than 20. In the bottom figure, the cities have comparable distribution shapes however the number of cases per week and frequency in San Juan is much higher than Iquitos.
-""";

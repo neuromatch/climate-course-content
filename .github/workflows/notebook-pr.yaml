@@ -2,6 +2,8 @@ name: notebook-pr
 on:
   workflow_dispatch:
   pull_request:
+    branches:
+      - main
     paths:
       - '**/*.ipynb'
       - .github/workflows/notebook-pr.yaml
@@ -21,6 +23,7 @@ jobs:
 
     runs-on: ubuntu-latest
     # runs-on: ubuntu-20.04
+    # runs-on: climate_runner
     steps:
       - name: Free up disk space
         uses: jlumbroso/free-disk-space@main
