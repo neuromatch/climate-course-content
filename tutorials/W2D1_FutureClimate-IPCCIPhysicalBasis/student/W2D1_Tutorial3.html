@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Tutorial 3: Multi-model Ensembles — Climatematch Academy: Computational Tools for Climate Science</title>
+<title>Tutorial 3: Quantifying Uncertainty in Projections — Climatematch Academy: Computational Tools for Climate Science</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
@@ -49,15 +49,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-<script type="application/vnd.jupyter.widget-state+json">{"state": {"d20c9b0045e7482c9e874b692d2a6aa8": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "ca495b3596ea436faf87d57bece6de58": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_d20c9b0045e7482c9e874b692d2a6aa8", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=sTYK2TAPycs\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7f7edd1b2280>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/sTYK2TAPycs?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAUDBAsICAoICgoNCgsKCggKCggKDggKCAoKCgoICggKCgoIChALCgoOCgoLDRUODhERExMTCgsWGBYSGBASExIBBQUFCAcIDQkJDRIODg8SEhISFRISEhISEhISEhISEhISEhUSEhISEhISEhISEhISEhIVEhISEhISEhISEhISEv/AABEIAWgB4AMBIgACEQEDEQH/xAAcAAEAAwEBAQEBAAAAAAAAAAAABQYHBAMCCAH/xABPEAABAwIDBAYHBQUECAQHAQABAAIDBBEFEiEGEzFBByJRYXGSFBcyU4GR0xUjQqGxCDNSwfAkYoLRFkNjc6KjsuFEcoPxNDaFk7S1wiX/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBQQG/8QANxEBAAIBAgQDBAkDBAMAAAAAAAECAwQREiExQQVRcWGBkaETFCJSYrHB0fBCkuEGFTKCM3Ki/9oADAMBAAIRAxEAPwD8ZIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SCoIrf6vqn3kPml+knq+qfeQ+aX6SDTkREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBEX8Jsg/qL+B47Qv6gIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgL0p4XSPbGxrnveQ1sbAXPcTwDWtFye4LzW09EENLRQ5y7+1yMzSyEAmGN2rYxp92AwBzrkXJ1uA1TEbiK2V6H5JAJK+b0cHX0aHLJUW/vyG8cR8BJ8Fs2wHRnh1IxtXDC4vc1zd5Ic5GRzmkF8pcIyS3UxsbpbwWN7ddNEMDnRUDBUyC4NTJm9GHc0NIfLz1Ba3gQSsoxrb3Ea933lVKRyiiLoohrcdSGwOp4uue/irfRzPsRE8/N+2sZwPDZ4HU8wp8jvaZJLT8fBw0cDY3FiNLELNdpOiTCaiS0EjoDlvmpJI5YybuHWZIZBpb8BbxX5RcyU3cWON9SbEk+PaufeFhvYsPI2LT8OB4pGP8S1p5dNmrdIOwFRhFpS4T0znZWVLAW2dyZLGSd242NtSDbjfRVBfzC+kOvhgfTOqHVFPI1zJKWqLp4nNP8ACXneRkHUGN7bEA8dV40daya+S4IFzG4guA0uQQAHC/Ow8OaWpMKxaJe6IiokREQEREBERAREQEREBEWu9FmwVFiGzGL4pOx7qij+0Nw5skjGDcUENRFmY05XWkeTrxGiDIkWu/s1bBUWOyV7a1j3inZRGLdySRWMpqxJfIRm/dN48Ne1WLANmNkMXqG4fSTVUNRLnETnGpaS5rXOIaamN0RdlaTZ3G1hqgwBFctoOjuqpsf+wI7TTPlY2CXVjJIpGbxszhqWNbGHOeBmy7qS2awvqmLbCbL7PCOlxaomqqt7Gvc1hq25QdMwiobbmMkHKJXucdbE20D88oth6VujzDI8JZj+DVmamdI2N1NM+7nFzshEG+DZhKw6uikBdlzOBGWzvTos6KKWXDHY/jVQ6mogC6OJp3bpGB27Ekj8pfle/qsjjAe/qEE5gCGNIv0Ngux+yePPdQ4dNPTVRa90Rc6szPyAklrK/MyUADMWNLX5Q4jLYkYPtBhpo6uekMjJTBLJFvoXNfDJkcQHsc0kWI1txGoNiCEHCi2j9njo+w/GaOvqK9kjvRpIw0xySx2ZunPfpGRmOimNm9j9k8dlNDQVFVBUvY98RcagF2QZnZRVxmN9hqWXDi0OItYkB+f0Wy9C+w0cW1lVg+IwxVQpqequyRofC8h1I6CYMfexdFIHAHUZyFSdsdmJ5MXxOOhoZpYYK+uiDaSCeWGFrJpAyP7iMtjAZaw0sLIKgi6qHDpp5HRQwSzSNDi6KKOWSVoa4NeXMjaXNAcQ03GhIC8J43Rucx7SxzHOa9jwWvY5pIe1zXC7XAggg6ggoPhF14jhc9M1r56eWBr75HzRyxNfYAnI6VoDrAg6doXY/ZeubFvzQVYiy5t+aarEGW1829MWTLbW97IIhFpPQFUYeypqjiOHSYi0wM3Iip31zYjmdvM0LAcrn3YGyEdXI4XGZZ/ihYaiUxRuijM0u6hfcyRxmR26icSSS9rbNPaQUHMila3ZmugiM8tBVRRAXM8tPVRwgdpkkjDAO+6jqWnfK9sUbHSPebMjja58jza9msYC5xt2BB5opLFsAq6NofU0dRTNcbNfUQVMDXHkGumjaCe4LX/2ctmaOuwrGJaqliqHwgbmSVjHvj/s8zuoXC7esAdOYCDDkX8YdB4BbZ0D7AYZieD1+I4jHI70Oea5iklZaGKlgncAyMgOddz/AMggxRF+gdk9kNlMeldQ0L6yCoMb5GOeZgS1mXMW78PicRmBLTYkXtwJGIbV4Q7Dq6poZHBzqaaWF0g0a8McQ14BJyhzbOsTpe3JBGopd2y9eIt+cPqxEBmM5pqsQBtr5t4YsmW3O9lENF7AakkAAakk6AC3EklARStfs1W08RnmoaqGIC5mmp6qKEDkTJJGGW+Kv3QtU4WyhxEYhhU1fIReOaGnkqQxm7d922RgtSS5g529u3QjXqIMsRe+F0MtS9sMMUk8pFxFAySWVwFsxDImlxGo4DmF74tg9TRlrammnpi6+VtRFPAXW45ROxpdbuQcKIiAiIgIiIPahh3krIwC7O9jco4m5AsO9fzbbadzh9l0z7xB530jONXOTeRxcPagDtGt4ENDjfq298GB3hLSGuENWWvOga/0ebI6/KzrG/Kyjth8FLmmseNHEiMcgzmfjb5KfpIx1m0r4sM5bxWHjgmBj2pdT/D+Ef5lTsVPGw5Rb8uf5LnqK8NfYN6t+JuAfDtUjhlO2oIytOptextf5LwZc1rc56O7p8NK/Zrtv8x0bPy/rReMlHFI0tIzdxsR8irAzZ9zQSeA+feoasq4obj2TwGcPAPgbWXnplmZ+y9WTHER9rb3qLtDg5gBlZqwHVvEtHb4fp+kNBVEOBBsQdCOK02C0/3bh7VxqDlII4i6z2jwwCvlp3H9yXG3aAWgC/g4fmutptRxxMW6w+e1umjHaLV6StUTszQ7tANvEXX0iI8wiIgIiICIiAiIgIiIC/Q3QR/8j7Rf/V//ANVTL88raeiLa+iotlMaw+oqWxVNV9pbiAiQuk3uHQQxWLWlozStLdSOCCd/Yp/fYt/u8N/6q9f3Y3ZHZ/Ba+PFJNooKk0rnyMgjfSkl+V7QSyCSSWTLmJDWAEkN4i4MD+yxtfRYRLiLq6obTiZlAIi8SHOY3Vhktu2m1s7eP8SxiQ3JPef1Qfofoy2rjxzbyWva0tiFHPHSB4tJliELA8jk54dM63ENfY8Css6eXvdtLiZf7XpDRrxyNhhbD8N0GW7rKB2L2hlwnEKfEYLGSnfmDHXDZGua5ksbiAbB8bnNvY2vfiFum0dXsttS9uIVNZLhtUWMbO27IJH5RZgkM0EkEpa3QPjOawaCbNDQH51ka7IHWOTM8Ncb7veZWGQNPs58ojJA1sGX5L9GftBHJsZgbIT9yXYYOrfKWDDqgxXtxGgOvMNKr3SbtrhNHgZ2cwQb9kjw+orHtcRcOa97w+ZgMs78jW52tytZo0izQ326MuknDqrBv9HMeDhCwBlPVgSOaGNdmga4wgyQyROsGvALSxoDrWOcMQpmPc4NjDi45gGsDi83BDgAzU3be47LryaQRpw5W4L9GbNjZTZqb7Thr5cQqGNf6PFdk8jHOa5p3baeCONj3MJbmmcALnUXWE7X427Eq+pr3sbG6olfJumWyMBsGMFgMxDQAXWBcbuOpQb9+yDGH4bi7HOyNdJG1zzazQYHguNzawGvwXL0f7O7PbO1bMWdtBDWPp2S7mKF1O8h0kb4nO3VK+SWV27e9oAsOtfXS0L+zntlQ4ZhuKQ1lS2B85G6Y4SEv+4e3TIwj2iBqsOjFmgdwQfoLoR2jGL7c1uJBhjbUUtSWMdbMI4vQIIc1tA8xxNJAJAJNieK7J+l+sh2rbhUDIY6H7VbQupxG0Pe6eqENVUOkBvvXVEkktxYG4uCbk57+zftDTYXjZqqyYQReiVEe8cHkZ3Ppy1tmNJuQ13yUVU4xAdrftASD0b7djqt/wBbL6OMQbMZbWzW3YzWtfuQad0o4yzAdvaavbaOOWCkdW26rXRzunpp5HduVkccve6ILz6Vejn0nbakiDL0+KGOql06mWmA+0macM0cbDc/iqh22VM/aU2ipcUxptTRzNnh9Cp4jI0PAztlq3PbZ7Qbhr2nhzW59Ge2kTtlI8bqWB82GUtXTOkd+8e6LdtDWPdxdOI6e5H4za+hQUfpG2ypZtu6COrc30HC3mJzpLGBlTJC95mcTo1rKk0rSTYNNMSdAr/ta3aWOtkrsMqKOuoXNBgw54jY+xjA0kDWmR2e7g41Aab+yAvy7sViFI/F46rGBJNBJNJNVbvUvlkLnl8jR1nxGV2ZzWHMRe1/ZO3bEP2awGrdilJjk26LZSMMDpHNdvBYNfC2ETSZfw7wZgQ0ucbEoOD9kky/bOLGoBbOY7ztc1sbmzGpeZgY2tDYyH5hlAAHCwtZfz9mDAIZcUxbFJmB7qGQiC4Dsj5ZKp00gB4SBkbWtP8AfkXh0OdJFE3aHGMVrJBRxVoaYWyBxNhJZrXbprhn3YaXcrl1iVWehPpIiwPFqx04L6Oue4SPYC58ZZLM6nmDOL2ZZXhzQMxDgRctykJLCP2jsRFS+aohhmp5GyZaIDd7vMDuQJ7FzgDlDs4OYZrBuluboJxnFBNiX2RhlPJLVOY41Ba2Kmw8Oke7dtL3XdDY2ZDnJG7a6zwHA2TD8L2Pw2Z+J+mmtZllMOFPAnjG9a5uTcGASOs1xa3fus24LjdocOPoX24wwUOMYPVPOFxYhPVy08jS8thhqYGQbls7g7LJE2MEOks1xcbfwoNPwulrqjAsXpMaq6Wum3FQd1S7oup2GB7ohLu42BsgkYXMOW4LL5nW0oH7Kh//AMbHP/KP/wAaddPRntBs7gkdbgrMQfK2rjc6bE3RllMXOY6L0eHJGQ0sjOcPIc0l7hmNg0Q/QRtZheFT4vhU1WW0lS/LSV7w5oliaJonbx27AieY3McHOaGkh/Dqghg0fAeAX6X/AGXjENmcYNQHGAT1Znay+cw+gU2+DbEHMWXtqNVgG2FBT0tdPT0c/pVNG5rYao5SZW5GEklrWtJDi5ugA6q2H9nravDaTBMRw7EKwUxq5522tIZNzLSQQuewtjc0G4da99W8EE90R43sxDiLY8Mjnpq2oY+np56sVEsYc8XDQHTuYHOLRxyk2yhwzWOfy4TX4HtixroBi9WZnVLGlrW+mCcSuMwBDhTPa7O7N7MToiblgubVsthuyOEVcWItxeoqX07hJFDI1z2bwfu3ZKaha9zmmxF3BtwCVw4P0wU0m2JxmdjoqN1K6gjcWl8sMWZsjJ5GR5iSZQ+4ZctbLbrZTcNV2CqcfOKMfi9VQ08EzZQzCYzCap0mRz2CHKC85Gtc5x3snVY7T8Tcw2QfQYb0gVoqN3DEJKoUrn5WwxVcwgkaQXdWO7XTsbwAMjWjiFJRYps7hGPux8YlJXTVU8zhFG3eMpBVZhPNJI1mZ0ccbixkY64a4ANfluIbair2bl2mfW1NRJW0tZDK+YxiXc09S4MiZmEUbZnR7oOcMhc5r8pItawaHthFtXSvrZ6aalxGllbP6PTtjiFRBE/Nu3RxujaJpGMI6r5Js9vZN7Kp/spC2E44OHVZpwt/Z6jlyXfsNiuz+y2/q6bGp6xkkTmR4aHCRty5sgIiiiYwTXblEj8gAe+/FVzoO28oqWmx11ZOymlr5JJYoSJHAmRlSXNaWMIsHSButuSCS/ZVrIzhOI0VLUQ02LTPLoJZmsc8xbiJtO5rHfvWRzb4lozZTICQcwB4Om0bSw4R6Livo9VS7+N8uI0zYy+9wII5QIo903eEWe2JtyWtLutldUuiyi2eq8Plo8WllpKx0rXx1uu6axjeoyMhjo2DV2dszetdpa64bkvG3G2eGYZs1NgNFiEuLS1GZomlLpGQRve1z/vcoY1jWtIbGwuIc65sNUH5+REQEREBERBxY9UOjpZsntPZu9OQlcyNx8LOI+IWzbBbPNlweje5oA3Ra7vyOc0/PKo7onmPo8lO1rC2pkmZUB4BD42QxOYx9/wdZ5A7cy1PZWmjjpPRo/ZhklYBqQA57pGgZtXAB+UE8cvNcfWayLzOLaYms9fPl2+L6PR+GXxY6Z5mJjJWdojttaY5+u0sg2vlexjm00Di1txljbYniLufl6zs3Jp0BFzfQceyeKVLHNY5pINiWPB6o1zDORxA7bDUceC2ytwhpBLTa/ZcX7eBsq5Pg7I5LuLbnUZjd1u2xuSs+KvBtMRL21x3m28fDsgdqKt0MQdG3VwtY2AueHgqJXQ1kjmzM3jrk360jWxgcLNjJ0Px7TbgtS2ro70gPY468tDcH81xYNRtewOabXHtRuNr8/ZNx4KuOa4o6NM+K1523+CFw9u/Y6GZtpY3dSUgDeNv1SQCbXFtDqOHK5o7+j6tkxbE6iOMFlI17pbua17mvLJImxNOsj90C6w1Ab2uaDumCYU3eNvwvclxvz71E9J9cxktZJER906HeAcGu3QaxpIPFzo7W7x2rKmtvitPBXimdoiPWWU+HV1U7ZLcFaxNpn0hhyIEX0b5AREQEREBERAREQEREBERAREQEREBERAREQEREBERBaOjLHKPD64z4hRCvgMEkfo7hC4Nkc+JzZQ2cZSWtY9vI9e99NbP0q9KrcUoosJoKNuH4fG4PMDd2HSlrs7GlkLRHHG2Ql+UZi54a4kWscwRAREQEREBERAREQEREBERAREQEREBERAREQEREBEX8JsLnQDiTwCCd2Hx44fWRzHWIua2dh1a6M3DjbtaHEi2vEcHFfoJ0raSSIEgRzMLGm+YZ2XlADrAEWfKc1tbBfkfENpII9GvDzw0PVHiRxHhcd4VowrpLlxBtPS2du6YG08hYDmYy0LIw3UktDgc1zbt1K8mr0c3jiiO07uroNf9HWcVpnbeJr7J7+7+d36J2m2hjo6V9Q43a0G1tS53Jo7yVktL0lMivPJAZnSEiTUN3bbgtDLi1rHQH2jfUKM2nxV1RQvizF4jmD3D+4QxoaAOAaXi/LvKtnR5svvabJVRxMp3tjfDLGx87ngjrGovZwkDraNAba1iToObjwxWs2tE2nd2oz3vPDWeHlvvtM/u6Mb6Q8Okoc7Z49G3MF2ipzc2mJxzZuXZwN7aqkYD0otExdud2wOZoTcujAs4mw0dYZrW0sdTxVsxbYXCmM3j911dy/qRTb5xd+8FgS5zxzFrnms72joc4nkZTsip2NgbAcpjqnPsA8kXAazVzcrhm0aSr0rjtvFot7+Wy2fJmiOKJry8onn67xyb3BjcOXNnGV7GPY8a6HKQfCx/MKodOWIxx09NSxObmqstXVCPLbMBZhc4auL3knXhuG2ACzCoxsx08ULngNpoGtdcniA5x1by0y9/VXBHXNqCZBJvCbZnXu7hpe+vBX0Wj2txT2/kOX4hrp4JpH9UfLu+0RF13CEREBERAREQEREBERAREQEREBERAX8Lh2qd2Bw/0rFKKDiHVMJcO1kbt5KP/tscv0BLJi5xh795H9mNJLoAIZZ3RthAcGsijM7pHTXIF+drHRpD8xotB2e2Xgxmpxeqzmhp6cyTRghrGR7x07mNlBB3bGtjJc1vs3sOS+cN2Jo62oeaSucaKlp2zVuITRujyPJl+7iie1rrlkZdc3sP4jYEKAiveP7H0bsMlxTDauSojppGR1Ec7N3IM5jAezqN0BkabEHQu1BaQetmwlFSQ0wxOufTVNY1r4qeKPeNha8gMM5ynS5sdWC4cATlLkFCdh0wbG8wyBsxywvLJAyU3taJxbaQ30s2686ylfC90Usb4ntsHRSNfHI0kAgOY8BzdCDqOBC2bavCHOxbAcDjldG6jpmyGojDSWSMbm3oa8FubNR5hmFvvB22VZqcC+06zEsSrq0so6Od0Ela5kZmmMbhFDHFFCAwOLd3wH+sZo4uJAZ0hV0262SgpKKlxGkmlfDVPfGI6pgiqAW5+uAAAYzkPLmwgkO0lv2dqLPiklTlLhTUsrxb2t5IWxtDe8xmUIM0zDhdf1bxhuIYhPhuJvx6JraZtOTE2VkUcm+IflEQbrmDsga4i+YsseKpGF7DU0MNI/EqqWKauDXU9FSx7ycMdlyvlu11r5m9UNBF+ZDg0M+RaCzo0ccYqcO9Ja2CkjbPPWuAG7hcxr2tczNYS2J4m1mud/dXZTbDYZU0lXXUtfPJFRwzPkY+NrJTIxhkisXsbeN4a4Dq3uOPEIMyRaBg2xFJ9k02K11a6lbNNIwtDDIXMa6ZjRExjS90jnR5r2sG5jy19aTYqgZRfadTVVIpZp6iOmdBFneIYpZY2zVLshEebdl2XKLacTcAM6RXXZ7YuGtqqwx1lsPohnkxF8bmlzLEhrIidXdV+vY0HL1mtPrtFshSHDJMVw2rkniglZDUR1DN3I0vMbWuaQxul5WaFvBx1u0hBRUWkP2EoKaDDpa6ulgdWwskMDI88odIISwNysOSNuchzngkmwA42rPSNs0MJxCSjEm9aGxvY8gB+V4uA8DTMDcacRY6XsArqIiAiIgIiICIiAiIgIiIPahpXzyNijbme82a0fMkk6BoFySdAASVne1+OGeV1PETu2Oc27b/AHpabF3bluNB2WK2HZvamgoIrS7xlU6V+XKyR++pmNaXudezQy+cFjdbZNXG4b94TsVh+FDM+n9IMmZ0DZ92+MxluYGW5LGBjHAOcfkbi+uPavOY9ETEz0YTRYNLJqWljeJe/Kxtu28hA+K0jY3YyoaaeoERkhD4nsdHFVTROa5zc7hLDEY3DKbZmuINzrorLWyRzOY6lwujYxlpDiEtNTMZoQXupI5Wh8ptmLXltnZM122ULQYs/FMc9JqnyS0kdZT0L6feywxugkkjjqruie1weYyXBzSHB1j+FgGlrTaEVjaYSO2tA/C6+eidmLLOMTzqXwSNkaw950yHtMblomwm1kgpBEG9eON+7JPtuY0uNr89OHIHQKx9LGyLMWp8zbNqYrmGU6aE33b7C5Y4j4HUdhyDDK59FII581PPFYZTwuHNcXMcCW2cA0A3+R4cGeHJX2x1/d9LSbYcnsnosdV0mPfMYpIWF12gvGdpN7Amw5C3Z/NVnbbHzIxoAFszdBwDg4EWF/8AumJ4vGZW1GmZzQ15AblDmuuC3sBuR3kfBRNFQnE5gyMWi3l5Jze4br1I+Reb34cgdVPBXeLT0hfJnvNZrvvM9EC/CJKmjLnCoayZz7TQQGpibFCWCeSYbxrmxB8jRmbcjdyG3VNqbXUk+F1QgkGV4yOa8FxikicepJC8WvE+xOYWOhacpDmr9d7T0EdJhdEYBu37000YaS0CHdOkJNjezCwa8evYXJsYnE+jqGvp2x17n1DBnfG9kcW+ge8Rh+SozMfHmdmGR4eDkaSCQCOlpM0TTfblO7hazFNb7bsYwOvFREHXBI0cNA7udl4tDuPy7V3qRxTozbgU/pJrZI6R0kLJI52U8k8kZlja9m8jkBJLAcpEQAJBNgMyhcPro6hofG64LQ6xBDgCXCzhwDgWkEC+oKvO3Z5nSiIoBERAREQEREBERAREQEREBERBdehbEKakxUVVXK2FkUMxY9webyvyRhoyNJvu3yG/crDgBwnDMQdjD8VNZKHVMjaeCmmic+ScSB+Zz3uaRaR3tFovYk6WOUog0J20sP2FiLd41tZiWIOmfTtz5o4XSRyEZsuUtu2QceEg0Xz0b4xSnDq/CKqf0T0sxvjq8rnsDm5bseG8B1G8SAQ54uDa+fog0LaTGKOgwd2C0M3pjqiZs1ZV5HRwnIY3NjjDtbExxjQuFg/W7rCxbV1mEYpiFJi0uImNobTskoN1I6W8cj5LPfwijBeQ45XXDTlJLgsbRBsGH7Y0v+kWI4q+duRlK6KiBEn3rwyEDJ1bi5jk9q371cvRVtfHDhk2Hurvs6p35nirXxNqI3teI941zXgtz3a4alps5hBNiFlKILh0pYrHVVEOSvmxAxxFstRK1kVPvCet6NCxjRGwgC+hvZvWdbTt2Fx+HD8FxQtm3dbUmKGFjN42bdtsN6x7RZhbv5XXuDePwVCRB14nilRVNDZ6iaYC+UTSTShpsRcCVxsbHktvft5BVRU87MZOHRtiY2qw8U8cs7nt1fuZXxOc0kHKHNDxYNIAOYLBUQaXsFj9GTjFJU1UkTMRZlir6gbyYgCpb9+WaZy2UOtcNNni4uEqsQoMPwCtoaOs9KqKmeJskm7khzsY6Mu3bHXtEGNe27nXJe8jQtWaIgvHSbjMEtJhVDSyiVlHSWlc0Pa3fvETX3zNFyDG48/3itGwOKUeHNgnix17KcNDqrDJoXOe+UtO8ETW33YLiP3Yd7PtOvpj6INQ2f2ioaunxfDpZPs6OvqjUU82QuYxu8je2N7Y9G/um3bcNIe8AjS/HtBilFS4W3AaKpNR6RURy12IFj44gA6Kwja65IG7jOmYARnUlxtnaINL20x+krdo6ORszfQqb0Jm+tJu8kLnTvAaW5tS7d8OXcqt0l4u2vxarqo3Zo3yBsbtQDHExkTHAHUBwZm5e0q6iAiIgIiICIiAiIgIiICIiC8bN0LZ3xufGHQ7pkeRpI1ABa19wS65cXaW1011CnqCeOI+h1EYkpx+6LrmSNhIJZma5riAbaX5cLrK5dp5sN3cjQ57Dxitfq3vnF+IB5aq44HtpQYo3SRscttYnnIb+BseFxp3LSI5LbwtWPGMDqanUgklwzttlLi43N9GnNrbMOayapoWU9PNHCPYcKhubi9xDCHuPbnaT8QVoswytORwkZpa3In2XDt7OAF3C6pW0UeV5ktoc1xzLXmzx4iTs7WDQK1VZ82/bJ1wq6KKW+pYA7tzey7j3hcO0Oz8VQPvYmyW/jAda/ZfUePcFD9FEhGHxzRnPCQ1jnXvu5gA2djhxDTIC5p16r2C5PG61MgLcw5rg6jDNbS+m0+auSsMuxPYGjYTKIWixHVu+179hNrdy4cPja2ZjGgNY0gBosBbirxjfXBaASezWyq32U4OtbUm1uHHgO8rGlbTytMy1vwRziH10iVjp5aCiBBiZvXzvB1DZQ1p1/3MUp17l0Yzte2khmqHysjYNXOaeve7pHAWaDo9zm2Fxo1Uva/FfQJDDIRv2s3kzC6zmh7mimg6oJ3m7aJSLXDZXtNrG2f4lW/bdXBRQNc2midvJi43L3C5awutwDRfnqe5dvBi4aRD53U5ePJM+5IYXgsu09VNWVU9RTUt2siLGunfzteNuZzActyQ2w4khXVnRqYadhpKyKtaRoSd1K/QZcuZ7mO6mUXLxe3epKTF48NgEMXttN2ljm5eAJuGtA4j9VWKNtc6r9LjLpXzODpIgQHXPF0bnaNltYE/i4EgkObp1ZcMI+uopIHZZWOjPY4EA+B4OHeLrwWv4XisLbU8lM4ve0b2knEQZY2Bc8zaW7CMwLm9VzrEj52s6OaeWLfUV4JT/wCHLs9O52t2hzrujJINiCW8NBxFd0TTyZEi9aunfDI6KRpY9hLXMcLOaRyIXkpUEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf1jSSAASSQABckk8AANSe5aBslsU1oNRWkNyjMKcloDRa+aYuIb35b27TxC+ujmgZTwenuLC5zns63+pYBqb8GuI1J5Ntw1XTj+NRzyt3zHwMBBhuMlyD1ZJTYEHMAWxn2bBzutZscxC8V7yg9ucNindu44H5TxqZWuZEwdUAtHtSGzhbKC0gHrDishx/ZYMeSHXIJ64BaQbnhbhw8Vt0e0DopRSVJ3sTnEx1Bs5w7LkXN7geKhtosIbJd7esNXggnszWsddb8rcFrS2ytq7sdpMdrKI2EjntGljcm19e4qwwbSyVLLdU3BGZw1HEGzeVwSLOcdddCu/EMCzAjKBYXDjYaFzT+I3PVP6qubh1K4m2Zumdnb3t042/Racp6M+cNJ6INvDg80lNLvJKSqczMIxneyXqhsgjAvIHtGRzW3PVGXhrvta30ildJTFpBbdjmGTK08g9j7yRnQk6kDqjnp+SGu0bLE4ixDmvFs7HNIc0jNcZ2uAcARa44ar9a7BbRx4jhkFeGNbI5obK2HeZmys6sjQDHYAOFwCdWlvIq0Y6ZKzF43/nmtTLfFbes7fkgcGo5S9pleHXAIbHmcDz1Lw23iLqe2lBwzDKrFZGMiZFES0uuZ5XusyGKJwAyl73BmZo0DiSbBeOI7UVEJJhw+XQnrRvgLJNb/eQ2a1zjexcLk/Eg4l+09t+6ubT0jY5qea5fUwSE5N5YCFzIwTks0vPO+Ya8V5o0tK84+ba+ryX5TPL2MbxzEZqyoLMxc9z3OkfxGd1szhbgAAGjsa0dpV3wUx4VBkADpjzGpzBx62vboq3hFI2ji3hsXuuO+9+8KUweidPIJH3Nzzuf0V7eTKqyYMXSHeSal3Du+fJaBhe8jY2SFrs1xms1xvobcD2kKo4HQl72j8It2AaHv4rVMDpMjderqBYF34eNrcetb5eCymW1YcmGbNCoAkni3rgD968ubuQQGOyPBaWuy3F2m/zUlvBh0e73hmgb7csoY2aEsJLXXjsx9NZwucrS0MzHOC5zOzF8QcGPABtx13g062twAOYPFVGrqHby/K5udSSOsOJPYQo6pnk7elyhgq3xtYy1VuXyb9uUMIYWZYpe0uLnBp5Fh5XvjzhYkHQjQg8QRxB71Z6zEMlc+njvuoYW5QdSxoBcGA/wNJIaBwbkbrZcO01FlbT1Frb+Fjnf7xos4/4m2PiHqNtmd+fNCoiKVBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAX3Tx53Bo5m3+f5L4Xdgmkt7ciAewn/tf5oQs2x+JAzOonGzZGtqAOObK1gDBra2aziOYaRwJUzizG1TSx1gbXvlbxcQO3vCzmeodBNBUNNnQS5Ha65Ccvbe27PdyV6bUteM2o9gaZDyF+HhzV5hpEqtieHuY1zHXIb7JPEWNtNT2H5LwwbH90TFLcts5oINvwkDkeZHyVrr3h4dZricp5MFiXOF7tF/xFVHG8L4uAtqe3w52/nxVoVnksJiilLZGFrRma0jUkjM7uDfZHAqq43hoOa2ou4ciL3cW2yuNrNKj6eokgOmljodLfmpmlxYS9V545b8dLXva5tax7VMcieakyQugeeNri9768bOA7QLLUf2etrH0GIehlwMNWdGusGCa1hYnQF4Ab32jCruJ4a2UZm92nVLu/8ARV6KOSmlaRdr43MkjeLHK5hD2Ed4Nv8AhV4tMc4Umr901LmGB0z2hjY2vkkdZz42Ma3M97nRscAA0X+HcvwptBiBxbE6rFZQWskke9jT+CIdWBh14tiaxv8AhX6I6RulZ1Xso9rWhstdFHSuLbhrd84sqWjr3Dt22Vuo5jtBX59osPNSWwRtIjbZ0r+TnC5yN0GgCxx6jJkieLtPktOKKzyeOF0T6uTeFpyDgNeFwr7hGCG3skAW0Avfh/JT2wmFw00oMsO9aWFoZaJ4DnWLXWkBabEfqr3CyCznei5W76VzW/2RmRt8rWWLblrQRpwu08naJleIQOz2DNhL7g6N6twbF1svG/bfxsp2oq2xDMTr13WOo06xGjSCLg8V61dc2IHJGwZRb8F8oOW+aJrbnM4HsWebZbRCV5DAG8AQ0ZQOfAc73F+Jsq7L77PnafHc7i1nAWFxa5twvYD+rLhwvFCRkdxvx18OQ7lAwvLnaf8AbvUtBS2YX210/iHfyNjorbM5sipZC6eqI4vMcTR2uLWj8rqb2tivMyn1Jp6Nhba5DSTndfvyMA+Kgtm5ojUmSZ7WRxSvkcXEAFwcQwdbQqfwd5qamqndrmuBpm6jWgaHhYd3aokhVEX9cLG3Zp8l/FVQREQEREBERAREQERWPZrZkTwvrqqUUlDFcyVT7DNY2LYg7ib9W9jqbAOOi8+q1WPTU48k7R085mZ6REdZme0Q0xYrZbcNY3n8vbM9o9qApad8rxHGx0j3cGMDnvPg1oJKtVJ0e1ZZvZzFSR831EjW2HgzMB4OIUnsxV1+Kj0fZ2kGH0biWuxmqjMlXU2uC+mgILpO4uuNSLxEZVb6D9nlkjhU4iysxWcHNvaySUMBPtCOCN4LY7/gcXDgOGi8mOviGq+1WK6ek9OOOPJP/WJitfjb27NL302HlO+W34eVfjtMz8mavwbDGaP2gogRoQwxSAHmLtqF6U+zVFUHJTY5QzPPCIvjjef8Ime75Ba2ejbDKc5HYRSMd2S0tOX28Zoy4rjxDoywedpa/DKZocCCYY207tex1LkcD3gr0f7NrOsaud/bTHt8qRPzY/7jg6Thj+62/wCf6MqxnYaupRndBvWcd5Ad623blaN4B3ltlW1qr+iqXD/vMDxKehI1FDO41OGu1uWmOQEszHi8iQi5ta6gMQxGOoqBQY7SjCq+S4gxSHXDqsiwBLycoubaPdcXaC6MuDV5suTW6LnqKRkx9744mJiPO2OZnePOa2mfwt8f1fUcsVppb7tttp9LcvnHvUlFJ7S4FNh8xgnbY6ljxcxyN/iY62veDqOY4KMXQxZaZaRfHMWrPOJjpLC9LUma2jaYERFoqIiICIiAiIgIiICIiAiIgIiICIiAiIgLoZcNAbo45iHcwdQP+n81zrqr+oIj2bq/bZwsf1VqphH1NVna5zuLgGyDS4e3QOFxzHZ2BWXAKvNEBqdB+JoGlgDYjsVRx5m6lzj2X8Ry7R8rqS2Oqfwm2jiDexFrhwuCOy3BXTErrKziRbW4OrTxEltL9oXM6nufZBHVJsJTxAvytZesD3ZRbXuANtLW9keOgSSMEuuQD1R+Ik2Y63tNPd8lCyGqsPDuNh2jq30vfQW7B81DVOF2PVB/r5nhqrpYDLcgG7gRYgnNbrHdP7Lcvgv6aZj9XEAkNudDqYzawAa6/Dj3qd0bKPDUSQEXFw0g8+7kSF2TVcFQyzmObIODvwuIJtfqaCxHyVtGFxhmd1zpyblAFpRqTx1AUFidTTg5GkBxsAdb8LHkQBdNzZCw05dE0XG6jqgBGS2+dwAc4RmIB0Ya+IAl7shJ6v3hKu2AUoblGRrRexN3Em5bm4EcgqTRwuyzvDhZnoriLR5i3etDgC7rW6tzYmxt1esXC2YTiLI3ljhY5nm5MliOVspty5KJ7ldlww6PIfbuBZ9vvPaa0PHBv953yXlX462Bp4kuaR1i+2a3WNrN/EB81BYviMhZ1CHCwBI1tYZR7XcqXiQlkOv8lHCvNtkztFtS6ckDQEm9r2/CO3uVeMhcbleIo3jku6ii5W1Vmcy7MMjuRpzHYpWueWwm/ZfgBqNP5L6wilNr2NuFxccieXh+RXH0g1ghpJXgnRkjra3vYm2rjw/moT2ZLQz+kSveSd01z3Hsc65IAv3rVKOt9AweSY23jw1kbeRe7hYHjxWc9HWHurJIqeNtmMs+S1yDbVoJ/Mk8AFbdo65tZWRUcJ+5ph7QvaSThf53sloVrLzpC8saZPbIBd49q9V9z+263JxHyXws0SIiICIiAiIgIi/rQSbAXJ0AGpJPAAdt0Fh2KwJlU6SoqX7qjpGGWpmJLW5Wgu3YcNbkAk21AHaWq6dGuxcu21ZHXVbDBg1Kf7BhtsrJmMuxtTUMGjg6xa1nAgOA6geZq7tfQsL6LZgyCKmihOK47U3LWiGIh27LxwzSADjcD0ci9rHbuhvphwOqjGFUtRuqh1yyGaKWmZNGwZWR0rpGhjrRtAEVw727N0NuNoYjUTOvyc4jeMMT2r0m+3nfrv2rtHed/XqJnHtpqdeU5J85+76R+e8+TUWz02GxCKBjY2gBoygGR+UWFh2DvsBwFtFEv23aHZc2vYZIw7yrEq/FMT2vxaqoMIqxQUNCclZjG6bU76pPCjpmPcGuYwXzEOaeqSTlczefOx9acLxIbObSRNE8xP2ZjsZkio8RaSA2J4a4RwVQJAy2AJLWEXMT58dVm1donJE8uu39W3nP7dYezBXSU+zeLT23iI23+MP0NS4rDWs3UrRIDxY8APH95tv1abhUzbHBPQHbwOvA4FzZXEANAF3Ne46Cw1vpcA9hUU+nfhlXHEHl0UmsLz7THA6t7OJANtDmB01Coe3uxe0u2klRFUSw4RhFM+b0elDjUSVu6JyVD2QObvWvILgJXxiO7QI3EF59vg3il8m9bc/1/nd5vFfDqUiL0netukovGel+n3rqbDKebFpm8TTDLRMNurnqnNIyn+NrXN49ZV/abGMXxOlfBVYFSSwPGtK6pb6SDY5XRzB2SOUcnCxH5Lnq8AxXZem37JosTw+EZqiBkEdHUwRD25owxzhJYXc5z3u4agAue3UdmcXiraNs8LWyh0bZI9A3eMI0BBHVf+EgjQ8ea+ijjvPDadp8uX+XzF72raIrEbT0md53ny7bT7vexHo92hL3f6MYw2SIOIGHz1FjU00hu2CF0mVolY72WPADXG7Bo5oZyYzh0lJPJTSiz43WPYRxa5va1zSCO4rT+k/Y6HGaAPi6r7F1NNwfDN/ASNRG8jK4ctCNQ0inVVa7GMEhxKQWrKGQ0GIg2zlzCA2R9h7RLmONtAZpB+FfM58E+Haqs1/8Wa20x2rknpaPKL/8bfi4Z6zLu6XU/XMVq35ZMcb+tP126x7N47QqqIi6zMREQEREBERAREQEREBERAREQEREBERAUjjLM8VhqTEy3HTKNPlb/iUcpeUXgjd2ZmEeHw7VaqUO8CenF/atoDbjp335WtZROAymKZzD/wC9jbn8FIRvMYlj4FhLgOGjtefff5KEdW5pQ8izgesO0EnX81pHRDTKVwcGWvqbaac29ll3tLyALHU26xe0XcwBo9u3FQGz8wcG3txHHOez+BTMLzyZYCx0Fh1S0N60gPaVC7ppItGuu3RzNAIzoQ0cQCRx4nsSrnEeZ18vDi7UkBnu7Hnz70qZxG0uIaBY5debQ2x6ptfTsVF2n2gfUPLGmwudG6DVQl27Q48Xuc1lrEnhftJ4u1PxuubBaDM4SPFxxJ0On8ly4Rh9yHO/r5K6YdShsbnE8iB8cttHEd6lHVWJmxtNQJJhEXRZYWEH71+aU5BrYHUfEjtUnCwzXaBbQOvctvdrXE6krjxGmG83hscriBwFicpuCOeh1XdhryxzTcEbtl/aOtsmpGvJPecum3+f57EvgbjGDE83Bva5J7OxdklAwngNeeoHMfiPcVFwklwPPwfw4KbZVENGbN+Y8OJ4qJS4ajDY8unHQ6kW4cha/wCfPkon0frcB+v6LrxCvF7fn3r7wyMvIdYkcOAcPz0RKTo4C1l3ECwFh1db9U3zt04HnzWfdLmIbqEDR13MaGu1a4Ei4IFr6XWlWAY4ONhlFjlbcHqkjQi2o/JYV0w15kniiHHMXaf3Rb/+/wAkjnKtuj6pcckjpHMa1sDHaujha1mf/wAzvad4Eqd6P6Qsa6Z1rm5J0OpFx7R5AclTKZpkdHEdQ0AuPaeV1f6E7mieedv8wNFKsO+qwwijhrffPfmHO7uswnxF/hlUYr7W0I+yGx69SNhb4xsB+fb496oSyTaBERFRERAREQFY+jSg9IxWmYRcNeZXf+k0vZ/xho+KriunQ4bV8rubKKpcPEPgH8yuZ4zknHos1q9eC0R6zG36vVoqxbPSJ6cUM8q6+TF8SxNo0hqq0SVMrSbyUlI50eHU4PIENDjb2jHGdN3Y+22jGTmHD4o2umJa5rraU0TbHPcezwFhwsO3Lfj2Rr2UOCxTZc0kheGMFy+WXO6OMWGp6rRw5DTUgGw7J9HGKy56h8zKSSchziY/SKu3JrmexE3h1Q640BAsAOhhw8Fa46RyrEVj0jlDl59RXim9523mZ9Z7+1dehbpVk2Ug+yq2kdU4eHSyQVtDGz0uN8ji97amIva2UEmweXBzQGi7xYMrXSHjUu1tfJX1kckFIxj4MOoHm0kUTiM9RKBdu/kIBdxGjW9ZrGud2T9HOLQguZiEcp/gnpzCw+L487goWvdiFBrWUJfGONVRnfRjtLo752NHNz8oVpwTWeLZWNbW8cMWj8p+ey57A9JU7JaLBsYlDhFJajxaQ23zLx5IKl7zYSty5RI43ddocSbPkv8AS9M1XiVZ9h7LQ0lXNHDK+fEMQkeyhyh/XbTRQvbPUgFwG8ZduoIDmnOsLZPS4pAWBzZWEAlvCRvY6xs5p7+B14hKrZ2B4jyNdA+H91NTuMU7OINnt11zHU3PWd2m/ix6HHjyTkpymY6dt/N0LeIXthrht0rPva50bdITMUlqMMq2Rw19M+eGanje2WlnELnRzPppLkSMBBDmXcQNbuBuK/0GRminxDC/wUOJVUUI1OWnlu+FpJ1JuC435uKzyq2diihjNO40stKd7BVNNnxPb1i5zube3sHAW0N8/Z531WKnE6ixkrquSYuaMrXNiYIy4N/CN9nbb+6uzjyzeaxPWPycbU1iKbx3tXb13/bdfcE0qKuj/C50j2DkCHcvgW+RZ9s9SCPaLFcL1EeK4c2raODWzxudC4tB0zuc6SQnjcC/K1zweoz4qXDg5848Whklv+kFVjGXbvbHBsv+sZi8bu9rYJntHmAK8X+qMfFoMs960m8etPtR84enwq/DrsX4pms+k/yWbD+go+PES9xyROewPyGQFg1Bs4hpNy0HmprGG5amdo4CaYDwEjgFAU9O6OQxRzNDS7emMtzSNa53WDXE5cpPaLi6UtxVifON3umNpmHoMSvlAytJndFZ5dqGuyuLcrfauRYHtXp9rQ+8HC/PUc7aanuC8G4W64GcZRUidoym/F5c0nNrxFj3HtX9pMKLBCMwO6ZOzhbNvDe410srIdT8Qiblu8dYNcDrbK42aSQLNBOlzZeceKRl0jc2Xde0XaDkCR8Tbtuo44O6SIRia7RGI+Elg5jiHENDw03I1zA8NF1VWFOeZevYSOjeBY3a9mUDUO1bodNDqNdEHV9oxZQ7OLElvO+YC5ba1w63I9yQYjE8hrZASQSOPAanUi1wOXFc0GFkOY8luZshe7KJOt1Cxo+8kcbi/HwXyzCXNbGBJYx+kkOA1vMHWI10Lb/GyD2mxaJsbpA7MG5eq0HMc3s2zWuDY68NF6nEYgWgyAFwaQNeDjZt9Orc9tlwDBnFsgdICZImxk2eTdrr5iXvJN+zRdMVFI2QyCRv3m63t2uNzGLdTr9W47b2QfVFibJTlvleXSAMOpOQkHW1uAvbjZdyjYMMLTEcw+7kmk4cd5msOOlr/kpJECIiAiIgIiICIiD1pI872t79fAAk/kFMMZdkjOzrtHM8DobeP9FRmHHK4yWuGgj4ua636FdNPV6tf/DYOB7L94KvVMIXFxklbJycAHW5jkT4fzKreOxgSOHA2u08NCrpjcTQw5vZuSCNbB3eNND/ACVKxz2bg3LOB/iZz+IWkIladkKveRBx8PBw0dz7dVb6Sqja037eOZoOo7x/VllGwGMNbVGmJ0lBLO57Re3xaD8h2q04lVEXGqiY2TE7uranHi4btp014E8+ehtfRRGC0lzmIueK4WNzvVowajv+X8J/zUJSeF09+AHP+E8AeV7lTlW4sjuOHdp/F2c9F64VRZGB54Hhck3PW8OxcmNSgNy34200trqOB71C0QgcRddhsb3LXHiQNHgXJ0v3ePevJ09i030yuFrnWz32sLad3xXrizrRO1B6osOr29o15/1oueii3sbQS38RN+J4EnS39eGkwrPVYaNzXNuG668c3DX5cf0XxiNfkba/HlyHD/JRGE1Aa/d20va/W778164qzO+wAAULQ8oCZXK44PAxobfrWsb2Nrg3N+sOX6qBwChNxb52J/6QSrpFTuy5dTYkX+8tqS08RYcQiUXj9WGQvOg42ADBb2tNNT7S/O201Tvq97zqIwGgf3jdx49xb8ls/SLiBZCWkm54X71iWB1MckrpH/ie4jTlfqHXnlsFMK3WPZjDzbO7iTc3/r4K4vgMu5pxxmljaQOTRZ0h8oPzVfp8QjYA5xsOQGpPw+Cn8B2mgpn+lFpeGtdugOq5rzbl8LXS3RWOrRtpKhjGsp8zcwYSW6+xa19e4nu+azGoZle5vYT8uX5LqjkmmgnxKUfezubFC3kC82Y1o7ANV8Yng8lEWRSuzOcwPzcb3Lh+RCyWs5EREUEREBERAVw6Hpw3FWMdwmini8btElv+WqeuvBa80tTDUt4xSMfYfiDSC5v+Jt2/FeLxHTTqNNlxR1tS0R6zHL5t9Nl+jy0vPSJiZ9O7l6EsEL8WNPLZwwptTHG08PSDUuiMlu0Wf8WsPELdNrcfNARBF1Q0NzPs1z3OcLj2urw1JPbysqC+NuHbWumaR6PjdNv6aT8JqGbt8jQR22dJrxNTGL30Vz6RMP3zW1DOEjWi/ZI29gfFvV8WldXwPU11OCmX70RM+ye8esTyn2w42uxTi1V6T2229OfOPXr8EXR7ey31fmH95sZb847OU9Q7S09T+9YGn3sVzbvc32h/xLBsWo3U8lxdrSTlIuCDzabcCP0+K9KDHJIyLnMBz4PHg4cfiu/bT1tDC1OKOfOGr7WdF1HiP9qh+7lJuKykLY5s2lzI0dSQ2ABJGe1wCFSavYrGKU5Y56aqbrrUNlgm7rtYC0+JeV34DtiWkFsha7Tnkf4Eey/wVwptvn2s7K7/AM7HX/5Ry/kvBl0ETKtZvTlW3LymN/8APzUKg6O8RxB4ZXTRRQXGenot46WUfwvkkFo23trd3PQaEatUGLCaMU8Qax+7axkbdGwxNFh4ADh2ntsVCVu3ry0hpa3/AHbSD85SQPEKrS1b6x9r6OOZxvmJH8TnH2v/AGV8GjinMne072nfbptyiFx6O27yo3x0a1sjh3DSNvzFz81AwSCo2ypyR1aDDauqe7k107nQkHsO7kB77nsVxw+NtBQOe8iMyNLnF2gjhY0m7r8AGXJ7M3csy2WqyMNxbHngtkxif0WjabhwpIg+JrrHVpyCS/aYWH8S+f8A9U5d9LOGv/LLMY4/7ztPwrvafZDpeEU4tXF56Yom8+vb4/qq8828e6Q/jc55/wARLj+qiGQyB4myjWUktuc+7daOxv1bBoa8gHi0qURaRERG0PVuioonNjI3RMmUB7yeq85mh7uq8F2l3AaaDLcXsvmKncPaYTGJSd2A0CxiYGkMzWyh4d1b8XXtopdFKEKKR+VoLXWyyAN6rnMcZZDe5kFnFpbZ1zax1F9fd1GS5xIJO+is6+pjEcTZOB0aSHXHNSaIIeWEtLYxpvHSx5L6iIvz5mi97NYHAdmcLqqPSMxybnJ+HNvc1rDjlFuPYu5EEb/a/wDYf8//ACT+1/7D/n/5KSRBwQ+k5hm3OW4zZd9mtztcWvbtXeiICIiAiIgIiICIiCwYbQ2o9/l4StcXcsmjTp4XPxUPiThmLmEWPzC4cfrqkRMjbfc20A/EQbOv4HRQkeJG1jxHJXhK1UNY17DDLex0DrjQHiNeSreP7NPiJkifnZxAuDYHgNNeH6LxZX99jpooXayqmMnpDXktDWtLQT1AOduwnifBXqiXFg9IY8Up9LBznkDs+7kvbuV0r3qj7OVT58Rpi45iHn4AMeTwV6fFnmyjt/ripsVdWz+H53B39fmtJwDCALHQEF9rgG9gANBc8VD7O0IY0E8Bbt779ynRtFC14iz2PA2tbUc7Ht/mqLxDrrZrMABt1jYWeNLHuA5ql41U/eW+HM/HVT+KSNazMNdL/kO0/wAlVoWmSW54c+5Qs9ZIC6LKBbNa57esziLajXu+K/mG4aHsEb3llybWtqcjCPa5XFr6/Dn1AkEki+UFw0BAylp0ub8uIXayrs4lga67gSwkAluXw/LMbfC6tHRSerzrMLjpWXPtaWtbxve5uPBREda11xa5PPmvrais0Nhx77/zK59kcKdNIHWNhrYDw5FQndc8DpiGZsunVNyO2/NTkkoDb68G6aAcAT+YK+Y6TI2wGnO+QOIa5zhoXXUdj1YIKZz9LBvdfqg28OP5JCzOdsag1NZuRqGBznHuaCfDj+qyCFvo7nxk3Mb3suOBLHFpI7rhbHstQumbU1bhcmOW3lcTx+CxuOle6VwcbWcczzrxN795N7/FTj57s7pjCWmZ93kkDU9g7ArJQAPkADQ4aNa3lc8XfAKuNq2sbu4x4957XFf2OslBuw5e9t7/ADU2jdEN22ejjnnha57Ww0TS8gkZd8/qs4u4Nbm+a8ekyeOWaGWJ7XtMbm3YWkAscNOrw9rgskwPZ+rrHWaHkG9zwHAnXtVokwpmHvZTb3PM/OZWNsWRht8lyPxn9LdoWcxstvu9kRFVUREQEREBERBbsOphjeGHCS/d1tI/0rCqgmxEsd3bsusbC9+2zSHAfdBW3oy2ubiFPJSVbN1UQndVtI4ZXxSjq7xreUbnC4IvlItc2ucopp3RPbIxxY9jg5r26Oa4G4IPbdXKeBuOvjrKWVtBjkDcrZOFNXsAF45QAbgtFrWJb2Oa0ZePXNbwvNbJtM6e88Vtuf0d5622+5brP3bbz0mdts+n+u46xWds1OVd/wCuPuz7e0ecbd45zO2myRbc2zsdwk/C7sDiPZf2Hny7s1xLZ98ZOXX+66wd8D7Lh36LRtmekrcy/Z2Kw+gVQ0dBUaUkwJAz085uwtcTwJIubAvIJVtqsGpKkXa7ck65XAOi15gO0t4OC+002vpkrFqzExPSYneJfP2tOO3DeOC3lL88vopBxjd5XEfMCy9qakn4ND2/FzB+ZC26TYQHVr4iO28jfybcL7g2IjZrJLE3wu8/DeEar2fWKrcfoyvCdn3yEOkcX21sS4xDxLvaPctW2U2bbAwTzizRYtY4deR34SW8m9jefPTj2TTUWGxmdzm9T/xE7msjaeVs1mg9lhfvVDrdp67aOR1PhIMNMCW1GOTNdHBGwfvG0jXWL5LX19oW1yXEg5mv8UxafHN8lorWO8/z4R3MNMmovwYY4rT8I97627xCXaDEPsGkcWx6PxSsZ7NLTNN9wHeyZXkEEduhBaJMkNt5jEc8sdNTANpKOMQUzG+wWtDWueO45WgdzQeLivbEsQpsOozhGF3MTiTV1x1mrJDo8l4GrDwuLC3Vb1dXVVfKYIyazP8AW80TWtYmMVZ6xE9b2jta0coj+mu+/OZd+uOmlxfQUnimZ3vbznyj2R8527QIiLrMBERAREQEREBERAREQEREBERAREQEREHVhGJMjkNPO0GKTK4PIB3buF9dQ24F7Lsx/YxsgL4iHA6tLeo7nbQ8RpyXNSYG6oZvAOJLR4CxJ+Zt813nEXYfC6F/3kkTXFkbSLkEHI0kg2tc/ABXqlS67ZuVmhsba362bw0FrqIqaV7NHA8PHtGqk8V6Q6o9V0LW2vbQ3+J5qtYhtZUOuLtbfsFzz7fFX2QbLQtirJX8Cxoa2O2nXddzgeDQ3KBb/aacCtLwqlBO848+fd3LKtmZnSTyE6uLcxceJ67Ln81omF1zoY7cQeVvlxS3VNVgxjFd0zKNNLKuYUDNJcnifiuOvqXSG5Uts83h4hVSmqqYhgbf2Rbl/RX1hlOXjhYnW+tj+S+GwmaYMHbrw0CtckTaWO7tCGgj2gTcXHIdqhaFVxhhia49scg7/ZPbb+fLiovCa9zjlAvZwPGwHVOo5cB46eKlcUc+oaXZcrXCQN01PUPOxN9OQULhFA5ri0Foc5+VpeOqLiQAlwuRrpYAa210VoUnq9twaqoyi5DSL87lajszgojABB0sSNezub/NR+yOygpGkyuu8l13WsD4dYfn3Ky1lY1hcGucNb63Gl9LkO7FWV4h5TlrG/4R/BzEl/av3KhbaudVPio4/wDWPOa2XRjbE6tCsGL4xZhBLTpb8ZJ83H/sqXRbUR0075XszuylrLcAbi/zso7C5S4O2jw2W3KGXu/A4X+a/PlfheactzZbhrsp8Ldva0rUYtpKqubMXaQGN7cttBcENPzWadIcDo5oHsuMzZGk97XNI/6irY0ZHdh2zeawDuNu7u/mrXh+zcFNGJpAZNSA0WOoAOovci559iznDaqpiILZXXHI8FpGwnSC2B27rYN4x1w4tHXFwes3kdbH4LSd2cO7E9opDC2moWCNz7gyDi1ozai/B3XtdcMWzDqOn9Ilu6WR4aXm+g1Lhfnc6/ArWMHwnDCRXUrS4zNzC4BFib2DXnquzC1rC5DbqidIGNek1ToGEbqncYwG3DHSAWe4A8ho0eDuZJOMr9lbREVVRERAREQEREBf1psQQbEEEEaEEaggjgV/EQWuHa9tRAKTFKZmIwDgZLCpj0tmZJxz20zAtd/eXzQbP0TbnCscqcLva1HWAT0kfc1sxEY8S95VWRcqfCaUtNtPe2CZ5/YmOGZ85paJr8Ih6p1XHHDmrXJH4o5/3RtPx3aA3CscAG5xXCqke8kzxud3kU8bmfJeVVhOLFv9px/D6Ic/RmRzOPcPScjvLYqh2X9AU/Vtf0nVfDHXf5zMf/LCMWiid408f3Tt+W/zWaXCsGp5N/VTVWO1Db5fSXPFI021AY6zd2f4fvW8NNF5bSbXT1rBB1YKdoAZSQDJCGj2Q63tgdmjdBZoVeRTh8KxVvGXJNst46WyTvt/612itfWKxPtbW1VuHgpEUr5Vjbf1nrPvkREXTeYREQEREBERAREQEREBERAREQEREBERAREQduJV1XHTMbTtswA5pPxZj1i3uFiD8VT5TUB2cgknUu619Od/gr/stK0udG9wAfYEPa1zCLix1BynQDN3C9hqu7EsLpmtL5Jclg7MPu2tudCASBrck/BXhZm7sXEgyVMLZBzfYNfp3jj+Sjq7B6V43kZIB5dndqrlWVtBEC8kPA10LXX7vZsqJtLtHvyGRM3cbSSAAMxJAFyQByH6q8Ky/uAUbWTnJr1HA8jYlp/UAq0Tm4053VR2Lkc6aY3DMsEr8z/ZAY0yOv8ABnFWWB+ZgPaAbJYq8HG5srPgkeVt+wXVeposzwrQAIob/wAXDhwCqskcFxVsF76uJ011/VSdUfSMpJ0PJUeK7n37FbsAqBbrEdUE30/K2vJExL3xd7miOMEAHMALA8WP1AI05cFX66USagcAD1bhwOZ1yLa3Bv4d41XXX4waqqAa67IiRbW5JBGnh4qIogRfvaP1YeN/7ymFbdUzh+0k4ble4kDgXhub4k6rtpdp7vym+ulwbcxyCqVY6aV1iLAcBpfjzUthuFmOMzScuHHx4lE7vrazFMoIub68SqnhNA+rlA5E6ngNT2k2X1VudVz5Rwv8LLSthsAyAOs2w4kmPtAHtHXt07QqdVnzX4cKWiETRq4tJsRbK03JNu3qj/EFnvSBRl0cDhoRJpp+EtNvzstD2txEOrmQO0Y+KdpIy2a9jDVNuA32ctK4aW48eRqO243sEhbwjbC+4BGrZGucddbENPzKmvKUW6IjA4mFl5QABxKm6eqoYrEMD38g72b+DRqoHZrFY2PyzszsdYG4/Md60XCtnaKqiL4gDz10sMoFzx0B11071pMqQixtS+Onc+Fhlc51nFrXZGkNFmkt0Y0DXLzJYe1QZrxUAP3e7eLiQC+Vzr3DxfmQdfDvV4wbZGSglFQyqbTghu9iHXZI3rbxr2PGVwBBA7iLFV7anGY6uRu5jEbYw4EtFg5ziMx8Bb9VlZbsh0RFVURZj6wan3cPll+qnrBqfdw+WX6qDTkWY+sGp93D5Zfqp6wan3cPll+qg05FmPrBqfdw+WX6qesGp93D5ZfqoNORZj6wan3cPll+qnrBqfdw+WX6qDTkWY+sGp93D5Zfqp6wan3cPll+qg05FmPrBqfdw+WX6qesGp93D5ZfqoNORZj6wan3cPll+qnrBqfdw+WX6qDTkWY+sGp93D5Zfqp6wan3cPll+qg05FmPrBqfdw+WX6qesGp93D5ZfqoNORZj6wan3cPll+qnrBqfdw+WX6qDTkWY+sGp93D5Zfqp6wan3cPll+qg05FmPrBqfdw+WX6qesGp93D5ZfqoNORZj6wan3cPll+qnrBqfdw+WX6qDTkWY+sGp93D5Zfqp6wan3cPll+qg05FmPrBqfdw+WX6qesGp93D5ZfqoNORZj6wan3cPll+qnrBqfdw+WX6qDTkWY+sGp93D5Zfqp6wan3cPll+qg05FmPrBqfdw+WX6qesGp93D5ZfqoNZooX6PZ7TSTl/iaLZh/XYpJ74p9Hwtm11Y5oLuVyHAXvy8COwlY/H0o1jYxG2OAWzdYNmz9bjrvrfkuaDpFq2G4bF5ZL9+u8vw0+KtEp3adiGy9FK64eYxx3RGl/6uFEYjgkEYs3rAc7WVLk6SKp3GKDyy/VXLLt1Uu4si8Msn1FbihCxRPaDUta0dSFjeXVMsjW5rcSRwvrbMO5S0TcrR2ZW8fDks2pto5Y3yPDWEytyuBD7WvcWs+9wbEd4C7P9M6jKG5YyBw0k+ok2hDTsBpjI+/8AQHMrvxuoucg4DQfosvoukaqiaWtig1Frls1/mJl4P27qCblkXyl+qo4oS1Gib3fHX/Oy76mcxxON+I71k1L0i1MfCKA+LZv5TJXdItVMLOjhA/utm/nKVG6d2r4DTkRtceDnAln4r34kDlr28l8Yd7RB4NY06Ef7MjibcuHFZhB0l1TALRU+ltS2YnT/ANay/kfSXVNOYRQAmwJyzajKG++7B4qYtBLbcFomOd2jtNib24Lh2/xENaKdnEm1h3k8lmMfTDWtaGiClFueSpzeP/xChpukCpfNvnRwucOALZcvy3t/zTiIlsmxuENZlc8XJ1cAWg/M3t8lpVOxjYxbQZTYX7gBfqdrf0X5uoumiuhFmQUoB49So11B1tUL2n6ccQe0t3NKAQW6MqbgG50vU8dVG8JiWjzDeVQrcm8MdT+7vbNG6KWmlF7EAZJnO4cuXFdWIUN6Kpkdrnge/Lzy7s5c3yvr2rHMP6WKyAWbDTnW/WZOeQBGk/DRezumCtML4dxS5Xh4d1KjN17319I79L8NFHfdPE0bZvB6eqia4EWNvzsp+noosNtUNmAZms+N19bdbTKdToFgGGbe1VNEIoxGAOdpLnx+8XbT9JlSHZpIKacW0ZMycsB06wyTtId8VebQo2DEdqKeTqsL2sNwRrqD7VieC+NoIoGsgNN7Ba83536nHw1WQVXSNNIb+iUje5rKoD86kr4l6RqkhrRDA0NvYNbPbXiTmnOqpM7p3aUizH1g1Pu4fLL9VPWDU+7h8sv1VCFQREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERB/9k=\n"}}], "tabbable": null, "tooltip": null}}, "a25ac780e46d4857860d6a976e469107": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "7caaf164fa97403484a3f809ac98bebb": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_a25ac780e46d4857860d6a976e469107", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV1Ua4y1F78Z\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7f7f342a2d90>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV1Ua4y1F78Z&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}], "tabbable": null, "tooltip": null}}, "39e68e577202425996783e3254653104": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9620d5b05ef94753b61f0ff120864515": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TabModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_ca495b3596ea436faf87d57bece6de58", "IPY_MODEL_7caaf164fa97403484a3f809ac98bebb"], "layout": "IPY_MODEL_39e68e577202425996783e3254653104", "selected_index": 0, "tabbable": null, "titles": ["Youtube", "Bilibili"], "tooltip": null}}, "47b57933dd8a4605b1da7e64ac692a9d": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "83f8eeb0a8ac46f99a086c1760ae09f6": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_47b57933dd8a4605b1da7e64ac692a9d", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "If you want to download the slides: https://osf.io/download/6y2fp/\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.IFrame at 0x7f7edd157910>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://mfr.ca-1.osf.io/render?url=https://osf.io/6y2fp/?direct%26mode=render%26action=download%26mode=render\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}], "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
+<script type="application/vnd.jupyter.widget-state+json">{"state": {"f141123893b64737b5c7bf9567ef8b42": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a18553f7ea9a443e99d4d17d773689c4": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_f141123893b64737b5c7bf9567ef8b42", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=YCUsMjDinrA\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7fb09809dca0>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/YCUsMjDinrA?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "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z9bjrvrfkuaDpFq2G4bF5ZL9+u8vw0+KtEp3adiGy9FK64eYxx3RGl/6uFEYjgkEYs3rAc7WVLk6SKp3GKDyy/VXLLt1Uu4si8Msn1FbihCxRPaDUta0dSFjeXVMsjW5rcSRwvrbMO5S0TcrR2ZW8fDks2pto5Y3yPDWEytyuBD7WvcWs+9wbEd4C7P9M6jKG5YyBw0k+ok2hDTsBpjI+/8AQHMrvxuoucg4DQfosvoukaqiaWtig1Frls1/mJl4P27qCblkXyl+qo4oS1Gib3fHX/Oy76mcxxON+I71k1L0i1MfCKA+LZv5TJXdItVMLOjhA/utm/nKVG6d2r4DTkRtceDnAln4r34kDlr28l8Yd7RB4NY06Ef7MjibcuHFZhB0l1TALRU+ltS2YnT/ANay/kfSXVNOYRQAmwJyzajKG++7B4qYtBLbcFomOd2jtNib24Lh2/xENaKdnEm1h3k8lmMfTDWtaGiClFueSpzeP/xChpukCpfNvnRwucOALZcvy3t/zTiIlsmxuENZlc8XJ1cAWg/M3t8lpVOxjYxbQZTYX7gBfqdrf0X5uoumiuhFmQUoB49So11B1tUL2n6ccQe0t3NKAQW6MqbgG50vU8dVG8JiWjzDeVQrcm8MdT+7vbNG6KWmlF7EAZJnO4cuXFdWIUN6Kpkdrnge/Lzy7s5c3yvr2rHMP6WKyAWbDTnW/WZOeQBGk/DRezumCtML4dxS5Xh4d1KjN17319I79L8NFHfdPE0bZvB6eqia4EWNvzsp+noosNtUNmAZms+N19bdbTKdToFgGGbe1VNEIoxGAOdpLnx+8XbT9JlSHZpIKacW0ZMycsB06wyTtId8VebQo2DEdqKeTqsL2sNwRrqD7VieC+NoIoGsgNN7Ba83536nHw1WQVXSNNIb+iUje5rKoD86kr4l6RqkhrRDA0NvYNbPbXiTmnOqpM7p3aUizH1g1Pu4fLL9VPWDU+7h8sv1VCFQREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERB/9k=\n"}}], "tabbable": null, "tooltip": null}}, "c1b2e15725384696a35058a6e3782c21": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a5f0e6e4eb7e439ca6babfe6fc4ebe0c": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_c1b2e15725384696a35058a6e3782c21", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV1oj411o7bb\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7fb044ac29a0>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV1oj411o7bb&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}], "tabbable": null, "tooltip": null}}, "a939a37fe15d4861be755e964020d523": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "0bf26b86812a4245b6e700f8502f64d0": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TabModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_a18553f7ea9a443e99d4d17d773689c4", "IPY_MODEL_a5f0e6e4eb7e439ca6babfe6fc4ebe0c"], "layout": "IPY_MODEL_a939a37fe15d4861be755e964020d523", "selected_index": 0, "tabbable": null, "titles": ["Youtube", "Bilibili"], "tooltip": null}}, "d40a3db6c233472e9a62afde965ecf1a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9c0dde46999f4518a5487e5746638bdd": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_d40a3db6c233472e9a62afde965ecf1a", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "If you want to download the slides: https://osf.io/download/dhx9a/\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.IFrame at 0x7fb043b869a0>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://mfr.ca-1.osf.io/render?url=https://osf.io/dhx9a/?direct%26mode=render%26action=download%26mode=render\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}], "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
 <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
 <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
 <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3';</script>
 <link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
 <link href="../../../genindex.html" rel="index" title="Index">
 <link href="../../../search.html" rel="search" title="Search"/>
-<link href="W2D1_Tutorial4.html" rel="next" title="Tutorial 4: Quantifying Uncertainty in Projections"/>
-<link href="W2D1_Tutorial2.html" rel="prev" title="Tutorial 2: Time Series, Global Averages, and Scenario Comparison"/>
+<link href="W2D1_Tutorial4.html" rel="next" title="Tutorial 4: Synthesising &amp; Interpreting Diverse Data Sources"/>
+<link href="W2D1_Tutorial2.html" rel="prev" title="Tutorial 2: Future climate scenarios &amp; Multi-model Ensembles"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
 </link></link></link></link></link></link></link></link></link></head>
@@ -156,8 +156,8 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
 </li>
 <li class="nav-item">
-<a class="nav-link nav-internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
-                        Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
+<a class="nav-link nav-internal" href="../../W2D3_TheSocioeconomicsofClimateChange/chapter_title.html">
+                        The Socioeconomics of Climate Change (W2D3)
                       </a>
 </li>
 <li class="nav-item">
@@ -203,6 +203,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="nav-item">
 <a class="nav-link nav-internal" href="../../../projects/professional_development/README.html">
                         Introduction
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/mentorship_program.html">
+                        Mentorship Program
                       </a>
 </li>
 <li class="nav-item">
@@ -332,8 +337,8 @@ const thebe_selector_output = ".output, .cell_output"
                       </a>
 </li>
 <li class="nav-item">
-<a class="nav-link nav-internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">
-                        Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)
+<a class="nav-link nav-internal" href="../../W2D3_TheSocioeconomicsofClimateChange/chapter_title.html">
+                        The Socioeconomics of Climate Change (W2D3)
                       </a>
 </li>
 <li class="nav-item">
@@ -379,6 +384,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="nav-item">
 <a class="nav-link nav-internal" href="../../../projects/professional_development/README.html">
                         Introduction
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/mentorship_program.html">
+                        Mentorship Program
                       </a>
 </li>
 <li class="nav-item">
@@ -480,7 +490,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">Tutorial 6: Compute and Plot Temperature Anomalies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">Tutorial 7: Other Computational Tools in Xarray</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">Tutorial 8: Masking with One Condition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">Tutorial 9: Masking with Multiple Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">Bonus Tutorial 9: Masking with Multiple Conditions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Outro.html">Outro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_DaySummary.html">Day Summary</a></li>
@@ -508,9 +518,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">Tutorial 1: Calculating ENSO with Xarray</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">Tutorial 3: Atmospheric  Circulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">Tutorial 4: Oceanic Wind-driven Circulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">Tutorial 4: Oceanic Wind-Driven Circulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">Tutorial 5: Thermohaline Circulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">Tutorial 6: Ocean Heat Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">Bonus Tutorial 6: Ocean Heat Content</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Outro.html">Outro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_DaySummary.html">Day Summary</a></li>
@@ -539,8 +549,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial4.html">Tutorial 4: Reconstructing Past Changes in Atmospheric Climate</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial5.html">Tutorial 5: Paleoclimate Data Analysis Tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial6.html">Tutorial 6: Spectral Analysis of Paleoclimate Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial7.html">Tutorial 7: Assessing Climate Forcings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial8.html">Tutorial 8: Paleoclimate Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial7.html">Bonus Tutorial 7: Assessing Climate Forcings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial8.html">Bonus Tutorial 8: Paleoclimate Models</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial9.html">Tutorial 9: Paleoclimate Reanalysis Products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Outro.html">Outro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/further_reading.html">Suggested Further Reading</a></li>
@@ -552,13 +562,14 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D5_ClimateModeling/chapter_title.html">Climate Modeling (W1D5)</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Intro.html">Intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">Tutorial 1 : A Simple Greenhouse Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">Tutorial 2 : Energy Balance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">Tutorial 3 : A Zero-Dimensional Energy Balance Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">Tutorial 4: Climate Feedbacks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">Tutorial 5: Vertical Structure of the Atmosphere</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial6.html">Tutorial 6: Radiative-Convective Equilibrium</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial7.html">Tutorial 7: Introduction to Earth System Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">Tutorial 1: Radiation and the Greenhouse Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">Tutorial 2: Energy Balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">Tutorial 3: A Zero-Dimensional Energy Balance Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">Bonus Tutorial 4: Climate Feedbacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">Bonus Tutorial 5: Vertical Structure of the Atmosphere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial6.html">Bonus Tutorial 6: Radiative-Convective Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial7.html">Tutorial 7: Introduction to CMIP6 Earth System Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial8.html">Tutorial 8: Time Series, Global Averages, and Scenario Comparison</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Outro.html">Outro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_DaySummary.html">Day Summary</a></li>
@@ -566,26 +577,26 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../chapter_title.html">Future Climate - IPCC I Physical Basis (W2D1)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="W2D1_Intro.html">Intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="W2D1_Tutorial1.html">Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="W2D1_Tutorial2.html">Tutorial 2: Time Series, Global Averages, and Scenario Comparison</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tutorial 3: Multi-model Ensembles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="W2D1_Tutorial4.html">Tutorial 4: Quantifying Uncertainty in Projections</a></li>
-<li class="toctree-l2"><a class="reference internal" href="W2D1_Tutorial5.html">Tutorial 5: Internal Climate Variability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="W2D1_Tutorial6.html">Tutorial 6: Synthesising &amp; Interpreting Diverse Data Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="W2D1_Tutorial1.html">Tutorial 1: Internal Climate Variability and Single-model Ensembles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="W2D1_Tutorial2.html">Tutorial 2: Future climate scenarios &amp; Multi-model Ensembles</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tutorial 3: Quantifying Uncertainty in Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="W2D1_Tutorial4.html">Tutorial 4: Synthesising &amp; Interpreting Diverse Data Sources</a></li>
 <li class="toctree-l2"><a class="reference internal" href="W2D1_Outro.html">Outro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="W2D1_DaySummary.html"><strong>Day Summary</strong></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Intro.html">Intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html">Tutorial 1: The Socio-economic Origins of the Climate Emergency</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html">Tutorial 2: Transition Goals and Integrated Assessment Models**</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial3.html">Tutorial 3: IAMs and SSPs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html">Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Outro.html">Outro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/further_reading.html"><strong>Tutorial 2 Further Reading</strong></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_DaySummary.html">Day Summary</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D3_TheSocioeconomicsofClimateChange/chapter_title.html">The Socioeconomics of Climate Change (W2D3)</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial1.html">Tutorial 1: Orienting inside a “Climate Solution” Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial2.html">Tutorial 2: Fossil Fuel Emissions, Growth, and Damage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial3.html">Tutorial 3: The Temporal Dimension of Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial4.html">Tutorial 4: The Shared Socio-economic Pathways</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial5.html">Tutorial 5: Mapping the Narrative Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial6.html">Bonus Tutorial 6: Create your Socio-economic Scenario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_TheSocioeconomicsofClimateChange/further_reading.html"><strong>Tutorial 2 Further Reading</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_TheSocioeconomicsofClimateChange/student/W2D3_DaySummary.html">Day Summary</a></li>
 </ul>
 </li>
 </ul>
@@ -608,10 +619,12 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">Climate Response - Adaptation Impact (W2D5)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Intro.html">Intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">Tutorial 1: Linear and Logistic Regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">Tutorial 4:  Exploring Other Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">Tutorial 1:  ClimateBench Dataset and How Machine Learning Can Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">Tutorial 2:  Building and Training Random Forest Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">Tutorial 3:  Testing Model Generalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">Tutorial 4: Testing Spatial Generalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial5.html">Tutorial 5:  Testing generalization to new scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial6.html">Tutorial 6:  Exploring other applications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Outro.html">Outro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D5_ClimateResponse-AdaptationImpact/student/W2D5_DaySummary.html">Day Summary</a></li>
@@ -648,6 +661,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Professional Development</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/README.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/mentorship_program.html">Professional developemnt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/impact_talks.html">Impact Talks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/mentors.html">Mentor Meetings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/career_features.html">Career Features</a></li>
@@ -680,7 +694,7 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fas fa-rocket"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/neuromatch/climate-ourse-content&amp;urlpath=lab/tree/climate-ourse-content/book/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.ipynb&amp;branch=main" target="_blank" title="Launch on JupyterHub">
+<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/neuromatch/climate-course-content&amp;urlpath=lab/tree/climate-course-content/book/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.ipynb&amp;branch=main" target="_blank" title="Launch on JupyterHub">
 <span class="btn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
@@ -699,14 +713,14 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fab fa-github"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://github.com/neuromatch/climate-ourse-content" target="_blank" title="Source repository">
+<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://github.com/neuromatch/climate-course-content" target="_blank" title="Source repository">
 <span class="btn__icon-container">
 <i class="fab fa-github"></i>
 </span>
 <span class="btn__text-container">repository</span>
 </a>
 
-<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://github.com/neuromatch/climate-ourse-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://github.com/neuromatch/climate-course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
 <span class="btn__icon-container">
 <i class="fas fa-lightbulb"></i>
 </span>
@@ -744,7 +758,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="onlyprint" id="jb-print-docs-body">
-<h1>Tutorial 3: Multi-model Ensembles</h1>
+<h1>Tutorial 3: Quantifying Uncertainty in Projections</h1>
 <!-- Table of contents -->
 <div id="print-main-content">
 <div id="jb-print-toc">
@@ -755,7 +769,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 3: Multi-model Ensembles
+   Tutorial 3: Quantifying Uncertainty in Projections
   </a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
@@ -779,42 +793,31 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#video-1-why-so-many-earth-system-models">
-     Video 1: Why So Many Earth System Models?
+<a class="reference internal nav-link" href="#video-1-quantifying-uncertainty-in-projections">
+     Video 1: Quantifying Uncertainty in Projections
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-load-cmip6-sst-data-from-five-models-and-three-experiments">
-   Section 1: Load CMIP6 SST Data from Five Models and Three Experiments
+<a class="reference internal nav-link" href="#section-1-loading-cmip6-data-from-various-models-experiments">
+   Section 1: Loading CMIP6 Data from Various Models &amp; Experiments
+  </a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-quantifying-uncertainty-in-a-cmip6-multi-model-ensemble">
+   Section 2: Quantifying Uncertainty in a CMIP6 Multi-model Ensemble
   </a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercise-1-1-combine-past-data-and-future-data-and-remove-seasonal-oscillations-and-plot-all-5-of-the-cmip6-models-we-just-loaded">
-<strong>
-      Coding Exercise 1.1: Combine Past Data and Future Data, and Remove Seasonal Oscillations, and plot all 5 of the CMIP6 models we just loaded
-     </strong>
-</a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#question-1-1">
-<strong>
-      Question 1.1
-     </strong>
-</a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercise-1-2">
-     Coding Exercise 1.2
+<a class="reference internal nav-link" href="#coding-exercise-2-1">
+     Coding Exercise 2.1
     </a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions-1-2-climate-connection">
-<strong>
-      Questions 1.2: Climate Connection
-     </strong>
-</a>
+<a class="reference internal nav-link" href="#questions-2-1-climate-connection">
+     Questions 2.1: Climate Connection
+    </a>
 </li>
 </ul>
 </li>
@@ -835,21 +838,23 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <article class="bd-article" role="main">
 <p><a class="reference external" href="https://colab.research.google.com/github/neuromatch/climate-course-content/blob/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/W2D1_Tutorial3.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/W2D1_Tutorial3.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="tutorial-3-multi-model-ensembles">
-<h1>Tutorial 3: Multi-model Ensembles<a class="headerlink" href="#tutorial-3-multi-model-ensembles" title="Permalink to this heading">#</a></h1>
-<p><strong>Week 2, Day 1, Future Climate: The Physical Basis</strong></p>
-<p><strong>Content creators:</strong> Brodie Pearson, Julius Busecke, Tom Nicholas</p>
-<p><strong>Content reviewers:</strong> Younkap Nina Duplex, Zahra Khodakaramimaghsoud, Sloane Garelick, Peter Ohue, Jenna Pearson, Derick Temfack, Peizhen Yang, Cheng Zhang, Chi Zhang, Ohad Zivan</p>
-<p><strong>Content editors:</strong> Jenna Pearson, Ohad Zivan, Chi Zhang</p>
-<p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
-<p><strong>Our 2023 Sponsors:</strong> NASA TOPS, Google DeepMind, and CMIP</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="tutorial-3-quantifying-uncertainty-in-projections">
+<h1>Tutorial 3: Quantifying Uncertainty in Projections<a class="headerlink" href="#tutorial-3-quantifying-uncertainty-in-projections" title="Permalink to this heading">#</a></h1>
+<p><strong>Week 2, Day 1, An Ensemble of Futures</strong></p>
+<p><strong>Content creators:</strong> Brodie Pearson, Julius Busecke, Tom Nicholas, Sam Ditkovsky</p>
+<p><strong>Content reviewers:</strong> Mujeeb Abdulfatai, Nkongho Ayuketang Arreyndip, Jeffrey N. A. Aryee, Younkap Nina Duplex,  Sloane Garelick, Paul Heubel, Zahra Khodakaramimaghsoud, Peter Ohue, Jenna Pearson, Abel Shibu, Derick Temfack, Peizhen Yang, Cheng Zhang, Chi Zhang, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Paul Heubel, Jenna Pearson, Ohad Zivan, Chi Zhang</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Paul Heubel, Jenna Pearson, Konstantine Tsafatinos, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2024 Sponsors:</strong> CMIP, NFDI4Earth</p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="tutorial-objectives">
 <h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this heading">#</a></h1>
-<p>In this tutorial, we will analyze datafrom five different CMIP6 models developed by various institutions around the world, focusing on their <em>historical</em> simulations and low-emission projections (<em>SSP1-2.6</em>). By the end of this tutorial, you will be able to</p>
+<p><em>Estimated timing for tutorial:</em> 40 minutes</p>
+<p>In the previous tutorial, we constructed a <em>multi-model ensemble</em> using data from a diverse set of five CMIP6 models. We showed that the projections differ between models due to their distinct physics, numerics and discretizations. In this tutorial, we will calculate the uncertainty associated with future climate projections by utilizing this variability across CMIP6 models. We will establish a <em>likely</em> range of projections as defined by the IPCC.</p>
+<p>By the end of this tutorial, you will be able to</p>
 <ul class="simple">
-<li><p>Load CMIP6 Sea Surface Temperature (SST) data from multiple models;</p></li>
-<li><p>Calculate the SST anomalies, and recall the concept of temperature anomaly in relation to a base period</p></li>
+<li><p>Apply IPCC confidence levels to climate model data,</p></li>
+<li><p>Quantify the uncertainty associated with CMIP6/ScenarioMIP projections.</p></li>
 </ul>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="setup">
@@ -871,20 +876,19 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="n">tic</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
-
 <span class="kn">import</span> <span class="nn">intake</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 
 <span class="kn">from</span> <span class="nn">xmip.preprocessing</span> <span class="kn">import</span> <span class="n">combined_preprocessing</span>
-<span class="kn">from</span> <span class="nn">xarrayutils.plotting</span> <span class="kn">import</span> <span class="n">shaded_line_plot</span>
-
-<span class="kn">from</span> <span class="nn">datatree</span> <span class="kn">import</span> <span class="n">DataTree</span>
 <span class="kn">from</span> <span class="nn">xmip.postprocessing</span> <span class="kn">import</span> <span class="n">_parse_metric</span>
+<span class="kn">from</span> <span class="nn">datatree</span> <span class="kn">import</span> <span class="n">DataTree</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/esmpy/interface/loadESMF.py:92: VersionWarning: ESMF installation version 8.7.0 beta snapshot, ESMPy version 8.7.0b6
+  warnings.warn("ESMF installation version {}, ESMPy version {}".format(
 </pre></div>
 </div>
 </div>
@@ -902,7 +906,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>  <span class="c1"># interactive display</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
-    <span class="s2">"https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/cma.mplstyle"</span>
+    <span class="s2">"https://raw.githubusercontent.com/neuromatch/climate-course-content/main/cma.mplstyle"</span>
 <span class="p">)</span>
 
 <span class="o">%</span><span class="k">matplotlib</span> inline
@@ -923,84 +927,125 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Helper functions</span>
 
+<span class="k">def</span> <span class="nf">readin_cmip6_to_datatree</span><span class="p">(</span><span class="n">facet_dict</span><span class="p">):</span>
+    <span class="c1"># open an intake catalog containing the Pangeo CMIP cloud data</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
+        <span class="s2">"https://storage.googleapis.com/cmip6/pangeo-cmip6.json"</span>
+    <span class="p">)</span>
+
+    <span class="c1"># from the full `col` object, create a subset using facet search</span>
+    <span class="n">cat</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
+        <span class="n">source_id</span><span class="o">=</span><span class="n">facet_dict</span><span class="p">[</span><span class="s1">'source_id'</span><span class="p">],</span>
+        <span class="n">variable_id</span><span class="o">=</span><span class="n">facet_dict</span><span class="p">[</span><span class="s1">'variable_id'</span><span class="p">],</span>
+        <span class="n">member_id</span><span class="o">=</span><span class="n">facet_dict</span><span class="p">[</span><span class="s1">'member_id'</span><span class="p">],</span>
+        <span class="n">table_id</span><span class="o">=</span><span class="n">facet_dict</span><span class="p">[</span><span class="s1">'table_id'</span><span class="p">],</span>
+        <span class="n">grid_label</span><span class="o">=</span><span class="n">facet_dict</span><span class="p">[</span><span class="s1">'grid_label'</span><span class="p">],</span>
+        <span class="n">experiment_id</span><span class="o">=</span><span class="n">facet_dict</span><span class="p">[</span><span class="s1">'experiment_id'</span><span class="p">],</span>
+        <span class="n">require_all_on</span><span class="o">=</span><span class="n">facet_dict</span><span class="p">[</span><span class="s1">'require_all_on'</span><span class="p">]</span>  <span class="c1"># make sure that we only get models which have all of the above experiments</span>
+    <span class="p">)</span>
+
+    <span class="c1"># convert the sub-catalog into a datatree object, by opening each dataset into an xarray.Dataset (without loading the data)</span>
+    <span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">preprocess</span><span class="o">=</span><span class="n">combined_preprocessing</span><span class="p">,</span>  <span class="c1"># apply xMIP fixes to each dataset</span>
+        <span class="n">xarray_open_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+            <span class="n">use_cftime</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">),</span>  <span class="c1"># ensure all datasets use the same time index</span>
+        <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span>
+            <span class="s2">"token"</span><span class="p">:</span> <span class="s2">"anon"</span>
+        <span class="p">},</span>  <span class="c1"># anonymous/public authentication to google cloud storage</span>
+    <span class="p">)</span>
+
+    <span class="n">cat</span><span class="o">.</span><span class="n">esmcat</span><span class="o">.</span><span class="n">aggregation_control</span><span class="o">.</span><span class="n">groupby_attrs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"source_id"</span><span class="p">,</span> <span class="s2">"experiment_id"</span><span class="p">]</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">to_datatree</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">dt</span>
+
 
 <span class="k">def</span> <span class="nf">global_mean</span><span class="p">(</span><span class="n">ds</span><span class="p">:</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">xr</span><span class="o">.</span><span class="n">Dataset</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">"""Global average, weighted by the cell area"""</span>
     <span class="k">return</span> <span class="n">ds</span><span class="o">.</span><span class="n">weighted</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">areacello</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="s2">"x"</span><span class="p">,</span> <span class="s2">"y"</span><span class="p">],</span> <span class="n">keep_attrs</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="c1"># Calculate anomaly to reference period</span>
+<span class="k">def</span> <span class="nf">datatree_anomaly</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+    <span class="n">dt_out</span> <span class="o">=</span> <span class="n">DataTree</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">model</span><span class="p">,</span> <span class="n">subtree</span> <span class="ow">in</span> <span class="n">dt</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">ref</span> <span class="o">=</span> <span class="n">dt</span><span class="p">[</span><span class="n">model</span><span class="p">][</span><span class="s2">"historical"</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="s2">"1950"</span><span class="p">,</span> <span class="s2">"1980"</span><span class="p">))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="n">dt_out</span><span class="p">[</span><span class="n">model</span><span class="p">]</span> <span class="o">=</span> <span class="n">subtree</span> <span class="o">-</span> <span class="n">ref</span>
+    <span class="k">return</span> <span class="n">dt_out</span>
+
+
+<span class="k">def</span> <span class="nf">plot_historical_ssp126_combined</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">dt</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">datasets</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">experiment</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"historical"</span><span class="p">,</span> <span class="s2">"ssp126"</span><span class="p">]:</span>
+            <span class="n">datasets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dt</span><span class="p">[</span><span class="n">model</span><span class="p">][</span><span class="n">experiment</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">tos</span><span class="p">)</span>
+
+        <span class="n">da_combined</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">datasets</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s2">"time"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </details>
 </div>
 </div>
-<div class="section" id="video-1-why-so-many-earth-system-models">
-<h2>Video 1: Why So Many Earth System Models?<a class="headerlink" href="#video-1-why-so-many-earth-system-models" title="Permalink to this heading">#</a></h2>
+<div class="section" id="video-1-quantifying-uncertainty-in-projections">
+<h2>Video 1: Quantifying Uncertainty in Projections<a class="headerlink" href="#video-1-quantifying-uncertainty-in-projections" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "9620d5b05ef94753b61f0ff120864515"}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "0bf26b86812a4245b6e700f8502f64d0"}</script></div>
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "83f8eeb0a8ac46f99a086c1760ae09f6"}</script></div>
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "9c0dde46999f4518a5487e5746638bdd"}</script></div>
 </div>
 </div>
 </div>
-<div class="tex2jax_ignore mathjax_ignore section" id="section-1-load-cmip6-sst-data-from-five-models-and-three-experiments">
-<h1>Section 1: Load CMIP6 SST Data from Five Models and Three Experiments<a class="headerlink" href="#section-1-load-cmip6-sst-data-from-five-models-and-three-experiments" title="Permalink to this heading">#</a></h1>
-<p>In the previous section, you compared how a single CMIP6 model (<em>TaiESM1</em>) simulated past temperature, and how it projected temperature would change under a low-emissions scenario and a high-emissions scenario (<em>historical</em>, <em>SSP1-2.6</em> and <em>SSP5-8.5</em> experiments respectively).</p>
-<p>Now we will start to analyze a <strong>multi-model ensemble</strong> that consists of data from multiple CMIP6 models. For now, we will focus on just the historical simulation and the low-emissions projection.</p>
-<p>Your multi-model ensemble will consist of <strong>Five</strong> different CMIP6 models developed by institutions from a variety of countries:</p>
-<ul class="simple">
-<li><p><em>TaiESM1</em> (Research Center for Environmental Changes, Taiwan),</p></li>
-<li><p><em>IPSL-CM6A-LR</em> (Institut Pierre Simon Laplace, France),</p></li>
-<li><p><em>GFDL-ESM4</em> (NOAA Geophysical Fluid Dynamics Laboratory, USA),</p></li>
-<li><p><em>ACCESS-CM2</em> (CSIRO and ARCCSS, Australia), and</p></li>
-<li><p><em>MPI-ESM1-2-LR</em> (Max Planck Institute, Germany).</p></li>
-</ul>
-<p>We can specify these models through the <em>source_id</em> facet. You can see a <a class="reference external" href="https://www.google.com/url?q=https://airtable.com/shrvRybShvNSE1Szp/tblC0DBPiCm7gjJqx&amp;sa=D&amp;source=docs&amp;ust=1689235930798709&amp;usg=AOvVaw06jpHwjNGxPR1yILwtX5qB">table of CMIP6 <em>source_id</em> values here</a>, and you can learn more about CMIP through our <a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/CMIP/CMIP_resource_bank.md">CMIP Resource Bank</a> and the <a class="reference external" href="https://wcrp-cmip.org/">CMIP website</a>.</p>
-<p>Note that these are only a subset of the dozens of models, institutes, countries, and experiments that contribute to CMIP6, as discussed in the previous W2D1 Tutorial 2 video. Some of the abbreviations in the model names refer to institutes (<em>MPI/GFDL</em>), while some refer to the complexity and version of the model (e.g., Earth System or Climate Model [<em>ESM/CM</em>] and low- or high-resolution [<em>LR/HR</em>]). There are often several models from a single institute with each having a distinct level of complexity.</p>
+<div class="tex2jax_ignore mathjax_ignore section" id="section-1-loading-cmip6-data-from-various-models-experiments">
+<h1>Section 1: Loading CMIP6 Data from Various Models &amp; Experiments<a class="headerlink" href="#section-1-loading-cmip6-data-from-various-models-experiments" title="Permalink to this heading">#</a></h1>
+<p>First, lets load the datasets that we used in the previous tutorial, which spanned 5 models. We will use three CMIP6 experiments, adding the high-emissions (<em>SSP5-8.5</em>) future scenario to the <em>historical</em> and <em>SSP1-2.6</em> experiments used in the last tutorial.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">col</span> <span class="o">=</span> <span class="n">intake</span><span class="o">.</span><span class="n">open_esm_datastore</span><span class="p">(</span>
-    <span class="s2">"https://storage.googleapis.com/cmip6/pangeo-cmip6.json"</span>
-<span class="p">)</span>  <span class="c1"># open an intake catalog containing the Pangeo CMIP cloud data</span>
-
-<span class="c1"># pick our five models and three experiments</span>
-<span class="c1"># there are many more to test out! Try executing `col.df['source_id'].unique()` to get a list of all available models</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># selected CMIP6 models to explore</span>
 <span class="n">source_ids</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"IPSL-CM6A-LR"</span><span class="p">,</span> <span class="s2">"GFDL-ESM4"</span><span class="p">,</span> <span class="s2">"ACCESS-CM2"</span><span class="p">,</span> <span class="s2">"MPI-ESM1-2-LR"</span><span class="p">,</span> <span class="s2">"TaiESM1"</span><span class="p">]</span>
-<span class="n">experiment_ids</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"historical"</span><span class="p">,</span> <span class="s2">"ssp126"</span><span class="p">,</span> <span class="s2">"ssp585"</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># from the full `col` object, create a subset using facet search</span>
-<span class="n">cat</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
-    <span class="n">source_id</span><span class="o">=</span><span class="n">source_ids</span><span class="p">,</span>
-    <span class="n">variable_id</span><span class="o">=</span><span class="s2">"tos"</span><span class="p">,</span>
-    <span class="n">member_id</span><span class="o">=</span><span class="s2">"r1i1p1f1"</span><span class="p">,</span>
-    <span class="n">table_id</span><span class="o">=</span><span class="s2">"Omon"</span><span class="p">,</span>
-    <span class="n">grid_label</span><span class="o">=</span><span class="s2">"gn"</span><span class="p">,</span>
-    <span class="n">experiment_id</span><span class="o">=</span><span class="n">experiment_ids</span><span class="p">,</span>
-    <span class="n">require_all_on</span><span class="o">=</span><span class="p">[</span>
-        <span class="s2">"source_id"</span>
-    <span class="p">],</span>  <span class="c1"># make sure that we only get models which have all of the above experiments</span>
-<span class="p">)</span>
 
-<span class="c1"># convert the sub-catalog into a datatree object, by opening each dataset into an xarray.Dataset (without loading the data)</span>
-<span class="n">kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
-    <span class="n">preprocess</span><span class="o">=</span><span class="n">combined_preprocessing</span><span class="p">,</span>  <span class="c1"># apply xMIP fixes to each dataset</span>
-    <span class="n">xarray_open_kwargs</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-        <span class="n">use_cftime</span><span class="o">=</span><span class="kc">True</span>
-    <span class="p">),</span>  <span class="c1"># ensure all datasets use the same time index</span>
-    <span class="n">storage_options</span><span class="o">=</span><span class="p">{</span>
-        <span class="s2">"token"</span><span class="p">:</span> <span class="s2">"anon"</span>
-    <span class="p">},</span>  <span class="c1"># anonymous/public authentication to google cloud storage</span>
-<span class="p">)</span>
+<span class="c1"># dictionary of facets for query of surface temperature data</span>
+<span class="n">facet_dict</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">"source_id"</span><span class="p">:</span><span class="n">source_ids</span><span class="p">,</span>
+    <span class="s2">"variable_id"</span><span class="p">:</span><span class="s2">"tos"</span><span class="p">,</span>
+    <span class="s2">"member_id"</span><span class="p">:</span><span class="s2">"r1i1p1f1"</span><span class="p">,</span>
+    <span class="s2">"table_id"</span><span class="p">:</span><span class="s2">"Omon"</span><span class="p">,</span>
+    <span class="s2">"grid_label"</span><span class="p">:</span><span class="s2">"gn"</span><span class="p">,</span>
+    <span class="s2">"experiment_id"</span><span class="p">:[</span><span class="s2">"historical"</span><span class="p">,</span> <span class="s2">"ssp126"</span><span class="p">,</span> <span class="s2">"ssp585"</span><span class="p">],</span>
+    <span class="s2">"require_all_on"</span><span class="p">:</span><span class="s2">"source_id"</span>
+    <span class="p">}</span>
 
-<span class="n">cat</span><span class="o">.</span><span class="n">esmcat</span><span class="o">.</span><span class="n">aggregation_control</span><span class="o">.</span><span class="n">groupby_attrs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"source_id"</span><span class="p">,</span> <span class="s2">"experiment_id"</span><span class="p">]</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="n">cat</span><span class="o">.</span><span class="n">to_datatree</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="c1"># dictionary for query of cell area metric</span>
+<span class="n">facet_dict_area</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">"source_id"</span><span class="p">:</span><span class="n">source_ids</span><span class="p">,</span>
+    <span class="s2">"variable_id"</span><span class="p">:</span><span class="s2">"areacello"</span><span class="p">,</span>
+    <span class="s2">"member_id"</span><span class="p">:</span><span class="s2">"r1i1p1f1"</span><span class="p">,</span>
+    <span class="s2">"table_id"</span><span class="p">:</span><span class="s2">"Ofx"</span><span class="p">,</span>
+    <span class="s2">"grid_label"</span><span class="p">:</span><span class="s2">"gn"</span><span class="p">,</span>
+    <span class="s2">"experiment_id"</span><span class="p">:</span><span class="s2">"historical"</span><span class="p">,</span>
+    <span class="s2">"require_all_on"</span><span class="p">:</span><span class="s2">"source_id"</span>
+    <span class="p">}</span>
+<span class="c1"># search for temperature and area data and return datatree objects</span>
+<span class="n">dt_ensemble</span> <span class="o">=</span> <span class="n">readin_cmip6_to_datatree</span><span class="p">(</span><span class="n">facet_dict</span><span class="p">)</span>
+<span class="n">dt_area</span> <span class="o">=</span> <span class="n">readin_cmip6_to_datatree</span><span class="p">(</span><span class="n">facet_dict_area</span><span class="p">)</span>
+
+
+<span class="c1"># merge area metric into datatree object</span>
+<span class="n">dt_with_area</span> <span class="o">=</span> <span class="n">DataTree</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">model</span><span class="p">,</span> <span class="n">subtree</span> <span class="ow">in</span> <span class="n">dt_ensemble</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">metric</span> <span class="o">=</span> <span class="n">dt_area</span><span class="p">[</span><span class="n">model</span><span class="p">][</span><span class="s2">"historical"</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="p">[</span><span class="s2">"areacello"</span><span class="p">]</span>
+    <span class="n">dt_with_area</span><span class="p">[</span><span class="n">model</span><span class="p">]</span> <span class="o">=</span> <span class="n">subtree</span><span class="o">.</span><span class="n">map_over_subtree</span><span class="p">(</span><span class="n">_parse_metric</span><span class="p">,</span> <span class="n">metric</span><span class="p">)</span>
+
+<span class="c1"># average every dataset in the tree globally</span>
+<span class="n">dt_gm</span> <span class="o">=</span> <span class="n">dt_with_area</span><span class="o">.</span><span class="n">map_over_subtree</span><span class="p">(</span><span class="n">global_mean</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">experiment</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"historical"</span><span class="p">,</span> <span class="s2">"ssp126"</span><span class="p">,</span> <span class="s2">"ssp585"</span><span class="p">]:</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">dt_gm</span><span class="p">[</span><span class="s2">"TaiESM1"</span><span class="p">][</span><span class="n">experiment</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">tos</span>
+
+<span class="n">dt_gm_anomaly</span> <span class="o">=</span> <span class="n">datatree_anomaly</span><span class="p">(</span><span class="n">dt_gm</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1028,37 +1073,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div><div class="output text_html">
 <div>
 <progress class="" max="15" style="width:300px; height:20px; vertical-align: middle;" value="15"></progress>
-      100.00% [15/15 00:05&lt;00:00]
+      100.00% [15/15 00:04&lt;00:00]
     </div>
-</div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat_area</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
-    <span class="n">source_id</span><span class="o">=</span><span class="n">source_ids</span><span class="p">,</span>
-    <span class="n">variable_id</span><span class="o">=</span><span class="s2">"areacello"</span><span class="p">,</span>  <span class="c1"># for the coding exercise, ellipses will go after the equals on this line</span>
-    <span class="n">member_id</span><span class="o">=</span><span class="s2">"r1i1p1f1"</span><span class="p">,</span>
-    <span class="n">table_id</span><span class="o">=</span><span class="s2">"Ofx"</span><span class="p">,</span>  <span class="c1"># for the coding exercise, ellipses will go after the equals on this line</span>
-    <span class="n">grid_label</span><span class="o">=</span><span class="s2">"gn"</span><span class="p">,</span>
-    <span class="n">experiment_id</span><span class="o">=</span><span class="p">[</span>
-        <span class="s2">"historical"</span>
-    <span class="p">],</span>  <span class="c1"># for the coding exercise, ellipses will go after the equals on this line</span>
-    <span class="n">require_all_on</span><span class="o">=</span><span class="p">[</span><span class="s2">"source_id"</span><span class="p">],</span>
-<span class="p">)</span>
-
-<span class="n">cat_area</span><span class="o">.</span><span class="n">esmcat</span><span class="o">.</span><span class="n">aggregation_control</span><span class="o">.</span><span class="n">groupby_attrs</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"source_id"</span><span class="p">,</span> <span class="s2">"experiment_id"</span><span class="p">]</span>
-<span class="n">dt_area</span> <span class="o">=</span> <span class="n">cat_area</span><span class="o">.</span><span class="n">to_datatree</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="n">dt_with_area</span> <span class="o">=</span> <span class="n">DataTree</span><span class="p">()</span>
-
-<span class="k">for</span> <span class="n">model</span><span class="p">,</span> <span class="n">subtree</span> <span class="ow">in</span> <span class="n">dt</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="n">metric</span> <span class="o">=</span> <span class="n">dt_area</span><span class="p">[</span><span class="n">model</span><span class="p">][</span><span class="s2">"historical"</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="p">[</span><span class="s2">"areacello"</span><span class="p">]</span>
-    <span class="n">dt_with_area</span><span class="p">[</span><span class="n">model</span><span class="p">]</span> <span class="o">=</span> <span class="n">subtree</span><span class="o">.</span><span class="n">map_over_subtree</span><span class="p">(</span><span class="n">_parse_metric</span><span class="p">,</span> <span class="n">metric</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
+</div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--&gt; The keys in the returned dictionary of datasets are constructed as follows:
 	'source_id/experiment_id'
 </pre></div>
 </div>
@@ -1081,153 +1098,93 @@ const thebe_selector_output = ".output, .cell_output"
 </div><div class="output text_html">
 <div>
 <progress class="" max="5" style="width:300px; height:20px; vertical-align: middle;" value="5"></progress>
-      100.00% [5/5 00:01&lt;00:00]
+      100.00% [5/5 00:00&lt;00:00]
     </div>
 </div></div>
 </div>
-<p>Let’s first reproduce the previous tutorial’s timeseries of Global Mean SST from <em>TaiESM1</em> through the historical experiment and two future emissions scenarios</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># average every dataset in the tree globally</span>
-<span class="n">dt_gm</span> <span class="o">=</span> <span class="n">dt_with_area</span><span class="o">.</span><span class="n">map_over_subtree</span><span class="p">(</span><span class="n">global_mean</span><span class="p">)</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">experiment</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"historical"</span><span class="p">,</span> <span class="s2">"ssp126"</span><span class="p">,</span> <span class="s2">"ssp585"</span><span class="p">]:</span>
-    <span class="n">da</span> <span class="o">=</span> <span class="n">dt_gm</span><span class="p">[</span><span class="s2">"TaiESM1"</span><span class="p">][</span><span class="n">experiment</span><span class="p">]</span><span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">tos</span>
-    <span class="n">da</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">experiment</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Global Mean SST from TaiESM1"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Global Mean SST [$^\circ$C]"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-</pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f7ed2509fa0&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/069677c8b486fd519d94e6a78a6b5041c77419964f8f816702d765c945e51cc9.png" src="../../../_images/069677c8b486fd519d94e6a78a6b5041c77419964f8f816702d765c945e51cc9.png">
-</img></div>
-</div>
-<div class="section" id="coding-exercise-1-1-combine-past-data-and-future-data-and-remove-seasonal-oscillations-and-plot-all-5-of-the-cmip6-models-we-just-loaded">
-<h2><strong>Coding Exercise 1.1: Combine Past Data and Future Data, and Remove Seasonal Oscillations, and plot all 5 of the CMIP6 models we just loaded</strong><a class="headerlink" href="#coding-exercise-1-1-combine-past-data-and-future-data-and-remove-seasonal-oscillations-and-plot-all-5-of-the-cmip6-models-we-just-loaded" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>The historical and projected data are separate time series. Complete the <code class="docutils literal notranslate"><span class="pre">xr.concat</span></code> function to combine the historical and projected data into a single continuous time series for each model.</p></li>
-<li><p>The previous timeseries oscillated very rapidly due to Earth’s seasonal cycles. Finish the <code class="docutils literal notranslate"><span class="pre">xarray</span></code> <code class="docutils literal notranslate"><span class="pre">resample</span></code> function so that it smooths the monthly data with a one-year running mean. This will make it easier to distinguish the long-term changes in sea surface temperature.</p></li>
-<li><p>Note: this code is already set up to use all 5 of the CMIP6 models you just loaded, as it loops through and plots each model in the DataTree [<code class="docutils literal notranslate"><span class="pre">dt.keys()</span></code>]</p></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_historical_ssp126_combined</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">ax</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">dt</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-        <span class="n">datasets</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">experiment</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"historical"</span><span class="p">,</span> <span class="s2">"ssp126"</span><span class="p">]:</span>
-            <span class="n">datasets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dt</span><span class="p">[</span><span class="n">model</span><span class="p">][</span><span class="n">experiment</span><span class="p">]</span><span class="o">.</span><span class="n">tos</span><span class="p">)</span>
-
-        <span class="c1"># for each of the models, concatenate its historical and future data</span>
-        <span class="n">da_combined</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
-        <span class="c1"># plot annual averages</span>
-        <span class="n">da_combined</span><span class="o">.</span><span class="n">coarsen</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">model</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
-
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="c1"># plot_historical_ssp126_combined</span>
-<span class="n">_</span> <span class="o">=</span> <span class="o">...</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">"Global Mean SST from five CMIP6 models (annually smoothed)"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Global Mean SST [$^\circ$C]"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f7ed3d60190&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/710e536b048acf5860acd13d0599226d2a92241a9dc4ba7044ca1f55e99a70e7.png" src="../../../_images/710e536b048acf5860acd13d0599226d2a92241a9dc4ba7044ca1f55e99a70e7.png">
-</img></div>
-</div>
-<p><a class="reference external" href="https://github.com/neuromatch/climate-course-content/tree/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/solutions/W2D1_Tutorial3_Solution_c56ea204.py"><em>Click for solution</em></a></p>
-<p><em>Example output:</em></p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/static/W2D1_Tutorial3_Solution_c56ea204_1.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/static/W2D1_Tutorial3_Solution_c56ea204_1.png" style="width: 828.0px; height: 575.0px;"/></a>
-</div>
-<div class="section" id="question-1-1">
-<h2><strong>Question 1.1</strong><a class="headerlink" href="#question-1-1" title="Permalink to this heading">#</a></h2>
+<div class="tex2jax_ignore mathjax_ignore section" id="section-2-quantifying-uncertainty-in-a-cmip6-multi-model-ensemble">
+<h1>Section 2: Quantifying Uncertainty in a CMIP6 Multi-model Ensemble<a class="headerlink" href="#section-2-quantifying-uncertainty-in-a-cmip6-multi-model-ensemble" title="Permalink to this heading">#</a></h1>
+<p>Let’s create a multi-model ensemble containing data from multiple CMIP6 models, which we can use to quantify our confidence in future projected sea surface temperature change under low- and high-emissions scenarios.</p>
+<p><strong>Your goal in this tutorial is to create a <em>likely</em> range of future projected conditions under both SSP 1-2.6 (low emissions) and SSP 5-8.5 (high emissions). The <a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-1/#h3-9-siblings">IPCC uncertainty language</a> defines the <em>likely</em> range as the middle 66% of model results (ignoring the upper 17% and lower 17% of results)</strong></p>
+<div class="section" id="coding-exercise-2-1">
+<h2>Coding Exercise 2.1<a class="headerlink" href="#coding-exercise-2-1" title="Permalink to this heading">#</a></h2>
+<p>Complete the following code to display multi-model ensemble data with IPCC uncertainty bands:</p>
 <ol class="arabic simple">
-<li><p>Why do you think the global mean temperature varies so much between models?*</p></li>
+<li><p>Compute the multi-model mean temperature</p></li>
+<li><p>Display the <em>likely</em> range of temperatures for the CMIP6 historical and projected data (include both <em>SSP1-2.6</em> and <em>SSP5-8.5</em>) via shaded areas with <em>da_upper</em> and <em>da_lower</em> being the boundaries of these shaded regions.</p></li>
 </ol>
-<p>*<em>If you get stuck here, reflect on the videos from earlier today and the tutorials/videos from the Climate Modelling day for inspiration.</em></p>
-<p><a class="reference external" href="https://github.com/neuromatch/climate-course-content/tree/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/solutions/W2D1_Tutorial3_Solution_23243afa.py"><em>Click for solution</em></a></p>
-</div>
-<div class="section" id="coding-exercise-1-2">
-<h2>Coding Exercise 1.2<a class="headerlink" href="#coding-exercise-1-2" title="Permalink to this heading">#</a></h2>
-<p>As you just saw, the global mean SST varies between climate models. This is not surprising given the slight differences in physics, numerics, and discretization between each model.</p>
-<p>When we are looking at future projections, we care about how the model’s <em>change</em> relative to their equilibrium/previous state. To do this, we typically subtract a historical reference period from the timeseries, which creates a new timeseries which we call the temperature <em>anomaly</em> relative to that period. <strong>Recall that you already calculated and used <em>anomalies</em> earlier in the course (e.g., on W1D1).</strong></p>
-<p><strong>Modify the following code to recreate the previous multi-model figure, but now instead plot the global mean sea surface temperature (GMSST) <em>anomaly</em> relative the 1950-1980 base period (i.e., subtract the 1950-1980 mean GMSST of each model from that model’s timeseries)</strong></p>
-<p><em>Hint: you will need to use <code class="docutils literal notranslate"><span class="pre">ds.sel</span></code> to select data during the base period (<a class="reference external" href="https://docs.xarray.dev/en/stable/user-guide/indexing.html#indexing-with-dimension-names">see here</a> under “Indexing with dimension names” for a helpful example) along with the averaging operator, <code class="docutils literal notranslate"><span class="pre">mean()</span></code>.</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># calculate anomaly to reference period</span>
-<span class="k">def</span> <span class="nf">datatree_anomaly</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
-    <span class="n">dt_out</span> <span class="o">=</span> <span class="n">DataTree</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">model</span><span class="p">,</span> <span class="n">subtree</span> <span class="ow">in</span> <span class="n">dt</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="c1"># find the temporal average over the desired reference period</span>
-        <span class="n">ref</span> <span class="o">=</span> <span class="o">...</span>
-        <span class="n">dt_out</span><span class="p">[</span><span class="n">model</span><span class="p">]</span> <span class="o">=</span> <span class="n">subtree</span> <span class="o">-</span> <span class="n">ref</span>
-    <span class="k">return</span> <span class="n">dt_out</span>
-
-<span class="c1"># Uncomment below once you finish the above</span>
-<span class="c1"># dt_gm_anomaly = datatree_anomaly(dt_gm)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#################################################</span>
+<span class="c1">## TODO for students: Plot range of global mean SST anomaly for five-member ensemble##</span>
+<span class="c1"># please remove the following line of code once you have completed the exercise:</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">"Student exercise: Plot range of global mean SST anomaly for five-member ensemble"</span><span class="p">)</span>
+<span class="c1">#################################################</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="c1"># Uncomment below once you finish the above</span>
-<span class="c1"># plot_historical_ssp126_combined(dt_gm_anomaly, ax)</span>
+<span class="k">for</span> <span class="n">experiment</span><span class="p">,</span> <span class="n">color</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="s2">"historical"</span><span class="p">,</span> <span class="s2">"ssp126"</span><span class="p">,</span> <span class="s2">"ssp585"</span><span class="p">],</span> <span class="p">[</span><span class="s2">"C0"</span><span class="p">,</span> <span class="s2">"C1"</span><span class="p">,</span> <span class="s2">"C2"</span><span class="p">]):</span>
+    <span class="n">datasets</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">dt_gm_anomaly</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="c1"># calculate annual mean</span>
+        <span class="n">annual_sst</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="n">dt_gm_anomaly</span><span class="p">[</span><span class="n">model</span><span class="p">][</span><span class="n">experiment</span><span class="p">]</span>
+            <span class="o">.</span><span class="n">ds</span><span class="o">.</span><span class="n">tos</span><span class="o">.</span><span class="n">coarsen</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+            <span class="o">.</span><span class="n">assign_coords</span><span class="p">(</span><span class="n">source_id</span><span class="o">=</span><span class="n">model</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">datasets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="n">annual_sst</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="s2">"2100"</span><span class="p">))</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+        <span class="p">)</span>  <span class="c1"># the french model has a long running member for ssp126</span>
+    <span class="c1"># concatenate all along source_id dimension</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">datasets</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="s2">"source_id"</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s2">"override"</span><span class="p">)</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span>
+    <span class="c1"># compute ensemble mean and draw time series</span>
+    <span class="n">da</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">experiment</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+    <span class="c1"># extract time coordinates</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">data</span>
+    <span class="c1"># Calculate the lower bound of the likely range</span>
+    <span class="n">da_lower</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="c1"># Calculate the upper bound of the likely range</span>
+    <span class="n">da_upper</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="c1"># shade via quantile boundaries</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">da_lower</span><span class="p">,</span> <span class="n">da_upper</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
 
+<span class="c1"># aesthetics</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span>
-    <span class="s2">"Global Mean SST Anomaly from five CMIP6 models (base period: 1950 to 1980)"</span>
+    <span class="s2">"Global Mean SST Anomaly from five-member CMIP6 ensemble</span><span class="se">\n</span><span class="s2">(base period: 1950 to 1980)"</span>
 <span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Global Mean SST Anomaly [$^\circ$C]"</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Year"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">"Global Mean SST Anomaly (°C)"</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">"Time (years)"</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
-</pre></div>
+
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7f7ed3ce6610&gt;
-</pre></div>
-</div>
-<img alt="../../../_images/9a2e5b646128daf693da341e827b68871fecbadcf4226c5604d55120522d557a.png" src="../../../_images/9a2e5b646128daf693da341e827b68871fecbadcf4226c5604d55120522d557a.png"/>
-</div>
-</div>
-<p><a class="reference external" href="https://github.com/neuromatch/climate-course-content/tree/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/solutions/W2D1_Tutorial3_Solution_e2cb35eb.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/neuromatch/climate-course-content/tree/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/solutions/W2D1_Tutorial3_Solution_3cfa2928.py"><em>Click for solution</em></a></p>
 <p><em>Example output:</em></p>
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/static/W2D1_Tutorial3_Solution_e2cb35eb_1.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/static/W2D1_Tutorial3_Solution_e2cb35eb_1.png" style="width: 1012.0px; height: 575.0px;"/></a>
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/static/W2D1_Tutorial3_Solution_3cfa2928_1.png"><img align="center" alt="Solution hint" class="align-center" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/static/W2D1_Tutorial3_Solution_3cfa2928_1.png" style="width: 811.0px; height: 574.0px;"/></a>
 </div>
-<div class="section" id="questions-1-2-climate-connection">
-<h2><strong>Questions 1.2: Climate Connection</strong><a class="headerlink" href="#questions-1-2-climate-connection" title="Permalink to this heading">#</a></h2>
+<div class="section" id="questions-2-1-climate-connection">
+<h2>Questions 2.1: Climate Connection<a class="headerlink" href="#questions-2-1-climate-connection" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>How does this figure compare to the previous one where the reference period was not subtracted?</p></li>
-<li><p>This figure uses the reference period of 1950-1980 for its anomaly calculation. How does the variability across models 100 years before the base period (1850) compare to the variability 100 years after the base period (2080)? Why do you think this is?</p></li>
+<li><p>What does this figure tell you about how the multi-model uncertainty compares to projected physical changes in the global mean SST?</p></li>
+<li><p>Is this the same for both scenarios?</p></li>
+<li><p>For a 5-model ensemble like this, how do the <em>likely</em> ranges specifically relate to the 5 individual model temperatures at a given time?</p></li>
 </ol>
-<p><a class="reference external" href="https://github.com/neuromatch/climate-course-content/tree/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/solutions/W2D1_Tutorial3_Solution_a59e8ac4.py"><em>Click for solution</em></a></p>
+<p><a class="reference external" href="https://github.com/neuromatch/climate-course-content/tree/main/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/solutions/W2D1_Tutorial3_Solution_bc0a1a18.py"><em>Click for solution</em></a></p>
 </div>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="summary">
 <h1>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h1>
-<p>In this tutorial, we expanded on the previous examination of a single CMIP6 model (<em>TaiESM1</em>), to instead work with multi-model ensemble comprising five different CMIP6 models (<em>TaiESM1</em>, <em>IPSL-CM6A-LR</em>, <em>GFDL-ESM4</em>, <em>ACCESS-CM2</em>, and <em>MPI-ESM1-2-LR</em>) developed by institutions around the world. We demonstrated the importance of anomalizing each of these models relative to a base period when calculating changes in the simulated Earth system. If variables are not anomalized, these absolute values can differ significantly between models due to the diversity of models (i.e., their distinct physics, numerics and discretization).</p>
+<p>In this tutorial, we have quantified the uncertainty of future climate projections by analyzing variability across a multi-model CMIP6 ensemble. We learned to apply the IPCC’s confidence levels to establish a <em>likely</em> range of projections, which refers to the middle 66% of model results, for multiple emission pathways.</p>
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="resources">
 <h1>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h1>
 <p>This tutorial uses data from the simulations conducted as part of the <a class="reference external" href="https://wcrp-cmip.org/">CMIP6</a> multi-model ensemble.</p>
-<p>For examples on how to access and analyze data, please visit the <a class="reference external" href="https://gallery.pangeo.io/repos/pangeo-gallery/cmip6/index.html">Pangeo Cloud CMIP6 Gallery</a></p>
-<p>For more information on what CMIP is and how to access the data, please see this <a class="reference external" href="https://github.com/ClimateMatchAcademy/course-content/blob/main/tutorials/CMIP/CMIP_resource_bank.md">page</a>.</p>
+<p>For a detailed explanation of the <em><strong>IPCC uncertainty language</strong></em> have a look at <a class="reference external" href="https://www.ipcc.ch/report/ar6/wg1/chapter/chapter-1/#h3-9-siblings">Box 1.1, Chapter 1 of the IPCC AR6, cf. p. 169-170</a>.</p>
+<p>For examples of how to access and analyze CMIP6 data, please visit the <a class="reference external" href="https://gallery.pangeo.io/repos/pangeo-gallery/cmip6/index.html">Pangeo Cloud CMIP6 Gallery</a>.</p>
+<p>For more information on what CMIP is and how to access the data, please see this <a class="reference external" href="https://github.com/neuromatch/climate-course-content/blob/main/tutorials/CMIP/CMIP_resource_bank.md">page</a>.</p>
 </div>
 <script type="text/x-thebe-config">
     {
@@ -1256,13 +1213,13 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fa-solid fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
-<p class="prev-next-title">Tutorial 2: Time Series, Global Averages, and Scenario Comparison</p>
+<p class="prev-next-title">Tutorial 2: Future climate scenarios &amp; Multi-model Ensembles</p>
 </div>
 </a>
 <a class="right-next" href="W2D1_Tutorial4.html" id="next-link" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
-<p class="prev-next-title">Tutorial 4: Quantifying Uncertainty in Projections</p>
+<p class="prev-next-title">Tutorial 4: Synthesising &amp; Interpreting Diverse Data Sources</p>
 </div>
 <i class="fa-solid fa-angle-right"></i>
 </a>
@@ -1278,7 +1235,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry">
 <a class="reference internal nav-link" href="#">
-   Tutorial 3: Multi-model Ensembles
+   Tutorial 3: Quantifying Uncertainty in Projections
   </a>
 </li>
 <li class="toc-h1 nav-item toc-entry">
@@ -1302,42 +1259,31 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#video-1-why-so-many-earth-system-models">
-     Video 1: Why So Many Earth System Models?
+<a class="reference internal nav-link" href="#video-1-quantifying-uncertainty-in-projections">
+     Video 1: Quantifying Uncertainty in Projections
     </a>
 </li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#section-1-load-cmip6-sst-data-from-five-models-and-three-experiments">
-   Section 1: Load CMIP6 SST Data from Five Models and Three Experiments
+<a class="reference internal nav-link" href="#section-1-loading-cmip6-data-from-various-models-experiments">
+   Section 1: Loading CMIP6 Data from Various Models &amp; Experiments
+  </a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-2-quantifying-uncertainty-in-a-cmip6-multi-model-ensemble">
+   Section 2: Quantifying Uncertainty in a CMIP6 Multi-model Ensemble
   </a>
 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercise-1-1-combine-past-data-and-future-data-and-remove-seasonal-oscillations-and-plot-all-5-of-the-cmip6-models-we-just-loaded">
-<strong>
-      Coding Exercise 1.1: Combine Past Data and Future Data, and Remove Seasonal Oscillations, and plot all 5 of the CMIP6 models we just loaded
-     </strong>
-</a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#question-1-1">
-<strong>
-      Question 1.1
-     </strong>
-</a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#coding-exercise-1-2">
-     Coding Exercise 1.2
+<a class="reference internal nav-link" href="#coding-exercise-2-1">
+     Coding Exercise 2.1
     </a>
 </li>
 <li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#questions-1-2-climate-connection">
-<strong>
-      Questions 1.2: Climate Connection
-     </strong>
-</a>
+<a class="reference internal nav-link" href="#questions-2-1-climate-connection">
+     Questions 2.1: Climate Connection
+    </a>
 </li>
 </ul>
 </li>

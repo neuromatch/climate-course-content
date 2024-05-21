@@ -22,7 +22,7 @@ We expect students to be familiar with fundamental Python and data storage conce
 
 What is Project Pythia? Check out the fantastic [~5min video](https://bit.ly/42P799Y) that Julia Kent prepared for you as an intro to this fabulous material.
 
-Below are the lessons you need to review. **To get started with a tutorial just click on the on the rocket icon at the top right of each tutorial notebook and then click the 'Binder' button that appears ro launch the tutorial (see image below and more instructoins [here](https://foundations.projectpythia.org/preamble/how-to-use.html#interacting-with-jupyter-notebooks-in-the-cloud-via-binder))!** If you’re from a Matlab background, you may find reviewing [this cheatsheet](https://cheatsheets.quantecon.org/) helpful before you get started.
+Below are the lessons you need to review. **To get started with a tutorial just click on the rocket icon at the top right of each tutorial notebook and then click the 'Binder' button that appears ro launch the tutorial (see image below and more instructions [here](https://foundations.projectpythia.org/preamble/how-to-use.html#interacting-with-jupyter-notebooks-in-the-cloud-via-binder))!** If you’re from a Matlab background, you may find reviewing [this cheatsheet](https://cheatsheets.quantecon.org/) helpful before you get started.
 
 ![Launch Binder](binder.png)
 
@@ -48,7 +48,7 @@ Below are the lessons you need to review. **To get started with a tutorial just 
 | [Data Formats](https://foundations.projectpythia.org/core/data-formats.html) | 50 |
 | Optional (will be covered in the first day of course materials): [Xarray](https://foundations.projectpythia.org/core/xarray.html) | 150 |
 
-To ensure clarity and set proper expectations, let’s revisit what you can expect from the **Python pre-course** and what you should not expect.
+To ensure clarity and set proper expectations, let’s revisit what you can expect from the **Python Refresher Materials** and what you should not expect.
 
 ### What You Can Expect from the Python Refresher
 
@@ -74,7 +74,7 @@ To ensure clarity and set proper expectations, let’s revisit what you can expe
 - In-depth Coverage of Advanced Topics: The Python refresher primarily focuses on introducing the fundamentals of Python programming. It does not delve into advanced topics. We recommend the [Software carpentry 1-day Python tutorial](https://swcarpentry.github.io/python-novice-inflammation/) or the free Edx course [Using Python for Research](https://www.edx.org/course/using-python-for-research). For a more in-depth intro, see the [scipy lecture notes](https://scipy-lectures.org/). Finally, you can follow the [Python data science handbook](https://jakevdp.github.io/PythonDataScienceHandbook/), which also has a print edition. 
 
     
-## Math 
+## Math
 
 Climatematch Academy relies on linear algebra, probability, basic statistics, and calculus (derivatives, integrals, and ordinary differential equations -ODEs).
 
