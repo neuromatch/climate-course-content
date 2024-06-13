@@ -47,8 +47,8 @@ runs:
       if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
       id: changed-files
       uses: tj-actions/changed-files@v35
-        with:
-          files_ignore: projects/archive/*
+      with:
+        files_ignore: projects/archive/*
 
     - name: List all changed files
       run: |
