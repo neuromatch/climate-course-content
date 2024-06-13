@@ -10,6 +10,12 @@ inputs:
 runs:
   using: composite
   steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        persist-credentials: false
+        fetch-depth: 0
+        ref: ${{ github.head_ref }}
     # - name: Set up Python (conda)
     #   uses: conda-incubator/setup-miniconda@v3
     #   with:

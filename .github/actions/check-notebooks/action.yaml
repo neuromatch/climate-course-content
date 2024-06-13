@@ -43,13 +43,26 @@ runs:
     #   with:
     #     output: " "
 
+    - name: Get changed files
+      if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
+      id: changed-files
+      uses: tj-actions/changed-files@v35
+
+    - name: List all changed files
+      run: |
+        for file in ${{ steps.changed-files.outputs.all_changed_files }}; do
+          echo "$file was changed."
+        done
+      shell: bash -l {0}
+
     - name: Get notebooks
       run: |
         if ${{ inputs.run_all == 'true' }}; then
           # nbs="tutorials/*/*Tutorial*.ipynb";
           nbs="tutorials/W2D5_*/*Tutorial*.ipynb";
         else
-          nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`;
+          nbs=`python ci/select_notebooks.py ${{ steps.changed-files.outputs.all_changed_files }}`;
+          # nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`;
         fi
         echo "NBS=$nbs" >> $GITHUB_ENV
       shell: bash -l {0}
