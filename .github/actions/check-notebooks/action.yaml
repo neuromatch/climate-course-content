@@ -80,10 +80,13 @@ runs:
     - name: Process notebooks
       id: process_notebooks
       if: ${{ env.NBS != '' }}
+      env:
+        CDSAPI_UID: ${{ secrets.CDSAPI_UID }}
+        CDSAPI_KEY: ${{ secrets.CDSAPI_KEY }}
       run: |
         # add cdsapi credentials for projects
         echo "url: https://cds.climate.copernicus.eu/api/v2" >> .cdsapirc
-        echo "key: ${{ secrets.CDSAPI_UID }}:${{ secrets.CDSAPI_KEY }}" >> .cdsapirc
+        echo "key: ${{ CDSAPI_UID }}:${{ CDSAPI_KEY }}" >> .cdsapirc
         python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 
