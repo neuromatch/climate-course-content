@@ -80,7 +80,7 @@ runs:
     - name: Process notebooks
       id: process_notebooks
       if: ${{ env.NBS != '' }}
-      env:
+      secrets:
         CDSAPI_UID: ${{ secrets.CDSAPI_UID }}
         CDSAPI_KEY: ${{ secrets.CDSAPI_KEY }}
       run: |
