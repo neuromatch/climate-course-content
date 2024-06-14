@@ -7,7 +7,7 @@ scikit-learn
 ipywidgets
 decorator==5.0.9
 # xarray==0.20.2
-xarray
+xarray[complete]
 shapely==1.8.5
 cartopy
 pythia_datasets
