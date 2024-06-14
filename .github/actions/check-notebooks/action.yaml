@@ -14,6 +14,16 @@ inputs:
     required: false
     default: false
     type: string
+  cdsapi_uid:
+    description: 'CDSAPI UID'
+    required: true
+  cdsapi_key:
+    description: 'CDSAPI Key'
+    required: true
+    
+env:
+  CDSAPI_UID: ${{ inputs.cdsapi_uid }}
+  CDSAPI_KEY: ${{ inputs.cdsapi_key }}
 
 runs:
   using: composite
@@ -80,9 +90,6 @@ runs:
     - name: Process notebooks
       id: process_notebooks
       if: ${{ env.NBS != '' }}
-      env:
-        CDSAPI_UID: ${{ secrets.CDSAPI_UID }}
-        CDSAPI_KEY: ${{ secrets.CDSAPI_KEY }}
       run: |
         # add cdsapi credentials for projects
         echo "url: https://cds.climate.copernicus.eu/api/v2" >> .cdsapirc
