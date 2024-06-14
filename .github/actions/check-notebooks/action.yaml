@@ -20,10 +20,6 @@ inputs:
   cdsapi_key:
     description: 'CDSAPI Key'
     required: true
-    
-env:
-  CDSAPI_UID: ${{ inputs.cdsapi_uid }}
-  CDSAPI_KEY: ${{ inputs.cdsapi_key }}
 
 runs:
   using: composite
@@ -93,7 +89,7 @@ runs:
       run: |
         # add cdsapi credentials for projects
         echo "url: https://cds.climate.copernicus.eu/api/v2" >> .cdsapirc
-        echo "key: $CDSAPI_UID:$CDSAPI_KEY" >> .cdsapirc
+        echo "key: ${{ inputs.cdsapi_uid }}:${{ inputs.cdsapi_key }}" >> .cdsapirc
         python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 
