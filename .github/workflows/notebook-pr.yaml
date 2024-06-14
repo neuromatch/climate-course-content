@@ -59,6 +59,8 @@ jobs:
           # exec_flag: '--check-only'
           exec_flag: '--execute'
           # exercise-continue-on-error: true
+          cdsapi_uid: ${{ secrets.CDSAPI_UID }}
+          cdsapi_key: ${{ secrets.CDSAPI_KEY }}
 
       # - name: Add PR comment
       #   if: ${{ env.NBS != '' }}
