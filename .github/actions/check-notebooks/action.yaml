@@ -88,8 +88,8 @@ runs:
       if: ${{ env.NBS != '' }}
       run: |
         # add cdsapi credentials for projects
-        echo "url: https://cds.climate.copernicus.eu/api/v2" >> .cdsapirc
-        echo "key: ${{ inputs.cdsapi_uid }}:${{ inputs.cdsapi_key }}" >> .cdsapirc
+        echo "url: https://cds.climate.copernicus.eu/api/v2" >> /home/runner/.cdsapirc
+        echo "key: ${{ inputs.cdsapi_uid }}:${{ inputs.cdsapi_key }}" >> /home/runner/.cdsapirc
         python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 
