@@ -46,5 +46,4 @@ mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip
 dicelib @ https://github.com/mptouzel/PyDICE/archive/master.zip
 cdsapi
 texttable
-eccodes==2.31.0
-cfgrib==0.9.10.4
+cfgrib
