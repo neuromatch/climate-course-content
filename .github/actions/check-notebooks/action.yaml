@@ -88,6 +88,8 @@ runs:
       if: ${{ env.NBS != '' }}
       run: |
         # process notebooks
+        pip install xarray[complete]
+        pip install eccodes
         pip install cfgrib
         python -m cfgrib selfcheck
         # add cdsapi credentials for projects
