@@ -7,13 +7,12 @@ scikit-learn
 ipywidgets
 decorator==5.0.9
 # xarray==0.20.2
-xarray
+xarray[complete]==2024.2.0
 shapely==1.8.5
 cartopy
 pythia_datasets
 pooch
 # climlab==0.8.2
-# climlab # try to run this with no cache
 # climlab-rrtmg
 cftime
 geopandas
@@ -47,3 +46,4 @@ mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip
 dicelib @ https://github.com/mptouzel/PyDICE/archive/master.zip
 cdsapi
 texttable
+# cfgrib

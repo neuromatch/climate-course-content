@@ -14,6 +14,12 @@ inputs:
     required: false
     default: false
     type: string
+  cdsapi_uid:
+    description: 'CDSAPI UID'
+    required: true
+  cdsapi_key:
+    description: 'CDSAPI Key'
+    required: true
 
 runs:
   using: composite
@@ -47,6 +53,8 @@ runs:
       if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
       id: changed-files
       uses: tj-actions/changed-files@v35
+      with:
+        files_ignore: projects/archive/*
 
     - name: List all changed files
       run: |
@@ -79,6 +87,10 @@ runs:
       id: process_notebooks
       if: ${{ env.NBS != '' }}
       run: |
+        # process notebooks
+        # add cdsapi credentials for projects
+        echo "url: https://cds.climate.copernicus.eu/api/v2" >> /home/runner/.cdsapirc
+        echo "key: ${{ inputs.cdsapi_uid }}:${{ inputs.cdsapi_key }}" >> /home/runner/.cdsapirc
         python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 

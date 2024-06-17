@@ -1,4 +1,6 @@
 book/_build/
+*.grib
+*.idx
 *.nc
 *.csv
 .ipynb_checkpoints/
