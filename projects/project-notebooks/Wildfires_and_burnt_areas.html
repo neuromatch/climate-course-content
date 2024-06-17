@@ -1,10 +1,14 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
     <title>Monitoring and Mapping Wildfires Using Satellite Data &#8212; Climatematch Academy: Computational Tools for Climate Science</title>
   
   
@@ -15,18 +19,18 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link href="../../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -35,8 +39,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -45,7 +49,7 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -60,595 +64,93 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="application/vnd.jupyter.widget-state+json">{"state": {"6e6bd8fb34774daca221bdd4e72581a2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "1b9343f8fdd94d0a9173d5a0f689943a": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_6e6bd8fb34774daca221bdd4e72581a2", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=2CDVn6O_q34\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7fcb506fb430>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/2CDVn6O_q34?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "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APl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wPqAPl/pHveqtuzPxj0j3vVW3Zn4wOPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/9k=\n"}}], "tabbable": null, "tooltip": null}}, "26fe7f18ad594e96b2a13dd8b5f8937a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b8a99aea920e42fe9f259267640ae9bb": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_26fe7f18ad594e96b2a13dd8b5f8937a", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV1GP411k7XA\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7fcb506fbc70>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV1GP411k7XA&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}], "tabbable": null, "tooltip": null}}, "3aca732a386747abb01f10465d8f79b8": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "72ef8845e07340e6b631d7d2f9dc7602": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TabModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_1b9343f8fdd94d0a9173d5a0f689943a", "IPY_MODEL_b8a99aea920e42fe9f259267640ae9bb"], "layout": "IPY_MODEL_3aca732a386747abb01f10465d8f79b8", "selected_index": 0, "tabbable": null, "titles": ["Youtube", "Bilibili"], "tooltip": null}}, "ce50ff84cdba4af2bca2031241734f53": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "96767cdc024b469dab4a655b9131c47e": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_ce50ff84cdba4af2bca2031241734f53", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "If you want to download the slides: https://osf.io/download/8w5da/\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.IFrame at 0x7fcb506f1c10>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://mfr.ca-1.osf.io/render?url=https://osf.io/8w5da/?direct%26mode=render%26action=download%26mode=render\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}], "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
-    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'projects/project-notebooks/Wildfires_and_burnt_areas';</script>
     <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Changes in Land Cover: Albedo and Carbon Sequestration" href="Surface_albedo_and_land_cover.html" />
     <link rel="prev" title="Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land" href="Heatwaves.html" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="docsearch:language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
-
   
-  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
   <label class="overlay overlay-primary" for="__primary"></label>
-
   
-  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
   <label class="overlay overlay-secondary" for="__secondary"></label>
-
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
-      
-<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    </div>
+</form></div>
   </div>
-
   
-  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
-      <span class="fa-solid fa-bars"></span>
-  </label>
-  <div id="navbar-start">
-    
-    
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
   
-
-
-<a class="navbar-brand logo" href="../../tutorials/intro.html">
-
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-light" alt="Logo image">
-    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-dark" alt="Logo image">
-  
-  
-</a>
-    
-  </div>
-
-  
-  <div class="col-lg-9 navbar-header-items">
-    <div id="navbar-center" class="mr-auto">
-      
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
-        
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/Schedule/schedule_intro.html">
-                        Schedule
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/TechnicalHelp/tech_intro.html">
-                        Technical Help
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/TechnicalHelp/Links_Policy.html">
-                        Quick links and policies
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/prereqs/ClimateScience.html">
-                        Prerequisites and preparatory materials for Computational Tools for Climate Science
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D1_ClimateSystemOverview/chapter_title.html">
-                        Climate System Overview (W1D1)
-                      </a>
-                    </li>
-                
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/Projects_GoodResearchPractices/chapter_title.html">
-                        Good Research Practices (Projects)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
-                        State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
-                        Remote Sensing Land Ocean and Atmosphere (W1D3)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D4_Paleoclimate/chapter_title.html">
-                        Paleoclimate (W1D4)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D5_ClimateModeling/chapter_title.html">
-                        Climate Modeling (W1D5)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
-                        Future Climate - IPCC I Physical Basis (W2D1)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/chapter_title.html">
-                        The Socioeconomics of Climate Change (W2D3)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">
-                        Climate Response - Extremes & Variability (W2D4)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
-                        Climate Response - Adaptation Impact (W2D5)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../README.html">
-                        Introduction
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../keynote.html">
-                        Project Day keynote (W2D2)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../docs/project_guidance.html">
-                        Daily guide for projects
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../docs/datasets_overview.html">
-                        Project materials
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../docs/continuing_your_project_after_the_course.html">
-                        Continuing your project after the course
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../docs/past_projects_overview.html">
-                        Past projects
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/README.html">
-                        Introduction
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/mentorship_program.html">
-                        Mentorship Program
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/impact_talks.html">
-                        Impact Talks
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/mentors.html">
-                        Mentor Meetings
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/career_features.html">
-                        Career Features
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/career_panels.html">
-                        Career Panels
-                      </a>
-                    </li>
-                
-                </div>
-            </div>
-            
-    </ul>
-</nav>
-      </div>
-      
-    </div>
-
-    <div id="navbar-end">
-      
-        <div class="navbar-end-item navbar-persistent--container">
-          
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-        </div>
-      
-      
-      <div class="navbar-end-item">
-        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-</button>
-      </div>
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-      </ul>
-      </div>
-      
-    </div>
-  </div>
-
-
-  
-  
-    <div class="navbar-persistent--mobile">
-<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
-  <i class="fa-solid fa-magnifying-glass"></i>
-</button>
-    </div>
-  
-
-  
-  <label class="sidebar-toggle secondary-toggle" for="__secondary">
-      <span class="fa-solid fa-outdent"></span>
-  </label>
-  
-
-</div>
-  </nav>
-  
-
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
       
       <div class="bd-sidebar-primary bd-sidebar">
         
+
   
   <div class="sidebar-header-items sidebar-primary__section">
     
     
-      <div class="sidebar-header-items__center">
-      
-      <div class="navbar-center-item">
-        <nav class="navbar-nav">
-    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
-        Site Navigation
-    </p>
-    <ul id="navbar-main-elements" class="navbar-nav">
-        
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/Schedule/schedule_intro.html">
-                        Schedule
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/TechnicalHelp/tech_intro.html">
-                        Technical Help
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/TechnicalHelp/Links_Policy.html">
-                        Quick links and policies
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/prereqs/ClimateScience.html">
-                        Prerequisites and preparatory materials for Computational Tools for Climate Science
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D1_ClimateSystemOverview/chapter_title.html">
-                        Climate System Overview (W1D1)
-                      </a>
-                    </li>
-                
-            <div class="nav-item dropdown">
-                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    More
-                </button>
-                <div class="dropdown-menu">
-                    
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/Projects_GoodResearchPractices/chapter_title.html">
-                        Good Research Practices (Projects)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
-                        State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
-                        Remote Sensing Land Ocean and Atmosphere (W1D3)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D4_Paleoclimate/chapter_title.html">
-                        Paleoclimate (W1D4)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W1D5_ClimateModeling/chapter_title.html">
-                        Climate Modeling (W1D5)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">
-                        Future Climate - IPCC I Physical Basis (W2D1)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/chapter_title.html">
-                        The Socioeconomics of Climate Change (W2D3)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">
-                        Climate Response - Extremes & Variability (W2D4)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">
-                        Climate Response - Adaptation Impact (W2D5)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../README.html">
-                        Introduction
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../keynote.html">
-                        Project Day keynote (W2D2)
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../docs/project_guidance.html">
-                        Daily guide for projects
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="../docs/datasets_overview.html">
-                        Project materials
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../docs/continuing_your_project_after_the_course.html">
-                        Continuing your project after the course
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../docs/past_projects_overview.html">
-                        Past projects
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/README.html">
-                        Introduction
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/mentorship_program.html">
-                        Mentorship Program
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/impact_talks.html">
-                        Impact Talks
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/mentors.html">
-                        Mentor Meetings
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/career_features.html">
-                        Career Features
-                      </a>
-                    </li>
-                
-
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../professional_development/career_panels.html">
-                        Career Panels
-                      </a>
-                    </li>
-                
-                </div>
-            </div>
-            
-    </ul>
-</nav>
-      </div>
-      
-      </div>
     
-
-    
-    
-    <div class="sidebar-header-items__end">
-      
-      <div class="navbar-end-item">
-        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-</button>
-      </div>
-      
-      <div class="navbar-end-item">
-        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
-      </ul>
-      </div>
-      
-    </div>
     
   </div>
-
   
-  <div class="sidebar-start-items sidebar-primary__section">
-    <div class="sidebar-start-items__item">
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
   
-
 
 <a class="navbar-brand logo" href="../../tutorials/intro.html">
-
   
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
-  
-
-  
-    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-light" alt="Logo image">
-    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-dark" alt="Logo image">
-  
-  
-</a>
-    </div>
-    <div class="sidebar-start-items__item">
-<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    </div>
-    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -668,6 +170,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/TechnicalHelp/tech_intro.html">Technical Help</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../tutorials/TechnicalHelp/Jupyterbook.html">Using jupyterbook</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/TechnicalHelp/Tutorial_jupyterhub.html"><strong>Using JupyterHub</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/TechnicalHelp/Tutorial_colab.html">Using Google Colab</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../tutorials/TechnicalHelp/Tutorial_kaggle.html">Using Kaggle</a></li>
 </ul>
@@ -739,7 +242,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">Bonus Tutorial 9: Masking with Multiple Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">Tutorial 9: Masking with Multiple Conditions</a></li>
 
 
 
@@ -748,7 +251,6 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_Outro.html">Outro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D1_ClimateSystemOverview/student/W1D1_DaySummary.html">Day Summary</a></li>
 </ul>
 </li>
@@ -802,7 +304,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html"><strong>Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis</strong></a></li>
 
 
 
@@ -817,8 +319,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">Tutorial 4: Oceanic Wind-Driven Circulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">Tutorial 4: Oceanic Wind-driven Circulation</a></li>
 
 
 
@@ -833,7 +334,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">Bonus Tutorial 6: Ocean Heat Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">Tutorial 6: Ocean Heat Content</a></li>
 
 
 
@@ -842,69 +343,65 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Outro.html">Outro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_DaySummary.html">Day Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">Suggested Further Reading</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">Remote Sensing Land Ocean and Atmosphere (W1D3)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Intro.html">Intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">Tutorial 1: Introduction to Remote Sensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html"><strong>Tutorial 1: Introduction to Remote Sensing</strong></a></li>
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">Tutorial 2: Exploring Satellite Climate Data Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html"><strong>Tutorial 2: Exploring Satellite Climate Data Records</strong></a></li>
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">Tutorial 3: Visualizing Satellite CDR - Global Vegetation Mapping</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">Tutorial 4: Understanding Climatology Through Precipitation Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html"><strong>Tutorial 3: Visualizing Satellite CDR - Global Vegetation Mapping</strong></a></li>
 
 
 
 
 
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">Tutorial 5: Calculating Anomalies Using Precipitation Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html"><strong>Tutorial 4: Understanding Climatology Through Precipitation Data</strong></a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">Tutorial 6: Large Scale Climate Variability - ENSO</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.html">Tutorial 7: Impact of Climate Variability - Precipitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html"><strong>Tutorial 5: Calculating Anomalies Using Precipitation Data</strong></a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.html">Tutorial 8: Comparing Satellite Products With In Situ Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html"><strong>Tutorial 6: Large Scale Climate Variability - ENSO</strong></a></li>
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.html"><strong>Tutorial 7: Impact of Climate Variability - Precipitation</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.html"><strong>Tutorial 8: Comparing Satellite Products With In Situ Data</strong></a></li>
+
+
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/further_reading.html">Suggested Further Reading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_DaySummary.html">Day Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/chapter_title.html">Paleoclimate (W1D4)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Intro.html">Intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial1.html">Tutorial 1: Paleoclimate Proxies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial1.html"><strong>Tutorial 1: Paleoclimate Proxies</strong></a></li>
 
 
 
@@ -912,7 +409,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial2.html">Tutorial 2: Reconstructing Past Changes in Ocean Climate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial2.html"><strong>Tutorial 2: Reconstructing Past Changes in Ocean Climate</strong></a></li>
 
 
 
@@ -920,21 +417,14 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial3.html">Tutorial 3: Reconstructing Past Changes in Terrestrial Climate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial3.html"><strong>Tutorial 3: Reconstructing Past Changes in Terrestrial Climate</strong></a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial4.html">Tutorial 4: Reconstructing Past Changes in Atmospheric Climate</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial5.html">Tutorial 5: Paleoclimate Data Analysis Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial4.html"><strong>Tutorial 4: Reconstructing Past Changes in Atmospheric Climate</strong></a></li>
 
 
 
@@ -942,21 +432,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial6.html">Tutorial 6: Spectral Analysis of Paleoclimate Data</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial7.html">Bonus Tutorial 7: Assessing Climate Forcings</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial8.html">Bonus Tutorial 8: Paleoclimate Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial5.html"><strong>Tutorial 5: Paleoclimate Data Analysis Tools</strong></a></li>
 
 
 
@@ -964,23 +440,71 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial9.html">Tutorial 9: Paleoclimate Reanalysis Products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial6.html"><strong>Tutorial 6: Spectral Analysis of Paleoclimate Data</strong></a></li>
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Outro.html">Outro</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial7.html"><strong>Tutorial 7: Assessing Climate Forcings</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial8.html"><strong>Tutorial 8: Paleoclimate Models</strong></a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_Tutorial9.html"><strong>Tutorial 9: Paleoclimate Reanalysis Products</strong></a></li>
+
+
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/further_reading.html">Suggested Further Reading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D4_Paleoclimate/student/W1D4_DaySummary.html">Day Summary</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Future</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/chapter_title.html">Climate Modeling (W1D5)</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Intro.html">Intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.html">Tutorial 1: Radiation and the Greenhouse Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial1.html"><strong>Tutorial 1 : A Simple Greenhouse Model</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial2.html"><strong>Tutorial 2 : Energy Balance</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.html"><strong>Tutorial 3 : A Zero-Dimensional Energy Balance Model</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial4.html"><strong>Tutorial 4: Climate Feedbacks</strong></a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial5.html"><strong>Tutorial 5: Radiative Equilibrium</strong></a></li>
 
 
 
@@ -988,7 +512,14 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial2.html">Tutorial 2: Energy Balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial6.html"><strong>Tutorial 6: Radiative Convective Equilibrium</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial7.html"><strong>Tutorial 7: Introduction to Earth System Models</strong></a></li>
 
 
 
@@ -996,242 +527,178 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial3.html">Tutorial 3: A Zero-Dimensional Energy Balance Model</a></li>
 
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial4.html">Bonus Tutorial 4: Climate Feedbacks</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial5.html">Bonus Tutorial 5: Vertical Structure of the Atmosphere</a></li>
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial6.html">Bonus Tutorial 6: Radiative-Convective Equilibrium</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial7.html">Tutorial 7: Introduction to CMIP6 Earth System Models</a></li>
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Tutorial8.html">Tutorial 8: Time Series, Global Averages, and Scenario Comparison</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_Outro.html">Outro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/further_reading.html">Suggested Further Reading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W1D5_ClimateModeling/student/W1D5_DaySummary.html">Day Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/chapter_title.html">Future Climate - IPCC I Physical Basis (W2D1)</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Intro.html">Intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html">Tutorial 1: Internal Climate Variability and Single-model Ensembles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial1.html"><strong>Tutorial 1: Creating Maps of CMIP6 Earth System Model (ESM) Projections</strong></a></li>
 
 
 
 
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html">Tutorial 2: Future climate scenarios &amp; Multi-model Ensembles</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html">Tutorial 3: Quantifying Uncertainty in Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial2.html"><strong>Tutorial 2: Time Series, Global Averages, and Scenario Comparison</strong></a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html">Tutorial 4: Synthesising &amp; Interpreting Diverse Data Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial3.html"><strong>Tutorial 3: Multi-model Ensembles</strong></a></li>
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial4.html"><strong>Tutorial 4: Quantifying Uncertainty in Projections</strong></a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial5.html"><strong>Tutorial 5: Internal Climate Variability</strong></a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_Tutorial6.html"><strong>Tutorial 6: Synthesising &amp; Interpreting Diverse Data Sources</strong></a></li>
+
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/further_reading.html">Suggested Further Reading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis/student/W2D1_DaySummary.html"><strong>Day Summary</strong></a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/chapter_title.html">The Socioeconomics of Climate Change (W2D3)</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Intro.html">Intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial1.html">Tutorial 1: Orienting inside a “Climate Solution” Simulator</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial2.html">Tutorial 2: Fossil Fuel Emissions, Growth, and Damage</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial3.html">Tutorial 3: The Temporal Dimension of Actions</a></li>
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial4.html">Tutorial 4: The Shared Socio-economic Pathways</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/chapter_title.html">Future Climate - IPCC II &amp; III Socio-Economic Basis (W2D3)</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial1.html"><strong>Tutorial 1:</strong></a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial5.html">Tutorial 5: Mapping the Narrative Space</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial2.html"><strong>Tutorial 2: Transition Goals and Integrated Assessment Models</strong></a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Tutorial6.html">Bonus Tutorial 6: Create your Socio-economic Scenario</a></li>
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/student/W2D3_Outro.html">Outro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/further_reading.html"><strong>Tutorial 2 Further Reading</strong></a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_TheSocioeconomicsofClimateChange/student/W2D3_DaySummary.html">Day Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial3.html"><strong>Tutorial 3: IAMs and SSPs</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/student/W2D3_Tutorial4.html"><strong>Tutorial 4: Public Opinion on the Climate Emergency and Why it Matters</strong></a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D3_FutureClimate-IPCCII%26IIISocio-EconomicBasis/further_reading.html"><strong>Tutorial 2 Further Reading</strong></a></li>
+
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Response</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/chapter_title.html">Climate Response - Extremes &amp; Variability (W2D4)</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Intro.html">Intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial1.html">Tutorial 1: Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial1.html"><strong>Tutorial 1: Distributions</strong></a></li>
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html">Tutorial 2: What is an Extreme Event? Empirical Return Levels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial2.html"><strong>Tutorial 2: What is an Extreme Event? Empirical Return Levels</strong></a></li>
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial3.html">Tutorial 3: Extreme Value Analysis - the GEV Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial3.html"><strong>Tutorial 3: Extreme Value Analysis - the GEV Distribution</strong></a></li>
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial4.html">Tutorial 4: Return Levels Using Normal and GEV Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial4.html"><strong>Tutorial 4: Return Levels Using Normal and GEV Distributions</strong></a></li>
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html">Tutorial 5: Non-stationarity in Historical Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial5.html"><strong>Tutorial 5: Non-stationarity in Historical Records</strong></a></li>
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial6.html">Tutorial 6: Scenario-dependence of Future Changes in Extremes</a></li>
-
-
-
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html">Bonus Tutorial 7: Non-Stationarity in the EVT-framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial6.html"><strong>Tutorial 6: Scenario-dependence of Future Changes in Extremes</strong></a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html">Bonus Tutorial 8: Thresholds</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial7.html"><strong>Tutorial 7: Non-Stationarity in the EVT-framework</strong></a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Tutorial8.html"><strong>Tutorial 8: Thresholds</strong></a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_Outro.html">Outro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/further_reading.html">Suggested Further Reading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D4_ClimateResponse-Extremes%26Variability/student/W2D4_DaySummary.html">Day Summary</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/chapter_title.html">Climate Response - Adaptation Impact (W2D5)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Intro.html">Intro</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html">Tutorial 1:  ClimateBench Dataset and How Machine Learning Can Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial1.html"><strong>Tutorial 1: Linear and Logistic Regression</strong></a></li>
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html">Tutorial 2:  Building and Training Random Forest Models</a></li>
-
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html">Tutorial 3:  Testing Model Generalization</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html">Tutorial 4: Testing Spatial Generalization</a></li>
-
-
-
-
-
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial5.html">Tutorial 5:  Testing generalization to new scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial2.html"><strong>Tutorial 2:  Regression and Decision Trees on the Dengue Fever Dataset</strong></a></li>
 
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial6.html">Tutorial 6:  Exploring other applications</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial3.html"><strong>Tutorial 3:  Logistic Regression and ANN on the Remote Sensing Crop Dataset</strong></a></li>
 
 
 
 
 
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Outro.html">Outro</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_Tutorial4.html"><strong>Tutorial 4:  Exploring other applications</strong></a></li>
+
+
+
+
 <li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/further_reading.html">Suggested Further Reading</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../tutorials/W2D5_ClimateResponse-AdaptationImpact/student/W2D5_DaySummary.html">Day Summary</a></li>
 </ul>
 </li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Booklet</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../README.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../keynote.html">Project Day keynote (W2D2)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../docs/project_guidance.html">Daily guide for projects</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../docs/datasets_overview.html">Project materials</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Sea_level_rise.html"><strong>Sea Level Rise</strong></a></li>
@@ -1271,24 +738,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../docs/continuing_your_project_after_the_course.html">Continuing your project after the course</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../docs/past_projects_overview.html">Past projects</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../past-projects/sea_level_rise.html">Sea Level Rise</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../past-projects/ocean_acidification.html">Ocean Acidification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../past-projects/ENSO.html">The Impact of ENSO on Precipitation and Temperature</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../past-projects/precipitation.html">Regional Precipitation Variability and Extreme events</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../past-projects/heatwaves.html">Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../past-projects/wildfires.html">Monitoring and Mapping Wildfires Using Satellite Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../past-projects/albedo.html">Changes in Land Cover: Albedo and Carbon Sequestration</a></li>
-</ul>
-</li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Professional Development</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../professional_development/README.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../professional_development/mentorship_program.html">Professional developemnt</a></li>
-
-
-
 <li class="toctree-l1"><a class="reference internal" href="../professional_development/impact_talks.html">Impact Talks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../professional_development/mentors.html">Mentor Meetings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../professional_development/career_features.html">Career Features</a></li>
@@ -1296,42 +749,47 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav>
+</nav></div>
     </div>
-  </div>
   
-
   
-  <div class="sidebar-end-items sidebar-primary__section">
-    <div class="sidebar-end-items__item">
-    </div>
+  <div class="sidebar-primary-items__end sidebar-primary__section">
   </div>
-
   
   <div id="rtd-footer-container"></div>
 
+
       </div>
+      
       <main id="main-content" class="bd-main">
         
         
 
 <div class="sbt-scroll-pixel-helper"></div>
 
-        <div class="bd-content">
-          <div class="bd-article-container">
-            
-            <div class="bd-header-article">
-                
-
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
-            <span class="fa-solid fa-bars"></span>
-        </label>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
 
 
 <div class="dropdown dropdown-launch-buttons">
@@ -1339,11 +797,13 @@ const thebe_selector_output = ".output, .cell_output"
     <i class="fas fa-rocket"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/neuromatch/climate-course-content&urlpath=lab/tree/climate-course-content/book/projects/project-notebooks/Wildfires_and_burnt_areas.ipynb&branch=main" target="_blank"
+      
+      
+      
+      <li><a href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/ClimatematchAcademy/course-content&urlpath=lab/tree/course-content/book/projects/project-notebooks/Wildfires_and_burnt_areas.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on JupyterHub"
+   title="Launch onJupyterHub"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
@@ -1353,16 +813,113 @@ title="Launch on JupyterHub"
   </span>
 <span class="btn__text-container">JupyterHub</span>
 </a>
-</a>
+</li>
       
   </ul>
 </div>
 
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ClimatematchAcademy/course-content" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ClimatematchAcademy/course-content/issues/new?title=Issue%20on%20page%20%2Fprojects/project-notebooks/Wildfires_and_burnt_areas.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/projects/project-notebooks/Wildfires_and_burnt_areas.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
 <button onclick="toggleFullScreen()"
-  class="btn btn-sm"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
 >
   
 
@@ -1373,93 +930,34 @@ title="Fullscreen mode"
 </button>
 
 
-
-<div class="dropdown dropdown-repository-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
-    <i class="fab fa-github"></i>
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <ul class="dropdown-menu">
-      <li><a href="https://github.com/neuromatch/climate-course-content" target="_blank"
-   class="btn btn-sm dropdown-item"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="btn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="btn__text-container">repository</span>
-</a>
-</a>
-      
-      <li><a href="https://github.com/neuromatch/climate-course-content/issues/new?title=Issue%20on%20page%20%2Fprojects/project-notebooks/Wildfires_and_burnt_areas.html&body=Your%20issue%20content%20here." target="_blank"
-   class="btn btn-sm dropdown-item"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="btn__text-container">open issue</span>
-</a>
-</a>
-      
-  </ul>
-</div>
-
-
-
-<div class="dropdown dropdown-download-buttons">
-  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
-    <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <ul class="dropdown-menu">
-      <li><a href="../../_sources/projects/project-notebooks/Wildfires_and_burnt_areas.ipynb" target="_blank"
-   class="btn btn-sm dropdown-item"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="btn__text-container">.ipynb</span>
-</a>
-</a>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
       
-      <li>
-<button onclick="printPdf(this)"
-  class="btn btn-sm dropdown-item"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="btn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="btn__text-container">.pdf</span>
-</button>
-</a>
-      
-  </ul>
-</div>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
-            <span class="fa-solid fa-list"></span>
-        </label>
     </div>
+  
 </div>
-            </div>
-            
-            
+</div>
+              
+              
 
 <div id="jb-print-docs-body" class="onlyprint">
     <h1>Monitoring and Mapping Wildfires Using Satellite Data</h1>
@@ -1472,89 +970,24 @@ title="Print to PDF"
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   <strong>
-    Monitoring and Mapping Wildfires Using Satellite Data
-   </strong>
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#project-background">
-     Project Background
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#project-template">
-   Project Template
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-exploration-notebook">
-   Data Exploration Notebook
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#project-setup">
-     Project Setup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#satellite-data">
-     Satellite Data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#global-wildfire-information-systems-climate-action-large-wildfire-dataset">
-     Global Wildfire Information Systems: Climate Action Large Wildfire Dataset
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sentinel-2">
-     Sentinel-2
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sentinel-2-vegetation-health-burnt-areas">
-       Sentinel-2: Vegetation Health &amp; Burnt Areas
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dataset-specific-functions-ndvi">
-       Dataset-specific Functions: NDVI
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dataset-specific-functions-vci">
-       Dataset-specific Functions: VCI
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#vci-drought-threshold">
-       VCI Drought Threshold
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dataset-specific-functions-nbr-and-dnbr-code">
-       Dataset-specific Functions: NBR and dNBR Code
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dnbr-threshold">
-       dNBR Threshold
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#further-reading">
-   Further Reading
-  </a>
- </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Monitoring and Mapping Wildfires Using Satellite Data</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#project-template">Project Template</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exploration-notebook">Data Exploration Notebook</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-setup">Project Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satellite-data">Satellite Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-wildfire-information-systems-climate-action-large-wildfire-dataset">Global Wildfire Information Systems: Climate Action Large Wildfire Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2">Sentinel-2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2-vegetation-health-burnt-areas">Sentinel-2: Vegetation Health &amp; Burnt Areas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-specific-functions-ndvi">Dataset-specific Functions: NDVI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-specific-functions-vci">Dataset-specific Functions: VCI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vci-drought-threshold">VCI Drought Threshold</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-specific-functions-nbr-and-dnbr-code">Dataset-specific Functions: NBR and dNBR Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dnbr-threshold">dNBR Threshold</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further Reading</a></li>
 </ul>
 
             </nav>
@@ -1562,37 +995,113 @@ title="Print to PDF"
     </div>
 </div>
 
-            <article class="bd-article" role="main">
               
-  <p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/projects/project-notebooks/Wildfires_and_burnt_areas.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/project-notebooks/Wildfires_and_burnt_areas.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="monitoring-and-mapping-wildfires-using-satellite-data">
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <p><a class="reference external" href="https://colab.research.google.com/github/ClimateMatchAcademy/course-content/blob/main/projects/project-notebooks/Wildfires_and_burnt_areas.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/project-notebooks/Wildfires_and_burnt_areas.ipynb" target="_parent"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg" /></a></p>
+<section class="tex2jax_ignore mathjax_ignore" id="monitoring-and-mapping-wildfires-using-satellite-data">
 <h1><strong>Monitoring and Mapping Wildfires Using Satellite Data</strong><a class="headerlink" href="#monitoring-and-mapping-wildfires-using-satellite-data" title="Permalink to this heading">#</a></h1>
 <p><strong>Content creators:</strong> Brittany Engle, Diana Cadillo</p>
 <p><strong>Content reviewers:</strong> Yuhan Douglas Rao, Abigail Bodner, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
 <p><strong>Content editors:</strong> Zane Mitrevica, Natalie Steinemann, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
 <p><strong>Production editors:</strong> Wesley Banfield, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
 <p><strong>Our 2023 Sponsors:</strong> NASA TOPS and Google DeepMind</p>
-<div class="section" id="project-background">
-<h2>Project Background<a class="headerlink" href="#project-background" title="Permalink to this heading">#</a></h2>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "72ef8845e07340e6b631d7d2f9dc7602"}</script></div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Project Background</span>
+
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">widgets</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+
+
+<span class="k">class</span> <span class="nc">PlayVideo</span><span class="p">(</span><span class="n">IFrame</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="k">if</span> <span class="n">source</span> <span class="o">==</span> <span class="s2">&quot;Bilibili&quot;</span><span class="p">:</span>
+            <span class="n">src</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://player.bilibili.com/player.html?bvid=</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">&amp;page=</span><span class="si">{</span><span class="n">page</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">elif</span> <span class="n">source</span> <span class="o">==</span> <span class="s2">&quot;Osf&quot;</span><span class="p">:</span>
+            <span class="n">src</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://mfr.ca-1.osf.io/render?url=https://osf.io/download/</span><span class="si">{</span><span class="nb">id</span><span class="si">}</span><span class="s2">/?direct%26mode=render&quot;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">PlayVideo</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">display_videos</span><span class="p">(</span><span class="n">video_ids</span><span class="p">,</span> <span class="n">W</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">H</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">tab_contents</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">video_id</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">video_ids</span><span class="p">):</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+        <span class="k">with</span> <span class="n">out</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Youtube&quot;</span><span class="p">:</span>
+                <span class="n">video</span> <span class="o">=</span> <span class="n">YouTubeVideo</span><span class="p">(</span>
+                    <span class="nb">id</span><span class="o">=</span><span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">width</span><span class="o">=</span><span class="n">W</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="n">H</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">rel</span><span class="o">=</span><span class="mi">0</span>
+                <span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Video available at https://youtube.com/watch?v=</span><span class="si">{</span><span class="n">video</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">video</span> <span class="o">=</span> <span class="n">PlayVideo</span><span class="p">(</span>
+                    <span class="nb">id</span><span class="o">=</span><span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span>
+                    <span class="n">source</span><span class="o">=</span><span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span>
+                    <span class="n">width</span><span class="o">=</span><span class="n">W</span><span class="p">,</span>
+                    <span class="n">height</span><span class="o">=</span><span class="n">H</span><span class="p">,</span>
+                    <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span>
+                    <span class="n">autoplay</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="p">)</span>
+                <span class="k">if</span> <span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Bilibili&quot;</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span>
+                        <span class="sa">f</span><span class="s2">&quot;Video available at https://www.bilibili.com/video/</span><span class="si">{</span><span class="n">video</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span>
+                    <span class="p">)</span>
+                <span class="k">elif</span> <span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Osf&quot;</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Video available at https://osf.io/</span><span class="si">{</span><span class="n">video</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="n">display</span><span class="p">(</span><span class="n">video</span><span class="p">)</span>
+        <span class="n">tab_contents</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">tab_contents</span>
+
+
+<span class="n">video_ids</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;Youtube&#39;</span><span class="p">,</span> <span class="s1">&#39;2CDVn6O_q34&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Bilibili&#39;</span><span class="p">,</span> <span class="s1">&#39;BV1GP411k7XA&#39;</span><span class="p">)]</span>
+<span class="n">tab_contents</span> <span class="o">=</span> <span class="n">display_videos</span><span class="p">(</span><span class="n">video_ids</span><span class="p">,</span> <span class="n">W</span><span class="o">=</span><span class="mi">730</span><span class="p">,</span> <span class="n">H</span><span class="o">=</span><span class="mi">410</span><span class="p">)</span>
+<span class="n">tabs</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Tab</span><span class="p">()</span>
+<span class="n">tabs</span><span class="o">.</span><span class="n">children</span> <span class="o">=</span> <span class="n">tab_contents</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tab_contents</span><span class="p">)):</span>
+    <span class="n">tabs</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">video_ids</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tabs</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="cell tag_remove-input docutils container">
+</div>
 <div class="cell_output docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "96767cdc024b469dab4a655b9131c47e"}</script></div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># @title Project Background</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">widgets</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">YouTubeVideo</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;ipywidgets&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Tutorial slides</span>
+<span class="c1"># @markdown These are the slides for the videos in all tutorials today</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="n">link_id</span> <span class="o">=</span> <span class="s2">&quot;8w5da&quot;</span>
+</pre></div>
+</div>
+</div>
 </div>
 <p><strong>In this project</strong>, you will be working with wildfire remote sensing data from Sentinel 2 to extract Burn Perimeters using multiple Burn Indices and other relevant information related to wildfires. By integrating this data with information from other global databases, you will have the opportunity to explore the connections between wildfires and their impact on both the ecosystem and society.</p>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="project-template">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="project-template">
 <h1>Project Template<a class="headerlink" href="#project-template" title="Permalink to this heading">#</a></h1>
 <p><img alt="Project Template" src="https://raw.githubusercontent.com/ClimateMatchAcademy/course-content/main/projects/template-images/wildfires_template_map.svg" /></p>
 <p><em>Note: The dashed boxes are socio-economic questions.</em></p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="data-exploration-notebook">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-exploration-notebook">
 <h1>Data Exploration Notebook<a class="headerlink" href="#data-exploration-notebook" title="Permalink to this heading">#</a></h1>
-<div class="section" id="project-setup">
+<section id="project-setup">
 <h2>Project Setup<a class="headerlink" href="#project-setup" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_colab docutils container">
 <div class="cell_input docutils container">
@@ -1617,9 +1126,23 @@ title="Print to PDF"
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># imports</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">random</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+</pre></div>
 </div>
 </div>
-<div class="section" id="satellite-data">
+</div>
+</section>
+<section id="satellite-data">
 <h2>Satellite Data<a class="headerlink" href="#satellite-data" title="Permalink to this heading">#</a></h2>
 <p><strong>Global Wildfire Information System (GWIS)</strong> is a global, joint initiative created by the GEO and the Copernicus Work Programs. The goal of this program is to bring together sources at a regional and international level to provide a global, comprehensive understanding of fire regimes and their effects.</p>
 <p>The Globfire dataset uses the MODIS burned area product (MCD64A1) to determine the amount of burnt area per event (<a class="reference external" href="https://www.nature.com/articles/s41597-019-0312-2">Artés et al., 2019</a>). The MCD64A1 product that Globfire is built on top of combines imagery from the Terra and Aqua satellites with thermal anomalies to provide burnt area information (<a class="reference external" href="https://modis-land.gsfc.nasa.gov/burn.html">Website</a>, <a class="reference external" href="https://modis-land.gsfc.nasa.gov/burn.html">MODIS C6 BA User Guide</a> &amp; <a class="reference external" href="http://modis-fire.umd.edu/files/MODIS_C6_BA_User_Guide_1.2.pdf">User Guide</a>).</p>
@@ -1631,8 +1154,8 @@ Launched by the European Space Agency in June of 2015 (S2-A) and March of 2017 (
 <li><p><a class="reference external" href="https://sentinel.esa.int/web/sentinel/sentinel-data-access/sentinel-products/sentinel-2-data-products">Sentinel-2</a></p></li>
 </ul>
 <p><a name="dataset1-1"></a></p>
-</div>
-<div class="section" id="global-wildfire-information-systems-climate-action-large-wildfire-dataset">
+</section>
+<section id="global-wildfire-information-systems-climate-action-large-wildfire-dataset">
 <h2>Global Wildfire Information Systems: Climate Action Large Wildfire Dataset<a class="headerlink" href="#global-wildfire-information-systems-climate-action-large-wildfire-dataset" title="Permalink to this heading">#</a></h2>
 <p>The Climate Action Large Wildfire Dataset is a filtered version of the Globfire dataset (created by GWIS, which you can access <a class="reference external" href="https://gwis.jrc.ec.europa.eu/apps/country.profile/downloads">here</a>).</p>
 <p>The resolution of this dataset is 500m. It has been pre-filtered to include only fires that are Class F or greater. Per the National Wildfire Coordinating Group, a Class F fire is defined as a fire that is 1,000 acres or greater, but less than 5,000 acres (note that a 2000m square region is roughly 1000 acres). For this dataset, all fires greater than 1,000 acres are included. Additional columns indicating area (acres), landcover number and landcover description, and country in which they are located within, were added. The landcover number and description were added using the Copernicus Global Land Cover Layers: CGLS-LC100 Collection 3 <a class="reference external" href="https://zenodo.org/record/3938963#.ZEeQEnZBwuU">User Guide</a>.</p>
@@ -1657,75 +1180,13 @@ ID: Globfire fire ID (unique to each fire)</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">CPLE_OpenFailedError</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
-<span class="nn">File fiona/ogrext.pyx:136,</span> in <span class="ni">fiona.ogrext.gdal_open_vector</span><span class="nt">()</span>
-
-<span class="nn">File fiona/_err.pyx:291,</span> in <span class="ni">fiona._err.exc_wrap_pointer</span><span class="nt">()</span>
-
-<span class="ne">CPLE_OpenFailedError</span>: /home/runner/shared/Data/Projects/Wildfires/ClimateAction_countries.shp: No such file or directory
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">DriverError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># code to retrieve and load the data</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">url_climateaction</span> <span class="o">=</span> <span class="s2">&quot;~/shared/Data/Projects/Wildfires/ClimateAction_countries.shp&quot;</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">Dataset</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">read_file</span><span class="p">(</span><span class="n">url_climateaction</span><span class="p">)</span>  <span class="c1"># need to update to OSF and pooch.retrieve</span>
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/geopandas/io/file.py:289,</span> in <span class="ni">_read_file</span><span class="nt">(filename, bbox, mask, rows, engine, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">286</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span>         <span class="n">path_or_bytes</span> <span class="o">=</span> <span class="n">filename</span>
-<span class="ne">--&gt; </span><span class="mi">289</span>     <span class="k">return</span> <span class="n">_read_file_fiona</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">290</span>         <span class="n">path_or_bytes</span><span class="p">,</span> <span class="n">from_bytes</span><span class="p">,</span> <span class="n">bbox</span><span class="o">=</span><span class="n">bbox</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">mask</span><span class="p">,</span> <span class="n">rows</span><span class="o">=</span><span class="n">rows</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">291</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">293</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">294</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;unknown engine &#39;</span><span class="si">{</span><span class="n">engine</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/geopandas/io/file.py:315,</span> in <span class="ni">_read_file_fiona</span><span class="nt">(path_or_bytes, from_bytes, bbox, mask, rows, where, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">312</span>     <span class="n">reader</span> <span class="o">=</span> <span class="n">fiona</span><span class="o">.</span><span class="n">open</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span> <span class="k">with</span> <span class="n">fiona_env</span><span class="p">():</span>
-<span class="ne">--&gt; </span><span class="mi">315</span>     <span class="k">with</span> <span class="n">reader</span><span class="p">(</span><span class="n">path_or_bytes</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">features</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">316</span>         <span class="n">crs</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">crs_wkt</span>
-<span class="g g-Whitespace">    </span><span class="mi">317</span>         <span class="c1"># attempt to get EPSG code</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/fiona/env.py:457,</span> in <span class="ni">ensure_env_with_credentials.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">454</span>     <span class="n">session</span> <span class="o">=</span> <span class="n">DummySession</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">456</span> <span class="k">with</span> <span class="n">env_ctor</span><span class="p">(</span><span class="n">session</span><span class="o">=</span><span class="n">session</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">457</span>     <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/fiona/__init__.py:292,</span> in <span class="ni">open</span><span class="nt">(fp, mode, driver, schema, crs, encoding, layer, vfs, enabled_drivers, crs_wkt, allow_unsupported_drivers, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">289</span>     <span class="n">path</span> <span class="o">=</span> <span class="n">parse_path</span><span class="p">(</span><span class="n">fp</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">291</span> <span class="k">if</span> <span class="n">mode</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">292</span>     <span class="n">colxn</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">293</span>         <span class="n">path</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span>         <span class="n">driver</span><span class="o">=</span><span class="n">driver</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">296</span>         <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">297</span>         <span class="n">layer</span><span class="o">=</span><span class="n">layer</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">298</span>         <span class="n">enabled_drivers</span><span class="o">=</span><span class="n">enabled_drivers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">299</span>         <span class="n">allow_unsupported_drivers</span><span class="o">=</span><span class="n">allow_unsupported_drivers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">300</span>         <span class="o">**</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">301</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">302</span> <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">303</span>     <span class="n">colxn</span> <span class="o">=</span> <span class="n">Collection</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">304</span>         <span class="n">path</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span>         <span class="n">mode</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span>         <span class="o">**</span><span class="n">kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">315</span>     <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.19/x64/lib/python3.9/site-packages/fiona/collection.py:243,</span> in <span class="ni">Collection.__init__</span><span class="nt">(self, path, mode, driver, schema, crs, encoding, layer, vsi, archive, enabled_drivers, crs_wkt, ignore_fields, ignore_geometry, include_fields, wkt_version, allow_unsupported_drivers, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="o">==</span> <span class="s2">&quot;r&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">Session</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">243</span>     <span class="bp">self</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span> <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">mode</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">245</span>     <span class="bp">self</span><span class="o">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">WritingSession</span><span class="p">()</span>
-
-<span class="nn">File fiona/ogrext.pyx:588,</span> in <span class="ni">fiona.ogrext.Session.start</span><span class="nt">()</span>
-
-<span class="nn">File fiona/ogrext.pyx:143,</span> in <span class="ni">fiona.ogrext.gdal_open_vector</span><span class="nt">()</span>
-
-<span class="ne">DriverError</span>: /home/runner/shared/Data/Projects/Wildfires/ClimateAction_countries.shp: No such file or directory
+<span class="ne">NameError</span>: name &#39;gpd&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1771,8 +1232,8 @@ ID: Globfire fire ID (unique to each fire)</p>
 </div>
 <p>Great work! Now you are all set to address the questions you are interested in! Good luck!</p>
 <p><a name="dataset1-2"></a></p>
-</div>
-<div class="section" id="sentinel-2">
+</section>
+<section id="sentinel-2">
 <h2>Sentinel-2<a class="headerlink" href="#sentinel-2" title="Permalink to this heading">#</a></h2>
 <p>Each of the two satellites contain a Multi-Spectral Instrument (MSI) that houses 13 spectral bands, at various resolutions. The MSI uses a push-broom acquisition technique and measures in the Visible and Near Infrared (NIR) and the Short Wave Infrared (SWIR) domains. There are:</p>
 <ul class="simple">
@@ -1847,7 +1308,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">continet</span> <span class="o">=</span> <span class="s2">&quot;Asia&quot;</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># import pre images</span>
@@ -1863,7 +1324,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 <span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="p">]</span>
 <span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="c1"># import post images</span>
 
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;/home/jovyan/shared/Data/Projects/Wildfires/Asia&#39;
+<span class="ne">NameError</span>: name &#39;os&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1945,7 +1406,7 @@ ID: Globfire fire ID (unique to each fire)</p>
 <span class="ne">----&gt; </span><span class="mi">3</span>     <span class="n">numpy</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">pre_fires_numpy</span><span class="p">[</span><span class="mi">2</span><span class="p">][:,</span> <span class="p">:,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span> <span class="o">/</span> <span class="mi">10000</span> <span class="o">*</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="p">)</span>  <span class="c1"># RGB bands for Sentinel 2 are Bands: 4,3,2</span>
 
-<span class="ne">NameError</span>: name &#39;pre_fires_numpy&#39; is not defined
+<span class="ne">NameError</span>: name &#39;numpy&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -1968,12 +1429,12 @@ ID: Globfire fire ID (unique to each fire)</p>
 <span class="ne">----&gt; </span><span class="mi">3</span>     <span class="n">numpy</span><span class="o">.</span><span class="n">clip</span><span class="p">(</span><span class="n">post_fires_numpy</span><span class="p">[</span><span class="mi">0</span><span class="p">][:,</span> <span class="p">:,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span> <span class="o">/</span> <span class="mi">10000</span> <span class="o">*</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="p">)</span>  <span class="c1"># RGB bands for Sentinel 2 are Bands: 4,3,2</span>
 
-<span class="ne">NameError</span>: name &#39;post_fires_numpy&#39; is not defined
+<span class="ne">NameError</span>: name &#39;numpy&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="sentinel-2-vegetation-health-burnt-areas">
+<section id="sentinel-2-vegetation-health-burnt-areas">
 <h3>Sentinel-2: Vegetation Health &amp; Burnt Areas<a class="headerlink" href="#sentinel-2-vegetation-health-burnt-areas" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://drive.google.com/drive/folders/1u7UMz8gIkTPWUv6p5OhlE4jXaZAh-oP4?usp=sharing">Sentinel-2 Imagery - Vegetation Health &amp; Burnt Areas</a></p>
 <p>Continents included:</p>
@@ -2098,8 +1559,8 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="dataset-specific-functions-ndvi">
+</section>
+<section id="dataset-specific-functions-ndvi">
 <h3>Dataset-specific Functions: NDVI<a class="headerlink" href="#dataset-specific-functions-ndvi" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2263,8 +1724,8 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="dataset-specific-functions-vci">
+</section>
+<section id="dataset-specific-functions-vci">
 <h3>Dataset-specific Functions: VCI<a class="headerlink" href="#dataset-specific-functions-vci" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2317,8 +1778,8 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="vci-drought-threshold">
+</section>
+<section id="vci-drought-threshold">
 <h3>VCI Drought Threshold<a class="headerlink" href="#vci-drought-threshold" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>image and more information: <a class="reference external" href="https://www.researchgate.net/publication/330521783_Spatial_and_Temporal_Variation_of_Drought_Based_on_Satellite_Derived_Vegetation_Condition_Index_in_Nepal_from_1982-2015">Spatial and Temporal Variation of Drought Based onSatellite Derived Vegetation Condition Index in Nepal from 1982–2015</a></p></li>
@@ -2412,8 +1873,8 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="dataset-specific-functions-nbr-and-dnbr-code">
+</section>
+<section id="dataset-specific-functions-nbr-and-dnbr-code">
 <h3>Dataset-specific Functions: NBR and dNBR Code<a class="headerlink" href="#dataset-specific-functions-nbr-and-dnbr-code" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2514,8 +1975,8 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="dnbr-threshold">
+</section>
+<section id="dnbr-threshold">
 <h3>dNBR Threshold<a class="headerlink" href="#dnbr-threshold" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>image and more information: <a class="reference external" href="https://un-spider.org/advisory-support/recommended-practices/recommended-practice-burn-severity/in-detail/normalized-burn-ratio">Normalized Burn Ratio (NBR) UN-SPIDER Knowledge Portal</a></p></li>
@@ -2564,10 +2025,10 @@ Importing the SCL in order to mask out clouds form imagery</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="further-reading">
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="further-reading">
 <h1>Further Reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.fs.usda.gov/research/treesearch/38936">Forest ecosystems, disturbance, and climate change in Washington State, USA | US Forest Service Research and Development Fire Ecology and Monitoring at Yosemite</a></p></li>
@@ -2593,7 +2054,7 @@ Importing the SCL in order to mask out clouds form imagery</p>
 <li><p><a class="reference external" href="https://farn.org.ar/wp-content/uploads/2020/12/DOC_ARGENTINA-INCENDIADA_links.pdf">Argentina on fire: what the fire left us | Spanish (pdf)</a></p></li>
 <li><p><a class="reference external" href="https://www.fao.org/3/y3582s/y3582s08.htm">Forest fires and biological diversity</a></p></li>
 </ul>
-</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -2615,138 +2076,80 @@ Importing the SCL in order to mask out clouds form imagery</p>
     </script>
     <script>kernelName = 'python3'</script>
 
-            </article>
-            
+                </article>
+              
 
-            
-            
-            <footer class="bd-footer-article">
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="Heatwaves.html" title="previous page">
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Heatwaves.html"
+       title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-          <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title"><strong>Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land</strong></p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land</strong></p>
       </div>
-  </a>
-  <a class='right-next' id="next-link" href="Surface_albedo_and_land_cover.html" title="next page">
-  <div class="prev-next-info">
-      <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title">Changes in Land Cover: Albedo and Carbon Sequestration</p>
-  </div>
-  <i class="fa-solid fa-angle-right"></i>
-  </a>
-</div>
-            </footer>
-            
-          </div>
-          
-          
-          
-            <div class="bd-sidebar-secondary bd-toc">
-              
-<div class="toc-item">
+    </a>
+    <a class="right-next"
+       href="Surface_albedo_and_land_cover.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Changes in Land Cover: Albedo and Carbon Sequestration</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
   
-<div class="tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
 </div>
-<nav id="bd-toc-nav" class="page-toc">
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   <strong>
-    Monitoring and Mapping Wildfires Using Satellite Data
-   </strong>
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#project-background">
-     Project Background
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#project-template">
-   Project Template
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#data-exploration-notebook">
-   Data Exploration Notebook
-  </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#project-setup">
-     Project Setup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#satellite-data">
-     Satellite Data
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#global-wildfire-information-systems-climate-action-large-wildfire-dataset">
-     Global Wildfire Information Systems: Climate Action Large Wildfire Dataset
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sentinel-2">
-     Sentinel-2
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sentinel-2-vegetation-health-burnt-areas">
-       Sentinel-2: Vegetation Health &amp; Burnt Areas
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dataset-specific-functions-ndvi">
-       Dataset-specific Functions: NDVI
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dataset-specific-functions-vci">
-       Dataset-specific Functions: VCI
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#vci-drought-threshold">
-       VCI Drought Threshold
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dataset-specific-functions-nbr-and-dnbr-code">
-       Dataset-specific Functions: NBR and dNBR Code
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#dnbr-threshold">
-       dNBR Threshold
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#further-reading">
-   Further Reading
-  </a>
- </li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Monitoring and Mapping Wildfires Using Satellite Data</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#project-template">Project Template</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exploration-notebook">Data Exploration Notebook</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-setup">Project Setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#satellite-data">Satellite Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#global-wildfire-information-systems-climate-action-large-wildfire-dataset">Global Wildfire Information Systems: Climate Action Large Wildfire Dataset</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2">Sentinel-2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sentinel-2-vegetation-health-burnt-areas">Sentinel-2: Vegetation Health &amp; Burnt Areas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-specific-functions-ndvi">Dataset-specific Functions: NDVI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-specific-functions-vci">Dataset-specific Functions: VCI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vci-drought-threshold">VCI Drought Threshold</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dataset-specific-functions-nbr-and-dnbr-code">Dataset-specific Functions: NBR and dNBR Code</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dnbr-threshold">dNBR Threshold</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#further-reading">Further Reading</a></li>
 </ul>
 
-</nav>
-</div>
+  </nav></div>
 
-            </div>
-          
-          
-        </div>
-        <footer class="bd-footer-content">
-          <div class="bd-footer-content__inner">
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
             
 <div class="bd-footer-content__inner container">
   
@@ -2763,9 +2166,7 @@ By Climatematch
   </div>
   
   <div class="footer-item">
-    <p class="last-updated">
-Last updated on None.<br>
-</p>
+    
   </div>
   
   <div class="footer-item">
@@ -2782,19 +2183,18 @@ Software elements are additionally licensed under the <a href="https://opensourc
   </div>
   
 </div>
-          </div>
-        </footer>
+          </footer>
         
 
       </main>
     </div>
   </div>
-
   
-    
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>
