@@ -88,6 +88,7 @@ runs:
       if: ${{ env.NBS != '' }}
       run: |
         # process notebooks
+        pip install cfgrib
         python -m cfgrib selfcheck
         # add cdsapi credentials for projects
         echo "url: https://cds.climate.copernicus.eu/api/v2" >> /home/runner/.cdsapirc
