@@ -20,31 +20,31 @@
   tutorials: 9
 - day: W1D5
   category: Climate Future
-  name: Climate Modeling
+  name: Introduction to Climate Modeling
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18OQtfBlfe_Py6AubwL8FAs1
   tutorials: 8
 - day: W2D1
   category: Climate Future
-  name: Future Climate - IPCC I Physical Basis
+  name: An Ensemble of Futures
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MwKJBshzMRNZSwYEIIJaVc
   tutorials: 4
+- day: W2D2
+  category: Climate Future
+  name: The Socioeconomics of Climate Change
+  playlist: https://youtube.com/playlist?list=PLnpWOQFK76goJrAoOgA7CcrFiEf8gPsYa
+  tutorials: 6
+- day: W2D3
+  category: Climate Response
+  name: Extremes & Variability
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18NxPWEE9T5KxomLaslXXD2E
+  tutorials: 8
+- day: W2D4
+  category: Climate Response
+  name: AI & Climate Change
+  playlist:  https://www.youtube.com/playlist?list=PLnpWOQFK76gqeFuNocGeynrhuCZ4Rbf69
+  tutorials: 6
 - day: Projects
   category: Fundamentals
   name: Good Research Practices
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MoOWPdzGj8t0Yxm-IC1nvN
   tutorials: 8
-- day: W2D3
-  category: Climate Future
-  name: The Socioeconomics of Climate Change
-  playlist: https://youtube.com/playlist?list=PLnpWOQFK76goJrAoOgA7CcrFiEf8gPsYa
-  tutorials: 6
-- day: W2D4
-  category: Climate Response
-  name: Climate Response - Extremes & Variability
-  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18NxPWEE9T5KxomLaslXXD2E
-  tutorials: 8
-- day: W2D5
-  category: Climate Response
-  name: Climate Response - Adaptation Impact
-  playlist:  https://www.youtube.com/playlist?list=PLnpWOQFK76gqeFuNocGeynrhuCZ4Rbf69
-  tutorials: 6
