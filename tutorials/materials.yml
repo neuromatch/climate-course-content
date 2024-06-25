@@ -3,6 +3,11 @@
   name: Climate System Overview
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MFnOD0I4M_OmlkG6ENQao3
   tutorials: 9
+- day: Projects
+  category: Fundamentals
+  name: Good Research Practices
+  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MoOWPdzGj8t0Yxm-IC1nvN
+  tutorials: 8
 - day: W1D2
   category: Climate Data
   name: State of the Climate Ocean and Atmosphere Reanalysis
@@ -43,8 +48,3 @@
   name: AI & Climate Change
   playlist:  https://www.youtube.com/playlist?list=PLnpWOQFK76gqeFuNocGeynrhuCZ4Rbf69
   tutorials: 6
-- day: Projects
-  category: Fundamentals
-  name: Good Research Practices
-  playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MoOWPdzGj8t0Yxm-IC1nvN
-  tutorials: 8
