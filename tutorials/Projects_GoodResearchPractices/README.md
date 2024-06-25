@@ -1,4 +1,4 @@
-# W2D2 - Good Research Practices
+# Good Research Practices
 
 ## Instructor notebooks
 
