@@ -1,6 +1,6 @@
 fig, ax = plt.subplots()
 
-# calculate the mean across ensemble members
+# calculate the mean across ensemble members and plot it
 da_mean = da.mean("member_id")
 _ = da_mean.plot(color='C0', label='Ensemble mean', ax=ax)
 

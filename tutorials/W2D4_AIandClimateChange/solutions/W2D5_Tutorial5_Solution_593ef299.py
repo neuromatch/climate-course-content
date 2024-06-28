@@ -1,6 +1,0 @@
-
-"""
-1. Yes, there appears to be a decrease in score when the model is tested on new scenario data, though it is still well-above 0 suggesting the model has learned something about predicting temperature from emissions.
-2. The decrease in score could be due to the model's inability to generalize well to new scenarios. It's possible that the model was trained on a specific set of scenarios and may not perform as accurately when presented with new, unseen scenarios. Factors such as differences in data distribution, environmental conditions, or other variables not captured in the training data could contribute to this decrease in performance.
-3. The model might perform better for new scenarios that are similar to the ones it was trained on. Additionally, if the new scenarios have data distributions and patterns that are more aligned with the training data, the model could potentially perform better. However, it's important to note that the model's performance on new scenarios will ultimately depend on how well it can adapt and generalize to the differences present in the new data.
-"""
