@@ -68,8 +68,8 @@ runs:
         if ${{ inputs.run_all == 'true' }}; then
           # nbs="tutorials/*/*Tutorial*.ipynb";
           # nbs="tutorials/W2D4_*/*Tutorial*.ipynb";
-          nbs="tutorials/Projects_*/*Tutorial*.ipynb";
-          # nbs="tutorials/*/*Intro*.ipynb";
+          # nbs="tutorials/Projects_*/*Tutorial*.ipynb";
+          nbs="tutorials/*/*Intro.ipynb";
         else
           nbs=`python ci/select_notebooks.py ${{ steps.changed-files.outputs.all_changed_files }}`;
           # nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`;
