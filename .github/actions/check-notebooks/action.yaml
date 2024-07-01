@@ -93,6 +93,8 @@ runs:
         # add cdsapi credentials for projects
         echo "url: https://cds.climate.copernicus.eu/api/v2" >> /home/runner/.cdsapirc
         echo "key: ${{ inputs.cdsapi_uid }}:${{ inputs.cdsapi_key }}" >> /home/runner/.cdsapirc
+        # add helper functions to main dir
+        cp tutorials/W2D3_ExtremesandVariability/gev_functions.py  tutorials/W2D3_ExtremesandVariability/sdfc_classes.py  tutorials/W2D3_ExtremesandVariability/extremes_functions.py .
         python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 
