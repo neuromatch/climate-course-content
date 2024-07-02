@@ -67,7 +67,7 @@ runs:
       run: |
         if ${{ inputs.run_all == 'true' }}; then
           # nbs="tutorials/*/*Tutorial*.ipynb";
-          nbs="tutorials/W2D4_*/*Tutorial3.ipynb";
+          nbs="tutorials/W2D4_*/*Tutorial*.ipynb";
           # nbs="tutorials/Projects_*/*Tutorial*.ipynb";
           # nbs="tutorials/*/*DaySummary.ipynb";
         else
