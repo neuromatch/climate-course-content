@@ -1,3 +1,0 @@
-"""
-The differences between the scenarios and the historical records are large for SSP 245 and SSP 558, while such difference is small for SSP 126. In general, we might expect larger differences as we move towards more extreme emission scenarios and further into the future. One limitation is the inherent uncertainty in any climate model. These models make assumptions about future emissions and other factors, which might not pan out exactly as predicted. Another limitation is the relatively short period covered by the data (only 30 years). To gain more information about longer return periods, you could use longer time series of data if available, for example from paleo-simulations, proxies, or reanalysis products.
-""";
