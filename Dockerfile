@@ -1,11 +1,7 @@
 FROM pangeo/pangeo-notebook:latest
 
-RUN /bin/sh -c mamba env
-RUN mamba install climlab ecco_v4_py esmf nltk openpyxl pip pooch pygeos pythia-datasets pyworld3 texttable wordcloud
-RUN pip install afinn
-RUN pip install pyleoclim
-RUN pip install "mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip"
-RUN pip install https://github.com/mptouzel/PyDICE/archive/master.zip
+COPY environment.yml /tmp/environment.yml
+RUN mamba env update -f /tmp/environment.yml -n notebook
 USER root
 RUN apt update
 
