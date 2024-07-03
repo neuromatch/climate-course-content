@@ -2,6 +2,7 @@ FROM pangeo/pangeo-notebook:latest
 
 COPY environment.yml /tmp/environment.yml
 RUN conda config --set channel_priority flexible
+RUN conda config --set solver classic 
 RUN mamba env update -f /tmp/environment.yml -n notebook
 USER root
 RUN apt update
