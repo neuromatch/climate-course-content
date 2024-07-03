@@ -1,8 +1,9 @@
-FROM pangeo/pangeo-notebook:latest
+# FROM pangeo/pangeo-notebook:latest
+FROM pangeo/pangeo-notebook:2023.07.02
 
 COPY environment.yml /tmp/environment.yml
-RUN conda config --set channel_priority flexible
-RUN conda config --set solver classic 
+# RUN conda config --set channel_priority flexible
+# RUN conda config --set solver classic 
 RUN mamba env update -f /tmp/environment.yml -n notebook
 USER root
 RUN apt update
