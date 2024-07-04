@@ -67,7 +67,9 @@ runs:
       run: |
         if ${{ inputs.run_all == 'true' }}; then
           # nbs="tutorials/*/*Tutorial*.ipynb";
-          nbs="tutorials/W2D5_*/*Tutorial*.ipynb";
+          nbs="tutorials/W1D3_*/*Tutorial*.ipynb";
+          # nbs="tutorials/Projects_*/*Tutorial*.ipynb";
+          # nbs="tutorials/*/*DaySummary.ipynb";
         else
           nbs=`python ci/select_notebooks.py ${{ steps.changed-files.outputs.all_changed_files }}`;
           # nbs=`python ci/select_notebooks.py ${{ steps.changes.outputs.files }}`;
@@ -91,6 +93,8 @@ runs:
         # add cdsapi credentials for projects
         echo "url: https://cds.climate.copernicus.eu/api/v2" >> /home/runner/.cdsapirc
         echo "key: ${{ inputs.cdsapi_uid }}:${{ inputs.cdsapi_key }}" >> /home/runner/.cdsapirc
+        # add helper functions to main dir
+        cp tutorials/W2D3_ExtremesandVariability/gev_functions.py  tutorials/W2D3_ExtremesandVariability/sdfc_classes.py  tutorials/W2D3_ExtremesandVariability/extremes_functions.py .
         python ci/process_notebooks.py ${{ env.NBS }} ${{ inputs.exec_flag}}
       shell: bash -l {0}
 
