@@ -16,7 +16,7 @@ sat_clim_anom = sat.groupby("time.month") - sat_clim
 obs_clim_anom = obs.groupby("time.month") - obs_clim
 
 # plot time series and scatter plot between two time series
-fig, ax = plt.subplots(figsize=(12, 6))
+fig, ax = plt.subplots()
 obs_clim_anom.sel(time=slice("2011-01-01", "2015-12-01")).plot(
     label="nClimGrid anomaly", ax=ax
 )
