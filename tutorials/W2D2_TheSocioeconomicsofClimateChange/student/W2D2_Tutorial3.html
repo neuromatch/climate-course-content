@@ -1,0 +1,1238 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tutorial 3: The Temporal Dimension of Actions — Climatematch Academy: Computational Tools for Climate Science</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+<!-- Loaded before other Sphinx assets -->
+<link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet"/>
+<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet"/>
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet"/>
+<link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" rel="stylesheet" type="text/css">
+<link href="../../../_static/togglebutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/copybutton.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/sphinx-thebe.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/custom.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" rel="stylesheet" type="text/css"/>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94" rel="preload"/>
+<link as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94" rel="preload"/>
+<script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+<script src="../../../_static/jquery.js"></script>
+<script src="../../../_static/underscore.js"></script>
+<script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+<script src="../../../_static/doctools.js"></script>
+<script src="../../../_static/clipboard.min.js"></script>
+<script src="../../../_static/copybutton.js"></script>
+<script src="../../../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+<script>let toggleHintShow = 'Click to show';</script>
+<script>let toggleHintHide = 'Click to hide';</script>
+<script>let toggleOpenOnPrint = 'true';</script>
+<script src="../../../_static/togglebutton.js"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+<script src="../../../_static/design-tabs.js"></script>
+<script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+<script async="async" src="../../../_static/sphinx-thebe.js"></script>
+<script type="application/vnd.jupyter.widget-state+json">{"state": {"b4d1ee2030444202bf521d0210fd13d2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "d0c3aabe50604d06a450d13a13bb7456": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_b4d1ee2030444202bf521d0210fd13d2", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://youtube.com/watch?v=s9Yx24f_lqg\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<IPython.lib.display.YouTubeVideo at 0x7f5d7c3c3490>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://www.youtube.com/embed/s9Yx24f_lqg?fs=1&rel=0\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        ", "image/jpeg": "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\n"}}], "tabbable": null, "tooltip": null}}, "14a696270cd74a77baac001089902984": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "411bd4734a584fb9b640794ec01255b9": {"model_name": "OutputModel", "model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_14a696270cd74a77baac001089902984", "msg_id": "", "outputs": [{"output_type": "stream", "name": "stdout", "text": "Video available at https://www.bilibili.com/video/BV1dPGDexE7x\n"}, {"output_type": "display_data", "metadata": {}, "data": {"text/plain": "<__main__.PlayVideo at 0x7f5d542c8190>", "text/html": "\n        <iframe\n            width=\"730\"\n            height=\"410\"\n            src=\"https://player.bilibili.com/player.html?bvid=BV1dPGDexE7x&page=1?fs=1&autoplay=False\"\n            frameborder=\"0\"\n            allowfullscreen\n            \n        ></iframe>\n        "}}], "tabbable": null, "tooltip": null}}, "ca12cf85e1814878a0e87f3b8bd8816e": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "bd31e7eed70e43038fde81075e4f07ee": {"model_name": "TabModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TabModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "TabView", "box_style": "", "children": ["IPY_MODEL_d0c3aabe50604d06a450d13a13bb7456", "IPY_MODEL_411bd4734a584fb9b640794ec01255b9"], "layout": "IPY_MODEL_ca12cf85e1814878a0e87f3b8bd8816e", "selected_index": 0, "tabbable": null, "titles": ["Youtube", "Bilibili"], "tooltip": null}}, "ea39de2275d1487dac8b583f17a8ef29": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": "0.5em", "right": null, "top": null, "visibility": null, "width": "auto"}}, "ebb5e095f25b4e629d4f64dc4fd4688a": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": "#aaffaa", "font_family": null, "font_size": "2em", "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "761d8c88169b456ab22609c89951fd05": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["happy"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "\ud83d\ude42", "disabled": false, "icon": "", "layout": "IPY_MODEL_ea39de2275d1487dac8b583f17a8ef29", "style": "IPY_MODEL_ebb5e095f25b4e629d4f64dc4fd4688a", "tabbable": null, "tooltip": "happy"}}, "a2b09d8c607c4c2c8e6eb20de7a83bda": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": "0.5em", "right": null, "top": null, "visibility": null, "width": "auto"}}, "4ee311578cbf4b92a5e5a100e7ea52ec": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": "#dddd77", "font_family": null, "font_size": "2em", "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "2c9bd4e2d4d94a9bb48e2d793f0e1c8a": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["medium"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "\ud83d\ude10", "disabled": false, "icon": "", "layout": "IPY_MODEL_a2b09d8c607c4c2c8e6eb20de7a83bda", "style": "IPY_MODEL_4ee311578cbf4b92a5e5a100e7ea52ec", "tabbable": null, "tooltip": "medium"}}, "197de668958c440793048e0741d17fc2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": "0.5em", "right": null, "top": null, "visibility": null, "width": "auto"}}, "4d04aefac080407382e45c2106021083": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": "#ffaaaa", "font_family": null, "font_size": "2em", "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "41a9d8daa77a485e9d427eda2505b6f3": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["sad"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "\ud83d\ude41", "disabled": false, "icon": "", "layout": "IPY_MODEL_197de668958c440793048e0741d17fc2", "style": "IPY_MODEL_4d04aefac080407382e45c2106021083", "tabbable": null, "tooltip": "sad"}}, "ab813701a0b64678ba498470d53a8b98": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "auto"}}, "2bca8d89c678401cb379052b02edc5e6": {"model_name": "TextStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TextStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "1cf59ce723e3474ea50ba86dcc27b49c": {"model_name": "TextareaModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TextareaModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "TextareaView", "continuous_update": true, "description": "", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_ab813701a0b64678ba498470d53a8b98", "placeholder": "We want your feedback!", "rows": null, "style": "IPY_MODEL_2bca8d89c678401cb379052b02edc5e6", "tabbable": null, "tooltip": null, "value": ""}}, "e9e38811db3e41ac8ae2ea93e0f4a706": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "auto"}}, "5a2fcd010ceb446095d3aa7ea2e07426": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": null, "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "c4c16f880d834d44a11b6a1264b554ea": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "Submit", "disabled": false, "icon": "", "layout": "IPY_MODEL_e9e38811db3e41ac8ae2ea93e0f4a706", "style": "IPY_MODEL_5a2fcd010ceb446095d3aa7ea2e07426", "tabbable": null, "tooltip": null}}, "8ebe6af70d7b4f9b9e0061171513de09": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": "none", "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "9461c71d5e6d46a7be0d235c007f97b0": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_1cf59ce723e3474ea50ba86dcc27b49c", "IPY_MODEL_c4c16f880d834d44a11b6a1264b554ea"], "layout": "IPY_MODEL_8ebe6af70d7b4f9b9e0061171513de09", "tabbable": null, "tooltip": null}}, "bf5e8b483ee64b178332ed7c198f6a3a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": "none", "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "daa8403fdfc64ec38f9ca6151d8a160f": {"model_name": "LabelStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "LabelStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "7325ece28d924612b8e0087c04c4b149": {"model_name": "LabelModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "LabelModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "LabelView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_bf5e8b483ee64b178332ed7c198f6a3a", "placeholder": "\u200b", "style": "IPY_MODEL_daa8403fdfc64ec38f9ca6151d8a160f", "tabbable": null, "tooltip": null, "value": "Thanks for your feedback!"}}, "79bc4cb227e840b2993cc8bfbc32f1e2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "72b0a6fb2c604d1b83dfe3974a626df8": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_761d8c88169b456ab22609c89951fd05", "IPY_MODEL_2c9bd4e2d4d94a9bb48e2d793f0e1c8a", "IPY_MODEL_41a9d8daa77a485e9d427eda2505b6f3"], "layout": "IPY_MODEL_79bc4cb227e840b2993cc8bfbc32f1e2", "tabbable": null, "tooltip": null}}, "d90f46682abf4365b149df947099ae36": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "2d9c1072012d4b7cb745af39a930d259": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_72b0a6fb2c604d1b83dfe3974a626df8", "IPY_MODEL_9461c71d5e6d46a7be0d235c007f97b0", "IPY_MODEL_7325ece28d924612b8e0087c04c4b149"], "layout": "IPY_MODEL_d90f46682abf4365b149df947099ae36", "tabbable": null, "tooltip": null}}, "90e06299a501467fabbfef9509f6e7b1": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "10ddc1af2c8347ff8e02ce45f0bfe3ef": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_2d9c1072012d4b7cb745af39a930d259"], "layout": "IPY_MODEL_90e06299a501467fabbfef9509f6e7b1", "tabbable": null, "tooltip": null}}, "eb972ce6a61e4d25aa56c59d305fc169": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": "0.5em", "right": null, "top": null, "visibility": null, "width": "auto"}}, "0f5a523771ec4ad581da46df6b17ee78": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": "#aaffaa", "font_family": null, "font_size": "2em", "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "6cfcd21f77f4404abaec06f178233954": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["happy"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "\ud83d\ude42", "disabled": false, "icon": "", "layout": "IPY_MODEL_eb972ce6a61e4d25aa56c59d305fc169", "style": "IPY_MODEL_0f5a523771ec4ad581da46df6b17ee78", "tabbable": null, "tooltip": "happy"}}, "efa6bce4bd484220a442fe5ebcbda311": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": "0.5em", "right": null, "top": null, "visibility": null, "width": "auto"}}, "9d82bcb1a21b4e8abdd91826e208a36e": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": "#dddd77", "font_family": null, "font_size": "2em", "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "1b2e0c86358b48a7be194f209dfc1d07": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["medium"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "\ud83d\ude10", "disabled": false, "icon": "", "layout": "IPY_MODEL_efa6bce4bd484220a442fe5ebcbda311", "style": "IPY_MODEL_9d82bcb1a21b4e8abdd91826e208a36e", "tabbable": null, "tooltip": "medium"}}, "7b72e64a681d4a809cde051e207d9e10": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": "0.5em", "right": null, "top": null, "visibility": null, "width": "auto"}}, "629c04e20b2e427892e879aed3e80132": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": "#ffaaaa", "font_family": null, "font_size": "2em", "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "dcce51e36c6d4258ba7791d0c1cb98cd": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["sad"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "\ud83d\ude41", "disabled": false, "icon": "", "layout": "IPY_MODEL_7b72e64a681d4a809cde051e207d9e10", "style": "IPY_MODEL_629c04e20b2e427892e879aed3e80132", "tabbable": null, "tooltip": "sad"}}, "a9a43da7e0cf480ea94688e9431e71f8": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "auto"}}, "7044a95c98c6462aa9aa64989a0795f9": {"model_name": "TextStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TextStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "1a88f45ac8bc48ba92e3becbb4dfded6": {"model_name": "TextareaModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TextareaModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "TextareaView", "continuous_update": true, "description": "", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_a9a43da7e0cf480ea94688e9431e71f8", "placeholder": "We want your feedback!", "rows": null, "style": "IPY_MODEL_7044a95c98c6462aa9aa64989a0795f9", "tabbable": null, "tooltip": null, "value": ""}}, "f9a9b09c675e45c5b61e558f75c33ebd": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "auto"}}, "e2dbcc8a973d44669971c23e8b6d36b0": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": null, "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "762bfc49ed42407cb9de8dbc17627e60": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "Submit", "disabled": false, "icon": "", "layout": "IPY_MODEL_f9a9b09c675e45c5b61e558f75c33ebd", "style": "IPY_MODEL_e2dbcc8a973d44669971c23e8b6d36b0", "tabbable": null, "tooltip": null}}, "b9623117b0d74bb7a5d6c98f8b0113f7": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": "none", "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "dbe79098ef3147e4b4912f7a3e465701": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_1a88f45ac8bc48ba92e3becbb4dfded6", "IPY_MODEL_762bfc49ed42407cb9de8dbc17627e60"], "layout": "IPY_MODEL_b9623117b0d74bb7a5d6c98f8b0113f7", "tabbable": null, "tooltip": null}}, "f8cbec43ca0342aa813768b093c1e8d1": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": "none", "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "03f0f3ac20b347f9ab1fbc778284bdc3": {"model_name": "LabelStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "LabelStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "21f727e57d1945d8a8396cd1dbc555d7": {"model_name": "LabelModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "LabelModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "LabelView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_f8cbec43ca0342aa813768b093c1e8d1", "placeholder": "\u200b", "style": "IPY_MODEL_03f0f3ac20b347f9ab1fbc778284bdc3", "tabbable": null, "tooltip": null, "value": "Thanks for your feedback!"}}, "0eaa6145c21645159513bff2b52d3f8b": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "68c58809f9d04537b715d7a4b804790d": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_6cfcd21f77f4404abaec06f178233954", "IPY_MODEL_1b2e0c86358b48a7be194f209dfc1d07", "IPY_MODEL_dcce51e36c6d4258ba7791d0c1cb98cd"], "layout": "IPY_MODEL_0eaa6145c21645159513bff2b52d3f8b", "tabbable": null, "tooltip": null}}, "fbeead323c8b4ffe9264f79e31fd80db": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "dd0bbb9ccb594c61b5cbb54f5cc5f9fc": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_68c58809f9d04537b715d7a4b804790d", "IPY_MODEL_dbe79098ef3147e4b4912f7a3e465701", "IPY_MODEL_21f727e57d1945d8a8396cd1dbc555d7"], "layout": "IPY_MODEL_fbeead323c8b4ffe9264f79e31fd80db", "tabbable": null, "tooltip": null}}, "c9e63acbd6114650890fd150eedc340e": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "f415f08a35d54909a059c029006c0e21": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_dd0bbb9ccb594c61b5cbb54f5cc5f9fc"], "layout": "IPY_MODEL_c9e63acbd6114650890fd150eedc340e", "tabbable": null, "tooltip": null}}, "114c55e91c1f4f898efe5ff6bac28d6e": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": "0.5em", "right": null, "top": null, "visibility": null, "width": "auto"}}, "0f870110cdd548fc9070dc655c4ba0c0": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": "#aaffaa", "font_family": null, "font_size": "2em", "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "de720a030b844e1cbf8343b4fd3ddd9d": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["happy"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "\ud83d\ude42", "disabled": false, "icon": "", "layout": "IPY_MODEL_114c55e91c1f4f898efe5ff6bac28d6e", "style": "IPY_MODEL_0f870110cdd548fc9070dc655c4ba0c0", "tabbable": null, "tooltip": "happy"}}, "5fd5b14647e3485f878feb5966beffa7": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": "0.5em", "right": null, "top": null, "visibility": null, "width": "auto"}}, "60a1690627a04596b762b5c66c6c1700": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": "#dddd77", "font_family": null, "font_size": "2em", "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "92e80e65911d44da81bbdb905093f1ca": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["medium"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "\ud83d\ude10", "disabled": false, "icon": "", "layout": "IPY_MODEL_5fd5b14647e3485f878feb5966beffa7", "style": "IPY_MODEL_60a1690627a04596b762b5c66c6c1700", "tabbable": null, "tooltip": "medium"}}, "ef6a56e718324ab487f345f884041f05": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": "0.5em", "right": null, "top": null, "visibility": null, "width": "auto"}}, "9c5c70be68e84430b5a47f0b9026757d": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": "#ffaaaa", "font_family": null, "font_size": "2em", "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "ccb4af31c4eb4eb49839d145df38c518": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": ["sad"], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "\ud83d\ude41", "disabled": false, "icon": "", "layout": "IPY_MODEL_ef6a56e718324ab487f345f884041f05", "style": "IPY_MODEL_9c5c70be68e84430b5a47f0b9026757d", "tabbable": null, "tooltip": "sad"}}, "064245aebc9d494da58cca8b766d5cb1": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "auto"}}, "a9a3b913c6c7417599eac24d3de559d8": {"model_name": "TextStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TextStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "0f37c16d811641ab912ed01e88ed0cbe": {"model_name": "TextareaModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "TextareaModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "TextareaView", "continuous_update": true, "description": "", "description_allow_html": false, "disabled": false, "layout": "IPY_MODEL_064245aebc9d494da58cca8b766d5cb1", "placeholder": "We want your feedback!", "rows": null, "style": "IPY_MODEL_a9a3b913c6c7417599eac24d3de559d8", "tabbable": null, "tooltip": null, "value": ""}}, "c73c95ce4e2e47a5907f0692b11b1349": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "auto", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": "auto"}}, "8515a47ef73a46e3ad10110b337d8831": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "button_color": null, "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "a91d1c601f184aeba3af5ead42ef8589": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ButtonView", "button_style": "", "description": "Submit", "disabled": false, "icon": "", "layout": "IPY_MODEL_c73c95ce4e2e47a5907f0692b11b1349", "style": "IPY_MODEL_8515a47ef73a46e3ad10110b337d8831", "tabbable": null, "tooltip": null}}, "812fdb9210b447129551d30e3dee69a2": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": "none", "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b725651e37aa4bd6a9f81406cd289fa3": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_0f37c16d811641ab912ed01e88ed0cbe", "IPY_MODEL_a91d1c601f184aeba3af5ead42ef8589"], "layout": "IPY_MODEL_812fdb9210b447129551d30e3dee69a2", "tabbable": null, "tooltip": null}}, "4ca3c27b50864bb9a70b82003f3b0eb6": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": "none", "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "6eed6ff87bdc49e7975e17b66e17abf4": {"model_name": "LabelStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "LabelStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_family": null, "font_size": null, "font_style": null, "font_variant": null, "font_weight": null, "text_color": null, "text_decoration": null}}, "8328fdfbe74645929c21446e4d82faff": {"model_name": "LabelModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "LabelModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "LabelView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_4ca3c27b50864bb9a70b82003f3b0eb6", "placeholder": "\u200b", "style": "IPY_MODEL_6eed6ff87bdc49e7975e17b66e17abf4", "tabbable": null, "tooltip": null, "value": "Thanks for your feedback!"}}, "508faaa2de6f43b79daa8a8feae19780": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "260bc07f9c644746a39f85eb3272d3d5": {"model_name": "HBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_de720a030b844e1cbf8343b4fd3ddd9d", "IPY_MODEL_92e80e65911d44da81bbdb905093f1ca", "IPY_MODEL_ccb4af31c4eb4eb49839d145df38c518"], "layout": "IPY_MODEL_508faaa2de6f43b79daa8a8feae19780", "tabbable": null, "tooltip": null}}, "6b6ddad893004eefac737d59850ad1dc": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a3436ed359204866b46584e8b36df512": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_260bc07f9c644746a39f85eb3272d3d5", "IPY_MODEL_b725651e37aa4bd6a9f81406cd289fa3", "IPY_MODEL_8328fdfbe74645929c21446e4d82faff"], "layout": "IPY_MODEL_6b6ddad893004eefac737d59850ad1dc", "tabbable": null, "tooltip": null}}, "5a52e050d1de41dab58ec24d95edd84c": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "98a968bb42c7415bb9ee8c89588a420e": {"model_name": "VBoxModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "VBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "VBoxView", "box_style": "", "children": ["IPY_MODEL_a3436ed359204866b46584e8b36df512"], "layout": "IPY_MODEL_5a52e050d1de41dab58ec24d95edd84c", "tabbable": null, "tooltip": null}}}, "version_major": 2, "version_minor": 0}</script>
+<script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial3';</script>
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
+<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../search.html" rel="search" title="Search"/>
+<link href="W2D2_Tutorial4.html" rel="next" title="Tutorial 4: The Shared Socio-economic Pathways"/>
+<link href="W2D2_Tutorial2.html" rel="prev" title="Tutorial 2: Fossil Fuel Emissions, Growth, and Damage"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en" name="docsearch:language"/>
+</link></link></link></link></link></link></link></link></link></head>
+<body data-default-mode="" data-offset="180" data-spy="scroll" data-target="#bd-toc-nav">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
+<label class="overlay overlay-primary" for="__primary"></label>
+<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
+<label class="overlay overlay-secondary" for="__secondary"></label>
+<div class="search-button__wrapper">
+<div class="search-button__overlay"></div>
+<div class="search-button__search-container">
+<form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search this book..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+</div>
+</div>
+<nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+<label class="sidebar-toggle primary-toggle" for="__primary">
+<span class="fa-solid fa-bars"></span>
+</label>
+<div id="navbar-start">
+<a class="navbar-brand logo" href="../../intro.html">
+<img alt="Logo image" class="logo__image only-light" src="../../../_static/cma-logo-square-4xp.png"/>
+<img alt="Logo image" class="logo__image only-dark" src="../../../_static/cma-logo-square-4xp.png"/>
+</a>
+</div>
+<div class="col-lg-9 navbar-header-items">
+<div class="mr-auto" id="navbar-center">
+<div class="navbar-center-item">
+<nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+        Site Navigation
+    </p>
+<ul class="navbar-nav" id="navbar-main-elements">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../Schedule/schedule_intro.html">
+                        Schedule
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../TechnicalHelp/tech_intro.html">
+                        Technical Help
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../TechnicalHelp/Links_Policy.html">
+                        Quick links and policies
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../prereqs/ClimateScience.html">
+                        Prerequisites and preparatory materials for Computational Tools for Climate Science
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">
+                        Climate System Overview (W1D1)
+                      </a>
+</li>
+<div class="nav-item dropdown">
+<button aria-expanded="false" aria-haspopup="true" class="btn dropdown-toggle nav-item" data-toggle="dropdown" type="button">
+                    More
+                </button>
+<div class="dropdown-menu">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../Projects_GoodResearchPractices/chapter_title.html">
+                        Good Research Practices (Projects)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
+                        State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
+                        Remote Sensing Land Ocean and Atmosphere (W1D3)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W1D4_Paleoclimate/chapter_title.html">
+                        Paleoclimate (W1D4)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W1D5_ClimateModeling/chapter_title.html">
+                        Climate Modeling (W1D5)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W2D1_AnEnsembleofFutures/chapter_title.html">
+                        An Ensemble of Futures (W2D1)
+                      </a>
+</li>
+<li class="nav-item current active">
+<a class="nav-link nav-internal" href="../chapter_title.html">
+                        The Socioeconomics of Climate Change (W2D2)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W2D3_ExtremesandVariability/chapter_title.html">
+                        Extremes and Variability (W2D3)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W2D4_AIandClimateChange/chapter_title.html">
+                        AI and Climate Change (W2D4)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/README.html">
+                        Introduction
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/keynote.html">
+                        Project Day keynote (W2D5)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/docs/project_guidance.html">
+                        Daily guide for projects
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/docs/datasets_overview.html">
+                        Project materials
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+                        Continuing your project after the course
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/docs/past_projects_overview.html">
+                        Past projects
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/README.html">
+                        Introduction
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/mentorship_program.html">
+                        Mentorship Program
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/impact_talks.html">
+                        Impact Talks
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/mentors.html">
+                        Mentor Meetings
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/career_features.html">
+                        Career Features
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/career_panels.html">
+                        Career Panels
+                      </a>
+</li>
+</div>
+</div>
+</ul>
+</nav>
+</div>
+</div>
+<div id="navbar-end">
+<div class="navbar-end-item navbar-persistent--container">
+<button aria-label="Search" class="btn btn-sm navbar-btn search-button search-button__button" data-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
+</div>
+<div class="navbar-end-item">
+<button aria-label="light/dark" class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" data-toggle="tooltip" title="light/dark">
+<span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+<span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+<span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+</div>
+<div class="navbar-end-item">
+<ul aria-label="Icon Links" class="navbar-nav" id="navbar-icon-links">
+</ul>
+</div>
+</div>
+</div>
+<div class="navbar-persistent--mobile">
+<button aria-label="Search" class="btn btn-sm navbar-btn search-button search-button__button" data-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
+</div>
+<label class="sidebar-toggle secondary-toggle" for="__secondary">
+<span class="fa-solid fa-outdent"></span>
+</label>
+</div>
+</nav>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<div class="bd-sidebar-primary bd-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+<div class="sidebar-header-items__center">
+<div class="navbar-center-item">
+<nav class="navbar-nav">
+<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
+        Site Navigation
+    </p>
+<ul class="navbar-nav" id="navbar-main-elements">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../Schedule/schedule_intro.html">
+                        Schedule
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../TechnicalHelp/tech_intro.html">
+                        Technical Help
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../TechnicalHelp/Links_Policy.html">
+                        Quick links and policies
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../prereqs/ClimateScience.html">
+                        Prerequisites and preparatory materials for Computational Tools for Climate Science
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">
+                        Climate System Overview (W1D1)
+                      </a>
+</li>
+<div class="nav-item dropdown">
+<button aria-expanded="false" aria-haspopup="true" class="btn dropdown-toggle nav-item" data-toggle="dropdown" type="button">
+                    More
+                </button>
+<div class="dropdown-menu">
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../Projects_GoodResearchPractices/chapter_title.html">
+                        Good Research Practices (Projects)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">
+                        State of the Climate Ocean and Atmosphere Reanalysis (W1D2)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">
+                        Remote Sensing Land Ocean and Atmosphere (W1D3)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W1D4_Paleoclimate/chapter_title.html">
+                        Paleoclimate (W1D4)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W1D5_ClimateModeling/chapter_title.html">
+                        Climate Modeling (W1D5)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W2D1_AnEnsembleofFutures/chapter_title.html">
+                        An Ensemble of Futures (W2D1)
+                      </a>
+</li>
+<li class="nav-item current active">
+<a class="nav-link nav-internal" href="../chapter_title.html">
+                        The Socioeconomics of Climate Change (W2D2)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W2D3_ExtremesandVariability/chapter_title.html">
+                        Extremes and Variability (W2D3)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../W2D4_AIandClimateChange/chapter_title.html">
+                        AI and Climate Change (W2D4)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/README.html">
+                        Introduction
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/keynote.html">
+                        Project Day keynote (W2D5)
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/docs/project_guidance.html">
+                        Daily guide for projects
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/docs/datasets_overview.html">
+                        Project materials
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
+                        Continuing your project after the course
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/docs/past_projects_overview.html">
+                        Past projects
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/README.html">
+                        Introduction
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/mentorship_program.html">
+                        Mentorship Program
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/impact_talks.html">
+                        Impact Talks
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/mentors.html">
+                        Mentor Meetings
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/career_features.html">
+                        Career Features
+                      </a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-internal" href="../../../projects/professional_development/career_panels.html">
+                        Career Panels
+                      </a>
+</li>
+</div>
+</div>
+</ul>
+</nav>
+</div>
+</div>
+<div class="sidebar-header-items__end">
+<div class="navbar-end-item">
+<button aria-label="light/dark" class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" data-toggle="tooltip" title="light/dark">
+<span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+<span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+<span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+</div>
+<div class="navbar-end-item">
+<ul aria-label="Icon Links" class="navbar-nav" id="navbar-icon-links">
+</ul>
+</div>
+</div>
+</div>
+<div class="sidebar-start-items sidebar-primary__section">
+<div class="sidebar-start-items__item">
+<a class="navbar-brand logo" href="../../intro.html">
+<img alt="Logo image" class="logo__image only-light" src="../../../_static/cma-logo-square-4xp.png"/>
+<img alt="Logo image" class="logo__image only-dark" src="../../../_static/cma-logo-square-4xp.png"/>
+</a>
+</div>
+<div class="sidebar-start-items__item">
+<form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search this book..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+</div>
+<div class="sidebar-start-items__item"><nav aria-label="Main" class="bd-links" id="bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<ul class="nav bd-sidenav bd-sidenav__home-link">
+<li class="toctree-l1">
+<a class="reference internal" href="../../intro.html">
+                    Introduction
+                </a>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Schedule/schedule_intro.html">Schedule</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Schedule/daily_schedules.html">General Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Schedule/shared_calendars.html">Shared calendars</a></li>
+</ul>
+</input></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../TechnicalHelp/tech_intro.html">Technical Help</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../TechnicalHelp/Jupyterbook.html">Using jupyterbook</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../TechnicalHelp/Tutorial_colab.html">Using Google Colab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../TechnicalHelp/Tutorial_kaggle.html">Using Kaggle</a></li>
+</ul>
+</input></li>
+<li class="toctree-l2"><a class="reference internal" href="../../TechnicalHelp/Discord.html">Using discord</a></li>
+</ul>
+</input></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../TechnicalHelp/Links_Policy.html">Quick links and policies</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../prereqs/ClimateScience.html">Prerequisites and preparatory materials for Computational Tools for Climate Science</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">Climate System Overview (W1D1)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">Tutorial 2: Selection, Interpolation and Slicing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.html">Tutorial 3: Opening and Plotting netCDF Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.html">Tutorial 4: Arithmetic and Aggregation Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">Tutorial 5: Xarray Data Analysis and Climatology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">Tutorial 6: Compute and Plot Temperature Anomalies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">Tutorial 7: Other Computational Tools in Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">Tutorial 8: Masking with One Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">Bonus Tutorial 9: Masking with Multiple Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_DaySummary.html">Day Summary</a></li>
+</ul>
+</input></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Projects_GoodResearchPractices/chapter_title.html">Good Research Practices (Projects)</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial1.html">Tutorial 1: Finding a Phenomenon and Asking a Question About It</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial2.html">Tutorial 2: Doing a Literature Review</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial3.html">Tutorial 3: Identifying the Basic Ingredients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial4.html">Tutorial 4: Formulating a Hypothesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial5.html">Tutorial 5: Drafting the Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial6.html">Tutorial 6: Implementing the Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial7.html">Tutorial 7: Interpreting the Results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Tutorial8.html">Tutorial 8: Communicating Your Conclusions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Projects_GoodResearchPractices/student/Projects_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/chapter_title.html">State of the Climate Ocean and Atmosphere Reanalysis (W1D2)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial1.html">Tutorial 1: Calculating ENSO with Xarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial2.html">Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial3.html">Tutorial 3: Atmospheric  Circulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial4.html">Tutorial 4: Oceanic Wind-Driven Circulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial5.html">Tutorial 5: Thermohaline Circulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Tutorial6.html">Bonus Tutorial 6: Ocean Heat Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D2_StateoftheClimateOceanandAtmosphereReanalysis/student/W1D2_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/chapter_title.html">Remote Sensing Land Ocean and Atmosphere (W1D3)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial1.html">Tutorial 1: Introduction to Remote Sensing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial2.html">Tutorial 2: Exploring Satellite Climate Data Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial3.html">Tutorial 3: Visualizing Satellite CDR - Global Vegetation Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial4.html">Tutorial 4: Understanding Climatology Through Precipitation Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial5.html">Tutorial 5: Calculating Anomalies Using Precipitation Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial6.html">Tutorial 6: Large Scale Climate Variability - ENSO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial7.html">Tutorial 7: Impact of Climate Variability - Precipitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Tutorial8.html">Bonus Tutorial 8: Comparing Satellite Products With In Situ Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensingLandOceanandAtmosphere/student/W1D3_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D4_Paleoclimate/chapter_title.html">Paleoclimate (W1D4)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial1.html">Tutorial 1: Paleoclimate Proxies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial2.html">Tutorial 2: Reconstructing Past Changes in Ocean Climate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial3.html">Tutorial 3: Reconstructing Past Changes in Terrestrial Climate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial4.html">Tutorial 4: Reconstructing Past Changes in Atmospheric Climate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial5.html">Tutorial 5: Paleoclimate Data Analysis Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial6.html">Tutorial 6: Spectral Analysis of Paleoclimate Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial7.html">Bonus Tutorial 7: Assessing Climate Forcings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial8.html">Bonus Tutorial 8: Paleoclimate Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial9.html">Tutorial 9: Paleoclimate Reanalysis Products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Future</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D5_ClimateModeling/chapter_title.html">Climate Modeling (W1D5)</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial1.html">Tutorial 1: Radiation and the Greenhouse Effect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial2.html">Tutorial 2: Energy Balance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial3.html">Tutorial 3: A Zero-Dimensional Energy Balance Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial4.html">Bonus Tutorial 4: Climate Feedbacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial5.html">Bonus Tutorial 5: Vertical Structure of the Atmosphere</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial6.html">Bonus Tutorial 6: Radiative-Convective Equilibrium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial7.html">Tutorial 7: Introduction to CMIP6 Earth System Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Tutorial8.html">Tutorial 8: Time Series, Global Averages, and Scenario Comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W1D5_ClimateModeling/student/W1D5_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/chapter_title.html">An Ensemble of Futures (W2D1)</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/student/W2D1_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/student/W2D1_Tutorial1.html">Tutorial 1: Internal Climate Variability and Single-model Ensembles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/student/W2D1_Tutorial2.html">Tutorial 2: Future climate scenarios &amp; Multi-model Ensembles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/student/W2D1_Tutorial3.html">Tutorial 3: Quantifying Uncertainty in Projections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/student/W2D1_Tutorial4.html">Tutorial 4: Synthesising &amp; Interpreting Diverse Data Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/student/W2D1_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/student/W2D1_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../chapter_title.html">The Socioeconomics of Climate Change (W2D2)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="W2D2_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="W2D2_Tutorial1.html">Tutorial 1: Orienting inside a “Climate Solution” Simulator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="W2D2_Tutorial2.html">Tutorial 2: Fossil Fuel Emissions, Growth, and Damage</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Tutorial 3: The Temporal Dimension of Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="W2D2_Tutorial4.html">Tutorial 4: The Shared Socio-economic Pathways</a></li>
+<li class="toctree-l2"><a class="reference internal" href="W2D2_Tutorial5.html">Tutorial 5: Mapping the Narrative Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="W2D2_Tutorial6.html">Bonus Tutorial 6: Create your Socio-economic Scenario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="W2D2_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../further_reading.html"><strong>Tutorial 2 Further Reading</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="W2D2_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Response</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D3_ExtremesandVariability/chapter_title.html">Extremes and Variability (W2D3)</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Tutorial1.html">Tutorial 1: Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Tutorial2.html">Tutorial 2: What is an Extreme Event? Empirical Return Levels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Tutorial3.html">Tutorial 3: Extreme Value Analysis - the GEV Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Tutorial4.html">Tutorial 4: Return Levels Using Normal and GEV Distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Tutorial5.html">Tutorial 5: Non-stationarity in Historical Records</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Tutorial6.html">Tutorial 6: Scenario-dependence of Future Changes in Extremes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Tutorial7.html">Bonus Tutorial 7: Non-Stationarity in the EVT-framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Tutorial8.html">Bonus Tutorial 8: Thresholds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D4_AIandClimateChange/chapter_title.html">AI and Climate Change (W2D4)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_Tutorial1.html">Tutorial 1:  ClimateBench Dataset and How Machine Learning Can Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_Tutorial2.html">Tutorial 2:  Building and Training Random Forest Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_Tutorial3.html">Tutorial 3:  Testing Model Generalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_Tutorial4.html">Tutorial 4: Testing Spatial Generalization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_Tutorial5.html">Tutorial 5:  Testing generalization to new scenarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_Tutorial6.html">Tutorial 6: Exploring other applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Booklet</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/README.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/keynote.html">Project Day keynote (W2D5)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/docs/project_guidance.html">Daily guide for projects</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../projects/docs/datasets_overview.html">Project materials</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/project-notebooks/Arctic_sea_ice_change_2024.html">Arctic Sea Ice Change</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/project-notebooks/Heatwaves_2024.html">Heatwaves</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification_2024.html">Ocean Acidification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/project-notebooks/Precipitation_variability_extreme_events_2024.html">Precipitation Variability and Extreme Events</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">Continuing your project after the course</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../projects/docs/past_projects_overview.html">Past projects</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/past-projects/sea_level_rise.html">Sea Level Rise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/past-projects/ocean_acidification.html">Ocean Acidification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/past-projects/ENSO.html">The Impact of ENSO on Precipitation and Temperature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/past-projects/precipitation.html">Regional Precipitation Variability and Extreme events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/past-projects/heatwaves.html">Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/past-projects/wildfires.html">Monitoring and Mapping Wildfires Using Satellite Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../projects/past-projects/albedo.html">Changes in Land Cover: Albedo and Carbon Sequestration</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Professional Development</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/README.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/mentorship_program.html">Professional developemnt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/impact_talks.html">Impact Talks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/mentors.html">Mentor Meetings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/career_features.html">Career Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/career_panels.html">Career Panels</a></li>
+</ul>
+</div>
+</nav>
+</div>
+</div>
+<div class="sidebar-end-items sidebar-primary__section">
+<div class="sidebar-end-items__item">
+</div>
+</div>
+<div id="rtd-footer-container"></div>
+</div>
+<main class="bd-main" id="main-content">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article">
+<div class="col py-1 d-flex header-article-main">
+<div class="header-article__left">
+<label class="sidebar-toggle primary-toggle btn btn-sm" data-placement="right" data-toggle="tooltip" for="__primary" title="Toggle primary sidebar">
+<span class="fa-solid fa-bars"></span>
+</label>
+</div>
+<div class="header-article__right">
+<div class="dropdown dropdown-launch-buttons">
+<button aria-expanded="false" aria-label="Launch interactive content" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-rocket"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/neuromatch/climate-course-content&amp;urlpath=lab/tree/climate-course-content/tutorials/W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial3.ipynb&amp;branch=main" target="_blank" title="Launch on JupyterHub">
+<span class="btn__icon-container">
+<img src="../../../_static/images/logo_jupyterhub.svg"/>
+</span>
+<span class="btn__text-container">JupyterHub</span>
+</a>
+
+</li></ul>
+</div>
+<button class="btn btn-sm" data-placement="bottom" data-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
+<span class="btn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<div class="dropdown dropdown-repository-buttons">
+<button aria-expanded="false" aria-label="Source repositories" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fab fa-github"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://github.com/neuromatch/climate-course-content" target="_blank" title="Source repository">
+<span class="btn__icon-container">
+<i class="fab fa-github"></i>
+</span>
+<span class="btn__text-container">repository</span>
+</a>
+
+<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://github.com/neuromatch/climate-course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial3.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+<span class="btn__text-container">open issue</span>
+</a>
+
+</li></li></ul>
+</div>
+<div class="dropdown dropdown-download-buttons">
+<button aria-expanded="false" aria-label="Download this page" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-download"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="../../../_sources/tutorials/W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial3.ipynb" target="_blank" title="Download source file">
+<span class="btn__icon-container">
+<i class="fas fa-file"></i>
+</span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+
+<li>
+<button class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" onclick="printPdf(this)" title="Print to PDF">
+<span class="btn__icon-container">
+<i class="fas fa-file-pdf"></i>
+</span>
+<span class="btn__text-container">.pdf</span>
+</button>
+
+</li></li></ul>
+</div>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-placement="left" data-toggle="tooltip" for="__secondary" title="Toggle secondary sidebar">
+<span class="fa-solid fa-list"></span>
+</label>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Tutorial 3: The Temporal Dimension of Actions</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+   Tutorial 3: The Temporal Dimension of Actions
+  </a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+   Tutorial Objectives
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#install-and-import-feedback-gadget">
+     Install and import feedback gadget
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure settings
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#helper-functions">
+     Helper functions
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-the-ipccs-transition-narratives-and-project-modelling">
+     Video 1: The IPCC’s Transition Narratives and Project Modelling
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#submit-your-feedback">
+     Submit your feedback
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id1">
+     Submit your feedback
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-when-and-how-do-you-introduce-a-carbon-price">
+   Section 1: When and How Do You Introduce a Carbon Price?
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#exercise-1-implications-of-actions-and-their-timing">
+     Exercise 1: Implications of Actions and Their Timing
+    </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id2">
+       Submit your feedback
+      </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+   Resources
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<article class="bd-article" role="main">
+<p><a class="reference external" href="https://colab.research.google.com/github/neuromatch/climate-course-content/blob/main/tutorials/W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial3.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial3.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
+<div class="tex2jax_ignore mathjax_ignore section" id="tutorial-3-the-temporal-dimension-of-actions">
+<h1>Tutorial 3: The Temporal Dimension of Actions<a class="headerlink" href="#tutorial-3-the-temporal-dimension-of-actions" title="Permalink to this heading">#</a></h1>
+<p><strong>Week 2, Day 2: The Socioeconomics of Climate Change</strong></p>
+<p><strong>Content creators:</strong>  Paul Heubel, Maximilian Puelma Touzel</p>
+<p><strong>Content reviewers:</strong> Mujeeb Abdulfatai, Nkongho Ayuketang Arreyndip, Jeffrey N. A. Aryee, Jenna Pearson, Abel Shibu, Ohad Zivan</p>
+<p><strong>Content editors:</strong> Paul Heubel, Jenna Pearson, Chi Zhang, Ohad Zivan</p>
+<p><strong>Production editors:</strong> Wesley Banfield, Paul Heubel, Jenna Pearson, Konstantine Tsafatinos, Chi Zhang, Ohad Zivan</p>
+<p><strong>Our 2024 Sponsors:</strong> CMIP, NFDI4Earth</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="tutorial-objectives">
+<h1>Tutorial Objectives<a class="headerlink" href="#tutorial-objectives" title="Permalink to this heading">#</a></h1>
+<p><em>Estimated timing of tutorial:</em> 15 minutes</p>
+<p>The last tutorials covered the necessity for an energy transition to tackle the climate emergency and many solutions at once. As emissions accumulate, it becomes substantially harder to succeed the longer we take to make big changes. This tutorial explores the temporal dimension of action, here policies, by using the Climate Solution Simulator named <a class="reference external" href="https://www.climateinteractive.org/en-roads/">En-ROADS</a>.</p>
+<p>After finishing this tutorial you can</p>
+<ul class="simple">
+<li><p>exemplify along the carbon price, why policy-making has to consider the temporal dimension and the needs of the most vulnerable parts of society</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="install-and-import-feedback-gadget">
+<h2>Install and import feedback gadget<a class="headerlink" href="#install-and-import-feedback-gadget" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Install and import feedback gadget</span>
+
+<span class="o">!</span>pip3<span class="w"> </span>install<span class="w"> </span>vibecheck<span class="w"> </span>datatops<span class="w"> </span>--quiet
+
+<span class="kn">from</span> <span class="nn">vibecheck</span> <span class="kn">import</span> <span class="n">DatatopsContentReviewContainer</span>
+<span class="k">def</span> <span class="nf">content_review</span><span class="p">(</span><span class="n">notebook_section</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">DatatopsContentReviewContainer</span><span class="p">(</span>
+        <span class="s2">""</span><span class="p">,</span>  <span class="c1"># No text prompt</span>
+        <span class="n">notebook_section</span><span class="p">,</span>
+        <span class="p">{</span>
+            <span class="s2">"url"</span><span class="p">:</span> <span class="s2">"https://pmyvdlilci.execute-api.us-east-1.amazonaws.com/klab"</span><span class="p">,</span>
+            <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"comptools_4clim"</span><span class="p">,</span>
+            <span class="s2">"user_key"</span><span class="p">:</span> <span class="s2">"l5jpxuee"</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+
+
+<span class="n">feedback_prefix</span> <span class="o">=</span> <span class="s2">"W2D2_T3"</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class="-Color -Color-Bold">[</span><span class="-Color -Color-Blue">notice</span><span class="-Color -Color-Bold">]</span> A new release of pip is available: <span class="-Color -Color-Red">24.1</span> -&gt; <span class="-Color -Color-Green">24.1.1</span>
+<span class="-Color -Color-Bold">[</span><span class="-Color -Color-Blue">notice</span><span class="-Color -Color-Bold">]</span> To update, run: <span class="-Color -Color-Green">pip install --upgrade pip</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="figure-settings">
+<h2>Figure settings<a class="headerlink" href="#figure-settings" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure settings</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>  <span class="c1"># interactive display</span>
+
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
+    <span class="s2">"https://raw.githubusercontent.com/neuromatch/climate-course-content/main/cma.mplstyle"</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="section" id="helper-functions">
+<h2>Helper functions<a class="headerlink" href="#helper-functions" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Helper functions</span>
+
+<span class="k">def</span> <span class="nf">pooch_load</span><span class="p">(</span><span class="n">filelocation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">processor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="n">shared_location</span> <span class="o">=</span> <span class="s2">"/home/jovyan/shared/Data/tutorials/W2D2_TheSocioeconomicsofClimateChange"</span>  <span class="c1"># this is different for each day</span>
+    <span class="n">user_temp_cache</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span> <span class="n">filename</span><span class="p">)):</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+            <span class="n">filelocation</span><span class="p">,</span>
+            <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+            <span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span>
+            <span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">,</span>
+        <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">file</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</div>
+<div class="section" id="video-1-the-ipccs-transition-narratives-and-project-modelling">
+<h2>Video 1: The IPCC’s Transition Narratives and Project Modelling<a class="headerlink" href="#video-1-the-ipccs-transition-narratives-and-project-modelling" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "bd31e7eed70e43038fde81075e4f07ee"}</script></div>
+</div>
+</div>
+<div class="section" id="submit-your-feedback">
+<h2>Submit your feedback<a class="headerlink" href="#submit-your-feedback" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Submit your feedback</span>
+<span class="n">content_review</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">feedback_prefix</span><span class="si">}</span><span class="s2">_Orienting_inside_a_Climate_Solution_Simulator_Video"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "10ddc1af2c8347ff8e02ce45f0bfe3ef"}</script></div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>If you want to download the slides: https://osf.io/download/mtyrb/
+</pre></div>
+</div>
+<div class="output text_html">
+<iframe allowfullscreen="" frameborder="0" height="480" src="https://mfr.ca-1.osf.io/render?url=https://osf.io/mtyrb/?direct%26mode=render%26action=download%26mode=render" width="854"></iframe>
+</div></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Submit your feedback<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Submit your feedback</span>
+<span class="n">content_review</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">feedback_prefix</span><span class="si">}</span><span class="s2">_Orienting_inside_a_Climate_Solution_Simulator_Slides"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "f415f08a35d54909a059c029006c0e21"}</script></div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="section-1-when-and-how-do-you-introduce-a-carbon-price">
+<h1>Section 1: When and How Do You Introduce a Carbon Price?<a class="headerlink" href="#section-1-when-and-how-do-you-introduce-a-carbon-price" title="Permalink to this heading">#</a></h1>
+<p>You might have recognized that a high <em><strong>carbon price</strong></em> by default has a strong impact on the temperature increase within the En-ROADS model as it both reduces the carbon intensity of the energy supply and reduces the energy demand. However, the carbon price itself could be introduced now or in 50 years and at different amounts, depending on for example the social cost of such a policy, which makes energy supply more expensive depending on its emissions. Energy producers could pass additional costs to their customers, so policy could be designed to minimize the impacts on the poorest, e.g. by introducing a <a class="reference external" href="https://en.wikipedia.org/wiki/Carbon_fee_and_dividend">Carbon fee and dividend</a>.</p>
+<p>To account for their temporal evolution, many variables in En-ROADS allow for modifications of the timing when something is introduced, stopped, in or de-creased, and so on.</p>
+<div class="section" id="exercise-1-implications-of-actions-and-their-timing">
+<h2>Exercise 1: Implications of Actions and Their Timing<a class="headerlink" href="#exercise-1-implications-of-actions-and-their-timing" title="Permalink to this heading">#</a></h2>
+<p><em>Estimated timing:</em> 10 minutes</p>
+<ol class="arabic simple">
+<li><p><strong>Open En-ROADS</strong> <a class="reference external" href="https://en-roads.climateinteractive.org/">here</a>. <em>(Note the control panel is available in various languages - check the left of the panel of the simulator that should by default show “English”.)</em></p></li>
+<li><p><strong>Develop a scenario</strong>: Click on the ellipsis of the ‘Carbon price’ slider, and a widget-info box opens that allows for finetuning of your carbon price policy.</p>
+<ol class="arabic simple">
+<li><p>Click on the title of the top right graph <em>Greenhouse Gas Net Emissions</em>, select the ‘Financial’ toggle, and select the ‘Market price of electricity’.</p></li>
+<li><p>Turn the most upper knobs/ vary the sliders of the ‘Carbon price’ and slide through different carbon prices.</p></li>
+<li><p>Move the sliders to answer the following question. Use the following <a class="reference external" href="https://img.climateinteractive.org/2019/09/EnROADS-one-page-guide-to-control-panel-v11-dec-2021.pdf">cheatsheet</a> if needed.</p></li>
+</ol>
+</li>
+<li><p><strong>Answer the following questions</strong>:</p>
+<ul class="simple">
+<li><p>What do you observe in the ‘Market price of electricity’ graph after varying the carbon price?</p></li>
+<li><p>Now, select a high carbon price and increase the ‘Year the carbon price starts to phase in’. How does the carbon price change the temporal evolution of the ‘Market price of electricity’.</p></li>
+<li><p>How could this be of consequence for a low-income household?</p></li>
+</ul>
+</li>
+</ol>
+<p><em>Be warned that a reset of all your previous changes might be necessary before. If you would like to save your previous scenario, export it via a click on the</em> <em><strong>Share your scenario</strong></em> <em>button in the top right of the Panel, and select ‘Copy Scenario Link’</em>.</p>
+<p><em>Note that your changes are reflected in the light blue graph, while the baseline scenario remains a black line.</em></p>
+<p><a class="reference external" href="https://github.com/neuromatch/climate-course-content/tree/main/tutorials/W2D2_TheSocioeconomicsofClimateChange/solutions/W2D2_Tutorial3_Solution_2aba4d73.py"><em>Click for solution</em></a></p>
+<div class="section" id="id2">
+<h3>Submit your feedback<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Submit your feedback</span>
+<span class="n">content_review</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">feedback_prefix</span><span class="si">}</span><span class="s2">_Exercise_1"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "98a968bb42c7415bb9ee8c89588a420e"}</script></div>
+</div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="summary">
+<h1>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h1>
+<p>In this tutorial, we discussed the temporal dimension of the carbon price implementation in order to understand why no policy might be a silver bullet to solve all problems but comes with various ethical and political implications. At last, we discussed a few limitations of the En-ROADs model approach.</p>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="resources">
+<h1>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h1>
+<p>This tutorial is inspired by teaching material from <a class="reference external" href="https://climateinteractive.org/">Climate Interactive</a> and other documents.
+A few important resources are linked below:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.climateinteractive.org/projects/en-roads/en/latest/index.html">En-ROADS documentation</a></p></li>
+<li><p><a class="reference external" href="https://docs.climateinteractive.org/projects/en-roads/en/latest/en-roads-user-guide.pdf">En-ROADS User Guide PDF</a></p></li>
+<li><p><a class="reference external" href="https://www.climateinteractive.org/guided-assignment/">Guided Assignment - Simulating Climate Futures in En-ROADS: Short Version</a></p></li>
+</ul>
+</div>
+<script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tutorials/W2D2_TheSocioeconomicsofClimateChange/student"
+        },
+        predefinedOutput: true
+    }
+    </script>
+<script>kernelName = 'python3'</script>
+</article>
+<footer class="bd-footer-article">
+<!-- Previous / next buttons -->
+<div class="prev-next-area">
+<a class="left-prev" href="W2D2_Tutorial2.html" id="prev-link" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title">Tutorial 2: Fossil Fuel Emissions, Growth, and Damage</p>
+</div>
+</a>
+<a class="right-next" href="W2D2_Tutorial4.html" id="next-link" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title">Tutorial 4: The Shared Socio-economic Pathways</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<div class="bd-sidebar-secondary bd-toc">
+<div class="toc-item">
+<div class="tocsection onthispage">
+<i class="fa-solid fa-list"></i> On this page
+</div>
+<nav class="page-toc" id="bd-toc-nav">
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#">
+   Tutorial 3: The Temporal Dimension of Actions
+  </a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#tutorial-objectives">
+   Tutorial Objectives
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#install-and-import-feedback-gadget">
+     Install and import feedback gadget
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#figure-settings">
+     Figure settings
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#helper-functions">
+     Helper functions
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#video-1-the-ipccs-transition-narratives-and-project-modelling">
+     Video 1: The IPCC’s Transition Narratives and Project Modelling
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#submit-your-feedback">
+     Submit your feedback
+    </a>
+</li>
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id1">
+     Submit your feedback
+    </a>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#section-1-when-and-how-do-you-introduce-a-carbon-price">
+   Section 1: When and How Do You Introduce a Carbon Price?
+  </a>
+<ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry">
+<a class="reference internal nav-link" href="#exercise-1-implications-of-actions-and-their-timing">
+     Exercise 1: Implications of Actions and Their Timing
+    </a>
+<ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry">
+<a class="reference internal nav-link" href="#id2">
+       Submit your feedback
+      </a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+</li>
+<li class="toc-h1 nav-item toc-entry">
+<a class="reference internal nav-link" href="#resources">
+   Resources
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+By Climatematch
+</p>
+</div>
+<div class="footer-item">
+</div>
+<div class="footer-item">
+<p class="last-updated">
+Last updated on None.<br/>
+</p>
+</div>
+<div class="footer-item">
+<div class="extra_footer">
+<div>
+<a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a>
+<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"/></a>
+The contents of this repository are shared under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+Software elements are additionally licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD (3-Clause) License</a>.
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+</body>
+</html>
