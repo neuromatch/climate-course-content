@@ -123,8 +123,9 @@ dependencies:
  - zarr
  - pip:
    - afinn
+   - lipd
    - pyleoclim
    - "mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip"
 #   - "SDFC @ https://github.com/yrobink/SDFC/archive/master.zip" # this is not working
-   -  https://github.com/mptouzel/PyDICE/archive/master.zip # for W2D3 Tutorial 2
+#   -  https://github.com/mptouzel/PyDICE/archive/master.zip # for W2D3 Tutorial 2
 
