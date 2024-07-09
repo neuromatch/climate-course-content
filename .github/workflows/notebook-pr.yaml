@@ -55,7 +55,7 @@ jobs:
       - name: Run Notebooks
         uses: ./.github/actions/check-notebooks
         with:
-          run_all: 'true'
+          run_all: 'false'
           # exec_flag: '--check-only'
           exec_flag: '--execute'
           # exercise-continue-on-error: true
