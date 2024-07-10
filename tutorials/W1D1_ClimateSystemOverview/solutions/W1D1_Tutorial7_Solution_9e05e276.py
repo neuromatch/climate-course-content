@@ -1,0 +1,5 @@
+
+"""
+1. In general, by examining the data at these different time scales, you can get a more comprehensive understanding of the SST variations and their potential causes.
+2. The original monthly data gives you the most granular view of the data, allowing you to see monthly variations in SST. Coarsening the data over 4-month periods reduces the temporal resolution but provides a slightly smoothed series that could help identify patterns or trends over this larger time period. A 6-month moving average could be useful for identifying semi-annual trends and reducing the impact of short-term noise in the data. The annually resampled (12 months) data provides a high-level view of the SST data, emphasizing the annual pattern. This can be useful for identifying long-term trends or changes in the data over the span of years.
+"""
