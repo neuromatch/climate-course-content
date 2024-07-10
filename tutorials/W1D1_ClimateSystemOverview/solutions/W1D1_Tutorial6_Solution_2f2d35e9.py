@@ -1,0 +1,5 @@
+
+"""
+1. An area-weighted mean global temperature anomaly provides a more accurate representation of global temperature changes by accounting for the uneven distribution of grid cell sizes across latitudes. It ensures each region's contribution to the global mean is proportional to its surface area, avoiding any disproportionate influence from smaller areas at higher latitudes. Both weighted and unweighted SST means show the similar increasing trend in temperature from 2000 to 2014, although by eye, it appears that the trend would be slightly lower for the unweighted mean.
+2. The observed SST warming trend from 2000 to 2014 is similar to the rate of change observed from 1980 to 2000, which fits into the larger context of the substantial warming trend observed over the past century. Over this period, global average temperatures have risen rapidly, at a rate that is not typical in the context of most longer-term naturally driven temperature variations.
+"""

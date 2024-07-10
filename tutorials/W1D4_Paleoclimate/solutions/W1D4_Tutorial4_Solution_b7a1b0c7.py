@@ -1,8 +1,0 @@
-
-"""
-1. During glacial periods, lower temperatures lead to more oceanic absorption of CO2, reducing atmospheric CO2 levels. During interglacial periods, the reverse happens. This mutual influence creates a feedback loop, resulting in the observed covariance between dD (a proxy for temperature), CO2 and glacial-interglacial cycles.
-2. The glacial periods occur when dD is more negative (depleted) and atmospheric CO2 concentrations are lower, whereas interglacial periods occur when dD is more positive (enriched) and atmospheric CO2 concentrations are higher. Based on this, the most recent glacial period was ~20,000 years ago. Today, we are in an interglacial period. However, notice how the atmospheric CO2 concentration rapidly increases towards the present and exceeds the CO2 concentration of any other interglacial period over the past 800,000 years. What might be causing this?
-3. The cooling periods tend to be more gradual while warming periods are relatively rapid. This pattern is especially apparent over the past 400,000 years.
-4. These glacial-interglacial cycles are primarily driven by variations in Earth’s orbital parameters. These parameters include eccentricity, obliquity, and precession, which vary on timescales of ~100,000 years, ~40,000 years, and ~21,000 years, respectively. In later tutorials, we’ll learn how to identify temporal cyclicity in paleoclimate reconstructions and assess possible forcings with similar timescales of variation.
-
-""";

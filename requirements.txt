@@ -46,4 +46,6 @@ mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip
 dicelib @ https://github.com/mptouzel/PyDICE/archive/master.zip
 cdsapi
 texttable
+lipd
+pyleoclim==0.14.0
 # cfgrib

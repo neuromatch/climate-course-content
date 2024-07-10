@@ -1,0 +1,6 @@
+
+"""
+1. The reconstructed Global Mean Surface Temperature (GMST) anomalies from the collective time series displays a variation within the range of 1.5 ˚C. The consistency among the reconstructed values tends to increase as we approach the present day, with more substantial variation observed between the years 1200 and 1800. These differences can be attributed to several factors. For instance, each model's unique sensitivity to different forcings and their distinct representations of physical processes or spatial resolutions can lead to variations in outcomes.
+2. In order to obtain the "best" simulation, a comparative analysis is conducted against observational or proxy data. The simulation that best mirrors the observed or reconstructed climate trends and variability over the same time period is often deemed the most reliable. However, it's essential to note that all models possess their own strengths and weaknesses, and the "best" model can depend on the specific climate variable or region of interest.
+
+"""
