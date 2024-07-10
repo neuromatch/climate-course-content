@@ -9,23 +9,23 @@
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MoOWPdzGj8t0Yxm-IC1nvN
   tutorials: 8
 - day: W1D2
-  category: Climate Data
-  name: State of the Climate Ocean and Atmosphere Reanalysis
+  category: Past and Present Climate
+  name: Ocean-Atmosphere Reanalysis
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18MtuSiOkabOmG-KdhOM_Xi_
   tutorials: 6
 - day: W1D3
-  category: Climate Data
-  name: Remote Sensing Land Ocean and Atmosphere
+  category: Past and Present Climate
+  name: Remote Sensing
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18NwBOdx0d59O34HmG8yrGp7
   tutorials: 8
 - day: W1D4
-  category: Climate Data
+  category: Past and Present Climate
   name: Paleoclimate
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18M30SfesAh0AHGKIIYbjQhl
   tutorials: 9
 - day: W1D5
   category: Climate Future
-  name: Climate Modeling
+  name: Introduction to Climate Modeling
   playlist: https://youtube.com/playlist?list=PLkBQOLLbi18OQtfBlfe_Py6AubwL8FAs1
   tutorials: 8
 - day: W2D1
