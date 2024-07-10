@@ -1,0 +1,1549 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remote Sensing &#8212; Climatematch Academy: Computational Tools for Climate Science</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/W1D3_RemoteSensing/chapter_title';</script>
+    <link rel="shortcut icon" href="../../_static/cma-logo-square-4xp.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Intro" href="student/W1D3_Intro.html" />
+    <link rel="prev" title="Day Summary" href="../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_DaySummary.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="docsearch:language" content="en">
+  </head>
+  
+  
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="180" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__primary" id="__primary">
+  <label class="overlay overlay-primary" for="__primary"></label>
+
+  
+  <input type="checkbox" class="sidebar-toggle" name="__secondary" id="__secondary">
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+      
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+  </div>
+
+  
+  <nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+      <span class="fa-solid fa-bars"></span>
+  </label>
+  <div id="navbar-start">
+    
+    
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    
+  </div>
+
+  
+  <div class="col-lg-9 navbar-header-items">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Schedule/schedule_intro.html">
+                        Schedule
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../TechnicalHelp/tech_intro.html">
+                        Technical Help
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../TechnicalHelp/Links_Policy.html">
+                        Quick links and policies
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../prereqs/ClimateScience.html">
+                        Prerequisites and preparatory materials for Computational Tools for Climate Science
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W1D1_ClimateSystemOverview/chapter_title.html">
+                        Climate System Overview (W1D1)
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Projects_GoodResearchPractices/chapter_title.html">
+                        Good Research Practices (Projects)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W1D2_Ocean-AtmosphereReanalysis/chapter_title.html">
+                        Ocean-Atmosphere Reanalysis (W1D2)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Remote Sensing (W1D3)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W1D4_Paleoclimate/chapter_title.html">
+                        Paleoclimate (W1D4)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W1D5_IntroductiontoClimateModeling/chapter_title.html">
+                        Introduction to Climate Modeling (W1D5)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W2D1_AnEnsembleofFutures/chapter_title.html">
+                        An Ensemble of Futures (W2D1)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W2D2_TheSocioeconomicsofClimateChange/chapter_title.html">
+                        The Socioeconomics of Climate Change (W2D2)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W2D3_ExtremesandVariability/chapter_title.html">
+                        Extremes and Variability (W2D3)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W2D4_AIandClimateChange/chapter_title.html">
+                        AI and Climate Change (W2D4)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/README.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/keynote.html">
+                        Project Day keynote (W2D5)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/docs/project_guidance.html">
+                        Daily guide for projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/docs/datasets_overview.html">
+                        Project materials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/docs/continuing_your_project_after_the_course.html">
+                        Continuing your project after the course
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/docs/past_projects_overview.html">
+                        Past projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/README.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/mentorship_program.html">
+                        Mentorship Program
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/impact_talks.html">
+                        Impact Talks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/mentors.html">
+                        Mentor Meetings
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/career_features.html">
+                        Career Features
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/career_panels.html">
+                        Career Panels
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+        <div class="navbar-end-item navbar-persistent--container">
+          
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+        </div>
+      
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
+    <div class="navbar-persistent--mobile">
+<button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-toggle="tooltip">
+  <i class="fa-solid fa-magnifying-glass"></i>
+</button>
+    </div>
+  
+
+  
+
+</div>
+  </nav>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+      
+      <div class="navbar-center-item">
+        <nav class="navbar-nav">
+    <p class="sidebar-header-items__title" role="heading" aria-level="1" aria-label="Site Navigation">
+        Site Navigation
+    </p>
+    <ul id="navbar-main-elements" class="navbar-nav">
+        
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Schedule/schedule_intro.html">
+                        Schedule
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../TechnicalHelp/tech_intro.html">
+                        Technical Help
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../TechnicalHelp/Links_Policy.html">
+                        Quick links and policies
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../prereqs/ClimateScience.html">
+                        Prerequisites and preparatory materials for Computational Tools for Climate Science
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W1D1_ClimateSystemOverview/chapter_title.html">
+                        Climate System Overview (W1D1)
+                      </a>
+                    </li>
+                
+            <div class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu">
+                    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../Projects_GoodResearchPractices/chapter_title.html">
+                        Good Research Practices (Projects)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W1D2_Ocean-AtmosphereReanalysis/chapter_title.html">
+                        Ocean-Atmosphere Reanalysis (W1D2)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="#">
+                        Remote Sensing (W1D3)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W1D4_Paleoclimate/chapter_title.html">
+                        Paleoclimate (W1D4)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W1D5_IntroductiontoClimateModeling/chapter_title.html">
+                        Introduction to Climate Modeling (W1D5)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W2D1_AnEnsembleofFutures/chapter_title.html">
+                        An Ensemble of Futures (W2D1)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W2D2_TheSocioeconomicsofClimateChange/chapter_title.html">
+                        The Socioeconomics of Climate Change (W2D2)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W2D3_ExtremesandVariability/chapter_title.html">
+                        Extremes and Variability (W2D3)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../W2D4_AIandClimateChange/chapter_title.html">
+                        AI and Climate Change (W2D4)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/README.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/keynote.html">
+                        Project Day keynote (W2D5)
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/docs/project_guidance.html">
+                        Daily guide for projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/docs/datasets_overview.html">
+                        Project materials
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/docs/continuing_your_project_after_the_course.html">
+                        Continuing your project after the course
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/docs/past_projects_overview.html">
+                        Past projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/README.html">
+                        Introduction
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/mentorship_program.html">
+                        Mentorship Program
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/impact_talks.html">
+                        Impact Talks
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/mentors.html">
+                        Mentor Meetings
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/career_features.html">
+                        Career Features
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects/professional_development/career_panels.html">
+                        Career Panels
+                      </a>
+                    </li>
+                
+                </div>
+            </div>
+            
+    </ul>
+</nav>
+      </div>
+      
+      </div>
+    
+
+    
+    
+    <div class="sidebar-header-items__end">
+      
+      <div class="navbar-end-item">
+        <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+</button>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+      </ul>
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
+  <div class="sidebar-start-items sidebar-primary__section">
+    <div class="sidebar-start-items__item">
+  
+
+
+<a class="navbar-brand logo" href="../intro.html">
+
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-light" alt="Logo image">
+    <img src="../../_static/cma-logo-square-4xp.png" class="logo__image only-dark" alt="Logo image">
+  
+  
+</a>
+    </div>
+    <div class="sidebar-start-items__item">
+<form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+    </div>
+    <div class="sidebar-start-items__item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Schedule/schedule_intro.html">Schedule</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Schedule/daily_schedules.html">General Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Schedule/shared_calendars.html">Shared calendars</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../TechnicalHelp/tech_intro.html">Technical Help</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../TechnicalHelp/Jupyterbook.html">Using jupyterbook</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../TechnicalHelp/Tutorial_colab.html">Using Google Colab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../TechnicalHelp/Tutorial_kaggle.html">Using Kaggle</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../TechnicalHelp/Discord.html">Using discord</a></li>
+</ul>
+</li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../TechnicalHelp/Links_Policy.html">Quick links and policies</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../prereqs/ClimateScience.html">Prerequisites and preparatory materials for Computational Tools for Climate Science</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../W1D1_ClimateSystemOverview/chapter_title.html">Climate System Overview (W1D1)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">Tutorial 2: Selection, Interpolation and Slicing</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_Tutorial3.html">Tutorial 3: Opening and Plotting netCDF Data</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_Tutorial4.html">Tutorial 4: Arithmetic and Aggregation Methods</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html">Tutorial 5: Xarray Data Analysis and Climatology</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_Tutorial6.html">Tutorial 6: Compute and Plot Temperature Anomalies</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_Tutorial7.html">Tutorial 7: Other Computational Tools in Xarray</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_Tutorial8.html">Tutorial 8: Masking with One Condition</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_Tutorial9.html">Bonus Tutorial 9: Masking with Multiple Conditions</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D1_ClimateSystemOverview/student/W1D1_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Projects_GoodResearchPractices/chapter_title.html">Good Research Practices (Projects)</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Projects_GoodResearchPractices/student/Projects_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Projects_GoodResearchPractices/student/Projects_Tutorial1.html">Tutorial 1: Finding a Phenomenon and Asking a Question About It</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Projects_GoodResearchPractices/student/Projects_Tutorial2.html">Tutorial 2: Doing a Literature Review</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Projects_GoodResearchPractices/student/Projects_Tutorial3.html">Tutorial 3: Identifying the Basic Ingredients</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Projects_GoodResearchPractices/student/Projects_Tutorial4.html">Tutorial 4: Formulating a Hypothesis</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Projects_GoodResearchPractices/student/Projects_Tutorial5.html">Tutorial 5: Drafting the Analysis</a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Projects_GoodResearchPractices/student/Projects_Tutorial6.html">Tutorial 6: Implementing the Analysis</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Projects_GoodResearchPractices/student/Projects_Tutorial7.html">Tutorial 7: Interpreting the Results</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Projects_GoodResearchPractices/student/Projects_Tutorial8.html">Tutorial 8: Communicating Your Conclusions</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../Projects_GoodResearchPractices/student/Projects_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Projects_GoodResearchPractices/student/Projects_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Past and Present Climate</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../W1D2_Ocean-AtmosphereReanalysis/chapter_title.html">Ocean-Atmosphere Reanalysis (W1D2)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_Tutorial1.html">Tutorial 1: Calculating ENSO with Xarray</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_Tutorial2.html">Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_Tutorial3.html">Tutorial 3: Atmospheric  Circulation</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_Tutorial4.html">Tutorial 4: Oceanic Wind-Driven Circulation</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_Tutorial5.html">Tutorial 5: Thermohaline Circulation</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_Tutorial6.html">Bonus Tutorial 6: Ocean Heat Content</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D2_Ocean-AtmosphereReanalysis/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Remote Sensing (W1D3)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="student/W1D3_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="student/W1D3_Tutorial1.html">Tutorial 1: Introduction to Remote Sensing</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="student/W1D3_Tutorial2.html">Tutorial 2: Exploring Satellite Climate Data Records</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="student/W1D3_Tutorial3.html">Tutorial 3: Visualizing Satellite CDR - Global Vegetation Mapping</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="student/W1D3_Tutorial4.html">Tutorial 4: Understanding Climatology Through Precipitation Data</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="student/W1D3_Tutorial5.html">Tutorial 5: Calculating Anomalies Using Precipitation Data</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="student/W1D3_Tutorial6.html">Tutorial 6: Large Scale Climate Variability - ENSO</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="student/W1D3_Tutorial7.html">Tutorial 7: Impact of Climate Variability - Precipitation</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="student/W1D3_Tutorial8.html">Bonus Tutorial 8: Comparing Satellite Products With In Situ Data</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="student/W1D3_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="student/W1D3_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../W1D4_Paleoclimate/chapter_title.html">Paleoclimate (W1D4)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_Tutorial1.html">Tutorial 1: Paleoclimate Proxies</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_Tutorial2.html">Tutorial 2: Reconstructing Past Changes in Ocean Climate</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_Tutorial3.html">Tutorial 3: Reconstructing Past Changes in Terrestrial Climate</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_Tutorial4.html">Tutorial 4: Reconstructing Past Changes in Atmospheric Climate</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_Tutorial5.html">Tutorial 5: Paleoclimate Data Analysis Tools</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_Tutorial6.html">Tutorial 6: Spectral Analysis of Paleoclimate Data</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_Tutorial7.html">Bonus Tutorial 7: Assessing Climate Forcings</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_Tutorial8.html">Bonus Tutorial 8: Paleoclimate Models</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_Tutorial9.html">Tutorial 9: Paleoclimate Reanalysis Products</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D4_Paleoclimate/student/W1D4_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Future</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/chapter_title.html">Introduction to Climate Modeling (W1D5)</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/student/W1D5_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/student/W1D5_Tutorial1.html">Tutorial 1: Radiation and the Greenhouse Effect</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/student/W1D5_Tutorial2.html">Tutorial 2: Energy Balance</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/student/W1D5_Tutorial3.html">Tutorial 3: A Zero-Dimensional Energy Balance Model</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/student/W1D5_Tutorial4.html">Bonus Tutorial 4: Climate Feedbacks</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/student/W1D5_Tutorial5.html">Bonus Tutorial 5: Vertical Structure of the Atmosphere</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/student/W1D5_Tutorial6.html">Bonus Tutorial 6: Radiative-Convective Equilibrium</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/student/W1D5_Tutorial7.html">Tutorial 7: Introduction to CMIP6 Earth System Models</a></li>
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/student/W1D5_Tutorial8.html">Tutorial 8: Time Series, Global Averages, and Scenario Comparison</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/student/W1D5_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W1D5_IntroductiontoClimateModeling/student/W1D5_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../W2D1_AnEnsembleofFutures/chapter_title.html">An Ensemble of Futures (W2D1)</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../W2D1_AnEnsembleofFutures/student/W2D1_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W2D1_AnEnsembleofFutures/student/W2D1_Tutorial1.html">Tutorial 1: Internal Climate Variability and Single-model Ensembles</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D1_AnEnsembleofFutures/student/W2D1_Tutorial2.html">Tutorial 2: Future climate scenarios &amp; Multi-model Ensembles</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D1_AnEnsembleofFutures/student/W2D1_Tutorial3.html">Tutorial 3: Quantifying Uncertainty in Projections</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D1_AnEnsembleofFutures/student/W2D1_Tutorial4.html">Tutorial 4: Synthesising &amp; Interpreting Diverse Data Sources</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D1_AnEnsembleofFutures/student/W2D1_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W2D1_AnEnsembleofFutures/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W2D1_AnEnsembleofFutures/student/W2D1_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../W2D2_TheSocioeconomicsofClimateChange/chapter_title.html">The Socioeconomics of Climate Change (W2D2)</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial1.html">Tutorial 1: Orienting inside a “Climate Solution” Simulator</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial2.html">Tutorial 2: Fossil Fuel Emissions, Growth, and Damage</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial3.html">Tutorial 3: The Temporal Dimension of Actions</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial4.html">Tutorial 4: The Shared Socio-economic Pathways</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial5.html">Tutorial 5: Mapping the Narrative Space</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial6.html">Bonus Tutorial 6: Create your Socio-economic Scenario</a></li>
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W2D2_TheSocioeconomicsofClimateChange/further_reading.html"><strong>Tutorial 2 Further Reading</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Response</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../W2D3_ExtremesandVariability/chapter_title.html">Extremes and Variability (W2D3)</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/student/W2D3_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/student/W2D3_Tutorial1.html">Tutorial 1: Distributions</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/student/W2D3_Tutorial2.html">Tutorial 2: What is an Extreme Event? Empirical Return Levels</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/student/W2D3_Tutorial3.html">Tutorial 3: Extreme Value Analysis - the GEV Distribution</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/student/W2D3_Tutorial4.html">Tutorial 4: Return Levels Using Normal and GEV Distributions</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/student/W2D3_Tutorial5.html">Tutorial 5: Non-stationarity in Historical Records</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/student/W2D3_Tutorial6.html">Tutorial 6: Scenario-dependence of Future Changes in Extremes</a></li>
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/student/W2D3_Tutorial7.html">Bonus Tutorial 7: Non-Stationarity in the EVT-framework</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/student/W2D3_Tutorial8.html">Bonus Tutorial 8: Thresholds</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/student/W2D3_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W2D3_ExtremesandVariability/student/W2D3_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../W2D4_AIandClimateChange/chapter_title.html">AI and Climate Change (W2D4)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../W2D4_AIandClimateChange/student/W2D4_Intro.html">Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W2D4_AIandClimateChange/student/W2D4_Tutorial1.html">Tutorial 1:  ClimateBench Dataset and How Machine Learning Can Help</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D4_AIandClimateChange/student/W2D4_Tutorial2.html">Tutorial 2:  Building and Training Random Forest Models</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D4_AIandClimateChange/student/W2D4_Tutorial3.html">Tutorial 3:  Testing Model Generalization</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D4_AIandClimateChange/student/W2D4_Tutorial4.html">Tutorial 4: Testing Spatial Generalization</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D4_AIandClimateChange/student/W2D4_Tutorial5.html">Tutorial 5:  Testing generalization to new scenarios</a></li>
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D4_AIandClimateChange/student/W2D4_Tutorial6.html">Tutorial 6: Exploring other applications</a></li>
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../W2D4_AIandClimateChange/student/W2D4_Outro.html">Outro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W2D4_AIandClimateChange/further_reading.html">Suggested Further Reading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../W2D4_AIandClimateChange/student/W2D4_DaySummary.html">Day Summary</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Booklet</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../projects/README.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/keynote.html">Project Day keynote (W2D5)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/docs/project_guidance.html">Daily guide for projects</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/docs/datasets_overview.html">Project materials</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/project-notebooks/Arctic_sea_ice_change_2024.html">Arctic Sea Ice Change</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../projects/project-notebooks/Heatwaves_2024.html">Heatwaves</a></li>
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../projects/project-notebooks/Ocean_acidification_2024.html">Ocean Acidification</a></li>
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="../../projects/project-notebooks/Precipitation_variability_extreme_events_2024.html">Precipitation Variability and Extreme Events</a></li>
+
+
+
+
+
+
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/docs/continuing_your_project_after_the_course.html">Continuing your project after the course</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../projects/docs/past_projects_overview.html">Past projects</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/past-projects/sea_level_rise.html">Sea Level Rise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/past-projects/ocean_acidification.html">Ocean Acidification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/past-projects/ENSO.html">The Impact of ENSO on Precipitation and Temperature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/past-projects/precipitation.html">Regional Precipitation Variability and Extreme events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/past-projects/heatwaves.html">Heatwaves: Assessing the Dynamic Interactions of the Atmosphere and Land</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/past-projects/wildfires.html">Monitoring and Mapping Wildfires Using Satellite Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../projects/past-projects/albedo.html">Changes in Land Cover: Albedo and Carbon Sequestration</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Professional Development</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../projects/professional_development/README.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/professional_development/mentorship_program.html">Professional developemnt</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../../projects/professional_development/impact_talks.html">Impact Talks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/professional_development/mentors.html">Mentor Meetings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/professional_development/career_features.html">Career Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../projects/professional_development/career_panels.html">Career Panels</a></li>
+</ul>
+
+    </div>
+</nav>
+    </div>
+  </div>
+  
+
+  
+  <div class="sidebar-end-items sidebar-primary__section">
+    <div class="sidebar-end-items__item">
+    </div>
+  </div>
+
+  
+  <div id="rtd-footer-container"></div>
+
+      </div>
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+        <div class="bd-content">
+          <div class="bd-article-container">
+            
+            <div class="bd-header-article">
+                
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        <label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" data-toggle="tooltip" data-placement="right" title="Toggle primary sidebar">
+            <span class="fa-solid fa-bars"></span>
+        </label>
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<div class="dropdown dropdown-repository-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="https://github.com/neuromatch/climate-course-content" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">repository</span>
+</a>
+</a>
+      
+      <li><a href="https://github.com/neuromatch/climate-course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/W1D3_RemoteSensing/chapter_title.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">open issue</span>
+</a>
+</a>
+      
+  </ul>
+</div>
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      <li><a href="../../_sources/tutorials/W1D3_RemoteSensing/chapter_title.md" target="_blank"
+   class="btn btn-sm dropdown-item"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</a>
+      
+      <li>
+<button onclick="printPdf(this)"
+  class="btn btn-sm dropdown-item"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</a>
+      
+  </ul>
+</div>
+
+    </div>
+</div>
+            </div>
+            
+            
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Remote Sensing</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+            <article class="bd-article" role="main">
+              
+  <div class="tex2jax_ignore mathjax_ignore section" id="remote-sensing">
+<h1>Remote Sensing<a class="headerlink" href="#remote-sensing" title="Permalink to this heading">#</a></h1>
+<div class="full-width docutils">
+<a class="reference internal image-reference" href="../../_images/W1D3_RemoteSensing-Sloane_Garelick.svg"><img alt="art relevant to chapter contents" src="../../_images/W1D3_RemoteSensing-Sloane_Garelick.svg" width="100%" /></a>
+</div>
+<p><em>Artwork by Sloane Garelick</em></p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tutorials/W1D3_RemoteSensing"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+            </article>
+            
+
+            
+            
+            <footer class="bd-footer-article">
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+  <a class='left-prev' id="prev-link" href="../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_DaySummary.html" title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+          <p class="prev-next-subtitle">previous</p>
+          <p class="prev-next-title">Day Summary</p>
+      </div>
+  </a>
+  <a class='right-next' id="next-link" href="student/W1D3_Intro.html" title="next page">
+  <div class="prev-next-info">
+      <p class="prev-next-subtitle">next</p>
+      <p class="prev-next-title">Intro</p>
+  </div>
+  <i class="fa-solid fa-angle-right"></i>
+  </a>
+</div>
+            </footer>
+            
+          </div>
+          
+          
+          
+          
+        </div>
+        <footer class="bd-footer-content">
+          <div class="bd-footer-content__inner">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Climatematch
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+Last updated on None.<br>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a>
+<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://camo.githubusercontent.com/9b9ea65d95c9ef878afa1987df65731d47681336/68747470733a2f2f696d672e736869656c64732e696f2f707970692f6c2f736561626f726e2e737667"></a>
+The contents of this repository are shared under the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+Software elements are additionally licensed under the <a href="https://opensource.org/licenses/BSD-3-Clause">BSD (3-Clause) License</a>.
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </div>
+        </footer>
+        
+
+      </main>
+    </div>
+  </div>
+
+  
+    
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+
+  </body>
+</html>
