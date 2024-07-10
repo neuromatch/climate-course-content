@@ -142,7 +142,7 @@ runs:
         pip install cfgrib
         python -m cfgrib selfcheck
         pip install requests aiohttp
-        pip install jupyter-book==0.14.0 ghp-import cftime pyleoclim importlib-metadata==4.13.0
+        pip install jupyter-book==0.14.0 ghp-import cftime importlib-metadata==4.13.0
       shell: bash -l {0}
 
     - name: Build climlab from source

@@ -47,5 +47,5 @@ dicelib @ https://github.com/mptouzel/PyDICE/archive/master.zip
 cdsapi
 texttable
 lipd
-pyleoclim
+pyleoclim==0.14.0
 # cfgrib
