@@ -1,12 +1,12 @@
 # ClimateMatch Academy (CMA) Computational Climate Science syllabus
 
-*July 11-29, 2023*
+*July 15-26, 2024*
 
 Please check out [expected prerequisites here](https://github.com/NeuromatchAcademy/precourse/blob/main/prereqs/ComputationalNeuroscience.md)!
 
-**The content should primarily be accessed from our ebook: https://compclimate.neuromatch.io/ [under continuous development]**
+**The content should primarily be accessed from our ebook: https://comptools.climatematch.io [under continuous development]**
 
-**Schedule for 2023: https://github.com/NeuromatchAcademy/course-climatema/blob/main/tutorials/Schedule/daily_schedules.md**
+**Schedule for 2024: https://github.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/daily_schedules.md and https://comptools.climatematch.io/tutorials/Schedule/daily_schedules.html**
 
 ---
 
