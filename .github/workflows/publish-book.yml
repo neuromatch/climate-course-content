@@ -36,7 +36,7 @@ jobs:
           force_env_update: 'false'
       
       - name: Cache Jupyter Build Artifacts
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ./book/_build/html/
