@@ -2,7 +2,7 @@
 
 *July 15-26, 2024*
 
-Please check out [expected prerequisites here](https://github.com/NeuromatchAcademy/precourse/blob/main/prereqs/ComputationalNeuroscience.md)!
+Please check out [expected prerequisites here](https://github.com/NeuromatchAcademy/precourse/blob/main/prereqs/ClimateScience.md)!
 
 **The content should primarily be accessed from our ebook: https://comptools.climatematch.io [under continuous development]**
 
