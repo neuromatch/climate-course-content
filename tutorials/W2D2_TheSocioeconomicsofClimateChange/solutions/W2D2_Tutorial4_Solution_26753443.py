@@ -4,7 +4,7 @@ vars = ['Emissions|Kyoto Gases', 'Land Cover|Forest']
 # create new names for structured data series and plot labels
 val_name = ['Emissions\n(Mt CO$_2$/yr)','Land covered by\nforest (million ha)']
 # choose scenarios of interest and a color for plotting
-scenarios = ['SSP1-26', 'SSP5-Baseline']
+scenarios = ['SSP1-Baseline', 'SSP5-Baseline']
 colors = ['darkblue','darkorange']
 
 
