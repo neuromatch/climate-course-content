@@ -5,4 +5,4 @@ Scholars will benefit from the mentorship of experienced researchers who will pr
 Additionally, scholars will have the chance to present their research to seasoned experts, gaining valuable feedback and engaging with a broader scientific community. 
 This program also includes the opportunity to showcase their projects at the Academies Open Ceremony, inspiring future scholars and demonstrating the significance of their research.
 
-Please refer to [this link](https://neuromatch.io/impact-scholars/) for a detailed outline and description of the Impact Scholars Program.
+Please refer to [this link](https://impact-scholars.neuromatch.io/impact-scholars/intro.html) for a detailed outline and description of the Impact Scholars Program.
