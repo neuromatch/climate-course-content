@@ -30,7 +30,8 @@
         "code",
         "test",
         "bug",
-        "data"
+        "data",
+        "review"
       ]
     }
   ],
