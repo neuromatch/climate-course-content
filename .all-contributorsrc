@@ -19,6 +19,19 @@
         "review",
         "code"
       ]
+    },
+    {
+      "login": "nsea-log",
+      "name": "Paul",
+      "avatar_url": "https://avatars.githubusercontent.com/u/156831322?v=4",
+      "profile": "https://github.com/nsea-log",
+      "contributions": [
+        "content",
+        "code",
+        "test",
+        "bug",
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
