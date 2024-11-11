@@ -1,8 +1,8 @@
 import numpy as np
-import SDFC as sd
 import xarray as xr
 import matplotlib.pyplot as plt
 import texttable as tt
+import sdfc_classes as sd
 
 import warnings
 warnings.filterwarnings('ignore')
