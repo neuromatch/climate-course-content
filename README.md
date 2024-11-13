@@ -3,13 +3,13 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-*July 15-26, 2024*
+*July 14-25, 2025*
 
 Please check out [expected prerequisites here](https://github.com/NeuromatchAcademy/precourse/blob/main/prereqs/ClimateScience.md)!
 
 **The content should primarily be accessed from our ebook: https://comptools.climatematch.io [under continuous development]**
 
-**Schedule for 2024: https://github.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/daily_schedules.md and https://comptools.climatematch.io/tutorials/Schedule/daily_schedules.html**
+**Schedule: https://github.com/neuromatch/climate-course-content/blob/main/tutorials/Schedule/daily_schedules.md and https://comptools.climatematch.io/tutorials/Schedule/daily_schedules.html**
 
 ---
 
