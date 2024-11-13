@@ -1,18 +1,14 @@
 # General Schedule
 
 
-## 2024 course will run July 15-26, 2024
+## 2025 course will run July 14-25, 2025
 
 
 ## Course Overview
 
-The course will begin with Opening Ceremonies on Sunday, July 7th
-
-* 8:30 am UTC
-* 5:30 pm UTC
-
 
 ## Course Schedule for Timezones 2 & 5
+### Update to 2025 course schedule coming soon! Below in the 2024 course schedule. 
 
 <table cellspacing="0" cellpadding="0">
   <tr>
