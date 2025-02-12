@@ -839,15 +839,15 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imports</span>
 
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">interpolate</span>
-<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">pooch</span>
-<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">interpolate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
 </pre></div>
 </div>
 </div>
@@ -862,7 +862,7 @@ const thebe_selector_output = ".output, .cell_output"
 </summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Figure Settings</span>
-<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>  <span class="c1"># interactive display</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">widgets</span>  <span class="c1"># interactive display</span>
 
 <span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span>
@@ -886,7 +886,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># @title Helper functions</span>
 
 
-<span class="k">def</span> <span class="nf">pooch_load</span><span class="p">(</span><span class="n">filelocation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">processor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">pooch_load</span><span class="p">(</span><span class="n">filelocation</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">filename</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">processor</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="n">shared_location</span> <span class="o">=</span> <span class="s2">"/home/jovyan/shared/Data/tutorials/W2D1_FutureClimate-IPCCIPhysicalBasis"</span>  <span class="c1"># this is different for each day</span>
     <span class="n">user_temp_cache</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">gettempdir</span><span class="p">()</span>
 
@@ -1269,7 +1269,7 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/d9a8579722850fcf30fc94b12799f31d2e51f8fc4f5355bab7d1ba479e994e56.png" src="../../../_images/d9a8579722850fcf30fc94b12799f31d2e51f8fc4f5355bab7d1ba479e994e56.png">
+<img alt="../../../_images/80821dc759b94e3ee83cfcc2c40fc759974721a055f380707bf310086bbacc36.png" src="../../../_images/80821dc759b94e3ee83cfcc2c40fc759974721a055f380707bf310086bbacc36.png">
 </img></div>
 </div>
 <p>Now that we’ve taken a look at the two time series, let’s make a scatter plot between them and fit a linear regression model through the data.</p>
@@ -1279,7 +1279,7 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 <span class="c1"># and fit a linear regression model through the data</span>
 
 
-<span class="k">def</span> <span class="nf">age_model_interp</span><span class="p">(</span><span class="n">CO2_age</span><span class="p">,</span> <span class="n">CO2</span><span class="p">,</span> <span class="n">SST_age</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">age_model_interp</span><span class="p">(</span><span class="n">CO2_age</span><span class="p">,</span> <span class="n">CO2</span><span class="p">,</span> <span class="n">SST_age</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    This helper function linearly interpolates CO2 data, which</span>
 <span class="sd">    have a very high temporal resolution, to temperature data,</span>
@@ -1328,7 +1328,7 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 with a p-value of: 3.37e-47
 </pre></div>
 </div>
-<img alt="../../../_images/c582e7a969a01a7eed92f80a24b124767dc5c11c4cfb4db5273250334d712432.png" src="../../../_images/c582e7a969a01a7eed92f80a24b124767dc5c11c4cfb4db5273250334d712432.png">
+<img alt="../../../_images/1d48dec5d7611d976e6102507e52c847d492fcb8d95fcb213fa390ab3d8d983e.png" src="../../../_images/1d48dec5d7611d976e6102507e52c847d492fcb8d95fcb213fa390ab3d8d983e.png">
 </img></div>
 </div>
 </div>
