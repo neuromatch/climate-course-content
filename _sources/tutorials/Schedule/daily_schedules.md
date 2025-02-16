@@ -1,18 +1,17 @@
 # General Schedule
 
 
-## 2025 course will run July 14-25, 2025
+### [For updated annual course dates please see our website.](https://neuromatch.io/courses/)
 
 
 ## Course Overview
 
 
-## Course Schedule for Timezones 2 & 5
-### Update to 2025 course schedule coming soon! Below in the 2024 course schedule. 
+## Course Schedule 
 
 <table cellspacing="0" cellpadding="0">
   <tr>
-   <td colspan="6" bgcolor="#B0C7DC" align="center" ><strong><font color="black" size="5" > Course Schedule - Timezones 2 & 5 </font></strong>
+   <td colspan="6" bgcolor="#B0C7DC" align="center" ><strong><font color="black" size="5" > Course Schedule </font></strong>
    </td>
   </tr>
   <tr style="color: white; font-weight: bold; margin-top: 1em;">
@@ -89,7 +88,7 @@
    <td bgcolor="#F9EEDA" >
    </td>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><font color="black" > Mentor Meeting </font>
+   <td bgcolor="#F9EEDA" 
    </td>
    <td bgcolor="#F9EEDA" >
    </td>
@@ -175,7 +174,7 @@
    </td>
    <td bgcolor="#F9EEDA">
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Mentor Meeting </font>
+   <td bgcolor="#F9EEDA" 
    </td>
    <td bgcolor="#F9EEDA" >
    </td>
@@ -184,7 +183,7 @@
   </tr>
 </table>
 
-
+<!--
 ## Course Schedule for Timezones 1, 3 & 4
 
 <table cellspacing="0" cellpadding="0">
@@ -372,16 +371,16 @@
   </tr>
 </table>
 
-
+-->
 
 ## Daily Schedule
 
-These schedules refer to the time spent working on the course curriculum (5 hours each day).
+#### See the [Time Slot Widget](https://neuromatchacademy.github.io/widgets/tz.html) for your full course schedule converted to your local time zone. 
 
 
-### Curriculum Schedule
+### General Schedule
 
-All days (except W1D1 and W2D5) will follow this schedule for course time:
+All days (except W1D1 and W2D5) will follow this schedule:
 
 
 <table>
@@ -404,19 +403,19 @@ All days (except W1D1 and W2D5) will follow this schedule for course time:
    </td>
   </tr>
   <tr>
-   <td>0:15-1:35
+   <td>0:15-1:45
    </td>
    <td>Tutorials I
    </td>
   </tr>
   <tr>
-   <td>1:35-2:35
+   <td>1:45-2:45
    </td>
    <td>Big break
    </td>
   </tr>
   <tr>
-   <td>2:35-4:15
+   <td>2:45-4:15
    </td>
    <td>Tutorials II
    </td>
@@ -430,7 +429,19 @@ All days (except W1D1 and W2D5) will follow this schedule for course time:
   <tr>
    <td>4:25-4:30
    </td>
-   <td>Reflections
+   <td>Reflections & Survey
+   </td>
+  </tr>
+  <tr>
+   <td>4:30-5:30
+   </td>
+   <td>Break
+   </td>
+  </tr>
+    <tr>
+   <td>5:30-8:30
+   </td>
+   <td>Project Time
    </td>
   </tr>
 </table>
@@ -441,24 +452,26 @@ All days (except W1D1 and W2D5) will follow this schedule for course time:
 
 W1D1: The synchronous coursework session starts at -0:30 with 30 minutes for pod introductions. Students should watch the keynote lecture beforehand.
 
-W2D5: Following a keynote lecture in its usual slot, 0:00-3:30 will be spent working on the group project. You can find more information about this day in the [Daily Guide for Projects](https://climatematchacademy.github.io/projects/docs/project_guidance.html#project-day-w2d2).
+W2D5: This day will be spent doing projects, you can see the full schedule in the [Daily Guide for Projects](https://climatematchacademy.github.io/projects/docs/project_guidance.html#project-day-w2d2). *There is still a keynote speaker that you should watch during the usual -0:30-0:00 time.* 
 
 
 ### Project Schedule
 
-In addition to curriculum time, each day will have 3 hours of project time. Check the [time slot widget](https://climatematchacademy.github.io/widgets/tz.html) to see when project time is scheduled for your slot.
+In addition to curriculum time, each day will have 3 hours of project time. 
 
 On W2D5 you will additionally be working on your group projects during the time usually allocated for tutorials.
+
+#### **Schedule Change for 2025:** For all time slots, projects will come *after* course work.
 
 
 ### Professional Development Schedule
 
 
-A series of professional development events (viewing and discussing four Impact Talks and two meetings with mentors) will take place during the 3-hour project time. Check the [time slot widget](https://climatematchacademy.github.io/widgets/tz.html) to see when project time is scheduled for your slot.
+A series of professional development events (viewing and discussing four Impact Talks) will take place during the 3-hour project time.
 
 
 * Impact talk and discussion will take place during the Project Sessions on W2D1.
-* Mentor meetings will happen on W1D3 and W2D3 (Wednesdays) during the Project Sessions. 
+* Any additional events will be announced closer to the course. 
 
 
 ### W2D5: Final Day of the Course
@@ -472,85 +485,53 @@ A series of professional development events (viewing and discussing four Impact 
    </td>
   </tr>
   <tr>
-   <td>-4:00-(-1:00)
-   </td>
-   <td>Projects (slots 1/3/4)
-   </td>
-  </tr>
-  <tr>
    <td>-0:30-0:00
    </td>
    <td>Keynote speaker
    </td>
   </tr>
   <tr>
-   <td>0:00-0:15*
+   <td>0:00-4:30
    </td>
-   <td>Pod discussion I
-   </td>
-  </tr>
-  <tr>
-   <td>0:15-1:35
-   </td>
-   <td>Tutorials I
+   <td>Project Day! 
    </td>
   </tr>
   <tr>
-   <td>1:35-2:35
+   <td>4:30-5:30
    </td>
-   <td>Big break
-   </td>
-  </tr>
-  <tr>
-   <td>2:35-4:15
-   </td>
-   <td>Tutorials II
+   <td>Break
    </td>
   </tr>
   <tr>
-   <td>4:15-4:25
+   <td>5:30-6:00
    </td>
-   <td>Pod discussion II
-   </td>
-  </tr>
-  <tr>
-   <td>4:25-4:30
-   </td>
-   <td>Reflections
+   <td>Post Course Survey & Feedback 
    </td>
   </tr>
   <tr>
-   <td>4:30-4:45*
+   <td>6:00-7:00
    </td>
-   <td>Short break
-   </td>
-  </tr>
-  <tr>
-   <td>4:45-5:15*
-   </td>
-   <td>Course feedback survey
+   <td>Project presentations
    </td>
   </tr>
   <tr>
-   <td>5:15-6:15*
-   </td>
-   <td>Project presentations (all slots)
-   </td>
-  </tr>
-  <tr>
-   <td>6:15-6:30*
+   <td>7:00-7:30
    </td>
    <td>Pod farewell
+   </td>
+  </tr>
+  <tr>
+   <td>7:30-8:30
+   </td>
+   <td>Closing Ceremony/Graduation
    </td>
   </tr>
 </table>
 
 
-*Note that these events take place after the normal coursework time for slots 1/3/4.
+**Course feedback survey:** We will have a course completion survey for both students and teaching assistants. The link will be shared on discord. Please fill it out during this time! Completion of the final survey is required to access your certificate in the Portal. 
 
-Course feedback survey: We will have a course completion survey for both students and teaching assistants. The link will be shared on discord. Please fill it out during this time! Completion of the final survey is required to access your certificate in the Portal. 
+**Pod farewell:** This is just a chance for your pod to say goodbye to each other. No structure imposed here!
 
-Pod farewell: This is just a chance for your pod to say goodbye to each other. No structure imposed here!
-
-Closing Ceremony / Graduation: We will do this all together on Zoom. 
+**Closing Ceremony / Graduation:** We will do this all together on Zoom. 
 
