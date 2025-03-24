@@ -130,7 +130,7 @@
    </td>
   </tr>
   <tr>
-   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D1_new.png" >
+   <td bgcolor="#B0C7DC"  align="center" ><img width="130px" height="130px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D1_new.png" >
    </td>
    <td bgcolor="#E99668"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2_new.png" >
    </td>
