@@ -33,15 +33,15 @@
 <p style="color: white; font-weight: bold;">
 (5 hours)
    </td>
-   <td bgcolor="#E99668" align="center" ><strong><font color="black" > Climate System Overview </font></strong>
+   <td bgcolor="#E99668" align="center" ><font color="black" > Climate System Overview </font>
    </td>
-   <td bgcolor="#F5C690" align="center" ><strong><font color="black" > Ocean-Atmosphere Reanalysis </font></strong>
+   <td bgcolor="#F5C690" align="center" ><font color="black" > Ocean-Atmosphere Reanalysis </font>
    </td>
-   <td bgcolor="#F5C690" align="center" ><strong><font color="black" > Remote Sensing </font></strong>
+   <td bgcolor="#F5C690" align="center" ><font color="black" > Remote Sensing </font>
    </td>
-   <td bgcolor="#F5C690" align="center" ><strong><font color="black" > Paleoclimate </font></strong>
+   <td bgcolor="#F5C690" align="center" ><font color="black" > Paleoclimate </font>
    </td>
-   <td bgcolor="#B0C7DC" align="center" ><strong><font color="black" > Intro to Climate Modeling </font></strong>
+   <td bgcolor="#B0C7DC" align="center" ><font color="black" > Intro to Climate Modeling </font>
    </td>
   </tr>
   <tr></tr>
@@ -118,15 +118,15 @@
 <p style="color: white; font-weight: bold;">
 (5 hours)
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><strong><font color="black"> An Ensemble of Futures </font></strong>
+   <td bgcolor="#B0C7DC"  align="center" ><font color="black"> An Ensemble of Futures </font>
    </td>
-   <td bgcolor="#E99668"  align="center" ><strong><font color="black">  </font> Socioeconomics of Climate Change</strong>
+   <td bgcolor="#E99668"  align="center" ><font color="black">  Socioeconomics of Climate Change </font> 
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><strong><font color="black"> Extremes & Variability </font></strong>
+   <td bgcolor="#B0C7DC"  align="center" ><font color="black"> Extremes & Variability </font>
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><strong><font color="black"> </font> AI & Climate Change</strong>
+   <td bgcolor="#78BAB8"  align="center" ><font color="black"> AI & Climate Change </font> 
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><strong><font color="black"> Project Day </font></strong>
+   <td bgcolor="#78BAB8"  align="center" ><font color="black"> Project Day </font>
    </td>
   </tr>
   <tr>
