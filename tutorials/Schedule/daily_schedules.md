@@ -61,23 +61,23 @@
 <p style="color: white; font-weight: bold;">
 (3 hours)
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 1 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
 <font color="black"> Tutorials on Good Research Practices </font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 2 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
 <font color="black"> Guided data exploration </font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 3 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
 <font color="black">Literature review & question formulation</font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 4 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
 <font color="black"> Proposal writing, swaps & submission </font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 5 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
 <font color="black"> Drafting the analyses & task allocation </font>
    </td>
@@ -146,19 +146,19 @@
 <p style="color: white; font-weight: bold">
 (3 hours)
    </td>
-   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 6 </font></strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong>
 <p>
 <font color="black"> Implementation </font>
    </td>
-   <td bgcolor="#F9EEDA"  align="center" valign="top" ><strong><font color="black"> Session 7 </font></strong>
+   <td bgcolor="#F9EEDA"  align="center" valign="top" ><strong>
 <p>
 <font color="black"> Implementation </font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 8 </font></strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong>
 <p>
 <font color="black"> Result interpretation </font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 9 </font></strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" >
 <p>
 <font color="black"align="center" valign="top" > Results implementation </font>
    </td>
