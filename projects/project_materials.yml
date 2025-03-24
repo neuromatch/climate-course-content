@@ -7,8 +7,6 @@
 - file: projects/docs/datasets_overview.md
   title: Project materials
   sections:
-  - file: projects/project-notebooks/Arctic_sea_ice_change_2024.ipynb
-    title: Arctic Sea Ice Change
   - file: projects/project-notebooks/Heatwaves_2024.ipynb
     title: Heatwaves
   - file: projects/project-notebooks/Ocean_acidification_2024.ipynb
@@ -20,6 +18,8 @@
 - file: projects/docs/past_projects_overview.md
   title: Past projects
   sections:
+  - file: projects/project-notebooks/Arctic_sea_ice_change_2024.ipynb
+    title: Arctic Sea Ice Change
   - file: projects/past-projects/sea_level_rise.ipynb
     title: Sea Level Rise
   - file: projects/past-projects/ocean_acidification.ipynb
