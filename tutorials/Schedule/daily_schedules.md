@@ -120,9 +120,9 @@
    </td>
    <td bgcolor="#B0C7DC"  align="center" ><font color="black"> An Ensemble of Futures </font>
    </td>
-   <td bgcolor="#E99668"  align="center" ><font color="black">  Socioeconomics of Climate Change </font> 
+   <td bgcolor="#B0C7DC"  align="center" ><font color="black">  Socioeconomics of Climate Change </font> 
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><font color="black"> Extremes & Variability </font>
+   <td bgcolor="#78BAB8"  align="center" ><font color="black"> Extremes & Variability </font>
    </td>
    <td bgcolor="#78BAB8"  align="center" ><font color="black"> AI & Climate Change </font> 
    </td>
@@ -132,9 +132,9 @@
   <tr>
    <td bgcolor="#B0C7DC"  align="center" ><img width="130px" height="130px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D1_new.png" >
    </td>
-   <td bgcolor="#E99668"  align="center" ><img width="115px" height="115px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2_new.png" >
+   <td bgcolor="#B0C7DC"  align="center" ><img width="115px" height="115px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2_new.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><img width="135px" height="135px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D3_new.png" >
+   <td bgcolor="#78BAB8"  align="center" ><img width="135px" height="135px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D3_new.png" >
    </td>
    <td bgcolor="#78BAB8"  align="center" ><img width="125px" height="125px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D4_new.png" >
    </td>
