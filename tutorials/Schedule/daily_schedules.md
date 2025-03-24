@@ -63,7 +63,7 @@
    </td>
    <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 1 </font></strong>
 <p>
-<font color="black"> Tutorial on good research Practices </font>
+<font color="black"> Tutorials on Good Research Practices </font>
    </td>
    <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 2 </font></strong>
 <p>
