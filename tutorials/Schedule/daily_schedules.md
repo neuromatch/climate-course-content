@@ -49,7 +49,7 @@
    </td>
    <td bgcolor="#F5C690"  align="center" > <img width="115px" height="115px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D2_new.png" >
    </td>
-   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D3_new.png" />
+   <td bgcolor="#F5C690"  align="center" > <img width="120px" height="120px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D3_new.png" />
    </td>
    <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D4.png" >
    </td>
