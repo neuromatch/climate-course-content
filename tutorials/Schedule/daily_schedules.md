@@ -134,7 +134,7 @@
    </td>
    <td bgcolor="#E99668"  align="center" ><img width="115px" height="115px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2_new.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D3_new.png" >
+   <td bgcolor="#B0C7DC"  align="center" ><img width="135px" height="135px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D3_new.png" >
    </td>
    <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D4_new.png" >
    </td>
