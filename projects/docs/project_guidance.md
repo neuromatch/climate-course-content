@@ -60,31 +60,28 @@ During the pod introduction on W1D1, your Teaching Assistant will also inform yo
 
 **The goal of the day is to get familiar with the dataset that you will work on your project.** Each project team will choose one of the predefined templates according to their research interests. This project session is structured as follows:
 
-  **(2 hours)** Explore one of the provided climate datasets from your chosen project template by working through the ***GREEN*** questions. Use the **data loading notebook** to get started and try to understand what is being done and why. Parts of this code might be reusable or adaptable later. Be on the lookout for interesting hypotheses and remember to work as a team! Ask for help, assist others, and discuss your findings throughout the day.
+  **(2 hrs)** Explore one of the provided climate datasets from your chosen project template by working through the ***GREEN*** questions. Use the **data loading notebook** to get started and try to understand what is being done and why. Parts of this code might be reusable or adaptable later. Be on the lookout for interesting hypotheses and remember to work as a team! Ask for help, assist others, and discuss your findings throughout the day.
   - Apply the data wrangling skills you have acquired in tutorials thus far to generate the global maps suggested in **Q1**. Examine your plots. Do you notice any interesting patterns across the globe or over time?
   - Plot the global mean of the variable(s) over the time period suggested in **Q2**. Do you observe any trends? Does the result align with your expectations? Why? Why not?
   - As a group, agree on a geographical region to focus on and answer **Q3**. Depending on the variable you explore, choosing a continent, subcontinent, or small region might be appropriate choices. How does the result compare with your answer to **Q2**? Does this result align with your expectations? Why? Why not?
 
-  **(1 hour)** Brainstorm ideas for research questions.
+  **(1 hr)** Brainstorm ideas for research questions.
   - **(15 min)**  Start by discussing your initial project ideas! As a group, try to come up with one or a few questions of interest, either by yourselves or directly from the project template. Is there anything intriguing you noticed in the data? Are there any questions in the template you find particularly exciting?
  - **(30 min)** Start doing literature review using search engines like Google or Baidu. Look only at abstracts to select 2-3 promising ones. Revisit Step 2 of the tutorial on [good research practices](https://comptools.climatematch.io//tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial2.html) to review the literature more efficiently!
   - **(15 min)** Report to the whole group what papers you found and pool them together. Assign one paper per person to read/skim. 
 
 ---
-### W1D3: Literature Review and Finalized Reserach Questions
+### W1D3: Literature Review and Finalized Reserach Question
 
-**The goal of the day is to complete the literature review and formulate the research questions**. The literature review aims to find out what is known or has been hypothesized about your climate phenomenon, determine what aspects are currently the most debated, and to help you define some keywords that you will use in your project proposal tomorrow. You do not need to come up with a completely original question! Do, however, situate your research within the relevant literature, and try to get hints/suggestions from other papers.
+**The goal of the day is to complete the literature review and formulate the research question**. The literature review aims to find out what is known or has been hypothesized about your climate phenomenon, determine what aspects are currently the most debated, and to help you define some keywords that you will use in your project proposal tomorrow. You do not need to come up with a completely original question! Do, however, situate your research within the relevant literature, and try to get hints/suggestions from other papers.
 
-The following schedule is suggested:
-  - **(30 min)** Start doing literature review using search engines like Google or Baidu. Look only at abstracts to select 2-3 promising ones. Revisit Step 2 of the tutorial on [good research practices](https://comptools.climatematch.io//tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial2.html) to review the literature more efficiently!
-  - **(15 min)** Report to the whole group what papers you found and pool them together. Assign one paper per person to read/skim. 
-
-- **Everyone:**
-  The remaining 2 hours will be used to conclude the literature review and define the research questions: 
-  - **(1h)** On your own, read the paper that was assigned to you. Make notes in a common google doc shared with your group, and especially write down important keywords or concepts which you might use in your project proposal. If you are interested in a closed-access paper and are not connected to an .edu domain or a VPN, try to find full versions of papers on preprint servers like arXiv or bioRxiv. You could also ask your Teaching Assistants to get it for you (and they might in turn ask someone who has access to a university VPN). There might be other options too…
+Conclude the literature review and define the research questions: 
+  - **(1.5 hrs)** On your own, read the paper that was assigned to you on the previous day. Make notes in a common google doc shared with your group, and especially write down important keywords or concepts which you might use in your project proposal. If you are interested in a closed-access paper and are not connected to an .edu domain or a VPN, try to find full versions of papers on preprint servers like arXiv or bioRxiv. You could also ask your Teaching Assistants to get it for you (and they might in turn ask someone who has access to a university VPN). 
   - **(30 min)** Report back to the group. In ~5 minutes, try to tell them as much as you understand about the paper. Get into details, but do not just read whole sections from the paper out loud. Ask the other students questions about the papers they are presenting to understand them better.
   - **(30 min)** Discuss and synthesize information from the papers presented. Identify overlapping themes, concepts, or gaps in the research you have encountered. Based on these discussions, refine the initial questions the group came up with. Aim to narrow down to a primary research question that is specific, measurable, and relevant to the data and interests of the group.
   - **(30 min)** Formulate the research question and devise a hypothesis. Discuss as a group what they expect to discover or what predictions they can make based on their literature review and understanding of the data. This hypothesis should guide your project's direction and the methods you will need to employ.
+
+
 We encourage you to consider not only the physical science aspects of a climate phenomenon,  but also its socio-economic impact. We understand that specific interests and motivations will vary even within project groups and becoming part of the Climatematch community is as much about finding your role in the team as it is about pursuing a specific personal research interest. Please consider your teammates interests and ideas with as much respect as your own.
 
 
