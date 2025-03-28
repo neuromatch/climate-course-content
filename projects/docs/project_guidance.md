@@ -44,20 +44,16 @@ You will have 2-3 hours each day to work on projects. The goal during the **firs
 Embedded in the project time will also be a set of **professional development activities**: meetings with mentors as well as an Impact Talk activity of your choice from the following list: 1) climate justice, 2) equity in climate science, 3) open climate science, and 4) climate science communication. Please see the [professional development section](https://comptools.climatematch.io/projects/professional_development/README.html) of the book for more details.
 
 ---
-### POD INTRODUCTIONS W1D1
-*Monday, 15th July (PM) for everyone*
+### POD INTRODUCTIONS W1D1 and Impact Talk Prep
 
 On W1D1, you will meet your pod 30 minutes before the regular start of the tutorial time for introductory activities. Your pod’s Teaching Assistant will also tell you the project group you have been assigned to and its project topic. In some pods, the two groups will work on the same topic while others might be assigned two different topics depending on student interests. If you wish to work in the other group, discuss it with your Teaching Assistant. 
 
 During the pod introduction on W1D1, your Teaching Assistant will also inform you about your project group’s schedule for watching and discussing the Impact Talks in the second week (W2D1). One group will do this activity during the first hour of the project block, while the other will dedicate the last hour of the project block to it. The discussions following the Impact Talk will be facilitated by you - the students. Your Teaching Assistant will help you appoint yourselves to the leading roles during the pod introductions. You can read more about this activity [here](https://github.com/neuromatch/climate-course-content/blob/main/projects/professional_development/impact_talks.ipynb). 
 
 ---
-### SESSION 1 
+### W1D1
 
-*Monday, 15th July (PM) for groups in timezone slots 2 and 5*
-*Tuesday, 16th July (AM) for groups in timezone slots 1, 3, and 4*
-
-**The goal of the day is to learn about the process of research design**. To this end you will work through the tutorials on [good research practices](https://comptools.climatematch.io/tutorials/Projects_GoodResearchPractices/chapter_title.html) in your project groups. Your Project Teaching Assistant will come by at some point during this period to introduce themselves and facilitate your progression through the tutorial for 30-45 minutes. 
+**The goal of the day is to learn about the process of research design**. To this end you will work through the tutorials on [good research practices](https://comptools.climatematch.io/tutorials/Projects_GoodResearchPractices/chapter_title.html) in your project groups. Your Project Teaching Assistant will come by at some point during this period to introduce themselves and facilitate your progression through the tutorials for 30-45 minutes. 
 
 ---
 ### SESSION 2
