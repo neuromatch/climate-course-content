@@ -161,28 +161,24 @@ Use this session to wrap up your main findings:
 - Based on the findings and their implications, draft your conclusions.
 
 ---
-### W2D5: Project day and final presentations
+### W2D5: Project Day
 
-*Friday, 26th July (AM) for groups in timezone slots 2 and 5*
-*Friday, 26th July (PM) for groups in timezone slots 1, 3, and 4*
-
+#### Project Day
 **The goal of the day is to communicate your results in the final presentation.**
-Tie up loose ends and prepare a short slideshow about your project! Your pod’s Teaching Assistant will be around during the tutorial time block and your Project Teaching Assistant will be available during the project time block as usual
-“Project day” will be dedicated to preparing your presentation and rehearsing.  In this block you will have 4 hours:
+ ** (4.5 hours)** Tie up loose ends and prepare a short slideshow about your project! Your pod’s Teaching Assistant will be around during the tutorial time block and your Project Teaching Assistant will be available during the usual project time block. The Project Day period during the usual tutorial time will be dedicated to preparing your presentation and rehearsing. 
 
-- **(1h)** Finalize visuals: Complete any graphs, charts, or visual aids that will be used in your presentation.
-- **(2h)** Use this [presentation template](https://docs.google.com/presentation/d/1OuL12zI0_hEfS_C_t_Lhc4n7vFVnLp7omtWZoTWLqWg/edit#slide=id.p). Make a copy for your team to edit!  You can add your group name and project title to the bottom panel of non-title slides through **Slide -> Edit theme**.
+- **(1 hr)** Finalize visuals: Complete any graphs, charts, or visual aids that will be used in your presentation.
+- **(2 hrs)** Use this [presentation template](https://docs.google.com/presentation/d/1OuL12zI0_hEfS_C_t_Lhc4n7vFVnLp7omtWZoTWLqWg/edit#slide=id.p). Make a copy for your team to edit!  You can add your group name and project title to the bottom panel of non-title slides through **Slide -> Edit theme**.
   Consider these suggestions:
   - Content : The 1 minute - 1 slide rule might seem like an impossible limit. However, it is one of the most useful formats you can learn, often referred to as a “one minute elevator pitch”. 
   - Always have an introduction slide and a conclusion slide. If your group is relatively large (>=5 people), then someone should be assigned to each of the intro and conclusion slides. If your group is small, then the same person can present the intro + next slide, or conclusion slide + previous slide.
   - It's completely normal if your group doesn't achieve expected results. If this is true for your group, the main goal will be to explain the logic behind your project proposal. For instance, if you designed a project to compare climate datasets to analyze the impact of El Niño Southern Oscillation (ENSO) on global temperatures, but couldn't find the appropriate data to get answers, this is still valuable. In the case of this example, the takeaways from your project could potentially highlight the need for more temperature data from specific regions or time periods in order to assess ENSO variability. What got you excited about this particular project? What could your project evolve into if given more time and resources?
   Once your slides are finished, you should submit the file via [this Airtable link](https://airtable.com/shr7EAY3x39x8swZu).
-- **(1h)** The key to a good presentation is to practice it by yourself many times. It is no different from other performing arts (acting, playing a musical instrument etc), where rehearsals are crucial to a good performance.
-
+- **(1.5 hrs)** The key to a good presentation is to practice it by yourself many times. It is no different from other performing arts (acting, playing a musical instrument etc), where rehearsals are crucial to a good performance.
 
 
 ---
-### Final Presentations 
+### W2D5: Final Presentations 
 
 This is the time you present your project to other groups in your megapod.  You can invite your Project Teaching Assistant too, but they might not make it if they are busy. Groups will take turns to share their screens. Keep in mind that your presentation is meant to be told as a story, and everyone from your group should take their turn in telling a part of that story. Tell us about the different hypotheses you have had at different points and how you refined them using some of the tools you learned during the course.
 
@@ -195,7 +191,7 @@ This is the time you present your project to other groups in your megapod.  You 
 - **10-20 minutes of general discussion.** Use the following questions to guide the group discussion. Spend a few minutes on each question. It’s ok not to use all these questions, especially if you have your own questions to ask!
   - What was missing in the dataset that you would have really liked to have?
   - Does anyone plan to continue working on this project in the future? Climatematch Academy will be able to support selected groups with the computing resources required to take projects to the next level. Read more about the opportunity to become a Climatematch Impact Scholar [here](https://comptools.climatematch.io/projects/docs/continuing_your_project_after_the_course.html ).
-  - Which one of the 8 steps of good research practices was hardest and why?
+  - Which one of the steps of good research practices was hardest and why?
   - Based on your experience with the project, what project would you most like to do next? Make up your own, or pick from the other projects available in the course.
   - What surprised you the most about the process of working on a project? In what way was this project most different from other projects you have worked on in the past?
   - What technique did you learn in the course that you think you can immediately apply to your own project (if you are currently doing research)?
@@ -203,7 +199,7 @@ This is the time you present your project to other groups in your megapod.  You 
 ---
 #### Logistics
 
-Presentations will take place right after the block of the preparation on W2D5 (AM for Time Zones 2 & 5, PM for Time zones 1, 3 & 4).
+Presentations will take place right after the block of the preparation on W2D5.
 
 You will present to other groups (3-5 groups per room). An email will be sent with the zoom room of one of the pods and all groups will meet there for one hour. There is a hard cutoff at the one hour mark, and it will be the Teaching Assistants’ responsibility to ensure everyone gets a turn to present.
 
