@@ -60,15 +60,13 @@ During the pod introduction on W1D1, your Teaching Assistant will also inform yo
 
 **The goal of the day is to get familiar with the dataset that you will work on your project.** Each project team will choose one of the predefined templates according to their research interests. This project session is structured as follows:
 
-  **(2h)** Explore one of the provided climate datasets from your chosen project template by working through the ***GREEN*** questions. Use the **data loading notebook** to get started and try to understand what is being done and why. Parts of this code might be reusable or adaptable later. Be on the lookout for interesting hypotheses and remember to work as a team! Ask for help, assist others, and discuss your findings throughout the day.
+  **(2.5 hours)** Explore one of the provided climate datasets from your chosen project template by working through the ***GREEN*** questions. Use the **data loading notebook** to get started and try to understand what is being done and why. Parts of this code might be reusable or adaptable later. Be on the lookout for interesting hypotheses and remember to work as a team! Ask for help, assist others, and discuss your findings throughout the day.
   - Apply the data wrangling skills you have acquired in tutorials thus far to generate the global maps suggested in **Q1**. Examine your plots. Do you notice any interesting patterns across the globe or over time?
   - Plot the global mean of the variable(s) over the time period suggested in **Q2**. Do you observe any trends? Does the result align with your expectations? Why? Why not?
   - As a group, agree on a geographical region to focus on and answer **Q3**. Depending on the variable you explore, choosing a continent, subcontinent, or small region might be appropriate choices. How does the result compare with your answer to **Q2**? Does this result align with your expectations? Why? Why not?
 
-  Use the remaining hour to brainstorm and start reviewing literature.
-  - **(15 min)** Start by discussing your initial project ideas! As a group, try to come up with one or a few questions of interest, either by yourselves or directly from the project template. Was there anything weird or intriguing you noticed in the data yesterday? Are there any questions in the template you find particularly exciting?
-  - **(30 min)** Start doing literature review using search engines like Google or Baidu. Look only at abstracts to select 2-3 promising ones. Revisit Step 2 of the tutorial on [good research practices](https://comptools.climatematch.io//tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial2.html) to review the literature more efficiently!
-  - **(15 min)** Report to the whole group what papers you found and pool them together. Assign one paper per person to read/skim. 
+  **(0.5 hours)** Brainstorm ideas for reserach questions.
+  - Start by discussing your initial project ideas! As a group, try to come up with one or a few questions of interest, either by yourselves or directly from the project template. Was there anything weird or intriguing you noticed in the data yesterday? Are there any questions in the template you find particularly exciting?
 
 ---
 ### SESSION 3
