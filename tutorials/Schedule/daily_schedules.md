@@ -162,7 +162,7 @@
 <p>
 <font color="black"align="center" valign="top" > Interpreting Results</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Project submissions, presentations, and closing ceremony </font>
+   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Post-course survey, project submissions and presentations</font>
 <p>
 <font color="black">  </font>
    </td>
@@ -178,7 +178,7 @@
    </td>
    <td bgcolor="#F9EEDA" >
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentations & Closing ceremony </font>
+   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Pod farewell & closing ceremony </font>
    </td>
   </tr>
 </table>
