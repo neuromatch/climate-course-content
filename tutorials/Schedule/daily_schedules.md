@@ -67,11 +67,11 @@
    </td>
    <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
-<font color="black"> Guided data exploration </font>
+<font color="black"> Guided data exploration & initial brainstorming </font>
    </td>
    <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
-<font color="black">Literature review & question formulation</font>
+<font color="black">Literature review & finalized research question</font>
    </td>
    <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
@@ -156,13 +156,13 @@
    </td>
    <td bgcolor="#F9EEDA" align="center" valign="top" >
 <p>
-<font color="black"> Result interpretation </font>
+<font color="black"> Identifying Main Findings</font>
    </td>
    <td bgcolor="#F9EEDA" align="center" valign="top" >
 <p>
-<font color="black"align="center" valign="top" > Results implementation </font>
+<font color="black"align="center" valign="top" > Interpreting Results</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentation preparation & project submission </font>
+   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Project submissions, presentations, and closing ceremony </font>
 <p>
 <font color="black">  </font>
    </td>
