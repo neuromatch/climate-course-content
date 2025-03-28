@@ -90,16 +90,14 @@ We encourage you to consider not only the physical science aspects of a climate 
 
 **The goal of the day is to submit your project proposal via** **[Airtable link](https://airtable.com/shrQ5CLEla3dDkKbk)**.
 
-The following schedule is suggested:
+**(2 hrs)** The first block of time will be spent preparing your proposal for submission. The proposal can be a list of bullet points or a coherent paragraph; do not worry about the structure too much. The goal is to structure your thoughts and ideas so that a person unfamiliar with the topic can understand the importance of your research question and approach.
   - **(30 min)**  By yourself, read [Ten simple rules for structuring papers](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005619&type=printable). Pay close attention to figure 1, and how it specifies the same overall structure for the abstract, for each paragraph in the paper, and for the paper as a whole.
   - **(1.5 h)** As a group, try to write a proposal for this project based on the way you understand it now, following the C-C-C scheme described in the Ten simple rules paper. 
     - **Context:** scientific background and the knowledge gap your project will aim to fill. Include keywords and concepts that you identified in your literature review.
     - **Content:** your hypothesis and a description of the analyses and the results (positive or negative) you would need to answer your question.
     - **Conclusion:** the potential significance and societal impact of the work.
 
-The proposal can be a list of bullet points or a coherent paragraph; do not worry about the structure too much. The goal is to structure your thoughts and ideas so that a person unfamiliar with the topic can understand the importance of your research question and approach.
-
-
+**(1 hr)** The remaining time will be used for refinement based on feedback from a proposal swap.
   - **(30 min)** It is always revealing to present your research to someone who has never heard about it. Share your proposal with the other team in your pod and receive their proposal in return. In your group, read and discuss the other team’s abstract and write down some feedback. What do you understand about their project? What do you not understand about it? When giving your feedback, keep in mind that the other research group has put a lot of effort into generating the proposal and may not have had time to polish the language or presentation of their ideas. We always aim to be direct and specific, but also polite, respectful, and kind in our communication with each other. 
   - **(30 min)** Work to address the feedback received from the other team. When done, submit the project proposal [here](https://airtable.com/shrQ5CLEla3dDkKbk). Your proposal will not be graded, but its submission is required to receive a project badge on your Climatematch Academy certificate.
 
