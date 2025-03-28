@@ -140,28 +140,18 @@ We encourage you to consider not only the physical science aspects of a climate 
   - Think about the impact: On W2D2, the curriculum of the course will start shifting from topics surrounding physical climate phenomena to issues of socio-economic impact as well as extreme events. This is a good point to start thinking about the impact the research topic you are studying as part of your project has on ecosystems and communities. 
 
 ---
-### SESSION 8
-
-*Wednesday, 24th July (PM) for groups in timezone slots 2 and 5*
-*Thursday, 25th July (AM) for groups in timezone slots 1, 3, and 4*
+### W2D3: Implementation and Main Findings
 
 **What is your goal for the day?**
 
-- **Time zones 2 & 5:**
-  - **(1h)** **Professional Development - Mentor meeting II:** During the first hour, your project group will be visited by mentors. In these meetings, they will share their professional path in a climate-related field, offer personalized career advice, and provide a networking opportunity. Make sure to familiarize yourself with the suggested meeting structure and tips for getting the most out of these meetings [here](https://comptools.climatematch.io/projects/professional_development/mentors.html).
-
-- **Everyone:**
-  Continue working on your project and start thinking about what are your main findings. It is okay to feel short of time but do not feel discouraged. Below, some final advice for the last part of your project implementation:
+Continue working on your project and start thinking about what are your main findings. It is okay to feel short of time but do not feel discouraged. Below, some final advice for the last part of your project implementation:
   - Prioritize key tasks: Focus on the **essential** elements of your project that directly contribute to answering your research questions.
   - Prepare for contingencies: If something isn’t working as planned due to time constraints, focus on alternatives that can achieve similar outcomes within the available time.
 
   The project submission form you will complete tomorrow also includes a question about your interest in potentially **continuing your project after the course** as a Climatematch Impact Scholar. Please take a moment to [read about this opportunity](https://comptools.climatematch.io/projects/docs/continuing_your_project_after_the_course.html) and discuss it with your teammates and Teaching Assistants. 
 
 ---
-### SESSION 9
-
-*Thursday, 25th July (PM) for groups in timezone slots 2 and 5*
-*Friday, 26th July (AM) for groups in timezone slots 1, 3, and 4*
+### W2D4: Interpreting Results
 
 **The goal of the day is to interpret your results and identify conclusions.**
 
