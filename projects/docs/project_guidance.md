@@ -117,23 +117,19 @@ We encourage you to consider not only the physical science aspects of a climate 
 
 
 ---
-### SESSION 6
-
-*Monday, 23th July (PM) for groups in timezone slots 2 and 5*
-*Tuesday, 24th July (AM) for groups in timezone slots 1, 3, and 4*
+### W2D1: Implementation
 
 **You set the goal of the day!**
 
-- **Time zones 2 & 5:**
-  - **(1h)** **Professional Development - Impact Talk**:  As agreed during introductions on W1D1, one project group in the pod should do this during the first hour of the project block, while the other should leave this for the last hour of the block. The talks cover topics such as 1) climate justice, 2) equity in climate science, 3) open climate science, and 4) communication in climate science. Each pod will select one topic to begin with, which will be followed by facilitated group discussions. Should there be additional time, students may opt to explore another topic.
+**(1 hr)** **Professional Development - Impact Talk**:  As agreed during introductions on W1D1, one project group in the pod should do this during the first hour of the project block, while the other should leave this for the last hour of the block. The talks cover topics such as 1) climate justice, 2) equity in climate science, 3) open climate science, and 4) communication in climate science and can be found [here](https://comptools.climatematch.io/projects/professional_development/impact_talks.html). Each pod will select one topic to begin with, which will be followed by facilitated group discussions. Should there be additional time, students may opt to explore another topic. 
 
-- **Everyone:** 
-Continue working on your project! 
+**(2 hrs)** Continue working on your project! 
 
   - If you find a negative answer to your question, that is absolutely ok! Please do report that. Then go back and think about how this affects your initial hypothesis. Does it rule it out, or could there be limitations in this particular data that lead to the negative result? What other data could you seek out that would be more well-suited for answering this question? Try to design a new experiment in specific details and tell us about it. Who knows, somebody might run that experiment someday!
 
   - If you find a positive result (i.e. the data matches your hypothesis), you should spend the rest of your time validating it to make absolutely sure it is a real effect. For example, if you created a proxy-based paleoclimate reconstruction of precipitation hydrogen isotopes (δD) to assess past changes in rainfall amount, there are a few factors you could consider to ensure that the climate signal in your data is real and reliable. Are the δD values in the part of your record closest to present similar to modern measurements of rainfall δD at your study site? Are there other factors in addition to your variable of interest (rainfall amount) that may be contributing to the δD signal in your data? Can you remove the effect of these other factors so that the dominant signal in your δD record is recording changes in rainfall amount?   
 ---
+
 ### SESSION 7
 
 *Tuesday, 23th July (PM) for groups in timezone slots 2 and 5*
