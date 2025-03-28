@@ -140,7 +140,7 @@ We encourage you to consider not only the physical science aspects of a climate 
   - Think about the impact: On W2D2, the curriculum of the course will start shifting from topics surrounding physical climate phenomena to issues of socio-economic impact as well as extreme events. This is a good point to start thinking about the impact the research topic you are studying as part of your project has on ecosystems and communities. 
 
 ---
-### W2D3: Implementation and Main Findings
+### W2D3: Identifying Main Findings
 
 **What is your goal for the day?**
 
