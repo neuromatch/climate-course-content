@@ -51,28 +51,20 @@ On W1D1, you will meet your pod 30 minutes before the regular start of the tutor
 During the pod introduction on W1D1, your Teaching Assistant will also inform you about your project group’s schedule for watching and discussing the Impact Talks in the second week (W2D1). One group will do this activity during the first hour of the project block, while the other will dedicate the last hour of the project block to it. The discussions following the Impact Talk will be facilitated by you - the students. Your Teaching Assistant will help you appoint yourselves to the leading roles during the pod introductions. You can read more about this activity [here](https://github.com/neuromatch/climate-course-content/blob/main/projects/professional_development/impact_talks.ipynb). 
 
 ---
-### W1D1
+### W1D1: Good Research Practices
 
 **The goal of the day is to learn about the process of research design**. To this end you will work through the tutorials on [good research practices](https://comptools.climatematch.io/tutorials/Projects_GoodResearchPractices/chapter_title.html) in your project groups. Your Project Teaching Assistant will come by at some point during this period to introduce themselves and facilitate your progression through the tutorials for 30-45 minutes. 
 
 ---
-### SESSION 2
-
-*Tuesday, 16th July (PM) for groups in timezone slots 2 and 5*
-*Wednesday, 19th July (AM) for groups in timezone slots 1, 3, and 4*
+### W1D2: Guided Data Exploration
 
 **The goal of the day is to get familiar with the dataset that you will work on your project.** Each project team will choose one of the predefined templates according to their research interests. This project session is structured as follows:
 
-- **Time zones 2 & 5:**
-  **(1h) Professional Development - Mentor meeting I:**  During the first hour, your project group will be visited by mentors. In these meetings, they will share their professional path in a climate-related field, offer personalized career advice, and provide a networking opportunity. Make sure to familiarize yourself with the suggested meeting structure and tips for getting the most out of these meetings [here](https://comptools.climatematch.io/projects/professional_development/mentors.html).
-
-- **Everyone**:
   **(2h)** Explore one of the provided climate datasets from your chosen project template by working through the ***GREEN*** questions. Use the **data loading notebook** to get started and try to understand what is being done and why. Parts of this code might be reusable or adaptable later. Be on the lookout for interesting hypotheses and remember to work as a team! Ask for help, assist others, and discuss your findings throughout the day.
   - Apply the data wrangling skills you have acquired in tutorials thus far to generate the global maps suggested in **Q1**. Examine your plots. Do you notice any interesting patterns across the globe or over time?
   - Plot the global mean of the variable(s) over the time period suggested in **Q2**. Do you observe any trends? Does the result align with your expectations? Why? Why not?
   - As a group, agree on a geographical region to focus on and answer **Q3**. Depending on the variable you explore, choosing a continent, subcontinent, or small region might be appropriate choices. How does the result compare with your answer to **Q2**? Does this result align with your expectations? Why? Why not?
 
-- **Time zones 1, 3 & 4:**
   Use the remaining hour to brainstorm and start reviewing literature.
   - **(15 min)** Start by discussing your initial project ideas! As a group, try to come up with one or a few questions of interest, either by yourselves or directly from the project template. Was there anything weird or intriguing you noticed in the data yesterday? Are there any questions in the template you find particularly exciting?
   - **(30 min)** Start doing literature review using search engines like Google or Baidu. Look only at abstracts to select 2-3 promising ones. Revisit Step 2 of the tutorial on [good research practices](https://comptools.climatematch.io//tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial2.html) to review the literature more efficiently!
