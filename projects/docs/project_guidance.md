@@ -130,21 +130,14 @@ We encourage you to consider not only the physical science aspects of a climate 
   - If you find a positive result (i.e. the data matches your hypothesis), you should spend the rest of your time validating it to make absolutely sure it is a real effect. For example, if you created a proxy-based paleoclimate reconstruction of precipitation hydrogen isotopes (δD) to assess past changes in rainfall amount, there are a few factors you could consider to ensure that the climate signal in your data is real and reliable. Are the δD values in the part of your record closest to present similar to modern measurements of rainfall δD at your study site? Are there other factors in addition to your variable of interest (rainfall amount) that may be contributing to the δD signal in your data? Can you remove the effect of these other factors so that the dominant signal in your δD record is recording changes in rainfall amount?   
 ---
 
-### SESSION 7
-
-*Tuesday, 23th July (PM) for groups in timezone slots 2 and 5*
-*Wednesday, 24th July (AM) for groups in timezone slots 1, 3, and 4*
+### W2D2: Implementation
 
 **What is your goal for the day?**
 
-- **Time zones 1, 3 & 4:**
-  - **(1h)** **Professional Development - Mentor meeting II:** During the first hour, your project group will be visited by mentors. In these meetings, they will share their professional path in a climate-related field, offer personalized career advice, and provide a networking opportunity. Make sure to familiarize yourself with the suggested meeting structure and tips for getting the most out of these meetings [here](https://comptools.climatematch.io/projects/professional_development/mentors.html).
-
-- **Everyone:**
-  Continue working on your project! A couple of extra pieces of general advice:
+ Continue working on your project! A couple of extra pieces of general advice:
   - Collaborate effectively: Make sure to reconvene with your teammates every 1-1.5 hours to discuss your progress. If you are struggling with something, ask others for help right away! Use your Project Teaching Assistant and your pod’s Teaching Assistant as a resource when your group gets stuck. 
   - Document everything: Keep detailed records of your data analysis processes, decisions, and modifications. This practice is invaluable for revisiting your work and providing clear explanations during your project presentation.
-  - Think about the impact: On Day 7, the curriculum of the course will start shifting from topics surrounding physical climate phenomena to issues of socio-economic impact as well as mitigation and adaptation strategies. This is a good point to start thinking about the impact the research topic you are studying as part of your project has on ecosystems and communities. 
+  - Think about the impact: On W2D2, the curriculum of the course will start shifting from topics surrounding physical climate phenomena to issues of socio-economic impact as well as extreme events. This is a good point to start thinking about the impact the research topic you are studying as part of your project has on ecosystems and communities. 
 
 ---
 ### SESSION 8
