@@ -15,7 +15,7 @@ On W1D1, you will learn about good research practices by working on a ‘mock’
 - W2D5: Project Submission **[here](https://airtable.com/shr7EAY3x39x8swZu)** 
 
 
-## Project materials 
+## Project Materials 
 
 You have been assigned a project based on the preferences listed in your application. Each project comes with an introductory video, a project template and a data loading jupyter notebook. 
 
@@ -26,7 +26,7 @@ The templates should be used in several ways:
 * All teams **must** work through the ***GREEN*** questions on Day 2. This will let you familiarize yourselves with the relevant datasets and appreciate the global variability of your selected climate phenomenon before defining your research question.
 * All teams **must** work on a research question related to a physical climate phenomenon, such as those proposed in the yellow and red boxes. 
 * All teams are **encouraged** to consider the socio-economic impact of their climate phenomenon of interest (dashed border). We advise you to support your conclusions with data if it is possible.
-* If you are new to climate science or do not have a lot of research experience, we strongly recommend that you use the research questions provided in the template extensively. The templates have been designed to give you enough structure to get started and enough options to keep going if you stick with the template. Comprehensively answering just one ***YELLOW*** or ***RED*** question from the template would be an achievement! You can pick the question that interests you the most right away without following the flow suggested by arrows on the template.
+* If you are new to climate science or do not have a lot of research experience, we strongly recommend that you use the research questions provided in the template extensively. The templates have been designed to give you enough structure to get started and enough options to keep going. Comprehensively answering just one ***YELLOW*** or ***RED*** question from the template would be an achievement! You can pick the question that interests you the most right away without following the flow suggested by arrows on the template.
 * If you are an experienced climate researcher, you are more than welcome to branch out beyond the template and define your own research questions! However, we do ask you to stick to the climate datasets provided to you. 
 
 
