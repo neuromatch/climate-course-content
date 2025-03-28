@@ -5,14 +5,14 @@
 
 The project component of Climatematch Academy is designed to guide you through the entire research process, providing a comprehensive journey from project ideation to outcome presentation, all within a condensed time frame of just two weeks. Within a dedicated three-hour time slot each day, you will collaborate with a group of 4-6 fellow students from your pod to collectively develop a single research project.
 
-On Day 1, you will learn about good research practices by working on a ‘mock’ project through the lens of equity. You will then spend eight days applying those skills to a scientific question and a geographical region that interests you and your teammates. To familiarize yourselves with the datasets at hand, you will examine the spatial and temporal distribution of one climate variable on global and local scales. After performing a brief literature review, you will develop a sense of interesting open questions in the field and will devise a specific testable hypothesis accordingly. On Day 4, your group will submit a project proposal that you will swap with other groups to practice giving and receiving feedback through a peer review process. For the rest of the course, you will focus on acquiring evidence for or against your hypothesis. Throughout this time, you will be supported by your pod’s Teaching Assistant and a dedicated Project Teaching Assistant. Finally, in the last two sessions of the course, you will prepare a short presentation showcasing the story of your project and meet with other groups in your megapod to discuss your findings with them.
+On W1D1, you will learn about good research practices by working on a ‘mock’ project through the lens of equity. You will then spend several days applying those skills to a scientific question and a geographical region that interests you and your teammates. To familiarize yourselves with the datasets at hand, you will examine the spatial and temporal distribution of one climate variable on global and local scales. After performing a brief literature review, you will develop a sense of interesting open questions in the field and will devise a specific testable hypothesis accordingly. On W1D4, your group will submit a project proposal that you will swap with other groups to practice giving and receiving feedback through a peer review process. For the rest of the course, you will focus on acquiring evidence for or against your hypothesis. Throughout this time, you will be supported by your pod’s Teaching Assistant and a dedicated Project Teaching Assistant. Finally, in the last two sessions of the course, you will prepare a short presentation showcasing the story of your project and meet with other groups in your megapod to discuss your findings with them.
 
 
 ## Submission Links
 
-- Day 4: Proposal Submission **[here](https://airtable.com/shrQ5CLEla3dDkKbk)**
+- W1D4: Proposal Submission **[here](https://airtable.com/shrQ5CLEla3dDkKbk)**
 
-- Day 10: Project Submission **[here](https://airtable.com/shr7EAY3x39x8swZu)** 
+- W2D5: Project Submission **[here](https://airtable.com/shr7EAY3x39x8swZu)** 
 
 
 ## Project materials 
