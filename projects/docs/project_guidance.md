@@ -92,7 +92,7 @@ We encourage you to consider not only the physical science aspects of a climate 
 
 **(2 hrs)** The first block of time will be spent preparing your proposal for submission. The proposal can be a list of bullet points or a coherent paragraph; do not worry about the structure too much. The goal is to structure your thoughts and ideas so that a person unfamiliar with the topic can understand the importance of your research question and approach.
   - **(30 min)**  By yourself, read [Ten simple rules for structuring papers](https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005619&type=printable). Pay close attention to figure 1, and how it specifies the same overall structure for the abstract, for each paragraph in the paper, and for the paper as a whole.
-  - **(1.5 h)** As a group, try to write a proposal for this project based on the way you understand it now, following the C-C-C scheme described in the Ten simple rules paper. 
+  - **(1.5 hrs)** As a group, try to write a proposal for this project based on the way you understand it now, following the C-C-C scheme described in the Ten simple rules paper. 
     - **Context:** scientific background and the knowledge gap your project will aim to fill. Include keywords and concepts that you identified in your literature review.
     - **Content:** your hypothesis and a description of the analyses and the results (positive or negative) you would need to answer your question.
     - **Conclusion:** the potential significance and societal impact of the work.
@@ -102,27 +102,17 @@ We encourage you to consider not only the physical science aspects of a climate 
   - **(30 min)** Work to address the feedback received from the other team. When done, submit the project proposal [here](https://airtable.com/shrQ5CLEla3dDkKbk). Your proposal will not be graded, but its submission is required to receive a project badge on your Climatematch Academy certificate.
 
 ---
-### SESSION 5
+### W1D5: Drafting the Analysis and Task Allocation
 
-*Friday, 19st July (PM) for groups in timezone slots 2 and 5*
-*Monday, 22th July (AM) for groups in timezone slots 1, 3, and 4*
+**The goal of the day is to draft the analysis framework and allocate tasks**. You should now have a sense of the data, and you have probably refined your hypothesis a little.  Writing your proposal will have helped you get a rough idea of what tools you might use to tackle your research question, and what the answer could look like. You will use the remaining project time to implement the analyses you have planned and make progress towards an answer. To this end, you should organize your time and plan accordingly. Keep in mind that your group might not be able to complete their research plan, but don’t get discouraged: answering a research question usually takes months if not years of work and you should consider making meaningful progress towards that goal a great success!
 
-**The goal of the day is to draft the analysis framework and allocate tasks**. You should now have a sense of the data, and you have probably refined your hypothesis a little.  Writing a proposal will have helped you get a rough idea of what tools you might use to tackle your research question, and what the answer could look like. You will use the remaining project time to implement the analyses you have planned and make progress towards an answer. To this end, you should organize your time and plan accordingly. Keep in mind that your group might not be able to complete their research plan, but don’t get discouraged: answering a research question usually takes months if not years of work and you should consider making meaningful progress towards that goal a great success!
-
-
-- **Time zones 1, 3 & 4:**
-  - **(1h)** **Professional Development - Impact Talk**:  As agreed during introductions on W1D1, one project group in the pod should do this during the first hour of the project block, while the other should leave this for the last hour of the block. The talks cover topics such as 1) climate justice, 2) equity in climate science, 3) open climate science, and 4) communication in climate science. Each pod will select one topic to begin with, which will be followed by facilitated group discussions. Should there be additional time, students may opt to explore another topic.
- 
-- **Everyone:**
-  - **(40 min)** Draft the analysis plan. Discuss the main methods and techniques to be used for analyzing the data. Consider different analytical approaches that could be applied and select the most appropriate ones for their specific data and questions. TAs are here to help you, if you know what analysis you need, but don’t know how to do it. They can point you to useful toolkits that may be difficult to find otherwise.
+ The following schedule is suggested:
+  - **(40 min)** Draft the analysis plan. Discuss the main methods and techniques to be used for analyzing the data. Consider different analytical approaches that could be applied and select the most appropriate ones for their specific data and questions. Teaching Assistants are here to help you, if you know what analysis you need, but don’t know how to do it. They can point you to useful toolkits that may be difficult to find otherwise.
   - **(20 min)** Divide the group into smaller teams or have them work individually based on their skills or areas of interest. Assign specific parts of the data analysis to each student or team, ensuring that everyone has a clear task that contributes to the overall project. Finally, create a timeline that includes specific dates for progress checks and integration points. Set specific goals for the remaining session.
-  - **(1h)** Start working on your project!  A few pieces of general advice:
+  - **(2 hrs)** Start working on your project!  A few pieces of general advice:
     - Leverage existing tools: Try not to implement complicated analyses from scratch. Use existing toolkits, and learn how to use them well. This kind of knowledge is very helpful long-term.
     - Focus on clear objectives: Keep your project goals clear and your activities aligned with achieving these goals. This helps in maintaining a direct path towards successful project outcomes.
     - Maintain simplicity: Start with simple analyses and build complexity as needed. This approach helps in early detection of potential data issues and allows for easier troubleshooting.
-
-- **Time zones 2 & 5:**
-  - **(1h)** Continuing working on your project. 
 
 
 
