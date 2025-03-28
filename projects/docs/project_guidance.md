@@ -44,7 +44,7 @@ You will have 2-3 hours each day to work on projects. The goal during the **firs
 Embedded in the project time will also be a set of **professional development activities**: meetings with mentors as well as an Impact Talk activity of your choice from the following list: 1) climate justice, 2) equity in climate science, 3) open climate science, and 4) climate science communication. Please see the [professional development section](https://comptools.climatematch.io/projects/professional_development/README.html) of the book for more details.
 
 ---
-### POD INTRODUCTIONS W1D1 and Impact Talk Prep
+### Pod Introductions and Impact Talk Prep
 
 On W1D1, you will meet your pod 30 minutes before the regular start of the tutorial time for introductory activities. Your pod’s Teaching Assistant will also tell you the project group you have been assigned to and its project topic. In some pods, the two groups will work on the same topic while others might be assigned two different topics depending on student interests. If you wish to work in the other group, discuss it with your Teaching Assistant. 
 
