@@ -146,15 +146,15 @@
 <p style="color: white; font-weight: bold">
 (3 hours)
    </td>
-   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" >
 <p>
 <font color="black"> Implementation </font>
    </td>
-   <td bgcolor="#F9EEDA"  align="center" valign="top" ><strong>
+   <td bgcolor="#F9EEDA"  align="center" valign="top" >
 <p>
 <font color="black"> Implementation </font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" >
 <p>
 <font color="black"> Result interpretation </font>
    </td>
