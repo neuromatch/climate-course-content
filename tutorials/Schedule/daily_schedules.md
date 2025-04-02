@@ -160,7 +160,7 @@
    </td>
    <td bgcolor="#F9EEDA" align="center" valign="top" >
 <p>
-<font color="black"align="center" valign="top" > Interpreting Results</font>
+<font color="black"align="center" valign="top" > Interpreting Results & Drafting Conclusions</font>
    </td>
    <td bgcolor="#F9EEDA" align="center" ><font color="black"> Post-course survey, project submissions & presentations</font>
 <p>
