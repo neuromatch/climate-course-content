@@ -452,7 +452,7 @@ All days (except W1D1 and W2D5) will follow this schedule:
 
 W1D1: The synchronous coursework session starts at -0:30 with 30 minutes for pod introductions. Students should watch the keynote lecture beforehand.
 
-W2D5: This day will be spent doing projects, you can see the full schedule in the [Daily Guide for Projects](https://climatematchacademy.github.io/projects/docs/project_guidance.html#project-day-w2d2). *There is still a keynote speaker that you should watch during the usual -0:30-0:00 time.* 
+W2D5: This day will be spent doing projects, you can see the full schedule in the [Daily Guide for Projects](https://comptools.climatematch.io/projects/docs/project_guidance.html) . *There is still a keynote speaker that you should watch during the usual -0:30-0:00 time.* 
 
 
 ### Project Schedule
