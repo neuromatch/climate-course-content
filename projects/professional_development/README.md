@@ -2,6 +2,8 @@
 
 Ahead of the course, we will offer a variety of Professional Development opportunities. During the course, you will engage with Impact Talks. 
 
+## [See the Professional Development Schedule here.](https://docs.neuromatch.io/p/CpPZ_P0Tl9vv6s/2025-Academy-Professional-Development) 
+
 ## Why Professional Development?
 
 Professional development enables students to connect and expand their experiences, skills and interest, broadening students’ perception of how they can make an impact via different career options. 
