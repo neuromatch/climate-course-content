@@ -33,27 +33,27 @@
 <p style="color: white; font-weight: bold;">
 (5 hours)
    </td>
-   <td bgcolor="#E99668" align="center" ><strong><font color="black" > Climate System Overview </font></strong>
+   <td bgcolor="#E99668" align="center" ><font color="black" > Climate System Overview </font>
    </td>
-   <td bgcolor="#F5C690" align="center" ><strong><font color="black" > Ocean-Atmosphere Reanalysis </font></strong>
+   <td bgcolor="#F5C690" align="center" ><font color="black" > Ocean-Atmosphere Reanalysis </font>
    </td>
-   <td bgcolor="#F5C690" align="center" ><strong><font color="black" > Remote Sensing </font></strong>
+   <td bgcolor="#F5C690" align="center" ><font color="black" > Remote Sensing </font>
    </td>
-   <td bgcolor="#F5C690" align="center" ><strong><font color="black" > Paleoclimate </font></strong>
+   <td bgcolor="#F5C690" align="center" ><font color="black" > Paleoclimate </font>
    </td>
-   <td bgcolor="#B0C7DC" align="center" ><strong><font color="black" > Intro to Climate Modeling </font></strong>
+   <td bgcolor="#B0C7DC" align="center" ><font color="black" > Intro to Climate Modeling </font>
    </td>
   </tr>
   <tr></tr>
-   <td bgcolor="#E99668"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D1.png">
+   <td bgcolor="#E99668"  align="center" > <img width="135px" height="135px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D1.png">
    </td>
-   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D2_new.png" >
+   <td bgcolor="#F5C690"  align="center" > <img width="115px" height="115px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D2_new.png" >
    </td>
-   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D3_new.png" />
+   <td bgcolor="#F5C690"  align="center" > <img width="120px" height="120px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D3_new.png" />
    </td>
-   <td bgcolor="#F5C690"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D4.png" >
+   <td bgcolor="#F5C690"  align="center" > <img width="125px" height="125px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D4.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" > <img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D5.png" >
+   <td bgcolor="#B0C7DC"  align="center" > <img width="130px" height="130px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W1D5.png" >
    </td>
   </tr>
   <tr>
@@ -61,23 +61,23 @@
 <p style="color: white; font-weight: bold;">
 (3 hours)
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 1 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
-<font color="black"> Tutorial on good research Practices </font>
+<font color="black"> Tutorials on Good Research Practices </font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 2 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
-<font color="black"> Guided data exploration </font>
+<font color="black"> Guided data exploration & initial brainstorming </font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 3 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
-<font color="black">Literature review & question formulation</font>
+<font color="black">Literature review & finalized research question</font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 4 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
 <font color="black"> Proposal writing, swaps & submission </font>
    </td>
-   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" ><strong><font color="black"> Session 5 </font></strong>
+   <td bgcolor="#F9EEDA" style="color:black" align="center" valign="top" >
 <p>
 <font color="black"> Drafting the analyses & task allocation </font>
    </td>
@@ -118,27 +118,27 @@
 <p style="color: white; font-weight: bold;">
 (5 hours)
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><strong><font color="black"> An Ensemble of Futures </font></strong>
+   <td bgcolor="#B0C7DC"  align="center" ><font color="black"> An Ensemble of Futures </font>
    </td>
-   <td bgcolor="#E99668"  align="center" ><strong><font color="black">  </font> Socioeconomics of Climate Change</strong>
+   <td bgcolor="#B0C7DC"  align="center" ><font color="black">  Socioeconomics of Climate Change </font> 
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><strong><font color="black"> Extremes & Variability </font></strong>
+   <td bgcolor="#78BAB8"  align="center" ><font color="black"> Extremes & Variability </font>
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><strong><font color="black"> </font> AI & Climate Change</strong>
+   <td bgcolor="#78BAB8"  align="center" ><font color="black"> AI & Climate Change </font> 
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><strong><font color="black"> Project Day </font></strong>
+   <td bgcolor="#78BAB8"  align="center" ><font color="black"> Project Day </font>
    </td>
   </tr>
   <tr>
-   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D1_new.png" >
+   <td bgcolor="#B0C7DC"  align="center" ><img width="130px" height="130px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D1_new.png" >
    </td>
-   <td bgcolor="#E99668"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2_new.png" >
+   <td bgcolor="#B0C7DC"  align="center" ><img width="115px" height="115px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2_new.png" >
    </td>
-   <td bgcolor="#B0C7DC"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D3_new.png" >
+   <td bgcolor="#78BAB8"  align="center" ><img width="135px" height="135px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D3_new.png" >
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D4_new.png" >
+   <td bgcolor="#78BAB8"  align="center" ><img width="125px" height="125px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D4_new.png" >
    </td>
-   <td bgcolor="#78BAB8"  align="center" ><img width="150px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2.png" >
+   <td bgcolor="#78BAB8"  align="center" ><img width="130px" height="130px" src="https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Schedule/images/icon_W2D2.png" >
    </td>
   </tr>
   <tr>
@@ -146,23 +146,23 @@
 <p style="color: white; font-weight: bold">
 (3 hours)
    </td>
-   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 6 </font></strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" >
 <p>
 <font color="black"> Implementation </font>
    </td>
-   <td bgcolor="#F9EEDA"  align="center" valign="top" ><strong><font color="black"> Session 7 </font></strong>
+   <td bgcolor="#F9EEDA"  align="center" valign="top" >
 <p>
 <font color="black"> Implementation </font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 8 </font></strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" >
 <p>
-<font color="black"> Result interpretation </font>
+<font color="black"> Identifying Main Findings</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" valign="top" ><strong><font color="black"> Session 9 </font></strong>
+   <td bgcolor="#F9EEDA" align="center" valign="top" >
 <p>
-<font color="black"align="center" valign="top" > Results implementation </font>
+<font color="black"align="center" valign="top" > Interpreting Results & Drafting Conclusions</font>
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentation preparation & project submission </font>
+   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Post-course survey, project submissions & presentations</font>
 <p>
 <font color="black">  </font>
    </td>
@@ -178,7 +178,7 @@
    </td>
    <td bgcolor="#F9EEDA" >
    </td>
-   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Presentations & Closing ceremony </font>
+   <td bgcolor="#F9EEDA" align="center" ><font color="black"> Pod farewell & closing ceremony </font>
    </td>
   </tr>
 </table>
@@ -452,7 +452,7 @@ All days (except W1D1 and W2D5) will follow this schedule:
 
 W1D1: The synchronous coursework session starts at -0:30 with 30 minutes for pod introductions. Students should watch the keynote lecture beforehand.
 
-W2D5: This day will be spent doing projects, you can see the full schedule in the [Daily Guide for Projects](https://climatematchacademy.github.io/projects/docs/project_guidance.html#project-day-w2d2). *There is still a keynote speaker that you should watch during the usual -0:30-0:00 time.* 
+W2D5: This day will be spent doing projects, you can see the full schedule in the [Daily Guide for Projects](https://comptools.climatematch.io/projects/docs/project_guidance.html) . *There is still a keynote speaker that you should watch during the usual -0:30-0:00 time.* 
 
 
 ### Project Schedule
