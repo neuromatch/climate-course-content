@@ -105,7 +105,7 @@ dependencies:
  - tiledb-py
  - timezonefinder
  - wordcloud
- - xarray
+ - xarray==2024.2.0
  - xarrayutils
  - xarray-datatree
  - xarray_leaflet
