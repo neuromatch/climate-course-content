@@ -139,7 +139,7 @@ runs:
         pip install -r requirements.txt
         pip install ecmwflibs
         pip install eccodes==1.3.1
-        pip install cfgrib
+        pip install cfgrib==0.9.10.4
         python -m cfgrib selfcheck
         pip install requests aiohttp
         pip install jupyter-book==0.14.0 ghp-import cftime importlib-metadata==4.13.0

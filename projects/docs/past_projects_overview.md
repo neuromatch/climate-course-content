@@ -3,6 +3,7 @@
 We are proud to showcase the project presentations our students prepared in previous iterations of *Computational Tools for Climate Science*. 
 
 You can browse their presentation slides by project topic:
+- [Arctic Sea Ice Change](projects/project-notebooks/Arctic_sea_ice_change_2024.ipynb)
 - [Sea level rise](https://github.com/neuromatch/climate-course-content/blob/main/projects/past-projects/sea_level_rise.ipynb)
 - [Regional precipitation variability and extreme events](https://github.com/neuromatch/climate-course-content/blob/main/projects/past-projects/precipitation.ipynb)
 - [Changes in land cover: Albedo and carbon sequestration](https://github.com/neuromatch/climate-course-content/blob/main/projects/past-projects/albedo.ipynb)
