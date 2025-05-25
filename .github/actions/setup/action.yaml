@@ -31,7 +31,7 @@ runs:
       uses: actions/setup-python@v5
       id: cache-python
       with:
-        python-version: 3.9
+        python-version: 3.9.18
         cache: 'pip' # caching pip dependencies
 
     - name: Set up virtual environment
