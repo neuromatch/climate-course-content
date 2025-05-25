@@ -6,7 +6,6 @@ In this section, you will find materials to help you get started on your project
 
 You can find project materials in the left side panel or by clicking on the project titles below.
 
-- [Arctic Sea Ice Change](projects/project-notebooks/Arctic_sea_ice_change_2024.ipynb)
 - [Precipitation Variability and Extreme Events](projects/project-notebooks/Precipitation_variability_extreme_events_2024.ipynb)
 - [Ocean Acidification](projects/project-notebooks/Ocean_acidification_2024.ipynb)
 - [Heatwaves](projects/project-notebooks/Heatwaves_2024.ipynb)
