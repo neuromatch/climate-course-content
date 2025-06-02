@@ -74,6 +74,7 @@ dependencies:
  - parcels
  - param
  - pip
+ - plotly
  - pooch
  - pop-tools
  - pyarrow
@@ -104,6 +105,7 @@ dependencies:
  - texttable
  - tiledb-py
  - timezonefinder
+ - torch
  - wordcloud
  - xarray==2024.2.0
  - xarrayutils
