@@ -106,6 +106,8 @@ dependencies:
  - texttable
  - tiledb-py
  - timezonefinder
+ - torchaudio
+ - torchvision
  - wordcloud
  - xarray==2024.2.0
  - xarrayutils
