@@ -88,6 +88,7 @@ dependencies:
  - python-blosc
  - python-gist
  - python-graphviz
+ - pytorch
  - pyworld3 # needed for W2D3
  - rasterio
  - rechunker
@@ -105,7 +106,6 @@ dependencies:
  - texttable
  - tiledb-py
  - timezonefinder
- - torch
  - wordcloud
  - xarray==2024.2.0
  - xarrayutils
