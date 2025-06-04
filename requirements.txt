@@ -49,3 +49,6 @@ texttable
 lipd
 pyleoclim==0.14.0
 cfgrib
+torch
+torchvision
+plotly
