@@ -48,4 +48,7 @@ cdsapi
 texttable
 lipd
 pyleoclim==0.14.0
-# cfgrib
+cfgrib
+torch
+torchvision
+plotly

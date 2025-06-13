@@ -74,6 +74,7 @@ dependencies:
  - parcels
  - param
  - pip
+ - plotly
  - pooch
  - pop-tools
  - pyarrow
@@ -87,6 +88,7 @@ dependencies:
  - python-blosc
  - python-gist
  - python-graphviz
+ - pytorch
  - pyworld3 # needed for W2D3
  - rasterio
  - rechunker
@@ -104,6 +106,7 @@ dependencies:
  - texttable
  - tiledb-py
  - timezonefinder
+ - torchvision
  - wordcloud
  - xarray==2024.2.0
  - xarrayutils
