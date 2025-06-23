@@ -879,65 +879,201 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'https://osf.io/kmy5w/download' to file '/tmp/Shakun2015_SST.txt'.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">filename_Shakun2015_SST</span> <span class="o">=</span> <span class="s2">"Shakun2015_SST.txt"</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">url_Shakun2015_SST</span> <span class="o">=</span> <span class="s2">"https://osf.io/kmy5w/download"</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">SST</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_Shakun2015_SST</span><span class="p">,</span> <span class="n">filename_Shakun2015_SST</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">SST</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"Age"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">SST</span>
-
-<span class="nn">Cell In[3], line 11,</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="n">filelocation</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">return</span> <span class="n">file</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pooch/core.py:239,</span> in <span class="ni">retrieve</span><span class="nt">(url, known_hash, fname, path, processor, downloader, progressbar)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">if</span> <span class="n">downloader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="n">downloader</span> <span class="o">=</span> <span class="n">choose_downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">progressbar</span><span class="o">=</span><span class="n">progressbar</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">239</span> <span class="n">stream_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">full_path</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">downloader</span><span class="p">,</span> <span class="n">pooch</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="n">known_hash</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="s2">"SHA256 hash of downloaded file: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span>         <span class="s2">"Use this value as the 'known_hash' argument of 'pooch.retrieve'"</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">247</span>         <span class="n">file_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">full_path</span><span class="p">)),</span>
-<span class="g g-Whitespace">    </span><span class="mi">248</span>     <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pooch/core.py:807,</span> in <span class="ni">stream_download</span><span class="nt">(url, fname, known_hash, downloader, pooch, retry_if_failed)</span>
-<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="c1"># Stream the file to a temporary so that we can safely check its</span>
-<span class="g g-Whitespace">    </span><span class="mi">805</span>     <span class="c1"># hash before overwriting the original.</span>
-<span class="g g-Whitespace">    </span><span class="mi">806</span>     <span class="k">with</span> <span class="n">temporary_file</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">807</span>         <span class="n">downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">pooch</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">808</span>         <span class="n">hash_matches</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>         <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pooch/downloaders.py:221,</span> in <span class="ni">HTTPDownloader.__call__</span><span class="nt">(self, url, output_file, pooch, check_only)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">221</span>     <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span>     <span class="n">content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chunk_size</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span>     <span class="n">total</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"content-length"</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/requests/models.py:1026,</span> in <span class="ni">Response.raise_for_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1021</span>     <span class="n">http_error_msg</span> <span class="o">=</span> <span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1022</span>         <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2"> Server Error: </span><span class="si">{</span><span class="n">reason</span><span class="si">}</span><span class="s2"> for url: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2">"</span>
-<span class="g g-Whitespace">   </span><span class="mi">1023</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1025</span> <span class="k">if</span> <span class="n">http_error_msg</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1026</span>     <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">http_error_msg</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
-
-<span class="ne">HTTPError</span>: 500 Server Error: Internal Server Error for url: https://osf.io/kmy5w/download
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e3af19895ffddb73a3d8b10b1cdb9e7f6412ab1e930e8f3154c146999b645ff9
+Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
 </pre></div>
 </div>
-</div>
+<div class="output text_html"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>SST stack</th>
+<th>_18Op stack</th>
+<th>_18Ob stack</th>
+<th>_18Osw stack</th>
+<th>_18Osw uncertainty (2_)</th>
+<th>Deep ocean temperature</th>
+<th>Detrended sea-level equivalent</th>
+<th>Sea level uncertainty (2_)</th>
+<th>Unnamed: 9</th>
+<th>Unnamed: 10</th>
+</tr>
+<tr>
+<th>Age</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>3</th>
+<td>1.2</td>
+<td>-0.81</td>
+<td>-0.88</td>
+<td>-0.58</td>
+<td>0.11</td>
+<td>0.0</td>
+<td>0</td>
+<td>14</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>6</th>
+<td>1.3</td>
+<td>-0.76</td>
+<td>-0.87</td>
+<td>-0.50</td>
+<td>0.11</td>
+<td>0.1</td>
+<td>-10</td>
+<td>14</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>9</th>
+<td>1.4</td>
+<td>-0.57</td>
+<td>-0.62</td>
+<td>-0.28</td>
+<td>0.11</td>
+<td>0.5</td>
+<td>-38</td>
+<td>14</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>12</th>
+<td>1.0</td>
+<td>-0.16</td>
+<td>-0.23</td>
+<td>0.06</td>
+<td>0.09</td>
+<td>0.1</td>
+<td>-80</td>
+<td>12</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>15</th>
+<td>0.1</td>
+<td>0.31</td>
+<td>0.27</td>
+<td>0.33</td>
+<td>0.09</td>
+<td>-1.4</td>
+<td>-115</td>
+<td>12</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>786</th>
+<td>0.3</td>
+<td>-0.10</td>
+<td>-0.34</td>
+<td>-0.14</td>
+<td>0.22</td>
+<td>0.1</td>
+<td>-50</td>
+<td>28</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>789</th>
+<td>-0.1</td>
+<td>0.03</td>
+<td>-0.21</td>
+<td>0.09</td>
+<td>0.29</td>
+<td>0.0</td>
+<td>-79</td>
+<td>36</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>792</th>
+<td>-0.3</td>
+<td>0.40</td>
+<td>0.26</td>
+<td>0.30</td>
+<td>0.23</td>
+<td>-0.8</td>
+<td>-106</td>
+<td>30</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>795</th>
+<td>-1.6</td>
+<td>0.37</td>
+<td>0.44</td>
+<td>0.07</td>
+<td>0.31</td>
+<td>-3.2</td>
+<td>-78</td>
+<td>39</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>798</th>
+<td>-0.8</td>
+<td>0.23</td>
+<td>0.37</td>
+<td>0.17</td>
+<td>0.20</td>
+<td>-2.7</td>
+<td>-90</td>
+<td>26</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+<p>266 rows × 10 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -959,70 +1095,97 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'https://osf.io/45fev/download' to file '/tmp/antarctica2015co2composite_cleaned.txt'.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">filename_antarctica2015co2composite_cleaned</span> <span class="o">=</span> <span class="s2">"antarctica2015co2composite_cleaned.txt"</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">url_antarctica2015co2composite_cleaned</span> <span class="o">=</span> <span class="s2">"https://osf.io/45fev/download"</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">CO2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span>
-<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">pooch_load</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="n">url_antarctica2015co2composite_cleaned</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>         <span class="n">filename_antarctica2015co2composite_cleaned</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">CO2</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"age_gas_calBP"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">CO2</span>
-
-<span class="nn">Cell In[3], line 11,</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="n">filelocation</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">return</span> <span class="n">file</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pooch/core.py:239,</span> in <span class="ni">retrieve</span><span class="nt">(url, known_hash, fname, path, processor, downloader, progressbar)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">if</span> <span class="n">downloader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="n">downloader</span> <span class="o">=</span> <span class="n">choose_downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">progressbar</span><span class="o">=</span><span class="n">progressbar</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">239</span> <span class="n">stream_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">full_path</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">downloader</span><span class="p">,</span> <span class="n">pooch</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="n">known_hash</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="s2">"SHA256 hash of downloaded file: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span>         <span class="s2">"Use this value as the 'known_hash' argument of 'pooch.retrieve'"</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">247</span>         <span class="n">file_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">full_path</span><span class="p">)),</span>
-<span class="g g-Whitespace">    </span><span class="mi">248</span>     <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pooch/core.py:807,</span> in <span class="ni">stream_download</span><span class="nt">(url, fname, known_hash, downloader, pooch, retry_if_failed)</span>
-<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="c1"># Stream the file to a temporary so that we can safely check its</span>
-<span class="g g-Whitespace">    </span><span class="mi">805</span>     <span class="c1"># hash before overwriting the original.</span>
-<span class="g g-Whitespace">    </span><span class="mi">806</span>     <span class="k">with</span> <span class="n">temporary_file</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">807</span>         <span class="n">downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">pooch</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">808</span>         <span class="n">hash_matches</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>         <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/pooch/downloaders.py:221,</span> in <span class="ni">HTTPDownloader.__call__</span><span class="nt">(self, url, output_file, pooch, check_only)</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">221</span>     <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span>     <span class="n">content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chunk_size</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">223</span>     <span class="n">total</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"content-length"</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages/requests/models.py:1026,</span> in <span class="ni">Response.raise_for_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1021</span>     <span class="n">http_error_msg</span> <span class="o">=</span> <span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1022</span>         <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2"> Server Error: </span><span class="si">{</span><span class="n">reason</span><span class="si">}</span><span class="s2"> for url: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="si">}</span><span class="s2">"</span>
-<span class="g g-Whitespace">   </span><span class="mi">1023</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1025</span> <span class="k">if</span> <span class="n">http_error_msg</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1026</span>     <span class="k">raise</span> <span class="n">HTTPError</span><span class="p">(</span><span class="n">http_error_msg</span><span class="p">,</span> <span class="n">response</span><span class="o">=</span><span class="bp">self</span><span class="p">)</span>
-
-<span class="ne">HTTPError</span>: 500 Server Error: Internal Server Error for url: https://osf.io/45fev/download
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e86ec8dba4ca9a1e8404117bdd370fd830352d07164fe8093fff12330e371aa8
+Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
 </pre></div>
 </div>
-</div>
+<div class="output text_html"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>co2_ppm</th>
+<th>co2_1s_ppm</th>
+</tr>
+<tr>
+<th>age_gas_calBP</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>-51.03</th>
+<td>368.02</td>
+<td>0.06</td>
+</tr>
+<tr>
+<th>-48.00</th>
+<td>361.78</td>
+<td>0.37</td>
+</tr>
+<tr>
+<th>-46.28</th>
+<td>359.65</td>
+<td>0.10</td>
+</tr>
+<tr>
+<th>-44.41</th>
+<td>357.11</td>
+<td>0.16</td>
+</tr>
+<tr>
+<th>-43.08</th>
+<td>353.95</td>
+<td>0.04</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>803925.28</th>
+<td>202.92</td>
+<td>2.06</td>
+</tr>
+<tr>
+<th>804009.87</th>
+<td>207.50</td>
+<td>0.92</td>
+</tr>
+<tr>
+<th>804522.67</th>
+<td>204.86</td>
+<td>1.64</td>
+</tr>
+<tr>
+<th>805132.44</th>
+<td>202.23</td>
+<td>0.69</td>
+</tr>
+<tr>
+<th>805668.87</th>
+<td>207.29</td>
+<td>2.20</td>
+</tr>
+</tbody>
+</table>
+<p>1901 rows × 2 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1062,7 +1225,9 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
+<div class="cell_output docutils container">
+<img alt="../../../_images/80821dc759b94e3ee83cfcc2c40fc759974721a055f380707bf310086bbacc36.png" src="../../../_images/80821dc759b94e3ee83cfcc2c40fc759974721a055f380707bf310086bbacc36.png">
+</img></div>
 </div>
 <p>Now that we’ve taken a look at the two time series, let’s make a scatter plot between them and fit a linear regression model through the data.</p>
 <div class="cell docutils container">
@@ -1115,7 +1280,13 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pearson (r^2) value: 0.55 
+with a p-value of: 3.37e-47
+</pre></div>
+</div>
+<img alt="../../../_images/1d48dec5d7611d976e6102507e52c847d492fcb8d95fcb213fa390ab3d8d983e.png" src="../../../_images/1d48dec5d7611d976e6102507e52c847d492fcb8d95fcb213fa390ab3d8d983e.png">
+</img></div>
 </div>
 </div>
 <div class="section" id="figure-making-through-the-equity-lense">
