@@ -83,15 +83,15 @@ runs:
 
     - name: Install GEOS/Proj (dep for cartopy)
       run: |
-        sudo apt update
-        sudo apt install libgeos++-dev libgeos3.10.2 libgeos-c1v5 libgeos-dev libgeos-doc
-        sudo apt-get install proj-bin libproj-dev proj-data
+        sudo apt update 
+        sudo apt install -y libgeos++-dev libgeos3.10.2 libgeos-c1v5 libgeos-dev libgeos-doc
+        sudo apt-get install -y proj-bin libproj-dev proj-data
       shell: bash -l {0}
       
 
     - name: Install HDF5 (dep for netCDF4)
       run: |
-        sudo apt-get install libhdf5-serial-dev netcdf-bin libnetcdf-dev
+        sudo apt-get install -y libhdf5-serial-dev netcdf-bin libnetcdf-dev
       shell: bash -l {0}
 
     - name: Build/Install esmf/esmpy/xesmf
@@ -105,7 +105,7 @@ runs:
         # Append ENV VAR to GH ENV so that vars can persist between runs
         ESMFMKFILE=$(find $(pwd) -name 'esmf.mk')
         echo "ESMFMKFILE=$ESMFMKFILE" >> $GITHUB_ENV
-        sudo apt install mpich
+        sudo apt install -y mpich
         pip install mpi4py nose 
         cd src/addon/esmpy
         pip install -U numpy
