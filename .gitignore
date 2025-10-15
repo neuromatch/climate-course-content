@@ -91,3 +91,11 @@ tutorials/W1D4_Paleoclimate/euro2k_data
 *.lpd
 *.icloud
 .climatematch
+
+# Generated HTML files from Jupyter notebooks (to prevent large repository size)
+tutorials/**/*.html
+projects/**/*.html
+
+# Generated HTML files from Jupyter notebooks (to prevent large repository size)
+tutorials/**/*.html
+projects/**/*.html
