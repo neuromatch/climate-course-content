@@ -879,201 +879,244 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'https://osf.io/kmy5w/download' to file '/tmp/Shakun2015_SST.txt'.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e3af19895ffddb73a3d8b10b1cdb9e7f6412ab1e930e8f3154c146999b645ff9
-Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TimeoutError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:534,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">534</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connection.py:571,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span> <span class="c1"># Get the response from http.client.HTTPConnection</span>
+<span class="ne">--&gt; </span><span class="mi">571</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">573</span> <span class="k">try</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:1395,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1394</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1395</span>     <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1396</span> <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:325,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">325</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:286,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">285</span> <span class="k">def</span><span class="w"> </span><span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">286</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">"iso-8859-1"</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/socket.py:718,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">718</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">719</span> <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/ssl.py:1314,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1311</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1312</span>           <span class="s2">"non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1313</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1314</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1315</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/ssl.py:1166,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1165</span> <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1166</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="ne">TimeoutError</span>: The read operation timed out
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">ReadTimeoutError</span><span class="g g-Whitespace">                          </span>Traceback (most recent call last)
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/adapters.py:644,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">644</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">645</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">646</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">647</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">648</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">649</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">652</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">653</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">655</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">658</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:841,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">839</span>     <span class="n">new_e</span> <span class="o">=</span> <span class="n">ProtocolError</span><span class="p">(</span><span class="s2">"Connection aborted."</span><span class="p">,</span> <span class="n">new_e</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">841</span> <span class="n">retries</span> <span class="o">=</span> <span class="n">retries</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">842</span>     <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">new_e</span><span class="p">,</span> <span class="n">_pool</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">843</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">844</span> <span class="n">retries</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/util/retry.py:490,</span> in <span class="ni">Retry.increment</span><span class="nt">(self, method, url, response, error, _pool, _stacktrace)</span>
+<span class="g g-Whitespace">    </span><span class="mi">489</span> <span class="k">if</span> <span class="n">read</span> <span class="ow">is</span> <span class="kc">False</span> <span class="ow">or</span> <span class="n">method</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_method_retryable</span><span class="p">(</span><span class="n">method</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">490</span>     <span class="k">raise</span> <span class="n">reraise</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">error</span><span class="p">),</span> <span class="n">error</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">491</span> <span class="k">elif</span> <span class="n">read</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/util/util.py:39,</span> in <span class="ni">reraise</span><span class="nt">(tp, value, tb)</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span>         <span class="k">raise</span> <span class="n">value</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">39</span>     <span class="k">raise</span> <span class="n">value</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">finally</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:787,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">786</span> <span class="c1"># Make the request on the HTTPConnection object</span>
+<span class="ne">--&gt; </span><span class="mi">787</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">788</span>     <span class="n">conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span>     <span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span>     <span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">791</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">retries</span><span class="o">=</span><span class="n">retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">response_conn</span><span class="o">=</span><span class="n">response_conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="o">**</span><span class="n">response_kw</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">802</span> <span class="c1"># Everything went great!</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:536,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">536</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">537</span>     <span class="k">raise</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:367,</span> in <span class="ni">HTTPConnectionPool._raise_timeout</span><span class="nt">(self, err, url, timeout_value)</span>
+<span class="g g-Whitespace">    </span><span class="mi">366</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">SocketTimeout</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">367</span>     <span class="k">raise</span> <span class="n">ReadTimeoutError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">368</span>         <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"Read timed out. (read timeout=</span><span class="si">{</span><span class="n">timeout_value</span><span class="si">}</span><span class="s2">)"</span>
+<span class="g g-Whitespace">    </span><span class="mi">369</span>     <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
+<span class="g g-Whitespace">    </span><span class="mi">371</span> <span class="c1"># See the above comment about EAGAIN in Python 3.</span>
+
+<span class="ne">ReadTimeoutError</span>: HTTPSConnectionPool(host='osf.io', port=443): Read timed out. (read timeout=30)
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ReadTimeout</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">filename_Shakun2015_SST</span> <span class="o">=</span> <span class="s2">"Shakun2015_SST.txt"</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">url_Shakun2015_SST</span> <span class="o">=</span> <span class="s2">"https://osf.io/kmy5w/download"</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">SST</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_Shakun2015_SST</span><span class="p">,</span> <span class="n">filename_Shakun2015_SST</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">SST</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"Age"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">SST</span>
+
+<span class="nn">Cell In[3], line 11,</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="n">filelocation</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">return</span> <span class="n">file</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/core.py:239,</span> in <span class="ni">retrieve</span><span class="nt">(url, known_hash, fname, path, processor, downloader, progressbar)</span>
+<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">if</span> <span class="n">downloader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="n">downloader</span> <span class="o">=</span> <span class="n">choose_downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">progressbar</span><span class="o">=</span><span class="n">progressbar</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">239</span> <span class="n">stream_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">full_path</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">downloader</span><span class="p">,</span> <span class="n">pooch</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="n">known_hash</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="s2">"SHA256 hash of downloaded file: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span>         <span class="s2">"Use this value as the 'known_hash' argument of 'pooch.retrieve'"</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>    <span class="mi">247</span>         <span class="n">file_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">full_path</span><span class="p">)),</span>
+<span class="g g-Whitespace">    </span><span class="mi">248</span>     <span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/core.py:807,</span> in <span class="ni">stream_download</span><span class="nt">(url, fname, known_hash, downloader, pooch, retry_if_failed)</span>
+<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="c1"># Stream the file to a temporary so that we can safely check its</span>
+<span class="g g-Whitespace">    </span><span class="mi">805</span>     <span class="c1"># hash before overwriting the original.</span>
+<span class="g g-Whitespace">    </span><span class="mi">806</span>     <span class="k">with</span> <span class="n">temporary_file</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">807</span>         <span class="n">downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">pooch</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">808</span>         <span class="n">hash_matches</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">809</span>         <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/downloaders.py:220,</span> in <span class="ni">HTTPDownloader.__call__</span><span class="nt">(self, url, output_file, pooch, check_only)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>     <span class="c1"># pylint: enable=consider-using-with</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">220</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>     <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>     <span class="n">content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chunk_size</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">"""Sends a GET request.</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
+<span class="sd">   (...)     70     :rtype: requests.Response</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     """</span>
+<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">"get"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the 'with' statement we are sure the session is closed, thus we</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">"timeout"</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">"allow_redirects"</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:724,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">721</span> <span class="k">if</span> <span class="n">allow_redirects</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">722</span>     <span class="c1"># Redirect resolving generator.</span>
+<span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="n">gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_redirects</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">resp</span> <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:724,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">    </span><span class="mi">721</span> <span class="k">if</span> <span class="n">allow_redirects</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">722</span>     <span class="c1"># Redirect resolving generator.</span>
+<span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="n">gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_redirects</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">resp</span> <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:265,</span> in <span class="ni">SessionRedirectMixin.resolve_redirects</span><span class="nt">(self, resp, req, stream, timeout, verify, cert, proxies, yield_requests, **adapter_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">263</span>     <span class="k">yield</span> <span class="n">req</span>
+<span class="g g-Whitespace">    </span><span class="mi">264</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">265</span>     <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">266</span>         <span class="n">req</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">267</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">268</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">269</span>         <span class="n">verify</span><span class="o">=</span><span class="n">verify</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">270</span>         <span class="n">cert</span><span class="o">=</span><span class="n">cert</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">271</span>         <span class="n">proxies</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">272</span>         <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">273</span>         <span class="o">**</span><span class="n">adapter_kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">274</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="n">extract_cookies_to_jar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cookies</span><span class="p">,</span> <span class="n">prepared_request</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">raw</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="c1"># extract redirect url, if any, for the next loop</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/adapters.py:690,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">688</span>     <span class="k">raise</span> <span class="n">SSLError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">689</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">ReadTimeoutError</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">690</span>     <span class="k">raise</span> <span class="n">ReadTimeout</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">691</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">_InvalidHeader</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">692</span>     <span class="k">raise</span> <span class="n">InvalidHeader</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+
+<span class="ne">ReadTimeout</span>: HTTPSConnectionPool(host='osf.io', port=443): Read timed out. (read timeout=30)
 </pre></div>
 </div>
-<div class="output text_html"><div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>SST stack</th>
-<th>_18Op stack</th>
-<th>_18Ob stack</th>
-<th>_18Osw stack</th>
-<th>_18Osw uncertainty (2_)</th>
-<th>Deep ocean temperature</th>
-<th>Detrended sea-level equivalent</th>
-<th>Sea level uncertainty (2_)</th>
-<th>Unnamed: 9</th>
-<th>Unnamed: 10</th>
-</tr>
-<tr>
-<th>Age</th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>3</th>
-<td>1.2</td>
-<td>-0.81</td>
-<td>-0.88</td>
-<td>-0.58</td>
-<td>0.11</td>
-<td>0.0</td>
-<td>0</td>
-<td>14</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>6</th>
-<td>1.3</td>
-<td>-0.76</td>
-<td>-0.87</td>
-<td>-0.50</td>
-<td>0.11</td>
-<td>0.1</td>
-<td>-10</td>
-<td>14</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>9</th>
-<td>1.4</td>
-<td>-0.57</td>
-<td>-0.62</td>
-<td>-0.28</td>
-<td>0.11</td>
-<td>0.5</td>
-<td>-38</td>
-<td>14</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>12</th>
-<td>1.0</td>
-<td>-0.16</td>
-<td>-0.23</td>
-<td>0.06</td>
-<td>0.09</td>
-<td>0.1</td>
-<td>-80</td>
-<td>12</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>15</th>
-<td>0.1</td>
-<td>0.31</td>
-<td>0.27</td>
-<td>0.33</td>
-<td>0.09</td>
-<td>-1.4</td>
-<td>-115</td>
-<td>12</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<th>786</th>
-<td>0.3</td>
-<td>-0.10</td>
-<td>-0.34</td>
-<td>-0.14</td>
-<td>0.22</td>
-<td>0.1</td>
-<td>-50</td>
-<td>28</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>789</th>
-<td>-0.1</td>
-<td>0.03</td>
-<td>-0.21</td>
-<td>0.09</td>
-<td>0.29</td>
-<td>0.0</td>
-<td>-79</td>
-<td>36</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>792</th>
-<td>-0.3</td>
-<td>0.40</td>
-<td>0.26</td>
-<td>0.30</td>
-<td>0.23</td>
-<td>-0.8</td>
-<td>-106</td>
-<td>30</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>795</th>
-<td>-1.6</td>
-<td>0.37</td>
-<td>0.44</td>
-<td>0.07</td>
-<td>0.31</td>
-<td>-3.2</td>
-<td>-78</td>
-<td>39</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-<tr>
-<th>798</th>
-<td>-0.8</td>
-<td>0.23</td>
-<td>0.37</td>
-<td>0.17</td>
-<td>0.20</td>
-<td>-2.7</td>
-<td>-90</td>
-<td>26</td>
-<td>NaN</td>
-<td>NaN</td>
-</tr>
-</tbody>
-</table>
-<p>266 rows × 10 columns</p>
-</div></div></div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1095,97 +1138,249 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'https://osf.io/45fev/download' to file '/tmp/antarctica2015co2composite_cleaned.txt'.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e86ec8dba4ca9a1e8404117bdd370fd830352d07164fe8093fff12330e371aa8
-Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TimeoutError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:534,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">534</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connection.py:571,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span> <span class="c1"># Get the response from http.client.HTTPConnection</span>
+<span class="ne">--&gt; </span><span class="mi">571</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">573</span> <span class="k">try</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:1395,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1394</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1395</span>     <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1396</span> <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:325,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">324</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">325</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:286,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">285</span> <span class="k">def</span><span class="w"> </span><span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">286</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">"iso-8859-1"</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/socket.py:718,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">718</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">719</span> <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/ssl.py:1314,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1311</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1312</span>           <span class="s2">"non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1313</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1314</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1315</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/ssl.py:1166,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1165</span> <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1166</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="ne">TimeoutError</span>: The read operation timed out
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">ReadTimeoutError</span><span class="g g-Whitespace">                          </span>Traceback (most recent call last)
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/adapters.py:644,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">644</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">645</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">646</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">647</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">648</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">649</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">652</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">653</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">655</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">656</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">658</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:841,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">839</span>     <span class="n">new_e</span> <span class="o">=</span> <span class="n">ProtocolError</span><span class="p">(</span><span class="s2">"Connection aborted."</span><span class="p">,</span> <span class="n">new_e</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">841</span> <span class="n">retries</span> <span class="o">=</span> <span class="n">retries</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">842</span>     <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">new_e</span><span class="p">,</span> <span class="n">_pool</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">843</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">844</span> <span class="n">retries</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/util/retry.py:490,</span> in <span class="ni">Retry.increment</span><span class="nt">(self, method, url, response, error, _pool, _stacktrace)</span>
+<span class="g g-Whitespace">    </span><span class="mi">489</span> <span class="k">if</span> <span class="n">read</span> <span class="ow">is</span> <span class="kc">False</span> <span class="ow">or</span> <span class="n">method</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_method_retryable</span><span class="p">(</span><span class="n">method</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">490</span>     <span class="k">raise</span> <span class="n">reraise</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">error</span><span class="p">),</span> <span class="n">error</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">491</span> <span class="k">elif</span> <span class="n">read</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/util/util.py:39,</span> in <span class="ni">reraise</span><span class="nt">(tp, value, tb)</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span>         <span class="k">raise</span> <span class="n">value</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">39</span>     <span class="k">raise</span> <span class="n">value</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">finally</span><span class="p">:</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:787,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">786</span> <span class="c1"># Make the request on the HTTPConnection object</span>
+<span class="ne">--&gt; </span><span class="mi">787</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">788</span>     <span class="n">conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span>     <span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span>     <span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">791</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">retries</span><span class="o">=</span><span class="n">retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">response_conn</span><span class="o">=</span><span class="n">response_conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="o">**</span><span class="n">response_kw</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">802</span> <span class="c1"># Everything went great!</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:536,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">536</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">537</span>     <span class="k">raise</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:367,</span> in <span class="ni">HTTPConnectionPool._raise_timeout</span><span class="nt">(self, err, url, timeout_value)</span>
+<span class="g g-Whitespace">    </span><span class="mi">366</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">SocketTimeout</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">367</span>     <span class="k">raise</span> <span class="n">ReadTimeoutError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">368</span>         <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"Read timed out. (read timeout=</span><span class="si">{</span><span class="n">timeout_value</span><span class="si">}</span><span class="s2">)"</span>
+<span class="g g-Whitespace">    </span><span class="mi">369</span>     <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
+<span class="g g-Whitespace">    </span><span class="mi">371</span> <span class="c1"># See the above comment about EAGAIN in Python 3.</span>
+
+<span class="ne">ReadTimeoutError</span>: HTTPSConnectionPool(host='osf.io', port=443): Read timed out. (read timeout=30)
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ReadTimeout</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">filename_antarctica2015co2composite_cleaned</span> <span class="o">=</span> <span class="s2">"antarctica2015co2composite_cleaned.txt"</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">url_antarctica2015co2composite_cleaned</span> <span class="o">=</span> <span class="s2">"https://osf.io/45fev/download"</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">CO2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span>
+<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">pooch_load</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="n">url_antarctica2015co2composite_cleaned</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>         <span class="n">filename_antarctica2015co2composite_cleaned</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">CO2</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"age_gas_calBP"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">CO2</span>
+
+<span class="nn">Cell In[3], line 11,</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="n">filelocation</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">return</span> <span class="n">file</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/core.py:239,</span> in <span class="ni">retrieve</span><span class="nt">(url, known_hash, fname, path, processor, downloader, progressbar)</span>
+<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">if</span> <span class="n">downloader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="n">downloader</span> <span class="o">=</span> <span class="n">choose_downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">progressbar</span><span class="o">=</span><span class="n">progressbar</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">239</span> <span class="n">stream_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">full_path</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">downloader</span><span class="p">,</span> <span class="n">pooch</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="n">known_hash</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="s2">"SHA256 hash of downloaded file: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span>         <span class="s2">"Use this value as the 'known_hash' argument of 'pooch.retrieve'"</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>    <span class="mi">247</span>         <span class="n">file_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">full_path</span><span class="p">)),</span>
+<span class="g g-Whitespace">    </span><span class="mi">248</span>     <span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/core.py:807,</span> in <span class="ni">stream_download</span><span class="nt">(url, fname, known_hash, downloader, pooch, retry_if_failed)</span>
+<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="c1"># Stream the file to a temporary so that we can safely check its</span>
+<span class="g g-Whitespace">    </span><span class="mi">805</span>     <span class="c1"># hash before overwriting the original.</span>
+<span class="g g-Whitespace">    </span><span class="mi">806</span>     <span class="k">with</span> <span class="n">temporary_file</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">807</span>         <span class="n">downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">pooch</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">808</span>         <span class="n">hash_matches</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">809</span>         <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/downloaders.py:220,</span> in <span class="ni">HTTPDownloader.__call__</span><span class="nt">(self, url, output_file, pooch, check_only)</span>
+<span class="g g-Whitespace">    </span><span class="mi">218</span>     <span class="c1"># pylint: enable=consider-using-with</span>
+<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">220</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span>     <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>     <span class="n">content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chunk_size</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">"""Sends a GET request.</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
+<span class="sd">   (...)     70     :rtype: requests.Response</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     """</span>
+<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">"get"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the 'with' statement we are sure the session is closed, thus we</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">"timeout"</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">"allow_redirects"</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:724,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">721</span> <span class="k">if</span> <span class="n">allow_redirects</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">722</span>     <span class="c1"># Redirect resolving generator.</span>
+<span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="n">gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_redirects</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">resp</span> <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:724,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
+<span class="g g-Whitespace">    </span><span class="mi">721</span> <span class="k">if</span> <span class="n">allow_redirects</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">722</span>     <span class="c1"># Redirect resolving generator.</span>
+<span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="n">gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_redirects</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">resp</span> <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:265,</span> in <span class="ni">SessionRedirectMixin.resolve_redirects</span><span class="nt">(self, resp, req, stream, timeout, verify, cert, proxies, yield_requests, **adapter_kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">263</span>     <span class="k">yield</span> <span class="n">req</span>
+<span class="g g-Whitespace">    </span><span class="mi">264</span> <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">265</span>     <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">266</span>         <span class="n">req</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">267</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">268</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">269</span>         <span class="n">verify</span><span class="o">=</span><span class="n">verify</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">270</span>         <span class="n">cert</span><span class="o">=</span><span class="n">cert</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">271</span>         <span class="n">proxies</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">272</span>         <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">273</span>         <span class="o">**</span><span class="n">adapter_kwargs</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">274</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="n">extract_cookies_to_jar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cookies</span><span class="p">,</span> <span class="n">prepared_request</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">raw</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="c1"># extract redirect url, if any, for the next loop</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/adapters.py:690,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">688</span>     <span class="k">raise</span> <span class="n">SSLError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">689</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">ReadTimeoutError</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">690</span>     <span class="k">raise</span> <span class="n">ReadTimeout</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">691</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">_InvalidHeader</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">692</span>     <span class="k">raise</span> <span class="n">InvalidHeader</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+
+<span class="ne">ReadTimeout</span>: HTTPSConnectionPool(host='osf.io', port=443): Read timed out. (read timeout=30)
 </pre></div>
 </div>
-<div class="output text_html"><div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-<thead>
-<tr style="text-align: right;">
-<th></th>
-<th>co2_ppm</th>
-<th>co2_1s_ppm</th>
-</tr>
-<tr>
-<th>age_gas_calBP</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th>-51.03</th>
-<td>368.02</td>
-<td>0.06</td>
-</tr>
-<tr>
-<th>-48.00</th>
-<td>361.78</td>
-<td>0.37</td>
-</tr>
-<tr>
-<th>-46.28</th>
-<td>359.65</td>
-<td>0.10</td>
-</tr>
-<tr>
-<th>-44.41</th>
-<td>357.11</td>
-<td>0.16</td>
-</tr>
-<tr>
-<th>-43.08</th>
-<td>353.95</td>
-<td>0.04</td>
-</tr>
-<tr>
-<th>...</th>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr>
-<th>803925.28</th>
-<td>202.92</td>
-<td>2.06</td>
-</tr>
-<tr>
-<th>804009.87</th>
-<td>207.50</td>
-<td>0.92</td>
-</tr>
-<tr>
-<th>804522.67</th>
-<td>204.86</td>
-<td>1.64</td>
-</tr>
-<tr>
-<th>805132.44</th>
-<td>202.23</td>
-<td>0.69</td>
-</tr>
-<tr>
-<th>805668.87</th>
-<td>207.29</td>
-<td>2.20</td>
-</tr>
-</tbody>
-</table>
-<p>1901 rows × 2 columns</p>
-</div></div></div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1225,9 +1420,7 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/80821dc759b94e3ee83cfcc2c40fc759974721a055f380707bf310086bbacc36.png" src="../../../_images/80821dc759b94e3ee83cfcc2c40fc759974721a055f380707bf310086bbacc36.png">
-</img></div>
+
 </div>
 <p>Now that we’ve taken a look at the two time series, let’s make a scatter plot between them and fit a linear regression model through the data.</p>
 <div class="cell docutils container">
@@ -1280,13 +1473,7 @@ Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pearson (r^2) value: 0.55 
-with a p-value of: 3.37e-47
-</pre></div>
-</div>
-<img alt="../../../_images/1d48dec5d7611d976e6102507e52c847d492fcb8d95fcb213fa390ab3d8d983e.png" src="../../../_images/1d48dec5d7611d976e6102507e52c847d492fcb8d95fcb213fa390ab3d8d983e.png">
-</img></div>
+
 </div>
 </div>
 <div class="section" id="figure-making-through-the-equity-lense">
