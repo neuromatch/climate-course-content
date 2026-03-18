@@ -461,13 +461,11 @@ In addition to curriculum time, each day will have 3 hours of project time.
 
 On W2D5 you will additionally be working on your group projects during the time usually allocated for tutorials.
 
-#### **Schedule Change for 2025:** For all time slots, projects will come *after* course work.
-
 
 ### Professional Development Schedule
 
 
-A series of professional development events (viewing and discussing four Impact Talks) will take place during the 3-hour project time.
+A series of professional development events (viewing and discussing Impact Talks) will take place during the 3-hour project time.
 
 
 * Impact talk and discussion will take place during the Project Sessions on W2D1.
