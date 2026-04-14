@@ -1,5 +1,5 @@
 name: 'Setup Climate-Specific Dependencies'
-description: 'Install conda-only climate packages (esmpy, climlab-rrtmg) into the pip Python env via micromamba'
+description: 'Install conda-only climate packages (esmpy, climlab-rrtmg) via micromamba and expose them to the pip Python env'
 
 inputs:
   skip-esmpy:
@@ -18,25 +18,36 @@ runs:
       uses: mamba-org/setup-micromamba@v3
       with:
         micromamba-version: 'latest'
-        # Do not create an environment - we only want the micromamba binary
-        # to install conda packages into the existing pip Python prefix
+        # Create a minimal env with just the conda-only packages
+        environment-name: climate-deps
+        create-args: >-
+          python=3.10
+          esmpy
+          climlab-rrtmg
         init-shell: none
         generate-run-shell: false
         cache-downloads: true
-        cache-environment: false
+        cache-environment: true
 
-    - name: Install esmpy into pip Python prefix
-      if: inputs.skip-esmpy != 'true'
+    - name: Add conda env site-packages to PYTHONPATH
       shell: bash
       run: |
-        # Install into the same prefix that actions/setup-python created
-        # $pythonLocation is set by actions/setup-python
-        micromamba install --prefix "$pythonLocation" -c conda-forge esmpy --yes
-        python -c "import esmpy; print(f'esmpy version: {esmpy.__version__}')"
+        # Find the site-packages directory in the micromamba env
+        CONDA_SP=$(micromamba run -n climate-deps python -c "import site; print(site.getsitepackages()[0])")
+        echo "Conda site-packages: $CONDA_SP"
 
-    - name: Install climlab-rrtmg into pip Python prefix
-      if: inputs.skip-climlab-rrtmg != 'true'
+        # Append to PYTHONPATH so the pip Python can import from it
+        echo "PYTHONPATH=${CONDA_SP}:${PYTHONPATH}" >> $GITHUB_ENV
+
+        # Also set ESMFMKFILE which xesmf requires
+        ESMF_MK=$(find "$CONDA_SP/../.." -name "esmf.mk" 2>/dev/null | head -1)
+        if [ -n "$ESMF_MK" ]; then
+          echo "ESMFMKFILE=$ESMF_MK" >> $GITHUB_ENV
+          echo "Found esmf.mk at: $ESMF_MK"
+        fi
+
+    - name: Verify imports
       shell: bash
       run: |
-        micromamba install --prefix "$pythonLocation" -c conda-forge climlab-rrtmg --yes
-        python -c "import climlab_rrtmg; print('climlab-rrtmg installed')"
+        python -c "import esmpy; print(f'esmpy: {esmpy.__version__}')"
+        python -c "import climlab_rrtmg; print('climlab-rrtmg: OK')"
