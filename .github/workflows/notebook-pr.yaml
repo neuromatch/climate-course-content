@@ -24,9 +24,6 @@ jobs:
 
   setup:
     runs-on: ubuntu-latest
-    container:
-      image: iamzoltan/climatematch-notebook:latest
-      options: --user root
     outputs:
       notebooks: ${{ steps.set-matrix.outputs.notebooks }}
       has_notebooks: ${{ steps.set-matrix.outputs.has_notebooks }}
@@ -40,9 +37,6 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
           ref: ${{ github.head_ref }}
-
-      - name: Mark repo as safe for git
-        run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
 
       - name: Get commit message
         id: get-commit
@@ -111,9 +105,6 @@ jobs:
     needs: setup
     if: needs.setup.outputs.skip_ci != 'true' && needs.setup.outputs.has_notebooks == 'true'
     runs-on: ubuntu-latest
-    container:
-      image: iamzoltan/climatematch-notebook:latest
-      options: --user root
     timeout-minutes: 120
     strategy:
       fail-fast: false
@@ -206,9 +197,6 @@ jobs:
     needs: [setup, process]
     if: always() && needs.setup.outputs.skip_ci != 'true' && needs.setup.outputs.has_notebooks == 'true'
     runs-on: ubuntu-latest
-    container:
-      image: iamzoltan/climatematch-notebook:latest
-      options: --user root
     steps:
       - name: Checkout
         uses: actions/checkout@v4
