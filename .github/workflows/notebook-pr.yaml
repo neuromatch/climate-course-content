@@ -129,6 +129,9 @@ jobs:
       - name: Setup rendering dependencies
         uses: ./.github/actions/setup-rendering-deps
 
+      - name: Setup climate dependencies
+        uses: ./.github/actions/setup-climate-deps
+
       - name: Write CDS API credentials
         env:
           CDSAPI_KEY: ${{ secrets.CDSAPI_KEY }}

@@ -12,8 +12,9 @@ shapely==1.8.5
 cartopy
 pythia-datasets
 pooch
-# climlab==0.8.2
-# climlab-rrtmg
+climlab
+xesmf
+# climlab-rrtmg  (conda-only, installed by setup-climate-deps action)
 cftime
 geopandas
 intake

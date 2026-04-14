@@ -1,0 +1,37 @@
+name: 'Setup Climate-Specific Dependencies'
+description: 'Install conda-only climate packages (esmpy, climlab-rrtmg) via micromamba'
+
+inputs:
+  skip-esmpy:
+    description: 'Skip esmpy installation (set true if notebook does not use xesmf)'
+    required: false
+    default: 'false'
+  skip-climlab-rrtmg:
+    description: 'Skip climlab-rrtmg installation (set true if notebook does not use rrtmg)'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup micromamba
+      uses: mamba-org/setup-micromamba@v3
+      with:
+        micromamba-version: 'latest'
+        init-shell: bash
+        cache-downloads: true
+        cache-environment: false
+
+    - name: Install esmpy from conda-forge
+      if: inputs.skip-esmpy != 'true'
+      shell: bash -el {0}
+      run: |
+        micromamba install -n base -c conda-forge esmpy --yes
+        python -c "import esmpy; print(f'esmpy version: {esmpy.__version__}')"
+
+    - name: Install climlab-rrtmg from conda-forge
+      if: inputs.skip-climlab-rrtmg != 'true'
+      shell: bash -el {0}
+      run: |
+        micromamba install -n base -c conda-forge climlab-rrtmg --yes
+        python -c "import climlab_rrtmg; print('climlab-rrtmg installed')"
