@@ -85,7 +85,11 @@ runs:
         cat ci/requirements.txt
         pip install -r ci/requirements.txt
 
-        python -c "import nbformat; print(f'nbformat version: {nbformat.__version__}')"
+        BRANCH="${{ steps.detect-branch.outputs.branch }}"
+        echo "Installing nmaci package from branch: $BRANCH"
+        pip install "git+https://github.com/neuromatch/nmaci.git@${BRANCH}"
+
+        python -c "import nmaci; import nbformat; print(f'nmaci installed, nbformat version: {nbformat.__version__}')"
 
     - name: Ignore ci directory
       shell: bash
