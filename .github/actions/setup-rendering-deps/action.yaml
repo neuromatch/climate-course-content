@@ -1,0 +1,35 @@
+name: 'Setup Rendering Dependencies'
+description: 'Install fonts and graphviz for notebook rendering (backend libs provided by container)'
+
+inputs:
+  skip-fonts:
+    description: 'Skip XKCD font installation'
+    required: false
+    default: 'false'
+  skip-graphviz:
+    description: 'Skip graphviz installation'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Cache fonts
+      id: cache-fonts
+      uses: actions/cache@v4
+      with:
+        path: /usr/share/fonts/truetype/humor-sans
+        key: fonts-${{ runner.os }}-humor-sans-v1
+
+    - name: Install XKCD fonts
+      if: ${{ inputs.skip-fonts != 'true' && steps.cache-fonts.outputs.cache-hit != 'true' }}
+      shell: bash
+      run: |
+        sudo apt-get update -yq
+        sudo apt-get install -y fonts-humor-sans
+        # Clear matplotlib font cache so it picks up the new font
+        rm -f "$HOME/.matplotlib/fontList.cache"
+
+    - name: Install Graphviz
+      if: ${{ inputs.skip-graphviz != 'true' }}
+      uses: tlylt/install-graphviz@v1

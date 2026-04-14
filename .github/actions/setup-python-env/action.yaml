@@ -1,0 +1,23 @@
+name: 'Setup Python Environment'
+description: 'Install project requirements (climate deps provided by container)'
+
+inputs:
+  python-version:
+    description: 'Python version (informational only, container provides Python)'
+    required: false
+    default: '3.10'
+
+outputs:
+  cache-hit:
+    description: 'Always empty — no caching (container provides deps)'
+    value: ''
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install requirements
+      id: setup-python
+      shell: bash
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
