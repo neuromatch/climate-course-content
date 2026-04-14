@@ -1,5 +1,5 @@
 name: 'Setup Climate-Specific Dependencies'
-description: 'Install conda-only climate packages (esmpy, climlab-rrtmg) via micromamba'
+description: 'Install conda-only climate packages (esmpy, climlab-rrtmg) into the pip Python env via micromamba'
 
 inputs:
   skip-esmpy:
@@ -14,24 +14,29 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Setup micromamba
+    - name: Install micromamba binary
       uses: mamba-org/setup-micromamba@v3
       with:
         micromamba-version: 'latest'
-        init-shell: bash
+        # Do not create an environment - we only want the micromamba binary
+        # to install conda packages into the existing pip Python prefix
+        init-shell: none
+        generate-run-shell: false
         cache-downloads: true
         cache-environment: false
 
-    - name: Install esmpy from conda-forge
+    - name: Install esmpy into pip Python prefix
       if: inputs.skip-esmpy != 'true'
-      shell: bash -el {0}
+      shell: bash
       run: |
-        micromamba install -n base -c conda-forge esmpy --yes
+        # Install into the same prefix that actions/setup-python created
+        # $pythonLocation is set by actions/setup-python
+        micromamba install --prefix "$pythonLocation" -c conda-forge esmpy --yes
         python -c "import esmpy; print(f'esmpy version: {esmpy.__version__}')"
 
-    - name: Install climlab-rrtmg from conda-forge
+    - name: Install climlab-rrtmg into pip Python prefix
       if: inputs.skip-climlab-rrtmg != 'true'
-      shell: bash -el {0}
+      shell: bash
       run: |
-        micromamba install -n base -c conda-forge climlab-rrtmg --yes
+        micromamba install --prefix "$pythonLocation" -c conda-forge climlab-rrtmg --yes
         python -c "import climlab_rrtmg; print('climlab-rrtmg installed')"
