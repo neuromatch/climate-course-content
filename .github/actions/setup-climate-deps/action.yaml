@@ -40,13 +40,18 @@ runs:
         # Copy only the specific packages we need — avoids ABI conflicts from
         # conda's numpy/pandas being added to PYTHONPATH alongside pip's versions
         for pkg in esmpy ESMF climlab_rrtmg; do
+          # Copy package directory
           if [ -d "$CONDA_SP/$pkg" ]; then
             cp -r "$CONDA_SP/$pkg" "$PIP_SP/"
             echo "Copied $pkg"
           fi
-          # Also copy any top-level .so files (e.g. ESMF.cpython-*.so)
+          # Copy any top-level .so files (e.g. ESMF.cpython-*.so)
           for f in "$CONDA_SP"/${pkg}*.so "$CONDA_SP"/${pkg}*.py; do
             [ -f "$f" ] && cp "$f" "$PIP_SP/" && echo "Copied $(basename $f)"
+          done
+          # Copy dist-info so importlib.metadata can find the package
+          for d in "$CONDA_SP"/${pkg}-*.dist-info "$CONDA_SP"/${pkg//_/-}-*.dist-info; do
+            [ -d "$d" ] && cp -r "$d" "$PIP_SP/" && echo "Copied $(basename $d)"
           done
         done
 
