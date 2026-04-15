@@ -12,9 +12,7 @@ shapely==1.8.5
 cartopy
 pythia-datasets
 pooch
-climlab
-xesmf
-# climlab-rrtmg  (conda-only, installed by setup-climate-deps action)
+# climlab, xesmf, climlab-rrtmg installed via environment.yml (conda-forge)
 cftime
 geopandas
 intake

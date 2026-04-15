@@ -70,7 +70,7 @@ runs:
         rm -r "nmaci-${BRANCH}" "${BRANCH}.tar.gz"
 
     - name: Install nmaci dependencies
-      shell: bash
+      shell: bash -el {0}
       run: |
         set -e
         pip install --upgrade pip
@@ -92,12 +92,12 @@ runs:
         python -c "import nmaci; import nbformat; print(f'nmaci installed, nbformat version: {nbformat.__version__}')"
 
     - name: Ignore ci directory
-      shell: bash
+      shell: bash -el {0}
       run: grep -qxF 'ci/' .gitignore || echo 'ci/' >> .gitignore
 
     - name: Stub ipywidgets for headless kernel execution
       if: inputs.stub-widgets == 'true'
-      shell: bash
+      shell: bash -el {0}
       run: |
         mkdir -p ~/.ipython/profile_default/startup
         cp ${{ github.action_path }}/stub_widgets.py ~/.ipython/profile_default/startup/00-stub-widgets.py

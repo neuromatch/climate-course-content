@@ -20,6 +20,10 @@ env:
   NMA_MAIN_BRANCH: main
   ORG: neuromatch
 
+defaults:
+  run:
+    shell: bash -el {0}
+
 jobs:
 
   setup:
@@ -128,9 +132,6 @@ jobs:
 
       - name: Setup rendering dependencies
         uses: ./.github/actions/setup-rendering-deps
-
-      - name: Setup climate dependencies
-        uses: ./.github/actions/setup-climate-deps
 
       - name: Write CDS API credentials
         env:

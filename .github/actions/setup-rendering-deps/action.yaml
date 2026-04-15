@@ -1,5 +1,5 @@
 name: 'Setup Rendering Dependencies'
-description: 'Install system libraries, fonts, and graphviz for notebook rendering'
+description: 'Install fonts and graphviz for notebook rendering'
 
 inputs:
   skip-fonts:
@@ -14,16 +14,6 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Install cartopy system dependencies
-      shell: bash
-      run: |
-        sudo apt-get update -yq
-        sudo apt-get install -y \
-          libgeos-dev \
-          libproj-dev \
-          proj-data \
-          proj-bin
-
     - name: Cache fonts
       id: cache-fonts
       uses: actions/cache@v4
@@ -35,6 +25,7 @@ runs:
       if: ${{ inputs.skip-fonts != 'true' && steps.cache-fonts.outputs.cache-hit != 'true' }}
       shell: bash
       run: |
+        sudo apt-get update -yq
         sudo apt-get install -y fonts-humor-sans
         # Clear matplotlib font cache so it picks up the new font
         rm -f "$HOME/.matplotlib/fontList.cache"

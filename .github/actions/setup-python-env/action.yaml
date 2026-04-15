@@ -1,32 +1,27 @@
 name: 'Setup Python Environment'
-description: 'Set up Python with caching and install project requirements'
+description: 'Set up Python environment via micromamba using environment.yml'
 
 inputs:
   python-version:
-    description: 'Python version to install'
+    description: 'Python version (informational only, environment.yml specifies the version)'
     required: false
     default: '3.10'
 
 outputs:
   cache-hit:
-    description: 'Whether pip cache was hit'
-    value: ${{ steps.setup-python.outputs.cache-hit }}
+    description: 'Whether the conda environment cache was hit'
+    value: ${{ steps.setup-micromamba.outputs.cache-hit }}
 
 runs:
   using: 'composite'
   steps:
-    - name: Set up Python
-      id: setup-python
-      uses: actions/setup-python@v5
+    - name: Setup micromamba and install environment
+      id: setup-micromamba
+      uses: mamba-org/setup-micromamba@v3
       with:
-        python-version: ${{ inputs.python-version }}
-        cache: 'pip'
-        cache-dependency-path: requirements.txt
-
-    - name: Upgrade pip
-      shell: bash
-      run: pip install --upgrade pip wheel
-
-    - name: Install requirements
-      shell: bash
-      run: pip install -r requirements.txt
+        micromamba-version: 'latest'
+        environment-file: environment.yml
+        init-shell: bash
+        cache-downloads: true
+        cache-environment: true
+        post-cleanup: 'all'
