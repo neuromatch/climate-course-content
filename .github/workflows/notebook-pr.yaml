@@ -167,11 +167,9 @@ jobs:
 
           echo "::group::Notebook execution output"
           python ci/process_notebooks.py "${{ matrix.notebook }}" $execflag
-          exit_code=$?
           echo "::endgroup::"
 
           echo "Completed at: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-          exit $exit_code
 
       - name: Get tutorial directory
         id: get-dir
