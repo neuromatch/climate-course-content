@@ -1,0 +1,64 @@
+name: climatematch
+channels:
+ - conda-forge
+ - nodefaults
+dependencies:
+ - cartopy
+ - cdsapi
+ - cfgrib
+ - climlab
+ - climlab-rrtmg
+ - cmocean
+ - eofs
+ - esmf
+ - esmpy
+ - flox
+ - fsspec
+ - gcsfs
+ - geopandas
+ - geoviews-core
+ - gsw
+ - h5netcdf
+ - h5py
+ - holoviews
+ - intake
+ - intake-esm
+ - intake-xarray
+ - ipykernel>=6.21.2
+ - ipywidgets
+ - matplotlib-base
+ - metpy
+ - nc-time-axis
+ - netcdf4
+ - nltk
+ - numpy
+ - openpyxl
+ - pandas
+ - panel
+ - pip
+ - plotly
+ - pooch
+ - pythia-datasets
+ - python-graphviz
+ - pytorch
+ - pyworld3
+ - s3fs
+ - scikit-learn
+ - scipy
+ - seaborn
+ - texttable
+ - torchvision
+ - wordcloud
+ - xarray==2024.2.0
+ - xarray-datatree
+ - xesmf
+ - xmip
+ - zarr
+ - pip:
+   - afinn
+   - lipd
+   - pyleoclim
+   - "mystatsfunctions @ https://github.com/njleach/mystatsfunctions/archive/main.zip"
+   - "dicelib @ https://github.com/mptouzel/PyDICE/archive/master.zip"
+   - vibecheck
+   - datatops

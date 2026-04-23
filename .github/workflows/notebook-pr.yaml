@@ -11,7 +11,7 @@ on:
       - .github/actions/setup-python-env/action.yaml
       - .github/actions/setup-ci-tools/action.yaml
       - .github/actions/setup-rendering-deps/action.yaml
-      - 'environment.yml'
+      - 'ci-environment.yml'
       - '**/requirements.txt'
 
 env:

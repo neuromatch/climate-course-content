@@ -19,8 +19,8 @@ runs:
       id: setup-micromamba
       uses: mamba-org/setup-micromamba@v3
       with:
-        micromamba-version: '2.3.2-0'
-        environment-file: environment.yml
+        micromamba-version: 'latest'
+        environment-file: ci-environment.yml
         init-shell: bash
         cache-downloads: true
         cache-environment: true
