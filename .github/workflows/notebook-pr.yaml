@@ -11,8 +11,7 @@ on:
       - .github/actions/setup-python-env/action.yaml
       - .github/actions/setup-ci-tools/action.yaml
       - .github/actions/setup-rendering-deps/action.yaml
-      - 'ci-environment.yml'
-      - '**/requirements.txt'
+      - 'environment.yml'
 
 env:
   NB_KERNEL: python

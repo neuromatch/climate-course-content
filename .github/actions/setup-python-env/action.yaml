@@ -20,7 +20,7 @@ runs:
       uses: mamba-org/setup-micromamba@v3
       with:
         micromamba-version: 'latest'
-        environment-file: ci-environment.yml
+        environment-file: environment.yml
         init-shell: bash
         cache-downloads: true
         cache-environment: true
