@@ -1,0 +1,27 @@
+name: 'Setup Python Environment'
+description: 'Set up Python environment via micromamba using environment.yml'
+
+inputs:
+  python-version:
+    description: 'Python version (informational only, environment.yml specifies the version)'
+    required: false
+    default: '3.10'
+
+outputs:
+  cache-hit:
+    description: 'Whether the conda environment cache was hit'
+    value: ${{ steps.setup-micromamba.outputs.cache-hit }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup micromamba and install environment
+      id: setup-micromamba
+      uses: mamba-org/setup-micromamba@v3
+      with:
+        micromamba-version: 'latest'
+        environment-file: environment.yml
+        init-shell: bash
+        cache-downloads: true
+        cache-environment: true
+        post-cleanup: 'all'
