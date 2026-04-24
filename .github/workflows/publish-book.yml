@@ -1,7 +1,6 @@
 name: publish-book
 
 on:
-
   workflow_dispatch:
 
 env:
@@ -9,68 +8,63 @@ env:
   NMA_REPO: climate-course-content
   NMA_MAIN_BRANCH: main
   PREREQ_INTRO: ClimateScience
-  
   ORG: neuromatch
 
-# This job installs dependencies, build the book, and pushes it to `gh-pages`
+# This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
-  build-books-and-deploy:
-    runs-on: climate_runner
-    # runs-on: ubuntu-latest
+  build-and-deploy-book:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
-          persist-credentials: false
           fetch-depth: 0
-          ref: ${{ github.head_ref }}
 
       - name: Get commit message
         run: |
           readonly local msg=$(git log -1 --pretty=format:"%s")
           echo "COMMIT_MESSAGE=$msg" >> $GITHUB_ENV
-          
-      - name: Setup
-        uses: ./.github/actions/setup
-        with:
-          force_env_update: 'false'
 
-      # Cache not currently working. May conflict with Cache in setup
-      # Unsure if the cache in setup works properly either
-      # - name: Cache Jupyter Build Artifacts
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: |
-      #       ./book/_build/html/
-      #       ./.jupyter_cache
-      #     key: ${{ runner.os }}-jupyter-${{ hashFiles('**/*.ipynb') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-jupyter-
+      - name: Setup Python environment
+        uses: ./.github/actions/setup-python-env
+
+      - name: Install Jupyter Book
+        run: pip install jupyter-book==0.14.0 ghp-import
+
+      - name: Setup CI tools
+        uses: ./.github/actions/setup-ci-tools
+        with:
+          commit-message: ${{ env.COMMIT_MESSAGE }}
+          stub-widgets: 'false'
+
+      - name: Setup rendering dependencies
+        if: "!contains(env.COMMIT_MESSAGE, 'skip ci')"
+        uses: ./.github/actions/setup-rendering-deps
+
+      - name: Get date for cache rotation
+        id: cache-date
+        run: echo "date=$(date +'%Y-%m')" >> $GITHUB_OUTPUT
+
+      - name: Cache Jupyter execution
+        uses: actions/cache@v4
+        with:
+          path: book/.jupyter-cache
+          key: jupyter-exec-${{ steps.cache-date.outputs.date }}-${{ hashFiles('tutorials/**/*.ipynb', 'environment.yml') }}
+          restore-keys: |
+            jupyter-exec-${{ steps.cache-date.outputs.date }}-
+            jupyter-exec-
 
       - name: Build student book
         run: |
-          # TODO: get this working with a general CI
-          # python ci/generate_book_climate.py student
           python ci/generate_book.py student
           jupyter-book toc migrate /home/runner/work/climate-course-content/climate-course-content/book/_toc.yml -o /home/runner/work/climate-course-content/climate-course-content/book/_toc.yml
           ln -s ../tutorials book/tutorials
           ln -s ../projects book/projects
-          # ln -s ../prereqs book/prereqs
           jupyter-book build book
           python ci/parse_html_for_errors.py student
-        shell: bash -l {0}
 
-      # NOTE: we may be able to push striaght from here. ie skip the last flow
-      - name: Commit book
+      - name: Publish to gh-pages
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          ghp-import -n -c "comptools.climatematch.io" -m "Update course book" book/_build/html
-          git checkout -f gh-pages
-      
-      - name: Publish to gh-pages
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          force: true
+          ghp-import -n -p -f -c "comptools.climatematch.io" -m "Update course book" book/_build/html
