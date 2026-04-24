@@ -3,6 +3,13 @@ name: publish-book
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+defaults:
+  run:
+    shell: bash -el {0}
+
 env:
   NB_KERNEL: python
   NMA_REPO: climate-course-content
@@ -56,12 +63,12 @@ jobs:
 
       - name: Build student book
         run: |
-          python ci/generate_book.py student
+          nmaci generate-book student
           jupyter-book toc migrate /home/runner/work/climate-course-content/climate-course-content/book/_toc.yml -o /home/runner/work/climate-course-content/climate-course-content/book/_toc.yml
           ln -s ../tutorials book/tutorials
           ln -s ../projects book/projects
           jupyter-book build book
-          python ci/parse_html_for_errors.py student
+          nmaci parse-html student
 
       - name: Publish to gh-pages
         run: |
