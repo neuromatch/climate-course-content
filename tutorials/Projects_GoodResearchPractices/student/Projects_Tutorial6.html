@@ -1,34 +1,35 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html data-content_root="" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Docutils 0.18.1: http://docutils.sourceforge.net/" name="generator"/>
 <title>Tutorial 6: Implementing the Analysis — Climatematch Academy: Computational Tools for Climate Science</title>
 <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
 <!-- Loaded before other Sphinx assets -->
-<link href="../../../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet"/>
-<link href="../../../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet"/>
-<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet"/>
-<link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet"/>
-<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
-<link href="../../../_static/pygments.css" rel="stylesheet" type="text/css">
-<link href="../../../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" rel="stylesheet" type="text/css">
-<link href="../../../_static/togglebutton.css" rel="stylesheet" type="text/css">
-<link href="../../../_static/copybutton.css" rel="stylesheet" type="text/css">
-<link href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css">
-<link href="../../../_static/sphinx-thebe.css" rel="stylesheet" type="text/css">
-<link href="../../../_static/custom.css" rel="stylesheet" type="text/css">
+<link href="../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
+<link href="../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
+<link href="../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" rel="preload" type="font/woff2"/>
+<link href="../../../_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/togglebutton.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/copybutton.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/sphinx-thebe.css" rel="stylesheet" type="text/css"/>
+<link href="../../../_static/custom.css" rel="stylesheet" type="text/css"/>
 <link href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" rel="stylesheet" type="text/css"/>
 <!-- Pre-loaded scripts that we'll load fully later -->
-<link as="script" href="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94" rel="preload"/>
-<link as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94" rel="preload"/>
+<link as="script" href="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
+<link as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" rel="preload"/>
+<script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
 <script src="../../../_static/jquery.js"></script>
 <script src="../../../_static/underscore.js"></script>
@@ -36,7 +37,7 @@
 <script src="../../../_static/doctools.js"></script>
 <script src="../../../_static/clipboard.min.js"></script>
 <script src="../../../_static/copybutton.js"></script>
-<script src="../../../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+<script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
 <script>let toggleHintShow = 'Click to show';</script>
 <script>let toggleHintHide = 'Click to hide';</script>
 <script>let toggleOpenOnPrint = 'true';</script>
@@ -50,20 +51,23 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
 <script async="async" src="../../../_static/sphinx-thebe.js"></script>
 <script>DOCUMENTATION_OPTIONS.pagename = 'tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6';</script>
-<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon">
-<link href="../../../genindex.html" rel="index" title="Index">
+<link href="../../../_static/cma-logo-square-4xp.png" rel="shortcut icon"/>
+<link href="../../../genindex.html" rel="index" title="Index"/>
 <link href="../../../search.html" rel="search" title="Search"/>
 <link href="Projects_Tutorial7.html" rel="next" title="Tutorial 7: Interpreting the Results"/>
 <link href="Projects_Tutorial5.html" rel="prev" title="Tutorial 5: Drafting the Analysis"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="en" name="docsearch:language"/>
-</link></link></link></link></link></link></link></link></link></head>
-<body data-default-mode="" data-offset="180" data-spy="scroll" data-target="#bd-toc-nav">
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<input class="sidebar-toggle" id="__primary" name="__primary" type="checkbox"/>
-<label class="overlay overlay-primary" for="__primary"></label>
-<input class="sidebar-toggle" id="__secondary" name="__secondary" type="checkbox"/>
-<label class="overlay overlay-secondary" for="__secondary"></label>
+</head>
+<body data-bs-root-margin="0px 0px -60%" data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-default-mode="" data-offset="180">
+<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>Back to top</button>
+<input class="sidebar-toggle" id="pst-primary-sidebar-checkbox" type="checkbox"/>
+<label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+<input class="sidebar-toggle" id="pst-secondary-sidebar-checkbox" type="checkbox"/>
+<label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
 <div class="search-button__wrapper">
 <div class="search-button__overlay"></div>
 <div class="search-button__search-container">
@@ -71,338 +75,25 @@ const thebe_selector_output = ".output, .cell_output"
 <i class="fa-solid fa-magnifying-glass"></i>
 <input aria-label="Search this book..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." spellcheck="false" type="search"/>
 <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
+</form></div>
 </div>
+<div class="pst-async-banner-revealer d-none">
+<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
 </div>
-<nav class="bd-header navbar navbar-expand-lg bd-navbar" id="navbar-main"><div class="bd-header__inner bd-page-width">
-<label class="sidebar-toggle primary-toggle" for="__primary">
-<span class="fa-solid fa-bars"></span>
-</label>
-<div id="navbar-start">
-<a class="navbar-brand logo" href="../../intro.html">
-<img alt="Logo image" class="logo__image only-light" src="../../../_static/cma-logo-square-4xp.png"/>
-<img alt="Logo image" class="logo__image only-dark" src="../../../_static/cma-logo-square-4xp.png"/>
-</a>
-</div>
-<div class="col-lg-9 navbar-header-items">
-<div class="mr-auto" id="navbar-center">
-<div class="navbar-center-item">
-<nav class="navbar-nav">
-<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
-        Site Navigation
-    </p>
-<ul class="navbar-nav" id="navbar-main-elements">
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../Schedule/schedule_intro.html">
-                        Schedule
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../TechnicalHelp/tech_intro.html">
-                        Technical Help
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../TechnicalHelp/Links_Policy.html">
-                        Quick links and policies
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../prereqs/ClimateScience.html">
-                        Prerequisites and preparatory materials for Computational Tools for Climate Science
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">
-                        Climate System Overview (W1D1)
-                      </a>
-</li>
-<div class="nav-item dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="btn dropdown-toggle nav-item" data-toggle="dropdown" type="button">
-                    More
-                </button>
-<div class="dropdown-menu">
-<li class="nav-item current active">
-<a class="nav-link nav-internal" href="../chapter_title.html">
-                        Good Research Practices (Projects)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W1D2_Ocean-AtmosphereReanalysis/chapter_title.html">
-                        Ocean-Atmosphere Reanalysis (W1D2)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W1D3_RemoteSensing/chapter_title.html">
-                        Remote Sensing (W1D3)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W1D4_Paleoclimate/chapter_title.html">
-                        Paleoclimate (W1D4)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W1D5_IntroductiontoClimateModeling/chapter_title.html">
-                        Introduction to Climate Modeling (W1D5)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W2D1_AnEnsembleofFutures/chapter_title.html">
-                        An Ensemble of Futures (W2D1)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W2D2_TheSocioeconomicsofClimateChange/chapter_title.html">
-                        The Socioeconomics of Climate Change (W2D2)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W2D3_ExtremesandVariability/chapter_title.html">
-                        Extremes and Variability (W2D3)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W2D4_AIandClimateChange/chapter_title.html">
-                        AI and Climate Change (W2D4)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/README.html">
-                        Introduction
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/keynote.html">
-                        Project Day keynote (W2D5)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/docs/project_guidance.html">
-                        Daily guide for projects
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/docs/datasets_overview.html">
-                        Project materials
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
-                        Continuing your project after the course
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/docs/past_projects_overview.html">
-                        Past projects
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/professional_development/README.html">
-                        Introduction
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/professional_development/impact_talks.html">
-                        Impact Talks
-                      </a>
-</li>
-</div>
-</div>
-</ul>
-</nav>
-</div>
-</div>
-<div id="navbar-end">
-<div class="navbar-end-item navbar-persistent--container">
-<button aria-label="Search" class="btn btn-sm navbar-btn search-button search-button__button" data-toggle="tooltip" title="Search">
-<i class="fa-solid fa-magnifying-glass"></i>
-</button>
-</div>
-<div class="navbar-end-item">
-<button aria-label="light/dark" class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" data-toggle="tooltip" title="light/dark">
-<span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-<span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-<span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-</button>
-</div>
-<div class="navbar-end-item">
-<ul aria-label="Icon Links" class="navbar-nav" id="navbar-icon-links">
-</ul>
-</div>
-</div>
-</div>
-<div class="navbar-persistent--mobile">
-<button aria-label="Search" class="btn btn-sm navbar-btn search-button search-button__button" data-toggle="tooltip" title="Search">
-<i class="fa-solid fa-magnifying-glass"></i>
-</button>
-</div>
-<label class="sidebar-toggle secondary-toggle" for="__secondary">
-<span class="fa-solid fa-outdent"></span>
-</label>
-</div>
-</nav>
+<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+</header>
 <div class="bd-container">
 <div class="bd-container__inner bd-page-width">
 <div class="bd-sidebar-primary bd-sidebar">
 <div class="sidebar-header-items sidebar-primary__section">
-<div class="sidebar-header-items__center">
-<div class="navbar-center-item">
-<nav class="navbar-nav">
-<p aria-label="Site Navigation" aria-level="1" class="sidebar-header-items__title" role="heading">
-        Site Navigation
-    </p>
-<ul class="navbar-nav" id="navbar-main-elements">
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../Schedule/schedule_intro.html">
-                        Schedule
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../TechnicalHelp/tech_intro.html">
-                        Technical Help
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../TechnicalHelp/Links_Policy.html">
-                        Quick links and policies
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../prereqs/ClimateScience.html">
-                        Prerequisites and preparatory materials for Computational Tools for Climate Science
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">
-                        Climate System Overview (W1D1)
-                      </a>
-</li>
-<div class="nav-item dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="btn dropdown-toggle nav-item" data-toggle="dropdown" type="button">
-                    More
-                </button>
-<div class="dropdown-menu">
-<li class="nav-item current active">
-<a class="nav-link nav-internal" href="../chapter_title.html">
-                        Good Research Practices (Projects)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W1D2_Ocean-AtmosphereReanalysis/chapter_title.html">
-                        Ocean-Atmosphere Reanalysis (W1D2)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W1D3_RemoteSensing/chapter_title.html">
-                        Remote Sensing (W1D3)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W1D4_Paleoclimate/chapter_title.html">
-                        Paleoclimate (W1D4)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W1D5_IntroductiontoClimateModeling/chapter_title.html">
-                        Introduction to Climate Modeling (W1D5)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W2D1_AnEnsembleofFutures/chapter_title.html">
-                        An Ensemble of Futures (W2D1)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W2D2_TheSocioeconomicsofClimateChange/chapter_title.html">
-                        The Socioeconomics of Climate Change (W2D2)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W2D3_ExtremesandVariability/chapter_title.html">
-                        Extremes and Variability (W2D3)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../W2D4_AIandClimateChange/chapter_title.html">
-                        AI and Climate Change (W2D4)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/README.html">
-                        Introduction
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/keynote.html">
-                        Project Day keynote (W2D5)
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/docs/project_guidance.html">
-                        Daily guide for projects
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/docs/datasets_overview.html">
-                        Project materials
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">
-                        Continuing your project after the course
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/docs/past_projects_overview.html">
-                        Past projects
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/professional_development/README.html">
-                        Introduction
-                      </a>
-</li>
-<li class="nav-item">
-<a class="nav-link nav-internal" href="../../../projects/professional_development/impact_talks.html">
-                        Impact Talks
-                      </a>
-</li>
 </div>
-</div>
-</ul>
-</nav>
-</div>
-</div>
-<div class="sidebar-header-items__end">
-<div class="navbar-end-item">
-<button aria-label="light/dark" class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" data-toggle="tooltip" title="light/dark">
-<span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-<span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-<span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
-</button>
-</div>
-<div class="navbar-end-item">
-<ul aria-label="Icon Links" class="navbar-nav" id="navbar-icon-links">
-</ul>
-</div>
-</div>
-</div>
-<div class="sidebar-start-items sidebar-primary__section">
-<div class="sidebar-start-items__item">
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
 <a class="navbar-brand logo" href="../../intro.html">
-<img alt="Logo image" class="logo__image only-light" src="../../../_static/cma-logo-square-4xp.png"/>
-<img alt="Logo image" class="logo__image only-dark" src="../../../_static/cma-logo-square-4xp.png"/>
-</a>
-</div>
-<div class="sidebar-start-items__item">
-<form action="../../../search.html" class="bd-search d-flex align-items-center" method="get">
-<i class="fa-solid fa-magnifying-glass"></i>
-<input aria-label="Search this book..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" id="search-input" name="q" placeholder="Search this book..." spellcheck="false" type="search"/>
-<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-</div>
-<div class="sidebar-start-items__item"><nav aria-label="Main" class="bd-links" id="bd-docs-nav">
+<img alt="Climatematch Academy: Computational Tools for Climate Science - Home" class="logo__image only-light" src="../../../_static/cma-logo-square-4xp.png"/>
+<script>document.write(`<img src="../../../_static/cma-logo-square-4xp.png" class="logo__image only-dark" alt="Climatematch Academy: Computational Tools for Climate Science - Home"/>`);</script>
+</a></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links" id="bd-docs-nav">
 <div class="bd-toc-item navbar-nav active">
 <ul class="nav bd-sidenav bd-sidenav__home-link">
 <li class="toctree-l1">
@@ -412,22 +103,22 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../Schedule/schedule_intro.html">Schedule</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Schedule/schedule_intro.html">Schedule</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Schedule/daily_schedules.html">General Schedule</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Schedule/shared_calendars.html">Shared calendars</a></li>
 </ul>
-</input></li>
+</details></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../TechnicalHelp/tech_intro.html">Technical Help</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../TechnicalHelp/Jupyterbook.html">Using jupyterbook</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../TechnicalHelp/tech_intro.html">Technical Help</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../TechnicalHelp/Jupyterbook.html">Using jupyterbook</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../TechnicalHelp/Tutorial_colab.html">Using Google Colab</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../TechnicalHelp/Tutorial_kaggle.html">Using Kaggle</a></li>
 </ul>
-</input></li>
+</details></li>
 <li class="toctree-l2"><a class="reference internal" href="../../TechnicalHelp/Discord.html">Using discord</a></li>
 </ul>
-</input></li>
+</details></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../TechnicalHelp/Links_Policy.html">Quick links and policies</a></li>
@@ -437,7 +128,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">Climate System Overview (W1D1)</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/chapter_title.html">Climate System Overview (W1D1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Intro.html">Intro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial1.html">Tutorial 1: Creating DataArrays and Datasets to Assess Global Climate Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_Tutorial2.html">Tutorial 2: Selection, Interpolation and Slicing</a></li>
@@ -452,8 +143,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D1_ClimateSystemOverview/student/W1D1_DaySummary.html">Day Summary</a></li>
 </ul>
-</input></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../chapter_title.html">Good Research Practices (Projects)</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../chapter_title.html">Good Research Practices (Projects)</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Projects_Intro.html">Intro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Projects_Tutorial1.html">Tutorial 1: Finding a Phenomenon and Asking a Question About It</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Projects_Tutorial2.html">Tutorial 2: Doing a Literature Review</a></li>
@@ -466,11 +157,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="Projects_Outro.html">Outro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Projects_DaySummary.html">Day Summary</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Past and Present Climate</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D2_Ocean-AtmosphereReanalysis/chapter_title.html">Ocean-Atmosphere Reanalysis (W1D2)</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D2_Ocean-AtmosphereReanalysis/chapter_title.html">Ocean-Atmosphere Reanalysis (W1D2)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_Intro.html">Intro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_Tutorial1.html">Tutorial 1: Calculating ENSO with Xarray</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_Tutorial2.html">Tutorial 2: A Lot of Weather Makes Climate - Exploring the ERA5 Reanalysis</a></li>
@@ -482,8 +173,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_Ocean-AtmosphereReanalysis/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D2_Ocean-AtmosphereReanalysis/student/W1D2_DaySummary.html">Day Summary</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D3_RemoteSensing/chapter_title.html">Remote Sensing (W1D3)</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D3_RemoteSensing/chapter_title.html">Remote Sensing (W1D3)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensing/student/W1D3_Intro.html">Intro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensing/student/W1D3_Tutorial1.html">Tutorial 1: Introduction to Remote Sensing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensing/student/W1D3_Tutorial2.html">Tutorial 2: Exploring Satellite Climate Data Records</a></li>
@@ -497,8 +188,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensing/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D3_RemoteSensing/student/W1D3_DaySummary.html">Day Summary</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D4_Paleoclimate/chapter_title.html">Paleoclimate (W1D4)</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D4_Paleoclimate/chapter_title.html">Paleoclimate (W1D4)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Intro.html">Intro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial1.html">Tutorial 1: Paleoclimate Proxies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_Tutorial2.html">Tutorial 2: Reconstructing Past Changes in Ocean Climate</a></li>
@@ -513,11 +204,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D4_Paleoclimate/student/W1D4_DaySummary.html">Day Summary</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Future</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D5_IntroductiontoClimateModeling/chapter_title.html">Introduction to Climate Modeling (W1D5)</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W1D5_IntroductiontoClimateModeling/chapter_title.html">Introduction to Climate Modeling (W1D5)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D5_IntroductiontoClimateModeling/student/W1D5_Intro.html">Intro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D5_IntroductiontoClimateModeling/student/W1D5_Tutorial1.html">Tutorial 1: Radiation and the Greenhouse Effect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D5_IntroductiontoClimateModeling/student/W1D5_Tutorial2.html">Tutorial 2: Energy Balance</a></li>
@@ -531,8 +222,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W1D5_IntroductiontoClimateModeling/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W1D5_IntroductiontoClimateModeling/student/W1D5_DaySummary.html">Day Summary</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/chapter_title.html">An Ensemble of Futures (W2D1)</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/chapter_title.html">An Ensemble of Futures (W2D1)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/student/W2D1_Intro.html">Intro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/student/W2D1_Tutorial1.html">Tutorial 1: Internal Climate Variability and Single-model Ensembles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/student/W2D1_Tutorial2.html">Tutorial 2: Future climate scenarios &amp; Multi-model Ensembles</a></li>
@@ -542,8 +233,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D1_AnEnsembleofFutures/student/W2D1_DaySummary.html">Day Summary</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D2_TheSocioeconomicsofClimateChange/chapter_title.html">The Socioeconomics of Climate Change (W2D2)</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D2_TheSocioeconomicsofClimateChange/chapter_title.html">The Socioeconomics of Climate Change (W2D2)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Intro.html">Intro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial1.html">Tutorial 1: Orienting inside a “Climate Solution” Simulator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_Tutorial2.html">Tutorial 2: Fossil Fuel Emissions, Growth, and Damage</a></li>
@@ -555,11 +246,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W2D2_TheSocioeconomicsofClimateChange/further_reading.html"><strong>Tutorial 2 Further Reading</strong></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D2_TheSocioeconomicsofClimateChange/student/W2D2_DaySummary.html">Day Summary</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate Response</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D3_ExtremesandVariability/chapter_title.html">Extremes and Variability (W2D3)</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D3_ExtremesandVariability/chapter_title.html">Extremes and Variability (W2D3)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Intro.html">Intro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Tutorial1.html">Tutorial 1: Distributions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_Tutorial2.html">Tutorial 2: What is an Extreme Event? Empirical Return Levels</a></li>
@@ -573,8 +264,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D3_ExtremesandVariability/student/W2D3_DaySummary.html">Day Summary</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D4_AIandClimateChange/chapter_title.html">AI and Climate Change (W2D4)</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../W2D4_AIandClimateChange/chapter_title.html">AI and Climate Change (W2D4)</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_Intro.html">Intro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_Tutorial1.html">Tutorial 1:  ClimateBench Dataset and How Machine Learning Can Help</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_Tutorial2.html">Tutorial 2:  Building and Training Random Forest Models</a></li>
@@ -587,21 +278,21 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/further_reading.html">Suggested Further Reading</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../W2D4_AIandClimateChange/student/W2D4_DaySummary.html">Day Summary</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Project Booklet</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/README.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/keynote.html">Project Day keynote (W2D5)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/docs/project_guidance.html">Daily guide for projects</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../projects/docs/datasets_overview.html">Project materials</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../projects/docs/datasets_overview.html">Project materials</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/project-notebooks/Heatwaves_2024.html">Heatwaves</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/project-notebooks/Ocean_acidification_2024.html">Ocean Acidification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/project-notebooks/Precipitation_variability_extreme_events_2024.html">Precipitation Variability and Extreme Events</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/docs/continuing_your_project_after_the_course.html">Continuing your project after the course</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../projects/docs/past_projects_overview.html">Past projects</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../projects/docs/past_projects_overview.html">Past projects</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/project-notebooks/Arctic_sea_ice_change_2024.html">Arctic Sea Ice Change</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/past-projects/sea_level_rise.html">Sea Level Rise</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/past-projects/ocean_acidification.html">Ocean Acidification</a></li>
@@ -611,7 +302,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/past-projects/wildfires.html">Monitoring and Mapping Wildfires Using Satellite Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../projects/past-projects/albedo.html">Changes in Land Cover: Albedo and Carbon Sequestration</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Professional Development</span></p>
 <ul class="nav bd-sidenav">
@@ -619,92 +310,108 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../../projects/professional_development/impact_talks.html">Impact Talks</a></li>
 </ul>
 </div>
-</nav>
+</nav></div>
 </div>
-</div>
-<div class="sidebar-end-items sidebar-primary__section">
-<div class="sidebar-end-items__item">
-</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
 </div>
 <div id="rtd-footer-container"></div>
 </div>
-<main class="bd-main" id="main-content">
+<main class="bd-main" id="main-content" role="main">
 <div class="sbt-scroll-pixel-helper"></div>
 <div class="bd-content">
 <div class="bd-article-container">
-<div class="bd-header-article">
-<div class="col py-1 d-flex header-article-main">
-<div class="header-article__left">
-<label class="sidebar-toggle primary-toggle btn btn-sm" data-placement="right" data-toggle="tooltip" for="__primary" title="Toggle primary sidebar">
+<div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__primary" title="Toggle primary sidebar">
 <span class="fa-solid fa-bars"></span>
-</label>
+</label></div>
 </div>
-<div class="header-article__right">
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
 <div class="dropdown dropdown-launch-buttons">
 <button aria-expanded="false" aria-label="Launch interactive content" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
 <i class="fas fa-rocket"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/neuromatch/climate-course-content&amp;urlpath=lab/tree/climate-course-content/tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.ipynb&amp;branch=main" target="_blank" title="Launch on JupyterHub">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://climatematch.2i2c.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/neuromatch/climate-course-content&amp;urlpath=lab/tree/climate-course-content/tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.ipynb&amp;branch=main" target="_blank" title="Launch onJupyterHub">
 <span class="btn__icon-container">
 <img src="../../../_static/images/logo_jupyterhub.svg"/>
 </span>
 <span class="btn__text-container">JupyterHub</span>
 </a>
-
-</li></ul>
+</li>
+</ul>
 </div>
-<button class="btn btn-sm" data-placement="bottom" data-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
-<span class="btn__icon-container">
-<i class="fas fa-expand"></i>
-</span>
-</button>
-<div class="dropdown dropdown-repository-buttons">
+<div class="dropdown dropdown-source-buttons">
 <button aria-expanded="false" aria-label="Source repositories" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
 <i class="fab fa-github"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://github.com/neuromatch/climate-course-content" target="_blank" title="Source repository">
+<li><a class="btn btn-sm btn-source-repository-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/neuromatch/climate-course-content" target="_blank" title="Source repository">
 <span class="btn__icon-container">
 <i class="fab fa-github"></i>
 </span>
-<span class="btn__text-container">repository</span>
+<span class="btn__text-container">Repository</span>
 </a>
-
-<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="https://github.com/neuromatch/climate-course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+</li>
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/neuromatch/climate-course-content/issues/new?title=Issue%20on%20page%20%2Ftutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
 <span class="btn__icon-container">
 <i class="fas fa-lightbulb"></i>
 </span>
-<span class="btn__text-container">open issue</span>
+<span class="btn__text-container">Open issue</span>
 </a>
-
-</li></li></ul>
+</li>
+</ul>
 </div>
 <div class="dropdown dropdown-download-buttons">
 <button aria-expanded="false" aria-label="Download this page" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
 <i class="fas fa-download"></i>
 </button>
 <ul class="dropdown-menu">
-<li><a class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" href="../../../_sources/tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.ipynb" target="_blank" title="Download source file">
+<li><a class="btn btn-sm btn-download-source-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="../../../_sources/tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.ipynb" target="_blank" title="Download source file">
 <span class="btn__icon-container">
 <i class="fas fa-file"></i>
 </span>
 <span class="btn__text-container">.ipynb</span>
 </a>
-
+</li>
 <li>
-<button class="btn btn-sm dropdown-item" data-placement="left" data-toggle="tooltip" onclick="printPdf(this)" title="Print to PDF">
+<button class="btn btn-sm btn-download-pdf-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" onclick="window.print()" title="Print to PDF">
 <span class="btn__icon-container">
 <i class="fas fa-file-pdf"></i>
 </span>
 <span class="btn__text-container">.pdf</span>
 </button>
-
-</li></li></ul>
+</li>
+</ul>
 </div>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" data-placement="left" data-toggle="tooltip" for="__secondary" title="Toggle secondary sidebar">
+<button class="btn btn-sm btn-fullscreen-button" data-bs-placement="bottom" data-bs-toggle="tooltip" onclick="toggleFullScreen()" title="Fullscreen mode">
+<span class="btn__icon-container">
+<i class="fas fa-expand"></i>
+</span>
+</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" for="__secondary" title="Toggle secondary sidebar">
 <span class="fa-solid fa-list"></span>
 </label>
+</div></div>
 </div>
 </div>
 </div>
@@ -718,51 +425,24 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <nav aria-label="Page">
 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#">
-   Tutorial 6: Implementing the Analysis
-  </a>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tutorials-objectives">
-   Tutorials Objectives
-  </a>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#activity-implement-the-analysis">
-   Activity: Implement the Analysis
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#figure-settings">
-     Figure Settings
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#helper-functions">
-     Helper functions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#figure-making-through-the-equity-lense">
-     Figure Making Through the Equity Lense
-    </a>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tutorial 6: Implementing the Analysis</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorials-objectives">Tutorials Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-implement-the-analysis">Activity: Implement the Analysis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-settings">Figure Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-functions">Helper functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-making-through-the-equity-lense">Figure Making Through the Equity Lense</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#resources">
-   Resources
-  </a>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
 </ul>
 </nav>
 </div>
 </div>
 </div>
-<article class="bd-article" role="main">
+<div id="searchbox"></div>
+<article class="bd-article">
 <p><a class="reference external" href="https://colab.research.google.com/github/neuromatch/climate-course-content/blob/main/tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.ipynb"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg"/></a>   <a href="https://kaggle.com/kernels/welcome?src=https://raw.githubusercontent.com/neuromatch/climate-course-content/main/tutorials/Projects_GoodResearchPractices/student/Projects_Tutorial6.ipynb" target="_blank"><img alt="Open in Kaggle" src="https://kaggle.com/static/images/open-in-kaggle.svg"/></a></p>
-<div class="tex2jax_ignore mathjax_ignore section" id="tutorial-6-implementing-the-analysis">
+<section class="tex2jax_ignore mathjax_ignore" id="tutorial-6-implementing-the-analysis">
 <h1>Tutorial 6: Implementing the Analysis<a class="headerlink" href="#tutorial-6-implementing-the-analysis" title="Permalink to this heading">#</a></h1>
 <p><strong>Good Research Practices</strong></p>
 <p><strong>Content creators:</strong> Marguerite Brown, Zane Mitrevica, Natalie Steinemann, Yuxin Zhou</p>
@@ -770,8 +450,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Content editors:</strong> Jenna Pearson, Chi Zhang, Ohad Zivan</p>
 <p><strong>Production editors:</strong> Wesley Banfield, Paul Heubel, Jenna Pearson, Konstantine Tsafatinos, Chi Zhang, Ohad Zivan</p>
 <p><strong>Our 2024 Sponsors:</strong> CMIP, NFDI4Earth</p>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="tutorials-objectives">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tutorials-objectives">
 <h1>Tutorials Objectives<a class="headerlink" href="#tutorials-objectives" title="Permalink to this heading">#</a></h1>
 <p>In Tutorials 5-8, you will learn about the research process. This includes how to</p>
 <ol class="arabic simple" start="5">
@@ -785,8 +465,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Understand the principles of good research practices</p></li>
 <li><p>Learn to view a scientific data set or question through the lens of equity: Who is represented by this data and who is not? Who has access to this information? Who is in a position to use it?</p></li>
 </ul>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="activity-implement-the-analysis">
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="activity-implement-the-analysis">
 <h1>Activity: Implement the Analysis<a class="headerlink" href="#activity-implement-the-analysis" title="Permalink to this heading">#</a></h1>
 <p>In this tutorial, you will be implementing a linear regression model as outlined in Step 5 on real-world CO<sub>2</sub> and temperature records.</p>
 <p>The CO<sub>2</sub> and temperature records we will be analyzing are both examples of paleoclimate data (for more information, refer back to Step 3). The CO<sub>2</sub> record (Bereiter et al., 2015) was generated by measuring the CO<sub>2</sub> concentration in ancient air bubbles trapped inside ice from multiple ice cores retrieved from Antarctica. The temperature record (Shakun et al., 2015) is based on chemical analysis done on the shells of planktic foraminifera. The foraminifera shells were identified and picked from deep-sea sediments, and the temperature record combined multiple sea-surface temperature records from a range of sites globally.</p>
@@ -809,7 +489,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="section" id="figure-settings">
+<section id="figure-settings">
 <h2>Figure Settings<a class="headerlink" href="#figure-settings" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -830,8 +510,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </details>
 </div>
-</div>
-<div class="section" id="helper-functions">
+</section>
+<section id="helper-functions">
 <h2>Helper functions<a class="headerlink" href="#helper-functions" title="Permalink to this heading">#</a></h2>
 <div class="cell tag_hide-input docutils container">
 <details class="hide above-input">
@@ -879,244 +559,201 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'https://osf.io/kmy5w/download' to file '/tmp/Shakun2015_SST.txt'.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TimeoutError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:534,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">534</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connection.py:571,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">570</span> <span class="c1"># Get the response from http.client.HTTPConnection</span>
-<span class="ne">--&gt; </span><span class="mi">571</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">573</span> <span class="k">try</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:1395,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1394</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1395</span>     <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1396</span> <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:325,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">324</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">325</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:286,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">285</span> <span class="k">def</span><span class="w"> </span><span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">286</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">"iso-8859-1"</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/socket.py:718,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">718</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">719</span> <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/ssl.py:1314,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1311</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1312</span>           <span class="s2">"non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span>
-<span class="g g-Whitespace">   </span><span class="mi">1313</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1314</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1315</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/ssl.py:1166,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1165</span> <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1166</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="ne">TimeoutError</span>: The read operation timed out
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">ReadTimeoutError</span><span class="g g-Whitespace">                          </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/adapters.py:644,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">644</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">645</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">652</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">653</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">655</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">656</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">658</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:841,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">839</span>     <span class="n">new_e</span> <span class="o">=</span> <span class="n">ProtocolError</span><span class="p">(</span><span class="s2">"Connection aborted."</span><span class="p">,</span> <span class="n">new_e</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">841</span> <span class="n">retries</span> <span class="o">=</span> <span class="n">retries</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">842</span>     <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">new_e</span><span class="p">,</span> <span class="n">_pool</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">843</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">844</span> <span class="n">retries</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/util/retry.py:490,</span> in <span class="ni">Retry.increment</span><span class="nt">(self, method, url, response, error, _pool, _stacktrace)</span>
-<span class="g g-Whitespace">    </span><span class="mi">489</span> <span class="k">if</span> <span class="n">read</span> <span class="ow">is</span> <span class="kc">False</span> <span class="ow">or</span> <span class="n">method</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_method_retryable</span><span class="p">(</span><span class="n">method</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">490</span>     <span class="k">raise</span> <span class="n">reraise</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">error</span><span class="p">),</span> <span class="n">error</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">491</span> <span class="k">elif</span> <span class="n">read</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/util/util.py:39,</span> in <span class="ni">reraise</span><span class="nt">(tp, value, tb)</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span>         <span class="k">raise</span> <span class="n">value</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">39</span>     <span class="k">raise</span> <span class="n">value</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:787,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">786</span> <span class="c1"># Make the request on the HTTPConnection object</span>
-<span class="ne">--&gt; </span><span class="mi">787</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">788</span>     <span class="n">conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span>     <span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span>     <span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">791</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">retries</span><span class="o">=</span><span class="n">retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">response_conn</span><span class="o">=</span><span class="n">response_conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="o">**</span><span class="n">response_kw</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">802</span> <span class="c1"># Everything went great!</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:536,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">536</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">537</span>     <span class="k">raise</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:367,</span> in <span class="ni">HTTPConnectionPool._raise_timeout</span><span class="nt">(self, err, url, timeout_value)</span>
-<span class="g g-Whitespace">    </span><span class="mi">366</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">SocketTimeout</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">367</span>     <span class="k">raise</span> <span class="n">ReadTimeoutError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">368</span>         <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"Read timed out. (read timeout=</span><span class="si">{</span><span class="n">timeout_value</span><span class="si">}</span><span class="s2">)"</span>
-<span class="g g-Whitespace">    </span><span class="mi">369</span>     <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
-<span class="g g-Whitespace">    </span><span class="mi">371</span> <span class="c1"># See the above comment about EAGAIN in Python 3.</span>
-
-<span class="ne">ReadTimeoutError</span>: HTTPSConnectionPool(host='osf.io', port=443): Read timed out. (read timeout=30)
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">ReadTimeout</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">filename_Shakun2015_SST</span> <span class="o">=</span> <span class="s2">"Shakun2015_SST.txt"</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">url_Shakun2015_SST</span> <span class="o">=</span> <span class="s2">"https://osf.io/kmy5w/download"</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">SST</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span><span class="n">pooch_load</span><span class="p">(</span><span class="n">url_Shakun2015_SST</span><span class="p">,</span> <span class="n">filename_Shakun2015_SST</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">SST</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"Age"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">SST</span>
-
-<span class="nn">Cell In[3], line 11,</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="n">filelocation</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">return</span> <span class="n">file</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/core.py:239,</span> in <span class="ni">retrieve</span><span class="nt">(url, known_hash, fname, path, processor, downloader, progressbar)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">if</span> <span class="n">downloader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="n">downloader</span> <span class="o">=</span> <span class="n">choose_downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">progressbar</span><span class="o">=</span><span class="n">progressbar</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">239</span> <span class="n">stream_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">full_path</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">downloader</span><span class="p">,</span> <span class="n">pooch</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="n">known_hash</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="s2">"SHA256 hash of downloaded file: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span>         <span class="s2">"Use this value as the 'known_hash' argument of 'pooch.retrieve'"</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>    <span class="mi">247</span>         <span class="n">file_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">full_path</span><span class="p">)),</span>
-<span class="g g-Whitespace">    </span><span class="mi">248</span>     <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/core.py:807,</span> in <span class="ni">stream_download</span><span class="nt">(url, fname, known_hash, downloader, pooch, retry_if_failed)</span>
-<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="c1"># Stream the file to a temporary so that we can safely check its</span>
-<span class="g g-Whitespace">    </span><span class="mi">805</span>     <span class="c1"># hash before overwriting the original.</span>
-<span class="g g-Whitespace">    </span><span class="mi">806</span>     <span class="k">with</span> <span class="n">temporary_file</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">807</span>         <span class="n">downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">pooch</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">808</span>         <span class="n">hash_matches</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>         <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/downloaders.py:220,</span> in <span class="ni">HTTPDownloader.__call__</span><span class="nt">(self, url, output_file, pooch, check_only)</span>
-<span class="g g-Whitespace">    </span><span class="mi">218</span>     <span class="c1"># pylint: enable=consider-using-with</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">220</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>     <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span>     <span class="n">content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chunk_size</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">"""Sends a GET request.</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
-<span class="sd">   (...)     70     :rtype: requests.Response</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     """</span>
-<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">"get"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the 'with' statement we are sure the session is closed, thus we</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">"timeout"</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">"allow_redirects"</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:724,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">721</span> <span class="k">if</span> <span class="n">allow_redirects</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span>     <span class="c1"># Redirect resolving generator.</span>
-<span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="n">gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_redirects</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">resp</span> <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:724,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">    </span><span class="mi">721</span> <span class="k">if</span> <span class="n">allow_redirects</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span>     <span class="c1"># Redirect resolving generator.</span>
-<span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="n">gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_redirects</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">resp</span> <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:265,</span> in <span class="ni">SessionRedirectMixin.resolve_redirects</span><span class="nt">(self, resp, req, stream, timeout, verify, cert, proxies, yield_requests, **adapter_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">263</span>     <span class="k">yield</span> <span class="n">req</span>
-<span class="g g-Whitespace">    </span><span class="mi">264</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">265</span>     <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">266</span>         <span class="n">req</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">267</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">268</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span>         <span class="n">verify</span><span class="o">=</span><span class="n">verify</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">270</span>         <span class="n">cert</span><span class="o">=</span><span class="n">cert</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span>         <span class="n">proxies</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span>         <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span>         <span class="o">**</span><span class="n">adapter_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">274</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="n">extract_cookies_to_jar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cookies</span><span class="p">,</span> <span class="n">prepared_request</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">raw</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="c1"># extract redirect url, if any, for the next loop</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/adapters.py:690,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">688</span>     <span class="k">raise</span> <span class="n">SSLError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">689</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">ReadTimeoutError</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">690</span>     <span class="k">raise</span> <span class="n">ReadTimeout</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">691</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">_InvalidHeader</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">692</span>     <span class="k">raise</span> <span class="n">InvalidHeader</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-
-<span class="ne">ReadTimeout</span>: HTTPSConnectionPool(host='osf.io', port=443): Read timed out. (read timeout=30)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e3af19895ffddb73a3d8b10b1cdb9e7f6412ab1e930e8f3154c146999b645ff9
+Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
 </pre></div>
 </div>
-</div>
+<div class="output text_html"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>SST stack</th>
+<th>_18Op stack</th>
+<th>_18Ob stack</th>
+<th>_18Osw stack</th>
+<th>_18Osw uncertainty (2_)</th>
+<th>Deep ocean temperature</th>
+<th>Detrended sea-level equivalent</th>
+<th>Sea level uncertainty (2_)</th>
+<th>Unnamed: 9</th>
+<th>Unnamed: 10</th>
+</tr>
+<tr>
+<th>Age</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>3</th>
+<td>1.2</td>
+<td>-0.81</td>
+<td>-0.88</td>
+<td>-0.58</td>
+<td>0.11</td>
+<td>0.0</td>
+<td>0</td>
+<td>14</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>6</th>
+<td>1.3</td>
+<td>-0.76</td>
+<td>-0.87</td>
+<td>-0.50</td>
+<td>0.11</td>
+<td>0.1</td>
+<td>-10</td>
+<td>14</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>9</th>
+<td>1.4</td>
+<td>-0.57</td>
+<td>-0.62</td>
+<td>-0.28</td>
+<td>0.11</td>
+<td>0.5</td>
+<td>-38</td>
+<td>14</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>12</th>
+<td>1.0</td>
+<td>-0.16</td>
+<td>-0.23</td>
+<td>0.06</td>
+<td>0.09</td>
+<td>0.1</td>
+<td>-80</td>
+<td>12</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>15</th>
+<td>0.1</td>
+<td>0.31</td>
+<td>0.27</td>
+<td>0.33</td>
+<td>0.09</td>
+<td>-1.4</td>
+<td>-115</td>
+<td>12</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>786</th>
+<td>0.3</td>
+<td>-0.10</td>
+<td>-0.34</td>
+<td>-0.14</td>
+<td>0.22</td>
+<td>0.1</td>
+<td>-50</td>
+<td>28</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>789</th>
+<td>-0.1</td>
+<td>0.03</td>
+<td>-0.21</td>
+<td>0.09</td>
+<td>0.29</td>
+<td>0.0</td>
+<td>-79</td>
+<td>36</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>792</th>
+<td>-0.3</td>
+<td>0.40</td>
+<td>0.26</td>
+<td>0.30</td>
+<td>0.23</td>
+<td>-0.8</td>
+<td>-106</td>
+<td>30</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>795</th>
+<td>-1.6</td>
+<td>0.37</td>
+<td>0.44</td>
+<td>0.07</td>
+<td>0.31</td>
+<td>-3.2</td>
+<td>-78</td>
+<td>39</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr>
+<th>798</th>
+<td>-0.8</td>
+<td>0.23</td>
+<td>0.37</td>
+<td>0.17</td>
+<td>0.20</td>
+<td>-2.7</td>
+<td>-90</td>
+<td>26</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+<p>266 rows × 10 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1138,249 +775,97 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading data from 'https://osf.io/45fev/download' to file '/tmp/antarctica2015co2composite_cleaned.txt'.
 </pre></div>
 </div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TimeoutError</span><span class="g g-Whitespace">                              </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:534,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">534</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connection.py:571,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">570</span> <span class="c1"># Get the response from http.client.HTTPConnection</span>
-<span class="ne">--&gt; </span><span class="mi">571</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">573</span> <span class="k">try</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:1395,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1394</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1395</span>     <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1396</span> <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:325,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">324</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">325</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/http/client.py:286,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">285</span> <span class="k">def</span><span class="w"> </span><span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">286</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">"iso-8859-1"</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">287</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/socket.py:718,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">717</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">718</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">719</span> <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/ssl.py:1314,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1311</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1312</span>           <span class="s2">"non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span>
-<span class="g g-Whitespace">   </span><span class="mi">1313</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1314</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1315</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/ssl.py:1166,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1165</span> <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1166</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="ne">TimeoutError</span>: The read operation timed out
-
-<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
-
-<span class="ne">ReadTimeoutError</span><span class="g g-Whitespace">                          </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/adapters.py:644,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">644</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">645</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">646</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">647</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">648</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">649</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">650</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">651</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">652</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">653</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">654</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">655</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">656</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">658</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:841,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">839</span>     <span class="n">new_e</span> <span class="o">=</span> <span class="n">ProtocolError</span><span class="p">(</span><span class="s2">"Connection aborted."</span><span class="p">,</span> <span class="n">new_e</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">841</span> <span class="n">retries</span> <span class="o">=</span> <span class="n">retries</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">842</span>     <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">new_e</span><span class="p">,</span> <span class="n">_pool</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">843</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">844</span> <span class="n">retries</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/util/retry.py:490,</span> in <span class="ni">Retry.increment</span><span class="nt">(self, method, url, response, error, _pool, _stacktrace)</span>
-<span class="g g-Whitespace">    </span><span class="mi">489</span> <span class="k">if</span> <span class="n">read</span> <span class="ow">is</span> <span class="kc">False</span> <span class="ow">or</span> <span class="n">method</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_is_method_retryable</span><span class="p">(</span><span class="n">method</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">490</span>     <span class="k">raise</span> <span class="n">reraise</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">error</span><span class="p">),</span> <span class="n">error</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">491</span> <span class="k">elif</span> <span class="n">read</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/util/util.py:39,</span> in <span class="ni">reraise</span><span class="nt">(tp, value, tb)</span>
-<span class="g g-Whitespace">     </span><span class="mi">38</span>         <span class="k">raise</span> <span class="n">value</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">tb</span><span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">39</span>     <span class="k">raise</span> <span class="n">value</span>
-<span class="g g-Whitespace">     </span><span class="mi">40</span> <span class="k">finally</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:787,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
-<span class="g g-Whitespace">    </span><span class="mi">786</span> <span class="c1"># Make the request on the HTTPConnection object</span>
-<span class="ne">--&gt; </span><span class="mi">787</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">788</span>     <span class="n">conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">789</span>     <span class="n">method</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">790</span>     <span class="n">url</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">791</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">792</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">retries</span><span class="o">=</span><span class="n">retries</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">response_conn</span><span class="o">=</span><span class="n">response_conn</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="o">**</span><span class="n">response_kw</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">802</span> <span class="c1"># Everything went great!</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:536,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">536</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">537</span>     <span class="k">raise</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/urllib3/connectionpool.py:367,</span> in <span class="ni">HTTPConnectionPool._raise_timeout</span><span class="nt">(self, err, url, timeout_value)</span>
-<span class="g g-Whitespace">    </span><span class="mi">366</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">SocketTimeout</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">367</span>     <span class="k">raise</span> <span class="n">ReadTimeoutError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">368</span>         <span class="bp">self</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"Read timed out. (read timeout=</span><span class="si">{</span><span class="n">timeout_value</span><span class="si">}</span><span class="s2">)"</span>
-<span class="g g-Whitespace">    </span><span class="mi">369</span>     <span class="p">)</span> <span class="kn">from</span><span class="w"> </span><span class="nn">err</span>
-<span class="g g-Whitespace">    </span><span class="mi">371</span> <span class="c1"># See the above comment about EAGAIN in Python 3.</span>
-
-<span class="ne">ReadTimeoutError</span>: HTTPSConnectionPool(host='osf.io', port=443): Read timed out. (read timeout=30)
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">ReadTimeout</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">filename_antarctica2015co2composite_cleaned</span> <span class="o">=</span> <span class="s2">"antarctica2015co2composite_cleaned.txt"</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">url_antarctica2015co2composite_cleaned</span> <span class="o">=</span> <span class="s2">"https://osf.io/45fev/download"</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">CO2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_table</span><span class="p">(</span>
-<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">pooch_load</span><span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="n">url_antarctica2015co2composite_cleaned</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>         <span class="n">filename_antarctica2015co2composite_cleaned</span><span class="p">,</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">CO2</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"age_gas_calBP"</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">CO2</span>
-
-<span class="nn">Cell In[3], line 11,</span> in <span class="ni">pooch_load</span><span class="nt">(filelocation, filename, processor)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">shared_location</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">file</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="n">filelocation</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="n">known_hash</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span>         <span class="n">fname</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">user_temp_cache</span><span class="p">,</span> <span class="n">filename</span><span class="p">),</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="n">processor</span><span class="o">=</span><span class="n">processor</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="k">return</span> <span class="n">file</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/core.py:239,</span> in <span class="ni">retrieve</span><span class="nt">(url, known_hash, fname, path, processor, downloader, progressbar)</span>
-<span class="g g-Whitespace">    </span><span class="mi">236</span> <span class="k">if</span> <span class="n">downloader</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">237</span>     <span class="n">downloader</span> <span class="o">=</span> <span class="n">choose_downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">progressbar</span><span class="o">=</span><span class="n">progressbar</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">239</span> <span class="n">stream_download</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">full_path</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">downloader</span><span class="p">,</span> <span class="n">pooch</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">241</span> <span class="k">if</span> <span class="n">known_hash</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">242</span>     <span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">243</span>         <span class="s2">"SHA256 hash of downloaded file: </span><span class="si">%s</span><span class="se">\n</span><span class="s2">"</span>
-<span class="g g-Whitespace">    </span><span class="mi">244</span>         <span class="s2">"Use this value as the 'known_hash' argument of 'pooch.retrieve'"</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>    <span class="mi">247</span>         <span class="n">file_hash</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">full_path</span><span class="p">)),</span>
-<span class="g g-Whitespace">    </span><span class="mi">248</span>     <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/core.py:807,</span> in <span class="ni">stream_download</span><span class="nt">(url, fname, known_hash, downloader, pooch, retry_if_failed)</span>
-<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="c1"># Stream the file to a temporary so that we can safely check its</span>
-<span class="g g-Whitespace">    </span><span class="mi">805</span>     <span class="c1"># hash before overwriting the original.</span>
-<span class="g g-Whitespace">    </span><span class="mi">806</span>     <span class="k">with</span> <span class="n">temporary_file</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">parent</span><span class="p">))</span> <span class="k">as</span> <span class="n">tmp</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">807</span>         <span class="n">downloader</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">tmp</span><span class="p">,</span> <span class="n">pooch</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">808</span>         <span class="n">hash_matches</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">,</span> <span class="n">strict</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="o">.</span><span class="n">name</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>         <span class="n">shutil</span><span class="o">.</span><span class="n">move</span><span class="p">(</span><span class="n">tmp</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">fname</span><span class="p">))</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/pooch/downloaders.py:220,</span> in <span class="ni">HTTPDownloader.__call__</span><span class="nt">(self, url, output_file, pooch, check_only)</span>
-<span class="g g-Whitespace">    </span><span class="mi">218</span>     <span class="c1"># pylint: enable=consider-using-with</span>
-<span class="g g-Whitespace">    </span><span class="mi">219</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">220</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>     <span class="n">response</span><span class="o">.</span><span class="n">raise_for_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">222</span>     <span class="n">content</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">iter_content</span><span class="p">(</span><span class="n">chunk_size</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">chunk_size</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">"""Sends a GET request.</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
-<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
-<span class="sd">   (...)     70     :rtype: requests.Response</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     """</span>
-<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">"get"</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the 'with' statement we are sure the session is closed, thus we</span>
-<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
-<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">"timeout"</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">"allow_redirects"</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
-<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:724,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">721</span> <span class="k">if</span> <span class="n">allow_redirects</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span>     <span class="c1"># Redirect resolving generator.</span>
-<span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="n">gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_redirects</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">resp</span> <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:724,</span> in <span class="ni">&lt;listcomp&gt;</span><span class="nt">(.0)</span>
-<span class="g g-Whitespace">    </span><span class="mi">721</span> <span class="k">if</span> <span class="n">allow_redirects</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span>     <span class="c1"># Redirect resolving generator.</span>
-<span class="g g-Whitespace">    </span><span class="mi">723</span>     <span class="n">gen</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resolve_redirects</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">724</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[</span><span class="n">resp</span> <span class="k">for</span> <span class="n">resp</span> <span class="ow">in</span> <span class="n">gen</span><span class="p">]</span>
-<span class="g g-Whitespace">    </span><span class="mi">725</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">726</span>     <span class="n">history</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:265,</span> in <span class="ni">SessionRedirectMixin.resolve_redirects</span><span class="nt">(self, resp, req, stream, timeout, verify, cert, proxies, yield_requests, **adapter_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">263</span>     <span class="k">yield</span> <span class="n">req</span>
-<span class="g g-Whitespace">    </span><span class="mi">264</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">265</span>     <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">266</span>         <span class="n">req</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">267</span>         <span class="n">stream</span><span class="o">=</span><span class="n">stream</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">268</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">269</span>         <span class="n">verify</span><span class="o">=</span><span class="n">verify</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">270</span>         <span class="n">cert</span><span class="o">=</span><span class="n">cert</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span>         <span class="n">proxies</span><span class="o">=</span><span class="n">proxies</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">272</span>         <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">273</span>         <span class="o">**</span><span class="n">adapter_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">274</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="n">extract_cookies_to_jar</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cookies</span><span class="p">,</span> <span class="n">prepared_request</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">raw</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="c1"># extract redirect url, if any, for the next loop</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
-<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
-<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/requests/adapters.py:690,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
-<span class="g g-Whitespace">    </span><span class="mi">688</span>     <span class="k">raise</span> <span class="n">SSLError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">689</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">ReadTimeoutError</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">690</span>     <span class="k">raise</span> <span class="n">ReadTimeout</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">691</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">_InvalidHeader</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">692</span>     <span class="k">raise</span> <span class="n">InvalidHeader</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
-
-<span class="ne">ReadTimeout</span>: HTTPSConnectionPool(host='osf.io', port=443): Read timed out. (read timeout=30)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SHA256 hash of downloaded file: e86ec8dba4ca9a1e8404117bdd370fd830352d07164fe8093fff12330e371aa8
+Use this value as the 'known_hash' argument of 'pooch.retrieve' to ensure that the file hasn't changed if it is downloaded again in the future.
 </pre></div>
 </div>
-</div>
+<div class="output text_html"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>co2_ppm</th>
+<th>co2_1s_ppm</th>
+</tr>
+<tr>
+<th>age_gas_calBP</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>-51.03</th>
+<td>368.02</td>
+<td>0.06</td>
+</tr>
+<tr>
+<th>-48.00</th>
+<td>361.78</td>
+<td>0.37</td>
+</tr>
+<tr>
+<th>-46.28</th>
+<td>359.65</td>
+<td>0.10</td>
+</tr>
+<tr>
+<th>-44.41</th>
+<td>357.11</td>
+<td>0.16</td>
+</tr>
+<tr>
+<th>-43.08</th>
+<td>353.95</td>
+<td>0.04</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>803925.28</th>
+<td>202.92</td>
+<td>2.06</td>
+</tr>
+<tr>
+<th>804009.87</th>
+<td>207.50</td>
+<td>0.92</td>
+</tr>
+<tr>
+<th>804522.67</th>
+<td>204.86</td>
+<td>1.64</td>
+</tr>
+<tr>
+<th>805132.44</th>
+<td>202.23</td>
+<td>0.69</td>
+</tr>
+<tr>
+<th>805668.87</th>
+<td>207.29</td>
+<td>2.20</td>
+</tr>
+</tbody>
+</table>
+<p>1901 rows × 2 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1420,7 +905,9 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
+<div class="cell_output docutils container">
+<img alt="../../../_images/1e887002efd68dc0a17f451fba4fbfddc4bfa371b1648e9fd3094c73fb2bed31.png" src="../../../_images/1e887002efd68dc0a17f451fba4fbfddc4bfa371b1648e9fd3094c73fb2bed31.png"/>
+</div>
 </div>
 <p>Now that we’ve taken a look at the two time series, let’s make a scatter plot between them and fit a linear regression model through the data.</p>
 <div class="cell docutils container">
@@ -1473,10 +960,16 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 </div>
-
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Pearson (r^2) value: 0.55 
+with a p-value of: 3.37e-47
+</pre></div>
+</div>
+<img alt="../../../_images/0ac70bae97f4498810996b8b69bb5e1ecec64383bec1bb3e88d0e4acbf41d924.png" src="../../../_images/0ac70bae97f4498810996b8b69bb5e1ecec64383bec1bb3e88d0e4acbf41d924.png"/>
 </div>
 </div>
-<div class="section" id="figure-making-through-the-equity-lense">
+</section>
+<section id="figure-making-through-the-equity-lense">
 <h2>Figure Making Through the Equity Lense<a class="headerlink" href="#figure-making-through-the-equity-lense" title="Permalink to this heading">#</a></h2>
 <details>
 <summary>Click here for some information</summary>
@@ -1485,14 +978,14 @@ Are the colors in your figure distinguishable for people with color-vision defic
 <p>Contrast checker: <a class="reference external" href="https://www.color-blindness.com/coblis-color-blindness-simulator/">https://www.color-blindness.com/coblis-color-blindness-simulator/</a></p>
 <p>Coloring for color blindness: <a class="reference external" href="https://davidmathlogic.com/colorblind">https://davidmathlogic.com/colorblind</a></p>
 <p>Python-specific color palettes that are friendly to those with color-vision deficiency: <a class="reference external" href="https://seaborn.pydata.org/tutorial/color_palettes.html">https://seaborn.pydata.org/tutorial/color_palettes.html</a></p>
-</details></div>
-</div>
-<div class="tex2jax_ignore mathjax_ignore section" id="resources">
+</details></section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="resources">
 <h1>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h1>
 <p>Data from the following sources are used in this tutorial:</p>
 <p>CO<sub>2</sub>: Bereiter, B., Eggleston, S., Schmitt, J., Nehrbass-Ahles, C., Stocker, T.F., Fischer, H., Kipfstuhl, S., Chappellaz, J., 2015. Revision of the EPICA Dome C CO2 record from 800 to 600 kyr before present. Geophysical Research Letters 42, 542–549. <a class="reference external" href="https://doi.org/10.1002/2014GL061957">https://doi.org/10.1002/2014GL061957</a></p>
 <p>Temperature: Shakun, J.D., Lea, D.W., Lisiecki, L.E., Raymo, M.E., 2015. An 800-kyr record of global surface ocean δ18O and implications for ice volume-temperature coupling. Earth and Planetary Science Letters 426, 58–68. <a class="reference external" href="https://doi.org/10.1016/j.epsl.2015.05.042">https://doi.org/10.1016/j.epsl.2015.05.042</a> (not Open Access)</p>
-</div>
+</section>
 <script type="text/x-thebe-config">
     {
         requestKernel: true,
@@ -1513,17 +1006,16 @@ Are the colors in your figure distinguishable for people with color-vision defic
     </script>
 <script>kernelName = 'python3'</script>
 </article>
-<footer class="bd-footer-article">
-<!-- Previous / next buttons -->
+<footer class="prev-next-footer d-print-none">
 <div class="prev-next-area">
-<a class="left-prev" href="Projects_Tutorial5.html" id="prev-link" title="previous page">
+<a class="left-prev" href="Projects_Tutorial5.html" title="previous page">
 <i class="fa-solid fa-angle-left"></i>
 <div class="prev-next-info">
 <p class="prev-next-subtitle">previous</p>
 <p class="prev-next-title">Tutorial 5: Drafting the Analysis</p>
 </div>
 </a>
-<a class="right-next" href="Projects_Tutorial7.html" id="next-link" title="next page">
+<a class="right-next" href="Projects_Tutorial7.html" title="next page">
 <div class="prev-next-info">
 <p class="prev-next-subtitle">next</p>
 <p class="prev-next-title">Tutorial 7: Interpreting the Results</p>
@@ -1533,57 +1025,27 @@ Are the colors in your figure distinguishable for people with color-vision defic
 </div>
 </footer>
 </div>
-<div class="bd-sidebar-secondary bd-toc">
-<div class="toc-item">
-<div class="tocsection onthispage">
-<i class="fa-solid fa-list"></i> On this page
-</div>
-<nav class="page-toc" id="bd-toc-nav">
+<div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item">
+<div class="page-toc tocsection onthispage">
+<i class="fa-solid fa-list"></i> Contents
+  </div>
+<nav class="bd-toc-nav page-toc">
 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#">
-   Tutorial 6: Implementing the Analysis
-  </a>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#tutorials-objectives">
-   Tutorials Objectives
-  </a>
-</li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#activity-implement-the-analysis">
-   Activity: Implement the Analysis
-  </a>
-<ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#figure-settings">
-     Figure Settings
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#helper-functions">
-     Helper functions
-    </a>
-</li>
-<li class="toc-h2 nav-item toc-entry">
-<a class="reference internal nav-link" href="#figure-making-through-the-equity-lense">
-     Figure Making Through the Equity Lense
-    </a>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Tutorial 6: Implementing the Analysis</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#tutorials-objectives">Tutorials Objectives</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#activity-implement-the-analysis">Activity: Implement the Analysis</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-settings">Figure Settings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#helper-functions">Helper functions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-making-through-the-equity-lense">Figure Making Through the Equity Lense</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry">
-<a class="reference internal nav-link" href="#resources">
-   Resources
-  </a>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#resources">Resources</a></li>
 </ul>
-</nav>
-</div>
-</div>
+</nav></div>
+</div></div>
 </div>
 <footer class="bd-footer-content">
-<div class="bd-footer-content__inner">
 <div class="bd-footer-content__inner container">
 <div class="footer-item">
 <p class="component-author">
@@ -1593,9 +1055,6 @@ By Climatematch
 <div class="footer-item">
 </div>
 <div class="footer-item">
-<p class="last-updated">
-Last updated on None.<br/>
-</p>
 </div>
 <div class="footer-item">
 <div class="extra_footer">
@@ -1608,13 +1067,14 @@ Software elements are additionally licensed under the <a href="https://opensourc
 </div>
 </div>
 </div>
-</div>
 </footer>
 </main>
 </div>
 </div>
 <!-- Scripts loaded after <body> so the DOM is not blocked -->
-<script src="../../../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
-<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+<script src="../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+<footer class="bd-footer">
+</footer>
 </body>
 </html>
