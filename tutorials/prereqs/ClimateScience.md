@@ -30,23 +30,23 @@ Below are the lessons you need to review. **To get started with a tutorial just 
 
 | Tutorial Section and Link | Approximate Time to Complete (minutes) |
 | ----------- | ----------- |
-| [Interacting with Jupyter Notebooks in the cloud via Binder](https://foundations.projectpythia.org/preamble/how-to-use.html#interacting-with-jupyter-notebooks-in-the-cloud-via-binder)  | 10 |
-| [Why Python?](https://foundations.projectpythia.org/foundations/why-python.html) | 15  |
-| [Quickstart: Zero to Python](https://foundations.projectpythia.org/foundations/quickstart.html) | 90 |
-| [Jupyterlab](https://foundations.projectpythia.org/foundations/jupyterlab.html) | 50 |
+| [Interacting with Jupyter Notebooks in the cloud via Binder](https://foundations.projectpythia.org/preamble/how-to-use/#interacting-with-jupyter-notebooks-in-the-cloud-via-binder)  | 10 |
+| [Why Python?](https://foundations.projectpythia.org/foundations/why-python) | 15  |
+| [Quickstart: Zero to Python](https://foundations.projectpythia.org/foundations/quickstart) | 90 |
+| [Jupyterlab](https://foundations.projectpythia.org/foundations/jupyterlab) | 50 |
     
 ### Core Scientific Python Packages (~6 hours)
     
 | Tutorial Section and Link | Approximate Time to Complete (minutes) |
 | ----------- | ----------- |
-| [Overview](https://foundations.projectpythia.org/core/overview.html)  | 10 |
-| [NumPy](https://foundations.projectpythia.org/core/numpy.html) | 85  |
-| [Matplotlib](https://foundations.projectpythia.org/core/matplotlib.html) | 100 |
-| [Cartopy](https://foundations.projectpythia.org/core/cartopy.html) | 30 |
-| [Datetime](https://foundations.projectpythia.org/core/datetime.html) | 30 |
-| [Pandas](https://foundations.projectpythia.org/core/pandas.html) | 60 |
-| [Data Formats](https://foundations.projectpythia.org/core/data-formats.html) | 50 |
-| Optional (will be covered in the first day of course materials): [Xarray](https://foundations.projectpythia.org/core/xarray.html) | 150 |
+| [Overview](https://foundations.projectpythia.org/core/overview)  | 10 |
+| [NumPy](https://foundations.projectpythia.org/core/numpy) | 85  |
+| [Matplotlib](https://foundations.projectpythia.org/core/matplotlib) | 100 |
+| [Cartopy](https://foundations.projectpythia.org/core/cartopy) | 30 |
+| [Datetime](https://foundations.projectpythia.org/core/datetime) | 30 |
+| [Pandas](https://foundations.projectpythia.org/core/pandas) | 60 |
+| [Data Formats](https://foundations.projectpythia.org/core/data-formats) | 50 |
+| Optional (will be covered in the first day of course materials): [Xarray](https://foundations.projectpythia.org/core/xarray) | 150 |
 
 To ensure clarity and set proper expectations, let’s revisit what you can expect from the **Python Refresher Materials** and what you should not expect.
 
