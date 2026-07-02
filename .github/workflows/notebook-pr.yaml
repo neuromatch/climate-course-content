@@ -18,7 +18,7 @@ permissions:
   pull-requests: write
 
 env:
-  NB_KERNEL: python
+  NB_KERNEL: climate
   NMA_REPO: climate-course-content
   NMA_MAIN_BRANCH: main
   ORG: neuromatch
