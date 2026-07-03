@@ -70,7 +70,7 @@ html:
 launch_buttons:
   notebook_interface        : jupyterlab  # The interface interactive links will activate ["classic", "jupyterlab"]
   binderhub_url             : ""  # The URL of the BinderHub (e.g., https://mybinder.org)
-  jupyterhub_url            : "https://climatematch.2i2c.cloud"  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
+  # jupyterhub_url            : "https://climatematch.2i2c.cloud"  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
   thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
   colab_url                 : "" # The URL of Google Colab (https://colab.research.google.com)
 

@@ -11,7 +11,7 @@ defaults:
     shell: bash -el {0}
 
 env:
-  NB_KERNEL: python
+  NB_KERNEL: climate
   NMA_REPO: climate-course-content
   NMA_MAIN_BRANCH: main
   PREREQ_INTRO: ClimateScience

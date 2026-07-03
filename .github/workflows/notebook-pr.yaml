@@ -18,7 +18,7 @@ permissions:
   pull-requests: write
 
 env:
-  NB_KERNEL: python
+  NB_KERNEL: climate
   NMA_REPO: climate-course-content
   NMA_MAIN_BRANCH: main
   ORG: neuromatch
@@ -132,6 +132,9 @@ jobs:
         uses: ./.github/actions/setup-ci-tools
         with:
           commit-message: ${{ needs.setup.outputs.commit_message }}
+
+      - name: Register Jupyter kernel
+        run: python -m ipykernel install --user --name=climate --display-name "Python (climate)"
 
       - name: Setup rendering dependencies
         uses: ./.github/actions/setup-rendering-deps
