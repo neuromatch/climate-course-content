@@ -30,6 +30,7 @@ dependencies:
  - ipywidgets
  - matplotlib-base
  - metpy
+ - nbformat>=4.2.0
  - nc-time-axis
  - netcdf4
  - nltk
